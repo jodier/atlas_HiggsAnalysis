@@ -170,7 +170,7 @@ void cut_flow(void)
 {
 	TCanvas c1;
 
-	const char *fname = "./yok3.txt";
+	const char *fname = "./yok2.txt";
 
 	print("H1", fname, "H->eeee (STACO)", 1);
 //	print("H1", fname, "H->eeee (MUID)", 1);
