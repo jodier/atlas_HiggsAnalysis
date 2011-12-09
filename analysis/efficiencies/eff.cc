@@ -24,7 +24,7 @@
 #define FIT_UP		130.0f	/* GeV */
 
 #define ET_MIN		10.0f	/* GeV */
-#define ET_MAX		50.0f	/* GeV */
+#define ET_MAX		5000.0f	/* GeV */
 
 /*-------------------------------------------------------------------------*/
 
@@ -604,7 +604,7 @@ void ZStudy::Loop(void)
 			if(isMC != false)
 			{
 				/**/ if(RunNumber == 180164) {
-					theWeight *= 1.11f * pileupReweightingBD->getPileupWeight(averageIntPerXing);
+					theWeight *= 1.06f * pileupReweightingBD->getPileupWeight(averageIntPerXing);
 				}
 				else if(RunNumber == 183003) {
 					theWeight *= 1.08f * pileupReweightingEH->getPileupWeight(averageIntPerXing);
@@ -613,7 +613,7 @@ void ZStudy::Loop(void)
 					theWeight *= 0.87f * pileupReweightingIK->getPileupWeight(averageIntPerXing);
 				}
 				else if(RunNumber == 186275) {
-					theWeight *= 1.01f * pileupReweightingLM->getPileupWeight(averageIntPerXing);
+					theWeight *= 1.03f * pileupReweightingLM->getPileupWeight(averageIntPerXing);
 				}
 				else
 				{
