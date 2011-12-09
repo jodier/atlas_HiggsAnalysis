@@ -29,7 +29,7 @@
 /*-------------------------------------------------------------------------*/
 
 static const char *output = NULL;
-static float window = 5.0f;
+static float window = 10.0f;
 static bool truth = false;
 static bool isMC = false;
 static int cut = 0;
@@ -781,8 +781,8 @@ void ZStudy::Loop(void)
 		Float_t error_cut_e = 0.0f;
 		Float_t error_all_e = 0.0f;
 
-		Float_t cut = mySignalEvent(v2.cut_hist[i], error_cut, i <= 2);
-		Float_t all = mySignalEvent(v2.all_hist[i], error_all, i <= 2);
+		Float_t cut = mySignalEvent(v2.cut_hist[i], error_cut);
+		Float_t all = mySignalEvent(v2.all_hist[i], error_all);
 		Float_t cut_p = 1.0f;//mySignalEvent(v2.cut_p_hist[i], error_cut_p);
 		Float_t all_p = 1.0f;//mySignalEvent(v2.all_p_hist[i], error_all_p);
 		Float_t cut_e = 1.0f;//mySignalEvent(v2.cut_e_hist[i], error_cut_e);
