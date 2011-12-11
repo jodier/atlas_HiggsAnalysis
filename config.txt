@@ -3,6 +3,7 @@ Z_REGION			15.0
 
 higgs_el_et			7000.0
 higgs_mu_pt			7000.0
+higgs_calo_mu_pt		15000.0
 higgs_el_trigg_pt		20000.0
 higgs_mu_trigg_pt		20000.0
 

@@ -133,36 +133,49 @@ void THiggsBuilder::Loop(void)
 	Int_t nr2 = 0;
 	Int_t nr3 = 0;
 	Int_t nr4 = 0;
-
 	Int_t nr5 = 0;
 	Int_t nr6 = 0;
+
 	Int_t nr7 = 0;
 	Int_t nr8 = 0;
+	Int_t nr9 = 0;
+	Int_t nrA = 0;
+	Int_t nrB = 0;
+	Int_t nrC = 0;
 
 	Int_t electronStacoIndexNr1;
 	Int_t electronMuidIndexNr1;
+	Int_t electronCaloIndexNr1;
 	Int_t muonStacoIndexNr1;
 	Int_t muonMuidIndexNr1;
+	Int_t muonCaloIndexNr1;
 
 	Int_t electronStacoIndexNr2;
 	Int_t electronMuidIndexNr2;
+	Int_t electronCaloIndexNr2;
 	Int_t muonStacoIndexNr2;
 	Int_t muonMuidIndexNr2;
+	Int_t muonCaloIndexNr2;
 
 	Int_t electronStacoIndexArray1[1024];
 	Int_t electronMuidIndexArray1[1024];
+	Int_t electronCaloIndexArray1[1024];
 	Int_t muonStacoIndexArray1[1024];
 	Int_t muonMuidIndexArray1[1024];
+	Int_t muonCaloIndexArray1[1024];
 
 	Int_t electronStacoIndexArray2[1024];
 	Int_t electronMuidIndexArray2[1024];
+	Int_t electronCaloIndexArray2[1024];
 	Int_t muonStacoIndexArray2[1024];
 	Int_t muonMuidIndexArray2[1024];
+	Int_t muonCaloIndexArray2[1024];
 
 	Float_t Z_MASS = core::configFltLookup("Z_MASS");
 
 	Float_t higgs_el_et = core::configFltLookup("higgs_el_et");
 	Float_t higgs_mu_pt = core::configFltLookup("higgs_mu_pt");
+	Float_t higgs_mu_calo_pt = core::configFltLookup("higgs_mu_calo_pt");
 
 	const Long64_t eventNr = fChain->GetEntries();
 
@@ -180,13 +193,17 @@ void THiggsBuilder::Loop(void)
 
 		electronStacoIndexNr1 = 0;
 		electronMuidIndexNr1 = 0;
+		electronCaloIndexNr1 = 0;
 		muonStacoIndexNr1 = 0;
 		muonMuidIndexNr1 = 0;
+		muonCaloIndexNr1 = 0;
 
 		electronStacoIndexNr2 = 0;
 		electronMuidIndexNr2 = 0;
+		electronCaloIndexNr2 = 0;
 		muonStacoIndexNr2 = 0;
 		muonMuidIndexNr2 = 0;
+		muonCaloIndexNr2 = 0;
 
 		memset(&m_evt, 0x00, sizeof(m_evt));
 		memset(  m_Z , 0x00, sizeof( m_Z ));
@@ -274,20 +291,27 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObjectQuality(i, TYPE_ELECTRON) != false
 				   &&
-				   checkObject(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false
+				   checkObject(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false
 				 ) {
-					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
 						electronStacoIndexArray1[electronStacoIndexNr1++] = i;
 
 						nr1++;
 					}
 
-					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
 						electronMuidIndexArray1[electronMuidIndexNr1++] = i;
 
 						nr2++;
+					}
+
+					if(checkCaloOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
+					{
+						electronCaloIndexArray1[electronCaloIndexNr1++] = i;
+
+						nr3++;
 					}
 				}
 			}
@@ -297,21 +321,31 @@ void THiggsBuilder::Loop(void)
 		{
 			for(Int_t i = 0; i < mu_staco_n; i++)
 			{
-				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
 					muonStacoIndexArray1[muonStacoIndexNr1++] = i;
 
-					nr3++;
+					nr4++;
 				}
 			}
 
 			for(Int_t i = 0; i < mu_muid_n; i++)
 			{
-				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
 					muonMuidIndexArray1[muonMuidIndexNr1++] = i;
 
-					nr4++;
+					nr5++;
+				}
+			}
+
+			for(Int_t i = 0; i < mu_calo_n; i++)
+			{
+				if(checkObject(i, TYPE_MUON_CALO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
+				{
+					muonCaloIndexArray1[muonCaloIndexNr1++] = i;
+
+					nr6++;
 				}
 			}
 		}
@@ -326,41 +360,58 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObjectQuality(i, TYPE_ELECTRON) != false
 				   &&
-				   checkObject(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false
+				   checkObject(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false
 				 ) {
-					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
 						electronStacoIndexArray2[electronStacoIndexNr2++] = i;
 
-						nr5++;
+						nr7++;
 					}
 
-					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
 						electronMuidIndexArray2[electronMuidIndexNr2++] = i;
 
-						nr6++;
+						nr8++;
+					}
+
+					if(checkCaloOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
+					{
+						electronCaloIndexArray2[electronCaloIndexNr2++] = i;
+
+						nr9++;
 					}
 				}
 			}
 
 			for(Int_t i = 0; i < mu_staco_n; i++)
 			{
-				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
 					muonStacoIndexArray2[muonStacoIndexNr2++] = i;
 
-					nr7++;
+					nrA++;
 				}
 			}
 
 			for(Int_t i = 0; i < mu_muid_n; i++)
 			{
-				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, useLoose, useForward) != false)
+				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
 					muonMuidIndexArray2[muonMuidIndexNr2++] = i;
 
-					nr8++;
+					nrB++;
+				}
+			}
+
+			for(Int_t i = 0; i < mu_calo_n; i++)
+			{
+				if(checkObject(i, TYPE_MUON_CALO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
+				{
+					muonCaloIndexArray2[muonCaloIndexNr2++] = i;
+
+					nrC++;
 				}
 			}
 		}
@@ -530,36 +581,36 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/*---------------------------------------------------------*/
-		/* Z->µµ, H->ZZ->µµµµ (STACO)				   */
+		/* Z->ee, H->ZZ->eeee (CALO)				   */
 		/*---------------------------------------------------------*/
 
 		Bool_t result_Z3 = false;
 		Bool_t result_H3 = false;
 
-		if(muonStacoIndexNr1 >= 2)
+		if(electronCaloIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < muonStacoIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < electronCaloIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < muonStacoIndexNr1; j++)
+				for(Int_t j = i + 1; j < electronCaloIndexNr1; j++)
 				{
 					if(Z_analysis(
-						muonStacoIndexArray1[i],
-						muonStacoIndexArray1[j],
-						TYPE_MUON_STACO, 2
+						electronCaloIndexArray1[i],
+						electronCaloIndexArray1[j],
+						TYPE_ELECTRON, 2
 					 ) != false) {
 						result_Z3 = true;
 					}
 
-					for(Int_t k = j + 1; k < muonStacoIndexNr1; k++)
+					for(Int_t k = j + 1; k < electronCaloIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < muonStacoIndexNr1; l++)
+						for(Int_t l = k + 1; l < electronCaloIndexNr1; l++)
 						{
 							if(H_analysis(
-								muonStacoIndexArray1[i],
-								muonStacoIndexArray1[j],
-								muonStacoIndexArray1[k],
-								muonStacoIndexArray1[l],
-								TYPE_MUON_STACO, TYPE_MUON_STACO, 2
+								electronCaloIndexArray1[i],
+								electronCaloIndexArray1[j],
+								electronCaloIndexArray1[k],
+								electronCaloIndexArray1[l],
+								TYPE_ELECTRON, TYPE_ELECTRON, 2
 							 ) != false) {
 								result_H3 = true;
 							}
@@ -572,36 +623,36 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/*---------------------------------------------------------*/
-		/* Z->µµ, H->ZZ->µµµµ (MUID)				   */
+		/* Z->µµ, H->ZZ->µµµµ (STACO)				   */
 		/*---------------------------------------------------------*/
 
 		Bool_t result_Z4 = false;
 		Bool_t result_H4 = false;
 
-		if(muonMuidIndexNr1 > 2)
+		if(muonStacoIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < muonMuidIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < muonStacoIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < muonMuidIndexNr1; j++)
+				for(Int_t j = i + 1; j < muonStacoIndexNr1; j++)
 				{
 					if(Z_analysis(
-						muonMuidIndexArray1[i],
-						muonMuidIndexArray1[j],
-						TYPE_MUON_MUID, 3
+						muonStacoIndexArray1[i],
+						muonStacoIndexArray1[j],
+						TYPE_MUON_STACO, 3
 					 ) != false) {
 						result_Z4 = true;
 					}
 
-					for(Int_t k = j + 1; k < muonMuidIndexNr1; k++)
+					for(Int_t k = j + 1; k < muonStacoIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < muonMuidIndexNr1; l++)
+						for(Int_t l = k + 1; l < muonStacoIndexNr1; l++)
 						{
 							if(H_analysis(
-								muonMuidIndexArray1[i],
-								muonMuidIndexArray1[j],
-								muonMuidIndexArray1[k],
-								muonMuidIndexArray1[l],
-								TYPE_MUON_MUID, TYPE_MUON_MUID, 3
+								muonStacoIndexArray1[i],
+								muonStacoIndexArray1[j],
+								muonStacoIndexArray1[k],
+								muonStacoIndexArray1[l],
+								TYPE_MUON_STACO, TYPE_MUON_STACO, 3
 							 ) != false) {
 								result_H4 = true;
 							}
@@ -614,10 +665,94 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/*---------------------------------------------------------*/
+		/* Z->µµ, H->ZZ->µµµµ (MUID)				   */
+		/*---------------------------------------------------------*/
+
+		Bool_t result_Z5 = false;
+		Bool_t result_H5 = false;
+
+		if(muonMuidIndexNr1 > 2)
+		{
+			for(Int_t i = 0 + 0; i < muonMuidIndexNr1; i++)
+			{
+				for(Int_t j = i + 1; j < muonMuidIndexNr1; j++)
+				{
+					if(Z_analysis(
+						muonMuidIndexArray1[i],
+						muonMuidIndexArray1[j],
+						TYPE_MUON_MUID, 4
+					 ) != false) {
+						result_Z5 = true;
+					}
+
+					for(Int_t k = j + 1; k < muonMuidIndexNr1; k++)
+					{
+						for(Int_t l = k + 1; l < muonMuidIndexNr1; l++)
+						{
+							if(H_analysis(
+								muonMuidIndexArray1[i],
+								muonMuidIndexArray1[j],
+								muonMuidIndexArray1[k],
+								muonMuidIndexArray1[l],
+								TYPE_MUON_MUID, TYPE_MUON_MUID, 4
+							 ) != false) {
+								result_H5 = true;
+							}
+						}
+					}
+				}
+			}
+
+			selectQuadruplet(4, Z_MASS);
+		}
+
+		/*---------------------------------------------------------*/
+		/* Z->µµ, H->ZZ->µµµµ (CALO)				   */
+		/*---------------------------------------------------------*/
+
+		Bool_t result_Z6 = false;
+		Bool_t result_H6 = false;
+
+		if(muonCaloIndexNr1 > 2)
+		{
+			for(Int_t i = 0 + 0; i < muonCaloIndexNr1; i++)
+			{
+				for(Int_t j = i + 1; j < muonCaloIndexNr1; j++)
+				{
+					if(Z_analysis(
+						muonCaloIndexArray1[i],
+						muonCaloIndexArray1[j],
+						TYPE_MUON_CALO, 5
+					 ) != false) {
+						result_Z6 = true;
+					}
+
+					for(Int_t k = j + 1; k < muonCaloIndexNr1; k++)
+					{
+						for(Int_t l = k + 1; l < muonCaloIndexNr1; l++)
+						{
+							if(H_analysis(
+								muonCaloIndexArray1[i],
+								muonCaloIndexArray1[j],
+								muonCaloIndexArray1[k],
+								muonCaloIndexArray1[l],
+								TYPE_MUON_CALO, TYPE_MUON_CALO, 5
+							 ) != false) {
+								result_H6 = true;
+							}
+						}
+					}
+				}
+			}
+
+			selectQuadruplet(5, Z_MASS);
+		}
+
+		/*---------------------------------------------------------*/
 		/* H->ZZ->eeµµ (STACO)					   */
 		/*---------------------------------------------------------*/
 
-		Bool_t result_H5 = false;
+		Bool_t result_H7 = false;
 
 		if(electronStacoIndexNr2 >= 2 && muonStacoIndexNr2 >= 2)
 		{
@@ -634,23 +769,23 @@ void THiggsBuilder::Loop(void)
 								electronStacoIndexArray2[j],
 								muonStacoIndexArray2[k],
 								muonStacoIndexArray2[l],
-								TYPE_ELECTRON, TYPE_MUON_STACO, 4
+								TYPE_ELECTRON, TYPE_MUON_STACO, 6
 							 ) != false) {
-								result_H5 = true;
+								result_H7 = true;
 							}
 						}
 					}
 				}
 			}
 
-			selectQuadruplet(4, Z_MASS);
+			selectQuadruplet(6, Z_MASS);
 		}
 
 		/*---------------------------------------------------------*/
 		/* H->ZZ->eeµµ (MUID)					   */
 		/*---------------------------------------------------------*/
 
-		Bool_t result_H6 = false;
+		Bool_t result_H8 = false;
 
 		if(electronMuidIndexNr2 >= 2 && muonMuidIndexNr2 >= 2)
 		{
@@ -667,16 +802,49 @@ void THiggsBuilder::Loop(void)
 								electronMuidIndexArray2[j],
 								muonMuidIndexArray2[k],
 								muonMuidIndexArray2[l],
-								TYPE_ELECTRON, TYPE_MUON_MUID, 5
+								TYPE_ELECTRON, TYPE_MUON_MUID, 7
 							 ) != false) {
-								result_H6 = true;
+								result_H8 = true;
 							}
 						}
 					}
 				}
 			}
 
-			selectQuadruplet(5, Z_MASS);
+			selectQuadruplet(7, Z_MASS);
+		}
+
+		/*---------------------------------------------------------*/
+		/* H->ZZ->eeµµ (CALO)					   */
+		/*---------------------------------------------------------*/
+
+		Bool_t result_H9 = false;
+
+		if(electronCaloIndexNr2 >= 2 && muonCaloIndexNr2 >= 2)
+		{
+			for(Int_t i = 0 + 0; i < electronCaloIndexNr2; i++)
+			{
+				for(Int_t j = i + 1; j < electronCaloIndexNr2; j++)
+				{
+					for(Int_t k = 0 + 0; k < muonCaloIndexNr2; k++)
+					{
+						for(Int_t l = k + 1; l < muonCaloIndexNr2; l++)
+						{
+							if(H_analysis(
+								electronCaloIndexArray2[i],
+								electronCaloIndexArray2[j],
+								muonCaloIndexArray2[k],
+								muonCaloIndexArray2[l],
+								TYPE_ELECTRON, TYPE_MUON_CALO, 8
+							 ) != false) {
+								result_H9 = true;
+							}
+						}
+					}
+				}
+			}
+
+			selectQuadruplet(8, Z_MASS);
 		}
 
 		/*---------------------------------------------------------*/
@@ -686,41 +854,48 @@ void THiggsBuilder::Loop(void)
 		if(result_Z1 != false) {
 			m_tree2.Fill();
 		}
-
 		if(result_Z2 != false) {
 			m_tree3.Fill();
 		}
-
 		if(result_Z3 != false) {
 			m_tree4.Fill();
 		}
-
 		if(result_Z4 != false) {
 			m_tree5.Fill();
 		}
-
-		if(result_H1 != false) {
+		if(result_Z5 != false) {
 			m_tree6.Fill();
 		}
-
-		if(result_H2 != false) {
+		if(result_Z6 != false) {
 			m_tree7.Fill();
 		}
 
-		if(result_H3 != false) {
+		if(result_H1 != false) {
 			m_tree8.Fill();
 		}
-
-		if(result_H4 != false) {
+		if(result_H2 != false) {
 			m_tree9.Fill();
 		}
-
-		if(result_H5 != false) {
+		if(result_H3 != false) {
 			m_treeA.Fill();
 		}
-
-		if(result_H6 != false) {
+		if(result_H4 != false) {
 			m_treeB.Fill();
+		}
+		if(result_H5 != false) {
+			m_treeC.Fill();
+		}
+		if(result_H6 != false) {
+			m_treeD.Fill();
+		}
+		if(result_H7 != false) {
+			m_treeE.Fill();
+		}
+		if(result_H8 != false) {
+			m_treeF.Fill();
+		}
+		if(result_H9 != false) {
+			m_treeG.Fill();
 		}
 
 		/*---------------------------------------------------------*/
@@ -732,15 +907,19 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << "#el (staco): " << nr1 << std::endl;
 	std::cout << "#el (muid): " << nr2 << std::endl;
+	std::cout << "#el (calo): " << nr2 << std::endl;
 	std::cout << "#mu (staco): " << nr3 << std::endl;
 	std::cout << "#mu (muid): " << nr4 << std::endl;
+	std::cout << "#mu (calo): " << nr5 << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "#el (staco): " << nr5 << std::endl;
-	std::cout << "#el (muid): " << nr6 << std::endl;
-	std::cout << "#mu (staco): " << nr7 << std::endl;
-	std::cout << "#mu (muid): " << nr8 << std::endl;
+	std::cout << "#el (staco): " << nr6 << std::endl;
+	std::cout << "#el (muid): " << nr7 << std::endl;
+	std::cout << "#el (calo): " << nr7 << std::endl;
+	std::cout << "#mu (staco): " << nr8 << std::endl;
+	std::cout << "#mu (muid): " << nr9 << std::endl;
+	std::cout << "#mu (calo): " << nrA << std::endl;
 }
 
 /*-------------------------------------------------------------------------*/

@@ -312,6 +312,9 @@ Bool_t TLeptonAnalysis::triggerMatch(
 			EF_idx = mu_muid_EFCB_index->at(index);
 			goto __mu;
 
+		case TYPE_MUON_CALO:
+			return true;
+
 		__el:
 			for(Vector_t<unsigned>::iterator it = elVector.begin(); it != elVector.end(); it++)
 			{

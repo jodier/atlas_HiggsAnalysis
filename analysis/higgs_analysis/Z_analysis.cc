@@ -88,10 +88,10 @@ bool THiggsBuilder::Z_analysis(
 			clIso202 = el_Etcone20->at(index2) / pt2;
 			clIso301 = el_Etcone30->at(index1) / pt1;
 			clIso302 = el_Etcone30->at(index2) / pt2;
-			clIso20Corrected1 = CaloIsoCorrection::GetPtNPVCorrectedIsolation(nPV2, el_cl_E->at(index1), el_etas2->at(index1), el_etap->at(index1), el_cl_eta->at(index1), 20, core::isMC(RunNumber), el_Etcone20->at(index1), false, CaloIsoCorrection::ELECTRON) / pt1;
-			clIso20Corrected2 = CaloIsoCorrection::GetPtNPVCorrectedIsolation(nPV2, el_cl_E->at(index2), el_etas2->at(index2), el_etap->at(index2), el_cl_eta->at(index2), 20, core::isMC(RunNumber), el_Etcone20->at(index2), false, CaloIsoCorrection::ELECTRON) / pt2;
-			clIso30Corrected1 = CaloIsoCorrection::GetPtNPVCorrectedIsolation(nPV2, el_cl_E->at(index1), el_etas2->at(index1), el_etap->at(index1), el_cl_eta->at(index1), 30, core::isMC(RunNumber), el_Etcone30->at(index1), false, CaloIsoCorrection::ELECTRON) / pt1;
-			clIso30Corrected2 = CaloIsoCorrection::GetPtNPVCorrectedIsolation(nPV2, el_cl_E->at(index2), el_etas2->at(index2), el_etap->at(index2), el_cl_eta->at(index2), 30, core::isMC(RunNumber), el_Etcone30->at(index2), false, CaloIsoCorrection::ELECTRON) / pt2;
+			clIso20Corrected1 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 20, core::isMC(RunNumber), el_Etcone20->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
+			clIso20Corrected2 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 20, core::isMC(RunNumber), el_Etcone20->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
+			clIso30Corrected1 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 30, core::isMC(RunNumber), el_Etcone30->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
+			clIso30Corrected2 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 30, core::isMC(RunNumber), el_Etcone30->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
 			d0sigma1 = fabs(el_trackd0pvunbiased->at(index1) / el_tracksigd0pvunbiased->at(index1));
 			d0sigma2 = fabs(el_trackd0pvunbiased->at(index2) / el_tracksigd0pvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_el_trigg_pt;
@@ -105,10 +105,10 @@ bool THiggsBuilder::Z_analysis(
 				Float_t eta1 = el_cl_eta->at(index1);
 				Float_t eta2 = el_cl_eta->at(index2);
 
-				p1 = m_egammaSF->scaleFactorRecoTrkQual(eta1, pt1);
-				p2 = m_egammaSF->scaleFactorRecoTrkQual(eta2, pt2);
-				p3 = m_egammaSF->scaleFactorMediumETcorrected(eta1, pt1);
-				p4 = m_egammaSF->scaleFactorMediumETcorrected(eta2, pt2);
+				p1 = m_egammaSF->scaleFactor(eta1, pt1, 5, 0, 5, true);
+				p2 = m_egammaSF->scaleFactor(eta2, pt2, 5, 0, 5, true);
+				p3 = m_egammaSF->scaleFactor(eta1, pt1, 4, 0, 5, true);
+				p4 = m_egammaSF->scaleFactor(eta2, pt2, 4, 0, 5, true);
 
 				weight *= p1.first * p2.first * p3.first * p4.first;
 			}

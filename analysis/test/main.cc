@@ -49,6 +49,8 @@ Float_t THiggsBuilder::electronGetEt(Int_t index)
 
 void THiggsBuilder::Loop(void)
 {
+	Int_t n;
+
 	Int_t nPV2;
 	Int_t nPV3;
 
@@ -149,8 +151,34 @@ void THiggsBuilder::Loop(void)
 
 			muSTACONr4++;
 
-			if(fabs(mu_staco_eta->at(i)) > 2.5f) {
-				continue;
+			if(fabs(mu_staco_eta->at(i)) > 2.5f)
+			{
+				if(fabs(mu_staco_eta->at(i)) > 2.7f) {
+					continue;
+				}
+
+				if(mu_staco_isCombinedMuon->at(i) == false)
+				{
+					if(mu_staco_isStandAloneMuon->at(i) == false
+					   ||
+					   (mu_staco_nCSCEtaHits->at(i) + mu_staco_nCSCPhiHits->at(i)) == 0
+					   ||
+					   (mu_staco_nMDTEMHits->at(i)) == 0
+					   ||
+					   (mu_staco_nMDTEOHits->at(i)) == 0
+					 ) {
+						continue;
+					}
+					else {
+						muSTACONr5++;
+						muSTACONr6++;
+						muSTACONr7++;
+						muSTACONr8++;
+						muSTACONr9++;
+						muSTACONr10++;
+						goto __okay_staco;
+					}
+				}
 			}
 
 			muSTACONr5++;
@@ -179,7 +207,7 @@ void THiggsBuilder::Loop(void)
 
 			muSTACONr9++;
 
-			Int_t n = mu_staco_nTRTHits->at(i) + mu_staco_nTRTOutliers->at(i);
+			n = mu_staco_nTRTHits->at(i) + mu_staco_nTRTOutliers->at(i);
 
 			if(fabs(mu_staco_eta->at(i)) < 1.9f)
 			{
@@ -195,7 +223,7 @@ void THiggsBuilder::Loop(void)
 			}
 
 			muSTACONr10++;
-
+__okay_staco:
 			if(fabs(mu_staco_trackd0pvunbiased->at(i)) > 1.0f) {
 				continue;
 			}
@@ -241,8 +269,34 @@ void THiggsBuilder::Loop(void)
 
 			muMUIDNr4++;
 
-			if(fabs(mu_muid_eta->at(i)) > 2.5f) {
-				continue;
+			if(fabs(mu_muid_eta->at(i)) > 2.5f)
+			{
+				if(fabs(mu_muid_eta->at(i)) > 2.7f) {
+					continue;
+				}
+
+				if(mu_muid_isCombinedMuon->at(i) == false)
+				{
+					if(mu_muid_isStandAloneMuon->at(i) == false
+					   ||
+					   (mu_muid_nCSCEtaHits->at(i) + mu_muid_nCSCPhiHits->at(i)) == 0
+					   ||
+					   (mu_muid_nMDTEMHits->at(i)) == 0
+					   ||
+					   (mu_muid_nMDTEOHits->at(i)) == 0
+					 ) {
+						continue;
+					}
+					else {
+						muSTACONr5++;
+						muSTACONr6++;
+						muSTACONr7++;
+						muSTACONr8++;
+						muSTACONr9++;
+						muSTACONr10++;
+						goto __okay_muid;
+					}
+				}
 			}
 
 			muMUIDNr5++;
@@ -271,7 +325,7 @@ void THiggsBuilder::Loop(void)
 
 			muMUIDNr9++;
 
-			Int_t n = mu_muid_nTRTHits->at(i) + mu_muid_nTRTOutliers->at(i);
+			n = mu_muid_nTRTHits->at(i) + mu_muid_nTRTOutliers->at(i);
 
 			if(fabs(mu_muid_eta->at(i)) < 1.9f)
 			{
@@ -287,7 +341,7 @@ void THiggsBuilder::Loop(void)
 			}
 
 			muMUIDNr10++;
-
+__okay_muid:
 			if(fabs(mu_muid_trackd0pvunbiased->at(i)) > 1.0f) {
 				continue;
 			}

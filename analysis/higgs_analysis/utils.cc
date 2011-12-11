@@ -24,7 +24,7 @@ void TLeptonAnalysis::fixeEnergy(void)
 		{
 			if(fabs(el_cl_eta->at(i)) > 2.47f)
 			{
-				break;
+				continue;
 			}
 
 			el_cl_E->at(i) = m_energyRescaler->applyEnergyCorrectionMeV(
@@ -47,7 +47,7 @@ void TLeptonAnalysis::fixeEnergy(void)
 		{
 			if(fabs(el_cl_eta->at(i)) > 2.47f)
 			{
-				break;
+				continue;
 			}
 
 			m_energyRescaler->SetRandomSeed(RunNumber + 1001 * i);
@@ -63,15 +63,20 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < mu_staco_n; i++)
 		{
+			if(fabs(mu_staco_eta->at(i)) > 2.7f)
+			{
+				continue;
+			}
+
 			Float_t ptcb = mu_staco_pt->at(i);
 
+			Float_t ptme = (mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f;
 			Float_t ptid = (mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f;
-			Float_t ptms = (mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f;
 
 			m_stacoSM->SetSeed(EventNumber, i);
 
 			m_stacoSM->Event(
-				ptms,
+				ptme,
 				ptid,
 				ptcb,
 				mu_staco_eta->at(i)
@@ -88,15 +93,20 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < mu_muid_n; i++)
 		{
+			if(fabs(mu_muid_eta->at(i)) > 2.7f)
+			{
+				continue;
+			}
+
 			Float_t ptcb = mu_muid_pt->at(i);
 
+			Float_t ptme = (mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f;
 			Float_t ptid = (mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f;
-			Float_t ptms = (mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f;
 
 			m_muidSM->SetSeed(EventNumber, i);
 
 			m_muidSM->Event(
-				ptms,
+				ptme,
 				ptid,
 				ptcb,
 				mu_muid_eta->at(i)
@@ -182,6 +192,7 @@ Bool_t TLeptonAnalysis::checkObject(
 	TLeptonType type,
 	Float_t __el_et,
 	Float_t __mu_pt,
+	Float_t __mu_calo_pt,
 	Bool_t useLoose,
 	Bool_t useForward
 ) {
@@ -198,6 +209,10 @@ Bool_t TLeptonAnalysis::checkObject(
 
 	switch(type)
 	{
+		/*---------------------------------------------------------*/
+		/* TYPE_ELECTRON					   */
+		/*---------------------------------------------------------*/
+
 		case TYPE_ELECTRON:
 			if(el_author->at(index) != 1
 			   &&
@@ -241,6 +256,10 @@ Bool_t TLeptonAnalysis::checkObject(
 
 			break;
 
+		/*---------------------------------------------------------*/
+		/* MUON_STACO						   */
+		/*---------------------------------------------------------*/
+
 		case TYPE_MUON_STACO:
 			if(mu_staco_author->at(index) != 6 && mu_staco_author->at(index) != 7) {
 				goto __error;
@@ -258,7 +277,6 @@ Bool_t TLeptonAnalysis::checkObject(
 
 				if(mu_staco_isCombinedMuon->at(index) == false)
 				{
-/*
 					if(mu_staco_isStandAloneMuon->at(index) == false
 					   ||
 					   (mu_staco_nCSCEtaHits->at(index) + mu_staco_nCSCPhiHits->at(index)) == 0
@@ -269,7 +287,9 @@ Bool_t TLeptonAnalysis::checkObject(
 					 ) {
 						goto __error;
 					}
-*/
+					else {
+						goto __okay_staco;
+					}
 				}
 			}
 
@@ -303,7 +323,7 @@ Bool_t TLeptonAnalysis::checkObject(
 					goto __error;
 				}
 			}
-
+__okay_staco:
 			if(fabs(mu_staco_trackd0pvunbiased->at(index)) > 1.0f) {
 				goto __error;
 			}
@@ -313,6 +333,10 @@ Bool_t TLeptonAnalysis::checkObject(
 			}
 
 			break;
+
+		/*---------------------------------------------------------*/
+		/* MUON_MUID						   */
+		/*---------------------------------------------------------*/
 
 		case TYPE_MUON_MUID:
 			if(mu_muid_tight->at(index) == 0) {
@@ -331,7 +355,6 @@ Bool_t TLeptonAnalysis::checkObject(
 
 				if(mu_muid_isCombinedMuon->at(index) == false)
 				{
-/*
 					if(mu_muid_isStandAloneMuon->at(index) == false
 					   ||
 					   (mu_muid_nCSCEtaHits->at(index) + mu_muid_nCSCPhiHits->at(index)) == 0
@@ -342,7 +365,9 @@ Bool_t TLeptonAnalysis::checkObject(
 					 ) {
 						goto __error;
 					}
-*/
+					else {
+						goto __okay_muid;
+					}
 				}
 			}
 
@@ -376,7 +401,7 @@ Bool_t TLeptonAnalysis::checkObject(
 					goto __error;
 				}
 			}
-
+__okay_muid:
 			if(fabs(mu_muid_trackd0pvunbiased->at(index)) > 1.0f) {
 				goto __error;
 			}
@@ -386,6 +411,60 @@ Bool_t TLeptonAnalysis::checkObject(
 			}
 
 			break;
+
+		/*---------------------------------------------------------*/
+		/* MUON_CALO						   */
+		/*---------------------------------------------------------*/
+
+		case TYPE_MUON_CALO:
+			if(mu_calo_author->at(index) != 16) {
+				goto __error;
+			}
+
+			if(mu_calo_caloMuonIdTag->at(index) <= 10
+			   &&
+			   mu_calo_caloLRLikelihood->at(index) <= 0.9
+			 ) {
+				goto __error;
+			}
+
+			if(mu_calo_pt->at(index) < __mu_calo_pt) {
+				goto __error;
+			}
+
+			if(fabs(mu_calo_eta->at(index)) > 0.1f) {
+				goto __error;
+			}
+
+			if(mu_calo_expectBLayerHit->at(index) == 1 && mu_calo_nBLHits->at(index) == 0) {
+				goto __error;
+			}
+
+			if(mu_calo_nPixHits->at(index) + mu_calo_nPixelDeadSensors->at(index) < 2) {
+				goto __error;
+			}
+
+			if(mu_calo_nSCTHits->at(index) + mu_calo_nSCTDeadSensors->at(index) < 6) {
+				goto __error;
+			}
+
+			if(mu_calo_nPixHoles->at(index) + mu_calo_nSCTHoles->at(index) > 2 ) {
+				goto __error;
+			}
+
+			n = mu_calo_nTRTHits->at(index) + mu_calo_nTRTOutliers->at(index);
+
+			if(n > 5 && mu_calo_nTRTOutliers->at(index) >= n * 0.9) {
+				goto __error;
+			}
+
+			if(fabs(mu_calo_trackz0pvunbiased->at(index)) > 10.0f) {
+				goto __error;
+			}
+
+			break;
+
+		/*---------------------------------------------------------*/
 
 		__error:
 		default:
@@ -402,6 +481,7 @@ Bool_t TLeptonAnalysis::checkStacoOverlapping(
 	TLeptonType type,
 	Float_t __el_et,
 	Float_t __mu_pt,
+	Float_t __mu_calo_pt,
 	Bool_t useLoose,
 	Bool_t useForward
 ) {
@@ -427,7 +507,7 @@ Bool_t TLeptonAnalysis::checkStacoOverlapping(
 			   &&
 			   el_trackqoverp->at(index) == el_trackqoverp->at(xedni)
 			 ) {
-				if(checkObject(xedni, TYPE_ELECTRON, __el_et, __mu_pt, useLoose, useForward) != false && electronGetEt(index) <= electronGetEt(xedni))
+				if(checkObject(xedni, TYPE_ELECTRON, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false && electronGetEt(index) <= electronGetEt(xedni))
 				{
 					result = false;
 
@@ -452,7 +532,7 @@ Bool_t TLeptonAnalysis::checkStacoOverlapping(
 			   &&
 			   el_trackqoverp->at(index) == mu_staco_id_qoverp->at(xedni)
 			 ) {
-				if(checkObject(xedni, TYPE_MUON_STACO, __el_et, __mu_pt, useLoose, useForward) != false)
+				if(checkObject(xedni, TYPE_MUON_STACO, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
 				{
 					result = false;
 
@@ -474,6 +554,7 @@ Bool_t TLeptonAnalysis::checkMuidOverlapping(
 	TLeptonType type,
 	Float_t __el_et,
 	Float_t __mu_pt,
+	Float_t __mu_calo_pt,
 	Bool_t useLoose,
 	Bool_t useForward
 ) {
@@ -499,7 +580,7 @@ Bool_t TLeptonAnalysis::checkMuidOverlapping(
 			   &&
 			   el_trackqoverp->at(index) == el_trackqoverp->at(xedni)
 			 ) {
-				if(checkObject(xedni, TYPE_ELECTRON, __el_et, __mu_pt, useLoose, useForward) != false && electronGetEt(index) <= electronGetEt(xedni))
+				if(checkObject(xedni, TYPE_ELECTRON, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false && electronGetEt(index) <= electronGetEt(xedni))
 				{
 					result = false;
 
@@ -509,7 +590,7 @@ Bool_t TLeptonAnalysis::checkMuidOverlapping(
 		}
 
 		/*---------------------------------------------------------*/
-		/* MUON STACO						   */
+		/* MUON MUID						   */
 		/*---------------------------------------------------------*/
 
 		for(Int_t xedni = 0; xedni < mu_muid_n; xedni++)
@@ -524,7 +605,80 @@ Bool_t TLeptonAnalysis::checkMuidOverlapping(
 			   &&
 			   el_trackqoverp->at(index) == mu_muid_id_qoverp->at(xedni)
 			 ) {
-				if(checkObject(xedni, TYPE_MUON_MUID, __el_et, __mu_pt, useLoose, useForward) != false)
+				if(checkObject(xedni, TYPE_MUON_MUID, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
+				{
+					result = false;
+	
+					break;
+				}
+			}
+		}
+
+		/*---------------------------------------------------------*/
+	}
+
+	return result;
+}
+
+/*-------------------------------------------------------------------------*/
+
+Bool_t TLeptonAnalysis::checkCaloOverlapping(
+	Int_t index,
+	TLeptonType type,
+	Float_t __el_et,
+	Float_t __mu_pt,
+	Float_t __mu_calo_pt,
+	Bool_t useLoose,
+	Bool_t useForward
+) {
+	Bool_t result = true;
+
+	if(type == TYPE_ELECTRON)
+	{
+		/*---------------------------------------------------------*/
+		/* ELECTRONS						   */
+		/*---------------------------------------------------------*/
+
+		for(Int_t xedni = 0; xedni < el_n; xedni++)
+		{
+			if(index != xedni
+			   &&
+			   el_trackd0->at(index) == el_trackd0->at(xedni)
+			   &&
+			   el_trackz0->at(index) == el_trackz0->at(xedni)
+			   &&
+			   el_tracktheta->at(index) == el_tracktheta->at(xedni)
+			   &&
+			   el_trackphi->at(index) == el_trackphi->at(xedni)
+			   &&
+			   el_trackqoverp->at(index) == el_trackqoverp->at(xedni)
+			 ) {
+				if(checkObject(xedni, TYPE_ELECTRON, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false && electronGetEt(index) <= electronGetEt(xedni))
+				{
+					result = false;
+
+					break;
+				}
+			}
+		}
+
+		/*---------------------------------------------------------*/
+		/* MUON STACO						   */
+		/*---------------------------------------------------------*/
+
+		for(Int_t xedni = 0; xedni < mu_calo_n; xedni++)
+		{
+			if(el_trackd0->at(index) == mu_calo_id_d0->at(xedni)
+			   &&
+			   el_trackz0->at(index) == mu_calo_id_z0->at(xedni)
+			   &&
+			   el_tracktheta->at(index) == mu_calo_id_theta->at(xedni)
+			   &&
+			   el_trackphi->at(index) == mu_calo_id_phi->at(xedni)
+			   &&
+			   el_trackqoverp->at(index) == mu_calo_id_qoverp->at(xedni)
+			 ) {
+				if(checkObject(xedni, TYPE_MUON_CALO, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
 				{
 					result = false;
 	
@@ -567,6 +721,12 @@ Bool_t TLeptonAnalysis::truthMatch(
 
 			case TYPE_MUON_MUID:
 				if(abs(mu_muid_truth_type->at(index)) != 13 || mu_muid_truth_mothertype->at(index) != 23) {
+					goto __error;
+				}
+				break;
+
+			case TYPE_MUON_CALO:
+				if(abs(mu_calo_truth_type->at(index)) != 13 || mu_calo_truth_mothertype->at(index) != 23) {
 					goto __error;
 				}
 				break;

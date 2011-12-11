@@ -18,37 +18,49 @@ class THiggsBuilder: public TLeptonAnalysis
   public:
 	TTree m_tree0;
 	TTree m_tree1;
+
 	TTree m_tree2;
 	TTree m_tree3;
 	TTree m_tree4;
 	TTree m_tree5;
 	TTree m_tree6;
 	TTree m_tree7;
+
 	TTree m_tree8;
 	TTree m_tree9;
 	TTree m_treeA;
 	TTree m_treeB;
+	TTree m_treeC;
+	TTree m_treeD;
+	TTree m_treeE;
+	TTree m_treeF;
+	TTree m_treeG;
 
 	THiggsBuilder(TChain *chain): TLeptonAnalysis(chain)
 	{
 		m_tree0.SetName("Truth");
 		m_tree1.SetName("Event");
 
-		m_tree2.SetName("Z1");
-		m_tree3.SetName("Z2");
-		m_tree4.SetName("Z3");
-		m_tree5.SetName("Z4");
+		m_tree2.SetName("Z1");	// ee (staco)
+		m_tree3.SetName("Z2");	// ee (muid)
+		m_tree4.SetName("Z3");	// ee (calo)
+		m_tree5.SetName("Z4");	// µµ (staco)
+		m_tree6.SetName("Z5");	// µµ (muid)
+		m_tree7.SetName("Z6");	// µµ (calo)
 
-		TTree *ZTreeArray[4] = {&m_tree2, &m_tree3, &m_tree4, &m_tree5};
+		TTree *ZTreeArray[6] = {&m_tree2, &m_tree3, &m_tree4, &m_tree5, &m_tree6, &m_tree7};
 
-		m_tree6.SetName("H1");
-		m_tree7.SetName("H2");
-		m_tree8.SetName("H3");
-		m_tree9.SetName("H4");
-		m_treeA.SetName("H5");
-		m_treeB.SetName("H6");
+		m_tree8.SetName("H1");	// eeee (staco)
+		m_tree9.SetName("H2");	// eeee (muid)
+		m_treeA.SetName("H3");	// eeee (calo)
+		m_treeB.SetName("H4");	// µµµµ (staco)
+		m_treeC.SetName("H5");  // µµµµ (muid)
+		m_treeD.SetName("H6");  // µµµµ (calo)
+		m_treeE.SetName("H7");  // eeµµ (staco)
+		m_treeF.SetName("H8");  // eeµµ (muid)  
+		m_treeG.SetName("H9");  // eeµµ (calo)
 
-		TTree *HTreeArray[6] = {&m_tree6, &m_tree7, &m_tree8, &m_tree9, &m_treeA, &m_treeB};
+		TTree *HTreeArray[9] = {&m_tree8, &m_tree9, &m_treeA, &m_treeB, &m_treeC, &m_treeD, &m_treeE, &m_treeF, &m_treeG};
 
 		/*---------------------------------------------------------*/
 		/* TRUTH						   */
@@ -92,7 +104,7 @@ class THiggsBuilder: public TLeptonAnalysis
 		/* Z ANALYSIS						   */
 		/*---------------------------------------------------------*/
 
-		for(int i = 0; i < 4; i++)
+		for(int i = 0; i < 6; i++)
 		{
 			TTree *tree = ZTreeArray[i];
 
@@ -159,7 +171,7 @@ class THiggsBuilder: public TLeptonAnalysis
 		/* H ANALYSIS						   */
 		/*---------------------------------------------------------*/
 
-		for(int i = 0; i < 6; i++)
+		for(int i = 0; i < 9; i++)
 		{
 			TTree *tree = HTreeArray[i];
 
@@ -367,7 +379,7 @@ class THiggsBuilder: public TLeptonAnalysis
 		Float_t Z_eta[MAX];
 		Float_t Z_phi[MAX];
 
-	} m_Z[4];
+	} m_Z[6];
 
 	struct __higgs_boson_s
 	{
@@ -436,7 +448,7 @@ class THiggsBuilder: public TLeptonAnalysis
 
 		Int_t cnt[6 + 2 * 4];
 
-	} m_H[6];
+	} m_H[9];
 };
 
 /*-------------------------------------------------------------------------*/

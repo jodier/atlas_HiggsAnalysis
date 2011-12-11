@@ -29,6 +29,8 @@ typedef enum TLeptonType
 	TYPE_MUON_MUID
 	,
 	TYPE_MUON_STACO
+	,
+	TYPE_MUON_CALO
 
 } TLeptonType;
 
@@ -132,6 +134,7 @@ class TLeptonAnalysis: public TNTuple
 		TLeptonType type,
 		Float_t __el_et,
 		Float_t __mu_pt,
+		Float_t __mu_calo_pt,
 		Bool_t useLoose,
 		Bool_t useForward
 	);
@@ -141,6 +144,7 @@ class TLeptonAnalysis: public TNTuple
 		TLeptonType type,
 		Float_t __el_et,
 		Float_t __mu_pt,
+		Float_t __mu_calo_pt,
 		Bool_t useLoose,
 		Bool_t useForward
 	);
@@ -150,6 +154,17 @@ class TLeptonAnalysis: public TNTuple
 		TLeptonType type,
 		Float_t __el_et,
 		Float_t __mu_pt,
+		Float_t __mu_calo_pt,
+		Bool_t useLoose,
+		Bool_t useForward
+	);
+
+	Bool_t checkCaloOverlapping(
+		Int_t index,
+		TLeptonType type,
+		Float_t __el_et,
+		Float_t __mu_pt,
+		Float_t __mu_calo_pt,
 		Bool_t useLoose,
 		Bool_t useForward
 	);

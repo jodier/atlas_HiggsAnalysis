@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Fri Dec  9 12:17:13 2011 by ROOT version 5.28/00b
+// Sun Dec 11 10:35:35 2011 by ROOT version 5.28/00b
 // from TTree physics/physics
 // found on file: result.root
 //////////////////////////////////////////////////////////
@@ -59,6 +59,7 @@ public :
    std::vector<float>   *el_trackz0pvunbiased;
    std::vector<float>   *el_tracksigd0pvunbiased;
    std::vector<int>     *el_EF_index;
+   Bool_t          EF_2e12Tvh_medium;
    Bool_t          EF_2e12T_medium;
    Bool_t          EF_2e12_medium;
    Bool_t          EF_2e15_medium;
@@ -68,6 +69,7 @@ public :
    Bool_t          EF_e20_medium;
    Bool_t          EF_e22_medium;
    Bool_t          EF_e22_medium1;
+   Bool_t          EF_e22vh_medium1;
    Bool_t          EF_mu10;
    Bool_t          EF_mu15_mu10_EFFS;
    Bool_t          EF_mu15_mu10_EFFS_medium;
@@ -166,6 +168,49 @@ public :
    std::vector<int>     *mu_staco_truth_type;
    std::vector<int>     *mu_staco_truth_mothertype;
    std::vector<int>     *mu_staco_EFCB_index;
+   Int_t           mu_calo_n;
+   std::vector<float>   *mu_calo_E;
+   std::vector<float>   *mu_calo_pt;
+   std::vector<float>   *mu_calo_eta;
+   std::vector<float>   *mu_calo_phi;
+   std::vector<float>   *mu_calo_charge;
+   std::vector<int>     *mu_calo_author;
+   std::vector<float>   *mu_calo_etcone20;
+   std::vector<float>   *mu_calo_etcone30;
+   std::vector<float>   *mu_calo_ptcone20;
+   std::vector<float>   *mu_calo_ptcone30;
+   std::vector<unsigned short> *mu_calo_caloMuonIdTag;
+   std::vector<double>  *mu_calo_caloLRLikelihood;
+   std::vector<int>     *mu_calo_isStandAloneMuon;
+   std::vector<int>     *mu_calo_isCombinedMuon;
+   std::vector<float>   *mu_calo_id_theta_exPV;
+   std::vector<float>   *mu_calo_id_qoverp_exPV;
+   std::vector<float>   *mu_calo_me_theta_exPV;
+   std::vector<float>   *mu_calo_me_qoverp_exPV;
+   std::vector<float>   *mu_calo_id_d0;
+   std::vector<float>   *mu_calo_id_z0;
+   std::vector<float>   *mu_calo_id_phi;
+   std::vector<float>   *mu_calo_id_theta;
+   std::vector<float>   *mu_calo_id_qoverp;
+   std::vector<int>     *mu_calo_nBLHits;
+   std::vector<int>     *mu_calo_nPixHits;
+   std::vector<int>     *mu_calo_nSCTHits;
+   std::vector<int>     *mu_calo_nTRTHits;
+   std::vector<int>     *mu_calo_nPixHoles;
+   std::vector<int>     *mu_calo_nSCTHoles;
+   std::vector<int>     *mu_calo_nTRTOutliers;
+   std::vector<int>     *mu_calo_nPixelDeadSensors;
+   std::vector<int>     *mu_calo_nSCTDeadSensors;
+   std::vector<int>     *mu_calo_expectBLayerHit;
+   std::vector<int>     *mu_calo_nCSCEtaHits;
+   std::vector<int>     *mu_calo_nCSCPhiHits;
+   std::vector<int>     *mu_calo_nMDTEMHits;
+   std::vector<int>     *mu_calo_nMDTEOHits;
+   std::vector<float>   *mu_calo_trackd0pvunbiased;
+   std::vector<float>   *mu_calo_trackz0pvunbiased;
+   std::vector<float>   *mu_calo_tracksigd0pvunbiased;
+   std::vector<int>     *mu_calo_truth_type;
+   std::vector<int>     *mu_calo_truth_mothertype;
    Int_t           vxp_n;
    std::vector<int>     *vxp_nTracks;
    std::vector<std::vector<double> > *mcevt_weight;
@@ -233,6 +278,7 @@ public :
    TBranch        *b_el_trackz0pvunbiased;   //!
    TBranch        *b_el_tracksigd0pvunbiased;   //!
    TBranch        *b_el_EF_index;   //!
+   TBranch        *b_EF_2e12Tvh_medium;   //!
    TBranch        *b_EF_2e12T_medium;   //!
    TBranch        *b_EF_2e12_medium;   //!
    TBranch        *b_EF_2e15_medium;   //!
@@ -242,6 +288,7 @@ public :
    TBranch        *b_EF_e20_medium;   //!
    TBranch        *b_EF_e22_medium;   //!
    TBranch        *b_EF_e22_medium1;   //!
+   TBranch        *b_EF_e22vh_medium1;   //!
    TBranch        *b_EF_mu10;   //!
    TBranch        *b_EF_mu15_mu10_EFFS;   //!
    TBranch        *b_EF_mu15_mu10_EFFS_medium;   //!
@@ -340,6 +387,49 @@ public :
    TBranch        *b_mu_staco_truth_type;   //!
    TBranch        *b_mu_staco_truth_mothertype;   //!
    TBranch        *b_mu_staco_EFCB_index;   //!
+   TBranch        *b_mu_calo_n;   //!
+   TBranch        *b_mu_calo_E;   //!
+   TBranch        *b_mu_calo_pt;   //!
+   TBranch        *b_mu_calo_eta;   //!
+   TBranch        *b_mu_calo_phi;   //!
+   TBranch        *b_mu_calo_charge;   //!
+   TBranch        *b_mu_calo_author;   //!
+   TBranch        *b_mu_calo_etcone20;   //!
+   TBranch        *b_mu_calo_etcone30;   //!
+   TBranch        *b_mu_calo_ptcone20;   //!
+   TBranch        *b_mu_calo_ptcone30;   //!
+   TBranch        *b_mu_calo_caloMuonIdTag;   //!
+   TBranch        *b_mu_calo_caloLRLikelihood;   //!
+   TBranch        *b_mu_calo_isStandAloneMuon;   //!
+   TBranch        *b_mu_calo_isCombinedMuon;   //!
+   TBranch        *b_mu_calo_id_theta_exPV;   //!
+   TBranch        *b_mu_calo_id_qoverp_exPV;   //!
+   TBranch        *b_mu_calo_me_theta_exPV;   //!
+   TBranch        *b_mu_calo_me_qoverp_exPV;   //!
+   TBranch        *b_mu_calo_id_d0;   //!
+   TBranch        *b_mu_calo_id_z0;   //!
+   TBranch        *b_mu_calo_id_phi;   //!
+   TBranch        *b_mu_calo_id_theta;   //!
+   TBranch        *b_mu_calo_id_qoverp;   //!
+   TBranch        *b_mu_calo_nBLHits;   //!
+   TBranch        *b_mu_calo_nPixHits;   //!
+   TBranch        *b_mu_calo_nSCTHits;   //!
+   TBranch        *b_mu_calo_nTRTHits;   //!
+   TBranch        *b_mu_calo_nPixHoles;   //!
+   TBranch        *b_mu_calo_nSCTHoles;   //!
+   TBranch        *b_mu_calo_nTRTOutliers;   //!
+   TBranch        *b_mu_calo_nPixelDeadSensors;   //!
+   TBranch        *b_mu_calo_nSCTDeadSensors;   //!
+   TBranch        *b_mu_calo_expectBLayerHit;   //!
+   TBranch        *b_mu_calo_nCSCEtaHits;   //!
+   TBranch        *b_mu_calo_nCSCPhiHits;   //!
+   TBranch        *b_mu_calo_nMDTEMHits;   //!
+   TBranch        *b_mu_calo_nMDTEOHits;   //!
+   TBranch        *b_mu_calo_trackd0pvunbiased;   //!
+   TBranch        *b_mu_calo_trackz0pvunbiased;   //!
+   TBranch        *b_mu_calo_tracksigd0pvunbiased;   //!
+   TBranch        *b_mu_calo_truth_type;   //!
+   TBranch        *b_mu_calo_truth_mothertype;   //!
    TBranch        *b_vxp_n;   //!
    TBranch        *b_vxp_nTracks;   //!
    TBranch        *b_mcevt_weight;   //!
@@ -550,6 +640,48 @@ void THiggsD3PD::Init(TTree *tree)
    mu_staco_truth_type = 0;
    mu_staco_truth_mothertype = 0;
    mu_staco_EFCB_index = 0;
+   mu_calo_E = 0;
+   mu_calo_pt = 0;
+   mu_calo_eta = 0;
+   mu_calo_phi = 0;
+   mu_calo_charge = 0;
+   mu_calo_author = 0;
+   mu_calo_etcone20 = 0;
+   mu_calo_etcone30 = 0;
+   mu_calo_ptcone20 = 0;
+   mu_calo_ptcone30 = 0;
+   mu_calo_caloMuonIdTag = 0;
+   mu_calo_caloLRLikelihood = 0;
+   mu_calo_isStandAloneMuon = 0;
+   mu_calo_isCombinedMuon = 0;
+   mu_calo_id_theta_exPV = 0;
+   mu_calo_id_qoverp_exPV = 0;
+   mu_calo_me_theta_exPV = 0;
+   mu_calo_me_qoverp_exPV = 0;
+   mu_calo_id_d0 = 0;
+   mu_calo_id_z0 = 0;
+   mu_calo_id_phi = 0;
+   mu_calo_id_theta = 0;
+   mu_calo_id_qoverp = 0;
+   mu_calo_nBLHits = 0;
+   mu_calo_nPixHits = 0;
+   mu_calo_nSCTHits = 0;
+   mu_calo_nTRTHits = 0;
+   mu_calo_nPixHoles = 0;
+   mu_calo_nSCTHoles = 0;
+   mu_calo_nTRTOutliers = 0;
+   mu_calo_nPixelDeadSensors = 0;
+   mu_calo_nSCTDeadSensors = 0;
+   mu_calo_expectBLayerHit = 0;
+   mu_calo_nCSCEtaHits = 0;
+   mu_calo_nCSCPhiHits = 0;
+   mu_calo_nMDTEMHits = 0;
+   mu_calo_nMDTEOHits = 0;
+   mu_calo_trackd0pvunbiased = 0;
+   mu_calo_trackz0pvunbiased = 0;
+   mu_calo_tracksigd0pvunbiased = 0;
+   mu_calo_truth_type = 0;
+   mu_calo_truth_mothertype = 0;
    vxp_nTracks = 0;
    mcevt_weight = 0;
    mc_children = 0;
@@ -618,6 +750,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("el_trackz0pvunbiased", &el_trackz0pvunbiased, &b_el_trackz0pvunbiased);
    fChain->SetBranchAddress("el_tracksigd0pvunbiased", &el_tracksigd0pvunbiased, &b_el_tracksigd0pvunbiased);
    fChain->SetBranchAddress("el_EF_index", &el_EF_index, &b_el_EF_index);
+   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
    fChain->SetBranchAddress("EF_2e12_medium", &EF_2e12_medium, &b_EF_2e12_medium);
    fChain->SetBranchAddress("EF_2e15_medium", &EF_2e15_medium, &b_EF_2e15_medium);
@@ -627,6 +760,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_e20_medium", &EF_e20_medium, &b_EF_e20_medium);
    fChain->SetBranchAddress("EF_e22_medium", &EF_e22_medium, &b_EF_e22_medium);
    fChain->SetBranchAddress("EF_e22_medium1", &EF_e22_medium1, &b_EF_e22_medium1);
+   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
    fChain->SetBranchAddress("EF_mu10", &EF_mu10, &b_EF_mu10);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS", &EF_mu15_mu10_EFFS, &b_EF_mu15_mu10_EFFS);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS_medium", &EF_mu15_mu10_EFFS_medium, &b_EF_mu15_mu10_EFFS_medium);
@@ -725,6 +859,49 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_staco_truth_type", &mu_staco_truth_type, &b_mu_staco_truth_type);
    fChain->SetBranchAddress("mu_staco_truth_mothertype", &mu_staco_truth_mothertype, &b_mu_staco_truth_mothertype);
    fChain->SetBranchAddress("mu_staco_EFCB_index", &mu_staco_EFCB_index, &b_mu_staco_EFCB_index);
+   fChain->SetBranchAddress("mu_calo_n", &mu_calo_n, &b_mu_calo_n);
+   fChain->SetBranchAddress("mu_calo_E", &mu_calo_E, &b_mu_calo_E);
+   fChain->SetBranchAddress("mu_calo_pt", &mu_calo_pt, &b_mu_calo_pt);
+   fChain->SetBranchAddress("mu_calo_eta", &mu_calo_eta, &b_mu_calo_eta);
+   fChain->SetBranchAddress("mu_calo_phi", &mu_calo_phi, &b_mu_calo_phi);
+   fChain->SetBranchAddress("mu_calo_charge", &mu_calo_charge, &b_mu_calo_charge);
+   fChain->SetBranchAddress("mu_calo_author", &mu_calo_author, &b_mu_calo_author);
+   fChain->SetBranchAddress("mu_calo_etcone20", &mu_calo_etcone20, &b_mu_calo_etcone20);
+   fChain->SetBranchAddress("mu_calo_etcone30", &mu_calo_etcone30, &b_mu_calo_etcone30);
+   fChain->SetBranchAddress("mu_calo_ptcone20", &mu_calo_ptcone20, &b_mu_calo_ptcone20);
+   fChain->SetBranchAddress("mu_calo_ptcone30", &mu_calo_ptcone30, &b_mu_calo_ptcone30);
+   fChain->SetBranchAddress("mu_calo_caloMuonIdTag", &mu_calo_caloMuonIdTag, &b_mu_calo_caloMuonIdTag);
+   fChain->SetBranchAddress("mu_calo_caloLRLikelihood", &mu_calo_caloLRLikelihood, &b_mu_calo_caloLRLikelihood);
+   fChain->SetBranchAddress("mu_calo_isStandAloneMuon", &mu_calo_isStandAloneMuon, &b_mu_calo_isStandAloneMuon);
+   fChain->SetBranchAddress("mu_calo_isCombinedMuon", &mu_calo_isCombinedMuon, &b_mu_calo_isCombinedMuon);
+   fChain->SetBranchAddress("mu_calo_id_theta_exPV", &mu_calo_id_theta_exPV, &b_mu_calo_id_theta_exPV);
+   fChain->SetBranchAddress("mu_calo_id_qoverp_exPV", &mu_calo_id_qoverp_exPV, &b_mu_calo_id_qoverp_exPV);
+   fChain->SetBranchAddress("mu_calo_me_theta_exPV", &mu_calo_me_theta_exPV, &b_mu_calo_me_theta_exPV);
+   fChain->SetBranchAddress("mu_calo_me_qoverp_exPV", &mu_calo_me_qoverp_exPV, &b_mu_calo_me_qoverp_exPV);
+   fChain->SetBranchAddress("mu_calo_id_d0", &mu_calo_id_d0, &b_mu_calo_id_d0);
+   fChain->SetBranchAddress("mu_calo_id_z0", &mu_calo_id_z0, &b_mu_calo_id_z0);
+   fChain->SetBranchAddress("mu_calo_id_phi", &mu_calo_id_phi, &b_mu_calo_id_phi);
+   fChain->SetBranchAddress("mu_calo_id_theta", &mu_calo_id_theta, &b_mu_calo_id_theta);
+   fChain->SetBranchAddress("mu_calo_id_qoverp", &mu_calo_id_qoverp, &b_mu_calo_id_qoverp);
+   fChain->SetBranchAddress("mu_calo_nBLHits", &mu_calo_nBLHits, &b_mu_calo_nBLHits);
+   fChain->SetBranchAddress("mu_calo_nPixHits", &mu_calo_nPixHits, &b_mu_calo_nPixHits);
+   fChain->SetBranchAddress("mu_calo_nSCTHits", &mu_calo_nSCTHits, &b_mu_calo_nSCTHits);
+   fChain->SetBranchAddress("mu_calo_nTRTHits", &mu_calo_nTRTHits, &b_mu_calo_nTRTHits);
+   fChain->SetBranchAddress("mu_calo_nPixHoles", &mu_calo_nPixHoles, &b_mu_calo_nPixHoles);
+   fChain->SetBranchAddress("mu_calo_nSCTHoles", &mu_calo_nSCTHoles, &b_mu_calo_nSCTHoles);
+   fChain->SetBranchAddress("mu_calo_nTRTOutliers", &mu_calo_nTRTOutliers, &b_mu_calo_nTRTOutliers);
+   fChain->SetBranchAddress("mu_calo_nPixelDeadSensors", &mu_calo_nPixelDeadSensors, &b_mu_calo_nPixelDeadSensors);
+   fChain->SetBranchAddress("mu_calo_nSCTDeadSensors", &mu_calo_nSCTDeadSensors, &b_mu_calo_nSCTDeadSensors);
+   fChain->SetBranchAddress("mu_calo_expectBLayerHit", &mu_calo_expectBLayerHit, &b_mu_calo_expectBLayerHit);
+   fChain->SetBranchAddress("mu_calo_nCSCEtaHits", &mu_calo_nCSCEtaHits, &b_mu_calo_nCSCEtaHits);
+   fChain->SetBranchAddress("mu_calo_nCSCPhiHits", &mu_calo_nCSCPhiHits, &b_mu_calo_nCSCPhiHits);
+   fChain->SetBranchAddress("mu_calo_nMDTEMHits", &mu_calo_nMDTEMHits, &b_mu_calo_nMDTEMHits);
+   fChain->SetBranchAddress("mu_calo_nMDTEOHits", &mu_calo_nMDTEOHits, &b_mu_calo_nMDTEOHits);
+   fChain->SetBranchAddress("mu_calo_trackd0pvunbiased", &mu_calo_trackd0pvunbiased, &b_mu_calo_trackd0pvunbiased);
+   fChain->SetBranchAddress("mu_calo_trackz0pvunbiased", &mu_calo_trackz0pvunbiased, &b_mu_calo_trackz0pvunbiased);
+   fChain->SetBranchAddress("mu_calo_tracksigd0pvunbiased", &mu_calo_tracksigd0pvunbiased, &b_mu_calo_tracksigd0pvunbiased);
+   fChain->SetBranchAddress("mu_calo_truth_type", &mu_calo_truth_type, &b_mu_calo_truth_type);
+   fChain->SetBranchAddress("mu_calo_truth_mothertype", &mu_calo_truth_mothertype, &b_mu_calo_truth_mothertype);
    fChain->SetBranchAddress("vxp_n", &vxp_n, &b_vxp_n);
    fChain->SetBranchAddress("vxp_nTracks", &vxp_nTracks, &b_vxp_nTracks);
    fChain->SetBranchAddress("mcevt_weight", &mcevt_weight, &b_mcevt_weight);
