@@ -35,6 +35,11 @@ void core::execute(TChain *chain)
 	algo.m_tree9.Write();
 	algo.m_treeA.Write();
 	algo.m_treeB.Write();
+	algo.m_treeC.Write();
+	algo.m_treeD.Write();
+	algo.m_treeE.Write();
+	algo.m_treeF.Write();
+	algo.m_treeG.Write();
 
 	file.Close();
 }
@@ -274,13 +279,11 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/**/
-
 #ifndef __IS_MC
 		Bool_t isOkVertex = (nPV3 > 0);
 #else
 		Bool_t isOkVertex = (nPV3 > 0) && (larError != 2);
 #endif
-
 		/*---------------------------------------------------------*/
 		/* SELECTION 1						   */
 		/*---------------------------------------------------------*/
@@ -907,19 +910,19 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << "#el (staco): " << nr1 << std::endl;
 	std::cout << "#el (muid): " << nr2 << std::endl;
-	std::cout << "#el (calo): " << nr2 << std::endl;
-	std::cout << "#mu (staco): " << nr3 << std::endl;
-	std::cout << "#mu (muid): " << nr4 << std::endl;
-	std::cout << "#mu (calo): " << nr5 << std::endl;
+	std::cout << "#el (calo): " << nr3 << std::endl;
+	std::cout << "#mu (staco): " << nr4 << std::endl;
+	std::cout << "#mu (muid): " << nr5 << std::endl;
+	std::cout << "#mu (calo): " << nr6 << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "#el (staco): " << nr6 << std::endl;
-	std::cout << "#el (muid): " << nr7 << std::endl;
-	std::cout << "#el (calo): " << nr7 << std::endl;
-	std::cout << "#mu (staco): " << nr8 << std::endl;
-	std::cout << "#mu (muid): " << nr9 << std::endl;
-	std::cout << "#mu (calo): " << nrA << std::endl;
+	std::cout << "#el (staco): " << nr7 << std::endl;
+	std::cout << "#el (muid): " << nr8 << std::endl;
+	std::cout << "#el (calo): " << nr9 << std::endl;
+	std::cout << "#mu (staco): " << nrA << std::endl;
+	std::cout << "#mu (muid): " << nrB << std::endl;
+	std::cout << "#mu (calo): " << nrC << std::endl;
 }
 
 /*-------------------------------------------------------------------------*/
