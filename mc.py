@@ -2,7 +2,7 @@
 
 #############################################################################
 
-import time, commands
+import time, getpass, commands
 
 #############################################################################
 
@@ -59,7 +59,7 @@ VERSION = int(time.time())
 
 for in_ds in L:
 
-	out_ds = 'user.jodier.%s-%d_%s' % (in_ds.split('.')[+1], VERSION, in_ds.split('.')[-1])
+	out_ds = 'user.%s.%s-%d_%s' % (getpass.getuser(), in_ds.split('.')[+1], VERSION, in_ds.split('.')[-1])
 
 	print('Running \'%s\' -> \'%s\'...' % (in_ds, out_ds))
 
