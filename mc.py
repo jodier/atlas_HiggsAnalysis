@@ -59,9 +59,9 @@ VERSION = int(time.time())
 
 for in_ds in L:
 
-	out_ds = 'user.jodier.%s_p768-%d/' %  (in_ds.split('.')[1], VERSION)
+	out_ds = 'user.jodier.%s-%d_%s' % (in_ds.split('.')[+1], VERSION, in_ds.split('.')[-1])
 
-	print('Running \'%s\'...' % in_ds)
+	print('Running \'%s\' -> \'%s\'...' % (in_ds, out_ds))
 
 	status, output = commands.getstatusoutput('./run_mc.sh %s %s' % (in_ds, out_ds))
 
