@@ -271,7 +271,7 @@ for in_ds in L:
 
 	print('Running \'%s\' -> \'%s\'...' % (in_ds, out_ds))
 
-	status, output = commands.getstatusoutput('./run_mc.sh %s %s' % (in_ds, out_ds))
+	status, output = commands.getstatusoutput('./run_data.sh %s %s' % (in_ds, out_ds))
 
 	if status == 0:
 		print('[ \033[32m Ok. \033[0m ]')
