@@ -258,11 +258,11 @@ bool THiggsBuilder::Z_analysis(
 
 	Int_t nrTrigger = 0;
 
-	if(truthMatch1) {
+	if(triggerMatch1) {
 		nrTrigger++;
 	}
 
-	if(truthMatch2) {
+	if(triggerMatch2) {
 		nrTrigger++;
 	}
 
