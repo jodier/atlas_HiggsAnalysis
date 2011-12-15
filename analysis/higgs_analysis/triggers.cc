@@ -116,8 +116,8 @@ Bool_t getIsMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<
 		return false;
 	}
 
-	Float_t the_dr;
-	Float_t min_dr = 100;
+	Float_t the_dr = 000.0f;
+	Float_t min_dr = 100.0f;
 
 	for(UInt_t i = 0; i < hypo->size(); i++)
 	{
@@ -152,8 +152,8 @@ Bool_t getIsMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<
 #define periodL 1540.28f
 #define periodM 960.327f
 
-const Float_t frac1 = (     periodI     ) / (periodI + periodJ + periodK);
-const Float_t frac2 = (periodI + periodJ) / (periodI + periodJ + periodK);
+const Float_t fracEl = (periodI + periodJ) / (periodI + periodJ + periodK);
+const Float_t fracMu = (     periodI     ) / (periodI + periodJ + periodK);
 
 /*-------------------------------------------------------------------------*/
 
@@ -168,10 +168,10 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 		if(core::isMC(RunNumber) != false)
 		{
 			TRandom3 random3;
-
-			random3.SetSeed(time(NULL));
-
-			if(random3.Uniform() < frac2) {
+#ifdef __IS_MC
+			random3.SetSeed(mc_channel_number * RunNumber);
+#endif
+			if(random3.Uniform() < fracEl) {
 				result = EF_e20_medium || EF_2e12_medium;
 			}
 			else {
@@ -247,10 +247,10 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 		if(core::isMC(RunNumber) != false)
 		{
 			TRandom3 random3;
-
-			random3.SetSeed(time(NULL));
-
-			if(random3.Uniform() < frac1) {
+#ifdef __IS_MC
+			random3.SetSeed(mc_channel_number * RunNumber);
+#endif
+			if(random3.Uniform() < fracMu) {
 				result = EF_mu18_MG;
 			}
 			else {
@@ -286,7 +286,7 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 		result = true;
 	}
 
-	return false;
+	return result;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -367,6 +367,14 @@ Bool_t TLeptonAnalysis::triggerMatch(
 			break;
 
 		__mu:
+			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
+			{
+				switch(*it)
+				{
+
+				}
+			}
+
 			/* TODO */
 			/* TODO */
 			/* TODO */

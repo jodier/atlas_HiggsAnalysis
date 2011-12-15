@@ -173,11 +173,14 @@ void cut_flow(void)
 	const char *fname = "./yok2.txt";
 
 	print("H1", fname, "H->eeee (STACO)", 1);
-//	print("H1", fname, "H->eeee (MUID)", 1);
-	print("H3", fname, "H->µµµµ (STACO)", 2);
-	print("H4", fname, "H->µµµµ (MUID)", 2);
-	print("H5", fname, "H->eeµµ|µµee (STACO)", 3);
-	print("H6", fname, "H->eeµµ|µµee (MUID)", 3);
+	print("H2", fname, "H->eeee (MUID)", 1);
+	print("H3", fname, "H->eeee (CALO)", 1);
+	print("H4", fname, "H->µµµµ (STACO)", 2);
+	print("H5", fname, "H->µµµµ (MUID)", 2);
+	print("H6", fname, "H->µµµµ (CALO)", 2);
+	print("H7", fname, "H->eeµµ|µµee (STACO)", 3);
+	print("H8", fname, "H->eeµµ|µµee (MUID)", 3);
+	print("H9", fname, "H->eeµµ|µµee (CALO)", 3);
 }
 
 /*-------------------------------------------------------------------------*/

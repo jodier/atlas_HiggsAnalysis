@@ -25,6 +25,7 @@ public :
    UInt_t          lbn;
    Float_t         actualIntPerXing;
    Float_t         averageIntPerXing;
+   UInt_t          mc_channel_number;
    UInt_t          larError;
    Bool_t          EF_2e12Tvh_medium;
    Bool_t          EF_2e12T_medium;
@@ -244,6 +245,7 @@ public :
    TBranch        *b_lbn;   //!
    TBranch        *b_actualIntPerXing;   //!
    TBranch        *b_averageIntPerXing;   //!
+   TBranch        *b_mc_channel_number;   //!
    TBranch        *b_larError;   //!
    TBranch        *b_EF_2e12Tvh_medium;   //!
    TBranch        *b_EF_2e12T_medium;   //!
@@ -716,6 +718,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("lbn", &lbn, &b_lbn);
    fChain->SetBranchAddress("actualIntPerXing", &actualIntPerXing, &b_actualIntPerXing);
    fChain->SetBranchAddress("averageIntPerXing", &averageIntPerXing, &b_averageIntPerXing);
+   fChain->SetBranchAddress("mc_channel_number", &mc_channel_number, &b_mc_channel_number);
    fChain->SetBranchAddress("larError", &larError, &b_larError);
    fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);

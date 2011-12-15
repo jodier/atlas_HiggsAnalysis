@@ -198,8 +198,6 @@ Bool_t TLeptonAnalysis::checkObject(
 ) {
 	Int_t n;
 
-	Float_t aeta, et;
-
 	if(useForward != false)
 	{
 		std::cerr << "Forward electrons not yet implemented !" << std::endl;
@@ -234,19 +232,11 @@ Bool_t TLeptonAnalysis::checkObject(
 				}
 			}
 
-			aeta = fabs(el_cl_eta->at(index));
-
-			if(aeta > 2.47f) {
+			if(fabs(el_cl_eta->at(index)) > 2.47f) {
 				goto __error;
 			}
 
-			et = electronGetEt(index);
-
-			if(et < __el_et) {
-				goto __error;
-			}
-
-			if(et < 15000.0f && aeta > 1.37f && aeta < 1.52f) {
+			if(electronGetEt(index) < __el_et) {
 				goto __error;
 			}
 
@@ -261,7 +251,10 @@ Bool_t TLeptonAnalysis::checkObject(
 		/*---------------------------------------------------------*/
 
 		case TYPE_MUON_STACO:
-			if(mu_staco_author->at(index) != 6 && mu_staco_author->at(index) != 7) {
+			if(mu_staco_author->at(index) != 6
+			   &&
+			   mu_staco_author->at(index) != 7
+			 ) {
 				goto __error;
 			}
 
@@ -293,7 +286,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				}
 			}
 
-			if(mu_staco_expectBLayerHit->at(index) == 1 && mu_staco_nBLHits->at(index) == 0) {
+			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) < 1) {
 				goto __error;
 			}
 
@@ -371,7 +364,7 @@ __okay_staco:
 				}
 			}
 
-			if(mu_muid_expectBLayerHit->at(index) == 1 && mu_muid_nBLHits->at(index) == 0) {
+			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) < 1) {
 				goto __error;
 			}
 
@@ -383,7 +376,7 @@ __okay_staco:
 				goto __error;
 			}
 
-			if(mu_muid_nPixHoles->at(index) + mu_muid_nSCTHoles->at(index) > 2 ) {
+			if(mu_muid_nPixHoles->at(index) + mu_muid_nSCTHoles->at(index) > 2) {
 				goto __error;
 			}
 
@@ -436,7 +429,7 @@ __okay_muid:
 				goto __error;
 			}
 
-			if(mu_calo_expectBLayerHit->at(index) == 1 && mu_calo_nBLHits->at(index) == 0) {
+			if(mu_calo_expectBLayerHit->at(index) != 0 && mu_calo_nBLHits->at(index) < 1) {
 				goto __error;
 			}
 
@@ -448,7 +441,7 @@ __okay_muid:
 				goto __error;
 			}
 
-			if(mu_calo_nPixHoles->at(index) + mu_calo_nSCTHoles->at(index) > 2 ) {
+			if(mu_calo_nPixHoles->at(index) + mu_calo_nSCTHoles->at(index) > 2) {
 				goto __error;
 			}
 

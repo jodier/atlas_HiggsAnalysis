@@ -429,25 +429,52 @@ Bool_t THiggsBuilder::H_analysis(
 	/* KINEMATICS							   */
 	/*-----------------------------------------------------------------*/
 
-	Int_t nr = 0;
+	Int_t nrKinematics = 0;
 
 	if(pt1 > ptCut1) {
-		nr++;
+		nrKinematics++;
 	}
 
 	if(pt2 > ptCut2) {
-		nr++;
+		nrKinematics++;
 	}
 
 	if(pt3 > ptCut3) {
-		nr++;
+		nrKinematics++;
 	}
 
 	if(pt4 > ptCut4) {
-		nr++;
+		nrKinematics++;
 	}
 
-	if(nr < 2)
+	if(nrKinematics < 2)
+	{
+		isOk = false;
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* TRIGGER							   */
+	/*-----------------------------------------------------------------*/
+
+	Int_t nrTrigger = 0;
+
+	if(triggerMatch1 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch2 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch3 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch4 != false) {
+		nrTrigger++;
+	}
+
+	if(nrTrigger < 1)
 	{
 		isOk = false;
 	}
@@ -649,17 +676,7 @@ Bool_t THiggsBuilder::H_analysis(
 	/*-----------------------------------------------------------------*/
 	/* ONE QUADRUPLET						   */
 	/*-----------------------------------------------------------------*/
-/*
-	if(core::configFltLookup("EL_USE_LOOSE") != 0.0f)
-	{
-		if((Z2.l1_triggerMatch != false && Z2.l1_loosePlusPlus == false)
-		   ||
-		   (Z2.l2_triggerMatch != false && Z2.l2_loosePlusPlus == false)
-		 ) {
-			isOk = false;
-		}
-	}
-*/
+
 	/* POST PROCESSING */
 	_INC(isOk, dest, 6);
 	/* POST PROCESSING */

@@ -54,6 +54,15 @@ void THiggsBuilder::Loop(void)
 	Int_t nPV2;
 	Int_t nPV3;
 
+	int elSTACONr0 = 0;
+	int elSTACONr1 = 0;
+	int elSTACONr2 = 0;
+	int elSTACONr3 = 0;
+	int elSTACONr4 = 0;
+	int elSTACONr5 = 0;
+	int elSTACONr6 = 0;
+	int elSTACONr7 = 0;
+
 	int muSTACONr0 = 0;
 	int muSTACONr1 = 0;
 	int muSTACONr2 = 0;
@@ -94,7 +103,7 @@ void THiggsBuilder::Loop(void)
 		/* TRIGGER						   */
 		/*---------------------------------------------------------*/
 
-//		Bool_t isOkElTrigger = EF_e20_medium;
+		Bool_t isOkElTrigger = EF_e20_medium || EF_2e12_medium;
 		Bool_t isOkMuTrigger = EF_mu18_MG;
 
 		/*---------------------------------------------------------*/
@@ -118,6 +127,60 @@ void THiggsBuilder::Loop(void)
 		/**/
 
 		Bool_t isOkVertex = (nPV3 > 0) && (larError == false);
+
+		/*---------------------------------------------------------*/
+		/* ELECTRON STACO					   */
+		/*---------------------------------------------------------*/
+
+		for(Int_t i = 0; i < el_n; i++)
+		{
+			elSTACONr0++;
+
+			if(isOkVertex == false) {
+				continue;
+			}
+
+			elSTACONr1++;
+
+			if(isOkElTrigger == false) {
+				continue;
+			}
+
+			elSTACONr2++;
+
+			if(el_author->at(i) != 1
+			   &&
+			   el_author->at(i) != 3
+			 ) {
+				continue;
+			}
+
+			elSTACONr3++;
+
+			if(el_loosePP->at(i) == 0) {
+				continue;
+			}
+
+			elSTACONr4++;
+
+			if(fabs(el_cl_eta->at(i)) > 2.47f) {
+				continue;
+			}
+
+			elSTACONr5++;
+
+			if(electronGetEt(i) < 7000.0f) {
+				continue;
+			}
+
+			elSTACONr6++;
+
+			if(fabs(el_trackz0pvunbiased->at(i)) > 10.0f) {
+				continue;
+			}
+
+			elSTACONr7++;
+		}
 
 		/*---------------------------------------------------------*/
 		/* MUON STACO						   */
@@ -361,7 +424,20 @@ __okay_muid:
 	std::cout << std::endl;
 
 	std::cout << "#############################################################################" << std::endl;
-	std::cout << "# STACO                                                                     #" << std::endl;
+	std::cout << "# ELECTRON STACO                                                            #" << std::endl;
+	std::cout << "#############################################################################" << std::endl;
+
+	std::cout << "before any cut: " << elSTACONr0 << std::endl;
+	std::cout << "after vertex: " << elSTACONr1 << std::endl;
+	std::cout << "after trigger: " << elSTACONr2 << std::endl;
+	std::cout << "after author=1||3: " << elSTACONr3 << std::endl;
+	std::cout << "after loose++: " << elSTACONr4 << std::endl;
+	std::cout << "after pt>7: " << elSTACONr5 << std::endl;
+	std::cout << "after |η|<2.47: " << elSTACONr6 << std::endl;
+	std::cout << "after z0: " << elSTACONr7 << std::endl;
+
+	std::cout << "#############################################################################" << std::endl;
+	std::cout << "# MUON STACO                                                                #" << std::endl;
 	std::cout << "#############################################################################" << std::endl;
 
 	std::cout << "before any cut     : " << muSTACONr0 << std::endl;
@@ -379,7 +455,7 @@ __okay_muid:
 	std::cout << "after z0\t   : " << muSTACONr12 << std::endl;
 
 	std::cout << "#############################################################################" << std::endl;
-	std::cout << "# MUID                                                                      #" << std::endl;
+	std::cout << "# MUON MUID                                                                 #" << std::endl;
 	std::cout << "#############################################################################" << std::endl;
 
 	std::cout << "before any cut     : " << muMUIDNr0 << std::endl;

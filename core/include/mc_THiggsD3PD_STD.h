@@ -25,6 +25,7 @@ public :
    UInt_t          lbn;
    Float_t         actualIntPerXing;
    Float_t         averageIntPerXing;
+   UInt_t          mc_channel_number;
    UInt_t          larError;
    Int_t           el_n;
    std::vector<float>   *el_charge;
@@ -244,6 +245,7 @@ public :
    TBranch        *b_lbn;   //!
    TBranch        *b_actualIntPerXing;   //!
    TBranch        *b_averageIntPerXing;   //!
+   TBranch        *b_mc_channel_number;   //!
    TBranch        *b_larError;   //!
    TBranch        *b_el_n;   //!
    TBranch        *b_el_charge;   //!
@@ -716,6 +718,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("lbn", &lbn, &b_lbn);
    fChain->SetBranchAddress("actualIntPerXing", &actualIntPerXing, &b_actualIntPerXing);
    fChain->SetBranchAddress("averageIntPerXing", &averageIntPerXing, &b_averageIntPerXing);
+   fChain->SetBranchAddress("mc_channel_number", &mc_channel_number, &b_mc_channel_number);
    fChain->SetBranchAddress("larError", &larError, &b_larError);
    fChain->SetBranchAddress("el_n", &el_n, &b_el_n);
    fChain->SetBranchAddress("el_charge", &el_charge, &b_el_charge);

@@ -234,41 +234,39 @@ bool THiggsBuilder::Z_analysis(
 	}
 
 	/*-----------------------------------------------------------------*/
-	/* TRIGGER							   */
+	/* KINEMATICS							   */
 	/*-----------------------------------------------------------------*/
 
-	Int_t nr;
-
-	/*-----------------------------------------------------------------*/
-
-	nr = 0;
+	Int_t nrKinematics = 0;
 
 	if(pt1 > ptCut1) {
-		nr++;
+		nrKinematics++;
 	}
 
 	if(pt2 > ptCut2) {
-		nr++;
+		nrKinematics++;
 	}
 
-	if(nr < 1)
+	if(nrKinematics < 1)
 	{
 		return false;
 	}
 
 	/*-----------------------------------------------------------------*/
+	/* TRIGGER							   */
+	/*-----------------------------------------------------------------*/
 
-	nr = 0;
+	Int_t nrTrigger = 0;
 
 	if(truthMatch1) {
-		nr++;
+		nrTrigger++;
 	}
 
 	if(truthMatch2) {
-		nr++;
+		nrTrigger++;
 	}
 
-	if(nr < 1)
+	if(nrTrigger < 1)
 	{
 		return false;
 	}
