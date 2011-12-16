@@ -39,37 +39,41 @@ OBJS3         = analysis/test/main.o
 
 OBJS4         = analysis/efficiencies/eff.o
 
+OBJS5         = analysis/efficiencies/mass.o
+
 #############################################################################
 
-all: core $(OBJS2) $(OBJS3) $(OBJS4)
+all:  $(OBJS5)
 #	@cd $(DIR)/tools && make && cd $(DIR)
 
-	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
-	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
-	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
+#	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+#	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+#	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
+	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 
 #############################################################################
 
-ALL: core $(OBJS2) $(OBJS3) $(OBJS4)
+ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5)
 	@cd $(DIR)/tools && make all && cd $(DIR)
 
 	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
+	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 
 #############################################################################
 
 clean:
 #	@cd $(DIR)/tools && make clean && cd $(DIR)
 
-	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) libcore.a higgs_analysis test eff
+	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) libcore.a higgs_analysis test eff mass
 
 #############################################################################
 
 CLEAN:
 	@cd $(DIR)/tools && make clean && cd $(DIR)
 
-	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) libcore.a higgs_analysis test eff
+	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) libcore.a higgs_analysis test eff mass
 
 #############################################################################
 
