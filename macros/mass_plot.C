@@ -144,7 +144,7 @@ void mass_plot(void)
 
 	/*-----------------------------------------------------------------*/
 
-	Float_t norme = h1->GetEntries();
+	Float_t norme = 0.975f * h1->GetEntries();
 
 	/*-----------------------------------------------------------------*/
 
@@ -163,6 +163,7 @@ void mass_plot(void)
 	__frame->Draw();
 
 	__fit(h1)->Draw("same");
+//	h1->Draw("same");
 	h2->Draw("same");
 	h3->Draw("same");
 
