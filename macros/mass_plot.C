@@ -119,7 +119,7 @@ RooPlot *__fit(TH1F *h)
 
 	sprintf(buffer1, "<m_{ee}>: %.2f #pm %.1e", MASS_CENTER + mass1.getVal(), mass1.getError());
 
-	TLatex *label1 = new TLatex(92.0, 220000.0, buffer1);
+	TLatex *label1 = new TLatex(92.0, 200000.0, buffer1);
 
 	label1->Draw();
 
@@ -161,9 +161,9 @@ void mass_plot(void)
 	__frame->SetYTitle("Events / ( 1 GeV )");
 
 	__frame->Draw();
+	h1->Draw("same");
+	__fit(h2)->Draw("same");
 
-	__fit(h1)->Draw("same");
-	h2->Draw("same");
 	h3->Draw("same");
 
 	/*-----------------------------------------------------------------*/
@@ -172,7 +172,8 @@ void mass_plot(void)
 
 	/*-----------------------------------------------------------------*/
 
-	gPad->Print("mass.pdf");
-	gPad->Print("mass.eps");
+	gPad->Print("mass_fit_mc.pdf");
+	gPad->Print("mass_fit_mc.eps");
+	gPad->Print("mass_fit_mc.png");
 }
 

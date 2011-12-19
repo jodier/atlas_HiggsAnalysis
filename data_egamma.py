@@ -264,7 +264,7 @@ VERSION = int(time.time())
 
 for in_ds in L:
 
-	out_ds = 'user.%s.%s.%s-%d_%s' % (getpass.getuser(), in_ds.split('.')[+1], in_ds.split('.')[+2], VERSION, in_ds.split('.')[-1])
+	out_ds = 'user.%s.%s.%s-%d_%s.GSF' % (getpass.getuser(), in_ds.split('.')[+1], in_ds.split('.')[+2], VERSION, in_ds.split('.')[-1])
 
 	print('Running \'%s\' -> \'%s\'...' % (in_ds, out_ds))
 
