@@ -262,30 +262,28 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(fabs(mu_staco_eta->at(index)) > 2.5f)
+			if(mu_staco_author->at(index) == 6 && fabs(mu_staco_eta->at(index)) > 2.5f)
 			{
-				if(fabs(mu_staco_eta->at(index)) > 2.7f) {
-					goto __error;
+				/**/ if(mu_staco_isCombinedMuon->at(index) == false)
+				{
+					goto __okay_staco_with_hits_requirements;
+				}
+				else if(mu_staco_isStandAloneMuon->at(index) == false)
+				{
+					if((mu_staco_nCSCEtaHits->at(index) + mu_staco_nCSCPhiHits->at(index)) > 0
+					   &&
+					   (mu_staco_nMDTEMHits->at(index)) > 0
+					   &&
+					   (mu_staco_nMDTEOHits->at(index)) > 0
+					 ) {
+						goto __okay_staco_without_hits_requirements;
+					}
 				}
 
-				if(mu_staco_isCombinedMuon->at(index) == false)
-				{
-					if(mu_staco_isStandAloneMuon->at(index) == false
-					   ||
-					   (mu_staco_nCSCEtaHits->at(index) + mu_staco_nCSCPhiHits->at(index)) == 0
-					   ||
-					   (mu_staco_nMDTEMHits->at(index)) == 0
-					   ||
-					   (mu_staco_nMDTEOHits->at(index)) == 0
-					 ) {
-						goto __error;
-					}
-					else {
-						goto __okay_staco;
-					}
-				}
+				goto __error;
 			}
 
+__okay_staco_with_hits_requirements:
 			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) < 1) {
 				goto __error;
 			}
@@ -316,7 +314,8 @@ Bool_t TLeptonAnalysis::checkObject(
 					goto __error;
 				}
 			}
-__okay_staco:
+
+__okay_staco_without_hits_requirements:
 			if(fabs(mu_staco_trackd0pvunbiased->at(index)) > 1.0f) {
 				goto __error;
 			}
@@ -340,30 +339,28 @@ __okay_staco:
 				goto __error;
 			}
 
-			if(fabs(mu_muid_eta->at(index)) > 2.5f)
+			if(mu_muid_author->at(index) == 6 && fabs(mu_muid_eta->at(index)) > 2.5f)
 			{
-				if(fabs(mu_muid_eta->at(index)) > 2.7f) {
-					goto __error;
+				/**/ if(mu_muid_isCombinedMuon->at(index) == false)
+				{
+					goto __okay_muid_with_hits_requirements;
+				}
+				else if(mu_muid_isStandAloneMuon->at(index) == false)
+				{
+					if((mu_muid_nCSCEtaHits->at(index) + mu_muid_nCSCPhiHits->at(index)) > 0
+					   &&
+					   (mu_muid_nMDTEMHits->at(index)) > 0
+					   &&
+					   (mu_muid_nMDTEOHits->at(index)) > 0
+					 ) {
+						goto __okay_muid_without_hits_requirements;
+					}
 				}
 
-				if(mu_muid_isCombinedMuon->at(index) == false)
-				{
-					if(mu_muid_isStandAloneMuon->at(index) == false
-					   ||
-					   (mu_muid_nCSCEtaHits->at(index) + mu_muid_nCSCPhiHits->at(index)) == 0
-					   ||
-					   (mu_muid_nMDTEMHits->at(index)) == 0
-					   ||
-					   (mu_muid_nMDTEOHits->at(index)) == 0
-					 ) {
-						goto __error;
-					}
-					else {
-						goto __okay_muid;
-					}
-				}
+				goto __error;
 			}
 
+__okay_muid_with_hits_requirements:
 			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) < 1) {
 				goto __error;
 			}
@@ -394,7 +391,8 @@ __okay_staco:
 					goto __error;
 				}
 			}
-__okay_muid:
+
+__okay_muid_without_hits_requirements:
 			if(fabs(mu_muid_trackd0pvunbiased->at(index)) > 1.0f) {
 				goto __error;
 			}
