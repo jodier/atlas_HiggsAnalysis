@@ -14,6 +14,9 @@
 
 #define __IS_MC
 
+#define EF_e22vh_medium1	EF_e22_medium1
+#define EF_2e12Tvh_medium	EF_2e12T_medium
+
 class THiggsD3PD {
 public :
    TTree          *fChain;   //!pointer to the analyzed TTree or TChain
@@ -60,7 +63,6 @@ public :
    std::vector<float>   *el_trackz0pvunbiased;
    std::vector<float>   *el_tracksigd0pvunbiased;
    std::vector<int>     *el_EF_index;
-   Bool_t          EF_2e12Tvh_medium;
    Bool_t          EF_2e12T_medium;
    Bool_t          EF_2e12_medium;
    Bool_t          EF_2e15_medium;
@@ -70,7 +72,6 @@ public :
    Bool_t          EF_e20_medium;
    Bool_t          EF_e22_medium;
    Bool_t          EF_e22_medium1;
-   Bool_t          EF_e22vh_medium1;
    Bool_t          EF_mu10;
    Bool_t          EF_mu15_mu10_EFFS;
    Bool_t          EF_mu15_mu10_EFFS_medium;
@@ -280,7 +281,6 @@ public :
    TBranch        *b_el_trackz0pvunbiased;   //!
    TBranch        *b_el_tracksigd0pvunbiased;   //!
    TBranch        *b_el_EF_index;   //!
-   TBranch        *b_EF_2e12Tvh_medium;   //!
    TBranch        *b_EF_2e12T_medium;   //!
    TBranch        *b_EF_2e12_medium;   //!
    TBranch        *b_EF_2e15_medium;   //!
@@ -290,7 +290,6 @@ public :
    TBranch        *b_EF_e20_medium;   //!
    TBranch        *b_EF_e22_medium;   //!
    TBranch        *b_EF_e22_medium1;   //!
-   TBranch        *b_EF_e22vh_medium1;   //!
    TBranch        *b_EF_mu10;   //!
    TBranch        *b_EF_mu15_mu10_EFFS;   //!
    TBranch        *b_EF_mu15_mu10_EFFS_medium;   //!
@@ -753,7 +752,6 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("el_trackz0pvunbiased", &el_trackz0pvunbiased, &b_el_trackz0pvunbiased);
    fChain->SetBranchAddress("el_tracksigd0pvunbiased", &el_tracksigd0pvunbiased, &b_el_tracksigd0pvunbiased);
    fChain->SetBranchAddress("el_EF_index", &el_EF_index, &b_el_EF_index);
-   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
    fChain->SetBranchAddress("EF_2e12_medium", &EF_2e12_medium, &b_EF_2e12_medium);
    fChain->SetBranchAddress("EF_2e15_medium", &EF_2e15_medium, &b_EF_2e15_medium);
@@ -763,7 +761,6 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_e20_medium", &EF_e20_medium, &b_EF_e20_medium);
    fChain->SetBranchAddress("EF_e22_medium", &EF_e22_medium, &b_EF_e22_medium);
    fChain->SetBranchAddress("EF_e22_medium1", &EF_e22_medium1, &b_EF_e22_medium1);
-   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
    fChain->SetBranchAddress("EF_mu10", &EF_mu10, &b_EF_mu10);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS", &EF_mu15_mu10_EFFS, &b_EF_mu15_mu10_EFFS);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS_medium", &EF_mu15_mu10_EFFS_medium, &b_EF_mu15_mu10_EFFS_medium);

@@ -86,7 +86,7 @@ TH1F *__drawFrame(Double_t xmin, Double_t xmax, Double_t ymin, Double_t ymax, co
 
 	/**/
 
-	TH1F *dummy = new TH1F(oss.str().c_str(), title, 1, xmin, xmax);
+	TH1F *dummy = new TH1F(oss.str().c_str(), title, int(xmax - xmin), xmin, xmax);
 
 	dummy->SetMinimum(ymin);
 	dummy->SetMaximum(ymax);
