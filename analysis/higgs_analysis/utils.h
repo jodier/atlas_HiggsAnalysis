@@ -114,11 +114,7 @@ class TLeptonAnalysis: public TNTuple
 	Float_t electronGetPhiDirection(Int_t index);
 	Float_t electronGetEt(Int_t index);
 
-//	Bool_t el_loosePlusPlus_at(Int_t index, Bool_t isTrigger = false);
-//	Bool_t el_mediumPlusPlus_at(Int_t index, Bool_t isTrigger = false);
-
-//	Bool_t trig_EF_el_loosePlusPlus_at(Int_t index);
-//	Bool_t trig_EF_el_mediumPlusPlus_at(Int_t index);
+	Bool_t el_loosePP_at(Int_t index);
 
 	/*-----------------------------------------------------------------*/
 	/* SELECTION							   */

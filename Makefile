@@ -33,7 +33,7 @@ GLIBS         = $(ROOTGLIBS) -lTreePlayer
 
 OBJS1         = core/main.o core/core.o core/config.o core/loader.o core/utils.o
 
-OBJS2         = analysis/higgs_analysis/main.o analysis/higgs_analysis/triggers.o analysis/higgs_analysis/utils.o analysis/higgs_analysis/Z_analysis.o analysis/higgs_analysis/H_analysis.o
+OBJS2         = analysis/higgs_analysis/main.o analysis/higgs_analysis/triggers.o analysis/higgs_analysis/utils.o analysis/higgs_analysis/isLoosePP.o analysis/higgs_analysis/Z_analysis.o analysis/higgs_analysis/H_analysis.o
 
 OBJS3         = analysis/test/main.o
 

@@ -251,10 +251,10 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 			random3.SetSeed(mc_channel_number * RunNumber);
 #endif
 			if(random3.Uniform() < fracMu) {
-				result = EF_mu18_MG;
+				result = EF_mu18_MG || EF_2mu10_loose;
 			}
 			else {
-				result = EF_mu18_MG_medium;
+				result = EF_mu18_MG_medium || EF_2mu10_loose;
 			}
 		}
 		else for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
@@ -295,66 +295,30 @@ Bool_t TLeptonAnalysis::triggerMatch(
 	Int_t index,
 	TLeptonType type
 ) {
-	Int_t EF_idx;
 	Vector_t<Int_t> *hypo;
 
 	switch(type)
 	{
 		case TYPE_ELECTRON:
-			EF_idx = el_EF_index->at(index);
-			goto __el;
-
-		case TYPE_MUON_STACO:
-			EF_idx = mu_staco_EFCB_index->at(index);
-			goto __mu;
-
-		case TYPE_MUON_MUID:
-			EF_idx = mu_muid_EFCB_index->at(index);
-			goto __mu;
-
-		case TYPE_MUON_CALO:
-			return true;
-
-		__el:
 			for(Vector_t<unsigned>::iterator it = elVector.begin(); it != elVector.end(); it++)
 			{
 				switch(*it)
 				{
 					case 0xD4CD729C: /* EF_e20_medium */
-						if(EF_e20_medium != false)
-						{
-							hypo = trig_EF_el_EF_e20_medium;
-							goto __elOk;
-						}
-						break;
+						hypo = trig_EF_el_EF_e20_medium;
+						goto __elOk;
 
 					case 0xB784EC93: /* EF_e22_medium */
 					case 0xADCD942C: /* EF_e22_medium1 */
 					case 0x69EA9F52: /* EF_e22vh_medium1 */
-						if(EF_e22_medium != false
-						   ||
-						   EF_e22_medium1 != false
-						   ||
-						   EF_e22vh_medium1 != false
-						 ) {
-							hypo = trig_EF_el_EF_e22_medium;
-							goto __elOk;
-						}
-						break;
+						hypo = trig_EF_el_EF_e22_medium;
+						goto __elOk;
 
 					case 0xABF2CA73: /* EF_2e12_medium */
 					case 0x80D5CCB8: /* EF_2e12T_medium */
 					case 0xD84960ED: /* EF_2e12Tvh_medium */
-						if(EF_2e12_medium != false
-						   ||
-						   EF_2e12T_medium != false
-						   ||
-						   EF_2e12Tvh_medium != false
-						 ) {
-							hypo = trig_EF_el_EF_2e12_medium;
-							goto __elOk;
-						}
-						break;
+						hypo = trig_EF_el_EF_2e12_medium;
+						goto __elOk;
 
 					__elOk:
 						if(getIsElectronMatched(el_tracketa->at(index), el_trackphi->at(index), hypo, trig_EF_el_n, trig_EF_el_eta, trig_EF_el_phi) != false)
@@ -366,21 +330,77 @@ Bool_t TLeptonAnalysis::triggerMatch(
 
 			break;
 
-		__mu:
+		case TYPE_MUON_STACO:
 			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
 			{
 				switch(*it)
 				{
+					case 0x0803E760: /* EF_mu18_MG */
+					case 0x869B9356: /* EF_mu18_MG_medium */
+						hypo = trig_EF_trigmuonef_EF_mu18;
+						goto __muOkStaco;
 
+					case 0xD92F4787: /* EF_2mu10_loose */
+						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						goto __muOkStaco;
+
+					__muOkStaco:
+						if(getIsMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
+						{
+							return true;
+						}
 				}
 			}
 
-			/* TODO */
-			/* TODO */
-			/* TODO */
-			/* TODO */
+			break;
 
-			return true;
+		case TYPE_MUON_MUID:
+			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
+			{
+				switch(*it)
+				{
+					case 0x0803E760: /* EF_mu18_MG */
+					case 0x869B9356: /* EF_mu18_MG_medium */
+						hypo = trig_EF_trigmuonef_EF_mu18;
+						goto __muOkMuid;
+
+					case 0xD92F4787: /* EF_2mu10_loose */
+						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						goto __muOkMuid;
+
+					__muOkMuid:
+						if(getIsMuonMatched(mu_muid_eta->at(index), mu_muid_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
+						{
+							return true;
+						}
+				}
+			}
+
+			break;
+
+		case TYPE_MUON_CALO:
+			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
+			{
+				switch(*it)
+				{
+					case 0x0803E760: /* EF_mu18_MG */
+					case 0x869B9356: /* EF_mu18_MG_medium */
+						hypo = trig_EF_trigmuonef_EF_mu18;
+						goto __muOkCalo;
+
+					case 0xD92F4787: /* EF_2mu10_loose */
+						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						goto __muOkCalo;
+
+					__muOkCalo:
+						if(getIsMuonMatched(mu_calo_eta->at(index), mu_calo_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
+						{
+							return true;
+						}
+				}
+			}
+
+			break;
 	}
 
 	return false;
