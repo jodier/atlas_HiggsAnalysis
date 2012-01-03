@@ -73,10 +73,10 @@ class TLeptonAnalysis: public TNTuple
 		int_lum[7] = 233.152; // luminosity for period J
 		int_lum[8] = 551.354; // luminosity for period K
 
-		m_stacoSF = new AnalysisMuonEfficiencyScaleFactors("STACO_CB", int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
-		m_muidSF = new AnalysisMuonEfficiencyScaleFactors("Muid_CB", int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
-		m_stacoSM = new SmearingClass("Data11", "staco", "q_pT", "Rel17", "./tools/MuonMomentumCorrections/share/");
-		m_muidSM = new SmearingClass("Data11", "muid", "q_pT", "Rel17", "./tools/MuonMomentumCorrections/share/");
+		m_stacoSF = new AnalysisMuonEfficiencyScaleFactors(    "STACO_CB"    , int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
+		m_muidSF = new AnalysisMuonEfficiencyScaleFactors("Muid_CB_plus_ST", int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
+		m_stacoSM = new SmearingClass("Data11", "staco", "pT", "Rel17", "./tools/MuonMomentumCorrections/share/");
+		m_muidSM = new SmearingClass("Data11", "muid", "pT", "Rel17", "./tools/MuonMomentumCorrections/share/");
 		m_energyRescaler = new EnergyRescaler();
 		m_egammaSF = new egammaSFclass();
 

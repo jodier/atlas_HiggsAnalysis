@@ -50,7 +50,7 @@ void TLeptonAnalysis::fixeEnergy(void)
 				continue;
 			}
 
-			m_energyRescaler->SetRandomSeed(RunNumber + 1001 * i);
+			m_energyRescaler->SetRandomSeed(EventNumber + 100 * i);
 
 			el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->getSmearingCorrectionMeV(
 				el_cl_eta->at(i),
@@ -68,25 +68,29 @@ void TLeptonAnalysis::fixeEnergy(void)
 				continue;
 			}
 
-			Float_t ptcb = mu_staco_pt->at(i);
-
-			Float_t ptme = (mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f;
-			Float_t ptid = (mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f;
-
 			m_stacoSM->SetSeed(EventNumber, i);
 
-			m_stacoSM->Event(
-				ptme,
-				ptid,
-				ptcb,
-				mu_staco_eta->at(i)
-			);
+			/**/ if(mu_staco_isCombinedMuon->at(i) != false)
+			{
+				m_stacoSM->Event(
+					(mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f,
+					(mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f,
+					mu_staco_pt->at(i),
+					mu_staco_eta->at(i)
+				);
 
-			mu_staco_pt->at(i) = (mu_staco_isCombinedMuon->at(i) != false) ?
-				m_stacoSM->pTCB()
-				:
-				m_stacoSM->pTID()
-			;
+				mu_staco_pt->at(i) = m_stacoSM->pTCB();
+			}
+			else if(mu_staco_isSegmentTaggedMuon->at(i) != false)
+			{
+				m_stacoSM->Event(
+					mu_staco_pt->at(i),
+					mu_staco_eta->at(i),
+					"ID"
+				);
+
+				mu_staco_pt->at(i) = m_stacoSM->pTID();
+			}
 		}
 
 		/*---------------------------------------------------------*/
@@ -98,25 +102,29 @@ void TLeptonAnalysis::fixeEnergy(void)
 				continue;
 			}
 
-			Float_t ptcb = mu_muid_pt->at(i);
-
-			Float_t ptme = (mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f;
-			Float_t ptid = (mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f;
-
 			m_muidSM->SetSeed(EventNumber, i);
 
-			m_muidSM->Event(
-				ptme,
-				ptid,
-				ptcb,
-				mu_muid_eta->at(i)
-			);
+			/**/ if(mu_muid_isCombinedMuon->at(i) != false)
+			{
+				m_muidSM->Event(
+					(mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f,
+					(mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f,
+					mu_muid_pt->at(i),
+					mu_muid_eta->at(i)
+				);
 
-			mu_muid_pt->at(i) = (mu_muid_isCombinedMuon->at(i) != false) ?
-				m_muidSM->pTCB()
-				:
-				m_muidSM->pTID()
-			;
+				mu_muid_pt->at(i) = m_muidSM->pTCB();
+			}
+			else if(mu_muid_isSegmentTaggedMuon->at(i) != false)
+			{
+				m_muidSM->Event(
+					mu_muid_pt->at(i),
+					mu_muid_eta->at(i),
+					"ID"
+				);
+
+				mu_muid_pt->at(i) = m_muidSM->pTID();
+			}
 		}
 
 		/*---------------------------------------------------------*/
