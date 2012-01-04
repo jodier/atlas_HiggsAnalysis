@@ -341,7 +341,7 @@ Bool_t TLeptonAnalysis::triggerMatch(
 						goto __muOkStaco;
 
 					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						hypo = trig_EF_trigmuonef_EF_2mu10;
 						goto __muOkStaco;
 
 					__muOkStaco:
@@ -365,7 +365,7 @@ Bool_t TLeptonAnalysis::triggerMatch(
 						goto __muOkMuid;
 
 					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						hypo = trig_EF_trigmuonef_EF_2mu10;
 						goto __muOkMuid;
 
 					__muOkMuid:
@@ -389,7 +389,7 @@ Bool_t TLeptonAnalysis::triggerMatch(
 						goto __muOkCalo;
 
 					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10_loose;
+						hypo = trig_EF_trigmuonef_EF_2mu10;
 						goto __muOkCalo;
 
 					__muOkCalo:
