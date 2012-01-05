@@ -186,7 +186,7 @@ void THiggsBuilder::Loop(void)
 		Bool_t isOkElTrigger;
 		Bool_t isOkMuTrigger;
 #ifdef __IS_MC
-		random3.SetSeed(mc_channel_number * RunNumber);
+		random3.SetSeed(mc_channel_number * EventNumber);
 #endif
 		Float_t epsilon = random3.Uniform();
 
@@ -254,7 +254,7 @@ void THiggsBuilder::Loop(void)
 
 			elSTACONr6++;
 
-			if((el_OQ->at(index) & 1446) == 0) {
+			if((el_OQ->at(index) & 1446) != 0) {
 				continue;
 			}
 
