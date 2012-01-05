@@ -136,6 +136,10 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 
 void THiggsBuilder::Loop(void)
 {
+	Int_t trig1 = 0;
+	Int_t trig2 = 0;
+	Int_t trig3 = 0;
+
 	Int_t nr1 = 0;
 	Int_t nr2 = 0;
 	Int_t nr3 = 0;
@@ -302,6 +306,8 @@ void THiggsBuilder::Loop(void)
 
 		if(isOkElTrigger != false && isOkVertex != false)
 		{
+			trig1++;
+
 			for(Int_t i = 0; i < el_n; i++)
 			{
 				nr1++;
@@ -336,6 +342,8 @@ void THiggsBuilder::Loop(void)
 
 		if(isOkMuTrigger != false && isOkVertex != false)
 		{
+			trig2++;
+
 			for(Int_t i = 0; i < mu_staco_n; i++)
 			{
 				nr2++;
@@ -379,6 +387,8 @@ void THiggsBuilder::Loop(void)
 
 		if((isOkElTrigger != false || isOkMuTrigger != false) && isOkVertex != false)
 		{
+			trig3++;
+
 			for(Int_t i = 0; i < el_n; i++)
 			{
 				nr5++;
@@ -936,6 +946,12 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << "Done:" << std::endl;
 
+	std::cout << "trig eeee #evt" << trig1 << std::endl;
+	std::cout << "trig µµµµ #evt" << trig2 << std::endl;
+	std::cout << "trig eeµµ #evt" << trig3 << std::endl;
+
+	std::cout << std::endl;
+
 	std::cout << "trig eeee #el (none): " << nr1 << std::endl;
 	std::cout << "trig µµµµ #mu (staco): " << nr2 << std::endl;
 	std::cout << "trig µµµµ #mu (muid): " << nr3 << std::endl;
@@ -950,21 +966,21 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << std::endl;
 
-	std::cout << "#el (staco): " << nr9 << std::endl;
-	std::cout << "#el (muid): " << nrA << std::endl;
-	std::cout << "#el (calo): " << nrB << std::endl;
-	std::cout << "#mu (staco): " << nrC << std::endl;
-	std::cout << "#mu (muid): " << nrD << std::endl;
-	std::cout << "#mu (calo): " << nrE << std::endl;
+	std::cout << "trig eeee select #el (staco): " << nr9 << std::endl;
+	std::cout << "trig eeee select #el (muid): " << nrA << std::endl;
+	std::cout << "trig eeee select #el (calo): " << nrB << std::endl;
+	std::cout << "trig µµµµ select #mu (staco): " << nrC << std::endl;
+	std::cout << "trig µµµµ select #mu (muid): " << nrD << std::endl;
+	std::cout << "trig µµµµ select #mu (calo): " << nrE << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "#el (staco): " << nrF << std::endl;
-	std::cout << "#el (muid): " << nrG << std::endl;
-	std::cout << "#el (calo): " << nrH << std::endl;
-	std::cout << "#mu (staco): " << nrI << std::endl;
-	std::cout << "#mu (muid): " << nrJ << std::endl;
-	std::cout << "#mu (calo): " << nrK << std::endl;
+	std::cout << "trig eeµµ select #el (staco): " << nrF << std::endl;
+	std::cout << "trig eeµµ select #el (muid): " << nrG << std::endl;
+	std::cout << "trig eeµµ select #el (calo): " << nrH << std::endl;
+	std::cout << "trig eeµµ select #mu (staco): " << nrI << std::endl;
+	std::cout << "trig eeµµ select #mu (muid): " << nrJ << std::endl;
+	std::cout << "trig eeµµ select #mu (calo): " << nrK << std::endl;
 }
 
 /*-------------------------------------------------------------------------*/
