@@ -16,6 +16,8 @@ class THiggsBuilder: public TNTuple
 	{
 	}
 
+	Bool_t el_loosePP_at(Int_t index);
+
 	Float_t electronGetEtaDirection(Int_t index);
 	Float_t electronGetPhiDirection(Int_t index);
 	Float_t electronGetEt(Int_t index);
