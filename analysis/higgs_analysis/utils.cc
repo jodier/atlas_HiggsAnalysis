@@ -478,16 +478,10 @@ Bool_t TLeptonAnalysis::checkStacoOverlapping(
 
 		for(Int_t xedni = 0; xedni < mu_staco_n; xedni++)
 		{
-			if(el_trackd0->at(index) == mu_staco_id_d0->at(xedni)
-			   &&
-			   el_trackz0->at(index) == mu_staco_id_z0->at(xedni)
-			   &&
-			   el_tracktheta->at(index) == mu_staco_id_theta->at(xedni)
-			   &&
-			   el_trackphi->at(index) == mu_staco_id_phi->at(xedni)
-			   &&
-			   el_trackqoverp->at(index) == mu_staco_id_qoverp->at(xedni)
-			 ) {
+			Float_t mu_staco_id_eta = -logf(tanf(0.5f * mu_staco_id_theta->at(xedni)));
+
+			if(sqrtf(__dR2(el_tracketa->at(index), mu_staco_id_eta, el_trackphi->at(index), mu_staco_id_phi->at(xedni))) < 0.02f)
+			{
 				if(checkObject(xedni, TYPE_MUON_STACO, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
 				{
 					result = false;
@@ -551,16 +545,10 @@ Bool_t TLeptonAnalysis::checkMuidOverlapping(
 
 		for(Int_t xedni = 0; xedni < mu_muid_n; xedni++)
 		{
-			if(el_trackd0->at(index) == mu_muid_id_d0->at(xedni)
-			   &&
-			   el_trackz0->at(index) == mu_muid_id_z0->at(xedni)
-			   &&
-			   el_tracktheta->at(index) == mu_muid_id_theta->at(xedni)
-			   &&
-			   el_trackphi->at(index) == mu_muid_id_phi->at(xedni)
-			   &&
-			   el_trackqoverp->at(index) == mu_muid_id_qoverp->at(xedni)
-			 ) {
+			Float_t mu_muid_id_eta = -logf(tanf(0.5f * mu_muid_id_theta->at(xedni)));
+
+			if(sqrtf(__dR2(el_tracketa->at(index), mu_muid_id_eta, el_trackphi->at(index), mu_muid_id_phi->at(xedni))) < 0.02f)
+			{
 				if(checkObject(xedni, TYPE_MUON_MUID, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
 				{
 					result = false;
@@ -624,16 +612,10 @@ Bool_t TLeptonAnalysis::checkCaloOverlapping(
 
 		for(Int_t xedni = 0; xedni < mu_calo_n; xedni++)
 		{
-			if(el_trackd0->at(index) == mu_calo_id_d0->at(xedni)
-			   &&
-			   el_trackz0->at(index) == mu_calo_id_z0->at(xedni)
-			   &&
-			   el_tracktheta->at(index) == mu_calo_id_theta->at(xedni)
-			   &&
-			   el_trackphi->at(index) == mu_calo_id_phi->at(xedni)
-			   &&
-			   el_trackqoverp->at(index) == mu_calo_id_qoverp->at(xedni)
-			 ) {
+			Float_t mu_calo_id_eta = -logf(tanf(0.5f * mu_calo_id_theta->at(xedni)));
+
+			if(sqrtf(__dR2(el_tracketa->at(index), mu_calo_id_eta, el_trackphi->at(index), mu_calo_id_phi->at(xedni))) < 0.02f)
+			{
 				if(checkObject(xedni, TYPE_MUON_CALO, __el_et, __mu_pt, __mu_calo_pt, useLoose, useForward) != false)
 				{
 					result = false;
