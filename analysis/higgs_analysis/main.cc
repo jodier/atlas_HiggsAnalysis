@@ -946,9 +946,9 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << "Done:" << std::endl;
 
-	std::cout << "trig eeee #evt" << trig1 << std::endl;
-	std::cout << "trig µµµµ #evt" << trig2 << std::endl;
-	std::cout << "trig eeµµ #evt" << trig3 << std::endl;
+	std::cout << "trig eeee #evt " << trig1 << std::endl;
+	std::cout << "trig µµµµ #evt " << trig2 << std::endl;
+	std::cout << "trig eeµµ #evt " << trig3 << std::endl;
 
 	std::cout << std::endl;
 
