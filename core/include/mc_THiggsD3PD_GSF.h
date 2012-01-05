@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Mon Jan  2 19:56:36 2012 by ROOT version 5.28/00b
+// Thu Jan  5 00:49:30 2012 by ROOT version 5.32/00
 // from TTree physics/physics
 // found on file: result.root
 //////////////////////////////////////////////////////////
@@ -12,7 +12,15 @@
 #include <TChain.h>
 #include <TFile.h>
 
+// Header file for the classes stored in the TTree if any.
+#include <vector>
+
 #define __IS_MC
+
+#define EF_2e12Tvh_medium	false
+#define EF_e22vh_medium1	false
+
+// Fixed size dimensions of array or collections stored in the TTree if any.
 
 class THiggsD3PD {
 public :
@@ -27,7 +35,6 @@ public :
    Float_t         averageIntPerXing;
    UInt_t          mc_channel_number;
    UInt_t          larError;
-   Bool_t          EF_2e12Tvh_medium;
    Bool_t          EF_2e12T_medium;
    Bool_t          EF_2e12_medium;
    Bool_t          EF_2e15_medium;
@@ -37,7 +44,6 @@ public :
    Bool_t          EF_e20_medium;
    Bool_t          EF_e22_medium;
    Bool_t          EF_e22_medium1;
-   Bool_t          EF_e22vh_medium1;
    Bool_t          EF_mu10;
    Bool_t          EF_mu15_mu10_EFFS;
    Bool_t          EF_mu15_mu10_EFFS_medium;
@@ -110,6 +116,7 @@ public :
    std::vector<int>     *mu_muid_isCombinedMuon;
    std::vector<int>     *mu_muid_isSegmentTaggedMuon;
    std::vector<int>     *mu_muid_tight;
+   std::vector<float>   *mu_muid_d0_exPV;
    std::vector<float>   *mu_muid_z0_exPV;
    std::vector<float>   *mu_muid_id_theta_exPV;
    std::vector<float>   *mu_muid_id_qoverp_exPV;
@@ -134,9 +141,8 @@ public :
    std::vector<int>     *mu_muid_nCSCPhiHits;
    std::vector<int>     *mu_muid_nMDTEMHits;
    std::vector<int>     *mu_muid_nMDTEOHits;
-   std::vector<float>   *mu_muid_trackd0pvunbiased;
-   std::vector<float>   *mu_muid_trackz0pvunbiased;
-   std::vector<float>   *mu_muid_tracksigd0pvunbiased;
+   std::vector<float>   *mu_muid_trackIPEstimate_d0_unbiasedpvunbiased;
+   std::vector<float>   *mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased;
    std::vector<int>     *mu_muid_truth_type;
    std::vector<int>     *mu_muid_truth_mothertype;
    std::vector<int>     *mu_muid_EFCB_index;
@@ -155,6 +161,7 @@ public :
    std::vector<int>     *mu_staco_isCombinedMuon;
    std::vector<int>     *mu_staco_isSegmentTaggedMuon;
    std::vector<int>     *mu_staco_tight;
+   std::vector<float>   *mu_staco_d0_exPV;
    std::vector<float>   *mu_staco_z0_exPV;
    std::vector<float>   *mu_staco_id_theta_exPV;
    std::vector<float>   *mu_staco_id_qoverp_exPV;
@@ -179,9 +186,8 @@ public :
    std::vector<int>     *mu_staco_nCSCPhiHits;
    std::vector<int>     *mu_staco_nMDTEMHits;
    std::vector<int>     *mu_staco_nMDTEOHits;
-   std::vector<float>   *mu_staco_trackd0pvunbiased;
-   std::vector<float>   *mu_staco_trackz0pvunbiased;
-   std::vector<float>   *mu_staco_tracksigd0pvunbiased;
+   std::vector<float>   *mu_staco_trackIPEstimate_d0_unbiasedpvunbiased;
+   std::vector<float>   *mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased;
    std::vector<int>     *mu_staco_truth_type;
    std::vector<int>     *mu_staco_truth_mothertype;
    std::vector<int>     *mu_staco_EFCB_index;
@@ -201,6 +207,7 @@ public :
    std::vector<int>     *mu_calo_isStandAloneMuon;
    std::vector<int>     *mu_calo_isCombinedMuon;
    std::vector<int>     *mu_calo_isSegmentTaggedMuon;
+   std::vector<float>   *mu_calo_d0_exPV;
    std::vector<float>   *mu_calo_z0_exPV;
    std::vector<float>   *mu_calo_id_theta_exPV;
    std::vector<float>   *mu_calo_id_qoverp_exPV;
@@ -225,9 +232,8 @@ public :
    std::vector<int>     *mu_calo_nCSCPhiHits;
    std::vector<int>     *mu_calo_nMDTEMHits;
    std::vector<int>     *mu_calo_nMDTEOHits;
-   std::vector<float>   *mu_calo_trackd0pvunbiased;
-   std::vector<float>   *mu_calo_trackz0pvunbiased;
-   std::vector<float>   *mu_calo_tracksigd0pvunbiased;
+   std::vector<float>   *mu_calo_trackIPEstimate_d0_unbiasedpvunbiased;
+   std::vector<float>   *mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased;
    std::vector<int>     *mu_calo_truth_type;
    std::vector<int>     *mu_calo_truth_mothertype;
    Int_t           vxp_n;
@@ -265,7 +271,6 @@ public :
    TBranch        *b_averageIntPerXing;   //!
    TBranch        *b_mc_channel_number;   //!
    TBranch        *b_larError;   //!
-   TBranch        *b_EF_2e12Tvh_medium;   //!
    TBranch        *b_EF_2e12T_medium;   //!
    TBranch        *b_EF_2e12_medium;   //!
    TBranch        *b_EF_2e15_medium;   //!
@@ -275,7 +280,6 @@ public :
    TBranch        *b_EF_e20_medium;   //!
    TBranch        *b_EF_e22_medium;   //!
    TBranch        *b_EF_e22_medium1;   //!
-   TBranch        *b_EF_e22vh_medium1;   //!
    TBranch        *b_EF_mu10;   //!
    TBranch        *b_EF_mu15_mu10_EFFS;   //!
    TBranch        *b_EF_mu15_mu10_EFFS_medium;   //!
@@ -348,6 +352,7 @@ public :
    TBranch        *b_mu_muid_isCombinedMuon;   //!
    TBranch        *b_mu_muid_isSegmentTaggedMuon;   //!
    TBranch        *b_mu_muid_tight;   //!
+   TBranch        *b_mu_muid_d0_exPV;   //!
    TBranch        *b_mu_muid_z0_exPV;   //!
    TBranch        *b_mu_muid_id_theta_exPV;   //!
    TBranch        *b_mu_muid_id_qoverp_exPV;   //!
@@ -372,9 +377,8 @@ public :
    TBranch        *b_mu_muid_nCSCPhiHits;   //!
    TBranch        *b_mu_muid_nMDTEMHits;   //!
    TBranch        *b_mu_muid_nMDTEOHits;   //!
-   TBranch        *b_mu_muid_trackd0pvunbiased;   //!
-   TBranch        *b_mu_muid_trackz0pvunbiased;   //!
-   TBranch        *b_mu_muid_tracksigd0pvunbiased;   //!
+   TBranch        *b_mu_muid_trackIPEstimate_d0_unbiasedpvunbiased;   //!
+   TBranch        *b_mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased;   //!
    TBranch        *b_mu_muid_truth_type;   //!
    TBranch        *b_mu_muid_truth_mothertype;   //!
    TBranch        *b_mu_muid_EFCB_index;   //!
@@ -393,6 +397,7 @@ public :
    TBranch        *b_mu_staco_isCombinedMuon;   //!
    TBranch        *b_mu_staco_isSegmentTaggedMuon;   //!
    TBranch        *b_mu_staco_tight;   //!
+   TBranch        *b_mu_staco_d0_exPV;   //!
    TBranch        *b_mu_staco_z0_exPV;   //!
    TBranch        *b_mu_staco_id_theta_exPV;   //!
    TBranch        *b_mu_staco_id_qoverp_exPV;   //!
@@ -417,9 +422,8 @@ public :
    TBranch        *b_mu_staco_nCSCPhiHits;   //!
    TBranch        *b_mu_staco_nMDTEMHits;   //!
    TBranch        *b_mu_staco_nMDTEOHits;   //!
-   TBranch        *b_mu_staco_trackd0pvunbiased;   //!
-   TBranch        *b_mu_staco_trackz0pvunbiased;   //!
-   TBranch        *b_mu_staco_tracksigd0pvunbiased;   //!
+   TBranch        *b_mu_staco_trackIPEstimate_d0_unbiasedpvunbiased;   //!
+   TBranch        *b_mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased;   //!
    TBranch        *b_mu_staco_truth_type;   //!
    TBranch        *b_mu_staco_truth_mothertype;   //!
    TBranch        *b_mu_staco_EFCB_index;   //!
@@ -439,6 +443,7 @@ public :
    TBranch        *b_mu_calo_isStandAloneMuon;   //!
    TBranch        *b_mu_calo_isCombinedMuon;   //!
    TBranch        *b_mu_calo_isSegmentTaggedMuon;   //!
+   TBranch        *b_mu_calo_d0_exPV;   //!
    TBranch        *b_mu_calo_z0_exPV;   //!
    TBranch        *b_mu_calo_id_theta_exPV;   //!
    TBranch        *b_mu_calo_id_qoverp_exPV;   //!
@@ -463,9 +468,8 @@ public :
    TBranch        *b_mu_calo_nCSCPhiHits;   //!
    TBranch        *b_mu_calo_nMDTEMHits;   //!
    TBranch        *b_mu_calo_nMDTEOHits;   //!
-   TBranch        *b_mu_calo_trackd0pvunbiased;   //!
-   TBranch        *b_mu_calo_trackz0pvunbiased;   //!
-   TBranch        *b_mu_calo_tracksigd0pvunbiased;   //!
+   TBranch        *b_mu_calo_trackIPEstimate_d0_unbiasedpvunbiased;   //!
+   TBranch        *b_mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased;   //!
    TBranch        *b_mu_calo_truth_type;   //!
    TBranch        *b_mu_calo_truth_mothertype;   //!
    TBranch        *b_vxp_n;   //!
@@ -509,16 +513,16 @@ public :
 #endif
 
 #ifdef THiggsD3PD_cxx
-THiggsD3PD::THiggsD3PD(TTree *tree)
+THiggsD3PD::THiggsD3PD(TTree *tree) : fChain(0) 
 {
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("result.root");
-      if (!f) {
+      if (!f || !f->IsOpen()) {
          f = new TFile("result.root");
       }
-      tree = (TTree*)gDirectory->Get("physics");
+      f->GetObject("physics",tree);
 
    }
    Init(tree);
@@ -542,10 +546,8 @@ Long64_t THiggsD3PD::LoadTree(Long64_t entry)
    if (!fChain) return -5;
    Long64_t centry = fChain->LoadTree(entry);
    if (centry < 0) return centry;
-   if (!fChain->InheritsFrom(TChain::Class()))  return centry;
-   TChain *chain = (TChain*)fChain;
-   if (chain->GetTreeNumber() != fCurrent) {
-      fCurrent = chain->GetTreeNumber();
+   if (fChain->GetTreeNumber() != fCurrent) {
+      fCurrent = fChain->GetTreeNumber();
       Notify();
    }
    return centry;
@@ -620,6 +622,7 @@ void THiggsD3PD::Init(TTree *tree)
    mu_muid_isCombinedMuon = 0;
    mu_muid_isSegmentTaggedMuon = 0;
    mu_muid_tight = 0;
+   mu_muid_d0_exPV = 0;
    mu_muid_z0_exPV = 0;
    mu_muid_id_theta_exPV = 0;
    mu_muid_id_qoverp_exPV = 0;
@@ -644,9 +647,8 @@ void THiggsD3PD::Init(TTree *tree)
    mu_muid_nCSCPhiHits = 0;
    mu_muid_nMDTEMHits = 0;
    mu_muid_nMDTEOHits = 0;
-   mu_muid_trackd0pvunbiased = 0;
-   mu_muid_trackz0pvunbiased = 0;
-   mu_muid_tracksigd0pvunbiased = 0;
+   mu_muid_trackIPEstimate_d0_unbiasedpvunbiased = 0;
+   mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased = 0;
    mu_muid_truth_type = 0;
    mu_muid_truth_mothertype = 0;
    mu_muid_EFCB_index = 0;
@@ -664,6 +666,7 @@ void THiggsD3PD::Init(TTree *tree)
    mu_staco_isCombinedMuon = 0;
    mu_staco_isSegmentTaggedMuon = 0;
    mu_staco_tight = 0;
+   mu_staco_d0_exPV = 0;
    mu_staco_z0_exPV = 0;
    mu_staco_id_theta_exPV = 0;
    mu_staco_id_qoverp_exPV = 0;
@@ -688,9 +691,8 @@ void THiggsD3PD::Init(TTree *tree)
    mu_staco_nCSCPhiHits = 0;
    mu_staco_nMDTEMHits = 0;
    mu_staco_nMDTEOHits = 0;
-   mu_staco_trackd0pvunbiased = 0;
-   mu_staco_trackz0pvunbiased = 0;
-   mu_staco_tracksigd0pvunbiased = 0;
+   mu_staco_trackIPEstimate_d0_unbiasedpvunbiased = 0;
+   mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased = 0;
    mu_staco_truth_type = 0;
    mu_staco_truth_mothertype = 0;
    mu_staco_EFCB_index = 0;
@@ -709,6 +711,7 @@ void THiggsD3PD::Init(TTree *tree)
    mu_calo_isStandAloneMuon = 0;
    mu_calo_isCombinedMuon = 0;
    mu_calo_isSegmentTaggedMuon = 0;
+   mu_calo_d0_exPV = 0;
    mu_calo_z0_exPV = 0;
    mu_calo_id_theta_exPV = 0;
    mu_calo_id_qoverp_exPV = 0;
@@ -733,9 +736,8 @@ void THiggsD3PD::Init(TTree *tree)
    mu_calo_nCSCPhiHits = 0;
    mu_calo_nMDTEMHits = 0;
    mu_calo_nMDTEOHits = 0;
-   mu_calo_trackd0pvunbiased = 0;
-   mu_calo_trackz0pvunbiased = 0;
-   mu_calo_tracksigd0pvunbiased = 0;
+   mu_calo_trackIPEstimate_d0_unbiasedpvunbiased = 0;
+   mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased = 0;
    mu_calo_truth_type = 0;
    mu_calo_truth_mothertype = 0;
    vxp_nTracks = 0;
@@ -774,7 +776,6 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("averageIntPerXing", &averageIntPerXing, &b_averageIntPerXing);
    fChain->SetBranchAddress("mc_channel_number", &mc_channel_number, &b_mc_channel_number);
    fChain->SetBranchAddress("larError", &larError, &b_larError);
-   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
    fChain->SetBranchAddress("EF_2e12_medium", &EF_2e12_medium, &b_EF_2e12_medium);
    fChain->SetBranchAddress("EF_2e15_medium", &EF_2e15_medium, &b_EF_2e15_medium);
@@ -784,7 +785,6 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_e20_medium", &EF_e20_medium, &b_EF_e20_medium);
    fChain->SetBranchAddress("EF_e22_medium", &EF_e22_medium, &b_EF_e22_medium);
    fChain->SetBranchAddress("EF_e22_medium1", &EF_e22_medium1, &b_EF_e22_medium1);
-   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
    fChain->SetBranchAddress("EF_mu10", &EF_mu10, &b_EF_mu10);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS", &EF_mu15_mu10_EFFS, &b_EF_mu15_mu10_EFFS);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS_medium", &EF_mu15_mu10_EFFS_medium, &b_EF_mu15_mu10_EFFS_medium);
@@ -857,6 +857,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_muid_isCombinedMuon", &mu_muid_isCombinedMuon, &b_mu_muid_isCombinedMuon);
    fChain->SetBranchAddress("mu_muid_isSegmentTaggedMuon", &mu_muid_isSegmentTaggedMuon, &b_mu_muid_isSegmentTaggedMuon);
    fChain->SetBranchAddress("mu_muid_tight", &mu_muid_tight, &b_mu_muid_tight);
+   fChain->SetBranchAddress("mu_muid_d0_exPV", &mu_muid_d0_exPV, &b_mu_muid_d0_exPV);
    fChain->SetBranchAddress("mu_muid_z0_exPV", &mu_muid_z0_exPV, &b_mu_muid_z0_exPV);
    fChain->SetBranchAddress("mu_muid_id_theta_exPV", &mu_muid_id_theta_exPV, &b_mu_muid_id_theta_exPV);
    fChain->SetBranchAddress("mu_muid_id_qoverp_exPV", &mu_muid_id_qoverp_exPV, &b_mu_muid_id_qoverp_exPV);
@@ -881,9 +882,8 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_muid_nCSCPhiHits", &mu_muid_nCSCPhiHits, &b_mu_muid_nCSCPhiHits);
    fChain->SetBranchAddress("mu_muid_nMDTEMHits", &mu_muid_nMDTEMHits, &b_mu_muid_nMDTEMHits);
    fChain->SetBranchAddress("mu_muid_nMDTEOHits", &mu_muid_nMDTEOHits, &b_mu_muid_nMDTEOHits);
-   fChain->SetBranchAddress("mu_muid_trackd0pvunbiased", &mu_muid_trackd0pvunbiased, &b_mu_muid_trackd0pvunbiased);
-   fChain->SetBranchAddress("mu_muid_trackz0pvunbiased", &mu_muid_trackz0pvunbiased, &b_mu_muid_trackz0pvunbiased);
-   fChain->SetBranchAddress("mu_muid_tracksigd0pvunbiased", &mu_muid_tracksigd0pvunbiased, &b_mu_muid_tracksigd0pvunbiased);
+   fChain->SetBranchAddress("mu_muid_trackIPEstimate_d0_unbiasedpvunbiased", &mu_muid_trackIPEstimate_d0_unbiasedpvunbiased, &b_mu_muid_trackIPEstimate_d0_unbiasedpvunbiased);
+   fChain->SetBranchAddress("mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased", &mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased, &b_mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased);
    fChain->SetBranchAddress("mu_muid_truth_type", &mu_muid_truth_type, &b_mu_muid_truth_type);
    fChain->SetBranchAddress("mu_muid_truth_mothertype", &mu_muid_truth_mothertype, &b_mu_muid_truth_mothertype);
    fChain->SetBranchAddress("mu_muid_EFCB_index", &mu_muid_EFCB_index, &b_mu_muid_EFCB_index);
@@ -902,6 +902,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_staco_isCombinedMuon", &mu_staco_isCombinedMuon, &b_mu_staco_isCombinedMuon);
    fChain->SetBranchAddress("mu_staco_isSegmentTaggedMuon", &mu_staco_isSegmentTaggedMuon, &b_mu_staco_isSegmentTaggedMuon);
    fChain->SetBranchAddress("mu_staco_tight", &mu_staco_tight, &b_mu_staco_tight);
+   fChain->SetBranchAddress("mu_staco_d0_exPV", &mu_staco_d0_exPV, &b_mu_staco_d0_exPV);
    fChain->SetBranchAddress("mu_staco_z0_exPV", &mu_staco_z0_exPV, &b_mu_staco_z0_exPV);
    fChain->SetBranchAddress("mu_staco_id_theta_exPV", &mu_staco_id_theta_exPV, &b_mu_staco_id_theta_exPV);
    fChain->SetBranchAddress("mu_staco_id_qoverp_exPV", &mu_staco_id_qoverp_exPV, &b_mu_staco_id_qoverp_exPV);
@@ -926,9 +927,8 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_staco_nCSCPhiHits", &mu_staco_nCSCPhiHits, &b_mu_staco_nCSCPhiHits);
    fChain->SetBranchAddress("mu_staco_nMDTEMHits", &mu_staco_nMDTEMHits, &b_mu_staco_nMDTEMHits);
    fChain->SetBranchAddress("mu_staco_nMDTEOHits", &mu_staco_nMDTEOHits, &b_mu_staco_nMDTEOHits);
-   fChain->SetBranchAddress("mu_staco_trackd0pvunbiased", &mu_staco_trackd0pvunbiased, &b_mu_staco_trackd0pvunbiased);
-   fChain->SetBranchAddress("mu_staco_trackz0pvunbiased", &mu_staco_trackz0pvunbiased, &b_mu_staco_trackz0pvunbiased);
-   fChain->SetBranchAddress("mu_staco_tracksigd0pvunbiased", &mu_staco_tracksigd0pvunbiased, &b_mu_staco_tracksigd0pvunbiased);
+   fChain->SetBranchAddress("mu_staco_trackIPEstimate_d0_unbiasedpvunbiased", &mu_staco_trackIPEstimate_d0_unbiasedpvunbiased, &b_mu_staco_trackIPEstimate_d0_unbiasedpvunbiased);
+   fChain->SetBranchAddress("mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased", &mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased, &b_mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased);
    fChain->SetBranchAddress("mu_staco_truth_type", &mu_staco_truth_type, &b_mu_staco_truth_type);
    fChain->SetBranchAddress("mu_staco_truth_mothertype", &mu_staco_truth_mothertype, &b_mu_staco_truth_mothertype);
    fChain->SetBranchAddress("mu_staco_EFCB_index", &mu_staco_EFCB_index, &b_mu_staco_EFCB_index);
@@ -948,6 +948,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_calo_isStandAloneMuon", &mu_calo_isStandAloneMuon, &b_mu_calo_isStandAloneMuon);
    fChain->SetBranchAddress("mu_calo_isCombinedMuon", &mu_calo_isCombinedMuon, &b_mu_calo_isCombinedMuon);
    fChain->SetBranchAddress("mu_calo_isSegmentTaggedMuon", &mu_calo_isSegmentTaggedMuon, &b_mu_calo_isSegmentTaggedMuon);
+   fChain->SetBranchAddress("mu_calo_d0_exPV", &mu_calo_d0_exPV, &b_mu_calo_d0_exPV);
    fChain->SetBranchAddress("mu_calo_z0_exPV", &mu_calo_z0_exPV, &b_mu_calo_z0_exPV);
    fChain->SetBranchAddress("mu_calo_id_theta_exPV", &mu_calo_id_theta_exPV, &b_mu_calo_id_theta_exPV);
    fChain->SetBranchAddress("mu_calo_id_qoverp_exPV", &mu_calo_id_qoverp_exPV, &b_mu_calo_id_qoverp_exPV);
@@ -972,9 +973,8 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mu_calo_nCSCPhiHits", &mu_calo_nCSCPhiHits, &b_mu_calo_nCSCPhiHits);
    fChain->SetBranchAddress("mu_calo_nMDTEMHits", &mu_calo_nMDTEMHits, &b_mu_calo_nMDTEMHits);
    fChain->SetBranchAddress("mu_calo_nMDTEOHits", &mu_calo_nMDTEOHits, &b_mu_calo_nMDTEOHits);
-   fChain->SetBranchAddress("mu_calo_trackd0pvunbiased", &mu_calo_trackd0pvunbiased, &b_mu_calo_trackd0pvunbiased);
-   fChain->SetBranchAddress("mu_calo_trackz0pvunbiased", &mu_calo_trackz0pvunbiased, &b_mu_calo_trackz0pvunbiased);
-   fChain->SetBranchAddress("mu_calo_tracksigd0pvunbiased", &mu_calo_tracksigd0pvunbiased, &b_mu_calo_tracksigd0pvunbiased);
+   fChain->SetBranchAddress("mu_calo_trackIPEstimate_d0_unbiasedpvunbiased", &mu_calo_trackIPEstimate_d0_unbiasedpvunbiased, &b_mu_calo_trackIPEstimate_d0_unbiasedpvunbiased);
+   fChain->SetBranchAddress("mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased", &mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased, &b_mu_calo_trackIPEstimate_sigd0_unbiasedpvunbiased);
    fChain->SetBranchAddress("mu_calo_truth_type", &mu_calo_truth_type, &b_mu_calo_truth_type);
    fChain->SetBranchAddress("mu_calo_truth_mothertype", &mu_calo_truth_mothertype, &b_mu_calo_truth_mothertype);
    fChain->SetBranchAddress("vxp_n", &vxp_n, &b_vxp_n);

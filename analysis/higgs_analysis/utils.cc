@@ -261,13 +261,17 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(fabs(mu_staco_trackd0pvunbiased->at(index)) > 1.0f) {
+			if(fabs(mu_staco_d0_exPV->at(index)) > 1.0f) {
 				goto __error;
 			}
 
 			if(mu_staco_pt->at(index) < __mu_pt) {
 				goto __error;
 			}
+
+//			if(fabs(mu_staco_eta->at(index)) > 2.7f) {
+//				goto __error;
+//			}
 
 			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) == 0) {
 				goto __error;
@@ -315,13 +319,17 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(fabs(mu_muid_trackd0pvunbiased->at(index)) > 1.0f) {
+			if(fabs(mu_muid_d0_exPV->at(index)) > 1.0f) {
 				goto __error;
 			}
 
 			if(mu_muid_pt->at(index) < __mu_pt) {
 				goto __error;
 			}
+
+//			if(fabs(mu_muid_eta->at(index)) > 2.7f) {
+//				goto __error;
+//			}
 
 			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) == 0) {
 				goto __error;

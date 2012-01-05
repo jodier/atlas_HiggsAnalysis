@@ -223,8 +223,8 @@ Bool_t THiggsBuilder::H_analysis(
 			tkIso2 = mu_staco_ptcone20->at(index2) / pt2;
 			clIso1 = (mu_staco_etcone20->at(index1) - Float_t(nPV2) * 33.5f) / pt1;
 			clIso2 = (mu_staco_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / pt2;
-			d0sigma1 = fabs(mu_staco_trackd0pvunbiased->at(index1) / mu_staco_tracksigd0pvunbiased->at(index1));
-			d0sigma2 = fabs(mu_staco_trackd0pvunbiased->at(index2) / mu_staco_tracksigd0pvunbiased->at(index2));
+			d0sigma1 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
+			d0sigma2 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
 			d0sigmaCut1 = d0sigmaCut2 = d0sigma_mu;
 			ptTkOverlapping1 = (mu_staco_id_qoverp_exPV->at(index1) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index1)) / fabs(mu_staco_id_qoverp_exPV->at(index1)) : 0.0f;
@@ -256,8 +256,8 @@ Bool_t THiggsBuilder::H_analysis(
 			tkIso2 = mu_muid_ptcone20->at(index2) / pt2;
 			clIso1 = (mu_muid_etcone20->at(index1) - Float_t(nPV2) * 33.5f) / pt1;
 			clIso2 = (mu_muid_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / pt2;
-			d0sigma1 = fabs(mu_muid_trackd0pvunbiased->at(index1) / mu_muid_tracksigd0pvunbiased->at(index1));
-			d0sigma2 = fabs(mu_muid_trackd0pvunbiased->at(index2) / mu_muid_tracksigd0pvunbiased->at(index2));
+			d0sigma1 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
+			d0sigma2 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
 			d0sigmaCut1 = d0sigmaCut2 = d0sigma_mu;
 			ptTkOverlapping1 = (mu_muid_id_qoverp_exPV->at(index1) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index1)) / fabs(mu_muid_id_qoverp_exPV->at(index1)) : 0.0f;
@@ -333,8 +333,8 @@ Bool_t THiggsBuilder::H_analysis(
 			tkIso4 = mu_staco_ptcone20->at(index4) / pt4;
 			clIso3 = (mu_staco_etcone20->at(index3) - Float_t(nPV2) * 33.5f) / pt3;
 			clIso4 = (mu_staco_etcone20->at(index4) - Float_t(nPV2) * 33.5f) / pt4;
-			d0sigma3 = fabs(mu_staco_trackd0pvunbiased->at(index3) / mu_staco_tracksigd0pvunbiased->at(index3));
-			d0sigma4 = fabs(mu_staco_trackd0pvunbiased->at(index4) / mu_staco_tracksigd0pvunbiased->at(index4));
+			d0sigma3 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index3) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index3));
+			d0sigma4 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index4) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index4));
 			ptCut3 = ptCut4 = higgs_mu_trigg_pt;
 			d0sigmaCut3 = d0sigmaCut4 = d0sigma_mu;
 			ptTkOverlapping3 = (mu_staco_id_qoverp_exPV->at(index3) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index3)) / fabs(mu_staco_id_qoverp_exPV->at(index3)) : 0.0f;
@@ -366,8 +366,8 @@ Bool_t THiggsBuilder::H_analysis(
 			tkIso4 = mu_muid_ptcone20->at(index4) / pt4;
 			clIso3 = (mu_muid_etcone20->at(index3) - Float_t(nPV2) * 33.5f) / pt3;
 			clIso4 = (mu_muid_etcone20->at(index4) - Float_t(nPV2) * 33.5f) / pt4;
-			d0sigma3 = fabs(mu_muid_trackd0pvunbiased->at(index3) / mu_muid_tracksigd0pvunbiased->at(index3));
-			d0sigma4 = fabs(mu_muid_trackd0pvunbiased->at(index4) / mu_muid_tracksigd0pvunbiased->at(index4));
+			d0sigma3 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index3) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index3));
+			d0sigma4 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index4) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index4));
 			ptCut3 = ptCut4 = higgs_mu_trigg_pt;
 			d0sigmaCut3 = d0sigmaCut4 = d0sigma_mu;
 			ptTkOverlapping3 = (mu_muid_id_qoverp_exPV->at(index3) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index3)) / fabs(mu_muid_id_qoverp_exPV->at(index3)) : 0.0f;
@@ -408,7 +408,7 @@ Bool_t THiggsBuilder::H_analysis(
 	_INC(isOk, dest, 0);
 
 	/*-----------------------------------------------------------------*/
-	/* DILS								   */
+	/* SFOS + mass_2e2µ						   */
 	/*-----------------------------------------------------------------*/
 
 	Int_t pair1[2] = {-1, -1};
@@ -423,64 +423,6 @@ Bool_t THiggsBuilder::H_analysis(
 		return false;
 	}
 
-	_INC(isOk, dest, 1);
-
-	/*-----------------------------------------------------------------*/
-	/* KINEMATICS							   */
-	/*-----------------------------------------------------------------*/
-
-	Int_t nrKinematics = 0;
-
-	if(pt1 > ptCut1) {
-		nrKinematics++;
-	}
-
-	if(pt2 > ptCut2) {
-		nrKinematics++;
-	}
-
-	if(pt3 > ptCut3) {
-		nrKinematics++;
-	}
-
-	if(pt4 > ptCut4) {
-		nrKinematics++;
-	}
-
-	if(nrKinematics < 2)
-	{
-		isOk = false;
-	}
-
-	/*-----------------------------------------------------------------*/
-	/* TRIGGER							   */
-	/*-----------------------------------------------------------------*/
-
-	Int_t nrTrigger = 0;
-
-	if(triggerMatch1 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch2 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch3 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch4 != false) {
-		nrTrigger++;
-	}
-
-	if(nrTrigger < 1)
-	{
-		isOk = false;
-	}
-
-	/*-----------------------------------------------------------------*/
-	/* RELATIVITY							   */
 	/*-----------------------------------------------------------------*/
 
 	Bool_t eeuu = true;
@@ -611,7 +553,65 @@ Bool_t THiggsBuilder::H_analysis(
 		/*---------------------------------------------------------*/
 	}
 
+	_INC(isOk, dest, 1);
+
+	/*-----------------------------------------------------------------*/
+	/* KINEMATICS							   */
+	/*-----------------------------------------------------------------*/
+
+	Int_t nrKinematics = 0;
+
+	if(pt1 > ptCut1) {
+		nrKinematics++;
+	}
+
+	if(pt2 > ptCut2) {
+		nrKinematics++;
+	}
+
+	if(pt3 > ptCut3) {
+		nrKinematics++;
+	}
+
+	if(pt4 > ptCut4) {
+		nrKinematics++;
+	}
+
+	if(nrKinematics < 2)
+	{
+		isOk = false;
+	}
+
 	_INC(isOk, dest, 2);
+
+	/*-----------------------------------------------------------------*/
+	/* TRIGGER							   */
+	/*-----------------------------------------------------------------*/
+
+	Int_t nrTrigger = 0;
+
+	if(triggerMatch1 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch2 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch3 != false) {
+		nrTrigger++;
+	}
+
+	if(triggerMatch4 != false) {
+		nrTrigger++;
+	}
+
+	if(nrTrigger < 1)
+	{
+		isOk = false;
+	}
+
+	_INC(isOk, dest, 3);
 
 	/*-----------------------------------------------------------------*/
 	/* LEADING Z CUTS						   */
@@ -627,7 +627,7 @@ Bool_t THiggsBuilder::H_analysis(
 		isOk = false;
 	}
 
-	_INC(isOk, dest, 3);
+	_INC(isOk, dest, 4);
 
 	/*-----------------------------------------------------------------*/
 	/* SUB-LEADING Z CUTS						   */
@@ -654,7 +654,7 @@ Bool_t THiggsBuilder::H_analysis(
 		SWAP(Z2, Z4);
 	}
 
-	_INC(isOk, dest, 4);
+	_INC(isOk, dest, 5);
 
 	/*-----------------------------------------------------------------*/
 	/* min[ΔR]>0.10							   */
@@ -671,15 +671,7 @@ Bool_t THiggsBuilder::H_analysis(
 		}
 	}
 
-	_INC(isOk, dest, 5);
-
-	/*-----------------------------------------------------------------*/
-	/* ONE QUADRUPLET						   */
-	/*-----------------------------------------------------------------*/
-
-	/* POST PROCESSING */
 	_INC(isOk, dest, 6);
-	/* POST PROCESSING */
 
 	/*-----------------------------------------------------------------*/
 	/* TRACK ISOLATION						   */

@@ -140,8 +140,8 @@ bool THiggsBuilder::Z_analysis(
 			clIso20Corrected2 = (mu_staco_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / mu_staco_pt->at(index2);
 			clIso30Corrected1 = (mu_staco_etcone30->at(index1) - Float_t(nPV2) * 87.6f) / mu_staco_pt->at(index1);
 			clIso30Corrected2 = (mu_staco_etcone30->at(index2) - Float_t(nPV2) * 87.6f) / mu_staco_pt->at(index2);
-			d0sigma1 = fabs(mu_staco_trackd0pvunbiased->at(index1) / mu_staco_tracksigd0pvunbiased->at(index1));
-			d0sigma2 = fabs(mu_staco_trackd0pvunbiased->at(index2) / mu_staco_tracksigd0pvunbiased->at(index2));
+			d0sigma1 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
+			d0sigma2 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
 			ptTkOverlapping1 = (mu_staco_id_qoverp_exPV->at(index1) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index1)) / fabs(mu_staco_id_qoverp_exPV->at(index1)) : 0.0f;
 			ptTkOverlapping2 = (mu_staco_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index2)) / fabs(mu_staco_id_qoverp_exPV->at(index2)) : 0.0f;
@@ -182,8 +182,8 @@ bool THiggsBuilder::Z_analysis(
 			clIso20Corrected2 = (mu_muid_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / mu_muid_pt->at(index2);
 			clIso30Corrected1 = (mu_muid_etcone30->at(index1) - Float_t(nPV2) * 87.6f) / mu_muid_pt->at(index1);
 			clIso30Corrected2 = (mu_muid_etcone30->at(index2) - Float_t(nPV2) * 87.6f) / mu_muid_pt->at(index2);
-			d0sigma1 = fabs(mu_muid_trackd0pvunbiased->at(index1) / mu_muid_tracksigd0pvunbiased->at(index1));
-			d0sigma2 = fabs(mu_muid_trackd0pvunbiased->at(index2) / mu_muid_tracksigd0pvunbiased->at(index2));
+			d0sigma1 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
+			d0sigma2 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
 			ptTkOverlapping1 = (mu_muid_id_qoverp_exPV->at(index1) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index1)) / fabs(mu_muid_id_qoverp_exPV->at(index1)) : 0.0f;
 			ptTkOverlapping2 = (mu_muid_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index2)) / fabs(mu_muid_id_qoverp_exPV->at(index2)) : 0.0f;

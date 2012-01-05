@@ -117,16 +117,18 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 		if((m_H[dest].flag[i] & (1 << 1)) != 0 /*---------------------*/) m_H[dest].cnt[ 1] = true;
 		if((m_H[dest].flag[i] & (1 << 2)) != 0 /*---------------------*/) m_H[dest].cnt[ 2] = true;
 		if((m_H[dest].flag[i] & (1 << 3)) != 0 /*---------------------*/) m_H[dest].cnt[ 3] = true;
-		if((m_H[dest].flag[i] & (1 << 4)) != 0 /*---------------------*/) m_H[dest].cnt[ 4] = true;
-		if((m_H[dest].flag[i] & (1 << 5)) != 0 /*---------------------*/) m_H[dest].cnt[ 5] = true;
-		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 6] = true;
-		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 7] = true;
-		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 8] = true;
-		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 9] = true;
-		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[10] = true;
-		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[11] = true;
-		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[12] = true;
-		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[13] = true;
+		if((m_H[dest].flag[i] & (1 << 4)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 4] = true;
+		if((m_H[dest].flag[i] & (1 << 4)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 5] = true;
+		if((m_H[dest].flag[i] & (1 << 5)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 6] = true;
+		if((m_H[dest].flag[i] & (1 << 5)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 7] = true;
+		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 8] = true;
+		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 9] = true;
+		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[10] = true;
+		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[11] = true;
+		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[12] = true;
+		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[13] = true;
+		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[14] = true;
+		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[15] = true;
 	}
 }
 
@@ -224,7 +226,7 @@ void THiggsBuilder::Loop(void)
 		m_evt.elTrigger = -1;
 		m_evt.muTrigger = -1;
 
-		for(Int_t i = 0; i < 4; i++)
+		for(Int_t i = 0; i < 6; i++)
 		{
 			m_Z[i].RunNumber = -1;
 			m_Z[i].EventNumber = -1;
@@ -237,7 +239,7 @@ void THiggsBuilder::Loop(void)
 			m_Z[i].muTrigger = -1;
 		}
 
-		for(Int_t i = 0; i < 6; i++)
+		for(Int_t i = 0; i < 9; i++)
 		{
 			m_H[i].RunNumber = -1;
 			m_H[i].EventNumber = -1;
@@ -279,7 +281,7 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/**/
-#ifndef __IS_MC
+#ifdef __IS_MC
 		Bool_t isOkVertex = (nPV3 > 0);
 #else
 		Bool_t isOkVertex = (nPV3 > 0) && (larError != 2);

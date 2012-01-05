@@ -140,17 +140,18 @@ Bool_t getIsMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<
 
 /*-------------------------------------------------------------------------*/
 
-#define periodB 16.7121f
-#define periodD 178.132f
-#define periodE 49.9275f
-#define periodF 151.251f
-#define periodG 558.218f
-#define periodH 277.340f
-#define periodI 399.206f
-#define periodJ 232.931f
-#define periodK 660.211f
-#define periodL 1540.28f
-#define periodM 960.327f
+#define periodA 0.00000f
+#define periodB 11.7377f
+#define periodD 166.737f
+#define periodE 48.8244f
+#define periodF 142.575f
+#define periodG 537.542f
+#define periodH 259.459f
+#define periodI 386.226f
+#define periodJ 226.460f
+#define periodK 600.069f
+#define periodL 1401.87f
+#define periodM 1025.62f
 
 const Float_t fracEl = (periodI + periodJ) / (periodI + periodJ + periodK);
 const Float_t fracMu = (     periodI     ) / (periodI + periodJ + periodK);
