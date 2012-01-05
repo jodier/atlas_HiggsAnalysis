@@ -111,8 +111,11 @@ Float_t THiggsBuilder::electronGetEt(Int_t index)
 
 #define periodAll	(periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ + periodK + periodL + periodM)
 
-const Float_t fracEl = (periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ) / (periodAll);
-const Float_t fracMu = (periodB + periodD + periodE + periodF + periodG + periodH + periodI          ) / (periodAll);
+//const Float_t fracEl = (periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ) / (periodAll);
+//const Float_t fracMu = (periodB + periodD + periodE + periodF + periodG + periodH + periodI          ) / (periodAll);
+
+const Float_t fracEl = (periodI + periodJ) / (periodI + periodJ + periodK);
+const Float_t fracMu = (periodI          ) / (periodI + periodJ + periodK);
 
 /*-------------------------------------------------------------------------*/
 
@@ -181,27 +184,47 @@ void THiggsBuilder::Loop(void)
 		/* TRIGGER						   */
 		/*---------------------------------------------------------*/
 
-		TRandom3 random3;
-
 		Bool_t isOkElTrigger;
 		Bool_t isOkMuTrigger;
-#ifdef __IS_MC
-		random3.SetSeed(mc_channel_number * EventNumber);
-#endif
-		Float_t epsilon = random3.Uniform();
 
-		if(epsilon < fracEl) {
+		/**/ if(RunNumber == 180164 // B-D
+			||
+			RunNumber == 183003 // E-H
+		 ) {
 			isOkElTrigger = EF_e20_medium || EF_2e12_medium;
-		}
-		else {
-			isOkElTrigger = EF_e22_medium || EF_2e12T_medium;
-		}
-
-		if(epsilon < fracMu) {
 			isOkMuTrigger = EF_mu18_MG || EF_2mu10_loose;
 		}
-		else {
+		else if(RunNumber == 186169) // I-K
+		{
+			TRandom3 random3;
+
+			random3.SetSeed(mc_channel_number * EventNumber);
+
+			Float_t epsilon = random3.Uniform();
+
+			if(epsilon < fracEl) {
+				isOkElTrigger = EF_e20_medium || EF_2e12_medium;
+			}
+			else {
+				isOkElTrigger = EF_e22_medium || EF_2e12T_medium;
+			}
+
+			if(epsilon < fracMu) {
+				isOkMuTrigger = EF_mu18_MG || EF_2mu10_loose;
+			}
+			else {
+				isOkMuTrigger = EF_mu18_MG_medium || EF_2mu10_loose;
+			}
+		}
+		else if(RunNumber == 186275) // L-M
+		{
+			isOkElTrigger = EF_e22_medium || EF_2e12T_medium;
 			isOkMuTrigger = EF_mu18_MG_medium || EF_2mu10_loose;
+		}
+		else
+		{
+			isOkElTrigger = false;
+			isOkMuTrigger = false;
 		}
 
 		/*---------------------------------------------------------*/

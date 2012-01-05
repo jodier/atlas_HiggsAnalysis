@@ -169,14 +169,27 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 
 		if(core::isMC(RunNumber) != false)
 		{
-			TRandom3 random3;
-#ifdef __IS_MC
-			random3.SetSeed(mc_channel_number * EventNumber);
-#endif
-			if(random3.Uniform() < fracEl) {
+			/**/ if(RunNumber == 180164 // B-D
+				||
+				RunNumber == 183003 // E-H
+			 ) {
 				result = EF_e20_medium || EF_2e12_medium;
 			}
-			else {
+			else if(RunNumber == 186169) // I-K
+			{
+				TRandom3 random3;
+#ifdef __IS_MC
+				random3.SetSeed(mc_channel_number * EventNumber);
+#endif
+				if(random3.Uniform() < fracEl) {
+					result = EF_e20_medium || EF_2e12_medium;
+				}
+				else {
+					result = EF_e22_medium || EF_2e12T_medium;
+				}
+			}
+			else if(RunNumber == 186275) // L-M
+			{
 				result = EF_e22_medium || EF_2e12T_medium;
 			}
 		}
@@ -248,14 +261,27 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 
 		if(core::isMC(RunNumber) != false)
 		{
-			TRandom3 random3;
-#ifdef __IS_MC
-			random3.SetSeed(mc_channel_number * EventNumber);
-#endif
-			if(random3.Uniform() < fracMu) {
+			/**/ if(RunNumber == 180164 // B-D
+				||
+				RunNumber == 183003 // E-H
+			 ) {
 				result = EF_mu18_MG || EF_2mu10_loose;
 			}
-			else {
+			else if(RunNumber == 186169) // I-K
+			{
+				TRandom3 random3;
+#ifdef __IS_MC
+				random3.SetSeed(mc_channel_number * EventNumber);
+#endif
+				if(random3.Uniform() < fracEl) {
+					result = EF_mu18_MG || EF_2mu10_loose;
+				}
+				else {
+					result = EF_mu18_MG_medium || EF_2mu10_loose;
+				}
+			}
+			else if(RunNumber == 186275) // L-M
+			{
 				result = EF_mu18_MG_medium || EF_2mu10_loose;
 			}
 		}
@@ -350,7 +376,7 @@ Bool_t TLeptonAnalysis::triggerMatch(
 						if(getIsMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
 						{
 							return true;
-						}
+						}return true;
 				}
 			}
 
