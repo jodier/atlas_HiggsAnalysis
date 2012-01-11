@@ -109,11 +109,6 @@ Float_t THiggsBuilder::electronGetEt(Int_t index)
 #define periodL		1401.87f
 #define periodM		1025.62f
 
-#define periodAll	(periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ + periodK + periodL + periodM)
-
-//const Float_t fracEl = (periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ) / (periodAll);
-//const Float_t fracMu = (periodB + periodD + periodE + periodF + periodG + periodH + periodI          ) / (periodAll);
-
 const Float_t fracEl = (periodI + periodJ) / (periodI + periodJ + periodK);
 const Float_t fracMu = (periodI          ) / (periodI + periodJ + periodK);
 
@@ -218,11 +213,13 @@ void THiggsBuilder::Loop(void)
 		}
 		else if(RunNumber == 186275) // L-M
 		{
-			isOkElTrigger = EF_e22_medium || EF_2e12T_medium;
+			isOkElTrigger = EF_e22_medium1 || EF_2e12T_medium;
 			isOkMuTrigger = EF_mu18_MG_medium || EF_2mu10_loose;
 		}
 		else
 		{
+			std::cout << "Oula !" << std::endl;
+
 			isOkElTrigger = false;
 			isOkMuTrigger = false;
 		}
@@ -241,10 +238,7 @@ void THiggsBuilder::Loop(void)
 
 			elSTACONr1++;
 
-			if(isOkElTrigger == false
-			   &&
-			   isOkMuTrigger == false
-			 ) {
+			if(isOkElTrigger == false) {
 				continue;
 			}
 
@@ -304,10 +298,7 @@ void THiggsBuilder::Loop(void)
 
 			muSTACONr1++;
 
-			if(isOkElTrigger == false
-			   &&
-			   isOkMuTrigger == false
-			 ) {
+			if(isOkMuTrigger == false) {
 				continue;
 			}
 
@@ -322,47 +313,41 @@ void THiggsBuilder::Loop(void)
 
 			muSTACONr3++;
 
-			if(fabs(mu_staco_d0_exPV->at(index)) > 1.0f) {
+			if(mu_staco_pt->at(index) < 7000.0f) {
 				continue;
 			}
 
 			muSTACONr4++;
 
-			if(fabs(mu_staco_eta->at(index)) > 2.7f) {
-				continue;
-			}
+//			if(fabs(mu_staco_eta->at(index)) > 2.7f) {
+//				continue;
+//			}
 
 			muSTACONr5++;
-
-			if(mu_staco_pt->at(index) < 7000.0f) {
-				continue;
-			}
-
-			muSTACONr6++;
 
 			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) == 0) {
 				continue;
 			}
 
-			muSTACONr7++;
+			muSTACONr6++;
 
 			if(mu_staco_nPixHits->at(index) + mu_staco_nPixelDeadSensors->at(index) < 2) {
 				continue;
 			}
 
-			muSTACONr8++;
+			muSTACONr7++;
 
 			if(mu_staco_nSCTHits->at(index) + mu_staco_nSCTDeadSensors->at(index) < 6) {
 				continue;
 			}
 
-			muSTACONr9++;
+			muSTACONr8++;
 
 			if(mu_staco_nPixHoles->at(index) + mu_staco_nSCTHoles->at(index) > 2) {
 				continue;
 			}
 
-			muSTACONr10++;
+			muSTACONr9++;
 
 			n = mu_staco_nTRTHits->at(index) + mu_staco_nTRTOutliers->at(index);
 
@@ -377,6 +362,12 @@ void THiggsBuilder::Loop(void)
 				if(n > 5 && mu_staco_nTRTOutliers->at(index) > 0.9f * n) {
 					continue;
 				}
+			}
+
+			muSTACONr10++;
+
+			if(fabs(mu_staco_d0_exPV->at(index)) > 1.0f) {
+				continue;
 			}
 
 			muSTACONr11++;
@@ -402,8 +393,8 @@ void THiggsBuilder::Loop(void)
 	std::cout << "after trigger    : " << elSTACONr2 << std::endl;
 	std::cout << "after author=1||3: " << elSTACONr3 << std::endl;
 	std::cout << "after loose++    : " << elSTACONr4 << std::endl;
-	std::cout << "after |η|<2.47   : " << elSTACONr6 << std::endl;
-	std::cout << "after pt>7       : " << elSTACONr5 << std::endl;
+	std::cout << "after |η|<2.47   : " << elSTACONr5 << std::endl;
+	std::cout << "after pt>7       : " << elSTACONr6 << std::endl;
 	std::cout << "after OQ         : " << elSTACONr7 << std::endl;
 	std::cout << "after z0         : " << elSTACONr8 << std::endl;
 
@@ -415,14 +406,14 @@ void THiggsBuilder::Loop(void)
 	std::cout << "after vertex       : " << muSTACONr1 << std::endl;
 	std::cout << "after trigger      : " << muSTACONr2 << std::endl;
 	std::cout << "after author=6||7  : " << muSTACONr3 << std::endl;
-	std::cout << "after d0           : " << muSTACONr4 << std::endl;
+	std::cout << "after pt>4.7       : " << muSTACONr4 << std::endl;
 	std::cout << "after |η|<2.5      : " << muSTACONr5 << std::endl;
-	std::cout << "after pt>7         : " << muSTACONr6 << std::endl;
-	std::cout << "after b-Layer      : " << muSTACONr7 << std::endl;
-	std::cout << "after Pix          : " << muSTACONr8 << std::endl;
-	std::cout << "after SCT          : " << muSTACONr9 << std::endl;
-	std::cout << "after holes        : " << muSTACONr10 << std::endl;
-	std::cout << "after TRT/outliers : " << muSTACONr11 << std::endl;
+	std::cout << "after b-Layer      : " << muSTACONr6 << std::endl;
+	std::cout << "after Pix          : " << muSTACONr7 << std::endl;
+	std::cout << "after SCT          : " << muSTACONr8 << std::endl;
+	std::cout << "after holes        : " << muSTACONr9 << std::endl;
+	std::cout << "after TRT/outliers : " << muSTACONr10 << std::endl;
+	std::cout << "after d0           : " << muSTACONr11 << std::endl;
 	std::cout << "after z0           : " << muSTACONr12 << std::endl;
 
 	std::cout << "#############################################################################" << std::endl;

@@ -82,9 +82,6 @@ class TLeptonAnalysis: public TNTuple
 
 		/**/
 
-		m_stacoSM->UseScale(1);
-		m_muidSM->UseScale(1);
-
 		m_energyRescaler->useDefaultCalibConstants("2011");
 
 		/**/

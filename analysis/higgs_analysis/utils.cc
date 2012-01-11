@@ -68,9 +68,10 @@ void TLeptonAnalysis::fixeEnergy(void)
 				continue;
 			}
 
+			m_stacoSM->UseScale(1);
 			m_stacoSM->SetSeed(EventNumber, i);
 
-			/**/ if(mu_staco_isCombinedMuon->at(i) != false)
+			if(mu_staco_isCombinedMuon->at(i) != false)
 			{
 				m_stacoSM->Event(
 					(mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f,
@@ -81,7 +82,8 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 				mu_staco_pt->at(i) = m_stacoSM->pTCB();
 			}
-			else if(mu_staco_isSegmentTaggedMuon->at(i) != false)
+
+			if(mu_staco_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_stacoSM->Event(
 					mu_staco_pt->at(i),
@@ -102,9 +104,10 @@ void TLeptonAnalysis::fixeEnergy(void)
 				continue;
 			}
 
+			m_muidSM->UseScale(1);
 			m_muidSM->SetSeed(EventNumber, i);
 
-			/**/ if(mu_muid_isCombinedMuon->at(i) != false)
+			if(mu_muid_isCombinedMuon->at(i) != false)
 			{
 				m_muidSM->Event(
 					(mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f,
@@ -115,7 +118,8 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 				mu_muid_pt->at(i) = m_muidSM->pTCB();
 			}
-			else if(mu_muid_isSegmentTaggedMuon->at(i) != false)
+
+			if(mu_muid_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_muidSM->Event(
 					mu_muid_pt->at(i),
@@ -261,17 +265,9 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(fabs(mu_staco_d0_exPV->at(index)) > 1.0f) {
+			if(mu_staco_pt->at(index) < 7000.0f) {
 				goto __error;
 			}
-
-			if(mu_staco_pt->at(index) < __mu_pt) {
-				goto __error;
-			}
-
-//			if(fabs(mu_staco_eta->at(index)) > 2.7f) {
-//				goto __error;
-//			}
 
 			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) == 0) {
 				goto __error;
@@ -304,6 +300,10 @@ Bool_t TLeptonAnalysis::checkObject(
 				}
 			}
 
+			if(fabs(mu_staco_d0_exPV->at(index)) > 1.0f) {
+				goto __error;
+			}
+
 			if(fabs(mu_staco_z0_exPV->at(index)) > 10.0f) {
 				goto __error;
 			}
@@ -319,17 +319,9 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(fabs(mu_muid_d0_exPV->at(index)) > 1.0f) {
+			if(mu_muid_pt->at(index) < 7000.0f) {
 				goto __error;
 			}
-
-			if(mu_muid_pt->at(index) < __mu_pt) {
-				goto __error;
-			}
-
-//			if(fabs(mu_muid_eta->at(index)) > 2.7f) {
-//				goto __error;
-//			}
 
 			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) == 0) {
 				goto __error;
@@ -362,6 +354,10 @@ Bool_t TLeptonAnalysis::checkObject(
 				}
 			}
 
+			if(fabs(mu_muid_d0_exPV->at(index)) > 1.0f) {
+				goto __error;
+			}
+
 			if(fabs(mu_muid_z0_exPV->at(index)) > 10.0f) {
 				goto __error;
 			}
@@ -384,11 +380,11 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_calo_pt->at(index) < __mu_calo_pt) {
+			if(fabs(mu_calo_eta->at(index)) > 0.1f) {
 				goto __error;
 			}
 
-			if(fabs(mu_calo_eta->at(index)) > 0.1f) {
+			if(mu_calo_pt->at(index) < __mu_calo_pt) {
 				goto __error;
 			}
 

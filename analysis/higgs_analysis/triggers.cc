@@ -152,10 +152,8 @@ Bool_t getIsMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<
 #define periodL		1401.87f
 #define periodM		1025.62f
 
-#define periodAll	(periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ + periodK + periodL + periodM)
-
-const Float_t fracEl = (periodB + periodD + periodE + periodF + periodG + periodH + periodI + periodJ) / (periodAll);
-const Float_t fracMu = (periodB + periodD + periodE + periodF + periodG + periodH + periodI          ) / (periodAll);
+const Float_t fracEl = (periodI + periodJ) / (periodI + periodJ + periodK);
+const Float_t fracMu = (periodI          ) / (periodI + periodJ + periodK);
 
 /*-------------------------------------------------------------------------*/
 
@@ -190,7 +188,7 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 			}
 			else if(RunNumber == 186275) // L-M
 			{
-				result = EF_e22_medium || EF_2e12T_medium;
+				result = EF_e22_medium1 || EF_2e12T_medium;
 			}
 		}
 		else for(Vector_t<unsigned>::iterator it = elVector.begin(); it != elVector.end(); it++)
@@ -376,7 +374,7 @@ Bool_t TLeptonAnalysis::triggerMatch(
 						if(getIsMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
 						{
 							return true;
-						}return true;
+						}
 				}
 			}
 
