@@ -158,15 +158,6 @@ Float_t TLeptonAnalysis::eventGetWeight(void)
 
 /*-------------------------------------------------------------------------*/
 
-Bool_t TLeptonAnalysis::checkObjectQuality(
-	Int_t index,
-	TLeptonType type
-) {
-	return (type == TYPE_ELECTRON && core::OQ != false) ? (el_OQ->at(index) & 1446) == 0 : true;
-}
-
-/*-------------------------------------------------------------------------*/
-
 Float_t TLeptonAnalysis::electronGetEtaDirection(Int_t index)
 {
 	Int_t n = el_nPixHits->at(index) + el_nSCTHits->at(index);
@@ -244,6 +235,10 @@ Bool_t TLeptonAnalysis::checkObject(
 			}
 
 			if(electronGetEt(index) < __el_et) {
+				goto __error;
+			}
+
+			if((el_OQ->at(index) & 1446) != 0) {
 				goto __error;
 			}
 

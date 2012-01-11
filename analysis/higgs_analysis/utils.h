@@ -117,11 +117,6 @@ class TLeptonAnalysis: public TNTuple
 	/* SELECTION							   */
 	/*-----------------------------------------------------------------*/
 
-	Bool_t checkObjectQuality(
-		Int_t index,
-		TLeptonType type
-	);
-
 	Bool_t checkObject(
 		Int_t index,
 		TLeptonType type,
