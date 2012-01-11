@@ -9,13 +9,6 @@
 
 void TLeptonAnalysis::fixeEnergy(void)
 {
-	if(core::ER == false
-	   &&
-	   core::SM == false
-	 ) {
-		return;
-	}
-
 	if(core::isMC(RunNumber) == false && core::ER != false)
 	{
 		/*---------------------------------------------------------*/
@@ -198,7 +191,7 @@ Bool_t TLeptonAnalysis::checkObject(
 
 	if(useForward != false)
 	{
-		std::cerr << "Forward electrons not yet implemented !" << std::endl;
+		std::cerr << "Forward electrons not implemented !" << std::endl;
 
 		return false;
 	}
@@ -260,7 +253,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_staco_pt->at(index) < 7000.0f) {
+			if(mu_staco_pt->at(index) < __mu_pt) {
 				goto __error;
 			}
 
@@ -314,7 +307,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_muid_pt->at(index) < 7000.0f) {
+			if(mu_muid_pt->at(index) < __mu_pt) {
 				goto __error;
 			}
 

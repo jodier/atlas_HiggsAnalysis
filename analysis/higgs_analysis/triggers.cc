@@ -271,7 +271,7 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 #ifdef __IS_MC
 				random3.SetSeed(mc_channel_number * EventNumber);
 #endif
-				if(random3.Uniform() < fracEl) {
+				if(random3.Uniform() < fracMu) {
 					result = EF_mu18_MG || EF_2mu10_loose;
 				}
 				else {
