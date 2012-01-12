@@ -39,8 +39,6 @@ typedef enum TLeptonType
 class TLeptonAnalysis: public TNTuple
 {
   protected:
-	void initTriggers(void);
-
 	void fixeEnergy(void);
 
   public:
@@ -83,10 +81,6 @@ class TLeptonAnalysis: public TNTuple
 		/**/
 
 		m_energyRescaler->useDefaultCalibConstants("2011");
-
-		/**/
-
-		initTriggers();
 	}
 
 	/*-----------------------------------------------------------------*/

@@ -269,7 +269,7 @@ void THiggsBuilder::Loop(void)
 		nPV2 = 0;
 		nPV3 = 0;
 
-		for(Int_t i = 0; i < vxp_n; i++)
+		for(Int_t i = 0; i < Int_t(vxp_nTracks->size()); i++)
 		{
 			if(vxp_nTracks->at(i) >= 2) {
 				nPV2++;

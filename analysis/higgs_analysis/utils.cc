@@ -257,7 +257,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) == 0) {
+			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) <= 0) {
 				goto __error;
 			}
 
@@ -311,7 +311,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) == 0) {
+			if(mu_muid_expectBLayerHit->at(index) != 0 && mu_muid_nBLHits->at(index) <= 0) {
 				goto __error;
 			}
 
@@ -376,7 +376,7 @@ Bool_t TLeptonAnalysis::checkObject(
 				goto __error;
 			}
 
-			if(mu_calo_expectBLayerHit->at(index) != 0 && mu_calo_nBLHits->at(index) == 0) {
+			if(mu_calo_expectBLayerHit->at(index) != 0 && mu_calo_nBLHits->at(index) <= 0) {
 				goto __error;
 			}
 

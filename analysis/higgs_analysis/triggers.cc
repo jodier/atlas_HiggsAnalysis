@@ -1,91 +1,12 @@
 /*-------------------------------------------------------------------------*/
 
-#include <cmath>
-#include <sstream>
-#include <iostream>
-
-#include <time.h>
 #include <TRandom3.h>
 
 #include "main.h"
 
 /*-------------------------------------------------------------------------*/
 
-static unsigned hash(const char *key)
-{
-	unsigned hash = 0;
-
-	for(unsigned i = 0; i < strlen(key); i++)
-	{
-		hash +=     key[i]    ;
-		hash += (hash << 0x0A);
-		hash ^= (hash >> 0x06);
-	}
-
-	hash += (hash << 0x03);
-	hash ^= (hash >> 0x0B);
-	hash += (hash << 0x0F);
-
-	return hash;
-}
-
-/*-------------------------------------------------------------------------*/
-
-static Vector_t<unsigned> elVector;
-static Vector_t<unsigned> muVector;
-
-/*-------------------------------------------------------------------------*/
-
-void TLeptonAnalysis::initTriggers(void)
-{
-	elVector.clear();
-	muVector.clear();
-
-	std::string element;
-
-	std::stringstream ss1(core::configStrLookup("EL_EF_TRIGGER"));
-	std::stringstream ss2(core::configStrLookup("MU_EF_TRIGGER"));
-
-	/*-----------------------------------------------------------------*/
-	/* ELECTRONS							   */
-	/*-----------------------------------------------------------------*/
-
-	std::cout << "El trigger(s): ";
-
-	while(std::getline(ss1, element, '|'))
-	{
-		std::cout << "\033[32m" << element << "\033[0m, ";
-
-		elVector.push_back(
-			hash(element.c_str())
-		);
-	}
-
-	std::cout << "Ø" << std::endl;
-
-	/*-----------------------------------------------------------------*/
-	/* MUONS							   */
-	/*-----------------------------------------------------------------*/
-
-	std::cout << "Mu trigger(s): ";
-
-	while(std::getline(ss2, element, '|'))
-	{
-		std::cout << "\033[32m" << element << "\033[0m, ";
-
-		muVector.push_back(
-			hash(element.c_str())
-		);
-	}
-
-	std::cout << "Ø" << std::endl;
-
-	/*-----------------------------------------------------------------*/
-}
-
-/*-------------------------------------------------------------------------*/
-
-Bool_t getIsElectronMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, int track_n, Vector_t<float> *trig_eta, Vector_t<float> *trig_phi)
+Bool_t isElectronMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, int track_n, Vector_t<float> *trig_eta, Vector_t<float> *trig_phi)
 {
 	if(hypo == NULL
 	   ||
@@ -103,7 +24,7 @@ Bool_t getIsElectronMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, int t
 
 /*-------------------------------------------------------------------------*/
 
-Bool_t getIsMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<int> *track_n, Vector_t<Vector_t<float> > *trig_eta, Vector_t<Vector_t<float> > *trig_phi)
+Bool_t isMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo, Vector_t<int> *track_n, Vector_t<Vector_t<float> > *trig_eta, Vector_t<Vector_t<float> > *trig_phi)
 {
 	if(hypo == NULL
 	   ||
@@ -157,14 +78,62 @@ const Float_t fracMu = (periodI          ) / (periodI + periodJ + periodK);
 
 /*-------------------------------------------------------------------------*/
 
+char getPeriod(int RunNumber)
+{
+	char result;
+
+	/**/ if(RunNumber >= 177986 && RunNumber <= 178109) {
+		result = 'B';
+	}
+	else if(RunNumber >= 178163 && RunNumber <= 178264) {
+		result = 'C';
+	}
+	else if(RunNumber >= 179710 && RunNumber <= 180481) {
+		result = 'D';
+	}
+	else if(RunNumber >= 180614 && RunNumber <= 180776) {
+		result = 'E';
+	}
+	else if(RunNumber >= 182013 && RunNumber <= 182519) {
+		result = 'F';
+	}
+	else if(RunNumber >= 182726 && RunNumber <= 183462) {
+		result = 'G';
+	}
+	else if(RunNumber >= 183544 && RunNumber <= 184169) {
+		result = 'H';
+	}
+	else if(RunNumber >= 185353 && RunNumber <= 186493) {
+		result = 'I';
+	}
+	else if(RunNumber >= 186516 && RunNumber <= 186755) {
+		result = 'J';
+	}
+	else if(RunNumber >= 186873 && RunNumber <= 187815) {
+		result = 'K';
+	}
+	else if(RunNumber >= 188902 && RunNumber <= 190343) {
+		result = 'L';
+	}
+	else if(RunNumber >= 190503 && RunNumber <= 191933) {
+		result = 'M';
+	}
+	else
+	{
+		result = 0x0;
+	}
+
+	return result;
+}
+
+/*-------------------------------------------------------------------------*/
+
 Bool_t TLeptonAnalysis::getElTrigger(void)
 {
-	Bool_t result;
+	Bool_t result = false;
 
 	if(core::OF == false)
 	{
-		result = false;
-
 		if(core::isMC(RunNumber) != false)
 		{
 			/**/ if(RunNumber == 180164 // B-D
@@ -191,51 +160,18 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 				result = EF_e22_medium1 || EF_2e12T_medium;
 			}
 		}
-		else for(Vector_t<unsigned>::iterator it = elVector.begin(); it != elVector.end(); it++)
+		else
 		{
-			switch(*it)
-			{
-				case 0xD4CD729C: /* EF_e20_medium */
-					if(EF_e20_medium != false) {
-						return true;
-					}
-					break;
+			char period = getPeriod(RunNumber);
 
-				case 0xB784EC93: /* EF_e22_medium */
-					if(EF_e22_medium != false) {
-						return true;
-					}
-					break;
-
-				case 0xADCD942C: /* EF_e22_medium1 */
-					if(EF_e22_medium1 != false) {
-						return true;
-					}
-					break;
-
-				case 0x69EA9F52: /* EF_e22vh_medium1 */
-					if(EF_e22vh_medium1 != false) {
-						return true;
-					}
-					break;
-
-				case 0xABF2CA73: /* EF_2e12_medium */
-					if(EF_2e12_medium != false) {
-						return true;
-					}
-					break;
-
-				case 0x80D5CCB8: /* EF_2e12T_medium */
-					if(EF_2e12T_medium != false) {
-						return true;
-					}
-					break;
-
-				case 0xD84960ED: /* EF_2e12Tvh_medium */
-					if(EF_2e12Tvh_medium != false) {
-						return true;
-					}
-					break;
+			/**/ if(period >= 'B' && period <= 'J') {
+				result = EF_e20_medium || EF_2e12_medium;
+			}
+			else if(period >= 'K' && period <= 'K') {
+				result = EF_e22_medium || EF_2e12T_medium;
+			}
+			else if(period >= 'L' && period <= 'M') {
+				result = EF_e22vh_medium1 || EF_2e12Tvh_medium;
 			}
 		}
 	}
@@ -251,12 +187,10 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 
 Bool_t TLeptonAnalysis::getMuTrigger(void)
 {
-	Bool_t result;
+	Bool_t result = false;
 
 	if(core::OF == false)
 	{
-		result = false;
-
 		if(core::isMC(RunNumber) != false)
 		{
 			/**/ if(RunNumber == 180164 // B-D
@@ -283,27 +217,15 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 				result = EF_mu18_MG_medium || EF_2mu10_loose;
 			}
 		}
-		else for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
+		else
 		{
-			switch(*it)
-			{
-				case 0x0803E760: /* EF_mu18_MG */
-					if(EF_mu18_MG != false) {
-						return true;
-					}
-					break;
+			char period = getPeriod(RunNumber);
 
-				case 0x869B9356: /* EF_mu18_MG_medium */
-					if(EF_mu18_MG_medium != false) {
-						return true;
-					}
-					break;
-
-				case 0xD92F4787: /* EF_2mu10_loose */
-					if(EF_2mu10_loose != false) {
-						return true;
-					}
-					break;
+			/**/ if(period >= 'B' && period <= 'I') {
+				result = EF_mu18_MG || EF_2mu10_loose;
+			}
+			else if(period >= 'J' && period <= 'M') {
+				result = EF_mu18_MG_medium || EF_2mu10_loose;
 			}
 		}
 	}
@@ -321,115 +243,31 @@ Bool_t TLeptonAnalysis::triggerMatch(
 	Int_t index,
 	TLeptonType type
 ) {
-	Vector_t<Int_t> *hypo;
+	Bool_t result;
 
 	switch(type)
 	{
 		case TYPE_ELECTRON:
-			for(Vector_t<unsigned>::iterator it = elVector.begin(); it != elVector.end(); it++)
-			{
-				switch(*it)
-				{
-					case 0xD4CD729C: /* EF_e20_medium */
-						hypo = trig_EF_el_EF_e20_medium;
-						goto __elOk;
-
-					case 0xB784EC93: /* EF_e22_medium */
-					case 0xADCD942C: /* EF_e22_medium1 */
-					case 0x69EA9F52: /* EF_e22vh_medium1 */
-						hypo = trig_EF_el_EF_e22_medium;
-						goto __elOk;
-
-					case 0xABF2CA73: /* EF_2e12_medium */
-					case 0x80D5CCB8: /* EF_2e12T_medium */
-					case 0xD84960ED: /* EF_2e12Tvh_medium */
-						hypo = trig_EF_el_EF_2e12_medium;
-						goto __elOk;
-
-					__elOk:
-						if(getIsElectronMatched(el_tracketa->at(index), el_trackphi->at(index), hypo, trig_EF_el_n, trig_EF_el_eta, trig_EF_el_phi) != false)
-						{
-							return true;
-						}
-				}
-			}
-
+			result = true;
 			break;
 
 		case TYPE_MUON_STACO:
-			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
-			{
-				switch(*it)
-				{
-					case 0x0803E760: /* EF_mu18_MG */
-					case 0x869B9356: /* EF_mu18_MG_medium */
-						hypo = trig_EF_trigmuonef_EF_mu18;
-						goto __muOkStaco;
-
-					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10;
-						goto __muOkStaco;
-
-					__muOkStaco:
-						if(getIsMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
-						{
-							return true;
-						}
-				}
-			}
-
+			result = true;//isMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), trig_EF_trigmuonef_EF_mu18, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi);
 			break;
 
 		case TYPE_MUON_MUID:
-			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
-			{
-				switch(*it)
-				{
-					case 0x0803E760: /* EF_mu18_MG */
-					case 0x869B9356: /* EF_mu18_MG_medium */
-						hypo = trig_EF_trigmuonef_EF_mu18;
-						goto __muOkMuid;
-
-					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10;
-						goto __muOkMuid;
-
-					__muOkMuid:
-						if(getIsMuonMatched(mu_muid_eta->at(index), mu_muid_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
-						{
-							return true;
-						}
-				}
-			}
-
+			result = true;//isMuonMatched(mu_muid_eta->at(index) , mu_muid_phi->at(index) , trig_EF_trigmuonef_EF_mu18, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi);
 			break;
 
 		case TYPE_MUON_CALO:
-			for(Vector_t<unsigned>::iterator it = muVector.begin(); it != muVector.end(); it++)
-			{
-				switch(*it)
-				{
-					case 0x0803E760: /* EF_mu18_MG */
-					case 0x869B9356: /* EF_mu18_MG_medium */
-						hypo = trig_EF_trigmuonef_EF_mu18;
-						goto __muOkCalo;
-
-					case 0xD92F4787: /* EF_2mu10_loose */
-						hypo = trig_EF_trigmuonef_EF_2mu10;
-						goto __muOkCalo;
-
-					__muOkCalo:
-						if(getIsMuonMatched(mu_calo_eta->at(index), mu_calo_phi->at(index), hypo, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi) != false)
-						{
-							return true;
-						}
-				}
-			}
-
+			result = true;//isMuonMatched(mu_calo_eta->at(index) , mu_calo_phi->at(index) , trig_EF_trigmuonef_EF_mu18, trig_EF_trigmuonef_track_n, trig_EF_trigmuonef_track_CB_eta, trig_EF_trigmuonef_track_CB_phi);
 			break;
+
+		default:
+			result = false;
 	}
 
-	return false;
+	return result;
 }
 
 /*-------------------------------------------------------------------------*/

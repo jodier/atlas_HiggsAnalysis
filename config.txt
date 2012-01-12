@@ -15,6 +15,3 @@ d0sigma_mu			3.5
 EL_USE_LOOSE			1
 EL_USE_FORWARD			0
 
-EL_EF_TRIGGER			EF_e20_medium|EF_e22_medium|EF_e22_medium1|EF_e22vh_medium1|EF_2e12_medium|EF_2e12T_medium|EF_2e12Tvh_medium
-MU_EF_TRIGGER			EF_mu18_MG|EF_mu18_MG_medium|EF_2mu10_loose
-

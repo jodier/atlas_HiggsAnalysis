@@ -160,7 +160,7 @@ void THiggsBuilder::Loop(void)
 		nPV2 = 0;
 		nPV3 = 0;
 
-		for(Int_t i = 0; i < vxp_n; i++)
+		for(Int_t i = 0; i < Int_t(vxp_nTracks->size()); i++)
 		{
 			if(vxp_nTracks->at(i) >= 2) {
 				nPV2++;
@@ -325,7 +325,7 @@ void THiggsBuilder::Loop(void)
 
 			muSTACONr5++;
 
-			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) == 0) {
+			if(mu_staco_expectBLayerHit->at(index) != 0 && mu_staco_nBLHits->at(index) <= 0) {
 				continue;
 			}
 
