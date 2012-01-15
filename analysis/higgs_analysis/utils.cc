@@ -38,11 +38,6 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < el_n; i++)
 		{
-			if(fabs(el_cl_eta->at(i)) > 2.47f)
-			{
-				continue;
-			}
-
 			m_energyRescaler->SetRandomSeed(EventNumber + 100 * i);
 
 			el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->getSmearingCorrectionMeV(
@@ -56,11 +51,6 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < mu_staco_n; i++)
 		{
-			if(fabs(mu_staco_eta->at(i)) > 2.7f)
-			{
-				continue;
-			}
-
 			m_stacoSM->UseScale(1);
 			m_stacoSM->SetSeed(EventNumber, i);
 
@@ -92,11 +82,6 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < mu_muid_n; i++)
 		{
-			if(fabs(mu_muid_eta->at(i)) > 2.7f)
-			{
-				continue;
-			}
-
 			m_muidSM->UseScale(1);
 			m_muidSM->SetSeed(EventNumber, i);
 

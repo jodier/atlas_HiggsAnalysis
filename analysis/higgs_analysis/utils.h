@@ -60,16 +60,18 @@ class TLeptonAnalysis: public TNTuple
 
 	TLeptonAnalysis(TChain *chain): TNTuple(chain)
 	{
-		Vector_t<Double_t> int_lum(9);
-		int_lum[0] =  11.991; // luminosity for period B
-		int_lum[1] = 166.467; // luminosity for period D
-		int_lum[2] =  50.418; // luminosity for period E
-		int_lum[3] = 136.759; // luminosity for period F
-		int_lum[4] = 517.988; // luminosity for period G
-		int_lum[5] = 264.752; // luminosity for period H
-		int_lum[6] = 333.797; // luminosity for period I
-		int_lum[7] = 233.152; // luminosity for period J
-		int_lum[8] = 551.354; // luminosity for period K
+		Vector_t<Double_t> int_lum(10);
+
+		int_lum[0] = 11.7377; // luminosity for period B
+		int_lum[1] = 166.737; // luminosity for period D
+		int_lum[2] = 48.8244; // luminosity for period E
+		int_lum[3] = 142.575; // luminosity for period F
+		int_lum[4] = 537.542; // luminosity for period G
+		int_lum[5] = 259.459; // luminosity for period H
+		int_lum[6] = 226.460; // luminosity for period I
+		int_lum[7] = 600.069; // luminosity for period J
+		int_lum[8] = 1401.87; // luminosity for period K
+		int_lum[9] = 1025.62; // luminosity for period L
 
 		m_stacoSF = new AnalysisMuonEfficiencyScaleFactors(    "STACO_CB"    , int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
 		m_muidSF = new AnalysisMuonEfficiencyScaleFactors("Muid_CB_plus_ST", int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
