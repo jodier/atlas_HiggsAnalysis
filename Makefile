@@ -56,7 +56,7 @@ all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 
 #############################################################################
 
-ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5)
+ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 	@cd $(DIR)/tools && make all && cd $(DIR)
 
 	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
