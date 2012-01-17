@@ -221,8 +221,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge2 = mu_staco_charge->at(index2);
 			tkIso1 = mu_staco_ptcone20->at(index1) / pt1;
 			tkIso2 = mu_staco_ptcone20->at(index2) / pt2;
-			clIso1 = (mu_staco_etcone20->at(index1) - Float_t(nPV2) * 33.5f) / pt1;
-			clIso2 = (mu_staco_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / pt2;
+			clIso1 = (mu_staco_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / pt1;
+			clIso2 = (mu_staco_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / pt2;
 			d0sigma1 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
 			d0sigma2 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
@@ -254,8 +254,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge2 = mu_muid_charge->at(index2);
 			tkIso1 = mu_muid_ptcone20->at(index1) / pt1;
 			tkIso2 = mu_muid_ptcone20->at(index2) / pt2;
-			clIso1 = (mu_muid_etcone20->at(index1) - Float_t(nPV2) * 33.5f) / pt1;
-			clIso2 = (mu_muid_etcone20->at(index2) - Float_t(nPV2) * 33.5f) / pt2;
+			clIso1 = (mu_muid_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / pt1;
+			clIso2 = (mu_muid_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / pt2;
 			d0sigma1 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
 			d0sigma2 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
@@ -331,8 +331,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge4 = mu_staco_charge->at(index4);
 			tkIso3 = mu_staco_ptcone20->at(index3) / pt3;
 			tkIso4 = mu_staco_ptcone20->at(index4) / pt4;
-			clIso3 = (mu_staco_etcone20->at(index3) - Float_t(nPV2) * 33.5f) / pt3;
-			clIso4 = (mu_staco_etcone20->at(index4) - Float_t(nPV2) * 33.5f) / pt4;
+			clIso3 = (mu_staco_etcone20->at(index3) - Float_t(nPV2 - 1) * 33.5f) / pt3;
+			clIso4 = (mu_staco_etcone20->at(index4) - Float_t(nPV2 - 1) * 33.5f) / pt4;
 			d0sigma3 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index3) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index3));
 			d0sigma4 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index4) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index4));
 			ptCut3 = ptCut4 = higgs_mu_trigg_pt;
@@ -364,8 +364,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge4 = mu_muid_charge->at(index4);
 			tkIso3 = mu_muid_ptcone20->at(index3) / pt3;
 			tkIso4 = mu_muid_ptcone20->at(index4) / pt4;
-			clIso3 = (mu_muid_etcone20->at(index3) - Float_t(nPV2) * 33.5f) / pt3;
-			clIso4 = (mu_muid_etcone20->at(index4) - Float_t(nPV2) * 33.5f) / pt4;
+			clIso3 = (mu_muid_etcone20->at(index3) - Float_t(nPV2 - 1) * 33.5f) / pt3;
+			clIso4 = (mu_muid_etcone20->at(index4) - Float_t(nPV2 - 1) * 33.5f) / pt4;
 			d0sigma3 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index3) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index3));
 			d0sigma4 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index4) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index4));
 			ptCut3 = ptCut4 = higgs_mu_trigg_pt;

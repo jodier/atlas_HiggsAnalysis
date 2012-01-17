@@ -15,11 +15,6 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < el_n; i++)
 		{
-			if(fabs(el_cl_eta->at(i)) > 2.47f)
-			{
-				continue;
-			}
-
 			el_cl_E->at(i) = m_energyRescaler->applyEnergyCorrectionMeV(
 				el_cl_eta->at(i),
 				el_cl_phi->at(i),

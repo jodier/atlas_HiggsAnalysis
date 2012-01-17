@@ -287,7 +287,7 @@ void THiggsBuilder::Loop(void)
 		Bool_t isOkVertex = (nPV3 > 0) && (larError != 2);
 #endif
 		/*---------------------------------------------------------*/
-		/* SELECTION 1						   */
+		/* SELECTION 4e or 4mu					   */
 		/*---------------------------------------------------------*/
 
 		if(isOkElTrigger != false && isOkVertex != false)
@@ -354,7 +354,7 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/*---------------------------------------------------------*/
-		/* SELECTION 2						   */
+		/* SELECTION 2e2mu					   */
 		/*---------------------------------------------------------*/
 
 		if((isOkElTrigger != false || isOkMuTrigger != false) && isOkVertex != false)
