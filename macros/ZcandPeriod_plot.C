@@ -4,6 +4,10 @@
 
 /*-------------------------------------------------------------------------*/
 
+static bool Renormalyze = false;
+
+/*-------------------------------------------------------------------------*/
+
 void ZcandPeriod_plot(void)
 {
 	SetAtlasStyle();
@@ -14,11 +18,11 @@ void ZcandPeriod_plot(void)
 
 	TH1F *h1 = (TH1F *) file->Get("data");
 	//TH1F *h2 = (TH1F *) file->Get("mc");
-	//TH1F *h3 = (TH1F *) file->Get("bkgd");
 
 	/*-----------------------------------------------------------------*/
 
-	TH1F *__frame = __drawFrame(0, 11, 0, 8.0e+5);
+	TH1F *__frame = __drawFrame(0, 11, 0, 400);
+	//TH1F *__frame = __drawFrame(1, 12, 0, 900000);
 	__frame->SetXTitle("2011 Periods");
 	__frame->SetYTitle("#Z candidats");
 
@@ -26,11 +30,18 @@ void ZcandPeriod_plot(void)
 
 	TAxis *axis1 = __frame->GetXaxis();
 
+	Float_t LumiPeriod[] = {
+		14.698, 167.553, 48.8244,
+		142.635, 539.800, 262.151,
+		391.793, 227.979 , 610.045,
+		1461.570, 1048.330
+	};
+
 	const char *names[] = {
-		"11.7377 fb^{-1}", "166.737 fb^{-1}", "48.8244 fb^{-1}",
-		"142.575 fb^{-1}", "537.542 fb^{-1}", "259.459 fb^{-1}",
-		"386.226 fb^{-1}", "226.46 fb^{-1}", "600.069 fb^{-1}",
-		"1401.87 fb^{-1}", "1025.62 fb^{-1}"
+		"B=14.698 pb^{-1}", "D=167.553 pb^{-1}", "E=48.8244 pb^{-1}",
+		"F=142.635 pb^{-1}", "G=539.800 pb^{-1}", "H=262.151 pb^{-1}",
+		"I=391.793 pb^{-1}", "J=227.979 pb^{-1}", "K=610.045 pb^{-1}",
+		"L=1461.570 pb^{-1}", "M=1048.330 pb^{-1}"
 	};
 
 	for(int i = 1; i < 12; i++)
@@ -38,6 +49,12 @@ void ZcandPeriod_plot(void)
 		axis1->SetBinLabel(i - 0, names[i - 1]);
 	}
 
+	if(Renormalyze){
+		for(int i = 1; i < 12; i++)
+		{
+			h1->TH1::SetBinContent(i, h1->TH1::GetBinContent(i) / (float)LumiPeriod[i - 1]);
+		}
+	}
 	/*-----------------------------------------------------------------*/
 
 	__frame->Draw();
@@ -49,6 +66,6 @@ void ZcandPeriod_plot(void)
 
 	/*-----------------------------------------------------------------*/
 
-	gPad->Print("ZcandPeriod_data.pdf");
+	gPad->Print("ZcandPeriod_dataRenorm.png");
 }
 

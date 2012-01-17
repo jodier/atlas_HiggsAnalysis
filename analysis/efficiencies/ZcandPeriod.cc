@@ -13,15 +13,16 @@
 
 #include "../../tools/PileupReweighting/PileupReweighting/TPileupReweighting.h"
 
-static bool bkgd = false;
 static bool isMC = false;
 
 TFile *file;
 
 /*-------------------------------------------------------------------------*/
 
-#define ET_MIN		10.0f	/* GeV */
-#define ET_MAX		5000.0f	/* GeV */
+#define ET_MIN		20.0f		/* GeV */
+#define ET_MAX		9000.0f		/* GeV */
+#define MASS_CENTER	91.1876f	/* GeV */
+#define MASS_WINDOW	15.0f		/* GeV */
 
 /*-------------------------------------------------------------------------*/
 
@@ -120,22 +121,12 @@ int main(int argc, char **argv)
 
 	if(file != NULL)
 	{
-		bkgd = false;
 		isMC = true;
 		alg1.Loop();
-
 		std::cout << std::endl;
 
-		bkgd = true;
-		isMC = true;
-		alg1.Loop();
-
-		std::cout << std::endl;
-
-		bkgd = false;
 		isMC = false;
 		alg2.Loop();
-
 		std::cout << std::endl;
 
 		file->Close();
@@ -167,21 +158,12 @@ void ZStudy::Loop(void)
 
 	/**/
 
-	TH1D h("", "", 11, 0, 11);
+	TH1D h("", "", 11, 1, 12);
 
-	if(isMC != false)
-	{
-		if(bkgd != false)
-		{
-			h.SetName("bkgd");
-		}
-		else
-		{
-			h.SetName("mc");
-		}
+	if(isMC != false) {
+		h.SetName("mc");
 	}
-	else
-	{
+	else {
 		h.SetName("data");
 	}
 
@@ -190,6 +172,8 @@ void ZStudy::Loop(void)
 	Long64_t eventNr = fChain->GetEntries();
 
 	/**/
+
+	Long64_t ZCand[11] = {0,0,0,0,0,0,0,0,0,0,0};
 
 	for(Long64_t event = 0; event < eventNr; event++)
 	{
@@ -227,17 +211,15 @@ void ZStudy::Loop(void)
 			   ||
 			   l2_pt[i] < ET_MIN || l2_pt[i] > ET_MAX
 			   ||
-			   fabs(l1_eta[i]) > 2.47f
-			   ||
-			   fabs(l2_eta[i]) > 2.47f
+			   fabs(Z_m[i] - MASS_CENTER) > MASS_WINDOW
 			 ) {
 				continue;
 			}
 
-			if(bkgd != false && (l1_truthMatch[i] != false && l2_truthMatch[i] != false))
-			{
-				continue;
-			}
+			//if(bkgd != false && (l1_truthMatch[i] != false && l2_truthMatch[i] != false))
+			//{
+			//	continue;
+			//}
 
 			Float_t theWeight = weight[i];
 
@@ -270,17 +252,46 @@ void ZStudy::Loop(void)
 				}
 			}
 
-			if(RunNumber >= 177986 && RunNumber <= 178109) h.Fill(1, theWeight);
-			if(RunNumber >= 179710 && RunNumber <= 180481) h.Fill(2, theWeight);
-			if(RunNumber >= 180614 && RunNumber <= 180776) h.Fill(3, theWeight);
-			if(RunNumber >= 182013 && RunNumber <= 182519) h.Fill(4, theWeight);
-			if(RunNumber >= 182726 && RunNumber <= 183462) h.Fill(5, theWeight);
-			if(RunNumber >= 183544 && RunNumber <= 184169) h.Fill(6, theWeight);
-			if(RunNumber >= 185353 && RunNumber <= 186493) h.Fill(7, theWeight);
-			if(RunNumber >= 186516 && RunNumber <= 186755) h.Fill(8, theWeight);
-			if(RunNumber >= 186873 && RunNumber <= 187815) h.Fill(9, theWeight);
-			if(RunNumber >= 188902 && RunNumber <= 190343) h.Fill(10, theWeight);
-			if(RunNumber >= 190503 && RunNumber <= 191933) h.Fill(11, theWeight);
+			if(isMC != false)
+			{
+				/**/ if(RunNumber == 180164)
+				{
+					h.Fill(1, theWeight);
+					h.Fill(2, theWeight);
+				}
+				else if(RunNumber == 183003)
+				{
+					h.Fill(3, theWeight);
+					h.Fill(4, theWeight);
+					h.Fill(5, theWeight);
+					h.Fill(6, theWeight);
+				}
+				else if(RunNumber == 186169)
+				{
+					h.Fill(7, theWeight);
+					h.Fill(8, theWeight);
+					h.Fill(9, theWeight);
+				}
+				else if(RunNumber == 186275)
+				{
+					h.Fill(10, theWeight);
+					h.Fill(11, theWeight);
+				}
+			}
+			else
+			{
+				/**/ if(RunNumber >= 177986 && RunNumber <= 178109) { h.Fill(1, theWeight); ZCand[0]++;}
+				else if(RunNumber >= 179710 && RunNumber <= 180481) { h.Fill(2, theWeight); ZCand[1]++;}
+				else if(RunNumber >= 180614 && RunNumber <= 180776) { h.Fill(3, theWeight); ZCand[2]++;}
+				else if(RunNumber >= 182013 && RunNumber <= 182519) { h.Fill(4, theWeight); ZCand[3]++;}
+				else if(RunNumber >= 182726 && RunNumber <= 183462) { h.Fill(5, theWeight); ZCand[4]++;}
+				else if(RunNumber >= 183544 && RunNumber <= 184169) { h.Fill(6, theWeight); ZCand[5]++;}
+				else if(RunNumber >= 185353 && RunNumber <= 186493) { h.Fill(7, theWeight); ZCand[6]++;}
+				else if(RunNumber >= 186516 && RunNumber <= 186755) { h.Fill(8, theWeight); ZCand[7]++;}
+				else if(RunNumber >= 186873 && RunNumber <= 187815) { h.Fill(9, theWeight); ZCand[8]++;}
+				else if(RunNumber >= 188902 && RunNumber <= 190343) { h.Fill(10, theWeight); ZCand[9]++;}
+				else if(RunNumber >= 190503 && RunNumber <= 191933) { h.Fill(11, theWeight); ZCand[10]++;}
+			}
 		}
 	}
 
@@ -289,6 +300,21 @@ void ZStudy::Loop(void)
 	file->cd();
 
 	h.Write();
+
+	std::cout  << "****************" << std::endl;
+	std::cout  << "Z period B :" << ZCand[0] << std::endl;
+	std::cout  << "Z period D :" << ZCand[1] << std::endl;
+	std::cout  << "Z period E :" << ZCand[2] << std::endl;
+	std::cout  << "Z period F :" << ZCand[3] << std::endl;
+	std::cout  << "Z period G :" << ZCand[4] << std::endl;
+	std::cout  << "Z period H :" << ZCand[5] << std::endl;
+	std::cout  << "Z period I :" << ZCand[6] << std::endl;
+	std::cout  << "Z period J :" << ZCand[7] << std::endl;
+	std::cout  << "Z period K :" << ZCand[8] << std::endl;
+	std::cout  << "Z period L :" << ZCand[9] << std::endl;
+	std::cout  << "Z period M :" << ZCand[10] << std::endl;
+
+
 }
 
 /*-------------------------------------------------------------------------*/
