@@ -7,6 +7,8 @@
 
 #include "../../core/include/core.h"
 
+#include <PileupReweighting/TPileupReweighting.h>
+
 #include <MuonEfficiencyCorrections/AnalysisMuonEfficiencyScaleFactors.h>
 #include <MuonMomentumCorrections/SmearingClass.h>
 
@@ -49,6 +51,11 @@ class TLeptonAnalysis: public TNTuple
 	/* TOOLS							   */
 	/*-----------------------------------------------------------------*/
 
+	Root::TPileupReweighting *m_pileupReweightingBD;
+	Root::TPileupReweighting *m_pileupReweightingEH;
+	Root::TPileupReweighting *m_pileupReweightingIK;
+	Root::TPileupReweighting *m_pileupReweightingLM;
+
 	AnalysisMuonEfficiencyScaleFactors *m_stacoSF;
 	AnalysisMuonEfficiencyScaleFactors *m_muidSF;
 	SmearingClass *m_stacoSM;
@@ -60,18 +67,37 @@ class TLeptonAnalysis: public TNTuple
 
 	TLeptonAnalysis(TChain *chain): TNTuple(chain)
 	{
-		Vector_t<Double_t> int_lum(10);
+		Vector_t<Double_t> int_lum(11);
 
-		int_lum[0] = 11.7377; // luminosity for period B
-		int_lum[1] = 166.737; // luminosity for period D
-		int_lum[2] = 48.8244; // luminosity for period E
-		int_lum[3] = 142.575; // luminosity for period F
-		int_lum[4] = 537.542; // luminosity for period G
-		int_lum[5] = 259.459; // luminosity for period H
-		int_lum[6] = 226.460; // luminosity for period I
-		int_lum[7] = 600.069; // luminosity for period J
-		int_lum[8] = 1401.87; // luminosity for period K
-		int_lum[9] = 1025.62; // luminosity for period L
+		int_lum[0] = 11.7377f; // luminosity for period B
+		int_lum[0] = 00.0000f; // luminosity for period B
+		int_lum[1] = 166.737f; // luminosity for period D
+		int_lum[2] = 48.8244f; // luminosity for period E
+		int_lum[3] = 142.575f; // luminosity for period F
+		int_lum[4] = 537.542f; // luminosity for period G
+		int_lum[5] = 259.459f; // luminosity for period H
+		int_lum[6] = 226.460f; // luminosity for period I
+		int_lum[7] = 600.069f; // luminosity for period J
+		int_lum[8] = 1401.87f; // luminosity for period K
+		int_lum[9] = 1025.62f; // luminosity for period L
+
+		m_pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");
+		m_pileupReweightingEH = new Root::TPileupReweighting("TPileupReweightingEH");
+		m_pileupReweightingIK = new Root::TPileupReweighting("TPileupReweightingIK");
+		m_pileupReweightingLM = new Root::TPileupReweighting("TPileupReweightingLM");
+
+		if(m_pileupReweightingBD->initialize("analysis/ilumicalc_period_BD_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_BD") != 0
+		   ||
+		   m_pileupReweightingEH->initialize("analysis/ilumicalc_period_EH_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_EH") != 0
+		   ||
+		   m_pileupReweightingIK->initialize("analysis/ilumicalc_period_IK_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_IK") != 0
+		   ||
+		   m_pileupReweightingLM->initialize("analysis/ilumicalc_period_LM_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_LM") != 0
+		 ) {
+			std::cout << "Could not setup pileup reweighting !" << std::endl;
+
+			exit(1);
+		}
 
 		m_stacoSF = new AnalysisMuonEfficiencyScaleFactors(    "STACO_CB"    , int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
 		m_muidSF = new AnalysisMuonEfficiencyScaleFactors("Muid_CB_plus_ST", int_lum, "MeV", "./tools/MuonEfficiencyCorrections/share/");
@@ -95,13 +121,23 @@ class TLeptonAnalysis: public TNTuple
 		delete m_muidSM;
 		delete m_energyRescaler;
 		delete m_egammaSF;
+
+		delete m_pileupReweightingBD;
+		delete m_pileupReweightingEH;
+		delete m_pileupReweightingIK;
+		delete m_pileupReweightingLM;
 	}
 
 	/*-----------------------------------------------------------------*/
 	/* DEFINITIONS */
 	/*-----------------------------------------------------------------*/
 
-	Float_t eventGetWeight(void);
+	Float_t eventGetWeight1(void);
+	Float_t eventGetWeight2(void);
+	Float_t eventGetWeight3(
+		Int_t index,
+		TLeptonType type
+	);
 
 	Float_t electronGetEtaDirection(Int_t index);
 	Float_t electronGetPhiDirection(Int_t index);

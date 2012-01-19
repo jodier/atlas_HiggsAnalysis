@@ -13,8 +13,6 @@
 String_t core::input = "input.txt";
 String_t core::output = "output.root";
 Bool_t core::grid = false;
-Bool_t core::OQ = true;
-Bool_t core::SF = false;
 Bool_t core::ER = false;
 Bool_t core::SM = false;
 Bool_t core::OF = false;
@@ -28,10 +26,6 @@ void usage(const char *name)
 		  << "  -h --help"		"\t\t\t"  "Display this information\n"
 		  << "  -o --output=<file>"	"\t\t"	  "Place the output into <file>\n"
 		  << "  -g --grid=<mode>"	"\t\t"	  "Use the grid <mode>=local|prun\n"
-		  << "     --enable-OQ"		"\t\t"	  "Enable OQ check\n"
-		  << "     --disable-OQ"	"\t\t"	  "Disable OQ check\n"
-		  << "     --enable-SF"		"\t\t"	  "Enable scale factor\n"
-		  << "     --disable-SF"	"\t\t"	  "Disable scale factor\n"
 		  << "     --enable-ER"		"\t\t"	  "Enable energy rescaling\n"
 		  << "     --disable-ER"	"\t\t"	  "Disable energy rescaling\n"
 		  << "     --enable-SM"		"\t\t"	  "Enable smearing\n"
@@ -75,21 +69,17 @@ int main(int argc, char **argv)
 	/* OPTIONS							   */
 	/*-----------------------------------------------------------------*/
 
-	size_t nr = core::fltParamMap.size() + core::strParamMap.size() + 13;
+	size_t nr = core::fltParamMap.size() + core::strParamMap.size() + 9;
 
-	options[nr - 13] = (struct option) {"help", 0, 0, 'h'};
-	options[nr - 12] = (struct option) {"output", 1, 0, 'o'};
-	options[nr - 11] = (struct option) {"grid", 1, 0, 'g'};
-	options[nr - 10] = (struct option) {"enable-OQ", 0, 0, 992};
-	options[nr -  9] = (struct option) {"disable-OQ", 0, 0, 993};
-	options[nr -  8] = (struct option) {"enable-SF", 0, 0, 994};
-	options[nr -  7] = (struct option) {"disable-SF", 0, 0, 995};
-	options[nr -  6] = (struct option) {"enable-ER", 0, 0, 996};
-	options[nr -  5] = (struct option) {"disable-ER", 0, 0, 997};
-	options[nr -  4] = (struct option) {"enable-SM", 0, 0, 998};
-	options[nr -  3] = (struct option) {"disable-SM", 0, 0, 999};
-	options[nr -  2] = (struct option) {"floodgates", 0, 0, 'f'};
-	options[nr -  1] = (struct option) {0, 0, 0, 0};
+	options[nr - 9] = (struct option) {"help", 0, 0, 'h'};
+	options[nr - 8] = (struct option) {"output", 1, 0, 'o'};
+	options[nr - 7] = (struct option) {"grid", 1, 0, 'g'};
+	options[nr - 6] = (struct option) {"enable-ER", 0, 0, 996};
+	options[nr - 5] = (struct option) {"disable-ER", 0, 0, 997};
+	options[nr - 4] = (struct option) {"enable-SM", 0, 0, 998};
+	options[nr - 3] = (struct option) {"disable-SM", 0, 0, 999};
+	options[nr - 2] = (struct option) {"floodgates", 0, 0, 'f'};
+	options[nr - 1] = (struct option) {0, 0, 0, 0};
 
 	/*-----------------------------------------------------------------*/
 
@@ -141,22 +131,6 @@ int main(int argc, char **argv)
 					return 1;
 				}
 
-				break;
-
-			case 992:
-				core::OQ = true;
-				break;
-
-			case 993:
-				core::OQ = false;
-				break;
-
-			case 994:
-				core::SF = true;
-				break;
-
-			case 995:
-				core::SF = false;
 				break;
 
 			case 996:
@@ -232,20 +206,6 @@ int main(int argc, char **argv)
 	std::cout << std::endl;
 
 	/*-----------------------------------------------------------------*/
-
-	/**/ if(core::OQ == false) {
-		std::cout << "OQ: NO" << std::endl;
-	}
-	else if(core::OQ != false) {
-		std::cout << "OQ: YES" << std::endl;
-	}
-
-	/**/ if(core::SF == false) {
-		std::cout << "SF: NO" << std::endl;
-	}
-	else if(core::SF != false) {
-		std::cout << "SF: YES" << std::endl;
-	}
 
 	/**/ if(core::ER == false) {
 		std::cout << "ER: NO" << std::endl;

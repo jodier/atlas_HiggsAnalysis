@@ -110,9 +110,9 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 /*-------------------------------------------------------------------------*/
 
-Float_t TLeptonAnalysis::eventGetWeight(void)
+Float_t TLeptonAnalysis::eventGetWeight1(void)
 {
-#if defined(__IS_MC) || defined(__IS_uD3PD)
+#ifdef __IS_MC
 	Float_t weight = 1.0f;
 
 	if(mcevt_weight[0].size() > 0)
@@ -123,9 +123,119 @@ Float_t TLeptonAnalysis::eventGetWeight(void)
 		}
 	}
 
-	return (weight != 0.0f) ? weight : 1.0f;
+	return weight != 0.0f ? weight : 1.0f;
 #else
-	return 1.00000000000000000000000000000f;
+	return 1.000000000000000000000000000f;
+#endif
+}
+
+/*-------------------------------------------------------------------------*/
+
+Float_t TLeptonAnalysis::eventGetWeight2(void)
+{
+#ifdef __IS_MC
+	Float_t weight;
+
+	switch(RunNumber)
+	{
+		case 180164:
+			weight = 1.06f;// * m_pileupReweightingBD->getPileupWeight(averageIntPerXing);
+			break;
+
+		case 183003:
+			weight = 1.08f;// * m_pileupReweightingEH->getPileupWeight(averageIntPerXing);
+			break;
+
+		case 186169:
+			weight = 0.87f;// * m_pileupReweightingIK->getPileupWeight(averageIntPerXing);
+			break;
+
+		case 186275:
+			weight = 1.03f;// * m_pileupReweightingLM->getPileupWeight(averageIntPerXing);
+			break;
+
+		default:
+			std::cout << "TLeptonAnalysis::eventGetWeight2() - Oula !" << std::endl;
+			weight = 0.0f;
+			break;
+	}
+
+	return weight;
+#else
+	return 1.000f;
+#endif
+}
+
+/*-------------------------------------------------------------------------*/
+
+Float_t TLeptonAnalysis::eventGetWeight3(Int_t index, TLeptonType type)
+{
+#ifdef __IS_MC
+	Float_t et;
+	Float_t eta;
+
+	TLorentzVector tlv;
+
+	Float_t weight;
+
+	switch(type)
+	{
+		/*---------------------------------------------------------*/
+		/* TYPE_ELECTRON					   */
+		/*---------------------------------------------------------*/
+
+		case TYPE_ELECTRON:
+			et = electronGetEt(index);
+			eta = el_cl_eta->at(index);
+
+			weight = \
+				m_egammaSF->scaleFactor(eta, et, 5, 0, 5, true).first
+				*
+				m_egammaSF->scaleFactor(eta, et, 4, 0, 5, true).first
+			;
+			break;
+
+		/*---------------------------------------------------------*/
+		/* MUON_STACO						   */
+		/*---------------------------------------------------------*/
+
+		case TYPE_MUON_STACO:
+			tlv.SetPtEtaPhiE(mu_staco_pt->at(index), mu_staco_eta->at(index), mu_staco_phi->at(index), mu_staco_E->at(index));
+
+			weight = m_stacoSF->scaleFactor(tlv);
+			break;
+
+		/*---------------------------------------------------------*/
+		/* MUON_MUID						   */
+		/*---------------------------------------------------------*/
+
+		case TYPE_MUON_MUID:
+			tlv.SetPtEtaPhiE(mu_muid_pt->at (index), mu_muid_eta->at (index), mu_muid_phi->at (index), mu_muid_E->at (index));
+
+			weight = m_muidSF->scaleFactor(tlv);
+			break;
+
+		/*---------------------------------------------------------*/
+		/* MUON_CALO						   */
+		/*---------------------------------------------------------*/
+
+		case TYPE_MUON_CALO:
+			weight = 1.0f;
+			break;
+
+		/*---------------------------------------------------------*/
+
+		default:
+			std::cout << "TLeptonAnalysis::eventGetWeight3() - Oula !" << std::endl;
+			weight = 0.0f;
+			break;
+
+		/*---------------------------------------------------------*/
+	}
+
+	return weight;
+#else
+	return 1.000f;
 #endif
 }
 

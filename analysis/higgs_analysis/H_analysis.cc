@@ -130,7 +130,13 @@ Bool_t THiggsBuilder::H_analysis(
 
 	m_H[dest].tn = triggerTrace(m_H[dest].ta);
 
-	Float_t weight = eventGetWeight();
+	Float_t weight1 = eventGetWeight1();
+	Float_t weight2 = eventGetWeight2();
+	Float_t weight3 = \
+		eventGetWeight3(index1, type1) * eventGetWeight3(index2, type1)
+		*
+		eventGetWeight3(index3, type2) * eventGetWeight3(index4, type2)
+	;
 
 	/*-----------------------------------------------------------------*/
 	/* VARIABLES							   */
@@ -160,14 +166,6 @@ Bool_t THiggsBuilder::H_analysis(
 	Bool_t triggerMatch3 = triggerMatch(index3, type2);
 	Bool_t triggerMatch4 = triggerMatch(index4, type2);
 
-	std::pair<Float_t, Float_t> p1, p2;
-	std::pair<Float_t, Float_t> p3, p4;
-	std::pair<Float_t, Float_t> p5, p6;
-	std::pair<Float_t, Float_t> p7, p8;
-
-	TLorentzVector tlv1;
-	TLorentzVector tlv2;
-
 	switch(type1)
 	{
 		case TYPE_ELECTRON:
@@ -193,19 +191,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = el_trackpt->at(index2);
 			ptClOverlapping1 = pt1;
 			ptClOverlapping2 = pt2;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				Float_t eta1 = el_cl_eta->at(index1);
-				Float_t eta2 = el_cl_eta->at(index2);
-
-				p1 = m_egammaSF->scaleFactor(eta1, pt1, 5, 0, 5, true);
-				p2 = m_egammaSF->scaleFactor(eta2, pt2, 5, 0, 5, true);
-				p3 = m_egammaSF->scaleFactor(eta1, pt1, 4, 0, 5, true);
-				p4 = m_egammaSF->scaleFactor(eta2, pt2, 4, 0, 5, true);
-
-				weight *= p1.first * p2.first * p3.first * p4.first;
-			}
 			break;
 
 		case TYPE_MUON_STACO:
@@ -231,14 +216,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = (mu_staco_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index2)) / fabs(mu_staco_id_qoverp_exPV->at(index2)) : 0.0f;
 			ptClOverlapping1 = 0.0f;
 			ptClOverlapping2 = 0.0f;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				tlv1.SetPtEtaPhiE(pt1, eta1, phi1, E1);
-				tlv2.SetPtEtaPhiE(pt2, eta2, phi2, E2);
-
-				weight *= m_stacoSF->scaleFactor(tlv1) * m_stacoSF->scaleFactor(tlv2);
-			}
 			break;
 
 		case TYPE_MUON_MUID:
@@ -264,14 +241,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = (mu_muid_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index2)) / fabs(mu_muid_id_qoverp_exPV->at(index2)) : 0.0f;
 			ptClOverlapping1 = 0.0f;
 			ptClOverlapping2 = 0.0f;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				tlv1.SetPtEtaPhiE(pt1, eta1, phi1, E1);
-				tlv2.SetPtEtaPhiE(pt2, eta2, phi2, E2);
-
-				weight *= m_muidSF->scaleFactor(tlv1) * m_muidSF->scaleFactor(tlv2);
-			}
 			break;
 
 		default:
@@ -303,19 +272,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = el_trackpt->at(index4);
 			ptClOverlapping3 = pt3;
 			ptClOverlapping4 = pt4;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				Float_t __eta3 = el_cl_eta->at(index3);
-				Float_t __eta4 = el_cl_eta->at(index4);
-
-				p5 = m_egammaSF->scaleFactor(__eta3, pt3, 5, 0, 5, true);
-				p6 = m_egammaSF->scaleFactor(__eta4, pt4, 5, 0, 5, true);
-				p7 = m_egammaSF->scaleFactor(__eta3, pt3, 4, 0, 5, true);
-				p8 = m_egammaSF->scaleFactor(__eta4, pt4, 4, 0, 5, true);
-
-				weight *= p5.first * p6.first * p7.first * p8.first;
-			}
 			break;
 
 		case TYPE_MUON_STACO:
@@ -341,14 +297,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = (mu_staco_id_qoverp_exPV->at(index4) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index4)) / fabs(mu_staco_id_qoverp_exPV->at(index4)) : 0.0f;
 			ptClOverlapping3 = 0.0f;
 			ptClOverlapping4 = 0.0f;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				tlv1.SetPtEtaPhiE(pt3, eta3, phi3, E3);
-				tlv2.SetPtEtaPhiE(pt4, eta4, phi4, E4);
-
-				weight *= m_stacoSF->scaleFactor(tlv1) * m_stacoSF->scaleFactor(tlv2);
-			}
 			break;
 
 		case TYPE_MUON_MUID:
@@ -374,14 +322,6 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = (mu_muid_id_qoverp_exPV->at(index4) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index4)) / fabs(mu_muid_id_qoverp_exPV->at(index4)) : 0.0f;
 			ptClOverlapping3 = 0.0f;
 			ptClOverlapping4 = 0.0f;
-
-			if(core::isMC(RunNumber) != false && core::SF != false)
-			{
-				tlv1.SetPtEtaPhiE(pt3, eta3, phi3, E3);
-				tlv2.SetPtEtaPhiE(pt4, eta4, phi4, E4);
-
-				weight *= m_muidSF->scaleFactor(tlv1) * m_muidSF->scaleFactor(tlv2);
-			}
 			break;
 
 		default:
@@ -755,7 +695,9 @@ Bool_t THiggsBuilder::H_analysis(
 
 	Int_t n = m_H[dest].n++;
 
-	m_H[dest].weight[n] = weight;
+	m_H[dest].weight1[n] = weight1;
+	m_H[dest].weight2[n] = weight2;
+	m_H[dest].weight3[n] = weight3;
 
 	m_H[dest].l1_truthMatch[n] = Z1.l1_truthMatch;
 	m_H[dest].l2_truthMatch[n] = Z1.l2_truthMatch;

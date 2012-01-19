@@ -128,7 +128,9 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("n", &m_Z[i].n, "n" "/I");
 			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/I");
 
-			tree->Branch("weight", m_Z[i].weight, "weight[n]/F");
+			tree->Branch("weight1", m_Z[i].weight1, "weight1[n]/F");
+			tree->Branch("weight2", m_Z[i].weight2, "weight2[n]/F");
+			tree->Branch("weight3", m_Z[i].weight3, "weight3[n]/F");
 
 			tree->Branch("l1_tight", m_Z[i].l1_tight, "l1_tight[n]/I");
 			tree->Branch("l2_tight", m_Z[i].l2_tight, "l2_tight[n]/I");
@@ -147,16 +149,10 @@ class THiggsBuilder: public TLeptonAnalysis
 
 			tree->Branch("l1_tkIso20", m_Z[i].l1_tkIso20, "l1_tkIso20[n]/F");
 			tree->Branch("l2_tkIso20", m_Z[i].l2_tkIso20, "l2_tkIso20[n]/F");
-			tree->Branch("l1_tkIso30", m_Z[i].l1_tkIso30, "l1_tkIso30[n]/F");
-			tree->Branch("l2_tkIso30", m_Z[i].l2_tkIso30, "l2_tkIso30[n]/F");
 			tree->Branch("l1_clIso20", m_Z[i].l1_clIso20, "l1_clIso20[n]/F");
 			tree->Branch("l2_clIso20", m_Z[i].l2_clIso20, "l2_clIso20[n]/F");
-			tree->Branch("l1_clIso30", m_Z[i].l1_clIso30, "l1_clIso30[n]/F");
-			tree->Branch("l2_clIso30", m_Z[i].l2_clIso30, "l2_clIso30[n]/F");
 			tree->Branch("l1_clIso20_corrected", m_Z[i].l1_clIso20_corrected, "l1_clIso20_corrected[n]/F");
 			tree->Branch("l2_clIso20_corrected", m_Z[i].l2_clIso20_corrected, "l2_clIso20_corrected[n]/F");
-			tree->Branch("l1_clIso30_corrected", m_Z[i].l1_clIso30_corrected, "l1_clIso30_corrected[n]/F");
-			tree->Branch("l2_clIso30_corrected", m_Z[i].l2_clIso30_corrected, "l2_clIso30_corrected[n]/F");
 			tree->Branch("l1_d0sigma", m_Z[i].l1_d0sigma, "l1_d0sigma[n]/F");
 			tree->Branch("l2_d0sigma", m_Z[i].l2_d0sigma, "l2_d0sigma[n]/F");
 
@@ -194,7 +190,9 @@ class THiggsBuilder: public TLeptonAnalysis
 
 			tree->Branch("n", &m_H[i].n, "n/I");
 
-			tree->Branch("weight", m_H[i].weight, "weight[n]/F");
+			tree->Branch("weight1", m_H[i].weight1, "weight1[n]/F");
+			tree->Branch("weight2", m_H[i].weight2, "weight2[n]/F");
+			tree->Branch("weight3", m_H[i].weight3, "weight3[n]/F");
 
 			tree->Branch("l1_truthMatch", m_H[i].l1_truthMatch, "l1_truthMatch[n]/I");
 			tree->Branch("l2_truthMatch", m_H[i].l2_truthMatch, "l2_truthMatch[n]/I");
@@ -240,22 +238,22 @@ class THiggsBuilder: public TLeptonAnalysis
 
 			tree->Branch("flag", m_H[i].flag, "flag[n]/i");
 
-			tree->Branch("cnt0", &m_H[i].cnt[0], "cnt0/I");
-			tree->Branch("cnt1", &m_H[i].cnt[1], "cnt1/I");
-			tree->Branch("cnt2", &m_H[i].cnt[2], "cnt2/I");
-			tree->Branch("cnt3", &m_H[i].cnt[3], "cnt3/I");
-			tree->Branch("cnt4_eeuu", &m_H[i].cnt[4], "cnt4_eeuu/I");
-			tree->Branch("cnt4_uuee", &m_H[i].cnt[5], "cnt4_uuee/I");
-			tree->Branch("cnt5_eeuu", &m_H[i].cnt[6], "cnt5_eeuu/I");
-			tree->Branch("cnt5_uuee", &m_H[i].cnt[7], "cnt5_uuee/I");
-			tree->Branch("cnt6_eeuu", &m_H[i].cnt[8], "cnt6_eeuu/I");
-			tree->Branch("cnt6_uuee", &m_H[i].cnt[9], "cnt6_uuee/I");
-			tree->Branch("cnt7_eeuu", &m_H[i].cnt[10], "cnt7_eeuu/I");
-			tree->Branch("cnt7_uuee", &m_H[i].cnt[11], "cnt7_uuee/I");
-			tree->Branch("cnt8_eeuu", &m_H[i].cnt[12], "cnt8_eeuu/I");
-			tree->Branch("cnt8_uuee", &m_H[i].cnt[13], "cnt8_uuee/I");
-			tree->Branch("cnt9_eeuu", &m_H[i].cnt[14], "cnt9_eeuu/I");
-			tree->Branch("cnt9_uuee", &m_H[i].cnt[15], "cnt9_uuee/I");
+			tree->Branch("cnt0", &m_H[i].cnt[0], "cnt0/S");
+			tree->Branch("cnt1", &m_H[i].cnt[1], "cnt1/S");
+			tree->Branch("cnt2", &m_H[i].cnt[2], "cnt2/S");
+			tree->Branch("cnt3", &m_H[i].cnt[3], "cnt3/S");
+			tree->Branch("cnt4_eeuu", &m_H[i].cnt[4], "cnt4_eeuu/S");
+			tree->Branch("cnt4_uuee", &m_H[i].cnt[5], "cnt4_uuee/S");
+			tree->Branch("cnt5_eeuu", &m_H[i].cnt[6], "cnt5_eeuu/S");
+			tree->Branch("cnt5_uuee", &m_H[i].cnt[7], "cnt5_uuee/S");
+			tree->Branch("cnt6_eeuu", &m_H[i].cnt[8], "cnt6_eeuu/S");
+			tree->Branch("cnt6_uuee", &m_H[i].cnt[9], "cnt6_uuee/S");
+			tree->Branch("cnt7_eeuu", &m_H[i].cnt[10], "cnt7_eeuu/S");
+			tree->Branch("cnt7_uuee", &m_H[i].cnt[11], "cnt7_uuee/S");
+			tree->Branch("cnt8_eeuu", &m_H[i].cnt[12], "cnt8_eeuu/S");
+			tree->Branch("cnt8_uuee", &m_H[i].cnt[13], "cnt8_uuee/S");
+			tree->Branch("cnt9_eeuu", &m_H[i].cnt[14], "cnt9_eeuu/S");
+			tree->Branch("cnt9_uuee", &m_H[i].cnt[15], "cnt9_uuee/S");
 		}
 
 		/*---------------------------------------------------------*/
@@ -341,7 +339,9 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t n;
 		Int_t nPV2;
 
-		Float_t weight[MAX];
+		Float_t weight1[MAX];
+		Float_t weight2[MAX];
+		Float_t weight3[MAX];
 
 		Int_t l1_tight[MAX];
 		Int_t l2_tight[MAX];
@@ -362,16 +362,10 @@ class THiggsBuilder: public TLeptonAnalysis
 
 		Float_t l1_clIso20[MAX];
 		Float_t l2_clIso20[MAX];
-		Float_t l1_clIso30[MAX];
-		Float_t l2_clIso30[MAX];
 		Float_t l1_clIso20_corrected[MAX];
 		Float_t l2_clIso20_corrected[MAX];
-		Float_t l1_clIso30_corrected[MAX];
-		Float_t l2_clIso30_corrected[MAX];
 		Float_t l1_tkIso20[MAX];
 		Float_t l2_tkIso20[MAX];
-		Float_t l1_tkIso30[MAX];
-		Float_t l2_tkIso30[MAX];
 		Float_t l1_d0sigma[MAX];
 		Float_t l2_d0sigma[MAX];
 
@@ -402,7 +396,9 @@ class THiggsBuilder: public TLeptonAnalysis
 
 		Int_t n;
 
-		Float_t weight[MAX];
+		Float_t weight1[MAX];
+		Float_t weight2[MAX];
+		Float_t weight3[MAX];
 
 		Int_t l1_truthMatch[MAX];
 		Int_t l2_truthMatch[MAX];
@@ -448,7 +444,7 @@ class THiggsBuilder: public TLeptonAnalysis
 
 		UInt_t flag[MAX];
 
-		Int_t cnt[4 + 2 * 6];
+		Short_t cnt[4 + 2 * 6];
 
 	} m_H[9];
 };

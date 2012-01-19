@@ -16,7 +16,7 @@ ROOTLDFLAGS   = $(shell $(ROOTCONFIG) --ldflags)
 
 #############################################################################
 
-ATLASFLAGS    = -DSTANDALONE -I./tools/egammaAnalysisUtils -I./tools/MuonMomentumCorrections -I./tools/MuonEfficiencyCorrections
+ATLASFLAGS    = -DSTANDALONE -I./tools/PileupReweighting -I./tools/egammaAnalysisUtils -I./tools/MuonMomentumCorrections -I./tools/MuonEfficiencyCorrections
 
 #############################################################################
 
@@ -48,8 +48,8 @@ OBJS6         = analysis/efficiencies/ZcandPeriod.o
 all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 #	@cd $(DIR)/tools && make && cd $(DIR)
 
-	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
-	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
 	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 	$(LD) $(LDFLAGS) -o   ZcandPeriod  $(OBJS6) $(LIBS) -L. -lPileupReweighting
@@ -59,8 +59,8 @@ all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 	@cd $(DIR)/tools && make all && cd $(DIR)
 
-	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
-	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
+	$(LD) $(LDFLAGS) -o      test      $(OBJS3) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
 	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 	$(LD) $(LDFLAGS) -o   ZcandPeriod  $(OBJS6) $(LIBS) -L. -lPileupReweighting

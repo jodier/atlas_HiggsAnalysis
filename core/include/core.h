@@ -60,8 +60,6 @@ namespace core
 	extern String_t input;
 	extern String_t output;
 	extern Bool_t grid;
-	extern Bool_t OQ;
-	extern Bool_t SF;
 	extern Bool_t ER;
 	extern Bool_t SM;
 	extern Bool_t OF;
