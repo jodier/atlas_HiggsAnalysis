@@ -31,7 +31,7 @@ analysis/higgs_analysis/H_analysis.cc
 
 #############################################################################
 
-prun --exec "higgs_analysis --grid=prun --enable-SM --enable-SF --EL_USE_LOOSE=1 -o output.root \ %IN" --bexec "make ALL" \
+prun --exec "higgs_analysis --grid=prun --enable-SM --EL_USE_LOOSE=1 -o output.root \ %IN" --bexec "make ALL" \
 --athenaTag=17.0.4 \
 --inDS $1 \
 --outDS $2 \
