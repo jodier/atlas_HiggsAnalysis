@@ -16,6 +16,11 @@ core/utils.cc,\
 core/include/core.h,\
 core/include/THiggsD3PD.h,\
 core/include/athena/egammaPIDdefs.h,\
+analysis/ilumicalc_period_BD_Atlas_Ready.root,\
+analysis/ilumicalc_period_EH_Atlas_Ready.root,\
+analysis/ilumicalc_period_IK_Atlas_Ready.root,\
+analysis/ilumicalc_period_LM_Atlas_Ready.root,\
+analysis/Mu_MC11bprime_analysis.root
 analysis/higgs_analysis/main.h,\
 analysis/higgs_analysis/main.cc,\
 analysis/higgs_analysis/utils.h,\
