@@ -14,6 +14,7 @@
 #include "../../tools/PileupReweighting/PileupReweighting/TPileupReweighting.h"
 
 static bool isMC = false;
+static const char *DataType = "";
 
 TFile *file;
 
@@ -68,10 +69,9 @@ bool localLoader(TChain *chain, const char *fname)
 
 int main(int argc, char **argv)
 {
-	if(argc != 3)
+	if(argc != 8)
 	{
-		std::cerr << argv[0] << " mc.txt data.txt" << std::endl;
-
+		std::cerr << argv[0] << " mc0.txt mc1.txt mc2.txt mc3.txt mc4.txt mc5.txt data.txt" << std::endl;
 		return 1;
 	}
 
@@ -98,13 +98,33 @@ int main(int argc, char **argv)
 
 	TChain *chain1 = new TChain("Z1");
 	TChain *chain2 = new TChain("Z1");
+	TChain *chain3 = new TChain("Z1");
+	TChain *chain4 = new TChain("Z1");
+	TChain *chain5 = new TChain("Z1");
+	TChain *chain6 = new TChain("Z1");
+	TChain *chain7 = new TChain("Z1");
 
 	if(localLoader(chain1, argv[1]) == false
 	   ||
 	   localLoader(chain2, argv[2]) == false
+	   ||
+	   localLoader(chain3, argv[3]) == false
+	   ||
+	   localLoader(chain4, argv[4]) == false
+	   ||
+	   localLoader(chain5, argv[5]) == false
+	   ||
+	   localLoader(chain6, argv[6]) == false
+	   ||
+	   localLoader(chain7, argv[7]) == false
 	 ) {
 		delete chain1;
 		delete chain2;
+		delete chain3;
+		delete chain4;
+		delete chain5;
+		delete chain6;
+		delete chain7;
 
 		delete pileupReweightingBD;
 		delete pileupReweightingEH;
@@ -114,19 +134,48 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	ZStudy alg1(chain1);
-	ZStudy alg2(chain2);
+	ZStudy alg1(chain1); //MC
+	ZStudy alg2(chain2); //MC
+	ZStudy alg3(chain3); //MC
+	ZStudy alg4(chain4); //MC
+	ZStudy alg5(chain5); //MC
+	ZStudy alg6(chain6); //MC
+	ZStudy alg7(chain7); //DATA
 
 	file = new TFile("ZcandPeriod.root", "recreate");
 
 	if(file != NULL)
 	{
 		isMC = true;
+
+		DataType = "mc0";
 		alg1.Loop();
 		std::cout << std::endl;
 
-		isMC = false;
+		DataType = "mc1";
 		alg2.Loop();
+		std::cout << std::endl;
+
+		DataType = "mc2";
+		alg3.Loop();
+		std::cout << std::endl;
+
+		DataType = "mc3";
+		alg4.Loop();
+		std::cout << std::endl;
+
+		DataType = "mc4";
+		alg5.Loop();
+		std::cout << std::endl;
+
+		DataType = "mc5";
+		alg6.Loop();
+		std::cout << std::endl;
+
+		isMC = false;
+
+		DataType = "data";
+		alg7.Loop();
 		std::cout << std::endl;
 
 		file->Close();
@@ -158,14 +207,7 @@ void ZStudy::Loop(void)
 
 	/**/
 
-	TH1D h("", "", 11, 1, 12);
-
-	if(isMC != false) {
-		h.SetName("mc");
-	}
-	else {
-		h.SetName("data");
-	}
+	TH1D h(DataType, DataType, 11, 1, 12);
 
 	/**/
 
@@ -301,18 +343,18 @@ void ZStudy::Loop(void)
 
 	h.Write();
 
-	std::cout  << "****************" << std::endl;
-	std::cout  << "Z period B :" << ZCand[0] << std::endl;
-	std::cout  << "Z period D :" << ZCand[1] << std::endl;
-	std::cout  << "Z period E :" << ZCand[2] << std::endl;
-	std::cout  << "Z period F :" << ZCand[3] << std::endl;
-	std::cout  << "Z period G :" << ZCand[4] << std::endl;
-	std::cout  << "Z period H :" << ZCand[5] << std::endl;
-	std::cout  << "Z period I :" << ZCand[6] << std::endl;
-	std::cout  << "Z period J :" << ZCand[7] << std::endl;
-	std::cout  << "Z period K :" << ZCand[8] << std::endl;
-	std::cout  << "Z period L :" << ZCand[9] << std::endl;
-	std::cout  << "Z period M :" << ZCand[10] << std::endl;
+//	std::cout  << "****************" << std::endl;
+//	std::cout  << "Z period B :" << ZCand[0] << std::endl;
+//	std::cout  << "Z period D :" << ZCand[1] << std::endl;
+//	std::cout  << "Z period E :" << ZCand[2] << std::endl;
+//	std::cout  << "Z period F :" << ZCand[3] << std::endl;
+//	std::cout  << "Z period G :" << ZCand[4] << std::endl;
+//	std::cout  << "Z period H :" << ZCand[5] << std::endl;
+//	std::cout  << "Z period I :" << ZCand[6] << std::endl;
+//	std::cout  << "Z period J :" << ZCand[7] << std::endl;
+//	std::cout  << "Z period K :" << ZCand[8] << std::endl;
+//	std::cout  << "Z period L :" << ZCand[9] << std::endl;
+//	std::cout  << "Z period M :" << ZCand[10] << std::endl;
 
 
 }

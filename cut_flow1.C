@@ -294,7 +294,9 @@ void cut_flow1(void)
 {
 	TCanvas c1;
 
-	const char *fname = "./yok2.txt";
+	const char fname[4096];
+	std::cout << ".txt filename:" << std::endl;
+	std::cin >> fname;
 
 	print("H1", fname, "H->eeee (STACO)", 1);
 //	print("H2", fname, "H->eeee (MUID)", 1);
