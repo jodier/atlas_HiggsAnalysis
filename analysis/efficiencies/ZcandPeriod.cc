@@ -11,8 +11,6 @@
 #define ZStudy_cxx
 #include "ZStudy.h"
 
-#include "../../tools/PileupReweighting/PileupReweighting/TPileupReweighting.h"
-
 static bool isMC = false;
 static const char *DataType = "";
 
@@ -24,13 +22,6 @@ TFile *file;
 #define ET_MAX		9000.0f		/* GeV */
 #define MASS_CENTER	91.1876f	/* GeV */
 #define MASS_WINDOW	15.0f		/* GeV */
-
-/*-------------------------------------------------------------------------*/
-
-static Root::TPileupReweighting *pileupReweightingBD = NULL;
-static Root::TPileupReweighting *pileupReweightingEH = NULL;
-static Root::TPileupReweighting *pileupReweightingIK = NULL;
-static Root::TPileupReweighting *pileupReweightingLM = NULL;
 
 /*-------------------------------------------------------------------------*/
 
@@ -75,27 +66,6 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");
-	pileupReweightingEH = new Root::TPileupReweighting("TPileupReweightingEH");
-	pileupReweightingIK = new Root::TPileupReweighting("TPileupReweightingIK");
-	pileupReweightingLM = new Root::TPileupReweighting("TPileupReweightingLM");
-
-	if(pileupReweightingBD->initialize("analysis/ilumicalc_period_BD_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_BD") != 0
-	   ||
-	   pileupReweightingEH->initialize("analysis/ilumicalc_period_EH_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_EH") != 0
-	   ||
-	   pileupReweightingIK->initialize("analysis/ilumicalc_period_IK_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_IK") != 0
-	   ||
-	   pileupReweightingLM->initialize("analysis/ilumicalc_period_LM_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_LM") != 0
-	 ) {
-		delete pileupReweightingBD;
-		delete pileupReweightingEH;
-		delete pileupReweightingIK;
-		delete pileupReweightingLM;
-
-		return 1;
-	}
-
 	TChain *chain1 = new TChain("Z1");
 	TChain *chain2 = new TChain("Z1");
 	TChain *chain3 = new TChain("Z1");
@@ -125,11 +95,6 @@ int main(int argc, char **argv)
 		delete chain5;
 		delete chain6;
 		delete chain7;
-
-		delete pileupReweightingBD;
-		delete pileupReweightingEH;
-		delete pileupReweightingIK;
-		delete pileupReweightingLM;
 
 		return 1;
 	}
@@ -185,11 +150,6 @@ int main(int argc, char **argv)
 
 	delete chain1;
 	delete chain2;
-
-	delete pileupReweightingBD;
-	delete pileupReweightingEH;
-	delete pileupReweightingIK;
-	delete pileupReweightingLM;
 
 	std::cout << "Bye." << std::endl;
 
@@ -263,36 +223,7 @@ void ZStudy::Loop(void)
 			//	continue;
 			//}
 
-			Float_t theWeight = weight[i];
-
-			if(isMC != false)
-			{
-				/**/ if(RunNumber == 180164) {
-					theWeight *= 1.06f * pileupReweightingBD->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 183003) {
-					theWeight *= 1.08f * pileupReweightingEH->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 186169) {
-					theWeight *= 0.87f * pileupReweightingIK->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 186275) {
-					theWeight *= 1.03f * pileupReweightingLM->getPileupWeight(averageIntPerXing);
-				}
-				else
-				{
-					std::cout << "Oula !" << std::endl;
-
-					continue;
-				}
-
-				if(theWeight < 0.0f)
-				{
-					std::cout << "Oula !" << std::endl;
-
-					continue;
-				}
-			}
+			Float_t theWeight = weight1[i] * weight2[i] * weight3[i];
 
 			if(isMC != false)
 			{

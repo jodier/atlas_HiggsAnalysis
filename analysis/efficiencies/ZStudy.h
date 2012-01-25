@@ -29,7 +29,9 @@ public :
    UInt_t          ta[1];   //[tn]
    Int_t           n;
    Int_t           nPV2;
-   Float_t         weight[2];   //[n]
+   Float_t         weight1[2];   //[n]
+   Float_t         weight2[2];   //[n]
+   Float_t         weight3[2];   //[n]
    Int_t           l1_tight[2];   //[n]
    Int_t           l2_tight[2];   //[n]
    Int_t           l1_truthMatch[2];   //[n]
@@ -74,7 +76,9 @@ public :
    TBranch        *b_ta;   //!
    TBranch        *b_n;   //!
    TBranch        *b_nPV2;   //!
-   TBranch        *b_weight;   //!
+   TBranch        *b_weight1;   //!
+   TBranch        *b_weight2;   //!
+   TBranch        *b_weight3;   //!
    TBranch        *b_l1_tight;   //!
    TBranch        *b_l2_tight;   //!
    TBranch        *b_l1_truthMatch;   //!
@@ -190,7 +194,9 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("ta", &ta, &b_ta);
    fChain->SetBranchAddress("n", &n, &b_n);
    fChain->SetBranchAddress("nPV2", &nPV2, &b_nPV2);
-   fChain->SetBranchAddress("weight", weight, &b_weight);
+   fChain->SetBranchAddress("weight1", weight1, &b_weight1);
+   fChain->SetBranchAddress("weight2", weight2, &b_weight2);
+   fChain->SetBranchAddress("weight3", weight3, &b_weight3);
    fChain->SetBranchAddress("l1_tight", l1_tight, &b_l1_tight);
    fChain->SetBranchAddress("l2_tight", l2_tight, &b_l2_tight);
    fChain->SetBranchAddress("l1_truthMatch", l1_truthMatch, &b_l1_truthMatch);

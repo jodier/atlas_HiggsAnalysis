@@ -36,13 +36,6 @@ static int cut = 0;
 
 /*-------------------------------------------------------------------------*/
 
-static Root::TPileupReweighting *pileupReweightingBD = NULL;
-static Root::TPileupReweighting *pileupReweightingEH = NULL;
-static Root::TPileupReweighting *pileupReweightingIK = NULL;
-static Root::TPileupReweighting *pileupReweightingLM = NULL;
-
-/*-------------------------------------------------------------------------*/
-
 Double_t myBinomialError(Double_t cut_probe, Double_t all_probe, Double_t cut_probe_err = 0.0, Double_t all_probe_err = 0.0)
 {
 	Double_t r = 0.0;
@@ -309,38 +302,12 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");
-	pileupReweightingEH = new Root::TPileupReweighting("TPileupReweightingEH");
-	pileupReweightingIK = new Root::TPileupReweighting("TPileupReweightingIK");
-	pileupReweightingLM = new Root::TPileupReweighting("TPileupReweightingLM");
-
-	if(pileupReweightingBD->initialize("analysis/ilumicalc_period_BD_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_BD") != 0
-	   ||
-	   pileupReweightingEH->initialize("analysis/ilumicalc_period_EH_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_EH") != 0
-	   ||
-	   pileupReweightingIK->initialize("analysis/ilumicalc_period_IK_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_IK") != 0
-	   ||
-	   pileupReweightingLM->initialize("analysis/ilumicalc_period_LM_Atlas_Ready.root", "avgintperbx", "analysis/Mu_MC11bprime_analysis.root", "mc11b_LM") != 0
-	 ) {
-		delete pileupReweightingBD;
-		delete pileupReweightingEH;
-		delete pileupReweightingIK;
-		delete pileupReweightingLM;
-
-		return 1;
-	}
-
 	window = atof(argv[3]);
 
 	__do("eff_mc1.root", "eff_truth1.root", "eff_data1.root", 1, argv[1], argv[2]);
 	__do("eff_mc2.root", "eff_truth2.root", "eff_data2.root", 2, argv[1], argv[2]);
 	__do("eff_mc3.root", "eff_truth3.root", "eff_data3.root", 3, argv[1], argv[2]);
 	__do("eff_mc4.root", "eff_truth4.root", "eff_data4.root", 4, argv[1], argv[2]);
-
-	delete pileupReweightingBD;
-	delete pileupReweightingEH;
-	delete pileupReweightingIK;
-	delete pileupReweightingLM;
 
 	return 0;
 }
@@ -599,36 +566,7 @@ void ZStudy::Loop(void)
 				continue;
 			}
 
-			Float_t theWeight = weight[i];
-
-			if(isMC != false)
-			{
-				/**/ if(RunNumber == 180164) {
-					theWeight *= 1.06f * pileupReweightingBD->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 183003) {
-					theWeight *= 1.08f * pileupReweightingEH->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 186169) {
-					theWeight *= 0.87f * pileupReweightingIK->getPileupWeight(averageIntPerXing);
-				}
-				else if(RunNumber == 186275) {
-					theWeight *= 1.03f * pileupReweightingLM->getPileupWeight(averageIntPerXing);
-				}
-				else
-				{
-					std::cout << "Oula !" << std::endl;
-
-					continue;
-				}
-
-				if(theWeight < 0.0f)
-				{
-					std::cout << "Oula !" << std::endl;
-
-					continue;
-				}
-			}
+			Float_t theWeight = weight1[i] * weight2[i] * weight3[i];
 
 			Bool_t q = (truth == false || (l1_truthMatch[i] != false && l2_truthMatch[i] != false));
 
