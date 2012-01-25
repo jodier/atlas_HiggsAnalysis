@@ -143,22 +143,22 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 
 	/*-----------------------------------------------------------------*/
 
-	Short_t CNT0 = 0;
-	Short_t CNT1 = 0;
-	Short_t CNT2 = 0;
-	Short_t CNT3 = 0;
-	Short_t CNT4_eeuu = 0;
-	Short_t CNT4_uuee = 0;
-	Short_t CNT5_eeuu = 0;
-	Short_t CNT5_uuee = 0;
-	Short_t CNT6_eeuu = 0;
-	Short_t CNT6_uuee = 0;
-	Short_t CNT7_eeuu = 0;
-	Short_t CNT7_uuee = 0;
-	Short_t CNT8_eeuu = 0;
-	Short_t CNT8_uuee = 0;
-	Short_t CNT9_eeuu = 0;
-	Short_t CNT9_uuee = 0;
+	Float_t CNT0 = 0;
+	Float_t CNT1 = 0;
+	Float_t CNT2 = 0;
+	Float_t CNT3 = 0;
+	Float_t CNT4_eeuu = 0;
+	Float_t CNT4_uuee = 0;
+	Float_t CNT5_eeuu = 0;
+	Float_t CNT5_uuee = 0;
+	Float_t CNT6_eeuu = 0;
+	Float_t CNT6_uuee = 0;
+	Float_t CNT7_eeuu = 0;
+	Float_t CNT7_uuee = 0;
+	Float_t CNT8_eeuu = 0;
+	Float_t CNT8_uuee = 0;
+	Float_t CNT9_eeuu = 0;
+	Float_t CNT9_uuee = 0;
 
 	const Long64_t eventNr = chain2->GetEntries();
 
@@ -172,7 +172,6 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 		chain2->GetEntry(event);
 
 		/**/
-		printf("%.2f\n", weight2);
 
 		if(cnt0 > 0) {
 			CNT0 += weight1 * weight2;
@@ -232,9 +231,9 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	std::cout << "/*-------------------------------------------------------------------------*/" << std::endl;
 	std::cout << "\033[0m";
 
-	printf("1 - SFOS\t%.0f - %.2f\% ± %.2f\%\n", CNT1, 100.0f * CNT1 / CNT0, 100.0f * myBinomialError(CNT1, CNT0));
-	printf("2 - Kin.\t%.0f - %.2f\% ± %.2f\%\n", CNT2, 100.0f * CNT2 / CNT1, 100.0f * myBinomialError(CNT2, CNT1));
-	printf("3 - Trig.\t%.0f - %.2f\% ± %.2f\%\n", CNT3, 100.0f * CNT3 / CNT2, 100.0f * myBinomialError(CNT3, CNT2));
+	printf("1 - SFOS\t%.2f - %.2f\% ± %.2f\%\n", CNT1, 100.0f * CNT1 / CNT0, 100.0f * myBinomialError(CNT1, CNT0));
+	printf("2 - Kin.\t%.2f - %.2f\% ± %.2f\%\n", CNT2, 100.0f * CNT2 / CNT1, 100.0f * myBinomialError(CNT2, CNT1));
+	printf("3 - Trig.\t%.2f - %.2f\% ± %.2f\%\n", CNT3, 100.0f * CNT3 / CNT2, 100.0f * myBinomialError(CNT3, CNT2));
 
 	/**/ if(chanel == 1)
 	{
@@ -245,12 +244,12 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 		Float_t CNT8 = CNT8_eeuu + CNT8_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.0f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
-		printf("5 - Z2\t\t%.0f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
-		printf("6 - min[ΔR]\t%.0f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
-		printf("7 - Track iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
-		printf("8 - Calo iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
-		printf("9 - d0sigd0\t%.0f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
+		printf("4 - Z1\t\t%.2f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
+		printf("5 - Z2\t\t%.2f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
+		printf("6 - min[ΔR]\t%.2f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
+		printf("7 - Track iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
+		printf("8 - Calo iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
+		printf("9 - d0sigd0\t%.2f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
 
 		printf("\033[32mε = %.2f\% ± %.2f\%\033[0m\n", 100.0f * CNT9 / eeee_nr, 100.0f * myBinomialError(CNT9, eeee_nr));
 	}
@@ -263,12 +262,12 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 		Float_t CNT8 = CNT8_eeuu + CNT8_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.0f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
-		printf("5 - Z2\t\t%.0f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
-		printf("6 - One quad\t%.0f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
-		printf("7 - Track iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
-		printf("8 - Calo iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
-		printf("9 - d0sigd0\t%.0f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
+		printf("4 - Z1\t\t%.2f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
+		printf("5 - Z2\t\t%.2f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
+		printf("6 - One quad\t%.2f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
+		printf("7 - Track iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
+		printf("8 - Calo iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
+		printf("9 - d0sigd0\t%.2f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
 
 		printf("\033[32mε = %.2f\% ± %.2f\%\033[0m\n", 100.0f * CNT9 / uuuu_nr, 100.0f * myBinomialError(CNT9, uuuu_nr));
 	}
@@ -276,12 +275,12 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	{
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.0f|%.0f - %.2f|%.0f\% ± %.2f|%.0f\%\n", CNT4_eeuu, CNT4_uuee, 100.0f * CNT4_eeuu / CNT4_eeuu, 100.0f * CNT4_uuee / CNT4_uuee, 100.0f * myBinomialError(CNT4_eeuu, CNT4_eeuu), 100.0f * myBinomialError(CNT4_uuee, CNT4_uuee));
-		printf("5 - Z2\t\t%.0f|%.0f - %.2f|%.0f\% ± %.2f|%.0f\%\n", CNT5_eeuu, CNT5_uuee, 100.0f * CNT5_eeuu / CNT5_eeuu, 100.0f * CNT5_uuee / CNT5_uuee, 100.0f * myBinomialError(CNT5_eeuu, CNT5_eeuu), 100.0f * myBinomialError(CNT5_uuee, CNT5_uuee));
-		printf("6 - One quad\t%.0f|%.0f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT6_eeuu, CNT6_uuee, 100.0f * CNT6_eeuu / CNT6_eeuu, 100.0f * CNT6_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT6_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT6_uuee, CNT6_uuee));
-		printf("7 - Track iso.\t%.0f|%.0f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT7_eeuu, CNT7_uuee, 100.0f * CNT7_eeuu / CNT6_eeuu, 100.0f * CNT7_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT7_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT7_uuee, CNT6_uuee));
-		printf("8 - Calo iso.\t%.0f|%.0f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT8_eeuu, CNT8_uuee, 100.0f * CNT8_eeuu / CNT7_eeuu, 100.0f * CNT8_uuee / CNT7_uuee, 100.0f * myBinomialError(CNT8_eeuu, CNT7_eeuu), 100.0f * myBinomialError(CNT8_uuee, CNT7_uuee));
-		printf("9 - d0sigd0\t%.0f|%.0f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT9_eeuu, CNT9_uuee, 100.0f * CNT9_eeuu / CNT8_eeuu, 100.0f * CNT9_uuee / CNT8_uuee, 100.0f * myBinomialError(CNT9_eeuu, CNT8_eeuu), 100.0f * myBinomialError(CNT9_uuee, CNT8_uuee));
+		printf("4 - Z1\t\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT4_eeuu, CNT4_uuee, 100.0f * CNT4_eeuu / CNT4_eeuu, 100.0f * CNT4_uuee / CNT4_uuee, 100.0f * myBinomialError(CNT4_eeuu, CNT4_eeuu), 100.0f * myBinomialError(CNT4_uuee, CNT4_uuee));
+		printf("5 - Z2\t\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT5_eeuu, CNT5_uuee, 100.0f * CNT5_eeuu / CNT5_eeuu, 100.0f * CNT5_uuee / CNT5_uuee, 100.0f * myBinomialError(CNT5_eeuu, CNT5_eeuu), 100.0f * myBinomialError(CNT5_uuee, CNT5_uuee));
+		printf("6 - One quad\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT6_eeuu, CNT6_uuee, 100.0f * CNT6_eeuu / CNT6_eeuu, 100.0f * CNT6_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT6_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT6_uuee, CNT6_uuee));
+		printf("7 - Track iso.\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT7_eeuu, CNT7_uuee, 100.0f * CNT7_eeuu / CNT6_eeuu, 100.0f * CNT7_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT7_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT7_uuee, CNT6_uuee));
+		printf("8 - Calo iso.\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT8_eeuu, CNT8_uuee, 100.0f * CNT8_eeuu / CNT7_eeuu, 100.0f * CNT8_uuee / CNT7_uuee, 100.0f * myBinomialError(CNT8_eeuu, CNT7_eeuu), 100.0f * myBinomialError(CNT8_uuee, CNT7_uuee));
+		printf("9 - d0sigd0\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT9_eeuu, CNT9_uuee, 100.0f * CNT9_eeuu / CNT8_eeuu, 100.0f * CNT9_uuee / CNT8_uuee, 100.0f * myBinomialError(CNT9_eeuu, CNT8_eeuu), 100.0f * myBinomialError(CNT9_uuee, CNT8_uuee));
 
 		printf("\033[32mε = %.2f\% ± %.2f\%\033[0m\n", 100.0f * CNT9 / eeuu_nr, 100.0f * myBinomialError(CNT9, eeuu_nr));
 	}

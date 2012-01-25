@@ -39,28 +39,46 @@ static inline Float_t extrapolate(Float_t x, Float_t x1, Float_t x2, Float_t y1,
 
 /*-------------------------------------------------------------------------*/
 
-static Bool_t subLeadingCut(Float_t Z_mass, Float_t H_m)
+Float_t getMassCut(Float_t H_mass)
 {
-	return (
-		(H_m > 000.0f && H_m <= 120.0f && Z_mass > 15.0f)
-		||
-		(H_m > 120.0f && H_m <= 130.0f && Z_mass > extrapolate(H_m, 120.0f, 130.0f, 15.0f, 20.0f))
-		||
-		(H_m > 130.0f && H_m <= 150.0f && Z_mass > extrapolate(H_m, 130.0f, 150.0f, 20.0f, 30.0f))
-		||
-		(H_m > 150.0f && H_m <= 160.0f && Z_mass > 30.0f)
-		||
-		(H_m > 160.0f && H_m <= 165.0f && Z_mass > extrapolate(H_m, 160.0f, 165.0f, 30.0f, 35.0f))
-		||
-		(H_m > 165.0f && H_m <= 180.0f && Z_mass > extrapolate(H_m, 165.0f, 180.0f, 35.0f, 40.0f))
-		||
-		(H_m > 180.0f && H_m <= 190.0f && Z_mass > extrapolate(H_m, 180.0f, 190.0f, 40.0f, 50.0f))
-		||
-		(H_m > 190.0f && H_m <= 200.0f && Z_mass > extrapolate(H_m, 190.0f, 200.0f, 50.0f, 60.0f))
-		||
-		(H_m > 200.0f && H_m <= 1.0e6f && Z_mass > 60.0f)
+	Float_t result;
 
-	) && (Z_mass < 115.0f);
+	/**/ if(H_mass > 000.0f && H_mass <= 120.0f) {
+		result = 15.000000000000000000000000000000000000000000f;
+	}
+	else if(H_mass > 120.0f && H_mass <= 130.0f) {
+		result = extrapolate(H_mass, 120.0f, 130.0f, 15.0f, 20.0f);
+	}
+	else if(H_mass > 130.0f && H_mass <= 150.0f) {
+		result = extrapolate(H_mass, 130.0f, 150.0f, 20.0f, 30.0f);
+	}
+	else if(H_mass > 150.0f && H_mass <= 160.0f) {
+		result = 30.000000000000000000000000000000000000000000f;
+	}
+	else if(H_mass > 160.0f && H_mass <= 165.0f) {
+		result = extrapolate(H_mass, 160.0f, 165.0f, 30.0f, 35.0f);
+	}
+	else if(H_mass > 165.0f && H_mass <= 180.0f) {
+		result = extrapolate(H_mass, 165.0f, 180.0f, 35.0f, 40.0f);
+	}
+	else if(H_mass > 180.0f && H_mass <= 190.0f) {
+		result = extrapolate(H_mass, 180.0f, 190.0f, 40.0f, 50.0f);
+	}
+	else if(H_mass > 190.0f && H_mass <= 200.0f) {
+		result = extrapolate(H_mass, 190.0f, 200.0f, 50.0f, 60.0f);
+	}
+	else {
+		result = 60.0f;
+	}
+
+	return result;
+}
+
+/*-------------------------------------------------------------------------*/
+
+static Bool_t subLeadingCut(Float_t Z_mass, Float_t H_mass)
+{
+	return (Z_mass > getMassCut(H_mass)) && (Z_mass < 115.0f);
 }
 
 /*-------------------------------------------------------------------------*/

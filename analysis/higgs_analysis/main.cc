@@ -46,6 +46,10 @@ void core::execute(TChain *chain)
 
 /*-------------------------------------------------------------------------*/
 
+extern Float_t getMassCut(Float_t H_mass);
+
+/*-------------------------------------------------------------------------*/
+
 void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 {
 	Float_t currDMass;
@@ -101,6 +105,23 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 		   currAMass == goodAMass
 		 ) {
 			m_H[dest].good[i] = true;
+
+			/*---------------------------------*/
+			/* DEBUG			   */
+			/*---------------------------------*/
+/*
+			if(dest == 3)
+			{
+				std::cout << "Event number  : " << m_H[dest].EventNumber << ", dest : " << dest << std::endl;
+				std::cout << "M_4l          = " << m_H[dest].H_m[i] << std::endl;
+				std::cout << "M_Z1          = " << m_H[dest].Z12_m[i] << std::endl;
+				std::cout << "M_Z1-M_Z      = " << fabs(Z_MASS - m_H[dest].Z12_m[i]) << std::endl;
+				std::cout << "M_Z2          = " << m_H[dest].Z34_m[i] << std::endl;
+				std::cout << "M_Z2-M_Z      = " << fabs(Z_MASS - m_H[dest].Z34_m[i]) << std::endl;
+				std::cout << "Cut M_34      = " << getMassCut(m_H[dest].H_m[i]) << std::endl;
+			}
+ */
+			/*---------------------------------*/
 		}
 		else {
 			m_H[dest].flag[i] = 0x3F;

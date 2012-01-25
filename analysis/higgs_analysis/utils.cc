@@ -27,8 +27,18 @@ void TLeptonAnalysis::fixeEnergy(void)
 		/*---------------------------------------------------------*/
 	}
 
+	for(Int_t i = 0; i < el_n; i++)
+	{
+		el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->applyMCCalibrationMeV(el_cl_eta->at(i), electronGetEt(i), "ELECTRON");
+	}
+
 	if(core::isMC(RunNumber) != false && core::SM != false)
 	{
+		float pT_ME;
+		float pT_ID;
+		float PT_CB_old;
+		float PT_CB_new;
+
 		/*---------------------------------------------------------*/
 
 		for(Int_t i = 0; i < el_n; i++)
@@ -46,62 +56,78 @@ void TLeptonAnalysis::fixeEnergy(void)
 
 		for(Int_t i = 0; i < mu_staco_n; i++)
 		{
-			m_stacoSM->UseScale(1);
+			pT_ME = (mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f;
+			pT_ID = (mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f;
+			PT_CB_old = PT_CB_new = mu_staco_pt->at(i);
+
 			m_stacoSM->SetSeed(EventNumber, i);
 
 			if(mu_staco_isCombinedMuon->at(i) != false)
 			{
 				m_stacoSM->Event(
-					(mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f,
-					(mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f,
-					mu_staco_pt->at(i),
+					pT_ME,
+					pT_ID,
+					PT_CB_old,
 					mu_staco_eta->at(i)
 				);
 
-				mu_staco_pt->at(i) = m_stacoSM->pTCB();
+				PT_CB_new = m_stacoSM->pTCB();
+				pT_ID     = m_stacoSM->pTID();
 			}
 
 			if(mu_staco_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_stacoSM->Event(
-					mu_staco_pt->at(i),
+					PT_CB_old,
 					mu_staco_eta->at(i),
 					"ID"
 				);
 
-				mu_staco_pt->at(i) = m_stacoSM->pTID();
+				PT_CB_new = m_stacoSM->pTID();
+				pT_ID     = m_stacoSM->pTID();
 			}
+
+			mu_staco_E->at(i) *= pT_ID / PT_CB_old;
+			mu_staco_pt->at(i) = PT_CB_new;
 		}
 
 		/*---------------------------------------------------------*/
 
 		for(Int_t i = 0; i < mu_muid_n; i++)
 		{
-			m_muidSM->UseScale(1);
+			pT_ME = (mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f;
+			pT_ID = (mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f;
+			PT_CB_old = PT_CB_new = mu_muid_pt->at(i);
+
 			m_muidSM->SetSeed(EventNumber, i);
 
 			if(mu_muid_isCombinedMuon->at(i) != false)
 			{
 				m_muidSM->Event(
-					(mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f,
-					(mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f,
-					mu_muid_pt->at(i),
+					pT_ME,
+					pT_ID,
+					PT_CB_old,
 					mu_muid_eta->at(i)
 				);
 
-				mu_muid_pt->at(i) = m_muidSM->pTCB();
+				PT_CB_new = m_muidSM->pTCB();
+				pT_ID     = m_muidSM->pTID();
 			}
 
 			if(mu_muid_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_muidSM->Event(
-					mu_muid_pt->at(i),
+					PT_CB_old,
 					mu_muid_eta->at(i),
 					"ID"
 				);
 
-				mu_muid_pt->at(i) = m_muidSM->pTID();
+				PT_CB_new = m_muidSM->pTID();
+				pT_ID     = m_muidSM->pTID();
 			}
+
+			mu_muid_E->at(i) *= pT_ID / PT_CB_old;
+			mu_muid_pt->at(i) = PT_CB_new;
 		}
 
 		/*---------------------------------------------------------*/
@@ -139,19 +165,19 @@ Float_t TLeptonAnalysis::eventGetWeight2(void)
 	switch(RunNumber)
 	{
 		case 180164:
-			weight = 1.06f;// * m_pileupReweightingBD->getPileupWeight(averageIntPerXing);
+			weight = 1.06f * m_pileupReweightingBD->getPileupWeight(averageIntPerXing);
 			break;
 
 		case 183003:
-			weight = 1.08f;// * m_pileupReweightingEH->getPileupWeight(averageIntPerXing);
+			weight = 1.08f * m_pileupReweightingEH->getPileupWeight(averageIntPerXing);
 			break;
 
 		case 186169:
-			weight = 0.87f;// * m_pileupReweightingIK->getPileupWeight(averageIntPerXing);
+			weight = 0.87f * m_pileupReweightingIK->getPileupWeight(averageIntPerXing);
 			break;
 
 		case 186275:
-			weight = 1.03f;// * m_pileupReweightingLM->getPileupWeight(averageIntPerXing);
+			weight = 1.03f * m_pileupReweightingLM->getPileupWeight(averageIntPerXing);
 			break;
 
 		default:

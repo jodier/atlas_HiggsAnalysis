@@ -143,22 +143,22 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 
 	/*-----------------------------------------------------------------*/
 
-	Short_t CNT0 = 0;
-	Short_t CNT1 = 0;
-	Short_t CNT2 = 0;
-	Short_t CNT3 = 0;
-	Short_t CNT4_eeuu = 0;
-	Short_t CNT4_uuee = 0;
-	Short_t CNT5_eeuu = 0;
-	Short_t CNT5_uuee = 0;
-	Short_t CNT6_eeuu = 0;
-	Short_t CNT6_uuee = 0;
-	Short_t CNT7_eeuu = 0;
-	Short_t CNT7_uuee = 0;
-	Short_t CNT8_eeuu = 0;
-	Short_t CNT8_uuee = 0;
-	Short_t CNT9_eeuu = 0;
-	Short_t CNT9_uuee = 0;
+	Float_t CNT0 = 0;
+	Float_t CNT1 = 0;
+	Float_t CNT2 = 0;
+	Float_t CNT3 = 0;
+	Float_t CNT4_eeuu = 0;
+	Float_t CNT4_uuee = 0;
+	Float_t CNT5_eeuu = 0;
+	Float_t CNT5_uuee = 0;
+	Float_t CNT6_eeuu = 0;
+	Float_t CNT6_uuee = 0;
+	Float_t CNT7_eeuu = 0;
+	Float_t CNT7_uuee = 0;
+	Float_t CNT8_eeuu = 0;
+	Float_t CNT8_uuee = 0;
+	Float_t CNT9_eeuu = 0;
+	Float_t CNT9_uuee = 0;
 
 	const Long64_t eventNr = chain2->GetEntries();
 
