@@ -17,6 +17,8 @@
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
 
+#define __IS_DATA
+
 class THiggsD3PD {
 public :
    TTree          *fChain;   //!pointer to the analyzed TTree or TChain
