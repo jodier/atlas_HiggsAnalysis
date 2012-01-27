@@ -134,46 +134,43 @@ Bool_t TLeptonAnalysis::getElTrigger(void)
 
 	if(core::OF == false)
 	{
-		if(core::isMC(RunNumber) != false)
-		{
-			/**/ if(RunNumber == 180164 // B-D
-				||
-				RunNumber == 183003 // E-H
-			 ) {
-				result = EF_e20_medium || EF_2e12_medium;
-			}
-			else if(RunNumber == 186169) // I-K
-			{
-				TRandom3 random3;
 #ifdef __IS_MC
-				random3.SetSeed(mc_channel_number * EventNumber);
-#endif
-				if(random3.Uniform() < fracEl) {
-					result = EF_e20_medium || EF_2e12_medium;
-				}
-				else {
-					result = EF_e22_medium || EF_2e12T_medium;
-				}
-			}
-			else if(RunNumber == 186275) // L-M
-			{
-				result = EF_e22_medium1 || EF_2e12T_medium;
-			}
+		/**/ if(RunNumber == 180164 // B-D
+			||
+			RunNumber == 183003 // E-H
+		 ) {
+			result = EF_e20_medium || EF_2e12_medium;
 		}
-		else
+		else if(RunNumber == 186169) // I-K
 		{
-			char period = getPeriod(RunNumber);
+			TRandom3 random3;
 
-			/**/ if(period >= 'B' && period <= 'J') {
+			random3.SetSeed(mc_channel_number * EventNumber);
+
+			if(random3.Uniform() < fracEl) {
 				result = EF_e20_medium || EF_2e12_medium;
 			}
-			else if(period >= 'K' && period <= 'K') {
+			else {
 				result = EF_e22_medium || EF_2e12T_medium;
 			}
-			else if(period >= 'L' && period <= 'M') {
-				result = EF_e22vh_medium1 || EF_2e12Tvh_medium;
-			}
 		}
+		else if(RunNumber == 186275) // L-M
+		{
+			result = EF_e22_medium1 || EF_2e12T_medium;
+		}
+#else
+		char period = getPeriod(RunNumber);
+
+		/**/ if(period >= 'B' && period <= 'J') {
+			result = EF_e20_medium || EF_2e12_medium;
+		}
+		else if(period >= 'K' && period <= 'K') {
+			result = EF_e22_medium || EF_2e12T_medium;
+		}
+		else if(period >= 'L' && period <= 'M') {
+			result = EF_e22vh_medium1 || EF_2e12Tvh_medium;
+		}
+#endif
 	}
 	else
 	{
@@ -191,43 +188,40 @@ Bool_t TLeptonAnalysis::getMuTrigger(void)
 
 	if(core::OF == false)
 	{
-		if(core::isMC(RunNumber) != false)
-		{
-			/**/ if(RunNumber == 180164 // B-D
-				||
-				RunNumber == 183003 // E-H
-			 ) {
-				result = EF_mu18_MG || EF_2mu10_loose;
-			}
-			else if(RunNumber == 186169) // I-K
-			{
-				TRandom3 random3;
 #ifdef __IS_MC
-				random3.SetSeed(mc_channel_number * EventNumber);
-#endif
-				if(random3.Uniform() < fracMu) {
-					result = EF_mu18_MG || EF_2mu10_loose;
-				}
-				else {
-					result = EF_mu18_MG_medium || EF_2mu10_loose;
-				}
-			}
-			else if(RunNumber == 186275) // L-M
-			{
-				result = EF_mu18_MG_medium || EF_2mu10_loose;
-			}
+		/**/ if(RunNumber == 180164 // B-D
+			||
+			RunNumber == 183003 // E-H
+		 ) {
+			result = EF_mu18_MG || EF_2mu10_loose;
 		}
-		else
+		else if(RunNumber == 186169) // I-K
 		{
-			char period = getPeriod(RunNumber);
+			TRandom3 random3;
 
-			/**/ if(period >= 'B' && period <= 'I') {
+			random3.SetSeed(mc_channel_number * EventNumber);
+
+			if(random3.Uniform() < fracMu) {
 				result = EF_mu18_MG || EF_2mu10_loose;
 			}
-			else if(period >= 'J' && period <= 'M') {
+			else {
 				result = EF_mu18_MG_medium || EF_2mu10_loose;
 			}
 		}
+		else if(RunNumber == 186275) // L-M
+		{
+			result = EF_mu18_MG_medium || EF_2mu10_loose;
+		}
+#else
+		char period = getPeriod(RunNumber);
+
+		/**/ if(period >= 'B' && period <= 'I') {
+			result = EF_mu18_MG || EF_2mu10_loose;
+		}
+		else if(period >= 'J' && period <= 'M') {
+			result = EF_mu18_MG_medium || EF_2mu10_loose;
+		}
+#endif
 	}
 	else
 	{

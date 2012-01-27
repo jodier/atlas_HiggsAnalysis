@@ -112,15 +112,26 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 /*
 			if(dest == 3)
 			{
-				std::cout << "Event number  : " << m_H[dest].EventNumber << ", dest : " << dest << std::endl;
-				std::cout << "M_4l          = " << m_H[dest].H_m[i] << std::endl;
-				std::cout << "M_Z1          = " << m_H[dest].Z12_m[i] << std::endl;
-				std::cout << "M_Z1-M_Z      = " << fabs(Z_MASS - m_H[dest].Z12_m[i]) << std::endl;
-				std::cout << "M_Z2          = " << m_H[dest].Z34_m[i] << std::endl;
-				std::cout << "M_Z2-M_Z      = " << fabs(Z_MASS - m_H[dest].Z34_m[i]) << std::endl;
-				std::cout << "Cut M_34      = " << getMassCut(m_H[dest].H_m[i]) << std::endl;
+				std::cout << "Event number    : " << m_H[dest].EventNumber << std::endl;
+
+				std::cout << "  M_4l          = " << m_H[dest].H_m[i] << std::endl;
+
+				std::cout << "  M_Z1          = " << m_H[dest].Z12_m[i] << std::endl;
+				std::cout << "  M_Z1-M_Z      = " << fabs(Z_MASS - m_H[dest].Z12_m[i]) << std::endl;
+
+				std::cout << "  M_Z2          = " << m_H[dest].Z34_m[i] << std::endl;
+				std::cout << "  M_Z2-M_Z      = " << fabs(Z_MASS - m_H[dest].Z34_m[i]) << std::endl;
+
+				std::cout << "  CutM_34       = " << getMassCut(m_H[dest].H_m[i]) << std::endl;
+				std::cout << "  Pass cut M_Z2 = " << (m_H[dest].flag[i] >= 0x3F) << std::endl;
+
+				std::cout << "  pT_l1 = " << m_H[dest].l1_pt[i]
+					  << ", pT_l2 = " << m_H[dest].l2_pt[i]
+					  << ", pT_l3 = " << m_H[dest].l3_pt[i]
+					  << ", pT_l4 = " << m_H[dest].l4_pt[i]
+					  << std::endl;
 			}
- */
+*/
 			/*---------------------------------*/
 		}
 		else {

@@ -9,7 +9,8 @@
 
 void TLeptonAnalysis::fixeEnergy(void)
 {
-	if(core::isMC(RunNumber) == false && core::ER != false)
+#ifndef __IS_MC
+	if(core::ER != false)
 	{
 		/*---------------------------------------------------------*/
 
@@ -22,22 +23,24 @@ void TLeptonAnalysis::fixeEnergy(void)
 				electronGetEt(i),
 				0, "ELECTRON"
 			);
+
+			el_E->at(i) = 0.0f;	/* do not use */
 		}
 
 		/*---------------------------------------------------------*/
 	}
-
+#endif
 	for(Int_t i = 0; i < el_n; i++)
 	{
 		el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->applyMCCalibrationMeV(el_cl_eta->at(i), electronGetEt(i), "ELECTRON");
 	}
-
-	if(core::isMC(RunNumber) != false && core::SM != false)
+#ifdef __IS_MC
+	if(core::SM != false)
 	{
 		float pT_ME;
 		float pT_ID;
-		float PT_CB_old;
-		float PT_CB_new;
+		float pT_old;
+		float pT_new;
 
 		/*---------------------------------------------------------*/
 
@@ -58,7 +61,8 @@ void TLeptonAnalysis::fixeEnergy(void)
 		{
 			pT_ME = (mu_staco_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_me_theta_exPV->at(i)) / fabs(mu_staco_me_qoverp_exPV->at(i)) : 0.0f;
 			pT_ID = (mu_staco_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_staco_id_theta_exPV->at(i)) / fabs(mu_staco_id_qoverp_exPV->at(i)) : 0.0f;
-			PT_CB_old = PT_CB_new = mu_staco_pt->at(i);
+
+			pT_old = pT_new = mu_staco_pt->at(i);
 
 			m_stacoSM->SetSeed(EventNumber, i);
 
@@ -67,28 +71,26 @@ void TLeptonAnalysis::fixeEnergy(void)
 				m_stacoSM->Event(
 					pT_ME,
 					pT_ID,
-					PT_CB_old,
+					pT_old,
 					mu_staco_eta->at(i)
 				);
 
-				PT_CB_new = m_stacoSM->pTCB();
-				pT_ID     = m_stacoSM->pTID();
+				pT_new = m_stacoSM->pTCB();
 			}
 
 			if(mu_staco_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_stacoSM->Event(
-					PT_CB_old,
+					pT_old,
 					mu_staco_eta->at(i),
 					"ID"
 				);
 
-				PT_CB_new = m_stacoSM->pTID();
-				pT_ID     = m_stacoSM->pTID();
+				pT_new = m_stacoSM->pTID();
 			}
 
-			mu_staco_E->at(i) *= pT_ID / PT_CB_old;
-			mu_staco_pt->at(i) = PT_CB_new;
+			mu_staco_E->at(i) = (pT_new / pT_old) * mu_staco_E->at(i);
+			mu_staco_pt->at(i) = pT_new;
 		}
 
 		/*---------------------------------------------------------*/
@@ -97,7 +99,8 @@ void TLeptonAnalysis::fixeEnergy(void)
 		{
 			pT_ME = (mu_muid_me_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_me_theta_exPV->at(i)) / fabs(mu_muid_me_qoverp_exPV->at(i)) : 0.0f;
 			pT_ID = (mu_muid_id_qoverp_exPV->at(i) != 0.0f) ? sin(mu_muid_id_theta_exPV->at(i)) / fabs(mu_muid_id_qoverp_exPV->at(i)) : 0.0f;
-			PT_CB_old = PT_CB_new = mu_muid_pt->at(i);
+
+			pT_old = pT_new = mu_muid_pt->at(i);
 
 			m_muidSM->SetSeed(EventNumber, i);
 
@@ -106,32 +109,31 @@ void TLeptonAnalysis::fixeEnergy(void)
 				m_muidSM->Event(
 					pT_ME,
 					pT_ID,
-					PT_CB_old,
+					pT_old,
 					mu_muid_eta->at(i)
 				);
 
-				PT_CB_new = m_muidSM->pTCB();
-				pT_ID     = m_muidSM->pTID();
+				pT_new = m_muidSM->pTCB();
 			}
 
 			if(mu_muid_isSegmentTaggedMuon->at(i) != false)
 			{
 				m_muidSM->Event(
-					PT_CB_old,
+					pT_old,
 					mu_muid_eta->at(i),
 					"ID"
 				);
 
-				PT_CB_new = m_muidSM->pTID();
-				pT_ID     = m_muidSM->pTID();
+				pT_new = m_muidSM->pTID();
 			}
 
-			mu_muid_E->at(i) *= pT_ID / PT_CB_old;
-			mu_muid_pt->at(i) = PT_CB_new;
+			mu_muid_E->at(i) = (pT_new / pT_old) * mu_muid_E->at(i);
+			mu_muid_pt->at(i) = pT_new;
 		}
 
 		/*---------------------------------------------------------*/
 	}
+#endif
 }
 
 /*-------------------------------------------------------------------------*/
@@ -149,9 +151,14 @@ Float_t TLeptonAnalysis::eventGetWeight1(void)
 		}
 	}
 
-	return weight != 0.0f ? weight : 1.0f;
+	if(weight == 0.0f)
+	{
+		weight = 1.0f;
+	}
+
+	return weight;
 #else
-	return 1.000000000000000000000000000f;
+	return 1.000f;
 #endif
 }
 
@@ -738,41 +745,38 @@ Bool_t TLeptonAnalysis::truthMatch(
 	TLeptonType type
 ) {
 #ifdef __IS_MC
-	if(core::isMC(RunNumber) != false)
+	switch(type)
 	{
-		switch(type)
-		{
-			case TYPE_ELECTRON:
-				if((el_type->at(index) != 2 || (((((((((((((((((((el_origin->at(index) != 13))))))))))))))))))))
-				   &&
-				   (el_type->at(index) != 4 || (el_originbkg->at(index) != 13 && el_originbkg->at(index) != 40))
-				 ) {
-					goto __error;
-				}
-				break;
+		case TYPE_ELECTRON:
+			if((el_type->at(index) != 2 || (((((((((((((((((((el_origin->at(index) != 13))))))))))))))))))))
+			   &&
+			   (el_type->at(index) != 4 || (el_originbkg->at(index) != 13 && el_originbkg->at(index) != 40))
+			 ) {
+				goto __error;
+			}
+			break;
 
-			case TYPE_MUON_STACO:
-				if(abs(mu_staco_truth_type->at(index)) != 13 || mu_staco_truth_mothertype->at(index) != 23) {
-					goto __error;
-				}
-				break;
+		case TYPE_MUON_STACO:
+			if(abs(mu_staco_truth_type->at(index)) != 13 || mu_staco_truth_mothertype->at(index) != 23) {
+				goto __error;
+			}
+			break;
 
-			case TYPE_MUON_MUID:
-				if(abs(mu_muid_truth_type->at(index)) != 13 || mu_muid_truth_mothertype->at(index) != 23) {
-					goto __error;
-				}
-				break;
+		case TYPE_MUON_MUID:
+			if(abs(mu_muid_truth_type->at(index)) != 13 || mu_muid_truth_mothertype->at(index) != 23) {
+				goto __error;
+			}
+			break;
 
-			case TYPE_MUON_CALO:
-				if(abs(mu_calo_truth_type->at(index)) != 13 || mu_calo_truth_mothertype->at(index) != 23) {
-					goto __error;
-				}
-				break;
+		case TYPE_MUON_CALO:
+			if(abs(mu_calo_truth_type->at(index)) != 13 || mu_calo_truth_mothertype->at(index) != 23) {
+				goto __error;
+			}
+			break;
 
-			__error:
-			default:
-				return false;
-		}
+		__error:
+		default:
+			return false;
 	}
 #endif
 	return true;

@@ -69,16 +69,16 @@ class TLeptonAnalysis: public TNTuple
 	{
 		Vector_t<Double_t> int_lum(11);
 
-		int_lum[0] = 11.7377f; // luminosity for period B
-		int_lum[1] = 00.0000f; // luminosity for period C
-		int_lum[2] = 166.737f; // luminosity for period D
-		int_lum[3] = 48.8244f; // luminosity for period E
-		int_lum[4] = 142.575f; // luminosity for period F
-		int_lum[5] = 537.542f; // luminosity for period G
-		int_lum[6] = 259.459f; // luminosity for period H
-		int_lum[7] = 226.460f; // luminosity for period I
-		int_lum[8] = 600.069f; // luminosity for period J
-		int_lum[9] = 1401.87f; // luminosity for period K
+		int_lum[ 0] = 11.7377f; // luminosity for period B
+		int_lum[ 1] = 166.737f; // luminosity for period D
+		int_lum[ 2] = 48.8244f; // luminosity for period E
+		int_lum[ 3] = 142.575f; // luminosity for period F
+		int_lum[ 4] = 537.542f; // luminosity for period G
+		int_lum[ 5] = 259.459f; // luminosity for period H
+		int_lum[ 6] = 386.226f; // luminosity for period I
+		int_lum[ 7] = 226.460f; // luminosity for period J
+		int_lum[ 8] = 600.069f; // luminosity for period J
+		int_lum[ 9] = 1401.87f; // luminosity for period K
 		int_lum[10] = 1025.62f; // luminosity for period L
 
 		m_pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");

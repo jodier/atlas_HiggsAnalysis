@@ -44,7 +44,7 @@ Float_t getMassCut(Float_t H_mass)
 	Float_t result;
 
 	/**/ if(H_mass > 000.0f && H_mass <= 120.0f) {
-		result = 15.000000000000000000000000000000000000000000f;
+		result = 15.000000000000000000000000000000000000000000000f;
 	}
 	else if(H_mass > 120.0f && H_mass <= 130.0f) {
 		result = extrapolate(H_mass, 120.0f, 130.0f, 15.0f, 20.0f);
@@ -53,7 +53,7 @@ Float_t getMassCut(Float_t H_mass)
 		result = extrapolate(H_mass, 130.0f, 150.0f, 20.0f, 30.0f);
 	}
 	else if(H_mass > 150.0f && H_mass <= 160.0f) {
-		result = 30.000000000000000000000000000000000000000000f;
+		result = 30.000000000000000000000000000000000000000000000f;
 	}
 	else if(H_mass > 160.0f && H_mass <= 165.0f) {
 		result = extrapolate(H_mass, 160.0f, 165.0f, 30.0f, 35.0f);
