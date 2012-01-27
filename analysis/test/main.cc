@@ -192,9 +192,9 @@ void THiggsBuilder::Loop(void)
 		else if(RunNumber == 186169) // I-K
 		{
 			TRandom3 random3;
-
+#ifdef __IS_MC
 			random3.SetSeed(mc_channel_number * EventNumber);
-
+#endif
 			Float_t epsilon = random3.Uniform();
 
 			if(epsilon < fracEl) {

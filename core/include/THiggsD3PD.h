@@ -96,6 +96,11 @@ public :
    Bool_t          EF_e20_medium_SiTrk;
    Bool_t          EF_e20_medium_TRT;
    Bool_t          EF_e22_medium;
+   Bool_t          EF_e22_medium1;
+   Bool_t          EF_e22vh_medium1;
+   Bool_t          EF_2e12T_medium;
+   Bool_t          EF_2e12Tvh_medium;
+   Bool_t          EF_mu18_MG_medium; 
    Bool_t          EF_e5_tight;
    Bool_t          EF_e5_tight_e4_etcut_Jpsi;
    Bool_t          EF_e5_tight_e4_etcut_Jpsi_SiTrk;
@@ -4387,6 +4392,11 @@ public :
    std::vector<int>     *trig_EF_el_EF_e20_medium_SiTrk;
    std::vector<int>     *trig_EF_el_EF_e20_medium_TRT;
    std::vector<int>     *trig_EF_el_EF_e22_medium;
+   std::vector<int>     *trig_EF_el_EF_e22_medium1;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1;
+   std::vector<int>     *trig_EF_el_EF_2e12T_medium;
+   std::vector<int>     *trig_EF_el_EF_2e12Tvh_medium;
+   std::vector<int>     *trig_EF_el_EF_mu18_MG_medium ;
    std::vector<int>     *trig_EF_el_EF_e5_tight;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;
@@ -4709,6 +4719,11 @@ public :
    TBranch        *b_EF_e20_medium_SiTrk;   //!
    TBranch        *b_EF_e20_medium_TRT;   //!
    TBranch        *b_EF_e22_medium;   //!
+   TBranch        *b_EF_e22_medium1;   //!
+   TBranch        *b_EF_e22vh_medium1;   //!
+   TBranch        *b_EF_2e12T_medium;   //!
+   TBranch        *b_EF_2e12Tvh_medium;   //!
+   TBranch        *b_EF_mu18_MG_medium;   //!
    TBranch        *b_EF_e5_tight;   //!
    TBranch        *b_EF_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_EF_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
@@ -9000,6 +9015,11 @@ public :
    TBranch        *b_trig_EF_el_EF_e20_medium_SiTrk;   //!
    TBranch        *b_trig_EF_el_EF_e20_medium_TRT;   //!
    TBranch        *b_trig_EF_el_EF_e22_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e22_medium1;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1;   //!
+   TBranch        *b_trig_EF_el_EF_2e12T_medium;   //!
+   TBranch        *b_trig_EF_el_EF_2e12Tvh_medium;   //!
+   TBranch        *b_trig_EF_el_EF_mu18_MG_medium ;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
@@ -12263,6 +12283,11 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_el_EF_e20_medium_SiTrk = 0;
    trig_EF_el_EF_e20_medium_TRT = 0;
    trig_EF_el_EF_e22_medium = 0;
+   trig_EF_el_EF_e22_medium1 = 0;
+   trig_EF_el_EF_e22vh_medium1 = 0;
+   trig_EF_el_EF_2e12T_medium = 0;
+   trig_EF_el_EF_2e12Tvh_medium = 0;
+   trig_EF_el_EF_mu18_MG_medium  = 0;
    trig_EF_el_EF_e5_tight = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk = 0;
@@ -12585,6 +12610,11 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_e20_medium_SiTrk", &EF_e20_medium_SiTrk, &b_EF_e20_medium_SiTrk);
    fChain->SetBranchAddress("EF_e20_medium_TRT", &EF_e20_medium_TRT, &b_EF_e20_medium_TRT);
    fChain->SetBranchAddress("EF_e22_medium", &EF_e22_medium, &b_EF_e22_medium);
+   fChain->SetBranchAddress("EF_e22_medium1", &EF_e22_medium1, &b_EF_e22_medium1);
+   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
+   fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
+   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
+   fChain->SetBranchAddress("EF_mu18_MG_medium ", &EF_mu18_MG_medium , &b_EF_mu18_MG_medium );
    fChain->SetBranchAddress("EF_e5_tight", &EF_e5_tight, &b_EF_e5_tight);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi", &EF_e5_tight_e4_etcut_Jpsi, &b_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi_SiTrk", &EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_EF_e5_tight_e4_etcut_Jpsi_SiTrk);
@@ -16876,6 +16906,11 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_el_EF_e20_medium_SiTrk", &trig_EF_el_EF_e20_medium_SiTrk, &b_trig_EF_el_EF_e20_medium_SiTrk);
    fChain->SetBranchAddress("trig_EF_el_EF_e20_medium_TRT", &trig_EF_el_EF_e20_medium_TRT, &b_trig_EF_el_EF_e20_medium_TRT);
    fChain->SetBranchAddress("trig_EF_el_EF_e22_medium", &trig_EF_el_EF_e22_medium, &b_trig_EF_el_EF_e22_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22_medium1", &trig_EF_el_EF_e22_medium1, &b_trig_EF_el_EF_e22_medium1);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1", &trig_EF_el_EF_e22vh_medium1, &b_trig_EF_el_EF_e22vh_medium1);
+   fChain->SetBranchAddress("trig_EF_el_EF_2e12T_medium", &trig_EF_el_EF_2e12T_medium, &b_trig_EF_el_EF_2e12T_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_2e12Tvh_medium", &trig_EF_el_EF_2e12Tvh_medium, &b_trig_EF_el_EF_2e12Tvh_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_mu18_MG_medium ", &trig_EF_el_EF_mu18_MG_medium , &b_trig_EF_el_EF_mu18_MG_medium );
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight", &trig_EF_el_EF_e5_tight, &b_trig_EF_el_EF_e5_tight);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk);

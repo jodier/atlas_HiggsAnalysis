@@ -37,11 +37,11 @@ OBJS2         = analysis/higgs_analysis/main.o analysis/higgs_analysis/triggers.
 
 OBJS3         = analysis/test/main.o
 
-OBJS4         = analysis/efficiencies/eff.o
+OBJS4         = analysis/z_studies/eff.o
 
-OBJS5         = analysis/efficiencies/mass.o
+OBJS5         = analysis/z_studies/mass.o
 
-OBJS6         = analysis/efficiencies/ZcandPeriod.o
+OBJS6         = analysis/z_studies/ZcandPeriod.o
 
 #############################################################################
 

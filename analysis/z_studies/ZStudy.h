@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Mon Nov 28 18:03:19 2011 by ROOT version 5.28/00b
+// Fri Jan 27 10:13:02 2012 by ROOT version 5.28/00b
 // from TTree Z1/
-// found on file: output.root
+// found on file: output_bar.root
 //////////////////////////////////////////////////////////
 
 #ifndef ZStudy_h
@@ -26,43 +26,37 @@ public :
    Int_t           elTrigger;
    Int_t           muTrigger;
    Int_t           tn;
-   UInt_t          ta[1];   //[tn]
+   UInt_t          ta[128];   //[tn]
    Int_t           n;
    Int_t           nPV2;
-   Float_t         weight1[2];   //[n]
-   Float_t         weight2[2];   //[n]
-   Float_t         weight3[2];   //[n]
-   Int_t           l1_tight[2];   //[n]
-   Int_t           l2_tight[2];   //[n]
-   Int_t           l1_truthMatch[2];   //[n]
-   Int_t           l2_truthMatch[2];   //[n]
-   Int_t           l1_triggerMatch[2];   //[n]
-   Int_t           l2_triggerMatch[2];   //[n]
-   Float_t         l1_pt[2];   //[n]
-   Float_t         l2_pt[2];   //[n]
-   Float_t         l1_eta[2];   //[n]
-   Float_t         l2_eta[2];   //[n]
-   Float_t         l1_phi[2];   //[n]
-   Float_t         l2_phi[2];   //[n]
-   Float_t         l1_tkIso20[2];   //[n]
-   Float_t         l2_tkIso20[2];   //[n]
-   Float_t         l1_tkIso30[2];   //[n]
-   Float_t         l2_tkIso30[2];   //[n]
-   Float_t         l1_clIso20[2];   //[n]
-   Float_t         l2_clIso20[2];   //[n]
-   Float_t         l1_clIso30[2];   //[n]
-   Float_t         l2_clIso30[2];   //[n]
-   Float_t         l1_clIso20_corrected[2];   //[n]
-   Float_t         l2_clIso20_corrected[2];   //[n]
-   Float_t         l1_clIso30_corrected[2];   //[n]
-   Float_t         l2_clIso30_corrected[2];   //[n]
-   Float_t         l1_d0sigma[2];   //[n]
-   Float_t         l2_d0sigma[2];   //[n]
-   Float_t         Z_m[2];   //[n]
-   Float_t         Z_et[2];   //[n]
-   Float_t         Z_pt[2];   //[n]
-   Float_t         Z_eta[2];   //[n]
-   Float_t         Z_phi[2];   //[n]
+   Float_t         weight1[128];   //[n]
+   Float_t         weight2[128];   //[n]
+   Float_t         weight3[128];   //[n]
+   Int_t           l1_tight[128];   //[n]
+   Int_t           l2_tight[128];   //[n]
+   Int_t           l1_truthMatch[128];   //[n]
+   Int_t           l2_truthMatch[128];   //[n]
+   Int_t           l1_triggerMatch[128];   //[n]
+   Int_t           l2_triggerMatch[128];   //[n]
+   Float_t         l1_pt[128];   //[n]
+   Float_t         l2_pt[128];   //[n]
+   Float_t         l1_eta[128];   //[n]
+   Float_t         l2_eta[128];   //[n]
+   Float_t         l1_phi[128];   //[n]
+   Float_t         l2_phi[128];   //[n]
+   Float_t         l1_tkIso20[128];   //[n]
+   Float_t         l2_tkIso20[128];   //[n]
+   Float_t         l1_clIso20[128];   //[n]
+   Float_t         l2_clIso20[128];   //[n]
+   Float_t         l1_clIso20_corrected[128];   //[n]
+   Float_t         l2_clIso20_corrected[128];   //[n]
+   Float_t         l1_d0sigma[128];   //[n]
+   Float_t         l2_d0sigma[128];   //[n]
+   Float_t         Z_m[128];   //[n]
+   Float_t         Z_et[128];   //[n]
+   Float_t         Z_pt[128];   //[n]
+   Float_t         Z_eta[128];   //[n]
+   Float_t         Z_phi[128];   //[n]
 
    // List of branches
    TBranch        *b_RunNumber;   //!
@@ -93,16 +87,10 @@ public :
    TBranch        *b_l2_phi;   //!
    TBranch        *b_l1_tkIso20;   //!
    TBranch        *b_l2_tkIso20;   //!
-   TBranch        *b_l1_tkIso30;   //!
-   TBranch        *b_l2_tkIso30;   //!
    TBranch        *b_l1_clIso20;   //!
    TBranch        *b_l2_clIso20;   //!
-   TBranch        *b_l1_clIso30;   //!
-   TBranch        *b_l2_clIso30;   //!
    TBranch        *b_l1_clIso20_corrected;   //!
    TBranch        *b_l2_clIso20_corrected;   //!
-   TBranch        *b_l1_clIso30_corrected;   //!
-   TBranch        *b_l2_clIso30_corrected;   //!
    TBranch        *b_l1_d0sigma;   //!
    TBranch        *b_l2_d0sigma;   //!
    TBranch        *b_Z_m;   //!
@@ -130,9 +118,9 @@ ZStudy::ZStudy(TTree *tree)
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("output.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("output_bar.root");
       if (!f) {
-         f = new TFile("output.root");
+         f = new TFile("output_bar.root");
       }
       tree = (TTree*)gDirectory->Get("Z1");
 
@@ -211,16 +199,10 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("l2_phi", l2_phi, &b_l2_phi);
    fChain->SetBranchAddress("l1_tkIso20", l1_tkIso20, &b_l1_tkIso20);
    fChain->SetBranchAddress("l2_tkIso20", l2_tkIso20, &b_l2_tkIso20);
-   fChain->SetBranchAddress("l1_tkIso30", l1_tkIso30, &b_l1_tkIso30);
-   fChain->SetBranchAddress("l2_tkIso30", l2_tkIso30, &b_l2_tkIso30);
    fChain->SetBranchAddress("l1_clIso20", l1_clIso20, &b_l1_clIso20);
    fChain->SetBranchAddress("l2_clIso20", l2_clIso20, &b_l2_clIso20);
-   fChain->SetBranchAddress("l1_clIso30", l1_clIso30, &b_l1_clIso30);
-   fChain->SetBranchAddress("l2_clIso30", l2_clIso30, &b_l2_clIso30);
    fChain->SetBranchAddress("l1_clIso20_corrected", l1_clIso20_corrected, &b_l1_clIso20_corrected);
    fChain->SetBranchAddress("l2_clIso20_corrected", l2_clIso20_corrected, &b_l2_clIso20_corrected);
-   fChain->SetBranchAddress("l1_clIso30_corrected", l1_clIso30_corrected, &b_l1_clIso30_corrected);
-   fChain->SetBranchAddress("l2_clIso30_corrected", l2_clIso30_corrected, &b_l2_clIso30_corrected);
    fChain->SetBranchAddress("l1_d0sigma", l1_d0sigma, &b_l1_d0sigma);
    fChain->SetBranchAddress("l2_d0sigma", l2_d0sigma, &b_l2_d0sigma);
    fChain->SetBranchAddress("Z_m", Z_m, &b_Z_m);
