@@ -28,6 +28,7 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].EventNumber = EventNumber;
 	m_Z[dest].LumiBlock   =     lbn    ;
 
+	m_Z[dest].nPV2 = nPV2;
 	m_Z[dest].actualIntPerXing = actualIntPerXing;
 	m_Z[dest].averageIntPerXing = averageIntPerXing;
 
