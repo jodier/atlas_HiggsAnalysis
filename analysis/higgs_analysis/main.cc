@@ -168,47 +168,47 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 
 void THiggsBuilder::Loop(void)
 {
-	Int_t electronStacoNr1 = 0;
-	Int_t electronMuidNr1 = 0;
-	Int_t electronCaloNr1 = 0;
-	Int_t muonStacoNr1 = 0;
-	Int_t muonMuidNr1 = 0;
-	Int_t muonCaloNr1 = 0;
+	Int_t elStacoNr1 = 0;
+	Int_t elMuidNr1 = 0;
+	Int_t elCaloNr1 = 0;
+	Int_t muStacoNr1 = 0;
+	Int_t muMuidNr1 = 0;
+	Int_t muCaloNr1 = 0;
 
-	Int_t electronStacoNr2 = 0;
-	Int_t electronMuidNr2 = 0;
-	Int_t electronCaloNr2 = 0;
-	Int_t muonStacoNr2 = 0;
-	Int_t muonMuidNr2 = 0;
-	Int_t muonCaloNr2 = 0;
+	Int_t elStacoNr2 = 0;
+	Int_t elMuidNr2 = 0;
+	Int_t elCaloNr2 = 0;
+	Int_t muStacoNr2 = 0;
+	Int_t muMuidNr2 = 0;
+	Int_t muCaloNr2 = 0;
 
-	Int_t electronStacoIndexNr1;
-	Int_t electronMuidIndexNr1;
-	Int_t electronCaloIndexNr1;
-	Int_t muonStacoIndexNr1;
-	Int_t muonMuidIndexNr1;
-	Int_t muonCaloIndexNr1;
+	Int_t elStacoIndexNr1;
+	Int_t elMuidIndexNr1;
+	Int_t elCaloIndexNr1;
+	Int_t muStacoIndexNr1;
+	Int_t muMuidIndexNr1;
+	Int_t muCaloIndexNr1;
 
-	Int_t electronStacoIndexNr2;
-	Int_t electronMuidIndexNr2;
-	Int_t electronCaloIndexNr2;
-	Int_t muonStacoIndexNr2;
-	Int_t muonMuidIndexNr2;
-	Int_t muonCaloIndexNr2;
+	Int_t elStacoIndexNr2;
+	Int_t elMuidIndexNr2;
+	Int_t elCaloIndexNr2;
+	Int_t muStacoIndexNr2;
+	Int_t muMuidIndexNr2;
+	Int_t muCaloIndexNr2;
 
-	Int_t electronStacoIndexArray1[1024];
-	Int_t electronMuidIndexArray1[1024];
-	Int_t electronCaloIndexArray1[1024];
-	Int_t muonStacoIndexArray1[1024];
-	Int_t muonMuidIndexArray1[1024];
-	Int_t muonCaloIndexArray1[1024];
+	Int_t elStacoIndexArray1[1024];
+	Int_t elMuidIndexArray1[1024];
+	Int_t elCaloIndexArray1[1024];
+	Int_t muStacoIndexArray1[1024];
+	Int_t muMuidIndexArray1[1024];
+	Int_t muCaloIndexArray1[1024];
 
-	Int_t electronStacoIndexArray2[1024];
-	Int_t electronMuidIndexArray2[1024];
-	Int_t electronCaloIndexArray2[1024];
-	Int_t muonStacoIndexArray2[1024];
-	Int_t muonMuidIndexArray2[1024];
-	Int_t muonCaloIndexArray2[1024];
+	Int_t elStacoIndexArray2[1024];
+	Int_t elMuidIndexArray2[1024];
+	Int_t elCaloIndexArray2[1024];
+	Int_t muStacoIndexArray2[1024];
+	Int_t muMuidIndexArray2[1024];
+	Int_t muCaloIndexArray2[1024];
 
 	Float_t Z_MASS = core::configFltLookup("Z_MASS");
 
@@ -230,19 +230,19 @@ void THiggsBuilder::Loop(void)
 		/* INIT							   */
 		/*---------------------------------------------------------*/
 
-		electronStacoIndexNr1 = 0;
-		electronMuidIndexNr1 = 0;
-		electronCaloIndexNr1 = 0;
-		muonStacoIndexNr1 = 0;
-		muonMuidIndexNr1 = 0;
-		muonCaloIndexNr1 = 0;
+		elStacoIndexNr1 = 0;
+		elMuidIndexNr1 = 0;
+		elCaloIndexNr1 = 0;
+		muStacoIndexNr1 = 0;
+		muMuidIndexNr1 = 0;
+		muCaloIndexNr1 = 0;
 
-		electronStacoIndexNr2 = 0;
-		electronMuidIndexNr2 = 0;
-		electronCaloIndexNr2 = 0;
-		muonStacoIndexNr2 = 0;
-		muonMuidIndexNr2 = 0;
-		muonCaloIndexNr2 = 0;
+		elStacoIndexNr2 = 0;
+		elMuidIndexNr2 = 0;
+		elCaloIndexNr2 = 0;
+		muStacoIndexNr2 = 0;
+		muMuidIndexNr2 = 0;
+		muCaloIndexNr2 = 0;
 
 		memset(&m_evt, 0x00, sizeof(m_evt));
 		memset(  m_Z , 0x00, sizeof( m_Z ));
@@ -330,23 +330,23 @@ void THiggsBuilder::Loop(void)
 				{
 					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronStacoNr1++;
+						elStacoNr1++;
 
-						electronStacoIndexArray1[electronStacoIndexNr1++] = i;
+						elStacoIndexArray1[elStacoIndexNr1++] = i;
 					}
 
 					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronMuidNr1++;
+						elMuidNr1++;
 
-						electronMuidIndexArray1[electronMuidIndexNr1++] = i;
+						elMuidIndexArray1[elMuidIndexNr1++] = i;
 					}
 
 					if(checkCaloOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronCaloNr1++;
+						elCaloNr1++;
 
-						electronCaloIndexArray1[electronCaloIndexNr1++] = i;
+						elCaloIndexArray1[elCaloIndexNr1++] = i;
 					}
 				}
 			}
@@ -358,9 +358,9 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonStacoNr1++;
+					muStacoNr1++;
 
-					muonStacoIndexArray1[muonStacoIndexNr1++] = i;
+					muStacoIndexArray1[muStacoIndexNr1++] = i;
 				}
 			}
 
@@ -368,9 +368,9 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonMuidNr1++;
+					muMuidNr1++;
 
-					muonMuidIndexArray1[muonMuidIndexNr1++] = i;
+					muMuidIndexArray1[muMuidIndexNr1++] = i;
 				}
 			}
 
@@ -378,15 +378,15 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_CALO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonCaloNr1++;
+					muCaloNr1++;
 
-					muonCaloIndexArray1[muonCaloIndexNr1++] = i;
+					muCaloIndexArray1[muCaloIndexNr1++] = i;
 				}
 			}
 		}
 
 		/*---------------------------------------------------------*/
-		/* SELECTION 2e2mu					   */
+		/* SELECTION 2e2mµ					   */
 		/*---------------------------------------------------------*/
 
 		if((isOkElTrigger != false || isOkMuTrigger != false) && isOkVertex != false)
@@ -397,23 +397,23 @@ void THiggsBuilder::Loop(void)
 				{
 					if(checkStacoOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronStacoNr2++;
+						elStacoNr2++;
 
-						electronStacoIndexArray2[electronStacoIndexNr2++] = i;
+						elStacoIndexArray2[elStacoIndexNr2++] = i;
 					}
 
 					if(checkMuidOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronMuidNr2++;
+						elMuidNr2++;
 
-						electronMuidIndexArray2[electronMuidIndexNr2++] = i;
+						elMuidIndexArray2[elMuidIndexNr2++] = i;
 					}
 
 					if(checkCaloOverlapping(i, TYPE_ELECTRON, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 					{
-						electronCaloNr2++;
+						elCaloNr2++;
 
-						electronCaloIndexArray2[electronCaloIndexNr2++] = i;
+						elCaloIndexArray2[elCaloIndexNr2++] = i;
 					}
 				}
 			}
@@ -422,9 +422,9 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_STACO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonStacoNr2++;
+					muStacoNr2++;
 
-					muonStacoIndexArray2[muonStacoIndexNr2++] = i;
+					muStacoIndexArray2[muStacoIndexNr2++] = i;
 				}
 			}
 
@@ -432,9 +432,9 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_MUID, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonMuidNr2++;
+					muMuidNr2++;
 
-					muonMuidIndexArray2[muonMuidIndexNr2++] = i;
+					muMuidIndexArray2[muMuidIndexNr2++] = i;
 				}
 			}
 
@@ -442,9 +442,9 @@ void THiggsBuilder::Loop(void)
 			{
 				if(checkObject(i, TYPE_MUON_CALO, higgs_el_et, higgs_mu_pt, higgs_mu_calo_pt, useLoose, useForward) != false)
 				{
-					muonCaloNr2++;
+					muCaloNr2++;
 
-					muonCaloIndexArray2[muonCaloIndexNr2++] = i;
+					muCaloIndexArray2[muCaloIndexNr2++] = i;
 				}
 			}
 		}
@@ -509,9 +509,11 @@ void THiggsBuilder::Loop(void)
 		m_evt.muTrigger = isOkMuTrigger;
 
 		/*---------------------------------------------------------*/
+		/*---------------------------------------------------------*/
 
-		Int_t mu_n = (mu_staco_n > mu_muid_n) ? mu_staco_n : mu_muid_n;
+		Int_t mu_n = mu_staco_n;
 
+		/*---------------------------------------------------------*/
 		/*---------------------------------------------------------*/
 
 		m_evt.el_raw_n = el_n;
@@ -522,8 +524,8 @@ void THiggsBuilder::Loop(void)
 			m_evt.el_1st_n = el_n;
 			m_evt.mu_1st_n = mu_n;
 
-			m_evt.el_2nd_n = (electronStacoIndexNr2 > electronMuidIndexNr2) ? electronStacoIndexNr2 : electronMuidIndexNr2;
-			m_evt.mu_2nd_n = (  muonStacoIndexNr2   >   muonMuidIndexNr2  ) ?   muonStacoIndexNr2   :   muonMuidIndexNr2  ;
+			m_evt.el_2nd_n = elStacoIndexNr2;
+			m_evt.mu_2nd_n = muStacoIndexNr2;
 		}
 
 		m_evt.lepton_raw_n = m_evt.el_raw_n + m_evt.mu_raw_n;
@@ -537,29 +539,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z1 = false;
 		Bool_t result_H1 = false;
 
-		if(electronStacoIndexNr1 >= 2)
+		if(elStacoIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronStacoIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < elStacoIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < electronStacoIndexNr1; j++)
+				for(Int_t j = i + 1; j < elStacoIndexNr1; j++)
 				{
 					if(Z_analysis(
-						electronStacoIndexArray1[i],
-						electronStacoIndexArray1[j],
+						elStacoIndexArray1[i],
+						elStacoIndexArray1[j],
 						TYPE_ELECTRON, 0
 					 ) != false) {
 						result_Z1 = true;
 					}
 
-					for(Int_t k = j + 1; k < electronStacoIndexNr1; k++)
+					for(Int_t k = j + 1; k < elStacoIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < electronStacoIndexNr1; l++)
+						for(Int_t l = k + 1; l < elStacoIndexNr1; l++)
 						{
 							if(H_analysis(
-								electronStacoIndexArray1[i],
-								electronStacoIndexArray1[j],
-								electronStacoIndexArray1[k],
-								electronStacoIndexArray1[l],
+								elStacoIndexArray1[i],
+								elStacoIndexArray1[j],
+								elStacoIndexArray1[k],
+								elStacoIndexArray1[l],
 								TYPE_ELECTRON, TYPE_ELECTRON, 0
 							 ) != false) {
 								result_H1 = true;
@@ -578,29 +580,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z2 = false;
 		Bool_t result_H2 = false;
 
-		if(electronMuidIndexNr1 >= 2)
+		if(elMuidIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronMuidIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < elMuidIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < electronMuidIndexNr1; j++)
+				for(Int_t j = i + 1; j < elMuidIndexNr1; j++)
 				{
 					if(Z_analysis(
-						electronMuidIndexArray1[i],
-						electronMuidIndexArray1[j],
+						elMuidIndexArray1[i],
+						elMuidIndexArray1[j],
 						TYPE_ELECTRON, 1
 					 ) != false) {
 						result_Z2 = true;
 					}
 
-					for(Int_t k = j + 1; k < electronMuidIndexNr1; k++)
+					for(Int_t k = j + 1; k < elMuidIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < electronMuidIndexNr1; l++)
+						for(Int_t l = k + 1; l < elMuidIndexNr1; l++)
 						{
 							if(H_analysis(
-								electronMuidIndexArray1[i],
-								electronMuidIndexArray1[j],
-								electronMuidIndexArray1[k],
-								electronMuidIndexArray1[l],
+								elMuidIndexArray1[i],
+								elMuidIndexArray1[j],
+								elMuidIndexArray1[k],
+								elMuidIndexArray1[l],
 								TYPE_ELECTRON, TYPE_ELECTRON, 1
 							 ) != false) {
 								result_H2 = true;
@@ -620,29 +622,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z3 = false;
 		Bool_t result_H3 = false;
 
-		if(electronCaloIndexNr1 >= 2)
+		if(elCaloIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronCaloIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < elCaloIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < electronCaloIndexNr1; j++)
+				for(Int_t j = i + 1; j < elCaloIndexNr1; j++)
 				{
 					if(Z_analysis(
-						electronCaloIndexArray1[i],
-						electronCaloIndexArray1[j],
+						elCaloIndexArray1[i],
+						elCaloIndexArray1[j],
 						TYPE_ELECTRON, 2
 					 ) != false) {
 						result_Z3 = true;
 					}
 
-					for(Int_t k = j + 1; k < electronCaloIndexNr1; k++)
+					for(Int_t k = j + 1; k < elCaloIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < electronCaloIndexNr1; l++)
+						for(Int_t l = k + 1; l < elCaloIndexNr1; l++)
 						{
 							if(H_analysis(
-								electronCaloIndexArray1[i],
-								electronCaloIndexArray1[j],
-								electronCaloIndexArray1[k],
-								electronCaloIndexArray1[l],
+								elCaloIndexArray1[i],
+								elCaloIndexArray1[j],
+								elCaloIndexArray1[k],
+								elCaloIndexArray1[l],
 								TYPE_ELECTRON, TYPE_ELECTRON, 2
 							 ) != false) {
 								result_H3 = true;
@@ -662,29 +664,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z4 = false;
 		Bool_t result_H4 = false;
 
-		if(muonStacoIndexNr1 >= 2)
+		if(muStacoIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < muonStacoIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < muStacoIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < muonStacoIndexNr1; j++)
+				for(Int_t j = i + 1; j < muStacoIndexNr1; j++)
 				{
 					if(Z_analysis(
-						muonStacoIndexArray1[i],
-						muonStacoIndexArray1[j],
+						muStacoIndexArray1[i],
+						muStacoIndexArray1[j],
 						TYPE_MUON_STACO, 3
 					 ) != false) {
 						result_Z4 = true;
 					}
 
-					for(Int_t k = j + 1; k < muonStacoIndexNr1; k++)
+					for(Int_t k = j + 1; k < muStacoIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < muonStacoIndexNr1; l++)
+						for(Int_t l = k + 1; l < muStacoIndexNr1; l++)
 						{
 							if(H_analysis(
-								muonStacoIndexArray1[i],
-								muonStacoIndexArray1[j],
-								muonStacoIndexArray1[k],
-								muonStacoIndexArray1[l],
+								muStacoIndexArray1[i],
+								muStacoIndexArray1[j],
+								muStacoIndexArray1[k],
+								muStacoIndexArray1[l],
 								TYPE_MUON_STACO, TYPE_MUON_STACO, 3
 							 ) != false) {
 								result_H4 = true;
@@ -704,29 +706,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z5 = false;
 		Bool_t result_H5 = false;
 
-		if(muonMuidIndexNr1 >= 2)
+		if(muMuidIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < muonMuidIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < muMuidIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < muonMuidIndexNr1; j++)
+				for(Int_t j = i + 1; j < muMuidIndexNr1; j++)
 				{
 					if(Z_analysis(
-						muonMuidIndexArray1[i],
-						muonMuidIndexArray1[j],
+						muMuidIndexArray1[i],
+						muMuidIndexArray1[j],
 						TYPE_MUON_MUID, 4
 					 ) != false) {
 						result_Z5 = true;
 					}
 
-					for(Int_t k = j + 1; k < muonMuidIndexNr1; k++)
+					for(Int_t k = j + 1; k < muMuidIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < muonMuidIndexNr1; l++)
+						for(Int_t l = k + 1; l < muMuidIndexNr1; l++)
 						{
 							if(H_analysis(
-								muonMuidIndexArray1[i],
-								muonMuidIndexArray1[j],
-								muonMuidIndexArray1[k],
-								muonMuidIndexArray1[l],
+								muMuidIndexArray1[i],
+								muMuidIndexArray1[j],
+								muMuidIndexArray1[k],
+								muMuidIndexArray1[l],
 								TYPE_MUON_MUID, TYPE_MUON_MUID, 4
 							 ) != false) {
 								result_H5 = true;
@@ -746,29 +748,29 @@ void THiggsBuilder::Loop(void)
 		Bool_t result_Z6 = false;
 		Bool_t result_H6 = false;
 
-		if(muonCaloIndexNr1 >= 2)
+		if(muCaloIndexNr1 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < muonCaloIndexNr1; i++)
+			for(Int_t i = 0 + 0; i < muCaloIndexNr1; i++)
 			{
-				for(Int_t j = i + 1; j < muonCaloIndexNr1; j++)
+				for(Int_t j = i + 1; j < muCaloIndexNr1; j++)
 				{
 					if(Z_analysis(
-						muonCaloIndexArray1[i],
-						muonCaloIndexArray1[j],
+						muCaloIndexArray1[i],
+						muCaloIndexArray1[j],
 						TYPE_MUON_CALO, 5
 					 ) != false) {
 						result_Z6 = true;
 					}
 
-					for(Int_t k = j + 1; k < muonCaloIndexNr1; k++)
+					for(Int_t k = j + 1; k < muCaloIndexNr1; k++)
 					{
-						for(Int_t l = k + 1; l < muonCaloIndexNr1; l++)
+						for(Int_t l = k + 1; l < muCaloIndexNr1; l++)
 						{
 							if(H_analysis(
-								muonCaloIndexArray1[i],
-								muonCaloIndexArray1[j],
-								muonCaloIndexArray1[k],
-								muonCaloIndexArray1[l],
+								muCaloIndexArray1[i],
+								muCaloIndexArray1[j],
+								muCaloIndexArray1[k],
+								muCaloIndexArray1[l],
 								TYPE_MUON_CALO, TYPE_MUON_CALO, 5
 							 ) != false) {
 								result_H6 = true;
@@ -787,21 +789,21 @@ void THiggsBuilder::Loop(void)
 
 		Bool_t result_H7 = false;
 
-		if(electronStacoIndexNr2 >= 2 && muonStacoIndexNr2 >= 2)
+		if(elStacoIndexNr2 >= 2 && muStacoIndexNr2 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronStacoIndexNr2; i++)
+			for(Int_t i = 0 + 0; i < elStacoIndexNr2; i++)
 			{
-				for(Int_t j = i + 1; j < electronStacoIndexNr2; j++)
+				for(Int_t j = i + 1; j < elStacoIndexNr2; j++)
 				{
-					for(Int_t k = 0 + 0; k < muonStacoIndexNr2; k++)
+					for(Int_t k = 0 + 0; k < muStacoIndexNr2; k++)
 					{
-						for(Int_t l = k + 1; l < muonStacoIndexNr2; l++)
+						for(Int_t l = k + 1; l < muStacoIndexNr2; l++)
 						{
 							if(H_analysis(
-								electronStacoIndexArray2[i],
-								electronStacoIndexArray2[j],
-								muonStacoIndexArray2[k],
-								muonStacoIndexArray2[l],
+								elStacoIndexArray2[i],
+								elStacoIndexArray2[j],
+								muStacoIndexArray2[k],
+								muStacoIndexArray2[l],
 								TYPE_ELECTRON, TYPE_MUON_STACO, 6
 							 ) != false) {
 								result_H7 = true;
@@ -820,21 +822,21 @@ void THiggsBuilder::Loop(void)
 
 		Bool_t result_H8 = false;
 
-		if(electronMuidIndexNr2 >= 2 && muonMuidIndexNr2 >= 2)
+		if(elMuidIndexNr2 >= 2 && muMuidIndexNr2 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronMuidIndexNr2; i++)
+			for(Int_t i = 0 + 0; i < elMuidIndexNr2; i++)
 			{
-				for(Int_t j = i + 1; j < electronMuidIndexNr2; j++)
+				for(Int_t j = i + 1; j < elMuidIndexNr2; j++)
 				{
-					for(Int_t k = 0 + 0; k < muonMuidIndexNr2; k++)
+					for(Int_t k = 0 + 0; k < muMuidIndexNr2; k++)
 					{
-						for(Int_t l = k + 1; l < muonMuidIndexNr2; l++)
+						for(Int_t l = k + 1; l < muMuidIndexNr2; l++)
 						{
 							if(H_analysis(
-								electronMuidIndexArray2[i],
-								electronMuidIndexArray2[j],
-								muonMuidIndexArray2[k],
-								muonMuidIndexArray2[l],
+								elMuidIndexArray2[i],
+								elMuidIndexArray2[j],
+								muMuidIndexArray2[k],
+								muMuidIndexArray2[l],
 								TYPE_ELECTRON, TYPE_MUON_MUID, 7
 							 ) != false) {
 								result_H8 = true;
@@ -853,21 +855,21 @@ void THiggsBuilder::Loop(void)
 
 		Bool_t result_H9 = false;
 
-		if(electronCaloIndexNr2 >= 2 && muonCaloIndexNr2 >= 2)
+		if(elCaloIndexNr2 >= 2 && muCaloIndexNr2 >= 2)
 		{
-			for(Int_t i = 0 + 0; i < electronCaloIndexNr2; i++)
+			for(Int_t i = 0 + 0; i < elCaloIndexNr2; i++)
 			{
-				for(Int_t j = i + 1; j < electronCaloIndexNr2; j++)
+				for(Int_t j = i + 1; j < elCaloIndexNr2; j++)
 				{
-					for(Int_t k = 0 + 0; k < muonCaloIndexNr2; k++)
+					for(Int_t k = 0 + 0; k < muCaloIndexNr2; k++)
 					{
-						for(Int_t l = k + 1; l < muonCaloIndexNr2; l++)
+						for(Int_t l = k + 1; l < muCaloIndexNr2; l++)
 						{
 							if(H_analysis(
-								electronCaloIndexArray2[i],
-								electronCaloIndexArray2[j],
-								muonCaloIndexArray2[k],
-								muonCaloIndexArray2[l],
+								elCaloIndexArray2[i],
+								elCaloIndexArray2[j],
+								muCaloIndexArray2[k],
+								muCaloIndexArray2[l],
 								TYPE_ELECTRON, TYPE_MUON_CALO, 8
 							 ) != false) {
 								result_H9 = true;
@@ -940,21 +942,21 @@ void THiggsBuilder::Loop(void)
 
 	std::cout << std::endl;
 	std::cout << "H->eeee, H->µµµµµ" << std::endl;
-	std::cout << "electons (staco): " << electronStacoNr1 << std::endl;
-	std::cout << "electons (muid): " << electronMuidNr1 << std::endl;
-	std::cout << "electons (calo): " << electronCaloNr1 << std::endl;
-	std::cout << "muons (staco): " << muonStacoNr1 << std::endl;
-	std::cout << "muons (muid): " << muonMuidNr1 << std::endl;
-	std::cout << "muons (calo): " << muonCaloNr1 << std::endl;
+	std::cout << "electons (staco): " << elStacoNr1 << std::endl;
+	std::cout << "electons (muid): " << elMuidNr1 << std::endl;
+	std::cout << "electons (calo): " << elCaloNr1 << std::endl;
+	std::cout << "muons (staco): " << muStacoNr1 << std::endl;
+	std::cout << "muons (muid): " << muMuidNr1 << std::endl;
+	std::cout << "muons (calo): " << muCaloNr1 << std::endl;
 
 	std::cout << std::endl;
 	std::cout << "H->eeµµ, H->µµµee" << std::endl;
-	std::cout << "electons (staco): " << electronStacoNr2 << std::endl;
-	std::cout << "electons (muid): " << electronMuidNr2 << std::endl;
-	std::cout << "electons (calo): " << electronCaloNr2 << std::endl;
-	std::cout << "muons (staco): " << muonStacoNr2 << std::endl;
-	std::cout << "muons (muid): " << muonMuidNr2 << std::endl;
-	std::cout << "muons (calo): " << muonCaloNr2 << std::endl;
+	std::cout << "electons (staco): " << elStacoNr2 << std::endl;
+	std::cout << "electons (muid): " << elMuidNr2 << std::endl;
+	std::cout << "electons (calo): " << elCaloNr2 << std::endl;
+	std::cout << "muons (staco): " << muStacoNr2 << std::endl;
+	std::cout << "muons (muid): " << muMuidNr2 << std::endl;
+	std::cout << "muons (calo): " << muCaloNr2 << std::endl;
 }
 
 /*-------------------------------------------------------------------------*/

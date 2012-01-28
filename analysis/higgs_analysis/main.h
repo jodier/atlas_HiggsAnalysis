@@ -151,8 +151,6 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("l2_tkIso20", m_Z[i].l2_tkIso20, "l2_tkIso20[n]/F");
 			tree->Branch("l1_clIso20", m_Z[i].l1_clIso20, "l1_clIso20[n]/F");
 			tree->Branch("l2_clIso20", m_Z[i].l2_clIso20, "l2_clIso20[n]/F");
-			tree->Branch("l1_clIso20_corrected", m_Z[i].l1_clIso20_corrected, "l1_clIso20_corrected[n]/F");
-			tree->Branch("l2_clIso20_corrected", m_Z[i].l2_clIso20_corrected, "l2_clIso20_corrected[n]/F");
 			tree->Branch("l1_d0sigma", m_Z[i].l1_d0sigma, "l1_d0sigma[n]/F");
 			tree->Branch("l2_d0sigma", m_Z[i].l2_d0sigma, "l2_d0sigma[n]/F");
 
@@ -194,10 +192,6 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("weight2", m_H[i].weight2, "weight2[n]/F");
 			tree->Branch("weight3", m_H[i].weight3, "weight3[n]/F");
 
-			tree->Branch("l1_truthMatch", m_H[i].l1_truthMatch, "l1_truthMatch[n]/I");
-			tree->Branch("l2_truthMatch", m_H[i].l2_truthMatch, "l2_truthMatch[n]/I");
-			tree->Branch("l3_truthMatch", m_H[i].l3_truthMatch, "l3_truthMatch[n]/I");
-			tree->Branch("l4_truthMatch", m_H[i].l4_truthMatch, "l4_truthMatch[n]/I");
 			tree->Branch("l1_triggerMatch", m_H[i].l1_triggerMatch, "l1_triggerMatch[n]/I");
 			tree->Branch("l2_triggerMatch", m_H[i].l2_triggerMatch, "l2_triggerMatch[n]/I");
 			tree->Branch("l3_triggerMatch", m_H[i].l3_triggerMatch, "l3_triggerMatch[n]/I");
@@ -215,6 +209,31 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("l2_phi", m_H[i].l2_phi, "l2_phi[n]/F");
 			tree->Branch("l3_phi", m_H[i].l3_phi, "l3_phi[n]/F");
 			tree->Branch("l4_phi", m_H[i].l4_phi, "l4_phi[n]/F");
+
+			tree->Branch("l1_type", m_H[i].l1_type, "l1_type[n]/F");
+			tree->Branch("l2_type", m_H[i].l2_type, "l2_type[n]/F");
+			tree->Branch("l3_type", m_H[i].l3_type, "l3_type[n]/F");
+			tree->Branch("l4_type", m_H[i].l4_type, "l4_type[n]/F");
+			tree->Branch("l1_origin", m_H[i].l1_origin, "l1_origin[n]/F");
+			tree->Branch("l2_origin", m_H[i].l2_origin, "l2_origin[n]/F");
+			tree->Branch("l3_origin", m_H[i].l3_origin, "l3_origin[n]/F");
+			tree->Branch("l4_origin", m_H[i].l4_origin, "l4_origin[n]/F");
+			tree->Branch("l1_typebkg", m_H[i].l1_typebkg, "l1_typebkg[n]/F");
+			tree->Branch("l2_typebkg", m_H[i].l2_typebkg, "l2_typebkg[n]/F");
+			tree->Branch("l3_typebkg", m_H[i].l3_typebkg, "l3_typebkg[n]/F");
+			tree->Branch("l4_typebkg", m_H[i].l4_typebkg, "l4_typebkg[n]/F");
+			tree->Branch("l1_originbkg", m_H[i].l1_originbkg, "l1_originbkg[n]/F");
+			tree->Branch("l2_originbkg", m_H[i].l2_originbkg, "l2_originbkg[n]/F");
+			tree->Branch("l3_originbkg", m_H[i].l3_originbkg, "l3_originbkg[n]/F");
+			tree->Branch("l4_originbkg", m_H[i].l4_originbkg, "l4_originbkg[n]/F");
+			tree->Branch("l1_truth_type", m_H[i].l1_truth_type, "l1_truth_type[n]/F");
+			tree->Branch("l2_truth_type", m_H[i].l2_truth_type, "l2_truth_type[n]/F");
+			tree->Branch("l3_truth_type", m_H[i].l3_truth_type, "l3_truth_type[n]/F");
+			tree->Branch("l4_truth_type", m_H[i].l4_truth_type, "l4_truth_type[n]/F");
+			tree->Branch("l1_truth_mothertype", m_H[i].l1_truth_mothertype, "l1_truth_mothertype[n]/F");
+			tree->Branch("l2_truth_mothertype", m_H[i].l2_truth_mothertype, "l2_truth_mothertype[n]/F");
+			tree->Branch("l3_truth_mothertype", m_H[i].l3_truth_mothertype, "l3_truth_mothertype[n]/F");
+			tree->Branch("l4_truth_mothertype", m_H[i].l4_truth_mothertype, "l4_truth_mothertype[n]/F");
 
 			tree->Branch("Z12_m", m_H[i].Z12_m, "Z12_m[n]/F");
 			tree->Branch("Z34_m", m_H[i].Z34_m, "Z34_m[n]/F");
@@ -362,8 +381,6 @@ class THiggsBuilder: public TLeptonAnalysis
 
 		Float_t l1_clIso20[MAX];
 		Float_t l2_clIso20[MAX];
-		Float_t l1_clIso20_corrected[MAX];
-		Float_t l2_clIso20_corrected[MAX];
 		Float_t l1_tkIso20[MAX];
 		Float_t l2_tkIso20[MAX];
 		Float_t l1_d0sigma[MAX];
@@ -400,10 +417,6 @@ class THiggsBuilder: public TLeptonAnalysis
 		Float_t weight2[MAX];
 		Float_t weight3[MAX];
 
-		Int_t l1_truthMatch[MAX];
-		Int_t l2_truthMatch[MAX];
-		Int_t l3_truthMatch[MAX];
-		Int_t l4_truthMatch[MAX];
 		Int_t l1_triggerMatch[MAX];
 		Int_t l2_triggerMatch[MAX];
 		Int_t l3_triggerMatch[MAX];
@@ -421,6 +434,31 @@ class THiggsBuilder: public TLeptonAnalysis
 		Float_t l2_phi[MAX];
 		Float_t l3_phi[MAX];
 		Float_t l4_phi[MAX];
+
+		Float_t l1_type[MAX];
+		Float_t l2_type[MAX];
+		Float_t l3_type[MAX];
+		Float_t l4_type[MAX];
+		Float_t l1_origin[MAX];
+		Float_t l2_origin[MAX];
+		Float_t l3_origin[MAX];
+		Float_t l4_origin[MAX];
+		Float_t l1_typebkg[MAX];
+		Float_t l2_typebkg[MAX];
+		Float_t l3_typebkg[MAX];
+		Float_t l4_typebkg[MAX];
+		Float_t l1_originbkg[MAX];
+		Float_t l2_originbkg[MAX];
+		Float_t l3_originbkg[MAX];
+		Float_t l4_originbkg[MAX];
+		Float_t l1_truth_type[MAX];
+		Float_t l2_truth_type[MAX];
+		Float_t l3_truth_type[MAX];
+		Float_t l4_truth_type[MAX];
+		Float_t l1_truth_mothertype[MAX];
+		Float_t l2_truth_mothertype[MAX];
+		Float_t l3_truth_mothertype[MAX];
+		Float_t l4_truth_mothertype[MAX];
 
 		Float_t Z12_m[MAX];
 		Float_t Z34_m[MAX];

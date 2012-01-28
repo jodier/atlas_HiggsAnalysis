@@ -193,15 +193,10 @@ class TLeptonAnalysis: public TNTuple
 	);
 
 	/*-----------------------------------------------------------------*/
-	/* MATCHING							   */
+	/* TRUTH							   */
 	/*-----------------------------------------------------------------*/
 
 	Bool_t truthMatch(
-		Int_t index,
-		TLeptonType type
-	);
-
-	Bool_t triggerMatch(
 		Int_t index,
 		TLeptonType type
 	);
@@ -215,6 +210,11 @@ class TLeptonAnalysis: public TNTuple
 
 	Vector_t<Int_t> *getElTriggerDec(void);
 	Vector_t<Int_t> *getMuTriggerDec(void);
+
+	Bool_t triggerMatch(
+		Int_t index,
+		TLeptonType type
+	);
 
 	Int_t triggerTrace(UInt_t result[]);
 

@@ -48,8 +48,8 @@ bool THiggsBuilder::Z_analysis(
 	/* VARIABLES							   */
 	/*-----------------------------------------------------------------*/
 
-	Float_t E1, pt1, eta1, phi1, charge1, tkIso201, clIso201, clIso20Corrected1, d0sigma1;
-	Float_t E2, pt2, eta2, phi2, charge2, tkIso202, clIso202, clIso20Corrected2, d0sigma2;
+	Float_t E1, pt1, eta1, phi1, charge1, tkIso201, clIso201, d0sigma1;
+	Float_t E2, pt2, eta2, phi2, charge2, tkIso202, clIso202, d0sigma2;
 
 	Float_t ptCut1;
 	Float_t ptCut2;
@@ -82,10 +82,8 @@ bool THiggsBuilder::Z_analysis(
 			tight2 = el_tight->at(index2) != 0;
 			tkIso201 = el_ptcone20->at(index1) / pt1;
 			tkIso202 = el_ptcone20->at(index2) / pt2;
-			clIso201 = el_Etcone20->at(index1) / pt1;
-			clIso202 = el_Etcone20->at(index2) / pt2;
-			clIso20Corrected1 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 20, core::isMC(RunNumber), el_Etcone20->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
-			clIso20Corrected2 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 20, core::isMC(RunNumber), el_Etcone20->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
+			clIso201 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 20, core::isMC(RunNumber), el_Etcone20->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
+			clIso202 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 20, core::isMC(RunNumber), el_Etcone20->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
 			d0sigma1 = fabs(el_trackd0pvunbiased->at(index1) / el_tracksigd0pvunbiased->at(index1));
 			d0sigma2 = fabs(el_trackd0pvunbiased->at(index2) / el_tracksigd0pvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_el_trigg_pt;
@@ -110,10 +108,8 @@ bool THiggsBuilder::Z_analysis(
 			tight2 = mu_staco_tight->at(index2) != 0;
 			tkIso201 = mu_staco_ptcone20->at(index1) / mu_staco_pt->at(index1);
 			tkIso202 = mu_staco_ptcone20->at(index2) / mu_staco_pt->at(index2);
-			clIso201 = mu_staco_etcone20->at(index1) / mu_staco_pt->at(index1);
-			clIso202 = mu_staco_etcone20->at(index2) / mu_staco_pt->at(index2);
-			clIso20Corrected1 = (mu_staco_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / mu_staco_pt->at(index1);
-			clIso20Corrected2 = (mu_staco_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / mu_staco_pt->at(index2);
+			clIso201 = (mu_staco_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / mu_staco_pt->at(index1);
+			clIso202 = (mu_staco_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / mu_staco_pt->at(index2);
 			d0sigma1 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
 			d0sigma2 = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
@@ -138,10 +134,8 @@ bool THiggsBuilder::Z_analysis(
 			tight2 = mu_muid_tight->at(index2) != 0;
 			tkIso201 = mu_muid_ptcone20->at(index1) / mu_muid_pt->at(index1);
 			tkIso202 = mu_muid_ptcone20->at(index2) / mu_muid_pt->at(index2);
-			clIso201 = mu_muid_etcone20->at(index1) / mu_muid_pt->at(index1);
-			clIso202 = mu_muid_etcone20->at(index2) / mu_muid_pt->at(index2);
-			clIso20Corrected1 = (mu_muid_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / mu_muid_pt->at(index1);
-			clIso20Corrected2 = (mu_muid_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / mu_muid_pt->at(index2);
+			clIso201 = (mu_muid_etcone20->at(index1) - Float_t(nPV2 - 1) * 33.5f) / mu_muid_pt->at(index1);
+			clIso202 = (mu_muid_etcone20->at(index2) - Float_t(nPV2 - 1) * 33.5f) / mu_muid_pt->at(index2);
 			d0sigma1 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index1) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index1));
 			d0sigma2 = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index2) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_mu_trigg_pt;
@@ -162,7 +156,6 @@ bool THiggsBuilder::Z_analysis(
 	Bool_t tightArray[2] = {tight1, tight2};
 	Float_t tkIso20Array[2] = {tkIso201, tkIso202};
 	Float_t clIso20Array[2] = {clIso201, clIso202};
-	Float_t clIso20CorrectedArray[2] = {clIso20Corrected1, clIso20Corrected2};
 	Float_t d0sigmaArray[2] = {d0sigma1, d0sigma2};
 
 	Float_t ptTkOverlappingArray[2] = {ptTkOverlapping1, ptTkOverlapping2};
@@ -255,9 +248,6 @@ bool THiggsBuilder::Z_analysis(
 	{
 		clIso20Array[pair[0]] -= c;
 		clIso20Array[pair[1]] -= d;
-
-		clIso20CorrectedArray[pair[0]] -= c;
-		clIso20CorrectedArray[pair[1]] -= d;
 	}
 
 	/*-----------------------------------------------------------------*/
@@ -291,8 +281,6 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].l2_tkIso20[n] = tkIso20Array[pair[1]];
 	m_Z[dest].l1_clIso20[n] = clIso20Array[pair[0]];
 	m_Z[dest].l2_clIso20[n] = clIso20Array[pair[1]];
-	m_Z[dest].l1_clIso20_corrected[n] = clIso20CorrectedArray[pair[0]];
-	m_Z[dest].l2_clIso20_corrected[n] = clIso20CorrectedArray[pair[1]];
 
 	m_Z[dest].l1_d0sigma[n] = d0sigmaArray[pair[0]];
 	m_Z[dest].l2_d0sigma[n] = d0sigmaArray[pair[1]];

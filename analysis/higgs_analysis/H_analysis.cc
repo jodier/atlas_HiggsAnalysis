@@ -13,16 +13,27 @@
 
 typedef struct TZVector
 {
-	Bool_t l1_truthMatch;
-	Bool_t l2_truthMatch;
-
-	Bool_t l1_triggerMatch;
-	Bool_t l2_triggerMatch;
+	TLorentzVector Z_lorentz;
 
 	TLorentzVector l1_lorentz;
 	TLorentzVector l2_lorentz;
 
-	TLorentzVector Z_lorentz;
+	Bool_t l1_triggerMatch;
+	Bool_t l2_triggerMatch;
+
+	Int_t l1_type;
+	Int_t l1_origin;
+	Int_t l1_typebkg;
+	Int_t l1_originbkg;
+	Int_t l1_truth_type;
+	Int_t l1_truth_mothertype;
+
+	Int_t l2_type;
+	Int_t l2_origin;
+	Int_t l2_typebkg;
+	Int_t l2_originbkg;
+	Int_t l2_truth_type;
+	Int_t l2_truth_mothertype;
 
 } TZVector;
 
@@ -175,14 +186,17 @@ Bool_t THiggsBuilder::H_analysis(
 	Float_t ptTkOverlapping3, ptClOverlapping3;
 	Float_t ptTkOverlapping4, ptClOverlapping4;
 
-	Bool_t truthMatch1 = truthMatch(index1, type1);
-	Bool_t truthMatch2 = truthMatch(index2, type1);
-	Bool_t truthMatch3 = truthMatch(index3, type2);
-	Bool_t truthMatch4 = truthMatch(index4, type2);
 	Bool_t triggerMatch1 = triggerMatch(index1, type1);
 	Bool_t triggerMatch2 = triggerMatch(index2, type1);
 	Bool_t triggerMatch3 = triggerMatch(index3, type2);
 	Bool_t triggerMatch4 = triggerMatch(index4, type2);
+
+	Int_t mtc_type1, mtc_type2, mtc_type3, mtc_type4;
+	Int_t mtc_origin1, mtc_origin2, mtc_origin3, mtc_origin4;
+	Int_t mtc_typebkg1, mtc_typebkg2, mtc_typebkg3, mtc_typebkg4;
+	Int_t mtc_originbkg1, mtc_originbkg2, mtc_originbkg3, mtc_originbkg4;
+	Int_t truth_type1, truth_type2, truth_type3, truth_type4;
+	Int_t truth_mothertype1, truth_mothertype2, truth_mothertype3, truth_mothertype4;
 
 	switch(type1)
 	{
@@ -209,6 +223,33 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = el_trackpt->at(index2);
 			ptClOverlapping1 = pt1;
 			ptClOverlapping2 = pt2;
+#ifdef __IS_MC
+			mtc_type1 = el_type->at(index1);
+			mtc_type2 = el_type->at(index2);
+			mtc_origin1 = el_origin->at(index1);
+			mtc_origin2 = el_origin->at(index2);
+			mtc_typebkg1 = el_typebkg->at(index1);
+			mtc_typebkg2 = el_typebkg->at(index2);
+			mtc_originbkg1 = el_originbkg->at(index1);
+			mtc_originbkg2 = el_originbkg->at(index2);
+			truth_type1 = el_truth_type->at(index1);
+			truth_type2 = el_truth_type->at(index2);
+			truth_mothertype1 = el_truth_mothertype->at(index1);
+			truth_mothertype2 = el_truth_mothertype->at(index2);
+#else
+			mtc_type1 = -999999;
+			mtc_type2 = -999999;
+			mtc_origin1 = -999999;
+			mtc_origin2 = -999999;
+			mtc_typebkg1 = -999999;
+			mtc_typebkg2 = -999999;
+			mtc_originbkg1 = -999999;
+			mtc_originbkg2 = -999999;
+			truth_type1 = -999999;
+			truth_type2 = -999999;
+			truth_mothertype1 = -999999;
+			truth_mothertype2 = -999999;
+#endif
 			break;
 
 		case TYPE_MUON_STACO:
@@ -234,6 +275,25 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = (mu_staco_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index2)) / fabs(mu_staco_id_qoverp_exPV->at(index2)) : 0.0f;
 			ptClOverlapping1 = 0.0f;
 			ptClOverlapping2 = 0.0f;
+			mtc_type1 = -999999;
+			mtc_type2 = -999999;
+			mtc_origin1 = -999999;
+			mtc_origin2 = -999999;
+			mtc_typebkg1 = -999999;
+			mtc_typebkg2 = -999999;
+			mtc_originbkg1 = -999999;
+			mtc_originbkg2 = -999999;
+#ifdef __IS_MC
+			truth_type1 = mu_staco_truth_type->at(index1);
+			truth_type2 = mu_staco_truth_type->at(index2);
+			truth_mothertype1 = mu_staco_truth_mothertype->at(index1);
+			truth_mothertype2 = mu_staco_truth_mothertype->at(index2);
+#else
+			truth_type1 = -999999;
+			truth_type2 = -999999;
+			truth_mothertype1 = -999999;
+			truth_mothertype2 = -999999;
+#endif
 			break;
 
 		case TYPE_MUON_MUID:
@@ -259,6 +319,25 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping2 = (mu_muid_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index2)) / fabs(mu_muid_id_qoverp_exPV->at(index2)) : 0.0f;
 			ptClOverlapping1 = 0.0f;
 			ptClOverlapping2 = 0.0f;
+			mtc_type1 = -999999;
+			mtc_type2 = -999999;
+			mtc_origin1 = -999999;
+			mtc_origin2 = -999999;
+			mtc_typebkg1 = -999999;
+			mtc_typebkg2 = -999999;
+			mtc_originbkg1 = -999999;
+			mtc_originbkg2 = -999999;
+#ifdef __IS_MC
+			truth_type1 = mu_muid_truth_type->at(index1);
+			truth_type2 = mu_muid_truth_type->at(index2);
+			truth_mothertype1 = mu_muid_truth_mothertype->at(index1);
+			truth_mothertype2 = mu_muid_truth_mothertype->at(index2);
+#else
+			truth_type1 = -999999;
+			truth_type2 = -999999;
+			truth_mothertype1 = -999999;
+			truth_mothertype2 = -999999;
+#endif
 			break;
 
 		default:
@@ -290,6 +369,33 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = el_trackpt->at(index4);
 			ptClOverlapping3 = pt3;
 			ptClOverlapping4 = pt4;
+#ifdef __IS_MC
+			mtc_type3 = el_type->at(index3);
+			mtc_type4 = el_type->at(index4);
+			mtc_origin3 = el_origin->at(index3);
+			mtc_origin4 = el_origin->at(index4);
+			mtc_typebkg3 = el_typebkg->at(index3);
+			mtc_typebkg4 = el_typebkg->at(index4);
+			mtc_originbkg3 = el_originbkg->at(index3);
+			mtc_originbkg4 = el_originbkg->at(index4);
+			truth_type3 = el_truth_type->at(index3);
+			truth_type4 = el_truth_type->at(index4);
+			truth_mothertype3 = el_truth_mothertype->at(index3);
+			truth_mothertype4 = el_truth_mothertype->at(index4);
+#else
+			mtc_type3 = -999999;
+			mtc_type4 = -999999;
+			mtc_origin3 = -999999;
+			mtc_origin4 = -999999;
+			mtc_typebkg3 = -999999;
+			mtc_typebkg4 = -999999;
+			mtc_originbkg3 = -999999;
+			mtc_originbkg4 = -999999;
+			truth_type3 = -999999;
+			truth_type4 = -999999;
+			truth_mothertype3 = -999999;
+			truth_mothertype4 = -999999;
+#endif
 			break;
 
 		case TYPE_MUON_STACO:
@@ -315,6 +421,25 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = (mu_staco_id_qoverp_exPV->at(index4) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index4)) / fabs(mu_staco_id_qoverp_exPV->at(index4)) : 0.0f;
 			ptClOverlapping3 = 0.0f;
 			ptClOverlapping4 = 0.0f;
+			mtc_type3 = -999999;
+			mtc_type4 = -999999;
+			mtc_origin3 = -999999;
+			mtc_origin4 = -999999;
+			mtc_typebkg3 = -999999;
+			mtc_typebkg4 = -999999;
+			mtc_originbkg3 = -999999;
+			mtc_originbkg4 = -999999;
+#ifdef __IS_MC
+			truth_type3 = mu_staco_truth_type->at(index3);
+			truth_type4 = mu_staco_truth_type->at(index4);
+			truth_mothertype3 = mu_staco_truth_mothertype->at(index3);
+			truth_mothertype4 = mu_staco_truth_mothertype->at(index4);
+#else
+			truth_type3 = -999999;
+			truth_type4 = -999999;
+			truth_mothertype3 = -999999;
+			truth_mothertype4 = -999999;
+#endif
 			break;
 
 		case TYPE_MUON_MUID:
@@ -340,6 +465,25 @@ Bool_t THiggsBuilder::H_analysis(
 			ptTkOverlapping4 = (mu_muid_id_qoverp_exPV->at(index4) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index4)) / fabs(mu_muid_id_qoverp_exPV->at(index4)) : 0.0f;
 			ptClOverlapping3 = 0.0f;
 			ptClOverlapping4 = 0.0f;
+			mtc_type3 = -999999;
+			mtc_type4 = -999999;
+			mtc_origin3 = -999999;
+			mtc_origin4 = -999999;
+			mtc_typebkg3 = -999999;
+			mtc_typebkg4 = -999999;
+			mtc_originbkg3 = -999999;
+			mtc_originbkg4 = -999999;
+#ifdef __IS_MC
+			truth_type3 = mu_muid_truth_type->at(index3);
+			truth_type4 = mu_muid_truth_type->at(index4);
+			truth_mothertype3 = mu_muid_truth_mothertype->at(index3);
+			truth_mothertype4 = mu_muid_truth_mothertype->at(index4);
+#else
+			truth_type3 = -999999;
+			truth_type4 = -999999;
+			truth_mothertype3 = -999999;
+			truth_mothertype4 = -999999;
+#endif
 			break;
 
 		default:
@@ -360,8 +504,14 @@ Bool_t THiggsBuilder::H_analysis(
 	Float_t ptTkOverlappingArray[4] = {ptTkOverlapping1, ptTkOverlapping2, ptTkOverlapping3, ptTkOverlapping4};
 	Float_t ptClOverlappingArray[4] = {ptClOverlapping1, ptClOverlapping2, ptClOverlapping3, ptClOverlapping4};
 
-	Int_t truthMatchArray[4] = {truthMatch1, truthMatch2, truthMatch3, truthMatch4};
 	Int_t triggerMatchArray[4] = {triggerMatch1, triggerMatch2, triggerMatch3, triggerMatch4};
+
+	Int_t mtc_typeArray[4] = {mtc_type1, mtc_type2, mtc_type3, mtc_type4};
+	Int_t mtc_originArray[4] = {mtc_origin1, mtc_origin2, mtc_origin3, mtc_origin4};
+	Int_t mtc_typebkgArray[4] = {mtc_typebkg1, mtc_typebkg2, mtc_typebkg3, mtc_typebkg4};
+	Int_t mtc_originbkgArray[4] = {mtc_originbkg1, mtc_originbkg2, mtc_originbkg3, mtc_originbkg4};
+	Int_t truth_typeArray[4] = {truth_type1, truth_type2, truth_type3, truth_type4};
+	Int_t truth_mothertypeArray[4] = {truth_mothertype1, truth_mothertype2, truth_mothertype3, truth_mothertype4};
 
 	_INC(isOk, dest, 0);
 
@@ -383,6 +533,42 @@ Bool_t THiggsBuilder::H_analysis(
 
 	/*-----------------------------------------------------------------*/
 
+	#define setup_Z(Z, idx1, idx2) \
+		(Z).l1_lorentz.SetPtEtaPhiE(				\
+			1.0e-3f * ptArray[idx1],			\
+			etaArray[idx1],					\
+			phiArray[idx1],					\
+			1.0e-3f * eArray[idx1]				\
+		);							\
+									\
+		(Z).l2_lorentz.SetPtEtaPhiE(				\
+			1.0e-3f * ptArray[idx2],			\
+			etaArray[idx2],					\
+			phiArray[idx2],					\
+			1.0e-3f * eArray[idx2]				\
+		);							\
+									\
+		(Z).l1_triggerMatch = triggerMatchArray[idx1];		\
+		(Z).l2_triggerMatch = triggerMatchArray[idx2];		\
+									\
+		(Z).l1_type = mtc_typeArray[idx1];			\
+		(Z).l1_origin = mtc_originArray[idx1];			\
+		(Z).l1_typebkg = mtc_typebkgArray[idx1];		\
+		(Z).l1_originbkg = mtc_originbkgArray[idx1];		\
+		(Z).l1_truth_type = truth_typeArray[idx1];		\
+		(Z).l1_truth_mothertype = truth_mothertypeArray[idx1];	\
+									\
+		(Z).l2_type = mtc_typeArray[idx2];			\
+		(Z).l2_origin = mtc_originArray[idx2];			\
+		(Z).l2_typebkg = mtc_typebkgArray[idx2];		\
+		(Z).l2_originbkg = mtc_originbkgArray[idx2];		\
+		(Z).l2_truth_type = truth_typeArray[idx2];		\
+		(Z).l2_truth_mothertype = truth_mothertypeArray[idx2];	\
+									\
+		(Z).Z_lorentz = (Z).l1_lorentz + (Z).l2_lorentz;
+
+	/*-----------------------------------------------------------------*/
+
 	Bool_t eeuu = true;
 
 	TZVector Z1;
@@ -398,24 +584,9 @@ Bool_t THiggsBuilder::H_analysis(
 		/* eeee or µµµµ						   */
 		/*---------------------------------------------------------*/
 
-		Z1.l1_truthMatch = truthMatchArray[pair1[0]];
-		Z1.l1_triggerMatch = triggerMatchArray[pair1[0]];
-		Z1.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair1[0]], etaArray[pair1[0]], phiArray[pair1[0]], 1.0e-3f * eArray[pair1[0]]);
+		setup_Z(Z1, pair1[0], pair1[1]);
+		setup_Z(Z2, pair2[0], pair2[1]);
 
-		Z1.l2_truthMatch = truthMatchArray[pair1[1]];
-		Z1.l2_triggerMatch = triggerMatchArray[pair1[1]];
-		Z1.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair1[1]], etaArray[pair1[1]], phiArray[pair1[1]], 1.0e-3f * eArray[pair1[1]]);
-
-		Z2.l1_truthMatch = truthMatchArray[pair2[0]];
-		Z2.l1_triggerMatch = triggerMatchArray[pair2[0]];
-		Z2.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair2[0]], etaArray[pair2[0]], phiArray[pair2[0]], 1.0e-3f * eArray[pair2[0]]);
-
-		Z2.l2_truthMatch = truthMatchArray[pair2[1]];
-		Z2.l2_triggerMatch = triggerMatchArray[pair2[1]];
-		Z2.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair2[1]], etaArray[pair2[1]], phiArray[pair2[1]], 1.0e-3f * eArray[pair2[1]]);
-
-		Z1.Z_lorentz = Z1.l1_lorentz + Z1.l2_lorentz;
-		Z2.Z_lorentz = Z2.l1_lorentz + Z2.l2_lorentz;
 		TLorentzVector H1_lorentz = Z1.Z_lorentz + Z2.Z_lorentz;
 
 		if(fabs(Z_MASS - Z1.Z_lorentz.M()) > fabs(Z_MASS - Z2.Z_lorentz.M()))
@@ -425,24 +596,9 @@ Bool_t THiggsBuilder::H_analysis(
 
 		/**/
 
-		Z3.l1_truthMatch = truthMatchArray[pair3[0]];
-		Z3.l1_triggerMatch = triggerMatchArray[pair3[0]];
-		Z3.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair3[0]], etaArray[pair3[0]], phiArray[pair3[0]], 1.0e-3f * eArray[pair3[0]]);
+		setup_Z(Z3, pair3[0], pair3[1]);
+		setup_Z(Z4, pair4[0], pair4[1]);
 
-		Z3.l2_truthMatch = truthMatchArray[pair3[1]];
-		Z3.l2_triggerMatch = triggerMatchArray[pair3[1]];
-		Z3.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair3[1]], etaArray[pair3[1]], phiArray[pair3[1]], 1.0e-3f * eArray[pair3[1]]);
-
-		Z4.l1_truthMatch = truthMatchArray[pair4[0]];
-		Z4.l1_triggerMatch = triggerMatchArray[pair4[0]];
-		Z4.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair4[0]], etaArray[pair4[0]], phiArray[pair4[0]], 1.0e-3f * eArray[pair4[0]]);
-
-		Z4.l2_truthMatch = truthMatchArray[pair4[1]];
-		Z4.l2_triggerMatch = triggerMatchArray[pair4[1]];
-		Z4.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair4[1]], etaArray[pair4[1]], phiArray[pair4[1]], 1.0e-3f * eArray[pair4[1]]);
-
-		Z3.Z_lorentz = Z3.l1_lorentz + Z3.l2_lorentz;
-		Z4.Z_lorentz = Z4.l1_lorentz + Z4.l2_lorentz;
 		TLorentzVector H2_lorentz = Z3.Z_lorentz + Z4.Z_lorentz;
 
 		if(fabs(Z_MASS - Z3.Z_lorentz.M()) > fabs(Z_MASS - Z4.Z_lorentz.M()))
@@ -469,24 +625,9 @@ Bool_t THiggsBuilder::H_analysis(
 		/* eeµµ or µµee						   */
 		/*---------------------------------------------------------*/
 
-		Z1.l1_truthMatch = truthMatchArray[pair1[0]];
-		Z1.l1_triggerMatch = triggerMatchArray[pair1[0]];
-		Z1.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair1[0]], etaArray[pair1[0]], phiArray[pair1[0]], 1.0e-3f * eArray[pair1[0]]);
+		setup_Z(Z1, pair1[0], pair1[1]);
+		setup_Z(Z2, pair2[0], pair2[1]);
 
-		Z1.l2_truthMatch = truthMatchArray[pair1[1]];
-		Z1.l2_triggerMatch = triggerMatchArray[pair1[1]];
-		Z1.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair1[1]], etaArray[pair1[1]], phiArray[pair1[1]], 1.0e-3f * eArray[pair1[1]]);
-
-		Z2.l1_truthMatch = truthMatchArray[pair2[0]];
-		Z2.l1_triggerMatch = triggerMatchArray[pair2[0]];
-		Z2.l1_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair2[0]], etaArray[pair2[0]], phiArray[pair2[0]], 1.0e-3f * eArray[pair2[0]]);
-
-		Z2.l2_truthMatch = truthMatchArray[pair2[1]];
-		Z2.l2_triggerMatch = triggerMatchArray[pair2[1]];
-		Z2.l2_lorentz.SetPtEtaPhiE(1.0e-3f * ptArray[pair2[1]], etaArray[pair2[1]], phiArray[pair2[1]], 1.0e-3f * eArray[pair2[1]]);
-
-		Z1.Z_lorentz = Z1.l1_lorentz + Z1.l2_lorentz;
-		Z2.Z_lorentz = Z2.l1_lorentz + Z2.l2_lorentz;
 		H_lorentz = Z1.Z_lorentz + Z2.Z_lorentz;
 
 		if(fabs(Z_MASS - Z1.Z_lorentz.M()) > fabs(Z_MASS - Z2.Z_lorentz.M()))
@@ -717,10 +858,6 @@ Bool_t THiggsBuilder::H_analysis(
 	m_H[dest].weight2[n] = weight2;
 	m_H[dest].weight3[n] = weight3;
 
-	m_H[dest].l1_truthMatch[n] = Z1.l1_truthMatch;
-	m_H[dest].l2_truthMatch[n] = Z1.l2_truthMatch;
-	m_H[dest].l3_truthMatch[n] = Z2.l1_truthMatch;
-	m_H[dest].l4_truthMatch[n] = Z2.l2_truthMatch;
 	m_H[dest].l1_triggerMatch[n] = Z1.l1_triggerMatch;
 	m_H[dest].l2_triggerMatch[n] = Z1.l2_triggerMatch;
 	m_H[dest].l3_triggerMatch[n] = Z2.l1_triggerMatch;
@@ -738,6 +875,31 @@ Bool_t THiggsBuilder::H_analysis(
 	m_H[dest].l2_phi[n] = Z1.l2_lorentz.Phi();
 	m_H[dest].l3_phi[n] = Z2.l1_lorentz.Phi();
 	m_H[dest].l4_phi[n] = Z2.l2_lorentz.Phi();
+
+	m_H[dest].l1_type[n] = Z1.l1_type;
+	m_H[dest].l2_type[n] = Z1.l2_type;
+	m_H[dest].l3_type[n] = Z2.l1_type;
+	m_H[dest].l4_type[n] = Z2.l2_type;
+	m_H[dest].l1_origin[n] = Z1.l1_origin;
+	m_H[dest].l2_origin[n] = Z1.l2_origin;
+	m_H[dest].l3_origin[n] = Z2.l1_origin;
+	m_H[dest].l4_origin[n] = Z2.l2_origin;
+	m_H[dest].l1_typebkg[n] = Z1.l1_typebkg;
+	m_H[dest].l2_typebkg[n] = Z1.l2_typebkg;
+	m_H[dest].l3_typebkg[n] = Z2.l1_typebkg;
+	m_H[dest].l4_typebkg[n] = Z2.l2_typebkg;
+	m_H[dest].l1_originbkg[n] = Z1.l1_originbkg;
+	m_H[dest].l2_originbkg[n] = Z1.l2_originbkg;
+	m_H[dest].l3_originbkg[n] = Z2.l1_originbkg;
+	m_H[dest].l4_originbkg[n] = Z2.l2_originbkg;
+	m_H[dest].l1_truth_type[n] = Z1.l1_truth_type;
+	m_H[dest].l2_truth_type[n] = Z1.l2_truth_type;
+	m_H[dest].l3_truth_type[n] = Z2.l1_truth_type;
+	m_H[dest].l4_truth_type[n] = Z2.l2_truth_type;
+	m_H[dest].l1_truth_mothertype[n] = Z1.l1_truth_mothertype;
+	m_H[dest].l2_truth_mothertype[n] = Z1.l2_truth_mothertype;
+	m_H[dest].l3_truth_mothertype[n] = Z2.l1_truth_mothertype;
+	m_H[dest].l4_truth_mothertype[n] = Z2.l2_truth_mothertype;
 
 	m_H[dest].Z12_m[n] = Z1.Z_lorentz.M();
 	m_H[dest].Z34_m[n] = Z2.Z_lorentz.M();

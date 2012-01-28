@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Thu Jan  5 00:49:30 2012 by ROOT version 5.32/00
+// Sat Jan 28 00:51:59 2012 by ROOT version 5.32/00
 // from TTree physics/physics
 // found on file: result.root
 //////////////////////////////////////////////////////////
@@ -12,13 +12,13 @@
 #include <TChain.h>
 #include <TFile.h>
 
-// Header file for the classes stored in the TTree if any.
-#include <vector>
-
 #define __IS_MC
 
-#define EF_2e12Tvh_medium	false
-#define EF_e22vh_medium1	false
+#define EF_e22vh_medium1 0
+#define EF_2e12Tvh_medium 0
+
+// Header file for the classes stored in the TTree if any.
+#include <vector>
 
 // Fixed size dimensions of array or collections stored in the TTree if any.
 
@@ -97,7 +97,10 @@ public :
    std::vector<int>     *el_EF_index;
    std::vector<int>     *el_type;
    std::vector<int>     *el_origin;
+   std::vector<int>     *el_typebkg;
    std::vector<int>     *el_originbkg;
+   std::vector<int>     *el_truth_type;
+   std::vector<int>     *el_truth_mothertype;
    std::vector<float>   *el_trackd0pvunbiased;
    std::vector<float>   *el_tracksigd0pvunbiased;
    std::vector<float>   *el_trackz0pvunbiased;
@@ -333,7 +336,10 @@ public :
    TBranch        *b_el_EF_index;   //!
    TBranch        *b_el_type;   //!
    TBranch        *b_el_origin;   //!
+   TBranch        *b_el_typebkg;   //!
    TBranch        *b_el_originbkg;   //!
+   TBranch        *b_el_truth_type;   //!
+   TBranch        *b_el_truth_mothertype;   //!
    TBranch        *b_el_trackd0pvunbiased;   //!
    TBranch        *b_el_tracksigd0pvunbiased;   //!
    TBranch        *b_el_trackz0pvunbiased;   //!
@@ -604,7 +610,10 @@ void THiggsD3PD::Init(TTree *tree)
    el_EF_index = 0;
    el_type = 0;
    el_origin = 0;
+   el_typebkg = 0;
    el_originbkg = 0;
+   el_truth_type = 0;
+   el_truth_mothertype = 0;
    el_trackd0pvunbiased = 0;
    el_tracksigd0pvunbiased = 0;
    el_trackz0pvunbiased = 0;
@@ -838,7 +847,10 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("el_GSF_EF_index", &el_EF_index, &b_el_EF_index);
    fChain->SetBranchAddress("el_GSF_type", &el_type, &b_el_type);
    fChain->SetBranchAddress("el_GSF_origin", &el_origin, &b_el_origin);
+   fChain->SetBranchAddress("el_GSF_typebkg", &el_typebkg, &b_el_typebkg);
    fChain->SetBranchAddress("el_GSF_originbkg", &el_originbkg, &b_el_originbkg);
+   fChain->SetBranchAddress("el_GSF_truth_type", &el_truth_type, &b_el_truth_type);
+   fChain->SetBranchAddress("el_GSF_truth_mothertype", &el_truth_mothertype, &b_el_truth_mothertype);
    fChain->SetBranchAddress("el_GSF_trackd0pvunbiased", &el_trackd0pvunbiased, &b_el_trackd0pvunbiased);
    fChain->SetBranchAddress("el_GSF_tracksigd0pvunbiased", &el_tracksigd0pvunbiased, &b_el_tracksigd0pvunbiased);
    fChain->SetBranchAddress("el_GSF_trackz0pvunbiased", &el_trackz0pvunbiased, &b_el_trackz0pvunbiased);
