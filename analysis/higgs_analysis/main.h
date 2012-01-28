@@ -158,6 +158,8 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("Z_pt", m_Z[i].Z_pt, "Z_pt[n]/F");
 			tree->Branch("Z_eta", m_Z[i].Z_eta, "Z_eta[n]/F");
 			tree->Branch("Z_phi", m_Z[i].Z_phi, "Z_phi[n]/F");
+
+			tree->Branch("sameSign", m_Z[i].sameSign, "sameSign[n]/I");
 		}
 
 		/*---------------------------------------------------------*/
@@ -389,6 +391,8 @@ class THiggsBuilder: public TLeptonAnalysis
 		Float_t Z_pt[MAX];
 		Float_t Z_eta[MAX];
 		Float_t Z_phi[MAX];
+
+		Int_t sameSign[MAX];
 
 	} m_Z[6];
 

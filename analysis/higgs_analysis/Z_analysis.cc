@@ -168,12 +168,9 @@ bool THiggsBuilder::Z_analysis(
 	/* PAIR								   */
 	/*-----------------------------------------------------------------*/
 
-	Int_t pair[2] = {-1, -1};
+	Int_t pair[2];
 
-	if(buildPair(pair, charge1, charge2) == false)
-	{
-		return false;
-	}
+	Bool_t sameSign = !buildPair(pair, charge1, charge2);
 
 	/*-----------------------------------------------------------------*/
 	/* KINEMATICS							   */
@@ -287,6 +284,8 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].Z_pt[n] = Pz.Pt();
 	m_Z[dest].Z_eta[n] = Pz.Eta();
 	m_Z[dest].Z_phi[n] = Pz.Phi();
+
+	m_Z[dest].sameSign[n] = sameSign;
 
 	/*-----------------------------------------------------------------*/
 

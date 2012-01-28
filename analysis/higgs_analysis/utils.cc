@@ -819,7 +819,11 @@ Bool_t buildPair(
 		pair[0] = 0;
 		pair[1] = 1;
 	}
-	else {
+	else
+	{
+		pair[0] = 0;
+		pair[1] = 1;
+
 		return false;
 	}
 
