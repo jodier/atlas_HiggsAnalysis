@@ -126,7 +126,6 @@ class THiggsBuilder: public TLeptonAnalysis
 			//
 
 			tree->Branch("n", &m_Z[i].n, "n" "/I");
-			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/I");
 
 			tree->Branch("weight1", m_Z[i].weight1, "weight1[n]/F");
 			tree->Branch("weight2", m_Z[i].weight2, "weight2[n]/F");
@@ -356,7 +355,6 @@ class THiggsBuilder: public TLeptonAnalysis
 		/**/
 
 		Int_t n;
-		Int_t nPV2;
 
 		Float_t weight1[MAX];
 		Float_t weight2[MAX];

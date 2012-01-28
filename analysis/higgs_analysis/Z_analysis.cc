@@ -57,13 +57,13 @@ bool THiggsBuilder::Z_analysis(
 	Float_t ptTkOverlapping1, ptClOverlapping1;
 	Float_t ptTkOverlapping2, ptClOverlapping2;
 
+	Bool_t tight1;
+	Bool_t tight2;
+
 	Bool_t truthMatch1 = truthMatch(index1, type);
 	Bool_t truthMatch2 = truthMatch(index2, type);
 	Bool_t triggerMatch1 = triggerMatch(index1, type);
 	Bool_t triggerMatch2 = triggerMatch(index2, type);
-
-	Bool_t tight1;
-	Bool_t tight2;
 
 	switch(type)
 	{
@@ -256,8 +256,6 @@ bool THiggsBuilder::Z_analysis(
 
 	Int_t n = m_Z[dest].n++;
 
-	m_Z[dest].nPV2 = nPV2;
-
 	m_Z[dest].weight1[n] = weight1;
 	m_Z[dest].weight2[n] = weight2;
 	m_Z[dest].weight3[n] = weight3;
@@ -281,7 +279,6 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].l2_tkIso20[n] = tkIso20Array[pair[1]];
 	m_Z[dest].l1_clIso20[n] = clIso20Array[pair[0]];
 	m_Z[dest].l2_clIso20[n] = clIso20Array[pair[1]];
-
 	m_Z[dest].l1_d0sigma[n] = d0sigmaArray[pair[0]];
 	m_Z[dest].l2_d0sigma[n] = d0sigmaArray[pair[1]];
 

@@ -24,9 +24,9 @@ void TLeptonAnalysis::fixeEnergy(void)
 				0, "ELECTRON"
 			);
 
-			el_E->at(i) = 0.0f;	/* do not use */
-			el_eta->at(i) = 0.0f;	/* do not use */
-			el_phi->at(i) = 0.0f;	/* do not use */
+			el_E->at(i) = 0.0f;	/* not used */
+			el_eta->at(i) = 0.0f;	/* not used */
+			el_phi->at(i) = 0.0f;	/* not used */
 		}
 
 		/*---------------------------------------------------------*/
