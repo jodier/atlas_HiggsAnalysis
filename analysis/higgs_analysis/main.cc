@@ -248,12 +248,14 @@ void THiggsBuilder::Loop(void)
 		memset(  m_Z , 0x00, sizeof( m_Z ));
 		memset(  m_H , 0x00, sizeof( m_H ));
 
+		/**/
+
 		m_evt.RunNumber = -1;
 		m_evt.EventNumber = -1;
 		m_evt.LumiBlock = -1;
 
-		m_evt.actualIntPerXing = -1.0f;
-		m_evt.averageIntPerXing = -1.0f;
+		m_evt.nPV2 = -1;
+		m_evt.nIntPerXing = -1.0f;
 
 		m_evt.elTrigger = -1;
 		m_evt.muTrigger = -1;
@@ -264,8 +266,8 @@ void THiggsBuilder::Loop(void)
 			m_Z[i].EventNumber = -1;
 			m_Z[i].LumiBlock = -1;
 
-			m_Z[i].actualIntPerXing = -1.0f;
-			m_Z[i].averageIntPerXing = -1.0f;
+			m_Z[i].nPV2 = -1;
+			m_Z[i].nIntPerXing = -1.0f;
 
 			m_Z[i].elTrigger = -1;
 			m_Z[i].muTrigger = -1;
@@ -277,8 +279,8 @@ void THiggsBuilder::Loop(void)
 			m_H[i].EventNumber = -1;
 			m_H[i].LumiBlock = -1;
 
-			m_H[i].actualIntPerXing = -1.0f;
-			m_H[i].averageIntPerXing = -1.0f;
+			m_H[i].nPV2 = -1;
+			m_H[i].nIntPerXing = -1.0f;
 
 			m_H[i].elTrigger = -1;
 			m_H[i].muTrigger = -1;
@@ -502,8 +504,8 @@ void THiggsBuilder::Loop(void)
 		m_evt.EventNumber = EventNumber;
 		m_evt.LumiBlock   =     lbn    ;
 
-		m_evt.actualIntPerXing = actualIntPerXing;
-		m_evt.averageIntPerXing = averageIntPerXing;
+		m_evt.nPV2 = nPV2;
+		m_evt.nIntPerXing = averageIntPerXing;
 
 		m_evt.elTrigger = isOkElTrigger;
 		m_evt.muTrigger = isOkMuTrigger;

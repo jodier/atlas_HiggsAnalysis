@@ -152,8 +152,7 @@ Bool_t THiggsBuilder::H_analysis(
 	m_H[dest].LumiBlock   =     lbn    ;
 
 	m_H[dest].nPV2 = nPV2;
-	m_H[dest].actualIntPerXing = actualIntPerXing;
-	m_H[dest].averageIntPerXing = averageIntPerXing;
+	m_H[dest].nIntPerXing = averageIntPerXing;
 
 	m_H[dest].elTrigger = getElTrigger();
 	m_H[dest].muTrigger = getMuTrigger();

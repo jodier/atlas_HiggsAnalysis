@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Sat Jan 28 01:43:10 2012 by ROOT version 5.32/00
+// Sat Jan 28 14:16:04 2012 by ROOT version 5.32/00
 // from TTree Z1/
 // found on file: output.root
 //////////////////////////////////////////////////////////
@@ -25,14 +25,13 @@ public :
    Int_t           RunNumber;
    Int_t           EventNumber;
    Int_t           LumiBlock;
-   Float_t         actualIntPerXing;
-   Float_t         averageIntPerXing;
+   Int_t           nPV2;
+   Float_t         nIntPerXing;
    Int_t           elTrigger;
    Int_t           muTrigger;
    Int_t           tn;
    UInt_t          ta[128];   //[tn]
    Int_t           n;
-   Int_t           nPV2;
    Float_t         weight1[128];   //[n]
    Float_t         weight2[128];   //[n]
    Float_t         weight3[128];   //[n]
@@ -64,14 +63,13 @@ public :
    TBranch        *b_RunNumber;   //!
    TBranch        *b_EventNumber;   //!
    TBranch        *b_LumiBlock;   //!
-   TBranch        *b_actualIntPerXing;   //!
-   TBranch        *b_averageIntPerXing;   //!
+   TBranch        *b_nPV2;   //!
+   TBranch        *b_nIntPerXing;   //!
    TBranch        *b_elTrigger;   //!
    TBranch        *b_muTrigger;   //!
    TBranch        *b_tn;   //!
    TBranch        *b_ta;   //!
    TBranch        *b_n;   //!
-   TBranch        *b_nPV2;   //!
    TBranch        *b_weight1;   //!
    TBranch        *b_weight2;   //!
    TBranch        *b_weight3;   //!
@@ -172,14 +170,13 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("RunNumber", &RunNumber, &b_RunNumber);
    fChain->SetBranchAddress("EventNumber", &EventNumber, &b_EventNumber);
    fChain->SetBranchAddress("LumiBlock", &LumiBlock, &b_LumiBlock);
-   fChain->SetBranchAddress("actualIntPerXing", &actualIntPerXing, &b_actualIntPerXing);
-   fChain->SetBranchAddress("averageIntPerXing", &averageIntPerXing, &b_averageIntPerXing);
+   fChain->SetBranchAddress("nPV2", &nPV2, &b_nPV2);
+   fChain->SetBranchAddress("nIntPerXing", &nIntPerXing, &b_nIntPerXing);
    fChain->SetBranchAddress("elTrigger", &elTrigger, &b_elTrigger);
    fChain->SetBranchAddress("muTrigger", &muTrigger, &b_muTrigger);
    fChain->SetBranchAddress("tn", &tn, &b_tn);
    fChain->SetBranchAddress("ta", &ta, &b_ta);
    fChain->SetBranchAddress("n", &n, &b_n);
-   fChain->SetBranchAddress("nPV2", &nPV2, &b_nPV2);
    fChain->SetBranchAddress("weight1", weight1, &b_weight1);
    fChain->SetBranchAddress("weight2", weight2, &b_weight2);
    fChain->SetBranchAddress("weight3", weight3, &b_weight3);
@@ -235,4 +232,3 @@ Int_t ZStudy::Cut(Long64_t entry)
    return 1;
 }
 #endif // #ifdef ZStudy_cxx
-

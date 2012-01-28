@@ -29,8 +29,7 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].LumiBlock   =     lbn    ;
 
 	m_Z[dest].nPV2 = nPV2;
-	m_Z[dest].actualIntPerXing = actualIntPerXing;
-	m_Z[dest].averageIntPerXing = averageIntPerXing;
+	m_Z[dest].nIntPerXing = averageIntPerXing;
 
 	m_Z[dest].elTrigger = getElTrigger();
 	m_Z[dest].muTrigger = getMuTrigger();

@@ -82,8 +82,8 @@ class THiggsBuilder: public TLeptonAnalysis
 		m_tree1.Branch("EventNumber", &m_evt.EventNumber, "EventNumber/I");
 		m_tree1.Branch("LumiBlock", &m_evt.LumiBlock, "LumiBlock/I");
 
-		m_tree1.Branch("actualIntPerXing", &m_evt.actualIntPerXing, "actualIntPerXing/F");
-		m_tree1.Branch("averageIntPerXing", &m_evt.averageIntPerXing, "averageIntPerXing/F");
+		m_tree1.Branch("nPV2", &m_evt.nPV2, "nPV2/I");
+		m_tree1.Branch("nIntPerXing", &m_evt.nIntPerXing, "nIntPerXing/F");
 
 		m_tree1.Branch("elTrigger", &m_evt.elTrigger, "elTrigger/I");
 		m_tree1.Branch("muTrigger", &m_evt.muTrigger, "muTrigger/I");
@@ -114,9 +114,8 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("EventNumber", &m_Z[i].EventNumber, "EventNumber/I");
 			tree->Branch("LumiBlock", &m_Z[i].LumiBlock, "LumiBlock/I");
 
-			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/F");
-			tree->Branch("actualIntPerXing", &m_Z[i].actualIntPerXing, "actualIntPerXing/F");
-			tree->Branch("averageIntPerXing", &m_Z[i].averageIntPerXing, "averageIntPerXing/F");
+			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/I");
+			tree->Branch("nIntPerXing", &m_Z[i].nIntPerXing, "nIntPerXing/F");
 
 			tree->Branch("elTrigger", &m_Z[i].elTrigger, "elTrigger/I");
 			tree->Branch("muTrigger", &m_Z[i].muTrigger, "muTrigger/I");
@@ -175,9 +174,8 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("EventNumber", &m_H[i].EventNumber, "EventNumber/I");
 			tree->Branch("LumiBlock", &m_H[i].LumiBlock, "LumiBlock/I");
 
-			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/F");
-			tree->Branch("actualIntPerXing", &m_H[i].actualIntPerXing, "actualIntPerXing/F");
-			tree->Branch("averageIntPerXing", &m_H[i].averageIntPerXing, "averageIntPerXing/F");
+			tree->Branch("nPV2", &m_Z[i].nPV2, "nPV2/I");
+			tree->Branch("nIntPerXing", &m_H[i].nIntPerXing, "nIntPerXing/F");
 
 			tree->Branch("elTrigger", &m_H[i].elTrigger, "elTrigger/I");
 			tree->Branch("muTrigger", &m_H[i].muTrigger, "muTrigger/I");
@@ -317,8 +315,8 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t EventNumber;
 		Int_t LumiBlock;
 
-		Float_t actualIntPerXing;
-		Float_t averageIntPerXing;
+		Int_t nPV2;
+		Float_t nIntPerXing;
 
 		Int_t elTrigger;
 		Int_t muTrigger;
@@ -346,8 +344,7 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t LumiBlock;
 
 		Int_t nPV2;
-		Float_t actualIntPerXing;
-		Float_t averageIntPerXing;
+		Float_t nIntPerXing;
 
 		Int_t elTrigger;
 		Int_t muTrigger;
@@ -402,8 +399,7 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t LumiBlock;
 
 		Int_t nPV2;
-		Float_t actualIntPerXing;
-		Float_t averageIntPerXing;
+		Float_t nIntPerXing;
 
 		Int_t elTrigger;
 		Int_t muTrigger;
