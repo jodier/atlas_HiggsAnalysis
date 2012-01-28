@@ -9,32 +9,26 @@
 
 void TLeptonAnalysis::fixeEnergy(void)
 {
-#ifndef __IS_MC
 	if(core::ER != false)
 	{
-		/*---------------------------------------------------------*/
-
 		for(Int_t i = 0; i < el_n; i++)
 		{
+#ifndef __IS_MC
 			el_cl_E->at(i) = m_energyRescaler->applyEnergyCorrectionMeV(
 				el_cl_eta->at(i),
 				el_cl_phi->at(i),
 				el_cl_E->at(i),
 				electronGetEt(i),
-				0, "ELECTRON"
+				0,
+				"ELECTRON"
 			);
-
-			el_E->at(i) = 0.0f;	/* not used */
-			el_eta->at(i) = 0.0f;	/* not used */
-			el_phi->at(i) = 0.0f;	/* not used */
-		}
-
-		/*---------------------------------------------------------*/
-	}
 #endif
-	for(Int_t i = 0; i < el_n; i++)
-	{
-		el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->applyMCCalibrationMeV(el_cl_eta->at(i), electronGetEt(i), "ELECTRON");
+			el_cl_E->at(i) = el_cl_E->at(i) * m_energyRescaler->applyMCCalibrationMeV(
+				el_cl_eta->at(i),
+				electronGetEt(i),
+				"ELECTRON"
+			);
+		}
 	}
 #ifdef __IS_MC
 	if(core::SM != false)
