@@ -577,7 +577,7 @@ void ZStudy::Loop(void)
 				switch(cut)
 				{
 					case 1:
-						isOk = l2_clIso20_corrected[i] < 0.3f;
+						isOk = l2_clIso20[i] < 0.3f;
 						break;
 
 					case 2:
@@ -589,7 +589,7 @@ void ZStudy::Loop(void)
 						break;
 
 					case 4:
-						isOk = l2_clIso20_corrected[i] < 0.3f && l2_tkIso20[i] < 0.15f && l2_d0sigma[i] < 6.0f;
+						isOk = l2_clIso20[i] < 0.3f && l2_tkIso20[i] < 0.15f && l2_d0sigma[i] < 6.0f;
 						break;
 				}
 
@@ -612,7 +612,7 @@ void ZStudy::Loop(void)
 				switch(cut)
 				{
 					case 1:
-						isOk = l1_clIso20_corrected[i] < 0.3f;
+						isOk = l1_clIso20[i] < 0.3f;
 						break;
 
 					case 2:
@@ -624,7 +624,7 @@ void ZStudy::Loop(void)
 						break;
 
 					case 4:
-						isOk = l1_clIso20_corrected[i] < 0.3f && l1_tkIso20[i] < 0.15f && l1_d0sigma[i] < 6.0f;
+						isOk = l1_clIso20[i] < 0.3f && l1_tkIso20[i] < 0.15f && l1_d0sigma[i] < 6.0f;
 						break;
 				}
 

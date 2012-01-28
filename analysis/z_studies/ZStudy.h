@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Fri Jan 27 10:13:02 2012 by ROOT version 5.28/00b
+// Sat Jan 28 01:43:10 2012 by ROOT version 5.32/00
 // from TTree Z1/
-// found on file: output_bar.root
+// found on file: output.root
 //////////////////////////////////////////////////////////
 
 #ifndef ZStudy_h
@@ -11,6 +11,10 @@
 #include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
+
+// Header file for the classes stored in the TTree if any.
+
+// Fixed size dimensions of array or collections stored in the TTree if any.
 
 class ZStudy {
 public :
@@ -48,8 +52,6 @@ public :
    Float_t         l2_tkIso20[128];   //[n]
    Float_t         l1_clIso20[128];   //[n]
    Float_t         l2_clIso20[128];   //[n]
-   Float_t         l1_clIso20_corrected[128];   //[n]
-   Float_t         l2_clIso20_corrected[128];   //[n]
    Float_t         l1_d0sigma[128];   //[n]
    Float_t         l2_d0sigma[128];   //[n]
    Float_t         Z_m[128];   //[n]
@@ -89,8 +91,6 @@ public :
    TBranch        *b_l2_tkIso20;   //!
    TBranch        *b_l1_clIso20;   //!
    TBranch        *b_l2_clIso20;   //!
-   TBranch        *b_l1_clIso20_corrected;   //!
-   TBranch        *b_l2_clIso20_corrected;   //!
    TBranch        *b_l1_d0sigma;   //!
    TBranch        *b_l2_d0sigma;   //!
    TBranch        *b_Z_m;   //!
@@ -113,16 +113,16 @@ public :
 #endif
 
 #ifdef ZStudy_cxx
-ZStudy::ZStudy(TTree *tree)
+ZStudy::ZStudy(TTree *tree) : fChain(0) 
 {
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("output_bar.root");
-      if (!f) {
-         f = new TFile("output_bar.root");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("output.root");
+      if (!f || !f->IsOpen()) {
+         f = new TFile("output.root");
       }
-      tree = (TTree*)gDirectory->Get("Z1");
+      f->GetObject("Z1",tree);
 
    }
    Init(tree);
@@ -146,10 +146,8 @@ Long64_t ZStudy::LoadTree(Long64_t entry)
    if (!fChain) return -5;
    Long64_t centry = fChain->LoadTree(entry);
    if (centry < 0) return centry;
-   if (!fChain->InheritsFrom(TChain::Class()))  return centry;
-   TChain *chain = (TChain*)fChain;
-   if (chain->GetTreeNumber() != fCurrent) {
-      fCurrent = chain->GetTreeNumber();
+   if (fChain->GetTreeNumber() != fCurrent) {
+      fCurrent = fChain->GetTreeNumber();
       Notify();
    }
    return centry;
@@ -201,8 +199,6 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("l2_tkIso20", l2_tkIso20, &b_l2_tkIso20);
    fChain->SetBranchAddress("l1_clIso20", l1_clIso20, &b_l1_clIso20);
    fChain->SetBranchAddress("l2_clIso20", l2_clIso20, &b_l2_clIso20);
-   fChain->SetBranchAddress("l1_clIso20_corrected", l1_clIso20_corrected, &b_l1_clIso20_corrected);
-   fChain->SetBranchAddress("l2_clIso20_corrected", l2_clIso20_corrected, &b_l2_clIso20_corrected);
    fChain->SetBranchAddress("l1_d0sigma", l1_d0sigma, &b_l1_d0sigma);
    fChain->SetBranchAddress("l2_d0sigma", l2_d0sigma, &b_l2_d0sigma);
    fChain->SetBranchAddress("Z_m", Z_m, &b_Z_m);
