@@ -213,8 +213,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge2 = el_charge->at(index2);
 			tkIso1 = el_ptcone20->at(index1) / pt1;
 			tkIso2 = el_ptcone20->at(index2) / pt2;
-			clIso1 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 20, core::isMC(RunNumber), el_Etcone20->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
-			clIso2 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 20, core::isMC(RunNumber), el_Etcone20->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
+			clIso1 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index1), 20, __isMC, el_Etcone20->at(index1), CaloIsoCorrection::ELECTRON) / pt1;
+			clIso2 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index2), 20, __isMC, el_Etcone20->at(index2), CaloIsoCorrection::ELECTRON) / pt2;
 			d0sigma1 = fabs(el_trackd0pvunbiased->at(index1) / el_tracksigd0pvunbiased->at(index1));
 			d0sigma2 = fabs(el_trackd0pvunbiased->at(index2) / el_tracksigd0pvunbiased->at(index2));
 			ptCut1 = ptCut2 = higgs_el_trigg_pt;
@@ -359,8 +359,8 @@ Bool_t THiggsBuilder::H_analysis(
 			charge4 = el_charge->at(index4);
 			tkIso3 = el_ptcone20->at(index3) / pt3;
 			tkIso4 = el_ptcone20->at(index4) / pt4;
-			clIso3 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index3), 20, core::isMC(RunNumber), el_Etcone20->at(index3), CaloIsoCorrection::ELECTRON) / pt3;
-			clIso4 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index4), 20, core::isMC(RunNumber), el_Etcone20->at(index4), CaloIsoCorrection::ELECTRON) / pt4;
+			clIso3 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index3), 20, __isMC, el_Etcone20->at(index3), CaloIsoCorrection::ELECTRON) / pt3;
+			clIso4 = CaloIsoCorrection::GetNPVCorrectedIsolation(nPV2, el_etas2->at(index4), 20, __isMC, el_Etcone20->at(index4), CaloIsoCorrection::ELECTRON) / pt4;
 			d0sigma3 = fabs(el_trackd0pvunbiased->at(index3) / el_tracksigd0pvunbiased->at(index3));
 			d0sigma4 = fabs(el_trackd0pvunbiased->at(index4) / el_tracksigd0pvunbiased->at(index4));
 			ptCut3 = ptCut4 = higgs_el_trigg_pt;

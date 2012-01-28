@@ -23,6 +23,14 @@
 
 /*-------------------------------------------------------------------------*/
 
+#ifdef __IS_MC
+  #define __isMC true
+#else
+  #define __isMC false
+#endif
+
+/*-------------------------------------------------------------------------*/
+
 #define Map_t		std::map
 #define String_t	std::string
 #define Vector_t	std::vector
@@ -100,8 +108,6 @@ namespace core
 	/*-----------------------------------------------------------------*/
 	/* UTILS							   */
 	/*-----------------------------------------------------------------*/
-
-	Bool_t isMC(Int_t RunNumber);
 
 	Double_t binomialError(Double_t x, Double_t y);
 

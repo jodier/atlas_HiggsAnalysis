@@ -6,17 +6,6 @@
 
 /*-------------------------------------------------------------------------*/
 
-Bool_t core::isMC(Int_t RunNumber)
-{
-#ifdef __IS_MC
-	return true;
-#else
-	return false;
-#endif
-}
-
-/*-------------------------------------------------------------------------*/
-
 Double_t core::binomialError(Double_t x, Double_t y)
 {
 	Double_t error = TMath::Sqrt(
