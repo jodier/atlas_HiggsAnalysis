@@ -249,8 +249,6 @@ L = [
 	#'data11_7TeV.00191715.physics_Egamma.merge.NTUP_HSG2.f414_m1025_p761_p762_tid577624_00/',
 	#'data11_7TeV.00191920.physics_Egamma.merge.NTUP_HSG2.f414_m1025_p761_p762_tid579469_00/',
 	#'data11_7TeV.00191933.physics_Egamma.merge.NTUP_HSG2.f415_m1025_p761_p762_tid582968_00/',
-
-
 ]
 
 #############################################################################
