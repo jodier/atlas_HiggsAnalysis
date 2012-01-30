@@ -183,7 +183,9 @@ void ZStudy::Loop(void)
 
 		for(int i = 0; i < n; i++)
 		{
-			if(l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
+			if(sameSign[i] == 1
+			   ||
+			   l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
 			   ||
 			   l2_pt[i] < ET_MIN || l2_pt[i] > ET_MAX
 			   ||

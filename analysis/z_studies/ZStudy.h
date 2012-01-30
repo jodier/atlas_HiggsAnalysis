@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Sat Jan 28 14:16:04 2012 by ROOT version 5.32/00
+// Mon Jan 30 12:06:16 2012 by ROOT version 5.32/00
 // from TTree Z1/
 // found on file: output.root
 //////////////////////////////////////////////////////////
@@ -58,6 +58,7 @@ public :
    Float_t         Z_pt[128];   //[n]
    Float_t         Z_eta[128];   //[n]
    Float_t         Z_phi[128];   //[n]
+   Int_t           sameSign[128];   //[n]
 
    // List of branches
    TBranch        *b_RunNumber;   //!
@@ -96,6 +97,7 @@ public :
    TBranch        *b_Z_pt;   //!
    TBranch        *b_Z_eta;   //!
    TBranch        *b_Z_phi;   //!
+   TBranch        *b_sameSign;   //!
 
    ZStudy(TTree *tree=0);
    virtual ~ZStudy();
@@ -203,6 +205,7 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("Z_pt", Z_pt, &b_Z_pt);
    fChain->SetBranchAddress("Z_eta", Z_eta, &b_Z_eta);
    fChain->SetBranchAddress("Z_phi", Z_phi, &b_Z_phi);
+   fChain->SetBranchAddress("sameSign", sameSign, &b_sameSign);
    Notify();
 }
 
