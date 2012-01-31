@@ -106,11 +106,7 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 		 ) {
 			m_H[dest].good[i] = true;
 
-			/*---------------------------------*/
-			/* DEBUG			   */
-			/*---------------------------------*/
-/*
-			if(dest == 3)
+/*			if(dest == ???)
 			{
 				std::cout << "Event number    : " << m_H[dest].EventNumber << std::endl;
 
@@ -131,36 +127,33 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 					  << ", pT_l4 = " << m_H[dest].l4_pt[i]
 					  << std::endl;
 			}
-*/
-			/*---------------------------------*/
-		}
-		else {
-			m_H[dest].flag[i] = 0x3F;
-		}
+*/		}
 	}
 
 	/*-------------------------------------------------*/
 	/* PASS 4					   */
 	/*-------------------------------------------------*/
 
+	Bool_t eeuu;
+
 	for(Int_t i = 0; i < m_H[dest].n; i++)
 	{
-		if((m_H[dest].flag[i] & (1 << 0)) != 0 /*---------------------*/) m_H[dest].cnt[ 0] = true;
-		if((m_H[dest].flag[i] & (1 << 1)) != 0 /*---------------------*/) m_H[dest].cnt[ 1] = true;
-		if((m_H[dest].flag[i] & (1 << 2)) != 0 /*---------------------*/) m_H[dest].cnt[ 2] = true;
-		if((m_H[dest].flag[i] & (1 << 3)) != 0 /*---------------------*/) m_H[dest].cnt[ 3] = true;
-		if((m_H[dest].flag[i] & (1 << 4)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 4] = true;
-		if((m_H[dest].flag[i] & (1 << 4)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 5] = true;
-		if((m_H[dest].flag[i] & (1 << 5)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 6] = true;
-		if((m_H[dest].flag[i] & (1 << 5)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 7] = true;
-		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[ 8] = true;
-		if((m_H[dest].flag[i] & (1 << 6)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[ 9] = true;
-		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[10] = true;
-		if((m_H[dest].flag[i] & (1 << 7)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[11] = true;
-		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[12] = true;
-		if((m_H[dest].flag[i] & (1 << 8)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[13] = true;
-		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] != 0) m_H[dest].cnt[14] = true;
-		if((m_H[dest].flag[i] & (1 << 9)) != 0 && m_H[dest].eeuu[i] == 0) m_H[dest].cnt[15] = true;
+		if((m_H[dest].flag[i] & (1 << 0)) != 0) m_H[dest].cnt[0] = true;
+		if((m_H[dest].flag[i] & (1 << 1)) != 0) m_H[dest].cnt[1] = true;
+		if((m_H[dest].flag[i] & (1 << 2)) != 0) m_H[dest].cnt[2] = true;
+		if((m_H[dest].flag[i] & (1 << 3)) != 0) m_H[dest].cnt[3] = true;
+		if((m_H[dest].flag[i] & (1 << 4)) != 0) m_H[dest].cnt[4] = true;
+		if((m_H[dest].flag[i] & (1 << 5)) != 0) m_H[dest].cnt[5] = true;
+		if((m_H[dest].flag[i] & (1 << 6)) != 0) m_H[dest].cnt[6] = true;
+
+		if(m_H[dest].good[i] != false)
+		{
+			eeuu = m_H[dest].eeuu[i] != 0;
+
+			if((m_H[dest].flag[i] & (1 << 7)) != 0) m_H[dest].cnt[eeuu ?  7 :  8] = true;
+			if((m_H[dest].flag[i] & (1 << 8)) != 0) m_H[dest].cnt[eeuu ?  9 : 10] = true;
+			if((m_H[dest].flag[i] & (1 << 9)) != 0) m_H[dest].cnt[eeuu ? 11 : 12] = true;
+		}
 	}
 }
 
@@ -287,16 +280,6 @@ void THiggsBuilder::Loop(void)
 		}
 
 		/*---------------------------------------------------------*/
-		/* FLAGS						   */
-		/*---------------------------------------------------------*/
-
-		Bool_t isOkElTrigger = getElTrigger();
-		Bool_t isOkMuTrigger = getMuTrigger();
-
-		Bool_t useLoose = core::configFltLookup("EL_USE_LOOSE") != 0.0f;
-		Bool_t useForward = core::configFltLookup("EL_USE_FORWARD") != 0.0f;
-
-		/*---------------------------------------------------------*/
 		/* AT LEAST 3 PRIMARY TRACKS AND LAR ERROR		   */
 		/*---------------------------------------------------------*/
 
@@ -322,6 +305,14 @@ void THiggsBuilder::Loop(void)
 #endif
 		/*---------------------------------------------------------*/
 		/* SELECTION 4e or 4mu					   */
+		/*---------------------------------------------------------*/
+
+		Bool_t isOkElTrigger = getElTrigger();
+		Bool_t isOkMuTrigger = getMuTrigger();
+
+		Bool_t useLoose = core::configFltLookup("EL_USE_LOOSE") != 0.0f;
+		Bool_t useForward = core::configFltLookup("EL_USE_FORWARD") != 0.0f;
+
 		/*---------------------------------------------------------*/
 
 		if(isOkElTrigger != false && isOkVertex != false)
