@@ -132,6 +132,8 @@ Bool_t THiggsBuilder::H_analysis(
 	TLeptonType type2,
 	Int_t dest
 ) {
+	Bool_t isOk = true;
+
 	Float_t Z_MASS = core::configFltLookup("Z_MASS");
 	Float_t Z_REGION = core::configFltLookup("Z_REGION");
 
@@ -490,7 +492,9 @@ Bool_t THiggsBuilder::H_analysis(
 			return false;
 	}
 
-	Bool_t isOk = true;
+	/*-----------------------------------------------------------------*/
+	/* ARRAYS							   */
+	/*-----------------------------------------------------------------*/
 
 	Float_t eArray[4] = {E1, E2, E3, E4};
 	Float_t ptArray[4] = {pt1, pt2, pt3, pt4};
@@ -513,10 +517,14 @@ Bool_t THiggsBuilder::H_analysis(
 	Int_t truth_typeArray[4] = {truth_type1, truth_type2, truth_type3, truth_type4};
 	Int_t truth_mothertypeArray[4] = {truth_mothertype1, truth_mothertype2, truth_mothertype3, truth_mothertype4};
 
-	_INC(isOk, dest, 0);
+	/*-----------------------------------------------------------------*/
+	/* FOUR LEPTONS							   */
+	/*-----------------------------------------------------------------*/
+
+	_INC(true, dest, 0);
 
 	/*-----------------------------------------------------------------*/
-	/* SFOS + mass_2e2µ						   */
+	/* SFOS + MASS_2e2µ						   */
 	/*-----------------------------------------------------------------*/
 
 	Int_t pair1[2] = {-1, -1};
