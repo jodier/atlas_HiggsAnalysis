@@ -225,7 +225,6 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 		Float_t CNT8 = CNT8_eeuu + CNT8_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-
 		printf("7 - Track iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
 		printf("8 - Calo iso.\t%.0f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
 		printf("9 - d0sigd0\t%.0f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));

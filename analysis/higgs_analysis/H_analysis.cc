@@ -132,7 +132,7 @@ Bool_t THiggsBuilder::H_analysis(
 	TLeptonType type2,
 	Int_t dest
 ) {
-	Bool_t isOk = true;
+	Bool_t isOk;
 
 	Float_t Z_MASS = core::configFltLookup("Z_MASS");
 	Float_t Z_REGION = core::configFltLookup("Z_REGION");
@@ -577,6 +577,8 @@ Bool_t THiggsBuilder::H_analysis(
 
 	/*-----------------------------------------------------------------*/
 
+	isOk = true;
+
 	Bool_t eeuu = true;
 
 	TZVector Z1;
@@ -666,6 +668,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/* KINEMATICS							   */
 	/*-----------------------------------------------------------------*/
 
+	isOk = true;
+
 	Int_t nrKinematics = 0;
 
 	if(pt1 > ptCut1) {
@@ -695,6 +699,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/* TRIGGER							   */
 	/*-----------------------------------------------------------------*/
 
+	isOk = true;
+
 	Int_t nrTrigger = 0;
 
 	if(triggerMatch1 != false) {
@@ -721,8 +727,10 @@ Bool_t THiggsBuilder::H_analysis(
 	_INC(isOk, dest, 3);
 
 	/*-----------------------------------------------------------------*/
-	/* LEADING Z CUTS						   */
+	/* LEADING Z MASS CUT						   */
 	/*-----------------------------------------------------------------*/
+
+	isOk = true;
 
 	Bool_t q1 = fabs(Z_MASS - Z1.Z_lorentz.M()) < Z_REGION;
 	Bool_t q2 = fabs(Z_MASS - Z3.Z_lorentz.M()) < Z_REGION;
@@ -737,28 +745,31 @@ Bool_t THiggsBuilder::H_analysis(
 	_INC(isOk, dest, 4);
 
 	/*-----------------------------------------------------------------*/
-	/* SUB-LEADING Z CUTS						   */
+	/* SUB-LEADING Z MASS CUT					   */
 	/*-----------------------------------------------------------------*/
 
-	Bool_t q3 = q1 && subLeadingCut(Z2.Z_lorentz.M(), H_lorentz.M());
-	Bool_t q4 = q2 && subLeadingCut(Z4.Z_lorentz.M(), H_lorentz.M());
+	if(isOk)
+	{
+		Bool_t q3 = q1 && subLeadingCut(Z2.Z_lorentz.M(), H_lorentz.M());
+		Bool_t q4 = q2 && subLeadingCut(Z4.Z_lorentz.M(), H_lorentz.M());
 
-	/**/ if(q3 == false && q4 == false)
-	{
-		isOk = false;
-	}
-	else if(q3 != false && q4 != false)
-	{
-		if(fabs(Z_MASS - Z1.Z_lorentz.M()) > fabs(Z_MASS - Z3.Z_lorentz.M()))
+		/**/ if(q3 == false && q4 == false)
+		{
+			isOk = false;
+		}
+		else if(q3 != false && q4 != false)
+		{
+			if(fabs(Z_MASS - Z1.Z_lorentz.M()) > fabs(Z_MASS - Z3.Z_lorentz.M()))
+			{
+				SWAP(Z1, Z3);
+				SWAP(Z2, Z4);
+			}
+		}
+		else if(q3 == false && q4 != false)
 		{
 			SWAP(Z1, Z3);
 			SWAP(Z2, Z4);
 		}
-	}
-	else if(q3 == false && q4 != false)
-	{
-		SWAP(Z1, Z3);
-		SWAP(Z2, Z4);
 	}
 
 	_INC(isOk, dest, 5);
@@ -766,6 +777,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/*-----------------------------------------------------------------*/
 	/* min[ΔR]>0.10							   */
 	/*-----------------------------------------------------------------*/
+
+	isOk = true;
 
 	for(Int_t i = 0 + 0; i < 4; i++)
 	{
@@ -783,6 +796,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/*-----------------------------------------------------------------*/
 	/* TRACK ISOLATION						   */
 	/*-----------------------------------------------------------------*/
+
+	isOk = true;
 
 	for(Int_t i = 0 + 0; i < 4; i++)
 	{
@@ -813,6 +828,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/* CALO ISOLATION						   */
 	/*-----------------------------------------------------------------*/
 
+	isOk = true;
+
 	for(Int_t i = 0 + 0; i < 4; i++)
 	{
 		for(Int_t j = i + 1; j < 4; j++)
@@ -841,6 +858,8 @@ Bool_t THiggsBuilder::H_analysis(
 	/*-----------------------------------------------------------------*/
 	/* D0 SIGNIFICANCE						   */
 	/*-----------------------------------------------------------------*/
+
+	isOk = true;
 
 	Int_t reArray[4];
 

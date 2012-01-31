@@ -62,7 +62,7 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 	/* PASS 1					   */
 	/*-------------------------------------------------*/
 
-	for(Int_t i = 0; i < m_H[dest].n; i++) if(m_H[dest].flag[i] >= 0x3F)
+	for(Int_t i = 0; i < m_H[dest].n; i++) if((m_H[dest].flag[i] & 127) == 127)
 	{
 		currDMass = fabs(Z_MASS - m_H[dest].Z12_m[i]);
 
@@ -76,7 +76,7 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 	/* PASS 2					   */
 	/*-------------------------------------------------*/
 
-	for(Int_t i = 0; i < m_H[dest].n; i++) if(m_H[dest].flag[i] >= 0x3F)
+	for(Int_t i = 0; i < m_H[dest].n; i++) if((m_H[dest].flag[i] & 127) == 127)
 	{
 		currDMass = fabs(Z_MASS - m_H[dest].Z12_m[i]);
 
@@ -95,7 +95,7 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 	/* PASS 3					   */
 	/*-------------------------------------------------*/
 
-	for(Int_t i = 0; i < m_H[dest].n; i++) if(m_H[dest].flag[i] >= 0x3F)
+	for(Int_t i = 0; i < m_H[dest].n; i++) if((m_H[dest].flag[i] & 127) == 127)
 	{
 		currDMass = fabs(Z_MASS - m_H[dest].Z12_m[i]);
 		currAMass = fabs(0.000f - m_H[dest].Z34_m[i]);
@@ -138,21 +138,21 @@ void THiggsBuilder::selectQuadruplet(Int_t dest, Float_t Z_MASS)
 
 	for(Int_t i = 0; i < m_H[dest].n; i++)
 	{
-		if((m_H[dest].flag[i] & (1 << 0)) != 0) m_H[dest].cnt[0] = true;
-		if((m_H[dest].flag[i] & (1 << 1)) != 0) m_H[dest].cnt[1] = true;
-		if((m_H[dest].flag[i] & (1 << 2)) != 0) m_H[dest].cnt[2] = true;
-		if((m_H[dest].flag[i] & (1 << 3)) != 0) m_H[dest].cnt[3] = true;
-		if((m_H[dest].flag[i] & (1 << 4)) != 0) m_H[dest].cnt[4] = true;
-		if((m_H[dest].flag[i] & (1 << 5)) != 0) m_H[dest].cnt[5] = true;
-		if((m_H[dest].flag[i] & (1 << 6)) != 0) m_H[dest].cnt[6] = true;
+		if((m_H[dest].flag[i] &   1) ==   1) m_H[dest].cnt[0] = true;
+		if((m_H[dest].flag[i] &   3) ==   3) m_H[dest].cnt[1] = true;
+		if((m_H[dest].flag[i] &   7) ==   7) m_H[dest].cnt[2] = true;
+		if((m_H[dest].flag[i] &  15) ==  15) m_H[dest].cnt[3] = true;
+		if((m_H[dest].flag[i] &  31) ==  31) m_H[dest].cnt[4] = true;
+		if((m_H[dest].flag[i] &  63) ==  63) m_H[dest].cnt[5] = true;
+		if((m_H[dest].flag[i] & 127) == 127) m_H[dest].cnt[6] = true;
 
 		if(m_H[dest].good[i] != false)
 		{
 			eeuu = m_H[dest].eeuu[i] != 0;
 
-			if((m_H[dest].flag[i] & (1 << 7)) != 0) m_H[dest].cnt[eeuu ?  7 :  8] = true;
-			if((m_H[dest].flag[i] & (1 << 8)) != 0) m_H[dest].cnt[eeuu ?  9 : 10] = true;
-			if((m_H[dest].flag[i] & (1 << 9)) != 0) m_H[dest].cnt[eeuu ? 11 : 12] = true;
+			if((m_H[dest].flag[i] &  255) ==  255) m_H[dest].cnt[eeuu ?  7 :  8] = true;
+			if((m_H[dest].flag[i] &  511) ==  511) m_H[dest].cnt[eeuu ?  9 : 10] = true;
+			if((m_H[dest].flag[i] & 1023) == 1023) m_H[dest].cnt[eeuu ? 11 : 12] = true;
 		}
 	}
 }
