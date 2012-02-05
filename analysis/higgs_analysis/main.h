@@ -139,6 +139,8 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("l1_triggerMatch", m_Z[i].l1_triggerMatch, "l1_triggerMatch[n]/I");
 			tree->Branch("l2_triggerMatch", m_Z[i].l2_triggerMatch, "l2_triggerMatch[n]/I");
 
+			tree->Branch("l1_e", m_Z[i].l1_e, "l1_e[n]/F");
+			tree->Branch("l2_e", m_Z[i].l2_e, "l2_e[n]/F");
 			tree->Branch("l1_pt", m_Z[i].l1_pt, "l1_pt[n]/F");
 			tree->Branch("l2_pt", m_Z[i].l2_pt, "l2_pt[n]/F");
 			tree->Branch("l1_eta", m_Z[i].l1_eta, "l1_eta[n]/F");
@@ -198,6 +200,10 @@ class THiggsBuilder: public TLeptonAnalysis
 			tree->Branch("l3_triggerMatch", m_H[i].l3_triggerMatch, "l3_triggerMatch[n]/I");
 			tree->Branch("l4_triggerMatch", m_H[i].l4_triggerMatch, "l4_triggerMatch[n]/I");
 
+			tree->Branch("l1_e", m_H[i].l1_e, "l1_e[n]/F");
+			tree->Branch("l2_e", m_H[i].l2_e, "l2_e[n]/F");
+			tree->Branch("l3_e", m_H[i].l3_e, "l3_e[n]/F");
+			tree->Branch("l4_e", m_H[i].l4_e, "l4_e[n]/F");
 			tree->Branch("l1_pt", m_H[i].l1_pt, "l1_pt[n]/F");
 			tree->Branch("l2_pt", m_H[i].l2_pt, "l2_pt[n]/F");
 			tree->Branch("l3_pt", m_H[i].l3_pt, "l3_pt[n]/F");
@@ -367,14 +373,14 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t l1_triggerMatch[MAX];
 		Int_t l2_triggerMatch[MAX];
 
+		Float_t l1_e[MAX];
+		Float_t l2_e[MAX];
 		Float_t l1_pt[MAX];
 		Float_t l2_pt[MAX];
 		Float_t l1_eta[MAX];
 		Float_t l2_eta[MAX];
 		Float_t l1_phi[MAX];
 		Float_t l2_phi[MAX];
-		Float_t l1_z0[MAX];
-		Float_t l2_z0[MAX];
 
 		Float_t l1_clIso20[MAX];
 		Float_t l2_clIso20[MAX];
@@ -421,6 +427,10 @@ class THiggsBuilder: public TLeptonAnalysis
 		Int_t l3_triggerMatch[MAX];
 		Int_t l4_triggerMatch[MAX];
 
+		Float_t l1_e[MAX];
+		Float_t l2_e[MAX];
+		Float_t l3_e[MAX];
+		Float_t l4_e[MAX];
 		Float_t l1_pt[MAX];
 		Float_t l2_pt[MAX];
 		Float_t l3_pt[MAX];

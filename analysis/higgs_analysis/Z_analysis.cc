@@ -265,6 +265,8 @@ bool THiggsBuilder::Z_analysis(
 	m_Z[dest].l1_triggerMatch[n] = triggerMatchArray[pair[0]];
 	m_Z[dest].l2_triggerMatch[n] = triggerMatchArray[pair[1]];
 
+	m_Z[dest].l1_e[n] = 1.0e-3f * eArray[pair[0]];
+	m_Z[dest].l2_e[n] = 1.0e-3f * eArray[pair[1]];
 	m_Z[dest].l1_pt[n] = 1.0e-3f * ptArray[pair[0]];
 	m_Z[dest].l2_pt[n] = 1.0e-3f * ptArray[pair[1]];
 	m_Z[dest].l1_eta[n] = etaArray[pair[0]];

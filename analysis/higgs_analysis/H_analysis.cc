@@ -890,6 +890,10 @@ Bool_t THiggsBuilder::H_analysis(
 	m_H[dest].l3_triggerMatch[n] = Z2.l1_triggerMatch;
 	m_H[dest].l4_triggerMatch[n] = Z2.l2_triggerMatch;
 
+	m_H[dest].l1_e[n] = Z1.l1_lorentz.E();
+	m_H[dest].l2_e[n] = Z1.l2_lorentz.E();
+	m_H[dest].l3_e[n] = Z2.l1_lorentz.E();
+	m_H[dest].l4_e[n] = Z2.l2_lorentz.E();
 	m_H[dest].l1_pt[n] = Z1.l1_lorentz.Pt();
 	m_H[dest].l2_pt[n] = Z1.l2_lorentz.Pt();
 	m_H[dest].l3_pt[n] = Z2.l1_lorentz.Pt();
