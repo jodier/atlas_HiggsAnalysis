@@ -4398,7 +4398,7 @@ public :
    std::vector<int>     *trig_EF_el_EF_e22vh_medium1;
    std::vector<int>     *trig_EF_el_EF_2e12T_medium;
    std::vector<int>     *trig_EF_el_EF_2e12Tvh_medium;
-   std::vector<int>     *trig_EF_el_EF_mu18_MG_medium ;
+   std::vector<int>     *trig_EF_el_EF_mu18_MG_medium;
    std::vector<int>     *trig_EF_el_EF_e5_tight;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;
@@ -9021,7 +9021,7 @@ public :
    TBranch        *b_trig_EF_el_EF_e22vh_medium1;   //!
    TBranch        *b_trig_EF_el_EF_2e12T_medium;   //!
    TBranch        *b_trig_EF_el_EF_2e12Tvh_medium;   //!
-   TBranch        *b_trig_EF_el_EF_mu18_MG_medium ;   //!
+   TBranch        *b_trig_EF_el_EF_mu18_MG_medium;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
@@ -12289,7 +12289,7 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_el_EF_e22vh_medium1 = 0;
    trig_EF_el_EF_2e12T_medium = 0;
    trig_EF_el_EF_2e12Tvh_medium = 0;
-   trig_EF_el_EF_mu18_MG_medium  = 0;
+   trig_EF_el_EF_mu18_MG_medium = 0;
    trig_EF_el_EF_e5_tight = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk = 0;
@@ -12616,7 +12616,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
    fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
-   fChain->SetBranchAddress("EF_mu18_MG_medium ", &EF_mu18_MG_medium , &b_EF_mu18_MG_medium );
+   fChain->SetBranchAddress("EF_mu18_MG_medium", &EF_mu18_MG_medium, &b_EF_mu18_MG_medium);
    fChain->SetBranchAddress("EF_e5_tight", &EF_e5_tight, &b_EF_e5_tight);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi", &EF_e5_tight_e4_etcut_Jpsi, &b_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi_SiTrk", &EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_EF_e5_tight_e4_etcut_Jpsi_SiTrk);
@@ -16912,7 +16912,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1", &trig_EF_el_EF_e22vh_medium1, &b_trig_EF_el_EF_e22vh_medium1);
    fChain->SetBranchAddress("trig_EF_el_EF_2e12T_medium", &trig_EF_el_EF_2e12T_medium, &b_trig_EF_el_EF_2e12T_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_2e12Tvh_medium", &trig_EF_el_EF_2e12Tvh_medium, &b_trig_EF_el_EF_2e12Tvh_medium);
-   fChain->SetBranchAddress("trig_EF_el_EF_mu18_MG_medium ", &trig_EF_el_EF_mu18_MG_medium , &b_trig_EF_el_EF_mu18_MG_medium );
+   fChain->SetBranchAddress("trig_EF_el_EF_mu18_MG_medium", &trig_EF_el_EF_mu18_MG_medium, &b_trig_EF_el_EF_mu18_MG_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight", &trig_EF_el_EF_e5_tight, &b_trig_EF_el_EF_e5_tight);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk);
