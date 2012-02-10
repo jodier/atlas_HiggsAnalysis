@@ -77,9 +77,9 @@ class TLeptonAnalysis: public TNTuple
 		int_lum[ 5] = 259.459f; // luminosity for period H
 		int_lum[ 6] = 386.226f; // luminosity for period I
 		int_lum[ 7] = 226.460f; // luminosity for period J
-		int_lum[ 8] = 600.069f; // luminosity for period J
-		int_lum[ 9] = 1401.87f; // luminosity for period K
-		int_lum[10] = 1025.62f; // luminosity for period L
+		int_lum[ 8] = 600.069f; // luminosity for period K
+		int_lum[ 9] = 1401.87f; // luminosity for period L
+		int_lum[10] = 1025.62f; // luminosity for period M
 
 		m_pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");
 		m_pileupReweightingEH = new Root::TPileupReweighting("TPileupReweightingEH");

@@ -25,6 +25,8 @@ if __name__ == '__main__':
 
 	name = sys.argv[2]
 
+	print('%s = false\n' % name)
+
 	for LumiRange in MyGRLRoot.getElementsByTagName('NamedLumiRange'):
 
 		for LumiBlock in LumiRange.getElementsByTagName('LumiBlockCollection'):
@@ -51,12 +53,12 @@ if __name__ == '__main__':
 					print 'else if(RunNumber == %s && (' % Run
 
 				for j in xrange(nr):
-					print '\t(lbn < %4s || lbn > %4s)' % (LBRangeStart[j], LBRangeEnd[j])
+					print '\t(lbn >= %4s && lbn <= %4s)' % (LBRangeStart[j], LBRangeEnd[j])
 
 					if j < (nr - 1):
 						print '\t&&'
 
-				print '  )) %s = false;' % name
+				print '  )) %s = true;' % name
 
 				i = i + 1
 

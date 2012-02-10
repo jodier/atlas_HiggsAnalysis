@@ -87,13 +87,6 @@ Float_t getMassCut(Float_t H_mass)
 
 /*-------------------------------------------------------------------------*/
 
-static Bool_t subLeadingCut(Float_t Z_mass, Float_t H_mass)
-{
-	return (Z_mass > getMassCut(H_mass)) && (Z_mass < 115.0f);
-}
-
-/*-------------------------------------------------------------------------*/
-
 static Int_t ptCompare(const void *a, const void *b)
 {
 	Float_t A = *(Float_t *) a;
@@ -730,17 +723,12 @@ Bool_t THiggsBuilder::H_analysis(
 	/* LEADING Z MASS CUT						   */
 	/*-----------------------------------------------------------------*/
 
-	isOk = true;
-
 	Bool_t q1 = fabs(Z_MASS - Z1.Z_lorentz.M()) < Z_REGION;
 	Bool_t q2 = fabs(Z_MASS - Z3.Z_lorentz.M()) < Z_REGION;
 
-	if(q1 == false
-	   &&
-	   q2 == false
-	 ) {
-		isOk = false;
-	}
+	isOk = (q1 != false)
+	       ||
+	       (q2 != false);
 
 	_INC(isOk, dest, 4);
 
@@ -750,8 +738,8 @@ Bool_t THiggsBuilder::H_analysis(
 
 	if(isOk)
 	{
-		Bool_t q3 = q1 && subLeadingCut(Z2.Z_lorentz.M(), H_lorentz.M());
-		Bool_t q4 = q2 && subLeadingCut(Z4.Z_lorentz.M(), H_lorentz.M());
+		Bool_t q3 = q1 && (Z2.Z_lorentz.M() > getMassCut(H_lorentz.M())) && (Z2.Z_lorentz.M() < 115.0f);
+		Bool_t q4 = q2 && (Z4.Z_lorentz.M() > getMassCut(H_lorentz.M())) && (Z4.Z_lorentz.M() < 115.0f);
 
 		/**/ if(q3 == false && q4 == false)
 		{
@@ -764,12 +752,22 @@ Bool_t THiggsBuilder::H_analysis(
 				SWAP(Z1, Z3);
 				SWAP(Z2, Z4);
 			}
+//			else
+//			{
+//				SAME(Z1, Z3);
+//				SAME(Z2, Z4);
+//			}
 		}
 		else if(q3 == false && q4 != false)
 		{
 			SWAP(Z1, Z3);
 			SWAP(Z2, Z4);
 		}
+//		else if(q3 != false && q4 == false)
+//		{
+//			SAME(Z1, Z3);
+//			SAME(Z2, Z4);
+//		}
 	}
 
 	_INC(isOk, dest, 5);
