@@ -56,7 +56,7 @@ if __name__ == '__main__':
 					print '\t(lbn >= %4s && lbn <= %4s)' % (LBRangeStart[j], LBRangeEnd[j])
 
 					if j < (nr - 1):
-						print '\t&&'
+						print '\t||'
 
 				print '  )) %s = true;' % name
 
