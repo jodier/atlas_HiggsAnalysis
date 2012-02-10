@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Thu Jan 26 13:11:30 2012 by ROOT version 5.32/00
+// Wed Feb  8 16:52:58 2012 by ROOT version 5.28/00
 // from TTree physics/physics
-// found on file: NTUP_HSG2.540208._000014.root.1
+// found on file: NTUP_HSG2.577625._000040.root
 //////////////////////////////////////////////////////////
 
 #ifndef THiggsD3PD_h
@@ -11,13 +11,8 @@
 #include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
-
-// Header file for the classes stored in the TTree if any.
 #include <vector>
-
-// Fixed size dimensions of array or collections stored in the TTree if any.
-
-#define __IS_DATA
+#include <string>
 
 class THiggsD3PD {
 public :
@@ -59,58 +54,106 @@ public :
    Bool_t          isTestBeam;
    Bool_t          EF_2e10_medium;
    Bool_t          EF_2e10_medium_mu6;
+   Bool_t          EF_2e12Tvh_medium;
    Bool_t          EF_2e12_medium;
+   Bool_t          EF_2e15vh_medium;
    Bool_t          EF_2e5_tight;
    Bool_t          EF_2e5_tight_Jpsi;
-   Bool_t          EF_2e5_tight_NL;
-   Bool_t          EF_2g10_loose_NL;
-   Bool_t          EF_2g15_loose;
    Bool_t          EF_2g20_loose;
+   Bool_t          EF_2j45_a4tc_EFFS_leadingmct100_xe40_medium_noMu;
+   Bool_t          EF_2j55_a4tc_EFFS_leadingmct100_xe40_medium_noMu;
    Bool_t          EF_2mu10;
    Bool_t          EF_2mu10_empty;
    Bool_t          EF_2mu10_loose;
    Bool_t          EF_2mu10_loose_empty;
    Bool_t          EF_2mu10_loose_noOvlpRm;
-   Bool_t          EF_2mu4;
-   Bool_t          EF_2mu4_Bmumu;
-   Bool_t          EF_2mu4_Bmumux;
-   Bool_t          EF_2mu4_DiMu;
-   Bool_t          EF_2mu4_DiMu_SiTrk;
-   Bool_t          EF_2mu4_DiMu_noVtx_noOS;
-   Bool_t          EF_2mu4_Jpsimumu;
-   Bool_t          EF_2mu4_Jpsimumu_IDTrkNoCut;
-   Bool_t          EF_2mu4_Upsimumu;
+   Bool_t          EF_2mu13_Zmumu_IDTrkNoCut;
+   Bool_t          EF_2mu4T;
+   Bool_t          EF_2mu4T_2e5_medium;
+   Bool_t          EF_2mu4T_Bmumu;
+   Bool_t          EF_2mu4T_Bmumux;
+   Bool_t          EF_2mu4T_DiMu;
+   Bool_t          EF_2mu4T_DiMu_DY;
+   Bool_t          EF_2mu4T_DiMu_DY20;
+   Bool_t          EF_2mu4T_DiMu_DY_noVtx_noOS;
+   Bool_t          EF_2mu4T_DiMu_SiTrk;
+   Bool_t          EF_2mu4T_DiMu_noVtx_noOS;
+   Bool_t          EF_2mu4T_EFxe20_noMu;
+   Bool_t          EF_2mu4T_EFxe30_noMu;
+   Bool_t          EF_2mu4T_Jpsimumu;
+   Bool_t          EF_2mu4T_Jpsimumu_IDTrkNoCut;
+   Bool_t          EF_2mu4T_Upsimumu;
+   Bool_t          EF_2mu4T_xe30_noMu;
+   Bool_t          EF_2mu4T_xe40_noMu;
+   Bool_t          EF_2mu4Ti_DiMu_DY;
    Bool_t          EF_2mu6;
+   Bool_t          EF_2mu6_Bmumux;
+   Bool_t          EF_2mu6_DiMu;
    Bool_t          EF_2mu6_MSonly_g10_loose;
-   Bool_t          EF_2mu6_NL;
+   Bool_t          EF_2mu6_MSonly_g10_loose_nonfilled;
+   Bool_t          EF_2tau29T_medium1;
    Bool_t          EF_2tau29_medium1;
+   Bool_t          EF_2tau29i_medium1;
    Bool_t          EF_e10_medium;
    Bool_t          EF_e10_medium_2mu6;
+   Bool_t          EF_e10_medium_mu10;
    Bool_t          EF_e10_medium_mu6;
-   Bool_t          EF_e15_medium;
-   Bool_t          EF_e15_medium_xe30_noMu;
-   Bool_t          EF_e15_tight;
-   Bool_t          EF_e15_tight_NL;
-   Bool_t          EF_e20_loose;
+   Bool_t          EF_e10_medium_mu6_topo_medium;
+   Bool_t          EF_e11_etcut;
+   Bool_t          EF_e12Tvh_medium;
+   Bool_t          EF_e12Tvh_medium_2e6T_medium;
+   Bool_t          EF_e12Tvh_medium_mu6;
+   Bool_t          EF_e12Tvh_medium_mu6_topo_medium;
+   Bool_t          EF_e12_medium;
+   Bool_t          EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20;
+   Bool_t          EF_e13_etcutTrk_xs60_noMu;
+   Bool_t          EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07;
+   Bool_t          EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20;
+   Bool_t          EF_e14_tight_e4_etcut_Jpsi;
+   Bool_t          EF_e15vh_loose1_e12Tvh_loose1_Zee;
+   Bool_t          EF_e15vh_medium;
+   Bool_t          EF_e15vh_medium_xe40_noMu;
+   Bool_t          EF_e15vh_medium_xe50_noMu;
+   Bool_t          EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20;
+   Bool_t          EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07;
+   Bool_t          EF_e20_tight_e15_NoCut_Zee;
+   Bool_t          EF_e22vh_loose;
+   Bool_t          EF_e22vh_loose1;
+   Bool_t          EF_e22vh_looseTrk;
+   Bool_t          EF_e22vh_loose_2j20_a4tc_EFFS;
+   Bool_t          EF_e22vh_loose_3j20_a4tc_EFFS;
+   Bool_t          EF_e22vh_loose_4j15_a4tc_EFFS;
+   Bool_t          EF_e22vh_medium;
    Bool_t          EF_e20_medium;
-   Bool_t          EF_e20_medium1;
-   Bool_t          EF_e20_medium_IDTrkNoCut;
-   Bool_t          EF_e20_medium_SiTrk;
-   Bool_t          EF_e20_medium_TRT;
    Bool_t          EF_e22_medium;
    Bool_t          EF_e22_medium1;
-   Bool_t          EF_e22vh_medium1;
    Bool_t          EF_2e12T_medium;
-   Bool_t          EF_2e12Tvh_medium;
-   Bool_t          EF_mu18_MG_medium; 
+   Bool_t          EF_e22vh_medium1;
+   Bool_t          EF_e22vh_medium1_3j10_a4tc_EFFS;
+   Bool_t          EF_e22vh_medium1_3j15_a4tc_EFFS;
+   Bool_t          EF_e22vh_medium1_4j10_a4tc_EFFS;
+   Bool_t          EF_e22vh_medium1_EFxe20_noMu;
+   Bool_t          EF_e22vh_medium1_EFxe30_noMu;
+   Bool_t          EF_e22vh_medium1_EFxe40_noMu;
+   Bool_t          EF_e22vh_medium2;
+   Bool_t          EF_e22vh_medium_IDTrkNoCut;
+   Bool_t          EF_e22vh_medium_SiTrk;
+   Bool_t          EF_e22vh_medium_TRT;
+   Bool_t          EF_e40_medium;
+   Bool_t          EF_e45_medium;
+   Bool_t          EF_e45_medium1;
+   Bool_t          EF_e5_medium_mu6;
+   Bool_t          EF_e5_medium_mu6_topo_medium;
    Bool_t          EF_e5_tight;
+   Bool_t          EF_e5_tight_e14_etcut_Jpsi;
    Bool_t          EF_e5_tight_e4_etcut_Jpsi;
    Bool_t          EF_e5_tight_e4_etcut_Jpsi_SiTrk;
    Bool_t          EF_e5_tight_e4_etcut_Jpsi_TRT;
    Bool_t          EF_e5_tight_e5_NoCut;
    Bool_t          EF_e5_tight_e9_etcut_Jpsi;
    Bool_t          EF_e60_loose;
-   Bool_t          EF_e9_tight_e5_tight_Jpsi;
+   Bool_t          EF_e6T_medium;
+   Bool_t          EF_e9_tight_e4_etcut_Jpsi;
    Bool_t          EF_eb_physics;
    Bool_t          EF_eb_physics_empty;
    Bool_t          EF_eb_physics_firstempty;
@@ -121,64 +164,89 @@ public :
    Bool_t          EF_eb_random_empty;
    Bool_t          EF_eb_random_firstempty;
    Bool_t          EF_eb_random_unpaired_iso;
-   Bool_t          EF_g100_etcut_g50_etcut;
+   Bool_t          EF_g100_loose;
+   Bool_t          EF_g10_NoCut_cosmic;
    Bool_t          EF_g11_etcut;
    Bool_t          EF_g11_etcut_larcalib;
    Bool_t          EF_g150_etcut;
-   Bool_t          EF_g15_loose;
-   Bool_t          EF_g15_loose_larcalib;
+   Bool_t          EF_g200_etcut;
    Bool_t          EF_g20_etcut;
-   Bool_t          EF_g20_etcut_xe30_noMu;
    Bool_t          EF_g20_loose;
    Bool_t          EF_g20_loose_larcalib;
    Bool_t          EF_g40_loose;
    Bool_t          EF_g40_loose_EFxe40_noMu;
    Bool_t          EF_g40_loose_larcalib;
-   Bool_t          EF_g40_tight;
+   Bool_t          EF_g40_loose_xe45_medium_noMu;
+   Bool_t          EF_g40_loose_xe55_medium_noMu;
+   Bool_t          EF_g40_tight_b10_medium;
    Bool_t          EF_g5_NoCut_cosmic;
    Bool_t          EF_g60_loose;
    Bool_t          EF_g60_loose_larcalib;
    Bool_t          EF_g80_loose;
    Bool_t          EF_g80_loose_larcalib;
-   Bool_t          EF_j100_a4_EFFS;
-   Bool_t          EF_j10_a4_EFFS;
-   Bool_t          EF_j120_j55_j40_a4_EFFS;
-   Bool_t          EF_j135_a4_EFFS;
-   Bool_t          EF_j15_a4_EFFS;
-   Bool_t          EF_j180_a4_EFFS;
-   Bool_t          EF_j180_j30_a4_EFFS_L2dphi04;
-   Bool_t          EF_j20_a4_EFFS;
+   Bool_t          EF_j100_a4tc_EFFS;
+   Bool_t          EF_j100_a4tc_EFFS_ht350;
+   Bool_t          EF_j100_a4tc_EFFS_ht400;
+   Bool_t          EF_j100_a4tc_EFFS_ht500;
+   Bool_t          EF_j10_a4tc_EFFS;
+   Bool_t          EF_j10_a4tc_EFFS_1vx;
+   Bool_t          EF_j135_a4tc_EFFS;
+   Bool_t          EF_j135_a4tc_EFFS_ht500;
+   Bool_t          EF_j135_j30_a4tc_EFFS_dphi04;
+   Bool_t          EF_j15_a2hi_EFFS;
+   Bool_t          EF_j15_a2tc_EFFS;
+   Bool_t          EF_j15_a4tc_EFFS;
+   Bool_t          EF_j180_a4tc_EFFS;
+   Bool_t          EF_j180_j30_a4tc_EFFS_dphi04;
+   Bool_t          EF_j20_a2hi_EFFS;
+   Bool_t          EF_j20_a2tc_EFFS;
+   Bool_t          EF_j20_a4hi_EFFS;
    Bool_t          EF_j20_a4tc_EFFS;
-   Bool_t          EF_j240_a4_EFFS;
-   Bool_t          EF_j25_larcalib;
-   Bool_t          EF_j30_a4_EFFS;
+   Bool_t          EF_j240_a10tc_EFFS;
+   Bool_t          EF_j240_a4tc_EFFS;
+   Bool_t          EF_j240_a4tc_EFFS_l2cleanph;
    Bool_t          EF_j30_a4tc_EFFS;
-   Bool_t          EF_j30_fj30_a4_EFFS;
-   Bool_t          EF_j35_L1TAU_HV;
-   Bool_t          EF_j35_L1TAU_HV_jetNoEF_firstempty;
-   Bool_t          EF_j35_L1TAU_HV_jetNoEF_unpaired_iso;
-   Bool_t          EF_j35_L1TAU_HV_jetNoEF_unpaired_noniso;
-   Bool_t          EF_j40_a4_EFFS;
-   Bool_t          EF_j40_fj40_a4_EFFS;
-   Bool_t          EF_j50_larcalib;
-   Bool_t          EF_j55_a4_EFFS;
-   Bool_t          EF_j55_fj55_a4_EFFS;
-   Bool_t          EF_j75_a4_EFFS;
-   Bool_t          EF_j75_a4_EFFS_jetNoEF_EFxe25_noMu;
-   Bool_t          EF_j75_a4_EFFS_xe40_loose_noMu;
-   Bool_t          EF_j75_a4_EFFS_xe45_loose_noMu;
-   Bool_t          EF_j75_a4_EFFS_xe55_loose_noMu;
-   Bool_t          EF_j75_fj75_a4_EFFS;
-   Bool_t          EF_j75_j30_a4_EFFS_L2anymct150;
-   Bool_t          EF_j75_j30_a4_EFFS_L2anymct175;
-   Bool_t          EF_j95_larcalib;
-   Bool_t          EF_mu0_empty_NoAlg;
-   Bool_t          EF_mu0_firstempty_NoAlg;
-   Bool_t          EF_mu0_unpaired_iso_NoAlg;
+   Bool_t          EF_j30_a4tc_EFFS_l2cleanph;
+   Bool_t          EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_empty;
+   Bool_t          EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_firstempty;
+   Bool_t          EF_j30_fj30_a4tc_EFFS;
+   Bool_t          EF_j320_a10tc_EFFS;
+   Bool_t          EF_j320_a4tc_EFFS;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk_LOF;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk_cosmic;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk_firstempty;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_iso;
+   Bool_t          EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_noniso;
+   Bool_t          EF_j40_a4tc_EFFS;
+   Bool_t          EF_j40_fj40_a4tc_EFFS;
+   Bool_t          EF_j425_a10tc_EFFS;
+   Bool_t          EF_j425_a4tc_EFFS;
+   Bool_t          EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_empty;
+   Bool_t          EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_firstempty;
+   Bool_t          EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_empty;
+   Bool_t          EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_firstempty;
+   Bool_t          EF_j55_a4tc_EFFS;
+   Bool_t          EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10;
+   Bool_t          EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10_l2cleancons;
+   Bool_t          EF_j55_fj55_a4tc_EFFS;
+   Bool_t          EF_j65_a4tc_EFFS_xe65_noMu_dphi2j30xe10;
+   Bool_t          EF_j70_a4tc_EFFS_xe70_noMu_dphi2j30xe10;
+   Bool_t          EF_j75_2j30_a4tc_EFFS_ht350;
+   Bool_t          EF_j75_a4tc_EFFS;
+   Bool_t          EF_j75_a4tc_EFFS_xe40_loose_noMu;
+   Bool_t          EF_j75_a4tc_EFFS_xe45_loose_noMu;
+   Bool_t          EF_j75_a4tc_EFFS_xe55_loose_noMu;
+   Bool_t          EF_j75_a4tc_EFFS_xe55_noMu;
+   Bool_t          EF_j75_a4tc_EFFS_xe55_noMu_l2cleancons;
+   Bool_t          EF_j75_fj75_a4tc_EFFS;
+   Bool_t          EF_j75_j30_a4tc_EFFS_anymct150;
+   Bool_t          EF_j75_j30_a4tc_EFFS_anymct175;
+   Bool_t          EF_j80_a4tc_EFFS_xe60_noMu;
    Bool_t          EF_mu10;
    Bool_t          EF_mu10_Jpsimumu;
-   Bool_t          EF_mu10_NL;
    Bool_t          EF_mu10_Upsimumu_FS;
+   Bool_t          EF_mu10_Upsimumu_tight_FS;
    Bool_t          EF_mu10_loose;
    Bool_t          EF_mu10_muCombTag_NoEF;
    Bool_t          EF_mu11_empty_NoAlg;
@@ -186,164 +254,302 @@ public :
    Bool_t          EF_mu13_MG;
    Bool_t          EF_mu13_muCombTag_NoEF;
    Bool_t          EF_mu15;
+   Bool_t          EF_mu15_2mu4_EFFS_medium;
    Bool_t          EF_mu15_mu10_EFFS;
+   Bool_t          EF_mu15_mu10_EFFS_medium;
+   Bool_t          EF_mu15_mu10_EFFS_tight;
+   Bool_t          EF_mu15_xe30_noMu;
    Bool_t          EF_mu15i;
+   Bool_t          EF_mu15i_medium;
    Bool_t          EF_mu18;
+   Bool_t          EF_mu18_L1J10;
    Bool_t          EF_mu18_MG;
+   Bool_t          EF_mu18_MG_L1J10;
+   Bool_t          EF_mu18_MG_medium;
+   Bool_t          EF_mu18_medium;
+   Bool_t          EF_mu18_medium_2j20_a4tc_EFFS;
+   Bool_t          EF_mu18_medium_3j20_a4tc_EFFS;
+   Bool_t          EF_mu18_medium_4j15_a4tc_EFFS;
+   Bool_t          EF_mu18_medium_4j20_a4tc_EFFS;
+   Bool_t          EF_mu18i3_medium;
+   Bool_t          EF_mu18i4_medium;
    Bool_t          EF_mu20;
    Bool_t          EF_mu20_IDTrkNoCut;
+   Bool_t          EF_mu20_IDTrkNoCut_ManyVx;
    Bool_t          EF_mu20_MG;
+   Bool_t          EF_mu20_MG_medium;
    Bool_t          EF_mu20_empty;
+   Bool_t          EF_mu20_medium;
+   Bool_t          EF_mu20_mu10_EFFS_tight;
    Bool_t          EF_mu20_muCombTag_NoEF;
    Bool_t          EF_mu20i;
+   Bool_t          EF_mu20i_medium;
    Bool_t          EF_mu22;
    Bool_t          EF_mu22_MG;
-   Bool_t          EF_mu4;
+   Bool_t          EF_mu22_MG_medium;
+   Bool_t          EF_mu22_j30_a4tc_EFFS;
+   Bool_t          EF_mu22_medium;
+   Bool_t          EF_mu22i1_medium;
+   Bool_t          EF_mu22i2_medium;
+   Bool_t          EF_mu22i3_medium;
+   Bool_t          EF_mu22i4_medium;
+   Bool_t          EF_mu24_MG_medium;
+   Bool_t          EF_mu24_MG_tight;
+   Bool_t          EF_mu24_medium;
+   Bool_t          EF_mu24_tight;
+   Bool_t          EF_mu30_MG_medium;
+   Bool_t          EF_mu30_MG_tight;
+   Bool_t          EF_mu30_medium;
+   Bool_t          EF_mu30_tight;
    Bool_t          EF_mu40_MSonly_barrel;
+   Bool_t          EF_mu40_MSonly_barrel_medium;
    Bool_t          EF_mu40_MSonly_empty;
    Bool_t          EF_mu40_MSonly_tight;
+   Bool_t          EF_mu40_MSonly_tight_L1MU11;
    Bool_t          EF_mu40_MSonly_tighter;
    Bool_t          EF_mu40_slow;
    Bool_t          EF_mu40_slow_empty;
+   Bool_t          EF_mu40_slow_medium;
    Bool_t          EF_mu40_slow_outOfTime;
-   Bool_t          EF_mu4_DiMu;
-   Bool_t          EF_mu4_DiMu_FS_noOS;
-   Bool_t          EF_mu4_Jpsimumu;
+   Bool_t          EF_mu40_slow_outOfTime_medium;
+   Bool_t          EF_mu4T;
+   Bool_t          EF_mu4T_DiMu;
+   Bool_t          EF_mu4T_DiMu_FS_noOS;
+   Bool_t          EF_mu4T_Jpsimumu;
+   Bool_t          EF_mu4T_Trk_Jpsi;
+   Bool_t          EF_mu4T_Trk_Upsi_FS;
+   Bool_t          EF_mu4T_Upsimumu_FS;
+   Bool_t          EF_mu4T_Upsimumu_SiTrk_FS;
+   Bool_t          EF_mu4T_Upsimumu_tight_FS;
+   Bool_t          EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;
+   Bool_t          EF_mu4T_j45_a4tc_EFFS_xe55_noMu;
+   Bool_t          EF_mu4Timu6i_DiMu_DY;
+   Bool_t          EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   Bool_t          EF_mu4Tmu6_Bmumu;
+   Bool_t          EF_mu4Tmu6_Bmumux;
+   Bool_t          EF_mu4Tmu6_DiMu;
+   Bool_t          EF_mu4Tmu6_DiMu_DY20;
+   Bool_t          EF_mu4Tmu6_DiMu_noVtx_noOS;
+   Bool_t          EF_mu4Tmu6_Jpsimumu;
+   Bool_t          EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   Bool_t          EF_mu4Tmu6_Upsimumu;
    Bool_t          EF_mu4_L1J10_matched;
    Bool_t          EF_mu4_L1J15_matched;
+   Bool_t          EF_mu4_L1J20_matched;
    Bool_t          EF_mu4_L1J30_matched;
    Bool_t          EF_mu4_L1J50_matched;
    Bool_t          EF_mu4_L1J75_matched;
    Bool_t          EF_mu4_L1MU11_MSonly_cosmic;
    Bool_t          EF_mu4_L1MU11_cosmic;
-   Bool_t          EF_mu4_MSonly_cosmic;
-   Bool_t          EF_mu4_Trk_Jpsi;
-   Bool_t          EF_mu4_Upsimumu_FS;
-   Bool_t          EF_mu4_Upsimumu_SiTrk_FS;
    Bool_t          EF_mu4_cosmic;
-   Bool_t          EF_mu4_j10_a4_EFFS;
+   Bool_t          EF_mu4_empty_NoAlg;
+   Bool_t          EF_mu4_firstempty_NoAlg;
+   Bool_t          EF_mu4_j10_a4tc_EFFS_matched;
+   Bool_t          EF_mu4_j135_a4tc_EFFS_L1matched;
+   Bool_t          EF_mu4_j180_a4tc_EFFS_L1matched;
+   Bool_t          EF_mu4_unpaired_iso_NoAlg;
    Bool_t          EF_mu6;
    Bool_t          EF_mu6_DiMu_noOS;
    Bool_t          EF_mu6_Jpsimumu;
    Bool_t          EF_mu6_Jpsimumu_SiTrk;
+   Bool_t          EF_mu6_Jpsimumu_tight;
+   Bool_t          EF_mu6_Trk_Jpsi_loose;
    Bool_t          EF_tau100_medium;
+   Bool_t          EF_tau125_IDTrkNoCut;
    Bool_t          EF_tau125_medium;
-   Bool_t          EF_tau16_IDTrkNoCut;
-   Bool_t          EF_tau16_loose;
-   Bool_t          EF_tau16_loose_e15_medium;
-   Bool_t          EF_tau16_loose_e15_tight;
-   Bool_t          EF_tau16_loose_mu10;
-   Bool_t          EF_tau16_loose_mu15;
-   Bool_t          EF_tau16_medium_mu10;
-   Bool_t          EF_tau16_medium_xe22_noMu;
+   Bool_t          EF_tau125_medium1;
+   Bool_t          EF_tau20T_medium;
+   Bool_t          EF_tau20T_medium2;
+   Bool_t          EF_tau20T_medium_e15vh_medium;
+   Bool_t          EF_tau20T_medium_mu15;
+   Bool_t          EF_tau20_medium;
    Bool_t          EF_tau20_medium1;
+   Bool_t          EF_tau20_medium_e15vh_medium;
+   Bool_t          EF_tau20_medium_mu15;
+   Bool_t          EF_tau20i_medium;
+   Bool_t          EF_tau20i_medium1;
+   Bool_t          EF_tau20i_medium_e15vh_medium;
+   Bool_t          EF_tau20i_medium_mu15;
+   Bool_t          EF_tau20v_medium_e15vh_medium;
+   Bool_t          EF_tau29T_medium;
+   Bool_t          EF_tau29T_medium1_1P;
+   Bool_t          EF_tau29T_medium1_1P_tau20T_medium2;
+   Bool_t          EF_tau29T_medium1_tau20T_medium1;
+   Bool_t          EF_tau29T_medium1_xe35_noMu_3L1J10;
+   Bool_t          EF_tau29T_medium1_xs45_loose_noMu_3L1J10;
+   Bool_t          EF_tau29T_medium1_xs45_noMu_3L1J10;
+   Bool_t          EF_tau29T_medium2;
+   Bool_t          EF_tau29T_medium2_tau20T_medium2;
+   Bool_t          EF_tau29T_medium_xe35_noMu_3L1J10;
+   Bool_t          EF_tau29T_medium_xs45_noMu_3L1J10;
+   Bool_t          EF_tau29T_medium_xs75_loose_noMu;
+   Bool_t          EF_tau29T_medium_xs75_noMu;
+   Bool_t          EF_tau29Ti_medium1_1P_tau20Ti_medium2;
+   Bool_t          EF_tau29Ti_medium1_tau20Ti_medium1;
+   Bool_t          EF_tau29Ti_medium1_tau20i_medium1;
+   Bool_t          EF_tau29Ti_medium2_tau20Ti_medium2;
+   Bool_t          EF_tau29_IDTrkNoCut;
    Bool_t          EF_tau29_loose;
+   Bool_t          EF_tau29_loose1;
+   Bool_t          EF_tau29_loose1_xs45_loose_noMu_3L1J10;
+   Bool_t          EF_tau29_loose_xs45_loose_noMu_3L1J10;
    Bool_t          EF_tau29_medium;
    Bool_t          EF_tau29_medium1;
    Bool_t          EF_tau29_medium1_tau20_medium1;
+   Bool_t          EF_tau29_medium1_xs45_loose_noMu_3L1J10;
    Bool_t          EF_tau29_medium_xe35_noMu;
    Bool_t          EF_tau29_medium_xe40_loose_noMu;
-   Bool_t          EF_tau50_IDTrkNoCut;
-   Bool_t          EF_tau50_medium;
-   Bool_t          EF_tau84_loose;
+   Bool_t          EF_tau29i_medium;
+   Bool_t          EF_tau29i_medium1;
+   Bool_t          EF_tau50_medium_e15vh_medium;
    Bool_t          EF_tauNoCut;
    Bool_t          EF_tauNoCut_L1TAU50;
    Bool_t          EF_tauNoCut_cosmic;
+   Bool_t          EF_xe100_noMu;
+   Bool_t          EF_xe100_tight_noMu;
+   Bool_t          EF_xe110_noMu;
    Bool_t          EF_xe20_noMu;
    Bool_t          EF_xe30_noMu;
    Bool_t          EF_xe40_noMu;
    Bool_t          EF_xe50_noMu;
+   Bool_t          EF_xe60_L2FEB_val;
+   Bool_t          EF_xe60_L2FEB_val_NoAlg;
    Bool_t          EF_xe60_noMu;
+   Bool_t          EF_xe60_tight_L2FEB_val;
+   Bool_t          EF_xe60_tight_noMu;
+   Bool_t          EF_xe60_verytight_noMu;
    Bool_t          EF_xe70_noMu;
+   Bool_t          EF_xe70_tight_noMu;
+   Bool_t          EF_xe80_L2FEB_val;
+   Bool_t          EF_xe80_L2FEB_val_NoAlg;
    Bool_t          EF_xe80_noMu;
+   Bool_t          EF_xe80_tight_noMu;
    Bool_t          EF_xe90_noMu;
-   Bool_t          L1_2EM10;
-   Bool_t          L1_2EM14;
+   Bool_t          EF_xe90_tight_noMu;
+   Bool_t          L1_2EM10VH;
+   Bool_t          L1_2EM12;
    Bool_t          L1_2EM3;
+   Bool_t          L1_2EM3_EM12;
    Bool_t          L1_2EM3_EM7;
-   Bool_t          L1_2EM3_NL;
    Bool_t          L1_2EM5;
+   Bool_t          L1_2EM5_EM16VH;
    Bool_t          L1_2EM5_MU6;
    Bool_t          L1_2EM7;
-   Bool_t          L1_2MU0;
-   Bool_t          L1_2MU0_EMPTY;
-   Bool_t          L1_2MU0_FIRSTEMPTY;
-   Bool_t          L1_2MU0_MU6;
-   Bool_t          L1_2MU0_NL;
+   Bool_t          L1_2J20_XE20;
+   Bool_t          L1_2J30_XE20;
    Bool_t          L1_2MU10;
+   Bool_t          L1_2MU4;
+   Bool_t          L1_2MU4_EMPTY;
+   Bool_t          L1_2MU4_FIRSTEMPTY;
+   Bool_t          L1_2MU4_MU6;
    Bool_t          L1_2MU6;
    Bool_t          L1_2MU6_EMPTY;
    Bool_t          L1_2MU6_FIRSTEMPTY;
-   Bool_t          L1_2MU6_UNPAIRED;
+   Bool_t          L1_2MU6_UNPAIRED_ISO;
+   Bool_t          L1_2MU6_UNPAIRED_NONISO;
    Bool_t          L1_2TAU11;
-   Bool_t          L1_2TAU6;
-   Bool_t          L1_2TAU6_EM10;
+   Bool_t          L1_2TAU11I;
+   Bool_t          L1_2TAU11I_TAU15;
+   Bool_t          L1_2TAU11_EM10VH;
+   Bool_t          L1_2TAU11_TAU15;
+   Bool_t          L1_2TAU15;
+   Bool_t          L1_2TAU8I_EM10VH;
+   Bool_t          L1_2TAU8I_TAU11;
+   Bool_t          L1_2TAU8I_TAU15;
+   Bool_t          L1_2TAU8V_EM10VH;
+   Bool_t          L1_2TAU8_EM10VH;
    Bool_t          L1_2TAU8_TAU11;
-   Bool_t          L1_EM10;
-   Bool_t          L1_EM10_MU6;
-   Bool_t          L1_EM10_NL;
-   Bool_t          L1_EM10_XE20;
+   Bool_t          L1_EM10VH;
+   Bool_t          L1_EM10VH_MU6;
+   Bool_t          L1_EM10VH_XE20;
+   Bool_t          L1_EM10VH_XE30;
+   Bool_t          L1_EM10VH_XE35;
    Bool_t          L1_EM12;
-   Bool_t          L1_EM14;
-   Bool_t          L1_EM14_XE10;
-   Bool_t          L1_EM14_XE20;
-   Bool_t          L1_EM16;
+   Bool_t          L1_EM12_3J10;
+   Bool_t          L1_EM12_4J10;
+   Bool_t          L1_EM12_XE20;
+   Bool_t          L1_EM12_XE30;
+   Bool_t          L1_EM12_XS30;
+   Bool_t          L1_EM12_XS45;
+   Bool_t          L1_EM16VH;
+   Bool_t          L1_EM18VH;
    Bool_t          L1_EM3;
    Bool_t          L1_EM30;
    Bool_t          L1_EM3_EMPTY;
    Bool_t          L1_EM3_FIRSTEMPTY;
-   Bool_t          L1_EM3_MU0;
    Bool_t          L1_EM3_MU6;
    Bool_t          L1_EM3_UNPAIRED_ISO;
    Bool_t          L1_EM3_UNPAIRED_NONISO;
    Bool_t          L1_EM5;
    Bool_t          L1_EM5_2MU6;
+   Bool_t          L1_EM5_EMPTY;
    Bool_t          L1_EM5_MU10;
    Bool_t          L1_EM5_MU6;
    Bool_t          L1_EM7;
+   Bool_t          L1_EM7_XS30;
+   Bool_t          L1_EM7_XS45;
+   Bool_t          L1_J30_XE35;
+   Bool_t          L1_J30_XE40;
    Bool_t          L1_J50_XE20;
-   Bool_t          L1_J50_XE25;
-   Bool_t          L1_MU0;
-   Bool_t          L1_MU0_EMPTY;
-   Bool_t          L1_MU0_FIRSTEMPTY;
-   Bool_t          L1_MU0_J10;
-   Bool_t          L1_MU0_J15;
-   Bool_t          L1_MU0_J15_EMPTY;
-   Bool_t          L1_MU0_J15_FIRSTEMPTY;
-   Bool_t          L1_MU0_J15_UNPAIRED;
-   Bool_t          L1_MU0_J30;
-   Bool_t          L1_MU0_J50;
-   Bool_t          L1_MU0_J75;
-   Bool_t          L1_MU0_UNPAIRED_ISO;
-   Bool_t          L1_MU0_UNPAIRED_NONISO;
+   Bool_t          L1_J50_XE30;
+   Bool_t          L1_J50_XE35;
    Bool_t          L1_MU10;
    Bool_t          L1_MU10_EMPTY;
    Bool_t          L1_MU10_FIRSTEMPTY;
    Bool_t          L1_MU10_J10;
    Bool_t          L1_MU10_UNPAIRED_ISO;
+   Bool_t          L1_MU10_XE20;
+   Bool_t          L1_MU10_XE25;
    Bool_t          L1_MU11;
    Bool_t          L1_MU11_EMPTY;
    Bool_t          L1_MU15;
    Bool_t          L1_MU20;
+   Bool_t          L1_MU20_FIRSTEMPTY;
+   Bool_t          L1_MU4;
+   Bool_t          L1_MU4_EMPTY;
+   Bool_t          L1_MU4_FIRSTEMPTY;
+   Bool_t          L1_MU4_J10;
+   Bool_t          L1_MU4_J15;
+   Bool_t          L1_MU4_J15_EMPTY;
+   Bool_t          L1_MU4_J15_FIRSTEMPTY;
+   Bool_t          L1_MU4_J15_UNPAIRED_ISO;
+   Bool_t          L1_MU4_J15_UNPAIRED_NONISO;
+   Bool_t          L1_MU4_J20_XE20;
+   Bool_t          L1_MU4_J20_XE35;
+   Bool_t          L1_MU4_J30;
+   Bool_t          L1_MU4_J50;
+   Bool_t          L1_MU4_J75;
+   Bool_t          L1_MU4_UNPAIRED_ISO;
+   Bool_t          L1_MU4_UNPAIRED_NONISO;
    Bool_t          L1_MU6;
    Bool_t          L1_MU6_FIRSTEMPTY;
-   Bool_t          L1_MU6_NL;
+   Bool_t          L1_MU6_J15;
    Bool_t          L1_TAU11;
+   Bool_t          L1_TAU11I;
+   Bool_t          L1_TAU11_2J10_J20_XE20;
+   Bool_t          L1_TAU11_MU10;
+   Bool_t          L1_TAU11_XE10_3J10;
    Bool_t          L1_TAU11_XE20;
-   Bool_t          L1_TAU20;
+   Bool_t          L1_TAU15;
+   Bool_t          L1_TAU15_XE10_3J10;
+   Bool_t          L1_TAU15_XE20;
+   Bool_t          L1_TAU15_XE25_3J10;
+   Bool_t          L1_TAU15_XE25_3J10_J30;
+   Bool_t          L1_TAU15_XE35;
+   Bool_t          L1_TAU15_XS25_3J10;
+   Bool_t          L1_TAU15_XS35;
    Bool_t          L1_TAU30;
-   Bool_t          L1_TAU5;
+   Bool_t          L1_TAU30_EM10VH;
+   Bool_t          L1_TAU30_NOTEM12;
    Bool_t          L1_TAU50;
-   Bool_t          L1_TAU5_EMPTY;
-   Bool_t          L1_TAU5_FIRSTEMPTY;
-   Bool_t          L1_TAU5_UNPAIRED_ISO;
-   Bool_t          L1_TAU5_UNPAIRED_NONISO;
-   Bool_t          L1_TAU5_XE10;
-   Bool_t          L1_TAU6;
-   Bool_t          L1_TAU6_J50_XE20;
-   Bool_t          L1_TAU6_MU10;
-   Bool_t          L1_TAU6_XE10;
    Bool_t          L1_TAU8;
+   Bool_t          L1_TAU8I;
+   Bool_t          L1_TAU8I_MU10;
+   Bool_t          L1_TAU8_EMPTY;
+   Bool_t          L1_TAU8_FIRSTEMPTY;
+   Bool_t          L1_TAU8_MU10;
+   Bool_t          L1_TAU8_UNPAIRED_ISO;
+   Bool_t          L1_TAU8_UNPAIRED_NONISO;
    Bool_t          L1_XE10;
    Bool_t          L1_XE20;
    Bool_t          L1_XE25;
@@ -354,53 +560,97 @@ public :
    Bool_t          L1_XE60;
    Bool_t          L2_2e10_medium;
    Bool_t          L2_2e10_medium_mu6;
+   Bool_t          L2_2e12Tvh_medium;
    Bool_t          L2_2e12_medium;
+   Bool_t          L2_2e15vh_medium;
    Bool_t          L2_2e5_tight;
    Bool_t          L2_2e5_tight_Jpsi;
-   Bool_t          L2_2e5_tight_NL;
-   Bool_t          L2_2g10_loose_NL;
-   Bool_t          L2_2g15_loose;
    Bool_t          L2_2g20_loose;
+   Bool_t          L2_2j40_anymct100_xe20_medium_noMu;
+   Bool_t          L2_2j50_anymct100_xe20_medium_noMu;
    Bool_t          L2_2mu10;
    Bool_t          L2_2mu10_empty;
    Bool_t          L2_2mu10_loose;
    Bool_t          L2_2mu10_loose_empty;
    Bool_t          L2_2mu10_loose_noOvlpRm;
-   Bool_t          L2_2mu4;
-   Bool_t          L2_2mu4_Bmumu;
-   Bool_t          L2_2mu4_Bmumux;
-   Bool_t          L2_2mu4_DiMu;
-   Bool_t          L2_2mu4_DiMu_SiTrk;
-   Bool_t          L2_2mu4_DiMu_noVtx_noOS;
-   Bool_t          L2_2mu4_Jpsimumu;
-   Bool_t          L2_2mu4_Jpsimumu_IDTrkNoCut;
-   Bool_t          L2_2mu4_Upsimumu;
+   Bool_t          L2_2mu13_Zmumu_IDTrkNoCut;
+   Bool_t          L2_2mu4T;
+   Bool_t          L2_2mu4T_2e5_medium;
+   Bool_t          L2_2mu4T_Bmumu;
+   Bool_t          L2_2mu4T_Bmumux;
+   Bool_t          L2_2mu4T_DiMu;
+   Bool_t          L2_2mu4T_DiMu_DY;
+   Bool_t          L2_2mu4T_DiMu_DY20;
+   Bool_t          L2_2mu4T_DiMu_DY_noVtx_noOS;
+   Bool_t          L2_2mu4T_DiMu_SiTrk;
+   Bool_t          L2_2mu4T_DiMu_noVtx_noOS;
+   Bool_t          L2_2mu4T_EFxe20_noMu;
+   Bool_t          L2_2mu4T_EFxe30_noMu;
+   Bool_t          L2_2mu4T_Jpsimumu;
+   Bool_t          L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   Bool_t          L2_2mu4T_Upsimumu;
+   Bool_t          L2_2mu4T_xe20_noMu;
+   Bool_t          L2_2mu4T_xe25_noMu;
+   Bool_t          L2_2mu4Ti_DiMu_DY;
    Bool_t          L2_2mu6;
+   Bool_t          L2_2mu6_Bmumux;
+   Bool_t          L2_2mu6_DiMu;
    Bool_t          L2_2mu6_MSonly_g10_loose;
-   Bool_t          L2_2mu6_NL;
+   Bool_t          L2_2mu6_MSonly_g10_loose_nonfilled;
+   Bool_t          L2_2tau29T_medium1;
    Bool_t          L2_2tau29_medium1;
+   Bool_t          L2_2tau29i_medium1;
    Bool_t          L2_e10_medium;
    Bool_t          L2_e10_medium_2mu6;
+   Bool_t          L2_e10_medium_mu10;
    Bool_t          L2_e10_medium_mu6;
-   Bool_t          L2_e15_medium;
-   Bool_t          L2_e15_medium_xe30_noMu;
-   Bool_t          L2_e15_tight;
-   Bool_t          L2_e15_tight_NL;
-   Bool_t          L2_e20_loose;
-   Bool_t          L2_e20_medium;
-   Bool_t          L2_e20_medium1;
-   Bool_t          L2_e20_medium_IDTrkNoCut;
-   Bool_t          L2_e20_medium_SiTrk;
-   Bool_t          L2_e20_medium_TRT;
-   Bool_t          L2_e22_medium;
+   Bool_t          L2_e10_medium_mu6_topo_medium;
+   Bool_t          L2_e11_etcut;
+   Bool_t          L2_e12Tvh_medium;
+   Bool_t          L2_e12Tvh_medium_2e6T_medium;
+   Bool_t          L2_e12Tvh_medium_mu6;
+   Bool_t          L2_e12Tvh_medium_mu6_topo_medium;
+   Bool_t          L2_e12_medium;
+   Bool_t          L2_e13_etcutTrk_xs30_noMu;
+   Bool_t          L2_e13_etcutTrk_xs45_noMu;
+   Bool_t          L2_e14_tight_e4_etcut_Jpsi;
+   Bool_t          L2_e15vh_loose1_e12Tvh_loose1_Zee;
+   Bool_t          L2_e15vh_medium;
+   Bool_t          L2_e15vh_medium_xe30_noMu;
+   Bool_t          L2_e15vh_medium_xe35_noMu;
+   Bool_t          L2_e20_etcutTrk_xe25_noMu;
+   Bool_t          L2_e20_etcutTrk_xs45_noMu;
+   Bool_t          L2_e20_tight_e15_NoCut_Zee;
+   Bool_t          L2_e22vh_loose;
+   Bool_t          L2_e22vh_loose1;
+   Bool_t          L2_e22vh_looseTrk;
+   Bool_t          L2_e22vh_loose_2j20_a4tc_EFFS;
+   Bool_t          L2_e22vh_loose_3j20_a4tc_EFFS;
+   Bool_t          L2_e22vh_loose_4j15_a4tc_EFFS;
+   Bool_t          L2_e22vh_medium;
+   Bool_t          L2_e22vh_medium1;
+   Bool_t          L2_e22vh_medium1_EFxe20_noMu;
+   Bool_t          L2_e22vh_medium1_EFxe30_noMu;
+   Bool_t          L2_e22vh_medium1_EFxe40_noMu;
+   Bool_t          L2_e22vh_medium2;
+   Bool_t          L2_e22vh_medium_IDTrkNoCut;
+   Bool_t          L2_e22vh_medium_SiTrk;
+   Bool_t          L2_e22vh_medium_TRT;
+   Bool_t          L2_e40_medium;
+   Bool_t          L2_e45_medium;
+   Bool_t          L2_e45_medium1;
+   Bool_t          L2_e5_medium_mu6;
+   Bool_t          L2_e5_medium_mu6_topo_medium;
    Bool_t          L2_e5_tight;
+   Bool_t          L2_e5_tight_e14_etcut_Jpsi;
    Bool_t          L2_e5_tight_e4_etcut_Jpsi;
    Bool_t          L2_e5_tight_e4_etcut_Jpsi_SiTrk;
    Bool_t          L2_e5_tight_e4_etcut_Jpsi_TRT;
    Bool_t          L2_e5_tight_e5_NoCut;
    Bool_t          L2_e5_tight_e9_etcut_Jpsi;
    Bool_t          L2_e60_loose;
-   Bool_t          L2_e9_tight_e5_tight_Jpsi;
+   Bool_t          L2_e6T_medium;
+   Bool_t          L2_e9_tight_e4_etcut_Jpsi;
    Bool_t          L2_eb_physics;
    Bool_t          L2_eb_physics_empty;
    Bool_t          L2_eb_physics_firstempty;
@@ -412,30 +662,37 @@ public :
    Bool_t          L2_eb_random_firstempty;
    Bool_t          L2_eb_random_unpaired_iso;
    Bool_t          L2_em3_empty_larcalib;
-   Bool_t          L2_g100_etcut_g50_etcut;
+   Bool_t          L2_em5_empty_larcalib;
+   Bool_t          L2_g100_loose;
+   Bool_t          L2_g10_NoCut_cosmic;
    Bool_t          L2_g11_etcut;
    Bool_t          L2_g150_etcut;
-   Bool_t          L2_g15_loose;
+   Bool_t          L2_g200_etcut;
    Bool_t          L2_g20_etcut;
-   Bool_t          L2_g20_etcut_xe30_noMu;
    Bool_t          L2_g20_loose;
    Bool_t          L2_g40_loose;
    Bool_t          L2_g40_loose_EFxe40_noMu;
-   Bool_t          L2_g40_tight;
+   Bool_t          L2_g40_loose_xe30_medium_noMu;
+   Bool_t          L2_g40_loose_xe35_medium_noMu;
+   Bool_t          L2_g40_tight_b10_medium;
    Bool_t          L2_g5_NoCut_cosmic;
    Bool_t          L2_g60_loose;
    Bool_t          L2_g80_loose;
+   Bool_t          L2_j50_xe35_medium_noMu;
+   Bool_t          L2_j50_xe35_medium_noMu_l2cleancons;
+   Bool_t          L2_j60_xe45_noMu;
+   Bool_t          L2_j65_xe50_noMu;
    Bool_t          L2_j70_xe20_loose_noMu;
    Bool_t          L2_j70_xe25_loose_noMu;
-   Bool_t          L2_mu0_cal_empty;
-   Bool_t          L2_mu0_empty_NoAlg;
-   Bool_t          L2_mu0_firstempty_NoAlg;
-   Bool_t          L2_mu0_unpaired_iso_NoAlg;
+   Bool_t          L2_j70_xe35_noMu;
+   Bool_t          L2_j70_xe35_noMu_l2cleancons;
+   Bool_t          L2_j75_xe40_noMu;
    Bool_t          L2_mu10;
    Bool_t          L2_mu10_Jpsimumu;
-   Bool_t          L2_mu10_NL;
    Bool_t          L2_mu10_Upsimumu_FS;
+   Bool_t          L2_mu10_Upsimumu_tight_FS;
    Bool_t          L2_mu10_cal;
+   Bool_t          L2_mu10_cal_medium;
    Bool_t          L2_mu10_loose;
    Bool_t          L2_mu10_muCombTag_NoEF;
    Bool_t          L2_mu11_empty_NoAlg;
@@ -443,66 +700,148 @@ public :
    Bool_t          L2_mu13_MG;
    Bool_t          L2_mu13_muCombTag_NoEF;
    Bool_t          L2_mu15;
+   Bool_t          L2_mu15_medium;
+   Bool_t          L2_mu15_tight;
+   Bool_t          L2_mu15_xe20_noMu;
    Bool_t          L2_mu15i;
+   Bool_t          L2_mu15i_medium;
    Bool_t          L2_mu18;
+   Bool_t          L2_mu18_L1J10;
    Bool_t          L2_mu18_MG;
+   Bool_t          L2_mu18_MG_L1J10;
+   Bool_t          L2_mu18_MG_medium;
+   Bool_t          L2_mu18_medium;
+   Bool_t          L2_mu18_medium_2j20_a4tc_EFFS;
+   Bool_t          L2_mu18_medium_3j20_a4tc_EFFS;
+   Bool_t          L2_mu18_medium_4j15_a4tc_EFFS;
+   Bool_t          L2_mu18_medium_4j20_a4tc_EFFS;
+   Bool_t          L2_mu18i4_medium;
    Bool_t          L2_mu20;
    Bool_t          L2_mu20_IDTrkNoCut;
    Bool_t          L2_mu20_MG;
+   Bool_t          L2_mu20_MG_medium;
    Bool_t          L2_mu20_empty;
+   Bool_t          L2_mu20_medium;
    Bool_t          L2_mu20_muCombTag_NoEF;
+   Bool_t          L2_mu20_tight;
    Bool_t          L2_mu20i;
+   Bool_t          L2_mu20i_medium;
    Bool_t          L2_mu22;
    Bool_t          L2_mu22_MG;
-   Bool_t          L2_mu4;
+   Bool_t          L2_mu22_MG_medium;
+   Bool_t          L2_mu22_j30_a4tc_EFFS;
+   Bool_t          L2_mu22_medium;
+   Bool_t          L2_mu22i2_medium;
+   Bool_t          L2_mu22i4_medium;
+   Bool_t          L2_mu24_MG_medium;
+   Bool_t          L2_mu24_MG_tight;
+   Bool_t          L2_mu24_medium;
+   Bool_t          L2_mu24_tight;
+   Bool_t          L2_mu30_MG_medium;
+   Bool_t          L2_mu30_MG_tight;
+   Bool_t          L2_mu30_medium;
+   Bool_t          L2_mu30_tight;
    Bool_t          L2_mu40_MSonly_barrel;
+   Bool_t          L2_mu40_MSonly_barrel_medium;
    Bool_t          L2_mu40_MSonly_empty;
    Bool_t          L2_mu40_MSonly_tight;
+   Bool_t          L2_mu40_MSonly_tight_L1MU11;
    Bool_t          L2_mu40_MSonly_tighter;
    Bool_t          L2_mu40_slow;
    Bool_t          L2_mu40_slow_empty;
+   Bool_t          L2_mu40_slow_medium;
    Bool_t          L2_mu40_slow_outOfTime;
-   Bool_t          L2_mu4_DiMu;
-   Bool_t          L2_mu4_DiMu_FS_noOS;
-   Bool_t          L2_mu4_Jpsimumu;
+   Bool_t          L2_mu40_slow_outOfTime_medium;
+   Bool_t          L2_mu4T;
+   Bool_t          L2_mu4T_DiMu;
+   Bool_t          L2_mu4T_DiMu_FS_noOS;
+   Bool_t          L2_mu4T_Jpsimumu;
+   Bool_t          L2_mu4T_Trk_Jpsi;
+   Bool_t          L2_mu4T_Trk_Upsi_FS;
+   Bool_t          L2_mu4T_Upsimumu_FS;
+   Bool_t          L2_mu4T_Upsimumu_SiTrk_FS;
+   Bool_t          L2_mu4T_Upsimumu_tight_FS;
+   Bool_t          L2_mu4T_j40_xe20_loose_noMu;
+   Bool_t          L2_mu4T_j40_xe35_noMu;
+   Bool_t          L2_mu4Timu6i_DiMu_DY;
+   Bool_t          L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   Bool_t          L2_mu4Tmu6_Bmumu;
+   Bool_t          L2_mu4Tmu6_Bmumux;
+   Bool_t          L2_mu4Tmu6_DiMu;
+   Bool_t          L2_mu4Tmu6_DiMu_DY20;
+   Bool_t          L2_mu4Tmu6_DiMu_noVtx_noOS;
+   Bool_t          L2_mu4Tmu6_Jpsimumu;
+   Bool_t          L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   Bool_t          L2_mu4Tmu6_Upsimumu;
    Bool_t          L2_mu4_L1J10_matched;
    Bool_t          L2_mu4_L1J15_matched;
+   Bool_t          L2_mu4_L1J20_matched;
    Bool_t          L2_mu4_L1J30_matched;
    Bool_t          L2_mu4_L1J50_matched;
    Bool_t          L2_mu4_L1J75_matched;
    Bool_t          L2_mu4_L1MU11_MSonly_cosmic;
    Bool_t          L2_mu4_L1MU11_cosmic;
-   Bool_t          L2_mu4_MSonly_cosmic;
-   Bool_t          L2_mu4_Trk_Jpsi;
-   Bool_t          L2_mu4_Upsimumu_FS;
-   Bool_t          L2_mu4_Upsimumu_SiTrk_FS;
+   Bool_t          L2_mu4_cal_empty;
    Bool_t          L2_mu4_cosmic;
-   Bool_t          L2_mu4_j10_a4_EFFS;
+   Bool_t          L2_mu4_empty_NoAlg;
+   Bool_t          L2_mu4_firstempty_NoAlg;
+   Bool_t          L2_mu4_j95_L1matched;
+   Bool_t          L2_mu4_unpaired_iso_NoAlg;
    Bool_t          L2_mu6;
    Bool_t          L2_mu6_DiMu_noOS;
    Bool_t          L2_mu6_Jpsimumu;
    Bool_t          L2_mu6_Jpsimumu_SiTrk;
+   Bool_t          L2_mu6_Jpsimumu_tight;
+   Bool_t          L2_mu6_Trk_Jpsi_loose;
    Bool_t          L2_tau100_medium;
+   Bool_t          L2_tau125_IDTrkNoCut;
    Bool_t          L2_tau125_medium;
-   Bool_t          L2_tau16_IDTrkNoCut;
-   Bool_t          L2_tau16_loose;
-   Bool_t          L2_tau16_loose_e15_medium;
-   Bool_t          L2_tau16_loose_e15_tight;
-   Bool_t          L2_tau16_loose_mu10;
-   Bool_t          L2_tau16_loose_mu15;
-   Bool_t          L2_tau16_medium_mu10;
-   Bool_t          L2_tau16_medium_xe22_noMu;
+   Bool_t          L2_tau125_medium1;
+   Bool_t          L2_tau20T_medium;
+   Bool_t          L2_tau20T_medium2;
+   Bool_t          L2_tau20T_medium_e15vh_medium;
+   Bool_t          L2_tau20T_medium_mu15;
+   Bool_t          L2_tau20_medium;
    Bool_t          L2_tau20_medium1;
+   Bool_t          L2_tau20_medium_e15vh_medium;
+   Bool_t          L2_tau20_medium_mu15;
+   Bool_t          L2_tau20i_medium;
+   Bool_t          L2_tau20i_medium1;
+   Bool_t          L2_tau20i_medium_e15vh_medium;
+   Bool_t          L2_tau20i_medium_mu15;
+   Bool_t          L2_tau20v_medium_e15vh_medium;
+   Bool_t          L2_tau29T_medium;
+   Bool_t          L2_tau29T_medium1_1P;
+   Bool_t          L2_tau29T_medium1_1P_tau20T_medium2;
+   Bool_t          L2_tau29T_medium1_tau20T_medium1;
+   Bool_t          L2_tau29T_medium1_xe25_noMu_3L1J10;
+   Bool_t          L2_tau29T_medium1_xs20_noMu_3L1J10;
+   Bool_t          L2_tau29T_medium1_xs25_noMu_3L1J10;
+   Bool_t          L2_tau29T_medium2;
+   Bool_t          L2_tau29T_medium2_tau20T_medium2;
+   Bool_t          L2_tau29T_medium_xe25_noMu_3L1J10;
+   Bool_t          L2_tau29T_medium_xs25_noMu_3L1J10;
+   Bool_t          L2_tau29T_medium_xs35_noMu;
+   Bool_t          L2_tau29T_medium_xs50_noMu;
+   Bool_t          L2_tau29Ti_medium1_1P_tau20Ti_medium2;
+   Bool_t          L2_tau29Ti_medium1_tau20Ti_medium1;
+   Bool_t          L2_tau29Ti_medium1_tau20i_medium1;
+   Bool_t          L2_tau29Ti_medium2_tau20Ti_medium2;
+   Bool_t          L2_tau29_IDTrkNoCut;
    Bool_t          L2_tau29_loose;
+   Bool_t          L2_tau29_loose1;
+   Bool_t          L2_tau29_loose1_xs20_noMu_3L1J10;
+   Bool_t          L2_tau29_loose_xs20_noMu_3L1J10;
    Bool_t          L2_tau29_medium;
    Bool_t          L2_tau29_medium1;
    Bool_t          L2_tau29_medium1_tau20_medium1;
-   Bool_t          L2_tau29_medium_xe20_loose_noMu;
+   Bool_t          L2_tau29_medium1_xs20_noMu_3L1J10;
    Bool_t          L2_tau29_medium_xe25_noMu;
-   Bool_t          L2_tau50_IDTrkNoCut;
-   Bool_t          L2_tau50_medium;
-   Bool_t          L2_tau5_empty_larcalib;
-   Bool_t          L2_tau84_loose;
+   Bool_t          L2_tau29_medium_xe30_loose_noMu;
+   Bool_t          L2_tau29i_medium;
+   Bool_t          L2_tau29i_medium1;
+   Bool_t          L2_tau50_medium_e15vh_medium;
+   Bool_t          L2_tau8_empty_larcalib;
    Bool_t          L2_tauNoCut;
    Bool_t          L2_tauNoCut_L1TAU50;
    Bool_t          L2_tauNoCut_cosmic;
@@ -510,10 +849,20 @@ public :
    Bool_t          L2_xe20_noMu;
    Bool_t          L2_xe30_noMu;
    Bool_t          L2_xe35_noMu;
+   Bool_t          L2_xe40_L2FEB_val;
    Bool_t          L2_xe40_noMu;
+   Bool_t          L2_xe45_noMu;
+   Bool_t          L2_xe50_L2FEB_val;
    Bool_t          L2_xe50_noMu;
+   Bool_t          L2_xe55_noMu;
+   Bool_t          L2_xe60_L2FEB_val;
    Bool_t          L2_xe60_noMu;
+   Bool_t          L2_xe65_noMu;
    Bool_t          L2_xe70_noMu;
+   Bool_t          L2_xe75_noMu;
+   Bool_t          L2_xe80_noMu;
+   Bool_t          L2_xe85_noMu;
+   Bool_t          L2_xe90_noMu;
    Int_t           el_n;
    std::vector<float>   *el_E;
    std::vector<float>   *el_Et;
@@ -3059,27 +3408,36 @@ public :
    std::vector<int>     *trig_L2_muonfeature_L2_2mu10_loose;
    std::vector<int>     *trig_L2_muonfeature_L2_2mu10_loose_empty;
    std::vector<int>     *trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_Bmumu;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_Bmumux;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_DiMu;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_Jpsimumu;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu4_Upsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_2e5_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_Bmumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_Bmumux;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_Upsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_xe20_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4T_xe25_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_L2_muonfeature_L2_2mu6;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu6_Bmumux;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu6_DiMu;
    std::vector<int>     *trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_L2_muonfeature_L2_2mu6_NL;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu0_cal_empty;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu0_empty_NoAlg;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10_Jpsimumu;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu10_NL;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10_cal;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu10_cal_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10_loose;
    std::vector<int>     *trig_L2_muonfeature_L2_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_L2_muonfeature_L2_mu11_empty_NoAlg;
@@ -3087,45 +3445,99 @@ public :
    std::vector<int>     *trig_L2_muonfeature_L2_mu13_MG;
    std::vector<int>     *trig_L2_muonfeature_L2_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_L2_muonfeature_L2_mu15;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu15_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu15_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu15_xe20_noMu;
    std::vector<int>     *trig_L2_muonfeature_L2_mu15i;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu15i_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu18;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_L1J10;
    std::vector<int>     *trig_L2_muonfeature_L2_mu18_MG;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_MG_L1J10;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_MG_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu18i4_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20_IDTrkNoCut;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20_MG;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu20_MG_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20_empty;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu20_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20_muCombTag_NoEF;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu20_tight;
    std::vector<int>     *trig_L2_muonfeature_L2_mu20i;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu20i_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu22;
    std::vector<int>     *trig_L2_muonfeature_L2_mu22_MG;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu22_MG_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu22_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu22i2_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu22i4_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu24_MG_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu24_MG_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu24_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu24_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu30_MG_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu30_MG_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu30_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu30_tight;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_barrel;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_empty;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_MSonly_tighter;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_slow;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_slow_empty;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu40_slow_medium;
    std::vector<int>     *trig_L2_muonfeature_L2_mu40_slow_outOfTime;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_DiMu;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_Jpsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_DiMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J10_matched;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J15_matched;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J20_matched;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J30_matched;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J50_matched;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1J75_matched;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_cal_empty;
    std::vector<int>     *trig_L2_muonfeature_L2_mu4_cosmic;
-   std::vector<int>     *trig_L2_muonfeature_L2_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_empty_NoAlg;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_j95_L1matched;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_L2_muonfeature_L2_mu6;
    std::vector<int>     *trig_L2_muonfeature_L2_mu6_DiMu_noOS;
    std::vector<int>     *trig_L2_muonfeature_L2_mu6_Jpsimumu;
    std::vector<int>     *trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose;
    Int_t           trig_L2_muonfeaturedetails_n;
    Int_t           trig_L2_combmuonfeature_n;
    std::vector<float>   *trig_L2_combmuonfeature_pt;
@@ -3137,27 +3549,36 @@ public :
    std::vector<int>     *trig_L2_combmuonfeature_L2_2mu10_loose;
    std::vector<int>     *trig_L2_combmuonfeature_L2_2mu10_loose_empty;
    std::vector<int>     *trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_Bmumu;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_Bmumux;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_DiMu;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_Jpsimumu;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4_Upsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_2e5_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_Bmumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_Bmumux;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_Upsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6_Bmumux;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6_DiMu;
    std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6_NL;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu0_cal_empty;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu0_empty_NoAlg;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_Jpsimumu;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_NL;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_cal;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_cal_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_loose;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu11_empty_NoAlg;
@@ -3165,45 +3586,99 @@ public :
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu13_MG;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu15;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu15_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu15_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu15_xe20_noMu;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu15i;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu15i_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu18;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_L1J10;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_MG;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_MG_L1J10;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_MG_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu18i4_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_MG;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_MG_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_empty;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu20_tight;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu20i;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu20i_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu22;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu22_MG;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu22_MG_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu22_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu22i2_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu22i4_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu24_MG_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu24_MG_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu24_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu24_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu30_MG_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu30_MG_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu30_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu30_tight;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_barrel;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_empty;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_MSonly_tighter;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_slow;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_slow_empty;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_slow_medium;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_slow_outOfTime;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_DiMu;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_Jpsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_DiMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J10_matched;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J15_matched;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J20_matched;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J30_matched;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J50_matched;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1J75_matched;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_cal_empty;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_cosmic;
-   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_empty_NoAlg;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_j95_L1matched;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu6;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu6_DiMu_noOS;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu6_Jpsimumu;
    std::vector<int>     *trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose;
    std::vector<int>     *trig_L2_combmuonfeature_mf_index;
    std::vector<int>     *trig_L2_combmuonfeature_idscantrk_index;
    std::vector<int>     *trig_L2_combmuonfeature_sitracktrk_index;
@@ -3227,27 +3702,36 @@ public :
    std::vector<int>     *trig_L2_isomuonfeature_L2_2mu10_loose;
    std::vector<int>     *trig_L2_isomuonfeature_L2_2mu10_loose_empty;
    std::vector<int>     *trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_Bmumu;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_Bmumux;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_DiMu;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_Jpsimumu;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4_Upsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_2e5_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_Bmumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_Bmumux;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_Upsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6_Bmumux;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6_DiMu;
    std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6_NL;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu0_cal_empty;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu0_empty_NoAlg;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_Jpsimumu;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_NL;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_cal;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_cal_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_loose;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu11_empty_NoAlg;
@@ -3255,45 +3739,99 @@ public :
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu13_MG;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu15;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu15_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu15_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu15_xe20_noMu;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu15i;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu15i_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu18;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_L1J10;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_MG;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_MG_L1J10;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_MG_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu18i4_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_MG;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_MG_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_empty;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu20_tight;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu20i;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu20i_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu22;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu22_MG;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu22_MG_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu22_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu22i2_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu22i4_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu24_MG_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu24_MG_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu24_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu24_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu30_MG_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu30_MG_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu30_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu30_tight;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_barrel;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_empty;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_MSonly_tighter;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_slow;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_slow_empty;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_slow_medium;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_slow_outOfTime;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_DiMu;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_Jpsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_DiMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J10_matched;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J15_matched;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J20_matched;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J30_matched;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J50_matched;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1J75_matched;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_cal_empty;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_cosmic;
-   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_empty_NoAlg;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_j95_L1matched;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu6;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu6_DiMu_noOS;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu6_Jpsimumu;
    std::vector<int>     *trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose;
    Int_t           trig_L2_tilemufeature_n;
    std::vector<float>   *trig_L2_tilemufeature_eta;
    std::vector<float>   *trig_L2_tilemufeature_phi;
@@ -3304,27 +3842,36 @@ public :
    std::vector<int>     *trig_L2_tilemufeature_L2_2mu10_loose;
    std::vector<int>     *trig_L2_tilemufeature_L2_2mu10_loose_empty;
    std::vector<int>     *trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_Bmumu;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_Bmumux;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_DiMu;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_Jpsimumu;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4_Upsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_2e5_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_Bmumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_Bmumux;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_Upsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_xe20_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4T_xe25_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_L2_tilemufeature_L2_2mu6;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu6_Bmumux;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu6_DiMu;
    std::vector<int>     *trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_L2_tilemufeature_L2_2mu6_NL;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu0_cal_empty;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu0_empty_NoAlg;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10_Jpsimumu;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu10_NL;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10_cal;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu10_cal_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10_loose;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu11_empty_NoAlg;
@@ -3332,45 +3879,99 @@ public :
    std::vector<int>     *trig_L2_tilemufeature_L2_mu13_MG;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu15;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu15_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu15_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu15_xe20_noMu;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu15i;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu15i_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu18;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_L1J10;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu18_MG;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_MG_L1J10;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_MG_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu18i4_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20_IDTrkNoCut;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20_MG;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu20_MG_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20_empty;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu20_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu20_tight;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu20i;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu20i_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu22;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu22_MG;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu22_MG_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu22_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu22i2_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu22i4_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu24_MG_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu24_MG_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu24_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu24_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu30_MG_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu30_MG_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu30_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu30_tight;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_barrel;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_empty;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_MSonly_tighter;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_slow;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_slow_empty;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu40_slow_medium;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu40_slow_outOfTime;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_DiMu;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_Jpsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_DiMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J10_matched;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J15_matched;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J20_matched;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J30_matched;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J50_matched;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1J75_matched;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_cal_empty;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu4_cosmic;
-   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_empty_NoAlg;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_j95_L1matched;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu6;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu6_DiMu_noOS;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu6_Jpsimumu;
    std::vector<int>     *trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose;
    Int_t           trig_L2_tiletrackmufeature_n;
    std::vector<float>   *trig_L2_tiletrackmufeature_pt;
    std::vector<float>   *trig_L2_tiletrackmufeature_eta;
@@ -3384,27 +3985,36 @@ public :
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu10_loose;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu10_loose_empty;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_Bmumu;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_Bmumux;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_DiMu;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6_Bmumux;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6_DiMu;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6_NL;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu0_cal_empty;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_NL;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_cal;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_cal_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_loose;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg;
@@ -3412,45 +4022,99 @@ public :
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu13_MG;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15i;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu15i_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_L1J10;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_MG;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_MG_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu18i4_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_MG;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_MG_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_empty;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20_tight;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20i;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu20i_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22_MG;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22_MG_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22i2_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu22i4_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu24_MG_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu24_MG_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu24_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu24_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu30_MG_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu30_MG_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu30_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu30_tight;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_slow;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_slow_empty;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_slow_medium;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_DiMu;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_DiMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_cal_empty;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_cosmic;
-   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu;
    std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose;
    std::vector<int>     *trig_L2_tiletrackmufeature_tilemu_index;
    std::vector<int>     *trig_L2_tiletrackmufeature_idtrk_algorithmId;
    std::vector<short>   *trig_L2_tiletrackmufeature_idtrk_trackStatus;
@@ -3472,25 +4136,34 @@ public :
    std::vector<int>     *trig_EF_trigmuonef_EF_2mu10_loose;
    std::vector<int>     *trig_EF_trigmuonef_EF_2mu10_loose_empty;
    std::vector<int>     *trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_Bmumu;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_Bmumux;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_DiMu;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_Jpsimumu;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4_Upsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_2e5_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_Bmumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_Bmumux;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_Upsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_xe30_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4T_xe40_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_EF_trigmuonef_EF_2mu6;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu6_Bmumux;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu6_DiMu;
    std::vector<int>     *trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu6_NL;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu0_empty_NoAlg;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu10;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu10_Jpsimumu;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu10_NL;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu10_loose;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu11_empty_NoAlg;
@@ -3498,46 +4171,106 @@ public :
    std::vector<int>     *trig_EF_trigmuonef_EF_mu13_MG;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu15;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu15_mu10_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu15_xe30_noMu;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu15i;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu15i_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu18;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_L1J10;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu18_MG;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_MG_L1J10;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_MG_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18i3_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu18i4_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20_MG;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu20_MG_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20_empty;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu20_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu20i;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu20i_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu22;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu22_MG;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22_MG_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22i1_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22i2_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22i3_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu22i4_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu24_MG_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu24_MG_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu24_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu24_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu30_MG_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu30_MG_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu30_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu30_tight;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_barrel;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_empty;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_MSonly_tighter;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_slow;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_slow_empty;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu40_slow_medium;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu40_slow_outOfTime;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_DiMu;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_DiMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J10_matched;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J15_matched;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J20_matched;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J30_matched;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J50_matched;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1J75_matched;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu4_cosmic;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_empty_NoAlg;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu6;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu6_DiMu_noOS;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu6_Jpsimumu;
    std::vector<int>     *trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose;
    std::vector<int>     *trig_EF_trigmuonef_track_n;
    std::vector<std::vector<int> > *trig_EF_trigmuonef_track_MuonType;
    std::vector<std::vector<float> > *trig_EF_trigmuonef_track_MS_pt;
@@ -3583,25 +4316,34 @@ public :
    std::vector<int>     *trig_EF_trigmugirl_EF_2mu10_loose;
    std::vector<int>     *trig_EF_trigmugirl_EF_2mu10_loose_empty;
    std::vector<int>     *trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_Bmumu;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_Bmumux;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_DiMu;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_Jpsimumu;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4_Upsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_2e5_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_Bmumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_Bmumux;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu_DY;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_Upsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_xe30_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4T_xe40_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY;
    std::vector<int>     *trig_EF_trigmugirl_EF_2mu6;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu6_Bmumux;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu6_DiMu;
    std::vector<int>     *trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose;
-   std::vector<int>     *trig_EF_trigmugirl_EF_2mu6_NL;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu0_empty_NoAlg;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu10;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu10_Jpsimumu;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu10_NL;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu10_Upsimumu_FS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu10_loose;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu11_empty_NoAlg;
@@ -3609,46 +4351,106 @@ public :
    std::vector<int>     *trig_EF_trigmugirl_EF_mu13_MG;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu15;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu15_mu10_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu15_xe30_noMu;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu15i;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu15i_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu18;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_L1J10;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu18_MG;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_MG_L1J10;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_MG_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18i3_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18i4_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20_MG;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20_MG_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20_empty;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu20i;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20i_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu22;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu22_MG;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22_MG_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22i1_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22i2_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22i3_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22i4_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu24_MG_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu24_MG_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu24_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu24_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu30_MG_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu30_MG_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu30_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu30_tight;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_barrel;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_empty;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_MSonly_tighter;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_slow;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_slow_empty;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu40_slow_medium;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu40_slow_outOfTime;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_DiMu;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_DiMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_DiMu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J10_matched;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J15_matched;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J20_matched;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J30_matched;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J50_matched;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1J75_matched;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_MSonly_cosmic;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_Trk_Jpsi;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_Upsimumu_FS;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu4_cosmic;
-   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_empty_NoAlg;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu6;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu6_DiMu_noOS;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu6_Jpsimumu;
    std::vector<int>     *trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose;
    std::vector<int>     *trig_EF_trigmugirl_track_n;
    std::vector<std::vector<int> > *trig_EF_trigmugirl_track_MuonType;
    std::vector<std::vector<float> > *trig_EF_trigmugirl_track_MS_pt;
@@ -3839,36 +4641,44 @@ public :
    std::vector<float>   *trig_L1_emtau_hadIsol;
    std::vector<float>   *trig_L1_emtau_hadCore;
    std::vector<unsigned int> *trig_L1_emtau_thrPattern;
-   std::vector<int>     *trig_L1_emtau_L1_2EM10;
-   std::vector<int>     *trig_L1_emtau_L1_2EM14;
+   std::vector<int>     *trig_L1_emtau_L1_2EM10VH;
+   std::vector<int>     *trig_L1_emtau_L1_2EM12;
    std::vector<int>     *trig_L1_emtau_L1_2EM3;
+   std::vector<int>     *trig_L1_emtau_L1_2EM3_EM12;
    std::vector<int>     *trig_L1_emtau_L1_2EM3_EM7;
-   std::vector<int>     *trig_L1_emtau_L1_2EM3_NL;
    std::vector<int>     *trig_L1_emtau_L1_2EM5;
+   std::vector<int>     *trig_L1_emtau_L1_2EM5_EM16VH;
    std::vector<int>     *trig_L1_emtau_L1_2EM5_MU6;
    std::vector<int>     *trig_L1_emtau_L1_2EM7;
-   std::vector<int>     *trig_L1_emtau_L1_EM10;
-   std::vector<int>     *trig_L1_emtau_L1_EM10_MU6;
-   std::vector<int>     *trig_L1_emtau_L1_EM10_NL;
-   std::vector<int>     *trig_L1_emtau_L1_EM10_XE20;
+   std::vector<int>     *trig_L1_emtau_L1_EM10VH;
+   std::vector<int>     *trig_L1_emtau_L1_EM10VH_MU6;
+   std::vector<int>     *trig_L1_emtau_L1_EM10VH_XE20;
+   std::vector<int>     *trig_L1_emtau_L1_EM10VH_XE30;
+   std::vector<int>     *trig_L1_emtau_L1_EM10VH_XE35;
    std::vector<int>     *trig_L1_emtau_L1_EM12;
-   std::vector<int>     *trig_L1_emtau_L1_EM14;
-   std::vector<int>     *trig_L1_emtau_L1_EM14_XE10;
-   std::vector<int>     *trig_L1_emtau_L1_EM14_XE20;
-   std::vector<int>     *trig_L1_emtau_L1_EM16;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_3J10;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_4J10;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_XE20;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_XE30;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_XS30;
+   std::vector<int>     *trig_L1_emtau_L1_EM12_XS45;
+   std::vector<int>     *trig_L1_emtau_L1_EM16VH;
+   std::vector<int>     *trig_L1_emtau_L1_EM18VH;
    std::vector<int>     *trig_L1_emtau_L1_EM3;
    std::vector<int>     *trig_L1_emtau_L1_EM30;
    std::vector<int>     *trig_L1_emtau_L1_EM3_EMPTY;
    std::vector<int>     *trig_L1_emtau_L1_EM3_FIRSTEMPTY;
-   std::vector<int>     *trig_L1_emtau_L1_EM3_MU0;
    std::vector<int>     *trig_L1_emtau_L1_EM3_MU6;
    std::vector<int>     *trig_L1_emtau_L1_EM3_UNPAIRED_ISO;
    std::vector<int>     *trig_L1_emtau_L1_EM3_UNPAIRED_NONISO;
    std::vector<int>     *trig_L1_emtau_L1_EM5;
    std::vector<int>     *trig_L1_emtau_L1_EM5_2MU6;
+   std::vector<int>     *trig_L1_emtau_L1_EM5_EMPTY;
    std::vector<int>     *trig_L1_emtau_L1_EM5_MU10;
    std::vector<int>     *trig_L1_emtau_L1_EM5_MU6;
    std::vector<int>     *trig_L1_emtau_L1_EM7;
+   std::vector<int>     *trig_L1_emtau_L1_EM7_XS30;
+   std::vector<int>     *trig_L1_emtau_L1_EM7_XS45;
    std::vector<unsigned int> *trig_L1_emtau_RoIWord;
    Int_t           trig_L2_emcl_n;
    std::vector<unsigned int> *trig_L2_emcl_quality;
@@ -3972,32 +4782,62 @@ public :
    std::vector<float>   *trig_L2_el_F1;
    std::vector<int>     *trig_L2_el_L2_2e10_medium;
    std::vector<int>     *trig_L2_el_L2_2e10_medium_mu6;
+   std::vector<int>     *trig_L2_el_L2_2e12Tvh_medium;
    std::vector<int>     *trig_L2_el_L2_2e12_medium;
+   std::vector<int>     *trig_L2_el_L2_2e15vh_medium;
    std::vector<int>     *trig_L2_el_L2_2e5_tight;
    std::vector<int>     *trig_L2_el_L2_2e5_tight_Jpsi;
-   std::vector<int>     *trig_L2_el_L2_2e5_tight_NL;
    std::vector<int>     *trig_L2_el_L2_e10_medium;
    std::vector<int>     *trig_L2_el_L2_e10_medium_2mu6;
+   std::vector<int>     *trig_L2_el_L2_e10_medium_mu10;
    std::vector<int>     *trig_L2_el_L2_e10_medium_mu6;
-   std::vector<int>     *trig_L2_el_L2_e15_medium;
-   std::vector<int>     *trig_L2_el_L2_e15_medium_xe30_noMu;
-   std::vector<int>     *trig_L2_el_L2_e15_tight;
-   std::vector<int>     *trig_L2_el_L2_e15_tight_NL;
-   std::vector<int>     *trig_L2_el_L2_e20_loose;
-   std::vector<int>     *trig_L2_el_L2_e20_medium;
-   std::vector<int>     *trig_L2_el_L2_e20_medium1;
-   std::vector<int>     *trig_L2_el_L2_e20_medium_IDTrkNoCut;
-   std::vector<int>     *trig_L2_el_L2_e20_medium_SiTrk;
-   std::vector<int>     *trig_L2_el_L2_e20_medium_TRT;
-   std::vector<int>     *trig_L2_el_L2_e22_medium;
+   std::vector<int>     *trig_L2_el_L2_e10_medium_mu6_topo_medium;
+   std::vector<int>     *trig_L2_el_L2_e11_etcut;
+   std::vector<int>     *trig_L2_el_L2_e12Tvh_medium;
+   std::vector<int>     *trig_L2_el_L2_e12Tvh_medium_2e6T_medium;
+   std::vector<int>     *trig_L2_el_L2_e12Tvh_medium_mu6;
+   std::vector<int>     *trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium;
+   std::vector<int>     *trig_L2_el_L2_e12_medium;
+   std::vector<int>     *trig_L2_el_L2_e13_etcutTrk_xs30_noMu;
+   std::vector<int>     *trig_L2_el_L2_e13_etcutTrk_xs45_noMu;
+   std::vector<int>     *trig_L2_el_L2_e14_tight_e4_etcut_Jpsi;
+   std::vector<int>     *trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee;
+   std::vector<int>     *trig_L2_el_L2_e15vh_medium;
+   std::vector<int>     *trig_L2_el_L2_e15vh_medium_xe30_noMu;
+   std::vector<int>     *trig_L2_el_L2_e15vh_medium_xe35_noMu;
+   std::vector<int>     *trig_L2_el_L2_e20_etcutTrk_xe25_noMu;
+   std::vector<int>     *trig_L2_el_L2_e20_etcutTrk_xs45_noMu;
+   std::vector<int>     *trig_L2_el_L2_e20_tight_e15_NoCut_Zee;
+   std::vector<int>     *trig_L2_el_L2_e22vh_loose;
+   std::vector<int>     *trig_L2_el_L2_e22vh_loose1;
+   std::vector<int>     *trig_L2_el_L2_e22vh_looseTrk;
+   std::vector<int>     *trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium1;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium1_EFxe20_noMu;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium1_EFxe30_noMu;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium1_EFxe40_noMu;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium2;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium_IDTrkNoCut;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium_SiTrk;
+   std::vector<int>     *trig_L2_el_L2_e22vh_medium_TRT;
+   std::vector<int>     *trig_L2_el_L2_e40_medium;
+   std::vector<int>     *trig_L2_el_L2_e45_medium;
+   std::vector<int>     *trig_L2_el_L2_e45_medium1;
+   std::vector<int>     *trig_L2_el_L2_e5_medium_mu6;
+   std::vector<int>     *trig_L2_el_L2_e5_medium_mu6_topo_medium;
    std::vector<int>     *trig_L2_el_L2_e5_tight;
+   std::vector<int>     *trig_L2_el_L2_e5_tight_e14_etcut_Jpsi;
    std::vector<int>     *trig_L2_el_L2_e5_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk;
    std::vector<int>     *trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT;
    std::vector<int>     *trig_L2_el_L2_e5_tight_e5_NoCut;
    std::vector<int>     *trig_L2_el_L2_e5_tight_e9_etcut_Jpsi;
    std::vector<int>     *trig_L2_el_L2_e60_loose;
-   std::vector<int>     *trig_L2_el_L2_e9_tight_e5_tight_Jpsi;
+   std::vector<int>     *trig_L2_el_L2_e6T_medium;
+   std::vector<int>     *trig_L2_el_L2_e9_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_L2_el_L2_eb_physics;
    std::vector<int>     *trig_L2_el_L2_eb_physics_empty;
    std::vector<int>     *trig_L2_el_L2_eb_physics_firstempty;
@@ -4009,6 +4849,7 @@ public :
    std::vector<int>     *trig_L2_el_L2_eb_random_firstempty;
    std::vector<int>     *trig_L2_el_L2_eb_random_unpaired_iso;
    std::vector<int>     *trig_L2_el_L2_em3_empty_larcalib;
+   std::vector<int>     *trig_L2_el_L2_em5_empty_larcalib;
    std::vector<float>   *trig_L2_el_err_trkPt;
    std::vector<float>   *trig_L2_el_err_eta;
    std::vector<float>   *trig_L2_el_err_phi;
@@ -4029,19 +4870,19 @@ public :
    std::vector<float>   *trig_L2_ph_dPhi;
    std::vector<float>   *trig_L2_ph_dEta;
    std::vector<float>   *trig_L2_ph_F1;
-   std::vector<int>     *trig_L2_ph_L2_2g10_loose_NL;
-   std::vector<int>     *trig_L2_ph_L2_2g15_loose;
    std::vector<int>     *trig_L2_ph_L2_2g20_loose;
-   std::vector<int>     *trig_L2_ph_L2_g100_etcut_g50_etcut;
+   std::vector<int>     *trig_L2_ph_L2_g100_loose;
+   std::vector<int>     *trig_L2_ph_L2_g10_NoCut_cosmic;
    std::vector<int>     *trig_L2_ph_L2_g11_etcut;
    std::vector<int>     *trig_L2_ph_L2_g150_etcut;
-   std::vector<int>     *trig_L2_ph_L2_g15_loose;
+   std::vector<int>     *trig_L2_ph_L2_g200_etcut;
    std::vector<int>     *trig_L2_ph_L2_g20_etcut;
-   std::vector<int>     *trig_L2_ph_L2_g20_etcut_xe30_noMu;
    std::vector<int>     *trig_L2_ph_L2_g20_loose;
    std::vector<int>     *trig_L2_ph_L2_g40_loose;
    std::vector<int>     *trig_L2_ph_L2_g40_loose_EFxe40_noMu;
-   std::vector<int>     *trig_L2_ph_L2_g40_tight;
+   std::vector<int>     *trig_L2_ph_L2_g40_loose_xe30_medium_noMu;
+   std::vector<int>     *trig_L2_ph_L2_g40_loose_xe35_medium_noMu;
+   std::vector<int>     *trig_L2_ph_L2_g40_tight_b10_medium;
    std::vector<int>     *trig_L2_ph_L2_g5_NoCut_cosmic;
    std::vector<int>     *trig_L2_ph_L2_g60_loose;
    std::vector<int>     *trig_L2_ph_L2_g80_loose;
@@ -4376,37 +5217,71 @@ public :
    std::vector<float>   *trig_EF_el_refittedtrackcovthetaqoverp;
    std::vector<int>     *trig_EF_el_EF_2e10_medium;
    std::vector<int>     *trig_EF_el_EF_2e10_medium_mu6;
+   std::vector<int>     *trig_EF_el_EF_2e12Tvh_medium;
    std::vector<int>     *trig_EF_el_EF_2e12_medium;
+   std::vector<int>     *trig_EF_el_EF_2e15vh_medium;
    std::vector<int>     *trig_EF_el_EF_2e5_tight;
    std::vector<int>     *trig_EF_el_EF_2e5_tight_Jpsi;
-   std::vector<int>     *trig_EF_el_EF_2e5_tight_NL;
    std::vector<int>     *trig_EF_el_EF_e10_medium;
    std::vector<int>     *trig_EF_el_EF_e10_medium_2mu6;
+   std::vector<int>     *trig_EF_el_EF_e10_medium_mu10;
    std::vector<int>     *trig_EF_el_EF_e10_medium_mu6;
-   std::vector<int>     *trig_EF_el_EF_e15_medium;
-   std::vector<int>     *trig_EF_el_EF_e15_medium_xe30_noMu;
-   std::vector<int>     *trig_EF_el_EF_e15_tight;
-   std::vector<int>     *trig_EF_el_EF_e15_tight_NL;
-   std::vector<int>     *trig_EF_el_EF_e20_loose;
+   std::vector<int>     *trig_EF_el_EF_e10_medium_mu6_topo_medium;
+   std::vector<int>     *trig_EF_el_EF_e11_etcut;
+   std::vector<int>     *trig_EF_el_EF_e12Tvh_medium;
+   std::vector<int>     *trig_EF_el_EF_e12Tvh_medium_2e6T_medium;
+   std::vector<int>     *trig_EF_el_EF_e12Tvh_medium_mu6;
+   std::vector<int>     *trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium;
+   std::vector<int>     *trig_EF_el_EF_e12_medium;
+   std::vector<int>     *trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20;
+   std::vector<int>     *trig_EF_el_EF_e13_etcutTrk_xs60_noMu;
+   std::vector<int>     *trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07;
+   std::vector<int>     *trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20;
+   std::vector<int>     *trig_EF_el_EF_e14_tight_e4_etcut_Jpsi;
+   std::vector<int>     *trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee;
+   std::vector<int>     *trig_EF_el_EF_e15vh_medium;
+   std::vector<int>     *trig_EF_el_EF_e15vh_medium_xe40_noMu;
+   std::vector<int>     *trig_EF_el_EF_e15vh_medium_xe50_noMu;
+   std::vector<int>     *trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20;
+   std::vector<int>     *trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07;
+   std::vector<int>     *trig_EF_el_EF_e20_tight_e15_NoCut_Zee;
+   std::vector<int>     *trig_EF_el_EF_e22vh_loose;
+   std::vector<int>     *trig_EF_el_EF_e22vh_loose1;
+   std::vector<int>     *trig_EF_el_EF_e22vh_looseTrk;
+   std::vector<int>     *trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium;
    std::vector<int>     *trig_EF_el_EF_e20_medium;
-   std::vector<int>     *trig_EF_el_EF_e20_medium1;
-   std::vector<int>     *trig_EF_el_EF_e20_medium_IDTrkNoCut;
-   std::vector<int>     *trig_EF_el_EF_e20_medium_SiTrk;
-   std::vector<int>     *trig_EF_el_EF_e20_medium_TRT;
    std::vector<int>     *trig_EF_el_EF_e22_medium;
    std::vector<int>     *trig_EF_el_EF_e22_medium1;
-   std::vector<int>     *trig_EF_el_EF_e22vh_medium1;
    std::vector<int>     *trig_EF_el_EF_2e12T_medium;
-   std::vector<int>     *trig_EF_el_EF_2e12Tvh_medium;
-   std::vector<int>     *trig_EF_el_EF_mu18_MG_medium ;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_EFxe20_noMu;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_EFxe30_noMu;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium1_EFxe40_noMu;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium2;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium_IDTrkNoCut;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium_SiTrk;
+   std::vector<int>     *trig_EF_el_EF_e22vh_medium_TRT;
+   std::vector<int>     *trig_EF_el_EF_e40_medium;
+   std::vector<int>     *trig_EF_el_EF_e45_medium;
+   std::vector<int>     *trig_EF_el_EF_e45_medium1;
+   std::vector<int>     *trig_EF_el_EF_e5_medium_mu6;
+   std::vector<int>     *trig_EF_el_EF_e5_medium_mu6_topo_medium;
    std::vector<int>     *trig_EF_el_EF_e5_tight;
+   std::vector<int>     *trig_EF_el_EF_e5_tight_e14_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e5_NoCut;
    std::vector<int>     *trig_EF_el_EF_e5_tight_e9_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_e60_loose;
-   std::vector<int>     *trig_EF_el_EF_e9_tight_e5_tight_Jpsi;
+   std::vector<int>     *trig_EF_el_EF_e6T_medium;
+   std::vector<int>     *trig_EF_el_EF_e9_tight_e4_etcut_Jpsi;
    std::vector<int>     *trig_EF_el_EF_eb_physics;
    std::vector<int>     *trig_EF_el_EF_eb_physics_empty;
    std::vector<int>     *trig_EF_el_EF_eb_physics_firstempty;
@@ -4484,23 +5359,22 @@ public :
    std::vector<float>   *trig_EF_ph_px;
    std::vector<float>   *trig_EF_ph_py;
    std::vector<float>   *trig_EF_ph_pz;
-   std::vector<int>     *trig_EF_ph_EF_2g10_loose_NL;
-   std::vector<int>     *trig_EF_ph_EF_2g15_loose;
    std::vector<int>     *trig_EF_ph_EF_2g20_loose;
-   std::vector<int>     *trig_EF_ph_EF_g100_etcut_g50_etcut;
+   std::vector<int>     *trig_EF_ph_EF_g100_loose;
+   std::vector<int>     *trig_EF_ph_EF_g10_NoCut_cosmic;
    std::vector<int>     *trig_EF_ph_EF_g11_etcut;
    std::vector<int>     *trig_EF_ph_EF_g11_etcut_larcalib;
    std::vector<int>     *trig_EF_ph_EF_g150_etcut;
-   std::vector<int>     *trig_EF_ph_EF_g15_loose;
-   std::vector<int>     *trig_EF_ph_EF_g15_loose_larcalib;
+   std::vector<int>     *trig_EF_ph_EF_g200_etcut;
    std::vector<int>     *trig_EF_ph_EF_g20_etcut;
-   std::vector<int>     *trig_EF_ph_EF_g20_etcut_xe30_noMu;
    std::vector<int>     *trig_EF_ph_EF_g20_loose;
    std::vector<int>     *trig_EF_ph_EF_g20_loose_larcalib;
    std::vector<int>     *trig_EF_ph_EF_g40_loose;
    std::vector<int>     *trig_EF_ph_EF_g40_loose_EFxe40_noMu;
    std::vector<int>     *trig_EF_ph_EF_g40_loose_larcalib;
-   std::vector<int>     *trig_EF_ph_EF_g40_tight;
+   std::vector<int>     *trig_EF_ph_EF_g40_loose_xe45_medium_noMu;
+   std::vector<int>     *trig_EF_ph_EF_g40_loose_xe55_medium_noMu;
+   std::vector<int>     *trig_EF_ph_EF_g40_tight_b10_medium;
    std::vector<int>     *trig_EF_ph_EF_g5_NoCut_cosmic;
    std::vector<int>     *trig_EF_ph_EF_g60_loose;
    std::vector<int>     *trig_EF_ph_EF_g60_loose_larcalib;
@@ -4682,58 +5556,106 @@ public :
    TBranch        *b_isTestBeam;   //!
    TBranch        *b_EF_2e10_medium;   //!
    TBranch        *b_EF_2e10_medium_mu6;   //!
+   TBranch        *b_EF_2e12Tvh_medium;   //!
    TBranch        *b_EF_2e12_medium;   //!
+   TBranch        *b_EF_2e15vh_medium;   //!
    TBranch        *b_EF_2e5_tight;   //!
    TBranch        *b_EF_2e5_tight_Jpsi;   //!
-   TBranch        *b_EF_2e5_tight_NL;   //!
-   TBranch        *b_EF_2g10_loose_NL;   //!
-   TBranch        *b_EF_2g15_loose;   //!
    TBranch        *b_EF_2g20_loose;   //!
+   TBranch        *b_EF_2j45_a4tc_EFFS_leadingmct100_xe40_medium_noMu;   //!
+   TBranch        *b_EF_2j55_a4tc_EFFS_leadingmct100_xe40_medium_noMu;   //!
    TBranch        *b_EF_2mu10;   //!
    TBranch        *b_EF_2mu10_empty;   //!
    TBranch        *b_EF_2mu10_loose;   //!
    TBranch        *b_EF_2mu10_loose_empty;   //!
    TBranch        *b_EF_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_EF_2mu4;   //!
-   TBranch        *b_EF_2mu4_Bmumu;   //!
-   TBranch        *b_EF_2mu4_Bmumux;   //!
-   TBranch        *b_EF_2mu4_DiMu;   //!
-   TBranch        *b_EF_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_EF_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_EF_2mu4_Jpsimumu;   //!
-   TBranch        *b_EF_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_EF_2mu4_Upsimumu;   //!
+   TBranch        *b_EF_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_EF_2mu4T;   //!
+   TBranch        *b_EF_2mu4T_2e5_medium;   //!
+   TBranch        *b_EF_2mu4T_Bmumu;   //!
+   TBranch        *b_EF_2mu4T_Bmumux;   //!
+   TBranch        *b_EF_2mu4T_DiMu;   //!
+   TBranch        *b_EF_2mu4T_DiMu_DY;   //!
+   TBranch        *b_EF_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_EF_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_EF_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_EF_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_EF_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_EF_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_EF_2mu4T_Jpsimumu;   //!
+   TBranch        *b_EF_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_EF_2mu4T_Upsimumu;   //!
+   TBranch        *b_EF_2mu4T_xe30_noMu;   //!
+   TBranch        *b_EF_2mu4T_xe40_noMu;   //!
+   TBranch        *b_EF_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_EF_2mu6;   //!
+   TBranch        *b_EF_2mu6_Bmumux;   //!
+   TBranch        *b_EF_2mu6_DiMu;   //!
    TBranch        *b_EF_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_EF_2mu6_NL;   //!
+   TBranch        *b_EF_2mu6_MSonly_g10_loose_nonfilled;   //!
+   TBranch        *b_EF_2tau29T_medium1;   //!
    TBranch        *b_EF_2tau29_medium1;   //!
+   TBranch        *b_EF_2tau29i_medium1;   //!
    TBranch        *b_EF_e10_medium;   //!
    TBranch        *b_EF_e10_medium_2mu6;   //!
+   TBranch        *b_EF_e10_medium_mu10;   //!
    TBranch        *b_EF_e10_medium_mu6;   //!
-   TBranch        *b_EF_e15_medium;   //!
-   TBranch        *b_EF_e15_medium_xe30_noMu;   //!
-   TBranch        *b_EF_e15_tight;   //!
-   TBranch        *b_EF_e15_tight_NL;   //!
-   TBranch        *b_EF_e20_loose;   //!
+   TBranch        *b_EF_e10_medium_mu6_topo_medium;   //!
+   TBranch        *b_EF_e11_etcut;   //!
+   TBranch        *b_EF_e12Tvh_medium;   //!
+   TBranch        *b_EF_e12Tvh_medium_2e6T_medium;   //!
+   TBranch        *b_EF_e12Tvh_medium_mu6;   //!
+   TBranch        *b_EF_e12Tvh_medium_mu6_topo_medium;   //!
+   TBranch        *b_EF_e12_medium;   //!
+   TBranch        *b_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20;   //!
+   TBranch        *b_EF_e13_etcutTrk_xs60_noMu;   //!
+   TBranch        *b_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07;   //!
+   TBranch        *b_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20;   //!
+   TBranch        *b_EF_e14_tight_e4_etcut_Jpsi;   //!
+   TBranch        *b_EF_e15vh_loose1_e12Tvh_loose1_Zee;   //!
+   TBranch        *b_EF_e15vh_medium;   //!
+   TBranch        *b_EF_e15vh_medium_xe40_noMu;   //!
+   TBranch        *b_EF_e15vh_medium_xe50_noMu;   //!
+   TBranch        *b_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20;   //!
+   TBranch        *b_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07;   //!
+   TBranch        *b_EF_e20_tight_e15_NoCut_Zee;   //!
+   TBranch        *b_EF_e22vh_loose;   //!
+   TBranch        *b_EF_e22vh_loose1;   //!
+   TBranch        *b_EF_e22vh_looseTrk;   //!
+   TBranch        *b_EF_e22vh_loose_2j20_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_loose_3j20_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_loose_4j15_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_medium;   //!
    TBranch        *b_EF_e20_medium;   //!
-   TBranch        *b_EF_e20_medium1;   //!
-   TBranch        *b_EF_e20_medium_IDTrkNoCut;   //!
-   TBranch        *b_EF_e20_medium_SiTrk;   //!
-   TBranch        *b_EF_e20_medium_TRT;   //!
    TBranch        *b_EF_e22_medium;   //!
    TBranch        *b_EF_e22_medium1;   //!
-   TBranch        *b_EF_e22vh_medium1;   //!
    TBranch        *b_EF_2e12T_medium;   //!
-   TBranch        *b_EF_2e12Tvh_medium;   //!
-   TBranch        *b_EF_mu18_MG_medium;   //!
+   TBranch        *b_EF_e22vh_medium1;   //!
+   TBranch        *b_EF_e22vh_medium1_3j10_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_medium1_3j15_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_medium1_4j10_a4tc_EFFS;   //!
+   TBranch        *b_EF_e22vh_medium1_EFxe20_noMu;   //!
+   TBranch        *b_EF_e22vh_medium1_EFxe30_noMu;   //!
+   TBranch        *b_EF_e22vh_medium1_EFxe40_noMu;   //!
+   TBranch        *b_EF_e22vh_medium2;   //!
+   TBranch        *b_EF_e22vh_medium_IDTrkNoCut;   //!
+   TBranch        *b_EF_e22vh_medium_SiTrk;   //!
+   TBranch        *b_EF_e22vh_medium_TRT;   //!
+   TBranch        *b_EF_e40_medium;   //!
+   TBranch        *b_EF_e45_medium;   //!
+   TBranch        *b_EF_e45_medium1;   //!
+   TBranch        *b_EF_e5_medium_mu6;   //!
+   TBranch        *b_EF_e5_medium_mu6_topo_medium;   //!
    TBranch        *b_EF_e5_tight;   //!
+   TBranch        *b_EF_e5_tight_e14_etcut_Jpsi;   //!
    TBranch        *b_EF_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_EF_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
    TBranch        *b_EF_e5_tight_e4_etcut_Jpsi_TRT;   //!
    TBranch        *b_EF_e5_tight_e5_NoCut;   //!
    TBranch        *b_EF_e5_tight_e9_etcut_Jpsi;   //!
    TBranch        *b_EF_e60_loose;   //!
-   TBranch        *b_EF_e9_tight_e5_tight_Jpsi;   //!
+   TBranch        *b_EF_e6T_medium;   //!
+   TBranch        *b_EF_e9_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_EF_eb_physics;   //!
    TBranch        *b_EF_eb_physics_empty;   //!
    TBranch        *b_EF_eb_physics_firstempty;   //!
@@ -4744,64 +5666,89 @@ public :
    TBranch        *b_EF_eb_random_empty;   //!
    TBranch        *b_EF_eb_random_firstempty;   //!
    TBranch        *b_EF_eb_random_unpaired_iso;   //!
-   TBranch        *b_EF_g100_etcut_g50_etcut;   //!
+   TBranch        *b_EF_g100_loose;   //!
+   TBranch        *b_EF_g10_NoCut_cosmic;   //!
    TBranch        *b_EF_g11_etcut;   //!
    TBranch        *b_EF_g11_etcut_larcalib;   //!
    TBranch        *b_EF_g150_etcut;   //!
-   TBranch        *b_EF_g15_loose;   //!
-   TBranch        *b_EF_g15_loose_larcalib;   //!
+   TBranch        *b_EF_g200_etcut;   //!
    TBranch        *b_EF_g20_etcut;   //!
-   TBranch        *b_EF_g20_etcut_xe30_noMu;   //!
    TBranch        *b_EF_g20_loose;   //!
    TBranch        *b_EF_g20_loose_larcalib;   //!
    TBranch        *b_EF_g40_loose;   //!
    TBranch        *b_EF_g40_loose_EFxe40_noMu;   //!
    TBranch        *b_EF_g40_loose_larcalib;   //!
-   TBranch        *b_EF_g40_tight;   //!
+   TBranch        *b_EF_g40_loose_xe45_medium_noMu;   //!
+   TBranch        *b_EF_g40_loose_xe55_medium_noMu;   //!
+   TBranch        *b_EF_g40_tight_b10_medium;   //!
    TBranch        *b_EF_g5_NoCut_cosmic;   //!
    TBranch        *b_EF_g60_loose;   //!
    TBranch        *b_EF_g60_loose_larcalib;   //!
    TBranch        *b_EF_g80_loose;   //!
    TBranch        *b_EF_g80_loose_larcalib;   //!
-   TBranch        *b_EF_j100_a4_EFFS;   //!
-   TBranch        *b_EF_j10_a4_EFFS;   //!
-   TBranch        *b_EF_j120_j55_j40_a4_EFFS;   //!
-   TBranch        *b_EF_j135_a4_EFFS;   //!
-   TBranch        *b_EF_j15_a4_EFFS;   //!
-   TBranch        *b_EF_j180_a4_EFFS;   //!
-   TBranch        *b_EF_j180_j30_a4_EFFS_L2dphi04;   //!
-   TBranch        *b_EF_j20_a4_EFFS;   //!
+   TBranch        *b_EF_j100_a4tc_EFFS;   //!
+   TBranch        *b_EF_j100_a4tc_EFFS_ht350;   //!
+   TBranch        *b_EF_j100_a4tc_EFFS_ht400;   //!
+   TBranch        *b_EF_j100_a4tc_EFFS_ht500;   //!
+   TBranch        *b_EF_j10_a4tc_EFFS;   //!
+   TBranch        *b_EF_j10_a4tc_EFFS_1vx;   //!
+   TBranch        *b_EF_j135_a4tc_EFFS;   //!
+   TBranch        *b_EF_j135_a4tc_EFFS_ht500;   //!
+   TBranch        *b_EF_j135_j30_a4tc_EFFS_dphi04;   //!
+   TBranch        *b_EF_j15_a2hi_EFFS;   //!
+   TBranch        *b_EF_j15_a2tc_EFFS;   //!
+   TBranch        *b_EF_j15_a4tc_EFFS;   //!
+   TBranch        *b_EF_j180_a4tc_EFFS;   //!
+   TBranch        *b_EF_j180_j30_a4tc_EFFS_dphi04;   //!
+   TBranch        *b_EF_j20_a2hi_EFFS;   //!
+   TBranch        *b_EF_j20_a2tc_EFFS;   //!
+   TBranch        *b_EF_j20_a4hi_EFFS;   //!
    TBranch        *b_EF_j20_a4tc_EFFS;   //!
-   TBranch        *b_EF_j240_a4_EFFS;   //!
-   TBranch        *b_EF_j25_larcalib;   //!
-   TBranch        *b_EF_j30_a4_EFFS;   //!
+   TBranch        *b_EF_j240_a10tc_EFFS;   //!
+   TBranch        *b_EF_j240_a4tc_EFFS;   //!
+   TBranch        *b_EF_j240_a4tc_EFFS_l2cleanph;   //!
    TBranch        *b_EF_j30_a4tc_EFFS;   //!
-   TBranch        *b_EF_j30_fj30_a4_EFFS;   //!
-   TBranch        *b_EF_j35_L1TAU_HV;   //!
-   TBranch        *b_EF_j35_L1TAU_HV_jetNoEF_firstempty;   //!
-   TBranch        *b_EF_j35_L1TAU_HV_jetNoEF_unpaired_iso;   //!
-   TBranch        *b_EF_j35_L1TAU_HV_jetNoEF_unpaired_noniso;   //!
-   TBranch        *b_EF_j40_a4_EFFS;   //!
-   TBranch        *b_EF_j40_fj40_a4_EFFS;   //!
-   TBranch        *b_EF_j50_larcalib;   //!
-   TBranch        *b_EF_j55_a4_EFFS;   //!
-   TBranch        *b_EF_j55_fj55_a4_EFFS;   //!
-   TBranch        *b_EF_j75_a4_EFFS;   //!
-   TBranch        *b_EF_j75_a4_EFFS_jetNoEF_EFxe25_noMu;   //!
-   TBranch        *b_EF_j75_a4_EFFS_xe40_loose_noMu;   //!
-   TBranch        *b_EF_j75_a4_EFFS_xe45_loose_noMu;   //!
-   TBranch        *b_EF_j75_a4_EFFS_xe55_loose_noMu;   //!
-   TBranch        *b_EF_j75_fj75_a4_EFFS;   //!
-   TBranch        *b_EF_j75_j30_a4_EFFS_L2anymct150;   //!
-   TBranch        *b_EF_j75_j30_a4_EFFS_L2anymct175;   //!
-   TBranch        *b_EF_j95_larcalib;   //!
-   TBranch        *b_EF_mu0_empty_NoAlg;   //!
-   TBranch        *b_EF_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_EF_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_EF_j30_a4tc_EFFS_l2cleanph;   //!
+   TBranch        *b_EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_empty;   //!
+   TBranch        *b_EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_firstempty;   //!
+   TBranch        *b_EF_j30_fj30_a4tc_EFFS;   //!
+   TBranch        *b_EF_j320_a10tc_EFFS;   //!
+   TBranch        *b_EF_j320_a4tc_EFFS;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_LOF;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_cosmic;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_firstempty;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_iso;   //!
+   TBranch        *b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_noniso;   //!
+   TBranch        *b_EF_j40_a4tc_EFFS;   //!
+   TBranch        *b_EF_j40_fj40_a4tc_EFFS;   //!
+   TBranch        *b_EF_j425_a10tc_EFFS;   //!
+   TBranch        *b_EF_j425_a4tc_EFFS;   //!
+   TBranch        *b_EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_empty;   //!
+   TBranch        *b_EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_firstempty;   //!
+   TBranch        *b_EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_empty;   //!
+   TBranch        *b_EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_firstempty;   //!
+   TBranch        *b_EF_j55_a4tc_EFFS;   //!
+   TBranch        *b_EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10;   //!
+   TBranch        *b_EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10_l2cleancons;   //!
+   TBranch        *b_EF_j55_fj55_a4tc_EFFS;   //!
+   TBranch        *b_EF_j65_a4tc_EFFS_xe65_noMu_dphi2j30xe10;   //!
+   TBranch        *b_EF_j70_a4tc_EFFS_xe70_noMu_dphi2j30xe10;   //!
+   TBranch        *b_EF_j75_2j30_a4tc_EFFS_ht350;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS_xe40_loose_noMu;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS_xe45_loose_noMu;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS_xe55_loose_noMu;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS_xe55_noMu;   //!
+   TBranch        *b_EF_j75_a4tc_EFFS_xe55_noMu_l2cleancons;   //!
+   TBranch        *b_EF_j75_fj75_a4tc_EFFS;   //!
+   TBranch        *b_EF_j75_j30_a4tc_EFFS_anymct150;   //!
+   TBranch        *b_EF_j75_j30_a4tc_EFFS_anymct175;   //!
+   TBranch        *b_EF_j80_a4tc_EFFS_xe60_noMu;   //!
    TBranch        *b_EF_mu10;   //!
    TBranch        *b_EF_mu10_Jpsimumu;   //!
-   TBranch        *b_EF_mu10_NL;   //!
    TBranch        *b_EF_mu10_Upsimumu_FS;   //!
+   TBranch        *b_EF_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_EF_mu10_loose;   //!
    TBranch        *b_EF_mu10_muCombTag_NoEF;   //!
    TBranch        *b_EF_mu11_empty_NoAlg;   //!
@@ -4809,164 +5756,302 @@ public :
    TBranch        *b_EF_mu13_MG;   //!
    TBranch        *b_EF_mu13_muCombTag_NoEF;   //!
    TBranch        *b_EF_mu15;   //!
+   TBranch        *b_EF_mu15_2mu4_EFFS_medium;   //!
    TBranch        *b_EF_mu15_mu10_EFFS;   //!
+   TBranch        *b_EF_mu15_mu10_EFFS_medium;   //!
+   TBranch        *b_EF_mu15_mu10_EFFS_tight;   //!
+   TBranch        *b_EF_mu15_xe30_noMu;   //!
    TBranch        *b_EF_mu15i;   //!
+   TBranch        *b_EF_mu15i_medium;   //!
    TBranch        *b_EF_mu18;   //!
+   TBranch        *b_EF_mu18_L1J10;   //!
    TBranch        *b_EF_mu18_MG;   //!
+   TBranch        *b_EF_mu18_MG_L1J10;   //!
+   TBranch        *b_EF_mu18_MG_medium;   //!
+   TBranch        *b_EF_mu18_medium;   //!
+   TBranch        *b_EF_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_EF_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_EF_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_EF_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_EF_mu18i3_medium;   //!
+   TBranch        *b_EF_mu18i4_medium;   //!
    TBranch        *b_EF_mu20;   //!
    TBranch        *b_EF_mu20_IDTrkNoCut;   //!
+   TBranch        *b_EF_mu20_IDTrkNoCut_ManyVx;   //!
    TBranch        *b_EF_mu20_MG;   //!
+   TBranch        *b_EF_mu20_MG_medium;   //!
    TBranch        *b_EF_mu20_empty;   //!
+   TBranch        *b_EF_mu20_medium;   //!
+   TBranch        *b_EF_mu20_mu10_EFFS_tight;   //!
    TBranch        *b_EF_mu20_muCombTag_NoEF;   //!
    TBranch        *b_EF_mu20i;   //!
+   TBranch        *b_EF_mu20i_medium;   //!
    TBranch        *b_EF_mu22;   //!
    TBranch        *b_EF_mu22_MG;   //!
-   TBranch        *b_EF_mu4;   //!
+   TBranch        *b_EF_mu22_MG_medium;   //!
+   TBranch        *b_EF_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_EF_mu22_medium;   //!
+   TBranch        *b_EF_mu22i1_medium;   //!
+   TBranch        *b_EF_mu22i2_medium;   //!
+   TBranch        *b_EF_mu22i3_medium;   //!
+   TBranch        *b_EF_mu22i4_medium;   //!
+   TBranch        *b_EF_mu24_MG_medium;   //!
+   TBranch        *b_EF_mu24_MG_tight;   //!
+   TBranch        *b_EF_mu24_medium;   //!
+   TBranch        *b_EF_mu24_tight;   //!
+   TBranch        *b_EF_mu30_MG_medium;   //!
+   TBranch        *b_EF_mu30_MG_tight;   //!
+   TBranch        *b_EF_mu30_medium;   //!
+   TBranch        *b_EF_mu30_tight;   //!
    TBranch        *b_EF_mu40_MSonly_barrel;   //!
+   TBranch        *b_EF_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_EF_mu40_MSonly_empty;   //!
    TBranch        *b_EF_mu40_MSonly_tight;   //!
+   TBranch        *b_EF_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_EF_mu40_MSonly_tighter;   //!
    TBranch        *b_EF_mu40_slow;   //!
    TBranch        *b_EF_mu40_slow_empty;   //!
+   TBranch        *b_EF_mu40_slow_medium;   //!
    TBranch        *b_EF_mu40_slow_outOfTime;   //!
-   TBranch        *b_EF_mu4_DiMu;   //!
-   TBranch        *b_EF_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_EF_mu4_Jpsimumu;   //!
+   TBranch        *b_EF_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_EF_mu4T;   //!
+   TBranch        *b_EF_mu4T_DiMu;   //!
+   TBranch        *b_EF_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_EF_mu4T_Jpsimumu;   //!
+   TBranch        *b_EF_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_EF_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_EF_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_EF_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_EF_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;   //!
+   TBranch        *b_EF_mu4T_j45_a4tc_EFFS_xe55_noMu;   //!
+   TBranch        *b_EF_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_EF_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_EF_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_EF_mu4Tmu6_DiMu;   //!
+   TBranch        *b_EF_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_EF_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_EF_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_EF_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_EF_mu4_L1J10_matched;   //!
    TBranch        *b_EF_mu4_L1J15_matched;   //!
+   TBranch        *b_EF_mu4_L1J20_matched;   //!
    TBranch        *b_EF_mu4_L1J30_matched;   //!
    TBranch        *b_EF_mu4_L1J50_matched;   //!
    TBranch        *b_EF_mu4_L1J75_matched;   //!
    TBranch        *b_EF_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_EF_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_EF_mu4_MSonly_cosmic;   //!
-   TBranch        *b_EF_mu4_Trk_Jpsi;   //!
-   TBranch        *b_EF_mu4_Upsimumu_FS;   //!
-   TBranch        *b_EF_mu4_Upsimumu_SiTrk_FS;   //!
    TBranch        *b_EF_mu4_cosmic;   //!
-   TBranch        *b_EF_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_EF_mu4_empty_NoAlg;   //!
+   TBranch        *b_EF_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_EF_mu4_j10_a4tc_EFFS_matched;   //!
+   TBranch        *b_EF_mu4_j135_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_EF_mu4_j180_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_EF_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_EF_mu6;   //!
    TBranch        *b_EF_mu6_DiMu_noOS;   //!
    TBranch        *b_EF_mu6_Jpsimumu;   //!
    TBranch        *b_EF_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_EF_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_EF_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_EF_tau100_medium;   //!
+   TBranch        *b_EF_tau125_IDTrkNoCut;   //!
    TBranch        *b_EF_tau125_medium;   //!
-   TBranch        *b_EF_tau16_IDTrkNoCut;   //!
-   TBranch        *b_EF_tau16_loose;   //!
-   TBranch        *b_EF_tau16_loose_e15_medium;   //!
-   TBranch        *b_EF_tau16_loose_e15_tight;   //!
-   TBranch        *b_EF_tau16_loose_mu10;   //!
-   TBranch        *b_EF_tau16_loose_mu15;   //!
-   TBranch        *b_EF_tau16_medium_mu10;   //!
-   TBranch        *b_EF_tau16_medium_xe22_noMu;   //!
+   TBranch        *b_EF_tau125_medium1;   //!
+   TBranch        *b_EF_tau20T_medium;   //!
+   TBranch        *b_EF_tau20T_medium2;   //!
+   TBranch        *b_EF_tau20T_medium_e15vh_medium;   //!
+   TBranch        *b_EF_tau20T_medium_mu15;   //!
+   TBranch        *b_EF_tau20_medium;   //!
    TBranch        *b_EF_tau20_medium1;   //!
+   TBranch        *b_EF_tau20_medium_e15vh_medium;   //!
+   TBranch        *b_EF_tau20_medium_mu15;   //!
+   TBranch        *b_EF_tau20i_medium;   //!
+   TBranch        *b_EF_tau20i_medium1;   //!
+   TBranch        *b_EF_tau20i_medium_e15vh_medium;   //!
+   TBranch        *b_EF_tau20i_medium_mu15;   //!
+   TBranch        *b_EF_tau20v_medium_e15vh_medium;   //!
+   TBranch        *b_EF_tau29T_medium;   //!
+   TBranch        *b_EF_tau29T_medium1_1P;   //!
+   TBranch        *b_EF_tau29T_medium1_1P_tau20T_medium2;   //!
+   TBranch        *b_EF_tau29T_medium1_tau20T_medium1;   //!
+   TBranch        *b_EF_tau29T_medium1_xe35_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29T_medium1_xs45_loose_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29T_medium1_xs45_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29T_medium2;   //!
+   TBranch        *b_EF_tau29T_medium2_tau20T_medium2;   //!
+   TBranch        *b_EF_tau29T_medium_xe35_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29T_medium_xs45_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29T_medium_xs75_loose_noMu;   //!
+   TBranch        *b_EF_tau29T_medium_xs75_noMu;   //!
+   TBranch        *b_EF_tau29Ti_medium1_1P_tau20Ti_medium2;   //!
+   TBranch        *b_EF_tau29Ti_medium1_tau20Ti_medium1;   //!
+   TBranch        *b_EF_tau29Ti_medium1_tau20i_medium1;   //!
+   TBranch        *b_EF_tau29Ti_medium2_tau20Ti_medium2;   //!
+   TBranch        *b_EF_tau29_IDTrkNoCut;   //!
    TBranch        *b_EF_tau29_loose;   //!
+   TBranch        *b_EF_tau29_loose1;   //!
+   TBranch        *b_EF_tau29_loose1_xs45_loose_noMu_3L1J10;   //!
+   TBranch        *b_EF_tau29_loose_xs45_loose_noMu_3L1J10;   //!
    TBranch        *b_EF_tau29_medium;   //!
    TBranch        *b_EF_tau29_medium1;   //!
    TBranch        *b_EF_tau29_medium1_tau20_medium1;   //!
+   TBranch        *b_EF_tau29_medium1_xs45_loose_noMu_3L1J10;   //!
    TBranch        *b_EF_tau29_medium_xe35_noMu;   //!
    TBranch        *b_EF_tau29_medium_xe40_loose_noMu;   //!
-   TBranch        *b_EF_tau50_IDTrkNoCut;   //!
-   TBranch        *b_EF_tau50_medium;   //!
-   TBranch        *b_EF_tau84_loose;   //!
+   TBranch        *b_EF_tau29i_medium;   //!
+   TBranch        *b_EF_tau29i_medium1;   //!
+   TBranch        *b_EF_tau50_medium_e15vh_medium;   //!
    TBranch        *b_EF_tauNoCut;   //!
    TBranch        *b_EF_tauNoCut_L1TAU50;   //!
    TBranch        *b_EF_tauNoCut_cosmic;   //!
+   TBranch        *b_EF_xe100_noMu;   //!
+   TBranch        *b_EF_xe100_tight_noMu;   //!
+   TBranch        *b_EF_xe110_noMu;   //!
    TBranch        *b_EF_xe20_noMu;   //!
    TBranch        *b_EF_xe30_noMu;   //!
    TBranch        *b_EF_xe40_noMu;   //!
    TBranch        *b_EF_xe50_noMu;   //!
+   TBranch        *b_EF_xe60_L2FEB_val;   //!
+   TBranch        *b_EF_xe60_L2FEB_val_NoAlg;   //!
    TBranch        *b_EF_xe60_noMu;   //!
+   TBranch        *b_EF_xe60_tight_L2FEB_val;   //!
+   TBranch        *b_EF_xe60_tight_noMu;   //!
+   TBranch        *b_EF_xe60_verytight_noMu;   //!
    TBranch        *b_EF_xe70_noMu;   //!
+   TBranch        *b_EF_xe70_tight_noMu;   //!
+   TBranch        *b_EF_xe80_L2FEB_val;   //!
+   TBranch        *b_EF_xe80_L2FEB_val_NoAlg;   //!
    TBranch        *b_EF_xe80_noMu;   //!
+   TBranch        *b_EF_xe80_tight_noMu;   //!
    TBranch        *b_EF_xe90_noMu;   //!
-   TBranch        *b_L1_2EM10;   //!
-   TBranch        *b_L1_2EM14;   //!
+   TBranch        *b_EF_xe90_tight_noMu;   //!
+   TBranch        *b_L1_2EM10VH;   //!
+   TBranch        *b_L1_2EM12;   //!
    TBranch        *b_L1_2EM3;   //!
+   TBranch        *b_L1_2EM3_EM12;   //!
    TBranch        *b_L1_2EM3_EM7;   //!
-   TBranch        *b_L1_2EM3_NL;   //!
    TBranch        *b_L1_2EM5;   //!
+   TBranch        *b_L1_2EM5_EM16VH;   //!
    TBranch        *b_L1_2EM5_MU6;   //!
    TBranch        *b_L1_2EM7;   //!
-   TBranch        *b_L1_2MU0;   //!
-   TBranch        *b_L1_2MU0_EMPTY;   //!
-   TBranch        *b_L1_2MU0_FIRSTEMPTY;   //!
-   TBranch        *b_L1_2MU0_MU6;   //!
-   TBranch        *b_L1_2MU0_NL;   //!
+   TBranch        *b_L1_2J20_XE20;   //!
+   TBranch        *b_L1_2J30_XE20;   //!
    TBranch        *b_L1_2MU10;   //!
+   TBranch        *b_L1_2MU4;   //!
+   TBranch        *b_L1_2MU4_EMPTY;   //!
+   TBranch        *b_L1_2MU4_FIRSTEMPTY;   //!
+   TBranch        *b_L1_2MU4_MU6;   //!
    TBranch        *b_L1_2MU6;   //!
    TBranch        *b_L1_2MU6_EMPTY;   //!
    TBranch        *b_L1_2MU6_FIRSTEMPTY;   //!
-   TBranch        *b_L1_2MU6_UNPAIRED;   //!
+   TBranch        *b_L1_2MU6_UNPAIRED_ISO;   //!
+   TBranch        *b_L1_2MU6_UNPAIRED_NONISO;   //!
    TBranch        *b_L1_2TAU11;   //!
-   TBranch        *b_L1_2TAU6;   //!
-   TBranch        *b_L1_2TAU6_EM10;   //!
+   TBranch        *b_L1_2TAU11I;   //!
+   TBranch        *b_L1_2TAU11I_TAU15;   //!
+   TBranch        *b_L1_2TAU11_EM10VH;   //!
+   TBranch        *b_L1_2TAU11_TAU15;   //!
+   TBranch        *b_L1_2TAU15;   //!
+   TBranch        *b_L1_2TAU8I_EM10VH;   //!
+   TBranch        *b_L1_2TAU8I_TAU11;   //!
+   TBranch        *b_L1_2TAU8I_TAU15;   //!
+   TBranch        *b_L1_2TAU8V_EM10VH;   //!
+   TBranch        *b_L1_2TAU8_EM10VH;   //!
    TBranch        *b_L1_2TAU8_TAU11;   //!
-   TBranch        *b_L1_EM10;   //!
-   TBranch        *b_L1_EM10_MU6;   //!
-   TBranch        *b_L1_EM10_NL;   //!
-   TBranch        *b_L1_EM10_XE20;   //!
+   TBranch        *b_L1_EM10VH;   //!
+   TBranch        *b_L1_EM10VH_MU6;   //!
+   TBranch        *b_L1_EM10VH_XE20;   //!
+   TBranch        *b_L1_EM10VH_XE30;   //!
+   TBranch        *b_L1_EM10VH_XE35;   //!
    TBranch        *b_L1_EM12;   //!
-   TBranch        *b_L1_EM14;   //!
-   TBranch        *b_L1_EM14_XE10;   //!
-   TBranch        *b_L1_EM14_XE20;   //!
-   TBranch        *b_L1_EM16;   //!
+   TBranch        *b_L1_EM12_3J10;   //!
+   TBranch        *b_L1_EM12_4J10;   //!
+   TBranch        *b_L1_EM12_XE20;   //!
+   TBranch        *b_L1_EM12_XE30;   //!
+   TBranch        *b_L1_EM12_XS30;   //!
+   TBranch        *b_L1_EM12_XS45;   //!
+   TBranch        *b_L1_EM16VH;   //!
+   TBranch        *b_L1_EM18VH;   //!
    TBranch        *b_L1_EM3;   //!
    TBranch        *b_L1_EM30;   //!
    TBranch        *b_L1_EM3_EMPTY;   //!
    TBranch        *b_L1_EM3_FIRSTEMPTY;   //!
-   TBranch        *b_L1_EM3_MU0;   //!
    TBranch        *b_L1_EM3_MU6;   //!
    TBranch        *b_L1_EM3_UNPAIRED_ISO;   //!
    TBranch        *b_L1_EM3_UNPAIRED_NONISO;   //!
    TBranch        *b_L1_EM5;   //!
    TBranch        *b_L1_EM5_2MU6;   //!
+   TBranch        *b_L1_EM5_EMPTY;   //!
    TBranch        *b_L1_EM5_MU10;   //!
    TBranch        *b_L1_EM5_MU6;   //!
    TBranch        *b_L1_EM7;   //!
+   TBranch        *b_L1_EM7_XS30;   //!
+   TBranch        *b_L1_EM7_XS45;   //!
+   TBranch        *b_L1_J30_XE35;   //!
+   TBranch        *b_L1_J30_XE40;   //!
    TBranch        *b_L1_J50_XE20;   //!
-   TBranch        *b_L1_J50_XE25;   //!
-   TBranch        *b_L1_MU0;   //!
-   TBranch        *b_L1_MU0_EMPTY;   //!
-   TBranch        *b_L1_MU0_FIRSTEMPTY;   //!
-   TBranch        *b_L1_MU0_J10;   //!
-   TBranch        *b_L1_MU0_J15;   //!
-   TBranch        *b_L1_MU0_J15_EMPTY;   //!
-   TBranch        *b_L1_MU0_J15_FIRSTEMPTY;   //!
-   TBranch        *b_L1_MU0_J15_UNPAIRED;   //!
-   TBranch        *b_L1_MU0_J30;   //!
-   TBranch        *b_L1_MU0_J50;   //!
-   TBranch        *b_L1_MU0_J75;   //!
-   TBranch        *b_L1_MU0_UNPAIRED_ISO;   //!
-   TBranch        *b_L1_MU0_UNPAIRED_NONISO;   //!
+   TBranch        *b_L1_J50_XE30;   //!
+   TBranch        *b_L1_J50_XE35;   //!
    TBranch        *b_L1_MU10;   //!
    TBranch        *b_L1_MU10_EMPTY;   //!
    TBranch        *b_L1_MU10_FIRSTEMPTY;   //!
    TBranch        *b_L1_MU10_J10;   //!
    TBranch        *b_L1_MU10_UNPAIRED_ISO;   //!
+   TBranch        *b_L1_MU10_XE20;   //!
+   TBranch        *b_L1_MU10_XE25;   //!
    TBranch        *b_L1_MU11;   //!
    TBranch        *b_L1_MU11_EMPTY;   //!
    TBranch        *b_L1_MU15;   //!
    TBranch        *b_L1_MU20;   //!
+   TBranch        *b_L1_MU20_FIRSTEMPTY;   //!
+   TBranch        *b_L1_MU4;   //!
+   TBranch        *b_L1_MU4_EMPTY;   //!
+   TBranch        *b_L1_MU4_FIRSTEMPTY;   //!
+   TBranch        *b_L1_MU4_J10;   //!
+   TBranch        *b_L1_MU4_J15;   //!
+   TBranch        *b_L1_MU4_J15_EMPTY;   //!
+   TBranch        *b_L1_MU4_J15_FIRSTEMPTY;   //!
+   TBranch        *b_L1_MU4_J15_UNPAIRED_ISO;   //!
+   TBranch        *b_L1_MU4_J15_UNPAIRED_NONISO;   //!
+   TBranch        *b_L1_MU4_J20_XE20;   //!
+   TBranch        *b_L1_MU4_J20_XE35;   //!
+   TBranch        *b_L1_MU4_J30;   //!
+   TBranch        *b_L1_MU4_J50;   //!
+   TBranch        *b_L1_MU4_J75;   //!
+   TBranch        *b_L1_MU4_UNPAIRED_ISO;   //!
+   TBranch        *b_L1_MU4_UNPAIRED_NONISO;   //!
    TBranch        *b_L1_MU6;   //!
    TBranch        *b_L1_MU6_FIRSTEMPTY;   //!
-   TBranch        *b_L1_MU6_NL;   //!
+   TBranch        *b_L1_MU6_J15;   //!
    TBranch        *b_L1_TAU11;   //!
+   TBranch        *b_L1_TAU11I;   //!
+   TBranch        *b_L1_TAU11_2J10_J20_XE20;   //!
+   TBranch        *b_L1_TAU11_MU10;   //!
+   TBranch        *b_L1_TAU11_XE10_3J10;   //!
    TBranch        *b_L1_TAU11_XE20;   //!
-   TBranch        *b_L1_TAU20;   //!
+   TBranch        *b_L1_TAU15;   //!
+   TBranch        *b_L1_TAU15_XE10_3J10;   //!
+   TBranch        *b_L1_TAU15_XE20;   //!
+   TBranch        *b_L1_TAU15_XE25_3J10;   //!
+   TBranch        *b_L1_TAU15_XE25_3J10_J30;   //!
+   TBranch        *b_L1_TAU15_XE35;   //!
+   TBranch        *b_L1_TAU15_XS25_3J10;   //!
+   TBranch        *b_L1_TAU15_XS35;   //!
    TBranch        *b_L1_TAU30;   //!
-   TBranch        *b_L1_TAU5;   //!
+   TBranch        *b_L1_TAU30_EM10VH;   //!
+   TBranch        *b_L1_TAU30_NOTEM12;   //!
    TBranch        *b_L1_TAU50;   //!
-   TBranch        *b_L1_TAU5_EMPTY;   //!
-   TBranch        *b_L1_TAU5_FIRSTEMPTY;   //!
-   TBranch        *b_L1_TAU5_UNPAIRED_ISO;   //!
-   TBranch        *b_L1_TAU5_UNPAIRED_NONISO;   //!
-   TBranch        *b_L1_TAU5_XE10;   //!
-   TBranch        *b_L1_TAU6;   //!
-   TBranch        *b_L1_TAU6_J50_XE20;   //!
-   TBranch        *b_L1_TAU6_MU10;   //!
-   TBranch        *b_L1_TAU6_XE10;   //!
    TBranch        *b_L1_TAU8;   //!
+   TBranch        *b_L1_TAU8I;   //!
+   TBranch        *b_L1_TAU8I_MU10;   //!
+   TBranch        *b_L1_TAU8_EMPTY;   //!
+   TBranch        *b_L1_TAU8_FIRSTEMPTY;   //!
+   TBranch        *b_L1_TAU8_MU10;   //!
+   TBranch        *b_L1_TAU8_UNPAIRED_ISO;   //!
+   TBranch        *b_L1_TAU8_UNPAIRED_NONISO;   //!
    TBranch        *b_L1_XE10;   //!
    TBranch        *b_L1_XE20;   //!
    TBranch        *b_L1_XE25;   //!
@@ -4977,53 +6062,97 @@ public :
    TBranch        *b_L1_XE60;   //!
    TBranch        *b_L2_2e10_medium;   //!
    TBranch        *b_L2_2e10_medium_mu6;   //!
+   TBranch        *b_L2_2e12Tvh_medium;   //!
    TBranch        *b_L2_2e12_medium;   //!
+   TBranch        *b_L2_2e15vh_medium;   //!
    TBranch        *b_L2_2e5_tight;   //!
    TBranch        *b_L2_2e5_tight_Jpsi;   //!
-   TBranch        *b_L2_2e5_tight_NL;   //!
-   TBranch        *b_L2_2g10_loose_NL;   //!
-   TBranch        *b_L2_2g15_loose;   //!
    TBranch        *b_L2_2g20_loose;   //!
+   TBranch        *b_L2_2j40_anymct100_xe20_medium_noMu;   //!
+   TBranch        *b_L2_2j50_anymct100_xe20_medium_noMu;   //!
    TBranch        *b_L2_2mu10;   //!
    TBranch        *b_L2_2mu10_empty;   //!
    TBranch        *b_L2_2mu10_loose;   //!
    TBranch        *b_L2_2mu10_loose_empty;   //!
    TBranch        *b_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_L2_2mu4;   //!
-   TBranch        *b_L2_2mu4_Bmumu;   //!
-   TBranch        *b_L2_2mu4_Bmumux;   //!
-   TBranch        *b_L2_2mu4_DiMu;   //!
-   TBranch        *b_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_L2_2mu4T;   //!
+   TBranch        *b_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_L2_2mu4T_DiMu;   //!
+   TBranch        *b_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_L2_2mu6;   //!
+   TBranch        *b_L2_2mu6_Bmumux;   //!
+   TBranch        *b_L2_2mu6_DiMu;   //!
    TBranch        *b_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_L2_2mu6_NL;   //!
+   TBranch        *b_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
+   TBranch        *b_L2_2tau29T_medium1;   //!
    TBranch        *b_L2_2tau29_medium1;   //!
+   TBranch        *b_L2_2tau29i_medium1;   //!
    TBranch        *b_L2_e10_medium;   //!
    TBranch        *b_L2_e10_medium_2mu6;   //!
+   TBranch        *b_L2_e10_medium_mu10;   //!
    TBranch        *b_L2_e10_medium_mu6;   //!
-   TBranch        *b_L2_e15_medium;   //!
-   TBranch        *b_L2_e15_medium_xe30_noMu;   //!
-   TBranch        *b_L2_e15_tight;   //!
-   TBranch        *b_L2_e15_tight_NL;   //!
-   TBranch        *b_L2_e20_loose;   //!
-   TBranch        *b_L2_e20_medium;   //!
-   TBranch        *b_L2_e20_medium1;   //!
-   TBranch        *b_L2_e20_medium_IDTrkNoCut;   //!
-   TBranch        *b_L2_e20_medium_SiTrk;   //!
-   TBranch        *b_L2_e20_medium_TRT;   //!
-   TBranch        *b_L2_e22_medium;   //!
+   TBranch        *b_L2_e10_medium_mu6_topo_medium;   //!
+   TBranch        *b_L2_e11_etcut;   //!
+   TBranch        *b_L2_e12Tvh_medium;   //!
+   TBranch        *b_L2_e12Tvh_medium_2e6T_medium;   //!
+   TBranch        *b_L2_e12Tvh_medium_mu6;   //!
+   TBranch        *b_L2_e12Tvh_medium_mu6_topo_medium;   //!
+   TBranch        *b_L2_e12_medium;   //!
+   TBranch        *b_L2_e13_etcutTrk_xs30_noMu;   //!
+   TBranch        *b_L2_e13_etcutTrk_xs45_noMu;   //!
+   TBranch        *b_L2_e14_tight_e4_etcut_Jpsi;   //!
+   TBranch        *b_L2_e15vh_loose1_e12Tvh_loose1_Zee;   //!
+   TBranch        *b_L2_e15vh_medium;   //!
+   TBranch        *b_L2_e15vh_medium_xe30_noMu;   //!
+   TBranch        *b_L2_e15vh_medium_xe35_noMu;   //!
+   TBranch        *b_L2_e20_etcutTrk_xe25_noMu;   //!
+   TBranch        *b_L2_e20_etcutTrk_xs45_noMu;   //!
+   TBranch        *b_L2_e20_tight_e15_NoCut_Zee;   //!
+   TBranch        *b_L2_e22vh_loose;   //!
+   TBranch        *b_L2_e22vh_loose1;   //!
+   TBranch        *b_L2_e22vh_looseTrk;   //!
+   TBranch        *b_L2_e22vh_loose_2j20_a4tc_EFFS;   //!
+   TBranch        *b_L2_e22vh_loose_3j20_a4tc_EFFS;   //!
+   TBranch        *b_L2_e22vh_loose_4j15_a4tc_EFFS;   //!
+   TBranch        *b_L2_e22vh_medium;   //!
+   TBranch        *b_L2_e22vh_medium1;   //!
+   TBranch        *b_L2_e22vh_medium1_EFxe20_noMu;   //!
+   TBranch        *b_L2_e22vh_medium1_EFxe30_noMu;   //!
+   TBranch        *b_L2_e22vh_medium1_EFxe40_noMu;   //!
+   TBranch        *b_L2_e22vh_medium2;   //!
+   TBranch        *b_L2_e22vh_medium_IDTrkNoCut;   //!
+   TBranch        *b_L2_e22vh_medium_SiTrk;   //!
+   TBranch        *b_L2_e22vh_medium_TRT;   //!
+   TBranch        *b_L2_e40_medium;   //!
+   TBranch        *b_L2_e45_medium;   //!
+   TBranch        *b_L2_e45_medium1;   //!
+   TBranch        *b_L2_e5_medium_mu6;   //!
+   TBranch        *b_L2_e5_medium_mu6_topo_medium;   //!
    TBranch        *b_L2_e5_tight;   //!
+   TBranch        *b_L2_e5_tight_e14_etcut_Jpsi;   //!
    TBranch        *b_L2_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_L2_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
    TBranch        *b_L2_e5_tight_e4_etcut_Jpsi_TRT;   //!
    TBranch        *b_L2_e5_tight_e5_NoCut;   //!
    TBranch        *b_L2_e5_tight_e9_etcut_Jpsi;   //!
    TBranch        *b_L2_e60_loose;   //!
-   TBranch        *b_L2_e9_tight_e5_tight_Jpsi;   //!
+   TBranch        *b_L2_e6T_medium;   //!
+   TBranch        *b_L2_e9_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_L2_eb_physics;   //!
    TBranch        *b_L2_eb_physics_empty;   //!
    TBranch        *b_L2_eb_physics_firstempty;   //!
@@ -5035,30 +6164,37 @@ public :
    TBranch        *b_L2_eb_random_firstempty;   //!
    TBranch        *b_L2_eb_random_unpaired_iso;   //!
    TBranch        *b_L2_em3_empty_larcalib;   //!
-   TBranch        *b_L2_g100_etcut_g50_etcut;   //!
+   TBranch        *b_L2_em5_empty_larcalib;   //!
+   TBranch        *b_L2_g100_loose;   //!
+   TBranch        *b_L2_g10_NoCut_cosmic;   //!
    TBranch        *b_L2_g11_etcut;   //!
    TBranch        *b_L2_g150_etcut;   //!
-   TBranch        *b_L2_g15_loose;   //!
+   TBranch        *b_L2_g200_etcut;   //!
    TBranch        *b_L2_g20_etcut;   //!
-   TBranch        *b_L2_g20_etcut_xe30_noMu;   //!
    TBranch        *b_L2_g20_loose;   //!
    TBranch        *b_L2_g40_loose;   //!
    TBranch        *b_L2_g40_loose_EFxe40_noMu;   //!
-   TBranch        *b_L2_g40_tight;   //!
+   TBranch        *b_L2_g40_loose_xe30_medium_noMu;   //!
+   TBranch        *b_L2_g40_loose_xe35_medium_noMu;   //!
+   TBranch        *b_L2_g40_tight_b10_medium;   //!
    TBranch        *b_L2_g5_NoCut_cosmic;   //!
    TBranch        *b_L2_g60_loose;   //!
    TBranch        *b_L2_g80_loose;   //!
+   TBranch        *b_L2_j50_xe35_medium_noMu;   //!
+   TBranch        *b_L2_j50_xe35_medium_noMu_l2cleancons;   //!
+   TBranch        *b_L2_j60_xe45_noMu;   //!
+   TBranch        *b_L2_j65_xe50_noMu;   //!
    TBranch        *b_L2_j70_xe20_loose_noMu;   //!
    TBranch        *b_L2_j70_xe25_loose_noMu;   //!
-   TBranch        *b_L2_mu0_cal_empty;   //!
-   TBranch        *b_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_L2_j70_xe35_noMu;   //!
+   TBranch        *b_L2_j70_xe35_noMu_l2cleancons;   //!
+   TBranch        *b_L2_j75_xe40_noMu;   //!
    TBranch        *b_L2_mu10;   //!
    TBranch        *b_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_L2_mu10_NL;   //!
    TBranch        *b_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_L2_mu10_cal;   //!
+   TBranch        *b_L2_mu10_cal_medium;   //!
    TBranch        *b_L2_mu10_loose;   //!
    TBranch        *b_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_L2_mu11_empty_NoAlg;   //!
@@ -5066,66 +6202,148 @@ public :
    TBranch        *b_L2_mu13_MG;   //!
    TBranch        *b_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_L2_mu15;   //!
+   TBranch        *b_L2_mu15_medium;   //!
+   TBranch        *b_L2_mu15_tight;   //!
+   TBranch        *b_L2_mu15_xe20_noMu;   //!
    TBranch        *b_L2_mu15i;   //!
+   TBranch        *b_L2_mu15i_medium;   //!
    TBranch        *b_L2_mu18;   //!
+   TBranch        *b_L2_mu18_L1J10;   //!
    TBranch        *b_L2_mu18_MG;   //!
+   TBranch        *b_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_L2_mu18_MG_medium;   //!
+   TBranch        *b_L2_mu18_medium;   //!
+   TBranch        *b_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_L2_mu18i4_medium;   //!
    TBranch        *b_L2_mu20;   //!
    TBranch        *b_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_L2_mu20_MG;   //!
+   TBranch        *b_L2_mu20_MG_medium;   //!
    TBranch        *b_L2_mu20_empty;   //!
+   TBranch        *b_L2_mu20_medium;   //!
    TBranch        *b_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_L2_mu20_tight;   //!
    TBranch        *b_L2_mu20i;   //!
+   TBranch        *b_L2_mu20i_medium;   //!
    TBranch        *b_L2_mu22;   //!
    TBranch        *b_L2_mu22_MG;   //!
-   TBranch        *b_L2_mu4;   //!
+   TBranch        *b_L2_mu22_MG_medium;   //!
+   TBranch        *b_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_L2_mu22_medium;   //!
+   TBranch        *b_L2_mu22i2_medium;   //!
+   TBranch        *b_L2_mu22i4_medium;   //!
+   TBranch        *b_L2_mu24_MG_medium;   //!
+   TBranch        *b_L2_mu24_MG_tight;   //!
+   TBranch        *b_L2_mu24_medium;   //!
+   TBranch        *b_L2_mu24_tight;   //!
+   TBranch        *b_L2_mu30_MG_medium;   //!
+   TBranch        *b_L2_mu30_MG_tight;   //!
+   TBranch        *b_L2_mu30_medium;   //!
+   TBranch        *b_L2_mu30_tight;   //!
    TBranch        *b_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_L2_mu40_MSonly_empty;   //!
    TBranch        *b_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_L2_mu40_slow;   //!
    TBranch        *b_L2_mu40_slow_empty;   //!
+   TBranch        *b_L2_mu40_slow_medium;   //!
    TBranch        *b_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_L2_mu4_DiMu;   //!
-   TBranch        *b_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_L2_mu4T;   //!
+   TBranch        *b_L2_mu4T_DiMu;   //!
+   TBranch        *b_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_L2_mu4_L1J10_matched;   //!
    TBranch        *b_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_L2_mu4_L1J20_matched;   //!
    TBranch        *b_L2_mu4_L1J30_matched;   //!
    TBranch        *b_L2_mu4_L1J50_matched;   //!
    TBranch        *b_L2_mu4_L1J75_matched;   //!
    TBranch        *b_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_L2_mu4_cal_empty;   //!
    TBranch        *b_L2_mu4_cosmic;   //!
-   TBranch        *b_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_L2_mu6;   //!
    TBranch        *b_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_L2_mu6_Jpsimumu;   //!
    TBranch        *b_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_L2_tau100_medium;   //!
+   TBranch        *b_L2_tau125_IDTrkNoCut;   //!
    TBranch        *b_L2_tau125_medium;   //!
-   TBranch        *b_L2_tau16_IDTrkNoCut;   //!
-   TBranch        *b_L2_tau16_loose;   //!
-   TBranch        *b_L2_tau16_loose_e15_medium;   //!
-   TBranch        *b_L2_tau16_loose_e15_tight;   //!
-   TBranch        *b_L2_tau16_loose_mu10;   //!
-   TBranch        *b_L2_tau16_loose_mu15;   //!
-   TBranch        *b_L2_tau16_medium_mu10;   //!
-   TBranch        *b_L2_tau16_medium_xe22_noMu;   //!
+   TBranch        *b_L2_tau125_medium1;   //!
+   TBranch        *b_L2_tau20T_medium;   //!
+   TBranch        *b_L2_tau20T_medium2;   //!
+   TBranch        *b_L2_tau20T_medium_e15vh_medium;   //!
+   TBranch        *b_L2_tau20T_medium_mu15;   //!
+   TBranch        *b_L2_tau20_medium;   //!
    TBranch        *b_L2_tau20_medium1;   //!
+   TBranch        *b_L2_tau20_medium_e15vh_medium;   //!
+   TBranch        *b_L2_tau20_medium_mu15;   //!
+   TBranch        *b_L2_tau20i_medium;   //!
+   TBranch        *b_L2_tau20i_medium1;   //!
+   TBranch        *b_L2_tau20i_medium_e15vh_medium;   //!
+   TBranch        *b_L2_tau20i_medium_mu15;   //!
+   TBranch        *b_L2_tau20v_medium_e15vh_medium;   //!
+   TBranch        *b_L2_tau29T_medium;   //!
+   TBranch        *b_L2_tau29T_medium1_1P;   //!
+   TBranch        *b_L2_tau29T_medium1_1P_tau20T_medium2;   //!
+   TBranch        *b_L2_tau29T_medium1_tau20T_medium1;   //!
+   TBranch        *b_L2_tau29T_medium1_xe25_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29T_medium1_xs20_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29T_medium1_xs25_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29T_medium2;   //!
+   TBranch        *b_L2_tau29T_medium2_tau20T_medium2;   //!
+   TBranch        *b_L2_tau29T_medium_xe25_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29T_medium_xs25_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29T_medium_xs35_noMu;   //!
+   TBranch        *b_L2_tau29T_medium_xs50_noMu;   //!
+   TBranch        *b_L2_tau29Ti_medium1_1P_tau20Ti_medium2;   //!
+   TBranch        *b_L2_tau29Ti_medium1_tau20Ti_medium1;   //!
+   TBranch        *b_L2_tau29Ti_medium1_tau20i_medium1;   //!
+   TBranch        *b_L2_tau29Ti_medium2_tau20Ti_medium2;   //!
+   TBranch        *b_L2_tau29_IDTrkNoCut;   //!
    TBranch        *b_L2_tau29_loose;   //!
+   TBranch        *b_L2_tau29_loose1;   //!
+   TBranch        *b_L2_tau29_loose1_xs20_noMu_3L1J10;   //!
+   TBranch        *b_L2_tau29_loose_xs20_noMu_3L1J10;   //!
    TBranch        *b_L2_tau29_medium;   //!
    TBranch        *b_L2_tau29_medium1;   //!
    TBranch        *b_L2_tau29_medium1_tau20_medium1;   //!
-   TBranch        *b_L2_tau29_medium_xe20_loose_noMu;   //!
+   TBranch        *b_L2_tau29_medium1_xs20_noMu_3L1J10;   //!
    TBranch        *b_L2_tau29_medium_xe25_noMu;   //!
-   TBranch        *b_L2_tau50_IDTrkNoCut;   //!
-   TBranch        *b_L2_tau50_medium;   //!
-   TBranch        *b_L2_tau5_empty_larcalib;   //!
-   TBranch        *b_L2_tau84_loose;   //!
+   TBranch        *b_L2_tau29_medium_xe30_loose_noMu;   //!
+   TBranch        *b_L2_tau29i_medium;   //!
+   TBranch        *b_L2_tau29i_medium1;   //!
+   TBranch        *b_L2_tau50_medium_e15vh_medium;   //!
+   TBranch        *b_L2_tau8_empty_larcalib;   //!
    TBranch        *b_L2_tauNoCut;   //!
    TBranch        *b_L2_tauNoCut_L1TAU50;   //!
    TBranch        *b_L2_tauNoCut_cosmic;   //!
@@ -5133,10 +6351,20 @@ public :
    TBranch        *b_L2_xe20_noMu;   //!
    TBranch        *b_L2_xe30_noMu;   //!
    TBranch        *b_L2_xe35_noMu;   //!
+   TBranch        *b_L2_xe40_L2FEB_val;   //!
    TBranch        *b_L2_xe40_noMu;   //!
+   TBranch        *b_L2_xe45_noMu;   //!
+   TBranch        *b_L2_xe50_L2FEB_val;   //!
    TBranch        *b_L2_xe50_noMu;   //!
+   TBranch        *b_L2_xe55_noMu;   //!
+   TBranch        *b_L2_xe60_L2FEB_val;   //!
    TBranch        *b_L2_xe60_noMu;   //!
+   TBranch        *b_L2_xe65_noMu;   //!
    TBranch        *b_L2_xe70_noMu;   //!
+   TBranch        *b_L2_xe75_noMu;   //!
+   TBranch        *b_L2_xe80_noMu;   //!
+   TBranch        *b_L2_xe85_noMu;   //!
+   TBranch        *b_L2_xe90_noMu;   //!
    TBranch        *b_el_n;   //!
    TBranch        *b_el_E;   //!
    TBranch        *b_el_Et;   //!
@@ -7682,27 +8910,36 @@ public :
    TBranch        *b_trig_L2_muonfeature_L2_2mu10_loose;   //!
    TBranch        *b_trig_L2_muonfeature_L2_2mu10_loose_empty;   //!
    TBranch        *b_trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_Bmumu;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_Bmumux;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_DiMu;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_L2_muonfeature_L2_2mu6;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu6_Bmumux;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu6_DiMu;   //!
    TBranch        *b_trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_2mu6_NL;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu0_cal_empty;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu10_NL;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10_cal;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu10_cal_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10_loose;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu11_empty_NoAlg;   //!
@@ -7710,45 +8947,99 @@ public :
    TBranch        *b_trig_L2_muonfeature_L2_mu13_MG;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu15;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu15_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu15_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu15_xe20_noMu;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu15i;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu15i_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu18;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_L1J10;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu18_MG;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_MG_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu18i4_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20_MG;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu20_MG_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20_empty;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu20_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu20_tight;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu20i;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu20i_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu22;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu22_MG;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu22_MG_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu22_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu22i2_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu22i4_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu24_MG_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu24_MG_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu24_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu24_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu30_MG_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu30_MG_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu30_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu30_tight;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_empty;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_slow;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_slow_empty;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu40_slow_medium;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_DiMu;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J10_matched;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J20_matched;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J30_matched;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J50_matched;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1J75_matched;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_cal_empty;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu4_cosmic;   //!
-   TBranch        *b_trig_L2_muonfeature_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu6;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu6_Jpsimumu;   //!
    TBranch        *b_trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_L2_muonfeaturedetails_n;   //!
    TBranch        *b_trig_L2_combmuonfeature_n;   //!
    TBranch        *b_trig_L2_combmuonfeature_pt;   //!
@@ -7760,27 +9051,36 @@ public :
    TBranch        *b_trig_L2_combmuonfeature_L2_2mu10_loose;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_2mu10_loose_empty;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_Bmumu;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_Bmumux;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_DiMu;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_2mu6;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu6_Bmumux;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu6_DiMu;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_2mu6_NL;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu0_cal_empty;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu10_NL;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10_cal;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu10_cal_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10_loose;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu11_empty_NoAlg;   //!
@@ -7788,45 +9088,99 @@ public :
    TBranch        *b_trig_L2_combmuonfeature_L2_mu13_MG;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu15;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu15_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu15_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu15_xe20_noMu;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu15i;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu15i_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu18;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_L1J10;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu18_MG;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_MG_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu18i4_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20_MG;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu20_MG_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20_empty;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu20_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu20_tight;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu20i;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu20i_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu22;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu22_MG;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu22_MG_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu22_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu22i2_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu22i4_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu24_MG_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu24_MG_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu24_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu24_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu30_MG_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu30_MG_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu30_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu30_tight;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_empty;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_slow;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_slow_empty;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu40_slow_medium;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_DiMu;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J10_matched;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J20_matched;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J30_matched;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J50_matched;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1J75_matched;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_cal_empty;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu4_cosmic;   //!
-   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu6;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu;   //!
    TBranch        *b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_L2_combmuonfeature_mf_index;   //!
    TBranch        *b_trig_L2_combmuonfeature_idscantrk_index;   //!
    TBranch        *b_trig_L2_combmuonfeature_sitracktrk_index;   //!
@@ -7850,27 +9204,36 @@ public :
    TBranch        *b_trig_L2_isomuonfeature_L2_2mu10_loose;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_2mu10_loose_empty;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_Bmumu;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_Bmumux;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_DiMu;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_2mu6;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu6_Bmumux;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu6_DiMu;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_2mu6_NL;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu0_cal_empty;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu10_NL;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10_cal;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu10_cal_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10_loose;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu11_empty_NoAlg;   //!
@@ -7878,45 +9241,99 @@ public :
    TBranch        *b_trig_L2_isomuonfeature_L2_mu13_MG;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu15;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu15_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu15_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu15_xe20_noMu;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu15i;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu15i_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu18;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_L1J10;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu18_MG;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_MG_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu18i4_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20_MG;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu20_MG_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20_empty;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu20_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu20_tight;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu20i;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu20i_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu22;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu22_MG;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu22_MG_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu22_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu22i2_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu22i4_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu24_MG_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu24_MG_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu24_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu24_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu30_MG_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu30_MG_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu30_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu30_tight;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_empty;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_slow;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_slow_empty;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu40_slow_medium;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_DiMu;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J10_matched;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J20_matched;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J30_matched;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J50_matched;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1J75_matched;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_cal_empty;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu4_cosmic;   //!
-   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu6;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu;   //!
    TBranch        *b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_L2_tilemufeature_n;   //!
    TBranch        *b_trig_L2_tilemufeature_eta;   //!
    TBranch        *b_trig_L2_tilemufeature_phi;   //!
@@ -7927,27 +9344,36 @@ public :
    TBranch        *b_trig_L2_tilemufeature_L2_2mu10_loose;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_2mu10_loose_empty;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_Bmumu;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_Bmumux;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_DiMu;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_2mu6;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu6_Bmumux;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu6_DiMu;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_2mu6_NL;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu0_cal_empty;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu10_NL;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10_cal;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu10_cal_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10_loose;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu11_empty_NoAlg;   //!
@@ -7955,45 +9381,99 @@ public :
    TBranch        *b_trig_L2_tilemufeature_L2_mu13_MG;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu15;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu15_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu15_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu15_xe20_noMu;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu15i;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu15i_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu18;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_L1J10;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu18_MG;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_MG_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu18i4_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20_MG;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu20_MG_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20_empty;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu20_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu20_tight;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu20i;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu20i_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu22;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu22_MG;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu22_MG_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu22_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu22i2_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu22i4_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu24_MG_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu24_MG_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu24_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu24_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu30_MG_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu30_MG_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu30_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu30_tight;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_empty;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_slow;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_slow_empty;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu40_slow_medium;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_DiMu;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J10_matched;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J20_matched;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J30_matched;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J50_matched;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1J75_matched;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_cal_empty;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu4_cosmic;   //!
-   TBranch        *b_trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu6;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu6_Jpsimumu;   //!
    TBranch        *b_trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_n;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_pt;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_eta;   //!
@@ -8007,27 +9487,36 @@ public :
    TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu10_loose;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu10_loose_empty;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_Bmumu;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_Bmumux;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6_Bmumux;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6_DiMu;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6_NL;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu0_cal_empty;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_NL;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_cal;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_cal_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_loose;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg;   //!
@@ -8035,45 +9524,99 @@ public :
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu13_MG;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15i;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu15i_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_L1J10;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_MG;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_MG_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu18i4_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_MG;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_MG_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_empty;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20_tight;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20i;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu20i_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22_MG;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22_MG_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22i2_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu22i4_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu24_MG_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu24_MG_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu24_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu24_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu30_MG_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu30_MG_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu30_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu30_tight;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_slow;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_slow_empty;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_slow_medium;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_DiMu;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_DiMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_cal_empty;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_cosmic;   //!
-   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_tilemu_index;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_idtrk_algorithmId;   //!
    TBranch        *b_trig_L2_tiletrackmufeature_idtrk_trackStatus;   //!
@@ -8095,25 +9638,34 @@ public :
    TBranch        *b_trig_EF_trigmuonef_EF_2mu10_loose;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_2mu10_loose_empty;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_Bmumu;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_Bmumux;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_DiMu;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_xe30_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4T_xe40_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_2mu6;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu6_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu6_DiMu;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu6_NL;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu10;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu10_NL;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu10_loose;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu11_empty_NoAlg;   //!
@@ -8121,46 +9673,106 @@ public :
    TBranch        *b_trig_EF_trigmuonef_EF_mu13_MG;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu15;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu15_xe30_noMu;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu15i;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu15i_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu18;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_L1J10;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu18_MG;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18i3_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu18i4_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20_MG;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu20_MG_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20_empty;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu20_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu20i;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu20i_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu22;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu22_MG;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22i1_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22i2_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22i3_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu22i4_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu24_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu24_MG_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu24_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu24_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu30_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu30_MG_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu30_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu30_tight;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_empty;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_slow;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_slow_empty;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu40_slow_medium;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_DiMu;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_DiMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J10_matched;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J20_matched;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J30_matched;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J50_matched;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1J75_matched;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu4_cosmic;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu6;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu6_Jpsimumu;   //!
    TBranch        *b_trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_EF_trigmuonef_track_n;   //!
    TBranch        *b_trig_EF_trigmuonef_track_MuonType;   //!
    TBranch        *b_trig_EF_trigmuonef_track_MS_pt;   //!
@@ -8206,25 +9818,34 @@ public :
    TBranch        *b_trig_EF_trigmugirl_EF_2mu10_loose;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_2mu10_loose_empty;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_Bmumu;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_Bmumux;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_DiMu;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_Jpsimumu;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu4_Upsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_2e5_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_Bmumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_Upsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_xe30_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4T_xe40_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_2mu6;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu6_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu6_DiMu;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_2mu6_NL;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu0_empty_NoAlg;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu10;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu10_Jpsimumu;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu10_NL;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu10_Upsimumu_FS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu10_loose;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu11_empty_NoAlg;   //!
@@ -8232,46 +9853,106 @@ public :
    TBranch        *b_trig_EF_trigmugirl_EF_mu13_MG;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu15;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu15_xe30_noMu;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu15i;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu15i_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu18;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_L1J10;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu18_MG;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_MG_L1J10;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18i3_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18i4_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20_MG;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20_MG_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20_empty;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu20i;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20i_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu22;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu22_MG;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22i1_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22i2_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22i3_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22i4_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu24_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu24_MG_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu24_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu24_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu30_MG_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu30_MG_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu30_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu30_tight;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_barrel;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_empty;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_MSonly_tighter;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_slow;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_slow_empty;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu40_slow_medium;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu40_slow_outOfTime;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_DiMu;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_DiMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J10_matched;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J15_matched;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J20_matched;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J30_matched;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J50_matched;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1J75_matched;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_MSonly_cosmic;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_Trk_Jpsi;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_Upsimumu_FS;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu4_cosmic;   //!
-   TBranch        *b_trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_empty_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu6;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu6_DiMu_noOS;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu6_Jpsimumu;   //!
    TBranch        *b_trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose;   //!
    TBranch        *b_trig_EF_trigmugirl_track_n;   //!
    TBranch        *b_trig_EF_trigmugirl_track_MuonType;   //!
    TBranch        *b_trig_EF_trigmugirl_track_MS_pt;   //!
@@ -8462,36 +10143,44 @@ public :
    TBranch        *b_trig_L1_emtau_hadIsol;   //!
    TBranch        *b_trig_L1_emtau_hadCore;   //!
    TBranch        *b_trig_L1_emtau_thrPattern;   //!
-   TBranch        *b_trig_L1_emtau_L1_2EM10;   //!
-   TBranch        *b_trig_L1_emtau_L1_2EM14;   //!
+   TBranch        *b_trig_L1_emtau_L1_2EM10VH;   //!
+   TBranch        *b_trig_L1_emtau_L1_2EM12;   //!
    TBranch        *b_trig_L1_emtau_L1_2EM3;   //!
+   TBranch        *b_trig_L1_emtau_L1_2EM3_EM12;   //!
    TBranch        *b_trig_L1_emtau_L1_2EM3_EM7;   //!
-   TBranch        *b_trig_L1_emtau_L1_2EM3_NL;   //!
    TBranch        *b_trig_L1_emtau_L1_2EM5;   //!
+   TBranch        *b_trig_L1_emtau_L1_2EM5_EM16VH;   //!
    TBranch        *b_trig_L1_emtau_L1_2EM5_MU6;   //!
    TBranch        *b_trig_L1_emtau_L1_2EM7;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM10;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM10_MU6;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM10_NL;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM10_XE20;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM10VH;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM10VH_MU6;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM10VH_XE20;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM10VH_XE30;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM10VH_XE35;   //!
    TBranch        *b_trig_L1_emtau_L1_EM12;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM14;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM14_XE10;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM14_XE20;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM16;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_3J10;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_4J10;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_XE20;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_XE30;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_XS30;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM12_XS45;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM16VH;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM18VH;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3;   //!
    TBranch        *b_trig_L1_emtau_L1_EM30;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3_EMPTY;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3_FIRSTEMPTY;   //!
-   TBranch        *b_trig_L1_emtau_L1_EM3_MU0;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3_MU6;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3_UNPAIRED_ISO;   //!
    TBranch        *b_trig_L1_emtau_L1_EM3_UNPAIRED_NONISO;   //!
    TBranch        *b_trig_L1_emtau_L1_EM5;   //!
    TBranch        *b_trig_L1_emtau_L1_EM5_2MU6;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM5_EMPTY;   //!
    TBranch        *b_trig_L1_emtau_L1_EM5_MU10;   //!
    TBranch        *b_trig_L1_emtau_L1_EM5_MU6;   //!
    TBranch        *b_trig_L1_emtau_L1_EM7;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM7_XS30;   //!
+   TBranch        *b_trig_L1_emtau_L1_EM7_XS45;   //!
    TBranch        *b_trig_L1_emtau_RoIWord;   //!
    TBranch        *b_trig_L2_emcl_n;   //!
    TBranch        *b_trig_L2_emcl_quality;   //!
@@ -8595,32 +10284,62 @@ public :
    TBranch        *b_trig_L2_el_F1;   //!
    TBranch        *b_trig_L2_el_L2_2e10_medium;   //!
    TBranch        *b_trig_L2_el_L2_2e10_medium_mu6;   //!
+   TBranch        *b_trig_L2_el_L2_2e12Tvh_medium;   //!
    TBranch        *b_trig_L2_el_L2_2e12_medium;   //!
+   TBranch        *b_trig_L2_el_L2_2e15vh_medium;   //!
    TBranch        *b_trig_L2_el_L2_2e5_tight;   //!
    TBranch        *b_trig_L2_el_L2_2e5_tight_Jpsi;   //!
-   TBranch        *b_trig_L2_el_L2_2e5_tight_NL;   //!
    TBranch        *b_trig_L2_el_L2_e10_medium;   //!
    TBranch        *b_trig_L2_el_L2_e10_medium_2mu6;   //!
+   TBranch        *b_trig_L2_el_L2_e10_medium_mu10;   //!
    TBranch        *b_trig_L2_el_L2_e10_medium_mu6;   //!
-   TBranch        *b_trig_L2_el_L2_e15_medium;   //!
-   TBranch        *b_trig_L2_el_L2_e15_medium_xe30_noMu;   //!
-   TBranch        *b_trig_L2_el_L2_e15_tight;   //!
-   TBranch        *b_trig_L2_el_L2_e15_tight_NL;   //!
-   TBranch        *b_trig_L2_el_L2_e20_loose;   //!
-   TBranch        *b_trig_L2_el_L2_e20_medium;   //!
-   TBranch        *b_trig_L2_el_L2_e20_medium1;   //!
-   TBranch        *b_trig_L2_el_L2_e20_medium_IDTrkNoCut;   //!
-   TBranch        *b_trig_L2_el_L2_e20_medium_SiTrk;   //!
-   TBranch        *b_trig_L2_el_L2_e20_medium_TRT;   //!
-   TBranch        *b_trig_L2_el_L2_e22_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e10_medium_mu6_topo_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e11_etcut;   //!
+   TBranch        *b_trig_L2_el_L2_e12Tvh_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e12Tvh_medium_2e6T_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e12Tvh_medium_mu6;   //!
+   TBranch        *b_trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e12_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e13_etcutTrk_xs30_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e13_etcutTrk_xs45_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e14_tight_e4_etcut_Jpsi;   //!
+   TBranch        *b_trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee;   //!
+   TBranch        *b_trig_L2_el_L2_e15vh_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e15vh_medium_xe30_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e15vh_medium_xe35_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e20_etcutTrk_xe25_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e20_etcutTrk_xs45_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e20_tight_e15_NoCut_Zee;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_loose;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_loose1;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_looseTrk;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium1;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium1_EFxe20_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium1_EFxe30_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium1_EFxe40_noMu;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium2;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium_IDTrkNoCut;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium_SiTrk;   //!
+   TBranch        *b_trig_L2_el_L2_e22vh_medium_TRT;   //!
+   TBranch        *b_trig_L2_el_L2_e40_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e45_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e45_medium1;   //!
+   TBranch        *b_trig_L2_el_L2_e5_medium_mu6;   //!
+   TBranch        *b_trig_L2_el_L2_e5_medium_mu6_topo_medium;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight;   //!
+   TBranch        *b_trig_L2_el_L2_e5_tight_e14_etcut_Jpsi;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight_e5_NoCut;   //!
    TBranch        *b_trig_L2_el_L2_e5_tight_e9_etcut_Jpsi;   //!
    TBranch        *b_trig_L2_el_L2_e60_loose;   //!
-   TBranch        *b_trig_L2_el_L2_e9_tight_e5_tight_Jpsi;   //!
+   TBranch        *b_trig_L2_el_L2_e6T_medium;   //!
+   TBranch        *b_trig_L2_el_L2_e9_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_L2_el_L2_eb_physics;   //!
    TBranch        *b_trig_L2_el_L2_eb_physics_empty;   //!
    TBranch        *b_trig_L2_el_L2_eb_physics_firstempty;   //!
@@ -8632,6 +10351,7 @@ public :
    TBranch        *b_trig_L2_el_L2_eb_random_firstempty;   //!
    TBranch        *b_trig_L2_el_L2_eb_random_unpaired_iso;   //!
    TBranch        *b_trig_L2_el_L2_em3_empty_larcalib;   //!
+   TBranch        *b_trig_L2_el_L2_em5_empty_larcalib;   //!
    TBranch        *b_trig_L2_el_err_trkPt;   //!
    TBranch        *b_trig_L2_el_err_eta;   //!
    TBranch        *b_trig_L2_el_err_phi;   //!
@@ -8652,19 +10372,19 @@ public :
    TBranch        *b_trig_L2_ph_dPhi;   //!
    TBranch        *b_trig_L2_ph_dEta;   //!
    TBranch        *b_trig_L2_ph_F1;   //!
-   TBranch        *b_trig_L2_ph_L2_2g10_loose_NL;   //!
-   TBranch        *b_trig_L2_ph_L2_2g15_loose;   //!
    TBranch        *b_trig_L2_ph_L2_2g20_loose;   //!
-   TBranch        *b_trig_L2_ph_L2_g100_etcut_g50_etcut;   //!
+   TBranch        *b_trig_L2_ph_L2_g100_loose;   //!
+   TBranch        *b_trig_L2_ph_L2_g10_NoCut_cosmic;   //!
    TBranch        *b_trig_L2_ph_L2_g11_etcut;   //!
    TBranch        *b_trig_L2_ph_L2_g150_etcut;   //!
-   TBranch        *b_trig_L2_ph_L2_g15_loose;   //!
+   TBranch        *b_trig_L2_ph_L2_g200_etcut;   //!
    TBranch        *b_trig_L2_ph_L2_g20_etcut;   //!
-   TBranch        *b_trig_L2_ph_L2_g20_etcut_xe30_noMu;   //!
    TBranch        *b_trig_L2_ph_L2_g20_loose;   //!
    TBranch        *b_trig_L2_ph_L2_g40_loose;   //!
    TBranch        *b_trig_L2_ph_L2_g40_loose_EFxe40_noMu;   //!
-   TBranch        *b_trig_L2_ph_L2_g40_tight;   //!
+   TBranch        *b_trig_L2_ph_L2_g40_loose_xe30_medium_noMu;   //!
+   TBranch        *b_trig_L2_ph_L2_g40_loose_xe35_medium_noMu;   //!
+   TBranch        *b_trig_L2_ph_L2_g40_tight_b10_medium;   //!
    TBranch        *b_trig_L2_ph_L2_g5_NoCut_cosmic;   //!
    TBranch        *b_trig_L2_ph_L2_g60_loose;   //!
    TBranch        *b_trig_L2_ph_L2_g80_loose;   //!
@@ -8999,37 +10719,71 @@ public :
    TBranch        *b_trig_EF_el_refittedtrackcovthetaqoverp;   //!
    TBranch        *b_trig_EF_el_EF_2e10_medium;   //!
    TBranch        *b_trig_EF_el_EF_2e10_medium_mu6;   //!
+   TBranch        *b_trig_EF_el_EF_2e12Tvh_medium;   //!
    TBranch        *b_trig_EF_el_EF_2e12_medium;   //!
+   TBranch        *b_trig_EF_el_EF_2e15vh_medium;   //!
    TBranch        *b_trig_EF_el_EF_2e5_tight;   //!
    TBranch        *b_trig_EF_el_EF_2e5_tight_Jpsi;   //!
-   TBranch        *b_trig_EF_el_EF_2e5_tight_NL;   //!
    TBranch        *b_trig_EF_el_EF_e10_medium;   //!
    TBranch        *b_trig_EF_el_EF_e10_medium_2mu6;   //!
+   TBranch        *b_trig_EF_el_EF_e10_medium_mu10;   //!
    TBranch        *b_trig_EF_el_EF_e10_medium_mu6;   //!
-   TBranch        *b_trig_EF_el_EF_e15_medium;   //!
-   TBranch        *b_trig_EF_el_EF_e15_medium_xe30_noMu;   //!
-   TBranch        *b_trig_EF_el_EF_e15_tight;   //!
-   TBranch        *b_trig_EF_el_EF_e15_tight_NL;   //!
-   TBranch        *b_trig_EF_el_EF_e20_loose;   //!
+   TBranch        *b_trig_EF_el_EF_e10_medium_mu6_topo_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e11_etcut;   //!
+   TBranch        *b_trig_EF_el_EF_e12Tvh_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e12Tvh_medium_2e6T_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e12Tvh_medium_mu6;   //!
+   TBranch        *b_trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e12_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20;   //!
+   TBranch        *b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07;   //!
+   TBranch        *b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20;   //!
+   TBranch        *b_trig_EF_el_EF_e14_tight_e4_etcut_Jpsi;   //!
+   TBranch        *b_trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee;   //!
+   TBranch        *b_trig_EF_el_EF_e15vh_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e15vh_medium_xe40_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e15vh_medium_xe50_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20;   //!
+   TBranch        *b_trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07;   //!
+   TBranch        *b_trig_EF_el_EF_e20_tight_e15_NoCut_Zee;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_loose;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_loose1;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_looseTrk;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium;   //!
    TBranch        *b_trig_EF_el_EF_e20_medium;   //!
-   TBranch        *b_trig_EF_el_EF_e20_medium1;   //!
-   TBranch        *b_trig_EF_el_EF_e20_medium_IDTrkNoCut;   //!
-   TBranch        *b_trig_EF_el_EF_e20_medium_SiTrk;   //!
-   TBranch        *b_trig_EF_el_EF_e20_medium_TRT;   //!
    TBranch        *b_trig_EF_el_EF_e22_medium;   //!
    TBranch        *b_trig_EF_el_EF_e22_medium1;   //!
-   TBranch        *b_trig_EF_el_EF_e22vh_medium1;   //!
    TBranch        *b_trig_EF_el_EF_2e12T_medium;   //!
-   TBranch        *b_trig_EF_el_EF_2e12Tvh_medium;   //!
-   TBranch        *b_trig_EF_el_EF_mu18_MG_medium ;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_EFxe20_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_EFxe30_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium1_EFxe40_noMu;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium2;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium_IDTrkNoCut;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium_SiTrk;   //!
+   TBranch        *b_trig_EF_el_EF_e22vh_medium_TRT;   //!
+   TBranch        *b_trig_EF_el_EF_e40_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e45_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e45_medium1;   //!
+   TBranch        *b_trig_EF_el_EF_e5_medium_mu6;   //!
+   TBranch        *b_trig_EF_el_EF_e5_medium_mu6_topo_medium;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight;   //!
+   TBranch        *b_trig_EF_el_EF_e5_tight_e14_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e5_NoCut;   //!
    TBranch        *b_trig_EF_el_EF_e5_tight_e9_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_e60_loose;   //!
-   TBranch        *b_trig_EF_el_EF_e9_tight_e5_tight_Jpsi;   //!
+   TBranch        *b_trig_EF_el_EF_e6T_medium;   //!
+   TBranch        *b_trig_EF_el_EF_e9_tight_e4_etcut_Jpsi;   //!
    TBranch        *b_trig_EF_el_EF_eb_physics;   //!
    TBranch        *b_trig_EF_el_EF_eb_physics_empty;   //!
    TBranch        *b_trig_EF_el_EF_eb_physics_firstempty;   //!
@@ -9107,23 +10861,22 @@ public :
    TBranch        *b_trig_EF_ph_px;   //!
    TBranch        *b_trig_EF_ph_py;   //!
    TBranch        *b_trig_EF_ph_pz;   //!
-   TBranch        *b_trig_EF_ph_EF_2g10_loose_NL;   //!
-   TBranch        *b_trig_EF_ph_EF_2g15_loose;   //!
    TBranch        *b_trig_EF_ph_EF_2g20_loose;   //!
-   TBranch        *b_trig_EF_ph_EF_g100_etcut_g50_etcut;   //!
+   TBranch        *b_trig_EF_ph_EF_g100_loose;   //!
+   TBranch        *b_trig_EF_ph_EF_g10_NoCut_cosmic;   //!
    TBranch        *b_trig_EF_ph_EF_g11_etcut;   //!
    TBranch        *b_trig_EF_ph_EF_g11_etcut_larcalib;   //!
    TBranch        *b_trig_EF_ph_EF_g150_etcut;   //!
-   TBranch        *b_trig_EF_ph_EF_g15_loose;   //!
-   TBranch        *b_trig_EF_ph_EF_g15_loose_larcalib;   //!
+   TBranch        *b_trig_EF_ph_EF_g200_etcut;   //!
    TBranch        *b_trig_EF_ph_EF_g20_etcut;   //!
-   TBranch        *b_trig_EF_ph_EF_g20_etcut_xe30_noMu;   //!
    TBranch        *b_trig_EF_ph_EF_g20_loose;   //!
    TBranch        *b_trig_EF_ph_EF_g20_loose_larcalib;   //!
    TBranch        *b_trig_EF_ph_EF_g40_loose;   //!
    TBranch        *b_trig_EF_ph_EF_g40_loose_EFxe40_noMu;   //!
    TBranch        *b_trig_EF_ph_EF_g40_loose_larcalib;   //!
-   TBranch        *b_trig_EF_ph_EF_g40_tight;   //!
+   TBranch        *b_trig_EF_ph_EF_g40_loose_xe45_medium_noMu;   //!
+   TBranch        *b_trig_EF_ph_EF_g40_loose_xe55_medium_noMu;   //!
+   TBranch        *b_trig_EF_ph_EF_g40_tight_b10_medium;   //!
    TBranch        *b_trig_EF_ph_EF_g5_NoCut_cosmic;   //!
    TBranch        *b_trig_EF_ph_EF_g60_loose;   //!
    TBranch        *b_trig_EF_ph_EF_g60_loose_larcalib;   //!
@@ -9284,16 +11037,16 @@ public :
 #endif
 
 #ifdef THiggsD3PD_cxx
-THiggsD3PD::THiggsD3PD(TTree *tree) : fChain(0) 
+THiggsD3PD::THiggsD3PD(TTree *tree)
 {
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
    if (tree == 0) {
-      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("NTUP_HSG2.540208._000014.root.1");
-      if (!f || !f->IsOpen()) {
-         f = new TFile("NTUP_HSG2.540208._000014.root.1");
+      TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("NTUP_HSG2.577625._000040.root");
+      if (!f) {
+         f = new TFile("NTUP_HSG2.577625._000040.root");
       }
-      f->GetObject("physics",tree);
+      tree = (TTree*)gDirectory->Get("physics");
 
    }
    Init(tree);
@@ -9317,8 +11070,10 @@ Long64_t THiggsD3PD::LoadTree(Long64_t entry)
    if (!fChain) return -5;
    Long64_t centry = fChain->LoadTree(entry);
    if (centry < 0) return centry;
-   if (fChain->GetTreeNumber() != fCurrent) {
-      fCurrent = fChain->GetTreeNumber();
+   if (!fChain->InheritsFrom(TChain::Class()))  return centry;
+   TChain *chain = (TChain*)fChain;
+   if (chain->GetTreeNumber() != fCurrent) {
+      fCurrent = chain->GetTreeNumber();
       Notify();
    }
    return centry;
@@ -10976,27 +12731,36 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_muonfeature_L2_2mu10_loose = 0;
    trig_L2_muonfeature_L2_2mu10_loose_empty = 0;
    trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm = 0;
-   trig_L2_muonfeature_L2_2mu4 = 0;
-   trig_L2_muonfeature_L2_2mu4_Bmumu = 0;
-   trig_L2_muonfeature_L2_2mu4_Bmumux = 0;
-   trig_L2_muonfeature_L2_2mu4_DiMu = 0;
-   trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk = 0;
-   trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS = 0;
-   trig_L2_muonfeature_L2_2mu4_Jpsimumu = 0;
-   trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_L2_muonfeature_L2_2mu4_Upsimumu = 0;
+   trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_L2_muonfeature_L2_2mu4T = 0;
+   trig_L2_muonfeature_L2_2mu4T_2e5_medium = 0;
+   trig_L2_muonfeature_L2_2mu4T_Bmumu = 0;
+   trig_L2_muonfeature_L2_2mu4T_Bmumux = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu_DY = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu_DY20 = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk = 0;
+   trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu = 0;
+   trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu = 0;
+   trig_L2_muonfeature_L2_2mu4T_Jpsimumu = 0;
+   trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_muonfeature_L2_2mu4T_Upsimumu = 0;
+   trig_L2_muonfeature_L2_2mu4T_xe20_noMu = 0;
+   trig_L2_muonfeature_L2_2mu4T_xe25_noMu = 0;
+   trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY = 0;
    trig_L2_muonfeature_L2_2mu6 = 0;
+   trig_L2_muonfeature_L2_2mu6_Bmumux = 0;
+   trig_L2_muonfeature_L2_2mu6_DiMu = 0;
    trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose = 0;
-   trig_L2_muonfeature_L2_2mu6_NL = 0;
-   trig_L2_muonfeature_L2_mu0_cal_empty = 0;
-   trig_L2_muonfeature_L2_mu0_empty_NoAlg = 0;
-   trig_L2_muonfeature_L2_mu0_firstempty_NoAlg = 0;
-   trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg = 0;
+   trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_L2_muonfeature_L2_mu10 = 0;
    trig_L2_muonfeature_L2_mu10_Jpsimumu = 0;
-   trig_L2_muonfeature_L2_mu10_NL = 0;
    trig_L2_muonfeature_L2_mu10_Upsimumu_FS = 0;
+   trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS = 0;
    trig_L2_muonfeature_L2_mu10_cal = 0;
+   trig_L2_muonfeature_L2_mu10_cal_medium = 0;
    trig_L2_muonfeature_L2_mu10_loose = 0;
    trig_L2_muonfeature_L2_mu10_muCombTag_NoEF = 0;
    trig_L2_muonfeature_L2_mu11_empty_NoAlg = 0;
@@ -11004,45 +12768,99 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_muonfeature_L2_mu13_MG = 0;
    trig_L2_muonfeature_L2_mu13_muCombTag_NoEF = 0;
    trig_L2_muonfeature_L2_mu15 = 0;
+   trig_L2_muonfeature_L2_mu15_medium = 0;
+   trig_L2_muonfeature_L2_mu15_tight = 0;
+   trig_L2_muonfeature_L2_mu15_xe20_noMu = 0;
    trig_L2_muonfeature_L2_mu15i = 0;
+   trig_L2_muonfeature_L2_mu15i_medium = 0;
    trig_L2_muonfeature_L2_mu18 = 0;
+   trig_L2_muonfeature_L2_mu18_L1J10 = 0;
    trig_L2_muonfeature_L2_mu18_MG = 0;
+   trig_L2_muonfeature_L2_mu18_MG_L1J10 = 0;
+   trig_L2_muonfeature_L2_mu18_MG_medium = 0;
+   trig_L2_muonfeature_L2_mu18_medium = 0;
+   trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_L2_muonfeature_L2_mu18i4_medium = 0;
    trig_L2_muonfeature_L2_mu20 = 0;
    trig_L2_muonfeature_L2_mu20_IDTrkNoCut = 0;
    trig_L2_muonfeature_L2_mu20_MG = 0;
+   trig_L2_muonfeature_L2_mu20_MG_medium = 0;
    trig_L2_muonfeature_L2_mu20_empty = 0;
+   trig_L2_muonfeature_L2_mu20_medium = 0;
    trig_L2_muonfeature_L2_mu20_muCombTag_NoEF = 0;
+   trig_L2_muonfeature_L2_mu20_tight = 0;
    trig_L2_muonfeature_L2_mu20i = 0;
+   trig_L2_muonfeature_L2_mu20i_medium = 0;
    trig_L2_muonfeature_L2_mu22 = 0;
    trig_L2_muonfeature_L2_mu22_MG = 0;
-   trig_L2_muonfeature_L2_mu4 = 0;
+   trig_L2_muonfeature_L2_mu22_MG_medium = 0;
+   trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS = 0;
+   trig_L2_muonfeature_L2_mu22_medium = 0;
+   trig_L2_muonfeature_L2_mu22i2_medium = 0;
+   trig_L2_muonfeature_L2_mu22i4_medium = 0;
+   trig_L2_muonfeature_L2_mu24_MG_medium = 0;
+   trig_L2_muonfeature_L2_mu24_MG_tight = 0;
+   trig_L2_muonfeature_L2_mu24_medium = 0;
+   trig_L2_muonfeature_L2_mu24_tight = 0;
+   trig_L2_muonfeature_L2_mu30_MG_medium = 0;
+   trig_L2_muonfeature_L2_mu30_MG_tight = 0;
+   trig_L2_muonfeature_L2_mu30_medium = 0;
+   trig_L2_muonfeature_L2_mu30_tight = 0;
    trig_L2_muonfeature_L2_mu40_MSonly_barrel = 0;
+   trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium = 0;
    trig_L2_muonfeature_L2_mu40_MSonly_empty = 0;
    trig_L2_muonfeature_L2_mu40_MSonly_tight = 0;
+   trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11 = 0;
    trig_L2_muonfeature_L2_mu40_MSonly_tighter = 0;
    trig_L2_muonfeature_L2_mu40_slow = 0;
    trig_L2_muonfeature_L2_mu40_slow_empty = 0;
+   trig_L2_muonfeature_L2_mu40_slow_medium = 0;
    trig_L2_muonfeature_L2_mu40_slow_outOfTime = 0;
-   trig_L2_muonfeature_L2_mu4_DiMu = 0;
-   trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS = 0;
-   trig_L2_muonfeature_L2_mu4_Jpsimumu = 0;
+   trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium = 0;
+   trig_L2_muonfeature_L2_mu4T = 0;
+   trig_L2_muonfeature_L2_mu4T_DiMu = 0;
+   trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS = 0;
+   trig_L2_muonfeature_L2_mu4T_Jpsimumu = 0;
+   trig_L2_muonfeature_L2_mu4T_Trk_Jpsi = 0;
+   trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS = 0;
+   trig_L2_muonfeature_L2_mu4T_Upsimumu_FS = 0;
+   trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS = 0;
+   trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu = 0;
+   trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu = 0;
+   trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY = 0;
+   trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_Bmumu = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_Bmumux = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_DiMu = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20 = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu = 0;
    trig_L2_muonfeature_L2_mu4_L1J10_matched = 0;
    trig_L2_muonfeature_L2_mu4_L1J15_matched = 0;
+   trig_L2_muonfeature_L2_mu4_L1J20_matched = 0;
    trig_L2_muonfeature_L2_mu4_L1J30_matched = 0;
    trig_L2_muonfeature_L2_mu4_L1J50_matched = 0;
    trig_L2_muonfeature_L2_mu4_L1J75_matched = 0;
    trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic = 0;
    trig_L2_muonfeature_L2_mu4_L1MU11_cosmic = 0;
-   trig_L2_muonfeature_L2_mu4_MSonly_cosmic = 0;
-   trig_L2_muonfeature_L2_mu4_Trk_Jpsi = 0;
-   trig_L2_muonfeature_L2_mu4_Upsimumu_FS = 0;
-   trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS = 0;
+   trig_L2_muonfeature_L2_mu4_cal_empty = 0;
    trig_L2_muonfeature_L2_mu4_cosmic = 0;
-   trig_L2_muonfeature_L2_mu4_j10_a4_EFFS = 0;
+   trig_L2_muonfeature_L2_mu4_empty_NoAlg = 0;
+   trig_L2_muonfeature_L2_mu4_firstempty_NoAlg = 0;
+   trig_L2_muonfeature_L2_mu4_j95_L1matched = 0;
+   trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg = 0;
    trig_L2_muonfeature_L2_mu6 = 0;
    trig_L2_muonfeature_L2_mu6_DiMu_noOS = 0;
    trig_L2_muonfeature_L2_mu6_Jpsimumu = 0;
    trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk = 0;
+   trig_L2_muonfeature_L2_mu6_Jpsimumu_tight = 0;
+   trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose = 0;
    trig_L2_combmuonfeature_pt = 0;
    trig_L2_combmuonfeature_eta = 0;
    trig_L2_combmuonfeature_phi = 0;
@@ -11052,27 +12870,36 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_combmuonfeature_L2_2mu10_loose = 0;
    trig_L2_combmuonfeature_L2_2mu10_loose_empty = 0;
    trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm = 0;
-   trig_L2_combmuonfeature_L2_2mu4 = 0;
-   trig_L2_combmuonfeature_L2_2mu4_Bmumu = 0;
-   trig_L2_combmuonfeature_L2_2mu4_Bmumux = 0;
-   trig_L2_combmuonfeature_L2_2mu4_DiMu = 0;
-   trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk = 0;
-   trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS = 0;
-   trig_L2_combmuonfeature_L2_2mu4_Jpsimumu = 0;
-   trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_L2_combmuonfeature_L2_2mu4_Upsimumu = 0;
+   trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_L2_combmuonfeature_L2_2mu4T = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_2e5_medium = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_Bmumu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_Bmumux = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20 = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_Upsimumu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu = 0;
+   trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu = 0;
+   trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY = 0;
    trig_L2_combmuonfeature_L2_2mu6 = 0;
+   trig_L2_combmuonfeature_L2_2mu6_Bmumux = 0;
+   trig_L2_combmuonfeature_L2_2mu6_DiMu = 0;
    trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose = 0;
-   trig_L2_combmuonfeature_L2_2mu6_NL = 0;
-   trig_L2_combmuonfeature_L2_mu0_cal_empty = 0;
-   trig_L2_combmuonfeature_L2_mu0_empty_NoAlg = 0;
-   trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg = 0;
-   trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg = 0;
+   trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_L2_combmuonfeature_L2_mu10 = 0;
    trig_L2_combmuonfeature_L2_mu10_Jpsimumu = 0;
-   trig_L2_combmuonfeature_L2_mu10_NL = 0;
    trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS = 0;
+   trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS = 0;
    trig_L2_combmuonfeature_L2_mu10_cal = 0;
+   trig_L2_combmuonfeature_L2_mu10_cal_medium = 0;
    trig_L2_combmuonfeature_L2_mu10_loose = 0;
    trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF = 0;
    trig_L2_combmuonfeature_L2_mu11_empty_NoAlg = 0;
@@ -11080,45 +12907,99 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_combmuonfeature_L2_mu13_MG = 0;
    trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF = 0;
    trig_L2_combmuonfeature_L2_mu15 = 0;
+   trig_L2_combmuonfeature_L2_mu15_medium = 0;
+   trig_L2_combmuonfeature_L2_mu15_tight = 0;
+   trig_L2_combmuonfeature_L2_mu15_xe20_noMu = 0;
    trig_L2_combmuonfeature_L2_mu15i = 0;
+   trig_L2_combmuonfeature_L2_mu15i_medium = 0;
    trig_L2_combmuonfeature_L2_mu18 = 0;
+   trig_L2_combmuonfeature_L2_mu18_L1J10 = 0;
    trig_L2_combmuonfeature_L2_mu18_MG = 0;
+   trig_L2_combmuonfeature_L2_mu18_MG_L1J10 = 0;
+   trig_L2_combmuonfeature_L2_mu18_MG_medium = 0;
+   trig_L2_combmuonfeature_L2_mu18_medium = 0;
+   trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu18i4_medium = 0;
    trig_L2_combmuonfeature_L2_mu20 = 0;
    trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut = 0;
    trig_L2_combmuonfeature_L2_mu20_MG = 0;
+   trig_L2_combmuonfeature_L2_mu20_MG_medium = 0;
    trig_L2_combmuonfeature_L2_mu20_empty = 0;
+   trig_L2_combmuonfeature_L2_mu20_medium = 0;
    trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF = 0;
+   trig_L2_combmuonfeature_L2_mu20_tight = 0;
    trig_L2_combmuonfeature_L2_mu20i = 0;
+   trig_L2_combmuonfeature_L2_mu20i_medium = 0;
    trig_L2_combmuonfeature_L2_mu22 = 0;
    trig_L2_combmuonfeature_L2_mu22_MG = 0;
-   trig_L2_combmuonfeature_L2_mu4 = 0;
+   trig_L2_combmuonfeature_L2_mu22_MG_medium = 0;
+   trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu22_medium = 0;
+   trig_L2_combmuonfeature_L2_mu22i2_medium = 0;
+   trig_L2_combmuonfeature_L2_mu22i4_medium = 0;
+   trig_L2_combmuonfeature_L2_mu24_MG_medium = 0;
+   trig_L2_combmuonfeature_L2_mu24_MG_tight = 0;
+   trig_L2_combmuonfeature_L2_mu24_medium = 0;
+   trig_L2_combmuonfeature_L2_mu24_tight = 0;
+   trig_L2_combmuonfeature_L2_mu30_MG_medium = 0;
+   trig_L2_combmuonfeature_L2_mu30_MG_tight = 0;
+   trig_L2_combmuonfeature_L2_mu30_medium = 0;
+   trig_L2_combmuonfeature_L2_mu30_tight = 0;
    trig_L2_combmuonfeature_L2_mu40_MSonly_barrel = 0;
+   trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium = 0;
    trig_L2_combmuonfeature_L2_mu40_MSonly_empty = 0;
    trig_L2_combmuonfeature_L2_mu40_MSonly_tight = 0;
+   trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11 = 0;
    trig_L2_combmuonfeature_L2_mu40_MSonly_tighter = 0;
    trig_L2_combmuonfeature_L2_mu40_slow = 0;
    trig_L2_combmuonfeature_L2_mu40_slow_empty = 0;
+   trig_L2_combmuonfeature_L2_mu40_slow_medium = 0;
    trig_L2_combmuonfeature_L2_mu40_slow_outOfTime = 0;
-   trig_L2_combmuonfeature_L2_mu4_DiMu = 0;
-   trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS = 0;
-   trig_L2_combmuonfeature_L2_mu4_Jpsimumu = 0;
+   trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium = 0;
+   trig_L2_combmuonfeature_L2_mu4T = 0;
+   trig_L2_combmuonfeature_L2_mu4T_DiMu = 0;
+   trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Jpsimumu = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS = 0;
+   trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu = 0;
+   trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu = 0;
+   trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY = 0;
+   trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20 = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu = 0;
    trig_L2_combmuonfeature_L2_mu4_L1J10_matched = 0;
    trig_L2_combmuonfeature_L2_mu4_L1J15_matched = 0;
+   trig_L2_combmuonfeature_L2_mu4_L1J20_matched = 0;
    trig_L2_combmuonfeature_L2_mu4_L1J30_matched = 0;
    trig_L2_combmuonfeature_L2_mu4_L1J50_matched = 0;
    trig_L2_combmuonfeature_L2_mu4_L1J75_matched = 0;
    trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic = 0;
    trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic = 0;
-   trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic = 0;
-   trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi = 0;
-   trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS = 0;
-   trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS = 0;
+   trig_L2_combmuonfeature_L2_mu4_cal_empty = 0;
    trig_L2_combmuonfeature_L2_mu4_cosmic = 0;
-   trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS = 0;
+   trig_L2_combmuonfeature_L2_mu4_empty_NoAlg = 0;
+   trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg = 0;
+   trig_L2_combmuonfeature_L2_mu4_j95_L1matched = 0;
+   trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg = 0;
    trig_L2_combmuonfeature_L2_mu6 = 0;
    trig_L2_combmuonfeature_L2_mu6_DiMu_noOS = 0;
    trig_L2_combmuonfeature_L2_mu6_Jpsimumu = 0;
    trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk = 0;
+   trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight = 0;
+   trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose = 0;
    trig_L2_combmuonfeature_mf_index = 0;
    trig_L2_combmuonfeature_idscantrk_index = 0;
    trig_L2_combmuonfeature_sitracktrk_index = 0;
@@ -11141,27 +13022,36 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_isomuonfeature_L2_2mu10_loose = 0;
    trig_L2_isomuonfeature_L2_2mu10_loose_empty = 0;
    trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm = 0;
-   trig_L2_isomuonfeature_L2_2mu4 = 0;
-   trig_L2_isomuonfeature_L2_2mu4_Bmumu = 0;
-   trig_L2_isomuonfeature_L2_2mu4_Bmumux = 0;
-   trig_L2_isomuonfeature_L2_2mu4_DiMu = 0;
-   trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk = 0;
-   trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS = 0;
-   trig_L2_isomuonfeature_L2_2mu4_Jpsimumu = 0;
-   trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_L2_isomuonfeature_L2_2mu4_Upsimumu = 0;
+   trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_L2_isomuonfeature_L2_2mu4T = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_2e5_medium = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_Bmumu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_Bmumux = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20 = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_Upsimumu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu = 0;
+   trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu = 0;
+   trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY = 0;
    trig_L2_isomuonfeature_L2_2mu6 = 0;
+   trig_L2_isomuonfeature_L2_2mu6_Bmumux = 0;
+   trig_L2_isomuonfeature_L2_2mu6_DiMu = 0;
    trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose = 0;
-   trig_L2_isomuonfeature_L2_2mu6_NL = 0;
-   trig_L2_isomuonfeature_L2_mu0_cal_empty = 0;
-   trig_L2_isomuonfeature_L2_mu0_empty_NoAlg = 0;
-   trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg = 0;
-   trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg = 0;
+   trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_L2_isomuonfeature_L2_mu10 = 0;
    trig_L2_isomuonfeature_L2_mu10_Jpsimumu = 0;
-   trig_L2_isomuonfeature_L2_mu10_NL = 0;
    trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS = 0;
+   trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS = 0;
    trig_L2_isomuonfeature_L2_mu10_cal = 0;
+   trig_L2_isomuonfeature_L2_mu10_cal_medium = 0;
    trig_L2_isomuonfeature_L2_mu10_loose = 0;
    trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF = 0;
    trig_L2_isomuonfeature_L2_mu11_empty_NoAlg = 0;
@@ -11169,45 +13059,99 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_isomuonfeature_L2_mu13_MG = 0;
    trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF = 0;
    trig_L2_isomuonfeature_L2_mu15 = 0;
+   trig_L2_isomuonfeature_L2_mu15_medium = 0;
+   trig_L2_isomuonfeature_L2_mu15_tight = 0;
+   trig_L2_isomuonfeature_L2_mu15_xe20_noMu = 0;
    trig_L2_isomuonfeature_L2_mu15i = 0;
+   trig_L2_isomuonfeature_L2_mu15i_medium = 0;
    trig_L2_isomuonfeature_L2_mu18 = 0;
+   trig_L2_isomuonfeature_L2_mu18_L1J10 = 0;
    trig_L2_isomuonfeature_L2_mu18_MG = 0;
+   trig_L2_isomuonfeature_L2_mu18_MG_L1J10 = 0;
+   trig_L2_isomuonfeature_L2_mu18_MG_medium = 0;
+   trig_L2_isomuonfeature_L2_mu18_medium = 0;
+   trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu18i4_medium = 0;
    trig_L2_isomuonfeature_L2_mu20 = 0;
    trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut = 0;
    trig_L2_isomuonfeature_L2_mu20_MG = 0;
+   trig_L2_isomuonfeature_L2_mu20_MG_medium = 0;
    trig_L2_isomuonfeature_L2_mu20_empty = 0;
+   trig_L2_isomuonfeature_L2_mu20_medium = 0;
    trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF = 0;
+   trig_L2_isomuonfeature_L2_mu20_tight = 0;
    trig_L2_isomuonfeature_L2_mu20i = 0;
+   trig_L2_isomuonfeature_L2_mu20i_medium = 0;
    trig_L2_isomuonfeature_L2_mu22 = 0;
    trig_L2_isomuonfeature_L2_mu22_MG = 0;
-   trig_L2_isomuonfeature_L2_mu4 = 0;
+   trig_L2_isomuonfeature_L2_mu22_MG_medium = 0;
+   trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu22_medium = 0;
+   trig_L2_isomuonfeature_L2_mu22i2_medium = 0;
+   trig_L2_isomuonfeature_L2_mu22i4_medium = 0;
+   trig_L2_isomuonfeature_L2_mu24_MG_medium = 0;
+   trig_L2_isomuonfeature_L2_mu24_MG_tight = 0;
+   trig_L2_isomuonfeature_L2_mu24_medium = 0;
+   trig_L2_isomuonfeature_L2_mu24_tight = 0;
+   trig_L2_isomuonfeature_L2_mu30_MG_medium = 0;
+   trig_L2_isomuonfeature_L2_mu30_MG_tight = 0;
+   trig_L2_isomuonfeature_L2_mu30_medium = 0;
+   trig_L2_isomuonfeature_L2_mu30_tight = 0;
    trig_L2_isomuonfeature_L2_mu40_MSonly_barrel = 0;
+   trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium = 0;
    trig_L2_isomuonfeature_L2_mu40_MSonly_empty = 0;
    trig_L2_isomuonfeature_L2_mu40_MSonly_tight = 0;
+   trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11 = 0;
    trig_L2_isomuonfeature_L2_mu40_MSonly_tighter = 0;
    trig_L2_isomuonfeature_L2_mu40_slow = 0;
    trig_L2_isomuonfeature_L2_mu40_slow_empty = 0;
+   trig_L2_isomuonfeature_L2_mu40_slow_medium = 0;
    trig_L2_isomuonfeature_L2_mu40_slow_outOfTime = 0;
-   trig_L2_isomuonfeature_L2_mu4_DiMu = 0;
-   trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS = 0;
-   trig_L2_isomuonfeature_L2_mu4_Jpsimumu = 0;
+   trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium = 0;
+   trig_L2_isomuonfeature_L2_mu4T = 0;
+   trig_L2_isomuonfeature_L2_mu4T_DiMu = 0;
+   trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Jpsimumu = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS = 0;
+   trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu = 0;
+   trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu = 0;
+   trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY = 0;
+   trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20 = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu = 0;
    trig_L2_isomuonfeature_L2_mu4_L1J10_matched = 0;
    trig_L2_isomuonfeature_L2_mu4_L1J15_matched = 0;
+   trig_L2_isomuonfeature_L2_mu4_L1J20_matched = 0;
    trig_L2_isomuonfeature_L2_mu4_L1J30_matched = 0;
    trig_L2_isomuonfeature_L2_mu4_L1J50_matched = 0;
    trig_L2_isomuonfeature_L2_mu4_L1J75_matched = 0;
    trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic = 0;
    trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic = 0;
-   trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic = 0;
-   trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi = 0;
-   trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS = 0;
-   trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS = 0;
+   trig_L2_isomuonfeature_L2_mu4_cal_empty = 0;
    trig_L2_isomuonfeature_L2_mu4_cosmic = 0;
-   trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS = 0;
+   trig_L2_isomuonfeature_L2_mu4_empty_NoAlg = 0;
+   trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg = 0;
+   trig_L2_isomuonfeature_L2_mu4_j95_L1matched = 0;
+   trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg = 0;
    trig_L2_isomuonfeature_L2_mu6 = 0;
    trig_L2_isomuonfeature_L2_mu6_DiMu_noOS = 0;
    trig_L2_isomuonfeature_L2_mu6_Jpsimumu = 0;
    trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk = 0;
+   trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight = 0;
+   trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose = 0;
    trig_L2_tilemufeature_eta = 0;
    trig_L2_tilemufeature_phi = 0;
    trig_L2_tilemufeature_enedep = 0;
@@ -11217,27 +13161,36 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_tilemufeature_L2_2mu10_loose = 0;
    trig_L2_tilemufeature_L2_2mu10_loose_empty = 0;
    trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm = 0;
-   trig_L2_tilemufeature_L2_2mu4 = 0;
-   trig_L2_tilemufeature_L2_2mu4_Bmumu = 0;
-   trig_L2_tilemufeature_L2_2mu4_Bmumux = 0;
-   trig_L2_tilemufeature_L2_2mu4_DiMu = 0;
-   trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk = 0;
-   trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS = 0;
-   trig_L2_tilemufeature_L2_2mu4_Jpsimumu = 0;
-   trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_L2_tilemufeature_L2_2mu4_Upsimumu = 0;
+   trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_L2_tilemufeature_L2_2mu4T = 0;
+   trig_L2_tilemufeature_L2_2mu4T_2e5_medium = 0;
+   trig_L2_tilemufeature_L2_2mu4T_Bmumu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_Bmumux = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu_DY = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20 = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk = 0;
+   trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_Jpsimumu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_tilemufeature_L2_2mu4T_Upsimumu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_xe20_noMu = 0;
+   trig_L2_tilemufeature_L2_2mu4T_xe25_noMu = 0;
+   trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY = 0;
    trig_L2_tilemufeature_L2_2mu6 = 0;
+   trig_L2_tilemufeature_L2_2mu6_Bmumux = 0;
+   trig_L2_tilemufeature_L2_2mu6_DiMu = 0;
    trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose = 0;
-   trig_L2_tilemufeature_L2_2mu6_NL = 0;
-   trig_L2_tilemufeature_L2_mu0_cal_empty = 0;
-   trig_L2_tilemufeature_L2_mu0_empty_NoAlg = 0;
-   trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg = 0;
-   trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg = 0;
+   trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_L2_tilemufeature_L2_mu10 = 0;
    trig_L2_tilemufeature_L2_mu10_Jpsimumu = 0;
-   trig_L2_tilemufeature_L2_mu10_NL = 0;
    trig_L2_tilemufeature_L2_mu10_Upsimumu_FS = 0;
+   trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS = 0;
    trig_L2_tilemufeature_L2_mu10_cal = 0;
+   trig_L2_tilemufeature_L2_mu10_cal_medium = 0;
    trig_L2_tilemufeature_L2_mu10_loose = 0;
    trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF = 0;
    trig_L2_tilemufeature_L2_mu11_empty_NoAlg = 0;
@@ -11245,45 +13198,99 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_tilemufeature_L2_mu13_MG = 0;
    trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF = 0;
    trig_L2_tilemufeature_L2_mu15 = 0;
+   trig_L2_tilemufeature_L2_mu15_medium = 0;
+   trig_L2_tilemufeature_L2_mu15_tight = 0;
+   trig_L2_tilemufeature_L2_mu15_xe20_noMu = 0;
    trig_L2_tilemufeature_L2_mu15i = 0;
+   trig_L2_tilemufeature_L2_mu15i_medium = 0;
    trig_L2_tilemufeature_L2_mu18 = 0;
+   trig_L2_tilemufeature_L2_mu18_L1J10 = 0;
    trig_L2_tilemufeature_L2_mu18_MG = 0;
+   trig_L2_tilemufeature_L2_mu18_MG_L1J10 = 0;
+   trig_L2_tilemufeature_L2_mu18_MG_medium = 0;
+   trig_L2_tilemufeature_L2_mu18_medium = 0;
+   trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu18i4_medium = 0;
    trig_L2_tilemufeature_L2_mu20 = 0;
    trig_L2_tilemufeature_L2_mu20_IDTrkNoCut = 0;
    trig_L2_tilemufeature_L2_mu20_MG = 0;
+   trig_L2_tilemufeature_L2_mu20_MG_medium = 0;
    trig_L2_tilemufeature_L2_mu20_empty = 0;
+   trig_L2_tilemufeature_L2_mu20_medium = 0;
    trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF = 0;
+   trig_L2_tilemufeature_L2_mu20_tight = 0;
    trig_L2_tilemufeature_L2_mu20i = 0;
+   trig_L2_tilemufeature_L2_mu20i_medium = 0;
    trig_L2_tilemufeature_L2_mu22 = 0;
    trig_L2_tilemufeature_L2_mu22_MG = 0;
-   trig_L2_tilemufeature_L2_mu4 = 0;
+   trig_L2_tilemufeature_L2_mu22_MG_medium = 0;
+   trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu22_medium = 0;
+   trig_L2_tilemufeature_L2_mu22i2_medium = 0;
+   trig_L2_tilemufeature_L2_mu22i4_medium = 0;
+   trig_L2_tilemufeature_L2_mu24_MG_medium = 0;
+   trig_L2_tilemufeature_L2_mu24_MG_tight = 0;
+   trig_L2_tilemufeature_L2_mu24_medium = 0;
+   trig_L2_tilemufeature_L2_mu24_tight = 0;
+   trig_L2_tilemufeature_L2_mu30_MG_medium = 0;
+   trig_L2_tilemufeature_L2_mu30_MG_tight = 0;
+   trig_L2_tilemufeature_L2_mu30_medium = 0;
+   trig_L2_tilemufeature_L2_mu30_tight = 0;
    trig_L2_tilemufeature_L2_mu40_MSonly_barrel = 0;
+   trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium = 0;
    trig_L2_tilemufeature_L2_mu40_MSonly_empty = 0;
    trig_L2_tilemufeature_L2_mu40_MSonly_tight = 0;
+   trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11 = 0;
    trig_L2_tilemufeature_L2_mu40_MSonly_tighter = 0;
    trig_L2_tilemufeature_L2_mu40_slow = 0;
    trig_L2_tilemufeature_L2_mu40_slow_empty = 0;
+   trig_L2_tilemufeature_L2_mu40_slow_medium = 0;
    trig_L2_tilemufeature_L2_mu40_slow_outOfTime = 0;
-   trig_L2_tilemufeature_L2_mu4_DiMu = 0;
-   trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS = 0;
-   trig_L2_tilemufeature_L2_mu4_Jpsimumu = 0;
+   trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium = 0;
+   trig_L2_tilemufeature_L2_mu4T = 0;
+   trig_L2_tilemufeature_L2_mu4T_DiMu = 0;
+   trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS = 0;
+   trig_L2_tilemufeature_L2_mu4T_Jpsimumu = 0;
+   trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi = 0;
+   trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS = 0;
+   trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS = 0;
+   trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS = 0;
+   trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu = 0;
+   trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu = 0;
+   trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY = 0;
+   trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_DiMu = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20 = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu = 0;
    trig_L2_tilemufeature_L2_mu4_L1J10_matched = 0;
    trig_L2_tilemufeature_L2_mu4_L1J15_matched = 0;
+   trig_L2_tilemufeature_L2_mu4_L1J20_matched = 0;
    trig_L2_tilemufeature_L2_mu4_L1J30_matched = 0;
    trig_L2_tilemufeature_L2_mu4_L1J50_matched = 0;
    trig_L2_tilemufeature_L2_mu4_L1J75_matched = 0;
    trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic = 0;
    trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic = 0;
-   trig_L2_tilemufeature_L2_mu4_MSonly_cosmic = 0;
-   trig_L2_tilemufeature_L2_mu4_Trk_Jpsi = 0;
-   trig_L2_tilemufeature_L2_mu4_Upsimumu_FS = 0;
-   trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS = 0;
+   trig_L2_tilemufeature_L2_mu4_cal_empty = 0;
    trig_L2_tilemufeature_L2_mu4_cosmic = 0;
-   trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS = 0;
+   trig_L2_tilemufeature_L2_mu4_empty_NoAlg = 0;
+   trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg = 0;
+   trig_L2_tilemufeature_L2_mu4_j95_L1matched = 0;
+   trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg = 0;
    trig_L2_tilemufeature_L2_mu6 = 0;
    trig_L2_tilemufeature_L2_mu6_DiMu_noOS = 0;
    trig_L2_tilemufeature_L2_mu6_Jpsimumu = 0;
    trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk = 0;
+   trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight = 0;
+   trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose = 0;
    trig_L2_tiletrackmufeature_pt = 0;
    trig_L2_tiletrackmufeature_eta = 0;
    trig_L2_tiletrackmufeature_phi = 0;
@@ -11296,27 +13303,36 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_tiletrackmufeature_L2_2mu10_loose = 0;
    trig_L2_tiletrackmufeature_L2_2mu10_loose_empty = 0;
    trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4 = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_Bmumu = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_Bmumux = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_DiMu = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20 = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY = 0;
    trig_L2_tiletrackmufeature_L2_2mu6 = 0;
+   trig_L2_tiletrackmufeature_L2_2mu6_Bmumux = 0;
+   trig_L2_tiletrackmufeature_L2_2mu6_DiMu = 0;
    trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose = 0;
-   trig_L2_tiletrackmufeature_L2_2mu6_NL = 0;
-   trig_L2_tiletrackmufeature_L2_mu0_cal_empty = 0;
-   trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg = 0;
-   trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg = 0;
-   trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg = 0;
+   trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_L2_tiletrackmufeature_L2_mu10 = 0;
    trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu = 0;
-   trig_L2_tiletrackmufeature_L2_mu10_NL = 0;
    trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS = 0;
    trig_L2_tiletrackmufeature_L2_mu10_cal = 0;
+   trig_L2_tiletrackmufeature_L2_mu10_cal_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu10_loose = 0;
    trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF = 0;
    trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg = 0;
@@ -11324,45 +13340,99 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_tiletrackmufeature_L2_mu13_MG = 0;
    trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF = 0;
    trig_L2_tiletrackmufeature_L2_mu15 = 0;
+   trig_L2_tiletrackmufeature_L2_mu15_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu15_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu = 0;
    trig_L2_tiletrackmufeature_L2_mu15i = 0;
+   trig_L2_tiletrackmufeature_L2_mu15i_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu18 = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_L1J10 = 0;
    trig_L2_tiletrackmufeature_L2_mu18_MG = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10 = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_MG_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu18i4_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu20 = 0;
    trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut = 0;
    trig_L2_tiletrackmufeature_L2_mu20_MG = 0;
+   trig_L2_tiletrackmufeature_L2_mu20_MG_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu20_empty = 0;
+   trig_L2_tiletrackmufeature_L2_mu20_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF = 0;
+   trig_L2_tiletrackmufeature_L2_mu20_tight = 0;
    trig_L2_tiletrackmufeature_L2_mu20i = 0;
+   trig_L2_tiletrackmufeature_L2_mu20i_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu22 = 0;
    trig_L2_tiletrackmufeature_L2_mu22_MG = 0;
-   trig_L2_tiletrackmufeature_L2_mu4 = 0;
+   trig_L2_tiletrackmufeature_L2_mu22_MG_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu22_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu22i2_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu22i4_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu24_MG_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu24_MG_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu24_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu24_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu30_MG_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu30_MG_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu30_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu30_tight = 0;
    trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel = 0;
+   trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty = 0;
    trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11 = 0;
    trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter = 0;
    trig_L2_tiletrackmufeature_L2_mu40_slow = 0;
    trig_L2_tiletrackmufeature_L2_mu40_slow_empty = 0;
+   trig_L2_tiletrackmufeature_L2_mu40_slow_medium = 0;
    trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_DiMu = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_DiMu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20 = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic = 0;
    trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_cal_empty = 0;
    trig_L2_tiletrackmufeature_L2_mu4_cosmic = 0;
-   trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched = 0;
+   trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg = 0;
    trig_L2_tiletrackmufeature_L2_mu6 = 0;
    trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS = 0;
    trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu = 0;
    trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk = 0;
+   trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight = 0;
+   trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose = 0;
    trig_L2_tiletrackmufeature_tilemu_index = 0;
    trig_L2_tiletrackmufeature_idtrk_algorithmId = 0;
    trig_L2_tiletrackmufeature_idtrk_trackStatus = 0;
@@ -11383,25 +13453,34 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_trigmuonef_EF_2mu10_loose = 0;
    trig_EF_trigmuonef_EF_2mu10_loose_empty = 0;
    trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm = 0;
-   trig_EF_trigmuonef_EF_2mu4 = 0;
-   trig_EF_trigmuonef_EF_2mu4_Bmumu = 0;
-   trig_EF_trigmuonef_EF_2mu4_Bmumux = 0;
-   trig_EF_trigmuonef_EF_2mu4_DiMu = 0;
-   trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk = 0;
-   trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS = 0;
-   trig_EF_trigmuonef_EF_2mu4_Jpsimumu = 0;
-   trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_EF_trigmuonef_EF_2mu4_Upsimumu = 0;
+   trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_EF_trigmuonef_EF_2mu4T = 0;
+   trig_EF_trigmuonef_EF_2mu4T_2e5_medium = 0;
+   trig_EF_trigmuonef_EF_2mu4T_Bmumu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_Bmumux = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu_DY = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20 = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk = 0;
+   trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_Jpsimumu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_EF_trigmuonef_EF_2mu4T_Upsimumu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_xe30_noMu = 0;
+   trig_EF_trigmuonef_EF_2mu4T_xe40_noMu = 0;
+   trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY = 0;
    trig_EF_trigmuonef_EF_2mu6 = 0;
+   trig_EF_trigmuonef_EF_2mu6_Bmumux = 0;
+   trig_EF_trigmuonef_EF_2mu6_DiMu = 0;
    trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose = 0;
-   trig_EF_trigmuonef_EF_2mu6_NL = 0;
-   trig_EF_trigmuonef_EF_mu0_empty_NoAlg = 0;
-   trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg = 0;
-   trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg = 0;
+   trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_EF_trigmuonef_EF_mu10 = 0;
    trig_EF_trigmuonef_EF_mu10_Jpsimumu = 0;
-   trig_EF_trigmuonef_EF_mu10_NL = 0;
    trig_EF_trigmuonef_EF_mu10_Upsimumu_FS = 0;
+   trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS = 0;
    trig_EF_trigmuonef_EF_mu10_loose = 0;
    trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF = 0;
    trig_EF_trigmuonef_EF_mu11_empty_NoAlg = 0;
@@ -11409,46 +13488,106 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_trigmuonef_EF_mu13_MG = 0;
    trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF = 0;
    trig_EF_trigmuonef_EF_mu15 = 0;
+   trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium = 0;
    trig_EF_trigmuonef_EF_mu15_mu10_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium = 0;
+   trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight = 0;
+   trig_EF_trigmuonef_EF_mu15_xe30_noMu = 0;
    trig_EF_trigmuonef_EF_mu15i = 0;
+   trig_EF_trigmuonef_EF_mu15i_medium = 0;
    trig_EF_trigmuonef_EF_mu18 = 0;
+   trig_EF_trigmuonef_EF_mu18_L1J10 = 0;
    trig_EF_trigmuonef_EF_mu18_MG = 0;
+   trig_EF_trigmuonef_EF_mu18_MG_L1J10 = 0;
+   trig_EF_trigmuonef_EF_mu18_MG_medium = 0;
+   trig_EF_trigmuonef_EF_mu18_medium = 0;
+   trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu18i3_medium = 0;
+   trig_EF_trigmuonef_EF_mu18i4_medium = 0;
    trig_EF_trigmuonef_EF_mu20 = 0;
    trig_EF_trigmuonef_EF_mu20_IDTrkNoCut = 0;
+   trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx = 0;
    trig_EF_trigmuonef_EF_mu20_MG = 0;
+   trig_EF_trigmuonef_EF_mu20_MG_medium = 0;
    trig_EF_trigmuonef_EF_mu20_empty = 0;
+   trig_EF_trigmuonef_EF_mu20_medium = 0;
+   trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight = 0;
    trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF = 0;
    trig_EF_trigmuonef_EF_mu20i = 0;
+   trig_EF_trigmuonef_EF_mu20i_medium = 0;
    trig_EF_trigmuonef_EF_mu22 = 0;
    trig_EF_trigmuonef_EF_mu22_MG = 0;
-   trig_EF_trigmuonef_EF_mu4 = 0;
+   trig_EF_trigmuonef_EF_mu22_MG_medium = 0;
+   trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu22_medium = 0;
+   trig_EF_trigmuonef_EF_mu22i1_medium = 0;
+   trig_EF_trigmuonef_EF_mu22i2_medium = 0;
+   trig_EF_trigmuonef_EF_mu22i3_medium = 0;
+   trig_EF_trigmuonef_EF_mu22i4_medium = 0;
+   trig_EF_trigmuonef_EF_mu24_MG_medium = 0;
+   trig_EF_trigmuonef_EF_mu24_MG_tight = 0;
+   trig_EF_trigmuonef_EF_mu24_medium = 0;
+   trig_EF_trigmuonef_EF_mu24_tight = 0;
+   trig_EF_trigmuonef_EF_mu30_MG_medium = 0;
+   trig_EF_trigmuonef_EF_mu30_MG_tight = 0;
+   trig_EF_trigmuonef_EF_mu30_medium = 0;
+   trig_EF_trigmuonef_EF_mu30_tight = 0;
    trig_EF_trigmuonef_EF_mu40_MSonly_barrel = 0;
+   trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium = 0;
    trig_EF_trigmuonef_EF_mu40_MSonly_empty = 0;
    trig_EF_trigmuonef_EF_mu40_MSonly_tight = 0;
+   trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11 = 0;
    trig_EF_trigmuonef_EF_mu40_MSonly_tighter = 0;
    trig_EF_trigmuonef_EF_mu40_slow = 0;
    trig_EF_trigmuonef_EF_mu40_slow_empty = 0;
+   trig_EF_trigmuonef_EF_mu40_slow_medium = 0;
    trig_EF_trigmuonef_EF_mu40_slow_outOfTime = 0;
-   trig_EF_trigmuonef_EF_mu4_DiMu = 0;
-   trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS = 0;
-   trig_EF_trigmuonef_EF_mu4_Jpsimumu = 0;
+   trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium = 0;
+   trig_EF_trigmuonef_EF_mu4T = 0;
+   trig_EF_trigmuonef_EF_mu4T_DiMu = 0;
+   trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS = 0;
+   trig_EF_trigmuonef_EF_mu4T_Jpsimumu = 0;
+   trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi = 0;
+   trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS = 0;
+   trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS = 0;
+   trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS = 0;
+   trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu = 0;
+   trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu = 0;
+   trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY = 0;
+   trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_DiMu = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20 = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu = 0;
    trig_EF_trigmuonef_EF_mu4_L1J10_matched = 0;
    trig_EF_trigmuonef_EF_mu4_L1J15_matched = 0;
+   trig_EF_trigmuonef_EF_mu4_L1J20_matched = 0;
    trig_EF_trigmuonef_EF_mu4_L1J30_matched = 0;
    trig_EF_trigmuonef_EF_mu4_L1J50_matched = 0;
    trig_EF_trigmuonef_EF_mu4_L1J75_matched = 0;
    trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic = 0;
    trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic = 0;
-   trig_EF_trigmuonef_EF_mu4_MSonly_cosmic = 0;
-   trig_EF_trigmuonef_EF_mu4_Trk_Jpsi = 0;
-   trig_EF_trigmuonef_EF_mu4_Upsimumu_FS = 0;
-   trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS = 0;
    trig_EF_trigmuonef_EF_mu4_cosmic = 0;
-   trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS = 0;
+   trig_EF_trigmuonef_EF_mu4_empty_NoAlg = 0;
+   trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg = 0;
+   trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched = 0;
+   trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched = 0;
+   trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched = 0;
+   trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg = 0;
    trig_EF_trigmuonef_EF_mu6 = 0;
    trig_EF_trigmuonef_EF_mu6_DiMu_noOS = 0;
    trig_EF_trigmuonef_EF_mu6_Jpsimumu = 0;
    trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk = 0;
+   trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight = 0;
+   trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose = 0;
    trig_EF_trigmuonef_track_n = 0;
    trig_EF_trigmuonef_track_MuonType = 0;
    trig_EF_trigmuonef_track_MS_pt = 0;
@@ -11493,25 +13632,34 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_trigmugirl_EF_2mu10_loose = 0;
    trig_EF_trigmugirl_EF_2mu10_loose_empty = 0;
    trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm = 0;
-   trig_EF_trigmugirl_EF_2mu4 = 0;
-   trig_EF_trigmugirl_EF_2mu4_Bmumu = 0;
-   trig_EF_trigmugirl_EF_2mu4_Bmumux = 0;
-   trig_EF_trigmugirl_EF_2mu4_DiMu = 0;
-   trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk = 0;
-   trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS = 0;
-   trig_EF_trigmugirl_EF_2mu4_Jpsimumu = 0;
-   trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut = 0;
-   trig_EF_trigmugirl_EF_2mu4_Upsimumu = 0;
+   trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut = 0;
+   trig_EF_trigmugirl_EF_2mu4T = 0;
+   trig_EF_trigmugirl_EF_2mu4T_2e5_medium = 0;
+   trig_EF_trigmugirl_EF_2mu4T_Bmumu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_Bmumux = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu_DY = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20 = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk = 0;
+   trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS = 0;
+   trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_Jpsimumu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut = 0;
+   trig_EF_trigmugirl_EF_2mu4T_Upsimumu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_xe30_noMu = 0;
+   trig_EF_trigmugirl_EF_2mu4T_xe40_noMu = 0;
+   trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY = 0;
    trig_EF_trigmugirl_EF_2mu6 = 0;
+   trig_EF_trigmugirl_EF_2mu6_Bmumux = 0;
+   trig_EF_trigmugirl_EF_2mu6_DiMu = 0;
    trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose = 0;
-   trig_EF_trigmugirl_EF_2mu6_NL = 0;
-   trig_EF_trigmugirl_EF_mu0_empty_NoAlg = 0;
-   trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg = 0;
-   trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg = 0;
+   trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled = 0;
    trig_EF_trigmugirl_EF_mu10 = 0;
    trig_EF_trigmugirl_EF_mu10_Jpsimumu = 0;
-   trig_EF_trigmugirl_EF_mu10_NL = 0;
    trig_EF_trigmugirl_EF_mu10_Upsimumu_FS = 0;
+   trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS = 0;
    trig_EF_trigmugirl_EF_mu10_loose = 0;
    trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF = 0;
    trig_EF_trigmugirl_EF_mu11_empty_NoAlg = 0;
@@ -11519,46 +13667,106 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_trigmugirl_EF_mu13_MG = 0;
    trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF = 0;
    trig_EF_trigmugirl_EF_mu15 = 0;
+   trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium = 0;
    trig_EF_trigmugirl_EF_mu15_mu10_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium = 0;
+   trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight = 0;
+   trig_EF_trigmugirl_EF_mu15_xe30_noMu = 0;
    trig_EF_trigmugirl_EF_mu15i = 0;
+   trig_EF_trigmugirl_EF_mu15i_medium = 0;
    trig_EF_trigmugirl_EF_mu18 = 0;
+   trig_EF_trigmugirl_EF_mu18_L1J10 = 0;
    trig_EF_trigmugirl_EF_mu18_MG = 0;
+   trig_EF_trigmugirl_EF_mu18_MG_L1J10 = 0;
+   trig_EF_trigmugirl_EF_mu18_MG_medium = 0;
+   trig_EF_trigmugirl_EF_mu18_medium = 0;
+   trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu18i3_medium = 0;
+   trig_EF_trigmugirl_EF_mu18i4_medium = 0;
    trig_EF_trigmugirl_EF_mu20 = 0;
    trig_EF_trigmugirl_EF_mu20_IDTrkNoCut = 0;
+   trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx = 0;
    trig_EF_trigmugirl_EF_mu20_MG = 0;
+   trig_EF_trigmugirl_EF_mu20_MG_medium = 0;
    trig_EF_trigmugirl_EF_mu20_empty = 0;
+   trig_EF_trigmugirl_EF_mu20_medium = 0;
+   trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight = 0;
    trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF = 0;
    trig_EF_trigmugirl_EF_mu20i = 0;
+   trig_EF_trigmugirl_EF_mu20i_medium = 0;
    trig_EF_trigmugirl_EF_mu22 = 0;
    trig_EF_trigmugirl_EF_mu22_MG = 0;
-   trig_EF_trigmugirl_EF_mu4 = 0;
+   trig_EF_trigmugirl_EF_mu22_MG_medium = 0;
+   trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu22_medium = 0;
+   trig_EF_trigmugirl_EF_mu22i1_medium = 0;
+   trig_EF_trigmugirl_EF_mu22i2_medium = 0;
+   trig_EF_trigmugirl_EF_mu22i3_medium = 0;
+   trig_EF_trigmugirl_EF_mu22i4_medium = 0;
+   trig_EF_trigmugirl_EF_mu24_MG_medium = 0;
+   trig_EF_trigmugirl_EF_mu24_MG_tight = 0;
+   trig_EF_trigmugirl_EF_mu24_medium = 0;
+   trig_EF_trigmugirl_EF_mu24_tight = 0;
+   trig_EF_trigmugirl_EF_mu30_MG_medium = 0;
+   trig_EF_trigmugirl_EF_mu30_MG_tight = 0;
+   trig_EF_trigmugirl_EF_mu30_medium = 0;
+   trig_EF_trigmugirl_EF_mu30_tight = 0;
    trig_EF_trigmugirl_EF_mu40_MSonly_barrel = 0;
+   trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium = 0;
    trig_EF_trigmugirl_EF_mu40_MSonly_empty = 0;
    trig_EF_trigmugirl_EF_mu40_MSonly_tight = 0;
+   trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11 = 0;
    trig_EF_trigmugirl_EF_mu40_MSonly_tighter = 0;
    trig_EF_trigmugirl_EF_mu40_slow = 0;
    trig_EF_trigmugirl_EF_mu40_slow_empty = 0;
+   trig_EF_trigmugirl_EF_mu40_slow_medium = 0;
    trig_EF_trigmugirl_EF_mu40_slow_outOfTime = 0;
-   trig_EF_trigmugirl_EF_mu4_DiMu = 0;
-   trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS = 0;
-   trig_EF_trigmugirl_EF_mu4_Jpsimumu = 0;
+   trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium = 0;
+   trig_EF_trigmugirl_EF_mu4T = 0;
+   trig_EF_trigmugirl_EF_mu4T_DiMu = 0;
+   trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS = 0;
+   trig_EF_trigmugirl_EF_mu4T_Jpsimumu = 0;
+   trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi = 0;
+   trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS = 0;
+   trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS = 0;
+   trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS = 0;
+   trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS = 0;
+   trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu = 0;
+   trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu = 0;
+   trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY = 0;
+   trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_DiMu = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20 = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut = 0;
+   trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu = 0;
    trig_EF_trigmugirl_EF_mu4_L1J10_matched = 0;
    trig_EF_trigmugirl_EF_mu4_L1J15_matched = 0;
+   trig_EF_trigmugirl_EF_mu4_L1J20_matched = 0;
    trig_EF_trigmugirl_EF_mu4_L1J30_matched = 0;
    trig_EF_trigmugirl_EF_mu4_L1J50_matched = 0;
    trig_EF_trigmugirl_EF_mu4_L1J75_matched = 0;
    trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic = 0;
    trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic = 0;
-   trig_EF_trigmugirl_EF_mu4_MSonly_cosmic = 0;
-   trig_EF_trigmugirl_EF_mu4_Trk_Jpsi = 0;
-   trig_EF_trigmugirl_EF_mu4_Upsimumu_FS = 0;
-   trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS = 0;
    trig_EF_trigmugirl_EF_mu4_cosmic = 0;
-   trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS = 0;
+   trig_EF_trigmugirl_EF_mu4_empty_NoAlg = 0;
+   trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg = 0;
+   trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched = 0;
+   trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched = 0;
+   trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched = 0;
+   trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg = 0;
    trig_EF_trigmugirl_EF_mu6 = 0;
    trig_EF_trigmugirl_EF_mu6_DiMu_noOS = 0;
    trig_EF_trigmugirl_EF_mu6_Jpsimumu = 0;
    trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk = 0;
+   trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight = 0;
+   trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose = 0;
    trig_EF_trigmugirl_track_n = 0;
    trig_EF_trigmugirl_track_MuonType = 0;
    trig_EF_trigmugirl_track_MS_pt = 0;
@@ -11738,36 +13946,44 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L1_emtau_hadIsol = 0;
    trig_L1_emtau_hadCore = 0;
    trig_L1_emtau_thrPattern = 0;
-   trig_L1_emtau_L1_2EM10 = 0;
-   trig_L1_emtau_L1_2EM14 = 0;
+   trig_L1_emtau_L1_2EM10VH = 0;
+   trig_L1_emtau_L1_2EM12 = 0;
    trig_L1_emtau_L1_2EM3 = 0;
+   trig_L1_emtau_L1_2EM3_EM12 = 0;
    trig_L1_emtau_L1_2EM3_EM7 = 0;
-   trig_L1_emtau_L1_2EM3_NL = 0;
    trig_L1_emtau_L1_2EM5 = 0;
+   trig_L1_emtau_L1_2EM5_EM16VH = 0;
    trig_L1_emtau_L1_2EM5_MU6 = 0;
    trig_L1_emtau_L1_2EM7 = 0;
-   trig_L1_emtau_L1_EM10 = 0;
-   trig_L1_emtau_L1_EM10_MU6 = 0;
-   trig_L1_emtau_L1_EM10_NL = 0;
-   trig_L1_emtau_L1_EM10_XE20 = 0;
+   trig_L1_emtau_L1_EM10VH = 0;
+   trig_L1_emtau_L1_EM10VH_MU6 = 0;
+   trig_L1_emtau_L1_EM10VH_XE20 = 0;
+   trig_L1_emtau_L1_EM10VH_XE30 = 0;
+   trig_L1_emtau_L1_EM10VH_XE35 = 0;
    trig_L1_emtau_L1_EM12 = 0;
-   trig_L1_emtau_L1_EM14 = 0;
-   trig_L1_emtau_L1_EM14_XE10 = 0;
-   trig_L1_emtau_L1_EM14_XE20 = 0;
-   trig_L1_emtau_L1_EM16 = 0;
+   trig_L1_emtau_L1_EM12_3J10 = 0;
+   trig_L1_emtau_L1_EM12_4J10 = 0;
+   trig_L1_emtau_L1_EM12_XE20 = 0;
+   trig_L1_emtau_L1_EM12_XE30 = 0;
+   trig_L1_emtau_L1_EM12_XS30 = 0;
+   trig_L1_emtau_L1_EM12_XS45 = 0;
+   trig_L1_emtau_L1_EM16VH = 0;
+   trig_L1_emtau_L1_EM18VH = 0;
    trig_L1_emtau_L1_EM3 = 0;
    trig_L1_emtau_L1_EM30 = 0;
    trig_L1_emtau_L1_EM3_EMPTY = 0;
    trig_L1_emtau_L1_EM3_FIRSTEMPTY = 0;
-   trig_L1_emtau_L1_EM3_MU0 = 0;
    trig_L1_emtau_L1_EM3_MU6 = 0;
    trig_L1_emtau_L1_EM3_UNPAIRED_ISO = 0;
    trig_L1_emtau_L1_EM3_UNPAIRED_NONISO = 0;
    trig_L1_emtau_L1_EM5 = 0;
    trig_L1_emtau_L1_EM5_2MU6 = 0;
+   trig_L1_emtau_L1_EM5_EMPTY = 0;
    trig_L1_emtau_L1_EM5_MU10 = 0;
    trig_L1_emtau_L1_EM5_MU6 = 0;
    trig_L1_emtau_L1_EM7 = 0;
+   trig_L1_emtau_L1_EM7_XS30 = 0;
+   trig_L1_emtau_L1_EM7_XS45 = 0;
    trig_L1_emtau_RoIWord = 0;
    trig_L2_emcl_quality = 0;
    trig_L2_emcl_E = 0;
@@ -11867,32 +14083,62 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_el_F1 = 0;
    trig_L2_el_L2_2e10_medium = 0;
    trig_L2_el_L2_2e10_medium_mu6 = 0;
+   trig_L2_el_L2_2e12Tvh_medium = 0;
    trig_L2_el_L2_2e12_medium = 0;
+   trig_L2_el_L2_2e15vh_medium = 0;
    trig_L2_el_L2_2e5_tight = 0;
    trig_L2_el_L2_2e5_tight_Jpsi = 0;
-   trig_L2_el_L2_2e5_tight_NL = 0;
    trig_L2_el_L2_e10_medium = 0;
    trig_L2_el_L2_e10_medium_2mu6 = 0;
+   trig_L2_el_L2_e10_medium_mu10 = 0;
    trig_L2_el_L2_e10_medium_mu6 = 0;
-   trig_L2_el_L2_e15_medium = 0;
-   trig_L2_el_L2_e15_medium_xe30_noMu = 0;
-   trig_L2_el_L2_e15_tight = 0;
-   trig_L2_el_L2_e15_tight_NL = 0;
-   trig_L2_el_L2_e20_loose = 0;
-   trig_L2_el_L2_e20_medium = 0;
-   trig_L2_el_L2_e20_medium1 = 0;
-   trig_L2_el_L2_e20_medium_IDTrkNoCut = 0;
-   trig_L2_el_L2_e20_medium_SiTrk = 0;
-   trig_L2_el_L2_e20_medium_TRT = 0;
-   trig_L2_el_L2_e22_medium = 0;
+   trig_L2_el_L2_e10_medium_mu6_topo_medium = 0;
+   trig_L2_el_L2_e11_etcut = 0;
+   trig_L2_el_L2_e12Tvh_medium = 0;
+   trig_L2_el_L2_e12Tvh_medium_2e6T_medium = 0;
+   trig_L2_el_L2_e12Tvh_medium_mu6 = 0;
+   trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium = 0;
+   trig_L2_el_L2_e12_medium = 0;
+   trig_L2_el_L2_e13_etcutTrk_xs30_noMu = 0;
+   trig_L2_el_L2_e13_etcutTrk_xs45_noMu = 0;
+   trig_L2_el_L2_e14_tight_e4_etcut_Jpsi = 0;
+   trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee = 0;
+   trig_L2_el_L2_e15vh_medium = 0;
+   trig_L2_el_L2_e15vh_medium_xe30_noMu = 0;
+   trig_L2_el_L2_e15vh_medium_xe35_noMu = 0;
+   trig_L2_el_L2_e20_etcutTrk_xe25_noMu = 0;
+   trig_L2_el_L2_e20_etcutTrk_xs45_noMu = 0;
+   trig_L2_el_L2_e20_tight_e15_NoCut_Zee = 0;
+   trig_L2_el_L2_e22vh_loose = 0;
+   trig_L2_el_L2_e22vh_loose1 = 0;
+   trig_L2_el_L2_e22vh_looseTrk = 0;
+   trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS = 0;
+   trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS = 0;
+   trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS = 0;
+   trig_L2_el_L2_e22vh_medium = 0;
+   trig_L2_el_L2_e22vh_medium1 = 0;
+   trig_L2_el_L2_e22vh_medium1_EFxe20_noMu = 0;
+   trig_L2_el_L2_e22vh_medium1_EFxe30_noMu = 0;
+   trig_L2_el_L2_e22vh_medium1_EFxe40_noMu = 0;
+   trig_L2_el_L2_e22vh_medium2 = 0;
+   trig_L2_el_L2_e22vh_medium_IDTrkNoCut = 0;
+   trig_L2_el_L2_e22vh_medium_SiTrk = 0;
+   trig_L2_el_L2_e22vh_medium_TRT = 0;
+   trig_L2_el_L2_e40_medium = 0;
+   trig_L2_el_L2_e45_medium = 0;
+   trig_L2_el_L2_e45_medium1 = 0;
+   trig_L2_el_L2_e5_medium_mu6 = 0;
+   trig_L2_el_L2_e5_medium_mu6_topo_medium = 0;
    trig_L2_el_L2_e5_tight = 0;
+   trig_L2_el_L2_e5_tight_e14_etcut_Jpsi = 0;
    trig_L2_el_L2_e5_tight_e4_etcut_Jpsi = 0;
    trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk = 0;
    trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT = 0;
    trig_L2_el_L2_e5_tight_e5_NoCut = 0;
    trig_L2_el_L2_e5_tight_e9_etcut_Jpsi = 0;
    trig_L2_el_L2_e60_loose = 0;
-   trig_L2_el_L2_e9_tight_e5_tight_Jpsi = 0;
+   trig_L2_el_L2_e6T_medium = 0;
+   trig_L2_el_L2_e9_tight_e4_etcut_Jpsi = 0;
    trig_L2_el_L2_eb_physics = 0;
    trig_L2_el_L2_eb_physics_empty = 0;
    trig_L2_el_L2_eb_physics_firstempty = 0;
@@ -11904,6 +14150,7 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_el_L2_eb_random_firstempty = 0;
    trig_L2_el_L2_eb_random_unpaired_iso = 0;
    trig_L2_el_L2_em3_empty_larcalib = 0;
+   trig_L2_el_L2_em5_empty_larcalib = 0;
    trig_L2_el_err_trkPt = 0;
    trig_L2_el_err_eta = 0;
    trig_L2_el_err_phi = 0;
@@ -11923,19 +14170,19 @@ void THiggsD3PD::Init(TTree *tree)
    trig_L2_ph_dPhi = 0;
    trig_L2_ph_dEta = 0;
    trig_L2_ph_F1 = 0;
-   trig_L2_ph_L2_2g10_loose_NL = 0;
-   trig_L2_ph_L2_2g15_loose = 0;
    trig_L2_ph_L2_2g20_loose = 0;
-   trig_L2_ph_L2_g100_etcut_g50_etcut = 0;
+   trig_L2_ph_L2_g100_loose = 0;
+   trig_L2_ph_L2_g10_NoCut_cosmic = 0;
    trig_L2_ph_L2_g11_etcut = 0;
    trig_L2_ph_L2_g150_etcut = 0;
-   trig_L2_ph_L2_g15_loose = 0;
+   trig_L2_ph_L2_g200_etcut = 0;
    trig_L2_ph_L2_g20_etcut = 0;
-   trig_L2_ph_L2_g20_etcut_xe30_noMu = 0;
    trig_L2_ph_L2_g20_loose = 0;
    trig_L2_ph_L2_g40_loose = 0;
    trig_L2_ph_L2_g40_loose_EFxe40_noMu = 0;
-   trig_L2_ph_L2_g40_tight = 0;
+   trig_L2_ph_L2_g40_loose_xe30_medium_noMu = 0;
+   trig_L2_ph_L2_g40_loose_xe35_medium_noMu = 0;
+   trig_L2_ph_L2_g40_tight_b10_medium = 0;
    trig_L2_ph_L2_g5_NoCut_cosmic = 0;
    trig_L2_ph_L2_g60_loose = 0;
    trig_L2_ph_L2_g80_loose = 0;
@@ -12267,37 +14514,71 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_el_refittedtrackcovthetaqoverp = 0;
    trig_EF_el_EF_2e10_medium = 0;
    trig_EF_el_EF_2e10_medium_mu6 = 0;
+   trig_EF_el_EF_2e12Tvh_medium = 0;
    trig_EF_el_EF_2e12_medium = 0;
+   trig_EF_el_EF_2e15vh_medium = 0;
    trig_EF_el_EF_2e5_tight = 0;
    trig_EF_el_EF_2e5_tight_Jpsi = 0;
-   trig_EF_el_EF_2e5_tight_NL = 0;
    trig_EF_el_EF_e10_medium = 0;
    trig_EF_el_EF_e10_medium_2mu6 = 0;
+   trig_EF_el_EF_e10_medium_mu10 = 0;
    trig_EF_el_EF_e10_medium_mu6 = 0;
-   trig_EF_el_EF_e15_medium = 0;
-   trig_EF_el_EF_e15_medium_xe30_noMu = 0;
-   trig_EF_el_EF_e15_tight = 0;
-   trig_EF_el_EF_e15_tight_NL = 0;
-   trig_EF_el_EF_e20_loose = 0;
+   trig_EF_el_EF_e10_medium_mu6_topo_medium = 0;
+   trig_EF_el_EF_e11_etcut = 0;
+   trig_EF_el_EF_e12Tvh_medium = 0;
+   trig_EF_el_EF_e12Tvh_medium_2e6T_medium = 0;
+   trig_EF_el_EF_e12Tvh_medium_mu6 = 0;
+   trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium = 0;
+   trig_EF_el_EF_e12_medium = 0;
+   trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20 = 0;
+   trig_EF_el_EF_e13_etcutTrk_xs60_noMu = 0;
+   trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07 = 0;
+   trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20 = 0;
+   trig_EF_el_EF_e14_tight_e4_etcut_Jpsi = 0;
+   trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee = 0;
+   trig_EF_el_EF_e15vh_medium = 0;
+   trig_EF_el_EF_e15vh_medium_xe40_noMu = 0;
+   trig_EF_el_EF_e15vh_medium_xe50_noMu = 0;
+   trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20 = 0;
+   trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07 = 0;
+   trig_EF_el_EF_e20_tight_e15_NoCut_Zee = 0;
+   trig_EF_el_EF_e22vh_loose = 0;
+   trig_EF_el_EF_e22vh_loose1 = 0;
+   trig_EF_el_EF_e22vh_looseTrk = 0;
+   trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_medium = 0;
    trig_EF_el_EF_e20_medium = 0;
-   trig_EF_el_EF_e20_medium1 = 0;
-   trig_EF_el_EF_e20_medium_IDTrkNoCut = 0;
-   trig_EF_el_EF_e20_medium_SiTrk = 0;
-   trig_EF_el_EF_e20_medium_TRT = 0;
    trig_EF_el_EF_e22_medium = 0;
    trig_EF_el_EF_e22_medium1 = 0;
-   trig_EF_el_EF_e22vh_medium1 = 0;
    trig_EF_el_EF_2e12T_medium = 0;
-   trig_EF_el_EF_2e12Tvh_medium = 0;
-   trig_EF_el_EF_mu18_MG_medium  = 0;
+   trig_EF_el_EF_e22vh_medium1 = 0;
+   trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS = 0;
+   trig_EF_el_EF_e22vh_medium1_EFxe20_noMu = 0;
+   trig_EF_el_EF_e22vh_medium1_EFxe30_noMu = 0;
+   trig_EF_el_EF_e22vh_medium1_EFxe40_noMu = 0;
+   trig_EF_el_EF_e22vh_medium2 = 0;
+   trig_EF_el_EF_e22vh_medium_IDTrkNoCut = 0;
+   trig_EF_el_EF_e22vh_medium_SiTrk = 0;
+   trig_EF_el_EF_e22vh_medium_TRT = 0;
+   trig_EF_el_EF_e40_medium = 0;
+   trig_EF_el_EF_e45_medium = 0;
+   trig_EF_el_EF_e45_medium1 = 0;
+   trig_EF_el_EF_e5_medium_mu6 = 0;
+   trig_EF_el_EF_e5_medium_mu6_topo_medium = 0;
    trig_EF_el_EF_e5_tight = 0;
+   trig_EF_el_EF_e5_tight_e14_etcut_Jpsi = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk = 0;
    trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT = 0;
    trig_EF_el_EF_e5_tight_e5_NoCut = 0;
    trig_EF_el_EF_e5_tight_e9_etcut_Jpsi = 0;
    trig_EF_el_EF_e60_loose = 0;
-   trig_EF_el_EF_e9_tight_e5_tight_Jpsi = 0;
+   trig_EF_el_EF_e6T_medium = 0;
+   trig_EF_el_EF_e9_tight_e4_etcut_Jpsi = 0;
    trig_EF_el_EF_eb_physics = 0;
    trig_EF_el_EF_eb_physics_empty = 0;
    trig_EF_el_EF_eb_physics_firstempty = 0;
@@ -12374,23 +14655,22 @@ void THiggsD3PD::Init(TTree *tree)
    trig_EF_ph_px = 0;
    trig_EF_ph_py = 0;
    trig_EF_ph_pz = 0;
-   trig_EF_ph_EF_2g10_loose_NL = 0;
-   trig_EF_ph_EF_2g15_loose = 0;
    trig_EF_ph_EF_2g20_loose = 0;
-   trig_EF_ph_EF_g100_etcut_g50_etcut = 0;
+   trig_EF_ph_EF_g100_loose = 0;
+   trig_EF_ph_EF_g10_NoCut_cosmic = 0;
    trig_EF_ph_EF_g11_etcut = 0;
    trig_EF_ph_EF_g11_etcut_larcalib = 0;
    trig_EF_ph_EF_g150_etcut = 0;
-   trig_EF_ph_EF_g15_loose = 0;
-   trig_EF_ph_EF_g15_loose_larcalib = 0;
+   trig_EF_ph_EF_g200_etcut = 0;
    trig_EF_ph_EF_g20_etcut = 0;
-   trig_EF_ph_EF_g20_etcut_xe30_noMu = 0;
    trig_EF_ph_EF_g20_loose = 0;
    trig_EF_ph_EF_g20_loose_larcalib = 0;
    trig_EF_ph_EF_g40_loose = 0;
    trig_EF_ph_EF_g40_loose_EFxe40_noMu = 0;
    trig_EF_ph_EF_g40_loose_larcalib = 0;
-   trig_EF_ph_EF_g40_tight = 0;
+   trig_EF_ph_EF_g40_loose_xe45_medium_noMu = 0;
+   trig_EF_ph_EF_g40_loose_xe55_medium_noMu = 0;
+   trig_EF_ph_EF_g40_tight_b10_medium = 0;
    trig_EF_ph_EF_g5_NoCut_cosmic = 0;
    trig_EF_ph_EF_g60_loose = 0;
    trig_EF_ph_EF_g60_loose_larcalib = 0;
@@ -12573,58 +14853,106 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("isTestBeam", &isTestBeam, &b_isTestBeam);
    fChain->SetBranchAddress("EF_2e10_medium", &EF_2e10_medium, &b_EF_2e10_medium);
    fChain->SetBranchAddress("EF_2e10_medium_mu6", &EF_2e10_medium_mu6, &b_EF_2e10_medium_mu6);
+   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("EF_2e12_medium", &EF_2e12_medium, &b_EF_2e12_medium);
+   fChain->SetBranchAddress("EF_2e15vh_medium", &EF_2e15vh_medium, &b_EF_2e15vh_medium);
    fChain->SetBranchAddress("EF_2e5_tight", &EF_2e5_tight, &b_EF_2e5_tight);
    fChain->SetBranchAddress("EF_2e5_tight_Jpsi", &EF_2e5_tight_Jpsi, &b_EF_2e5_tight_Jpsi);
-   fChain->SetBranchAddress("EF_2e5_tight_NL", &EF_2e5_tight_NL, &b_EF_2e5_tight_NL);
-   fChain->SetBranchAddress("EF_2g10_loose_NL", &EF_2g10_loose_NL, &b_EF_2g10_loose_NL);
-   fChain->SetBranchAddress("EF_2g15_loose", &EF_2g15_loose, &b_EF_2g15_loose);
    fChain->SetBranchAddress("EF_2g20_loose", &EF_2g20_loose, &b_EF_2g20_loose);
+   fChain->SetBranchAddress("EF_2j45_a4tc_EFFS_leadingmct100_xe40_medium_noMu", &EF_2j45_a4tc_EFFS_leadingmct100_xe40_medium_noMu, &b_EF_2j45_a4tc_EFFS_leadingmct100_xe40_medium_noMu);
+   fChain->SetBranchAddress("EF_2j55_a4tc_EFFS_leadingmct100_xe40_medium_noMu", &EF_2j55_a4tc_EFFS_leadingmct100_xe40_medium_noMu, &b_EF_2j55_a4tc_EFFS_leadingmct100_xe40_medium_noMu);
    fChain->SetBranchAddress("EF_2mu10", &EF_2mu10, &b_EF_2mu10);
    fChain->SetBranchAddress("EF_2mu10_empty", &EF_2mu10_empty, &b_EF_2mu10_empty);
    fChain->SetBranchAddress("EF_2mu10_loose", &EF_2mu10_loose, &b_EF_2mu10_loose);
    fChain->SetBranchAddress("EF_2mu10_loose_empty", &EF_2mu10_loose_empty, &b_EF_2mu10_loose_empty);
    fChain->SetBranchAddress("EF_2mu10_loose_noOvlpRm", &EF_2mu10_loose_noOvlpRm, &b_EF_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("EF_2mu4", &EF_2mu4, &b_EF_2mu4);
-   fChain->SetBranchAddress("EF_2mu4_Bmumu", &EF_2mu4_Bmumu, &b_EF_2mu4_Bmumu);
-   fChain->SetBranchAddress("EF_2mu4_Bmumux", &EF_2mu4_Bmumux, &b_EF_2mu4_Bmumux);
-   fChain->SetBranchAddress("EF_2mu4_DiMu", &EF_2mu4_DiMu, &b_EF_2mu4_DiMu);
-   fChain->SetBranchAddress("EF_2mu4_DiMu_SiTrk", &EF_2mu4_DiMu_SiTrk, &b_EF_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("EF_2mu4_DiMu_noVtx_noOS", &EF_2mu4_DiMu_noVtx_noOS, &b_EF_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("EF_2mu4_Jpsimumu", &EF_2mu4_Jpsimumu, &b_EF_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("EF_2mu4_Jpsimumu_IDTrkNoCut", &EF_2mu4_Jpsimumu_IDTrkNoCut, &b_EF_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("EF_2mu4_Upsimumu", &EF_2mu4_Upsimumu, &b_EF_2mu4_Upsimumu);
+   fChain->SetBranchAddress("EF_2mu13_Zmumu_IDTrkNoCut", &EF_2mu13_Zmumu_IDTrkNoCut, &b_EF_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("EF_2mu4T", &EF_2mu4T, &b_EF_2mu4T);
+   fChain->SetBranchAddress("EF_2mu4T_2e5_medium", &EF_2mu4T_2e5_medium, &b_EF_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("EF_2mu4T_Bmumu", &EF_2mu4T_Bmumu, &b_EF_2mu4T_Bmumu);
+   fChain->SetBranchAddress("EF_2mu4T_Bmumux", &EF_2mu4T_Bmumux, &b_EF_2mu4T_Bmumux);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu", &EF_2mu4T_DiMu, &b_EF_2mu4T_DiMu);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu_DY", &EF_2mu4T_DiMu_DY, &b_EF_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu_DY20", &EF_2mu4T_DiMu_DY20, &b_EF_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu_DY_noVtx_noOS", &EF_2mu4T_DiMu_DY_noVtx_noOS, &b_EF_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu_SiTrk", &EF_2mu4T_DiMu_SiTrk, &b_EF_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("EF_2mu4T_DiMu_noVtx_noOS", &EF_2mu4T_DiMu_noVtx_noOS, &b_EF_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("EF_2mu4T_EFxe20_noMu", &EF_2mu4T_EFxe20_noMu, &b_EF_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("EF_2mu4T_EFxe30_noMu", &EF_2mu4T_EFxe30_noMu, &b_EF_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("EF_2mu4T_Jpsimumu", &EF_2mu4T_Jpsimumu, &b_EF_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("EF_2mu4T_Jpsimumu_IDTrkNoCut", &EF_2mu4T_Jpsimumu_IDTrkNoCut, &b_EF_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("EF_2mu4T_Upsimumu", &EF_2mu4T_Upsimumu, &b_EF_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("EF_2mu4T_xe30_noMu", &EF_2mu4T_xe30_noMu, &b_EF_2mu4T_xe30_noMu);
+   fChain->SetBranchAddress("EF_2mu4T_xe40_noMu", &EF_2mu4T_xe40_noMu, &b_EF_2mu4T_xe40_noMu);
+   fChain->SetBranchAddress("EF_2mu4Ti_DiMu_DY", &EF_2mu4Ti_DiMu_DY, &b_EF_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("EF_2mu6", &EF_2mu6, &b_EF_2mu6);
+   fChain->SetBranchAddress("EF_2mu6_Bmumux", &EF_2mu6_Bmumux, &b_EF_2mu6_Bmumux);
+   fChain->SetBranchAddress("EF_2mu6_DiMu", &EF_2mu6_DiMu, &b_EF_2mu6_DiMu);
    fChain->SetBranchAddress("EF_2mu6_MSonly_g10_loose", &EF_2mu6_MSonly_g10_loose, &b_EF_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("EF_2mu6_NL", &EF_2mu6_NL, &b_EF_2mu6_NL);
+   fChain->SetBranchAddress("EF_2mu6_MSonly_g10_loose_nonfilled", &EF_2mu6_MSonly_g10_loose_nonfilled, &b_EF_2mu6_MSonly_g10_loose_nonfilled);
+   fChain->SetBranchAddress("EF_2tau29T_medium1", &EF_2tau29T_medium1, &b_EF_2tau29T_medium1);
    fChain->SetBranchAddress("EF_2tau29_medium1", &EF_2tau29_medium1, &b_EF_2tau29_medium1);
+   fChain->SetBranchAddress("EF_2tau29i_medium1", &EF_2tau29i_medium1, &b_EF_2tau29i_medium1);
    fChain->SetBranchAddress("EF_e10_medium", &EF_e10_medium, &b_EF_e10_medium);
    fChain->SetBranchAddress("EF_e10_medium_2mu6", &EF_e10_medium_2mu6, &b_EF_e10_medium_2mu6);
+   fChain->SetBranchAddress("EF_e10_medium_mu10", &EF_e10_medium_mu10, &b_EF_e10_medium_mu10);
    fChain->SetBranchAddress("EF_e10_medium_mu6", &EF_e10_medium_mu6, &b_EF_e10_medium_mu6);
-   fChain->SetBranchAddress("EF_e15_medium", &EF_e15_medium, &b_EF_e15_medium);
-   fChain->SetBranchAddress("EF_e15_medium_xe30_noMu", &EF_e15_medium_xe30_noMu, &b_EF_e15_medium_xe30_noMu);
-   fChain->SetBranchAddress("EF_e15_tight", &EF_e15_tight, &b_EF_e15_tight);
-   fChain->SetBranchAddress("EF_e15_tight_NL", &EF_e15_tight_NL, &b_EF_e15_tight_NL);
-   fChain->SetBranchAddress("EF_e20_loose", &EF_e20_loose, &b_EF_e20_loose);
+   fChain->SetBranchAddress("EF_e10_medium_mu6_topo_medium", &EF_e10_medium_mu6_topo_medium, &b_EF_e10_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("EF_e11_etcut", &EF_e11_etcut, &b_EF_e11_etcut);
+   fChain->SetBranchAddress("EF_e12Tvh_medium", &EF_e12Tvh_medium, &b_EF_e12Tvh_medium);
+   fChain->SetBranchAddress("EF_e12Tvh_medium_2e6T_medium", &EF_e12Tvh_medium_2e6T_medium, &b_EF_e12Tvh_medium_2e6T_medium);
+   fChain->SetBranchAddress("EF_e12Tvh_medium_mu6", &EF_e12Tvh_medium_mu6, &b_EF_e12Tvh_medium_mu6);
+   fChain->SetBranchAddress("EF_e12Tvh_medium_mu6_topo_medium", &EF_e12Tvh_medium_mu6_topo_medium, &b_EF_e12Tvh_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("EF_e12_medium", &EF_e12_medium, &b_EF_e12_medium);
+   fChain->SetBranchAddress("EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20", &EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20, &b_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("EF_e13_etcutTrk_xs60_noMu", &EF_e13_etcutTrk_xs60_noMu, &b_EF_e13_etcutTrk_xs60_noMu);
+   fChain->SetBranchAddress("EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07", &EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07, &b_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07);
+   fChain->SetBranchAddress("EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20", &EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20, &b_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("EF_e14_tight_e4_etcut_Jpsi", &EF_e14_tight_e4_etcut_Jpsi, &b_EF_e14_tight_e4_etcut_Jpsi);
+   fChain->SetBranchAddress("EF_e15vh_loose1_e12Tvh_loose1_Zee", &EF_e15vh_loose1_e12Tvh_loose1_Zee, &b_EF_e15vh_loose1_e12Tvh_loose1_Zee);
+   fChain->SetBranchAddress("EF_e15vh_medium", &EF_e15vh_medium, &b_EF_e15vh_medium);
+   fChain->SetBranchAddress("EF_e15vh_medium_xe40_noMu", &EF_e15vh_medium_xe40_noMu, &b_EF_e15vh_medium_xe40_noMu);
+   fChain->SetBranchAddress("EF_e15vh_medium_xe50_noMu", &EF_e15vh_medium_xe50_noMu, &b_EF_e15vh_medium_xe50_noMu);
+   fChain->SetBranchAddress("EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20", &EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20, &b_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07", &EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07, &b_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07);
+   fChain->SetBranchAddress("EF_e20_tight_e15_NoCut_Zee", &EF_e20_tight_e15_NoCut_Zee, &b_EF_e20_tight_e15_NoCut_Zee);
+   fChain->SetBranchAddress("EF_e22vh_loose", &EF_e22vh_loose, &b_EF_e22vh_loose);
+   fChain->SetBranchAddress("EF_e22vh_loose1", &EF_e22vh_loose1, &b_EF_e22vh_loose1);
+   fChain->SetBranchAddress("EF_e22vh_looseTrk", &EF_e22vh_looseTrk, &b_EF_e22vh_looseTrk);
+   fChain->SetBranchAddress("EF_e22vh_loose_2j20_a4tc_EFFS", &EF_e22vh_loose_2j20_a4tc_EFFS, &b_EF_e22vh_loose_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_loose_3j20_a4tc_EFFS", &EF_e22vh_loose_3j20_a4tc_EFFS, &b_EF_e22vh_loose_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_loose_4j15_a4tc_EFFS", &EF_e22vh_loose_4j15_a4tc_EFFS, &b_EF_e22vh_loose_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_medium", &EF_e22vh_medium, &b_EF_e22vh_medium);
    fChain->SetBranchAddress("EF_e20_medium", &EF_e20_medium, &b_EF_e20_medium);
-   fChain->SetBranchAddress("EF_e20_medium1", &EF_e20_medium1, &b_EF_e20_medium1);
-   fChain->SetBranchAddress("EF_e20_medium_IDTrkNoCut", &EF_e20_medium_IDTrkNoCut, &b_EF_e20_medium_IDTrkNoCut);
-   fChain->SetBranchAddress("EF_e20_medium_SiTrk", &EF_e20_medium_SiTrk, &b_EF_e20_medium_SiTrk);
-   fChain->SetBranchAddress("EF_e20_medium_TRT", &EF_e20_medium_TRT, &b_EF_e20_medium_TRT);
    fChain->SetBranchAddress("EF_e22_medium", &EF_e22_medium, &b_EF_e22_medium);
    fChain->SetBranchAddress("EF_e22_medium1", &EF_e22_medium1, &b_EF_e22_medium1);
-   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
    fChain->SetBranchAddress("EF_2e12T_medium", &EF_2e12T_medium, &b_EF_2e12T_medium);
-   fChain->SetBranchAddress("EF_2e12Tvh_medium", &EF_2e12Tvh_medium, &b_EF_2e12Tvh_medium);
-   fChain->SetBranchAddress("EF_mu18_MG_medium ", &EF_mu18_MG_medium , &b_EF_mu18_MG_medium );
+   fChain->SetBranchAddress("EF_e22vh_medium1", &EF_e22vh_medium1, &b_EF_e22vh_medium1);
+   fChain->SetBranchAddress("EF_e22vh_medium1_3j10_a4tc_EFFS", &EF_e22vh_medium1_3j10_a4tc_EFFS, &b_EF_e22vh_medium1_3j10_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_medium1_3j15_a4tc_EFFS", &EF_e22vh_medium1_3j15_a4tc_EFFS, &b_EF_e22vh_medium1_3j15_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_medium1_4j10_a4tc_EFFS", &EF_e22vh_medium1_4j10_a4tc_EFFS, &b_EF_e22vh_medium1_4j10_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_e22vh_medium1_EFxe20_noMu", &EF_e22vh_medium1_EFxe20_noMu, &b_EF_e22vh_medium1_EFxe20_noMu);
+   fChain->SetBranchAddress("EF_e22vh_medium1_EFxe30_noMu", &EF_e22vh_medium1_EFxe30_noMu, &b_EF_e22vh_medium1_EFxe30_noMu);
+   fChain->SetBranchAddress("EF_e22vh_medium1_EFxe40_noMu", &EF_e22vh_medium1_EFxe40_noMu, &b_EF_e22vh_medium1_EFxe40_noMu);
+   fChain->SetBranchAddress("EF_e22vh_medium2", &EF_e22vh_medium2, &b_EF_e22vh_medium2);
+   fChain->SetBranchAddress("EF_e22vh_medium_IDTrkNoCut", &EF_e22vh_medium_IDTrkNoCut, &b_EF_e22vh_medium_IDTrkNoCut);
+   fChain->SetBranchAddress("EF_e22vh_medium_SiTrk", &EF_e22vh_medium_SiTrk, &b_EF_e22vh_medium_SiTrk);
+   fChain->SetBranchAddress("EF_e22vh_medium_TRT", &EF_e22vh_medium_TRT, &b_EF_e22vh_medium_TRT);
+   fChain->SetBranchAddress("EF_e40_medium", &EF_e40_medium, &b_EF_e40_medium);
+   fChain->SetBranchAddress("EF_e45_medium", &EF_e45_medium, &b_EF_e45_medium);
+   fChain->SetBranchAddress("EF_e45_medium1", &EF_e45_medium1, &b_EF_e45_medium1);
+   fChain->SetBranchAddress("EF_e5_medium_mu6", &EF_e5_medium_mu6, &b_EF_e5_medium_mu6);
+   fChain->SetBranchAddress("EF_e5_medium_mu6_topo_medium", &EF_e5_medium_mu6_topo_medium, &b_EF_e5_medium_mu6_topo_medium);
    fChain->SetBranchAddress("EF_e5_tight", &EF_e5_tight, &b_EF_e5_tight);
+   fChain->SetBranchAddress("EF_e5_tight_e14_etcut_Jpsi", &EF_e5_tight_e14_etcut_Jpsi, &b_EF_e5_tight_e14_etcut_Jpsi);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi", &EF_e5_tight_e4_etcut_Jpsi, &b_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi_SiTrk", &EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_EF_e5_tight_e4_etcut_Jpsi_SiTrk);
    fChain->SetBranchAddress("EF_e5_tight_e4_etcut_Jpsi_TRT", &EF_e5_tight_e4_etcut_Jpsi_TRT, &b_EF_e5_tight_e4_etcut_Jpsi_TRT);
    fChain->SetBranchAddress("EF_e5_tight_e5_NoCut", &EF_e5_tight_e5_NoCut, &b_EF_e5_tight_e5_NoCut);
    fChain->SetBranchAddress("EF_e5_tight_e9_etcut_Jpsi", &EF_e5_tight_e9_etcut_Jpsi, &b_EF_e5_tight_e9_etcut_Jpsi);
    fChain->SetBranchAddress("EF_e60_loose", &EF_e60_loose, &b_EF_e60_loose);
-   fChain->SetBranchAddress("EF_e9_tight_e5_tight_Jpsi", &EF_e9_tight_e5_tight_Jpsi, &b_EF_e9_tight_e5_tight_Jpsi);
+   fChain->SetBranchAddress("EF_e6T_medium", &EF_e6T_medium, &b_EF_e6T_medium);
+   fChain->SetBranchAddress("EF_e9_tight_e4_etcut_Jpsi", &EF_e9_tight_e4_etcut_Jpsi, &b_EF_e9_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("EF_eb_physics", &EF_eb_physics, &b_EF_eb_physics);
    fChain->SetBranchAddress("EF_eb_physics_empty", &EF_eb_physics_empty, &b_EF_eb_physics_empty);
    fChain->SetBranchAddress("EF_eb_physics_firstempty", &EF_eb_physics_firstempty, &b_EF_eb_physics_firstempty);
@@ -12635,64 +14963,89 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_eb_random_empty", &EF_eb_random_empty, &b_EF_eb_random_empty);
    fChain->SetBranchAddress("EF_eb_random_firstempty", &EF_eb_random_firstempty, &b_EF_eb_random_firstempty);
    fChain->SetBranchAddress("EF_eb_random_unpaired_iso", &EF_eb_random_unpaired_iso, &b_EF_eb_random_unpaired_iso);
-   fChain->SetBranchAddress("EF_g100_etcut_g50_etcut", &EF_g100_etcut_g50_etcut, &b_EF_g100_etcut_g50_etcut);
+   fChain->SetBranchAddress("EF_g100_loose", &EF_g100_loose, &b_EF_g100_loose);
+   fChain->SetBranchAddress("EF_g10_NoCut_cosmic", &EF_g10_NoCut_cosmic, &b_EF_g10_NoCut_cosmic);
    fChain->SetBranchAddress("EF_g11_etcut", &EF_g11_etcut, &b_EF_g11_etcut);
    fChain->SetBranchAddress("EF_g11_etcut_larcalib", &EF_g11_etcut_larcalib, &b_EF_g11_etcut_larcalib);
    fChain->SetBranchAddress("EF_g150_etcut", &EF_g150_etcut, &b_EF_g150_etcut);
-   fChain->SetBranchAddress("EF_g15_loose", &EF_g15_loose, &b_EF_g15_loose);
-   fChain->SetBranchAddress("EF_g15_loose_larcalib", &EF_g15_loose_larcalib, &b_EF_g15_loose_larcalib);
+   fChain->SetBranchAddress("EF_g200_etcut", &EF_g200_etcut, &b_EF_g200_etcut);
    fChain->SetBranchAddress("EF_g20_etcut", &EF_g20_etcut, &b_EF_g20_etcut);
-   fChain->SetBranchAddress("EF_g20_etcut_xe30_noMu", &EF_g20_etcut_xe30_noMu, &b_EF_g20_etcut_xe30_noMu);
    fChain->SetBranchAddress("EF_g20_loose", &EF_g20_loose, &b_EF_g20_loose);
    fChain->SetBranchAddress("EF_g20_loose_larcalib", &EF_g20_loose_larcalib, &b_EF_g20_loose_larcalib);
    fChain->SetBranchAddress("EF_g40_loose", &EF_g40_loose, &b_EF_g40_loose);
    fChain->SetBranchAddress("EF_g40_loose_EFxe40_noMu", &EF_g40_loose_EFxe40_noMu, &b_EF_g40_loose_EFxe40_noMu);
    fChain->SetBranchAddress("EF_g40_loose_larcalib", &EF_g40_loose_larcalib, &b_EF_g40_loose_larcalib);
-   fChain->SetBranchAddress("EF_g40_tight", &EF_g40_tight, &b_EF_g40_tight);
+   fChain->SetBranchAddress("EF_g40_loose_xe45_medium_noMu", &EF_g40_loose_xe45_medium_noMu, &b_EF_g40_loose_xe45_medium_noMu);
+   fChain->SetBranchAddress("EF_g40_loose_xe55_medium_noMu", &EF_g40_loose_xe55_medium_noMu, &b_EF_g40_loose_xe55_medium_noMu);
+   fChain->SetBranchAddress("EF_g40_tight_b10_medium", &EF_g40_tight_b10_medium, &b_EF_g40_tight_b10_medium);
    fChain->SetBranchAddress("EF_g5_NoCut_cosmic", &EF_g5_NoCut_cosmic, &b_EF_g5_NoCut_cosmic);
    fChain->SetBranchAddress("EF_g60_loose", &EF_g60_loose, &b_EF_g60_loose);
    fChain->SetBranchAddress("EF_g60_loose_larcalib", &EF_g60_loose_larcalib, &b_EF_g60_loose_larcalib);
    fChain->SetBranchAddress("EF_g80_loose", &EF_g80_loose, &b_EF_g80_loose);
    fChain->SetBranchAddress("EF_g80_loose_larcalib", &EF_g80_loose_larcalib, &b_EF_g80_loose_larcalib);
-   fChain->SetBranchAddress("EF_j100_a4_EFFS", &EF_j100_a4_EFFS, &b_EF_j100_a4_EFFS);
-   fChain->SetBranchAddress("EF_j10_a4_EFFS", &EF_j10_a4_EFFS, &b_EF_j10_a4_EFFS);
-   fChain->SetBranchAddress("EF_j120_j55_j40_a4_EFFS", &EF_j120_j55_j40_a4_EFFS, &b_EF_j120_j55_j40_a4_EFFS);
-   fChain->SetBranchAddress("EF_j135_a4_EFFS", &EF_j135_a4_EFFS, &b_EF_j135_a4_EFFS);
-   fChain->SetBranchAddress("EF_j15_a4_EFFS", &EF_j15_a4_EFFS, &b_EF_j15_a4_EFFS);
-   fChain->SetBranchAddress("EF_j180_a4_EFFS", &EF_j180_a4_EFFS, &b_EF_j180_a4_EFFS);
-   fChain->SetBranchAddress("EF_j180_j30_a4_EFFS_L2dphi04", &EF_j180_j30_a4_EFFS_L2dphi04, &b_EF_j180_j30_a4_EFFS_L2dphi04);
-   fChain->SetBranchAddress("EF_j20_a4_EFFS", &EF_j20_a4_EFFS, &b_EF_j20_a4_EFFS);
+   fChain->SetBranchAddress("EF_j100_a4tc_EFFS", &EF_j100_a4tc_EFFS, &b_EF_j100_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j100_a4tc_EFFS_ht350", &EF_j100_a4tc_EFFS_ht350, &b_EF_j100_a4tc_EFFS_ht350);
+   fChain->SetBranchAddress("EF_j100_a4tc_EFFS_ht400", &EF_j100_a4tc_EFFS_ht400, &b_EF_j100_a4tc_EFFS_ht400);
+   fChain->SetBranchAddress("EF_j100_a4tc_EFFS_ht500", &EF_j100_a4tc_EFFS_ht500, &b_EF_j100_a4tc_EFFS_ht500);
+   fChain->SetBranchAddress("EF_j10_a4tc_EFFS", &EF_j10_a4tc_EFFS, &b_EF_j10_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j10_a4tc_EFFS_1vx", &EF_j10_a4tc_EFFS_1vx, &b_EF_j10_a4tc_EFFS_1vx);
+   fChain->SetBranchAddress("EF_j135_a4tc_EFFS", &EF_j135_a4tc_EFFS, &b_EF_j135_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j135_a4tc_EFFS_ht500", &EF_j135_a4tc_EFFS_ht500, &b_EF_j135_a4tc_EFFS_ht500);
+   fChain->SetBranchAddress("EF_j135_j30_a4tc_EFFS_dphi04", &EF_j135_j30_a4tc_EFFS_dphi04, &b_EF_j135_j30_a4tc_EFFS_dphi04);
+   fChain->SetBranchAddress("EF_j15_a2hi_EFFS", &EF_j15_a2hi_EFFS, &b_EF_j15_a2hi_EFFS);
+   fChain->SetBranchAddress("EF_j15_a2tc_EFFS", &EF_j15_a2tc_EFFS, &b_EF_j15_a2tc_EFFS);
+   fChain->SetBranchAddress("EF_j15_a4tc_EFFS", &EF_j15_a4tc_EFFS, &b_EF_j15_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j180_a4tc_EFFS", &EF_j180_a4tc_EFFS, &b_EF_j180_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j180_j30_a4tc_EFFS_dphi04", &EF_j180_j30_a4tc_EFFS_dphi04, &b_EF_j180_j30_a4tc_EFFS_dphi04);
+   fChain->SetBranchAddress("EF_j20_a2hi_EFFS", &EF_j20_a2hi_EFFS, &b_EF_j20_a2hi_EFFS);
+   fChain->SetBranchAddress("EF_j20_a2tc_EFFS", &EF_j20_a2tc_EFFS, &b_EF_j20_a2tc_EFFS);
+   fChain->SetBranchAddress("EF_j20_a4hi_EFFS", &EF_j20_a4hi_EFFS, &b_EF_j20_a4hi_EFFS);
    fChain->SetBranchAddress("EF_j20_a4tc_EFFS", &EF_j20_a4tc_EFFS, &b_EF_j20_a4tc_EFFS);
-   fChain->SetBranchAddress("EF_j240_a4_EFFS", &EF_j240_a4_EFFS, &b_EF_j240_a4_EFFS);
-   fChain->SetBranchAddress("EF_j25_larcalib", &EF_j25_larcalib, &b_EF_j25_larcalib);
-   fChain->SetBranchAddress("EF_j30_a4_EFFS", &EF_j30_a4_EFFS, &b_EF_j30_a4_EFFS);
+   fChain->SetBranchAddress("EF_j240_a10tc_EFFS", &EF_j240_a10tc_EFFS, &b_EF_j240_a10tc_EFFS);
+   fChain->SetBranchAddress("EF_j240_a4tc_EFFS", &EF_j240_a4tc_EFFS, &b_EF_j240_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j240_a4tc_EFFS_l2cleanph", &EF_j240_a4tc_EFFS_l2cleanph, &b_EF_j240_a4tc_EFFS_l2cleanph);
    fChain->SetBranchAddress("EF_j30_a4tc_EFFS", &EF_j30_a4tc_EFFS, &b_EF_j30_a4tc_EFFS);
-   fChain->SetBranchAddress("EF_j30_fj30_a4_EFFS", &EF_j30_fj30_a4_EFFS, &b_EF_j30_fj30_a4_EFFS);
-   fChain->SetBranchAddress("EF_j35_L1TAU_HV", &EF_j35_L1TAU_HV, &b_EF_j35_L1TAU_HV);
-   fChain->SetBranchAddress("EF_j35_L1TAU_HV_jetNoEF_firstempty", &EF_j35_L1TAU_HV_jetNoEF_firstempty, &b_EF_j35_L1TAU_HV_jetNoEF_firstempty);
-   fChain->SetBranchAddress("EF_j35_L1TAU_HV_jetNoEF_unpaired_iso", &EF_j35_L1TAU_HV_jetNoEF_unpaired_iso, &b_EF_j35_L1TAU_HV_jetNoEF_unpaired_iso);
-   fChain->SetBranchAddress("EF_j35_L1TAU_HV_jetNoEF_unpaired_noniso", &EF_j35_L1TAU_HV_jetNoEF_unpaired_noniso, &b_EF_j35_L1TAU_HV_jetNoEF_unpaired_noniso);
-   fChain->SetBranchAddress("EF_j40_a4_EFFS", &EF_j40_a4_EFFS, &b_EF_j40_a4_EFFS);
-   fChain->SetBranchAddress("EF_j40_fj40_a4_EFFS", &EF_j40_fj40_a4_EFFS, &b_EF_j40_fj40_a4_EFFS);
-   fChain->SetBranchAddress("EF_j50_larcalib", &EF_j50_larcalib, &b_EF_j50_larcalib);
-   fChain->SetBranchAddress("EF_j55_a4_EFFS", &EF_j55_a4_EFFS, &b_EF_j55_a4_EFFS);
-   fChain->SetBranchAddress("EF_j55_fj55_a4_EFFS", &EF_j55_fj55_a4_EFFS, &b_EF_j55_fj55_a4_EFFS);
-   fChain->SetBranchAddress("EF_j75_a4_EFFS", &EF_j75_a4_EFFS, &b_EF_j75_a4_EFFS);
-   fChain->SetBranchAddress("EF_j75_a4_EFFS_jetNoEF_EFxe25_noMu", &EF_j75_a4_EFFS_jetNoEF_EFxe25_noMu, &b_EF_j75_a4_EFFS_jetNoEF_EFxe25_noMu);
-   fChain->SetBranchAddress("EF_j75_a4_EFFS_xe40_loose_noMu", &EF_j75_a4_EFFS_xe40_loose_noMu, &b_EF_j75_a4_EFFS_xe40_loose_noMu);
-   fChain->SetBranchAddress("EF_j75_a4_EFFS_xe45_loose_noMu", &EF_j75_a4_EFFS_xe45_loose_noMu, &b_EF_j75_a4_EFFS_xe45_loose_noMu);
-   fChain->SetBranchAddress("EF_j75_a4_EFFS_xe55_loose_noMu", &EF_j75_a4_EFFS_xe55_loose_noMu, &b_EF_j75_a4_EFFS_xe55_loose_noMu);
-   fChain->SetBranchAddress("EF_j75_fj75_a4_EFFS", &EF_j75_fj75_a4_EFFS, &b_EF_j75_fj75_a4_EFFS);
-   fChain->SetBranchAddress("EF_j75_j30_a4_EFFS_L2anymct150", &EF_j75_j30_a4_EFFS_L2anymct150, &b_EF_j75_j30_a4_EFFS_L2anymct150);
-   fChain->SetBranchAddress("EF_j75_j30_a4_EFFS_L2anymct175", &EF_j75_j30_a4_EFFS_L2anymct175, &b_EF_j75_j30_a4_EFFS_L2anymct175);
-   fChain->SetBranchAddress("EF_j95_larcalib", &EF_j95_larcalib, &b_EF_j95_larcalib);
-   fChain->SetBranchAddress("EF_mu0_empty_NoAlg", &EF_mu0_empty_NoAlg, &b_EF_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("EF_mu0_firstempty_NoAlg", &EF_mu0_firstempty_NoAlg, &b_EF_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("EF_mu0_unpaired_iso_NoAlg", &EF_mu0_unpaired_iso_NoAlg, &b_EF_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("EF_j30_a4tc_EFFS_l2cleanph", &EF_j30_a4tc_EFFS_l2cleanph, &b_EF_j30_a4tc_EFFS_l2cleanph);
+   fChain->SetBranchAddress("EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_empty", &EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_empty, &b_EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_empty);
+   fChain->SetBranchAddress("EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_firstempty", &EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_firstempty, &b_EF_j30_eta13_a4tc_EFFS_EFxe30_noMu_firstempty);
+   fChain->SetBranchAddress("EF_j30_fj30_a4tc_EFFS", &EF_j30_fj30_a4tc_EFFS, &b_EF_j30_fj30_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j320_a10tc_EFFS", &EF_j320_a10tc_EFFS, &b_EF_j320_a10tc_EFFS);
+   fChain->SetBranchAddress("EF_j320_a4tc_EFFS", &EF_j320_a4tc_EFFS, &b_EF_j320_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk", &EF_j35_a4tc_EFFS_L1TAU_HVtrk, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk_LOF", &EF_j35_a4tc_EFFS_L1TAU_HVtrk_LOF, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_LOF);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk_cosmic", &EF_j35_a4tc_EFFS_L1TAU_HVtrk_cosmic, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_cosmic);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk_firstempty", &EF_j35_a4tc_EFFS_L1TAU_HVtrk_firstempty, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_firstempty);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_iso", &EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_iso, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_iso);
+   fChain->SetBranchAddress("EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_noniso", &EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_noniso, &b_EF_j35_a4tc_EFFS_L1TAU_HVtrk_unpaired_noniso);
+   fChain->SetBranchAddress("EF_j40_a4tc_EFFS", &EF_j40_a4tc_EFFS, &b_EF_j40_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j40_fj40_a4tc_EFFS", &EF_j40_fj40_a4tc_EFFS, &b_EF_j40_fj40_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j425_a10tc_EFFS", &EF_j425_a10tc_EFFS, &b_EF_j425_a10tc_EFFS);
+   fChain->SetBranchAddress("EF_j425_a4tc_EFFS", &EF_j425_a4tc_EFFS, &b_EF_j425_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_empty", &EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_empty, &b_EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_empty);
+   fChain->SetBranchAddress("EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_firstempty", &EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_firstempty, &b_EF_j50_eta13_a4tc_EFFS_EFxe50_noMu_firstempty);
+   fChain->SetBranchAddress("EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_empty", &EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_empty, &b_EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_empty);
+   fChain->SetBranchAddress("EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_firstempty", &EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_firstempty, &b_EF_j50_eta25_a4tc_EFFS_EFxe50_noMu_firstempty);
+   fChain->SetBranchAddress("EF_j55_a4tc_EFFS", &EF_j55_a4tc_EFFS, &b_EF_j55_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10", &EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10, &b_EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10);
+   fChain->SetBranchAddress("EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10_l2cleancons", &EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10_l2cleancons, &b_EF_j55_a4tc_EFFS_xe55_medium_noMu_dphi2j30xe10_l2cleancons);
+   fChain->SetBranchAddress("EF_j55_fj55_a4tc_EFFS", &EF_j55_fj55_a4tc_EFFS, &b_EF_j55_fj55_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j65_a4tc_EFFS_xe65_noMu_dphi2j30xe10", &EF_j65_a4tc_EFFS_xe65_noMu_dphi2j30xe10, &b_EF_j65_a4tc_EFFS_xe65_noMu_dphi2j30xe10);
+   fChain->SetBranchAddress("EF_j70_a4tc_EFFS_xe70_noMu_dphi2j30xe10", &EF_j70_a4tc_EFFS_xe70_noMu_dphi2j30xe10, &b_EF_j70_a4tc_EFFS_xe70_noMu_dphi2j30xe10);
+   fChain->SetBranchAddress("EF_j75_2j30_a4tc_EFFS_ht350", &EF_j75_2j30_a4tc_EFFS_ht350, &b_EF_j75_2j30_a4tc_EFFS_ht350);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS", &EF_j75_a4tc_EFFS, &b_EF_j75_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS_xe40_loose_noMu", &EF_j75_a4tc_EFFS_xe40_loose_noMu, &b_EF_j75_a4tc_EFFS_xe40_loose_noMu);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS_xe45_loose_noMu", &EF_j75_a4tc_EFFS_xe45_loose_noMu, &b_EF_j75_a4tc_EFFS_xe45_loose_noMu);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS_xe55_loose_noMu", &EF_j75_a4tc_EFFS_xe55_loose_noMu, &b_EF_j75_a4tc_EFFS_xe55_loose_noMu);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS_xe55_noMu", &EF_j75_a4tc_EFFS_xe55_noMu, &b_EF_j75_a4tc_EFFS_xe55_noMu);
+   fChain->SetBranchAddress("EF_j75_a4tc_EFFS_xe55_noMu_l2cleancons", &EF_j75_a4tc_EFFS_xe55_noMu_l2cleancons, &b_EF_j75_a4tc_EFFS_xe55_noMu_l2cleancons);
+   fChain->SetBranchAddress("EF_j75_fj75_a4tc_EFFS", &EF_j75_fj75_a4tc_EFFS, &b_EF_j75_fj75_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_j75_j30_a4tc_EFFS_anymct150", &EF_j75_j30_a4tc_EFFS_anymct150, &b_EF_j75_j30_a4tc_EFFS_anymct150);
+   fChain->SetBranchAddress("EF_j75_j30_a4tc_EFFS_anymct175", &EF_j75_j30_a4tc_EFFS_anymct175, &b_EF_j75_j30_a4tc_EFFS_anymct175);
+   fChain->SetBranchAddress("EF_j80_a4tc_EFFS_xe60_noMu", &EF_j80_a4tc_EFFS_xe60_noMu, &b_EF_j80_a4tc_EFFS_xe60_noMu);
    fChain->SetBranchAddress("EF_mu10", &EF_mu10, &b_EF_mu10);
    fChain->SetBranchAddress("EF_mu10_Jpsimumu", &EF_mu10_Jpsimumu, &b_EF_mu10_Jpsimumu);
-   fChain->SetBranchAddress("EF_mu10_NL", &EF_mu10_NL, &b_EF_mu10_NL);
    fChain->SetBranchAddress("EF_mu10_Upsimumu_FS", &EF_mu10_Upsimumu_FS, &b_EF_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("EF_mu10_Upsimumu_tight_FS", &EF_mu10_Upsimumu_tight_FS, &b_EF_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("EF_mu10_loose", &EF_mu10_loose, &b_EF_mu10_loose);
    fChain->SetBranchAddress("EF_mu10_muCombTag_NoEF", &EF_mu10_muCombTag_NoEF, &b_EF_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("EF_mu11_empty_NoAlg", &EF_mu11_empty_NoAlg, &b_EF_mu11_empty_NoAlg);
@@ -12700,164 +15053,302 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("EF_mu13_MG", &EF_mu13_MG, &b_EF_mu13_MG);
    fChain->SetBranchAddress("EF_mu13_muCombTag_NoEF", &EF_mu13_muCombTag_NoEF, &b_EF_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("EF_mu15", &EF_mu15, &b_EF_mu15);
+   fChain->SetBranchAddress("EF_mu15_2mu4_EFFS_medium", &EF_mu15_2mu4_EFFS_medium, &b_EF_mu15_2mu4_EFFS_medium);
    fChain->SetBranchAddress("EF_mu15_mu10_EFFS", &EF_mu15_mu10_EFFS, &b_EF_mu15_mu10_EFFS);
+   fChain->SetBranchAddress("EF_mu15_mu10_EFFS_medium", &EF_mu15_mu10_EFFS_medium, &b_EF_mu15_mu10_EFFS_medium);
+   fChain->SetBranchAddress("EF_mu15_mu10_EFFS_tight", &EF_mu15_mu10_EFFS_tight, &b_EF_mu15_mu10_EFFS_tight);
+   fChain->SetBranchAddress("EF_mu15_xe30_noMu", &EF_mu15_xe30_noMu, &b_EF_mu15_xe30_noMu);
    fChain->SetBranchAddress("EF_mu15i", &EF_mu15i, &b_EF_mu15i);
+   fChain->SetBranchAddress("EF_mu15i_medium", &EF_mu15i_medium, &b_EF_mu15i_medium);
    fChain->SetBranchAddress("EF_mu18", &EF_mu18, &b_EF_mu18);
+   fChain->SetBranchAddress("EF_mu18_L1J10", &EF_mu18_L1J10, &b_EF_mu18_L1J10);
    fChain->SetBranchAddress("EF_mu18_MG", &EF_mu18_MG, &b_EF_mu18_MG);
+   fChain->SetBranchAddress("EF_mu18_MG_L1J10", &EF_mu18_MG_L1J10, &b_EF_mu18_MG_L1J10);
+   fChain->SetBranchAddress("EF_mu18_MG_medium", &EF_mu18_MG_medium, &b_EF_mu18_MG_medium);
+   fChain->SetBranchAddress("EF_mu18_medium", &EF_mu18_medium, &b_EF_mu18_medium);
+   fChain->SetBranchAddress("EF_mu18_medium_2j20_a4tc_EFFS", &EF_mu18_medium_2j20_a4tc_EFFS, &b_EF_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_mu18_medium_3j20_a4tc_EFFS", &EF_mu18_medium_3j20_a4tc_EFFS, &b_EF_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_mu18_medium_4j15_a4tc_EFFS", &EF_mu18_medium_4j15_a4tc_EFFS, &b_EF_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_mu18_medium_4j20_a4tc_EFFS", &EF_mu18_medium_4j20_a4tc_EFFS, &b_EF_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_mu18i3_medium", &EF_mu18i3_medium, &b_EF_mu18i3_medium);
+   fChain->SetBranchAddress("EF_mu18i4_medium", &EF_mu18i4_medium, &b_EF_mu18i4_medium);
    fChain->SetBranchAddress("EF_mu20", &EF_mu20, &b_EF_mu20);
    fChain->SetBranchAddress("EF_mu20_IDTrkNoCut", &EF_mu20_IDTrkNoCut, &b_EF_mu20_IDTrkNoCut);
+   fChain->SetBranchAddress("EF_mu20_IDTrkNoCut_ManyVx", &EF_mu20_IDTrkNoCut_ManyVx, &b_EF_mu20_IDTrkNoCut_ManyVx);
    fChain->SetBranchAddress("EF_mu20_MG", &EF_mu20_MG, &b_EF_mu20_MG);
+   fChain->SetBranchAddress("EF_mu20_MG_medium", &EF_mu20_MG_medium, &b_EF_mu20_MG_medium);
    fChain->SetBranchAddress("EF_mu20_empty", &EF_mu20_empty, &b_EF_mu20_empty);
+   fChain->SetBranchAddress("EF_mu20_medium", &EF_mu20_medium, &b_EF_mu20_medium);
+   fChain->SetBranchAddress("EF_mu20_mu10_EFFS_tight", &EF_mu20_mu10_EFFS_tight, &b_EF_mu20_mu10_EFFS_tight);
    fChain->SetBranchAddress("EF_mu20_muCombTag_NoEF", &EF_mu20_muCombTag_NoEF, &b_EF_mu20_muCombTag_NoEF);
    fChain->SetBranchAddress("EF_mu20i", &EF_mu20i, &b_EF_mu20i);
+   fChain->SetBranchAddress("EF_mu20i_medium", &EF_mu20i_medium, &b_EF_mu20i_medium);
    fChain->SetBranchAddress("EF_mu22", &EF_mu22, &b_EF_mu22);
    fChain->SetBranchAddress("EF_mu22_MG", &EF_mu22_MG, &b_EF_mu22_MG);
-   fChain->SetBranchAddress("EF_mu4", &EF_mu4, &b_EF_mu4);
+   fChain->SetBranchAddress("EF_mu22_MG_medium", &EF_mu22_MG_medium, &b_EF_mu22_MG_medium);
+   fChain->SetBranchAddress("EF_mu22_j30_a4tc_EFFS", &EF_mu22_j30_a4tc_EFFS, &b_EF_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("EF_mu22_medium", &EF_mu22_medium, &b_EF_mu22_medium);
+   fChain->SetBranchAddress("EF_mu22i1_medium", &EF_mu22i1_medium, &b_EF_mu22i1_medium);
+   fChain->SetBranchAddress("EF_mu22i2_medium", &EF_mu22i2_medium, &b_EF_mu22i2_medium);
+   fChain->SetBranchAddress("EF_mu22i3_medium", &EF_mu22i3_medium, &b_EF_mu22i3_medium);
+   fChain->SetBranchAddress("EF_mu22i4_medium", &EF_mu22i4_medium, &b_EF_mu22i4_medium);
+   fChain->SetBranchAddress("EF_mu24_MG_medium", &EF_mu24_MG_medium, &b_EF_mu24_MG_medium);
+   fChain->SetBranchAddress("EF_mu24_MG_tight", &EF_mu24_MG_tight, &b_EF_mu24_MG_tight);
+   fChain->SetBranchAddress("EF_mu24_medium", &EF_mu24_medium, &b_EF_mu24_medium);
+   fChain->SetBranchAddress("EF_mu24_tight", &EF_mu24_tight, &b_EF_mu24_tight);
+   fChain->SetBranchAddress("EF_mu30_MG_medium", &EF_mu30_MG_medium, &b_EF_mu30_MG_medium);
+   fChain->SetBranchAddress("EF_mu30_MG_tight", &EF_mu30_MG_tight, &b_EF_mu30_MG_tight);
+   fChain->SetBranchAddress("EF_mu30_medium", &EF_mu30_medium, &b_EF_mu30_medium);
+   fChain->SetBranchAddress("EF_mu30_tight", &EF_mu30_tight, &b_EF_mu30_tight);
    fChain->SetBranchAddress("EF_mu40_MSonly_barrel", &EF_mu40_MSonly_barrel, &b_EF_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("EF_mu40_MSonly_barrel_medium", &EF_mu40_MSonly_barrel_medium, &b_EF_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("EF_mu40_MSonly_empty", &EF_mu40_MSonly_empty, &b_EF_mu40_MSonly_empty);
    fChain->SetBranchAddress("EF_mu40_MSonly_tight", &EF_mu40_MSonly_tight, &b_EF_mu40_MSonly_tight);
+   fChain->SetBranchAddress("EF_mu40_MSonly_tight_L1MU11", &EF_mu40_MSonly_tight_L1MU11, &b_EF_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("EF_mu40_MSonly_tighter", &EF_mu40_MSonly_tighter, &b_EF_mu40_MSonly_tighter);
    fChain->SetBranchAddress("EF_mu40_slow", &EF_mu40_slow, &b_EF_mu40_slow);
    fChain->SetBranchAddress("EF_mu40_slow_empty", &EF_mu40_slow_empty, &b_EF_mu40_slow_empty);
+   fChain->SetBranchAddress("EF_mu40_slow_medium", &EF_mu40_slow_medium, &b_EF_mu40_slow_medium);
    fChain->SetBranchAddress("EF_mu40_slow_outOfTime", &EF_mu40_slow_outOfTime, &b_EF_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("EF_mu4_DiMu", &EF_mu4_DiMu, &b_EF_mu4_DiMu);
-   fChain->SetBranchAddress("EF_mu4_DiMu_FS_noOS", &EF_mu4_DiMu_FS_noOS, &b_EF_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("EF_mu4_Jpsimumu", &EF_mu4_Jpsimumu, &b_EF_mu4_Jpsimumu);
+   fChain->SetBranchAddress("EF_mu40_slow_outOfTime_medium", &EF_mu40_slow_outOfTime_medium, &b_EF_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("EF_mu4T", &EF_mu4T, &b_EF_mu4T);
+   fChain->SetBranchAddress("EF_mu4T_DiMu", &EF_mu4T_DiMu, &b_EF_mu4T_DiMu);
+   fChain->SetBranchAddress("EF_mu4T_DiMu_FS_noOS", &EF_mu4T_DiMu_FS_noOS, &b_EF_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("EF_mu4T_Jpsimumu", &EF_mu4T_Jpsimumu, &b_EF_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("EF_mu4T_Trk_Jpsi", &EF_mu4T_Trk_Jpsi, &b_EF_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("EF_mu4T_Trk_Upsi_FS", &EF_mu4T_Trk_Upsi_FS, &b_EF_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("EF_mu4T_Upsimumu_FS", &EF_mu4T_Upsimumu_FS, &b_EF_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("EF_mu4T_Upsimumu_SiTrk_FS", &EF_mu4T_Upsimumu_SiTrk_FS, &b_EF_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("EF_mu4T_Upsimumu_tight_FS", &EF_mu4T_Upsimumu_tight_FS, &b_EF_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu", &EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu, &b_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu);
+   fChain->SetBranchAddress("EF_mu4T_j45_a4tc_EFFS_xe55_noMu", &EF_mu4T_j45_a4tc_EFFS_xe55_noMu, &b_EF_mu4T_j45_a4tc_EFFS_xe55_noMu);
+   fChain->SetBranchAddress("EF_mu4Timu6i_DiMu_DY", &EF_mu4Timu6i_DiMu_DY, &b_EF_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("EF_mu4Timu6i_DiMu_DY14_noVtx_noOS", &EF_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("EF_mu4Tmu6_Bmumu", &EF_mu4Tmu6_Bmumu, &b_EF_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("EF_mu4Tmu6_Bmumux", &EF_mu4Tmu6_Bmumux, &b_EF_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("EF_mu4Tmu6_DiMu", &EF_mu4Tmu6_DiMu, &b_EF_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("EF_mu4Tmu6_DiMu_DY20", &EF_mu4Tmu6_DiMu_DY20, &b_EF_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("EF_mu4Tmu6_DiMu_noVtx_noOS", &EF_mu4Tmu6_DiMu_noVtx_noOS, &b_EF_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("EF_mu4Tmu6_Jpsimumu", &EF_mu4Tmu6_Jpsimumu, &b_EF_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("EF_mu4Tmu6_Jpsimumu_IDTrkNoCut", &EF_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("EF_mu4Tmu6_Upsimumu", &EF_mu4Tmu6_Upsimumu, &b_EF_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("EF_mu4_L1J10_matched", &EF_mu4_L1J10_matched, &b_EF_mu4_L1J10_matched);
    fChain->SetBranchAddress("EF_mu4_L1J15_matched", &EF_mu4_L1J15_matched, &b_EF_mu4_L1J15_matched);
+   fChain->SetBranchAddress("EF_mu4_L1J20_matched", &EF_mu4_L1J20_matched, &b_EF_mu4_L1J20_matched);
    fChain->SetBranchAddress("EF_mu4_L1J30_matched", &EF_mu4_L1J30_matched, &b_EF_mu4_L1J30_matched);
    fChain->SetBranchAddress("EF_mu4_L1J50_matched", &EF_mu4_L1J50_matched, &b_EF_mu4_L1J50_matched);
    fChain->SetBranchAddress("EF_mu4_L1J75_matched", &EF_mu4_L1J75_matched, &b_EF_mu4_L1J75_matched);
    fChain->SetBranchAddress("EF_mu4_L1MU11_MSonly_cosmic", &EF_mu4_L1MU11_MSonly_cosmic, &b_EF_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("EF_mu4_L1MU11_cosmic", &EF_mu4_L1MU11_cosmic, &b_EF_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("EF_mu4_MSonly_cosmic", &EF_mu4_MSonly_cosmic, &b_EF_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("EF_mu4_Trk_Jpsi", &EF_mu4_Trk_Jpsi, &b_EF_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("EF_mu4_Upsimumu_FS", &EF_mu4_Upsimumu_FS, &b_EF_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("EF_mu4_Upsimumu_SiTrk_FS", &EF_mu4_Upsimumu_SiTrk_FS, &b_EF_mu4_Upsimumu_SiTrk_FS);
    fChain->SetBranchAddress("EF_mu4_cosmic", &EF_mu4_cosmic, &b_EF_mu4_cosmic);
-   fChain->SetBranchAddress("EF_mu4_j10_a4_EFFS", &EF_mu4_j10_a4_EFFS, &b_EF_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("EF_mu4_empty_NoAlg", &EF_mu4_empty_NoAlg, &b_EF_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("EF_mu4_firstempty_NoAlg", &EF_mu4_firstempty_NoAlg, &b_EF_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("EF_mu4_j10_a4tc_EFFS_matched", &EF_mu4_j10_a4tc_EFFS_matched, &b_EF_mu4_j10_a4tc_EFFS_matched);
+   fChain->SetBranchAddress("EF_mu4_j135_a4tc_EFFS_L1matched", &EF_mu4_j135_a4tc_EFFS_L1matched, &b_EF_mu4_j135_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("EF_mu4_j180_a4tc_EFFS_L1matched", &EF_mu4_j180_a4tc_EFFS_L1matched, &b_EF_mu4_j180_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("EF_mu4_unpaired_iso_NoAlg", &EF_mu4_unpaired_iso_NoAlg, &b_EF_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("EF_mu6", &EF_mu6, &b_EF_mu6);
    fChain->SetBranchAddress("EF_mu6_DiMu_noOS", &EF_mu6_DiMu_noOS, &b_EF_mu6_DiMu_noOS);
    fChain->SetBranchAddress("EF_mu6_Jpsimumu", &EF_mu6_Jpsimumu, &b_EF_mu6_Jpsimumu);
    fChain->SetBranchAddress("EF_mu6_Jpsimumu_SiTrk", &EF_mu6_Jpsimumu_SiTrk, &b_EF_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("EF_mu6_Jpsimumu_tight", &EF_mu6_Jpsimumu_tight, &b_EF_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("EF_mu6_Trk_Jpsi_loose", &EF_mu6_Trk_Jpsi_loose, &b_EF_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("EF_tau100_medium", &EF_tau100_medium, &b_EF_tau100_medium);
+   fChain->SetBranchAddress("EF_tau125_IDTrkNoCut", &EF_tau125_IDTrkNoCut, &b_EF_tau125_IDTrkNoCut);
    fChain->SetBranchAddress("EF_tau125_medium", &EF_tau125_medium, &b_EF_tau125_medium);
-   fChain->SetBranchAddress("EF_tau16_IDTrkNoCut", &EF_tau16_IDTrkNoCut, &b_EF_tau16_IDTrkNoCut);
-   fChain->SetBranchAddress("EF_tau16_loose", &EF_tau16_loose, &b_EF_tau16_loose);
-   fChain->SetBranchAddress("EF_tau16_loose_e15_medium", &EF_tau16_loose_e15_medium, &b_EF_tau16_loose_e15_medium);
-   fChain->SetBranchAddress("EF_tau16_loose_e15_tight", &EF_tau16_loose_e15_tight, &b_EF_tau16_loose_e15_tight);
-   fChain->SetBranchAddress("EF_tau16_loose_mu10", &EF_tau16_loose_mu10, &b_EF_tau16_loose_mu10);
-   fChain->SetBranchAddress("EF_tau16_loose_mu15", &EF_tau16_loose_mu15, &b_EF_tau16_loose_mu15);
-   fChain->SetBranchAddress("EF_tau16_medium_mu10", &EF_tau16_medium_mu10, &b_EF_tau16_medium_mu10);
-   fChain->SetBranchAddress("EF_tau16_medium_xe22_noMu", &EF_tau16_medium_xe22_noMu, &b_EF_tau16_medium_xe22_noMu);
+   fChain->SetBranchAddress("EF_tau125_medium1", &EF_tau125_medium1, &b_EF_tau125_medium1);
+   fChain->SetBranchAddress("EF_tau20T_medium", &EF_tau20T_medium, &b_EF_tau20T_medium);
+   fChain->SetBranchAddress("EF_tau20T_medium2", &EF_tau20T_medium2, &b_EF_tau20T_medium2);
+   fChain->SetBranchAddress("EF_tau20T_medium_e15vh_medium", &EF_tau20T_medium_e15vh_medium, &b_EF_tau20T_medium_e15vh_medium);
+   fChain->SetBranchAddress("EF_tau20T_medium_mu15", &EF_tau20T_medium_mu15, &b_EF_tau20T_medium_mu15);
+   fChain->SetBranchAddress("EF_tau20_medium", &EF_tau20_medium, &b_EF_tau20_medium);
    fChain->SetBranchAddress("EF_tau20_medium1", &EF_tau20_medium1, &b_EF_tau20_medium1);
+   fChain->SetBranchAddress("EF_tau20_medium_e15vh_medium", &EF_tau20_medium_e15vh_medium, &b_EF_tau20_medium_e15vh_medium);
+   fChain->SetBranchAddress("EF_tau20_medium_mu15", &EF_tau20_medium_mu15, &b_EF_tau20_medium_mu15);
+   fChain->SetBranchAddress("EF_tau20i_medium", &EF_tau20i_medium, &b_EF_tau20i_medium);
+   fChain->SetBranchAddress("EF_tau20i_medium1", &EF_tau20i_medium1, &b_EF_tau20i_medium1);
+   fChain->SetBranchAddress("EF_tau20i_medium_e15vh_medium", &EF_tau20i_medium_e15vh_medium, &b_EF_tau20i_medium_e15vh_medium);
+   fChain->SetBranchAddress("EF_tau20i_medium_mu15", &EF_tau20i_medium_mu15, &b_EF_tau20i_medium_mu15);
+   fChain->SetBranchAddress("EF_tau20v_medium_e15vh_medium", &EF_tau20v_medium_e15vh_medium, &b_EF_tau20v_medium_e15vh_medium);
+   fChain->SetBranchAddress("EF_tau29T_medium", &EF_tau29T_medium, &b_EF_tau29T_medium);
+   fChain->SetBranchAddress("EF_tau29T_medium1_1P", &EF_tau29T_medium1_1P, &b_EF_tau29T_medium1_1P);
+   fChain->SetBranchAddress("EF_tau29T_medium1_1P_tau20T_medium2", &EF_tau29T_medium1_1P_tau20T_medium2, &b_EF_tau29T_medium1_1P_tau20T_medium2);
+   fChain->SetBranchAddress("EF_tau29T_medium1_tau20T_medium1", &EF_tau29T_medium1_tau20T_medium1, &b_EF_tau29T_medium1_tau20T_medium1);
+   fChain->SetBranchAddress("EF_tau29T_medium1_xe35_noMu_3L1J10", &EF_tau29T_medium1_xe35_noMu_3L1J10, &b_EF_tau29T_medium1_xe35_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29T_medium1_xs45_loose_noMu_3L1J10", &EF_tau29T_medium1_xs45_loose_noMu_3L1J10, &b_EF_tau29T_medium1_xs45_loose_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29T_medium1_xs45_noMu_3L1J10", &EF_tau29T_medium1_xs45_noMu_3L1J10, &b_EF_tau29T_medium1_xs45_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29T_medium2", &EF_tau29T_medium2, &b_EF_tau29T_medium2);
+   fChain->SetBranchAddress("EF_tau29T_medium2_tau20T_medium2", &EF_tau29T_medium2_tau20T_medium2, &b_EF_tau29T_medium2_tau20T_medium2);
+   fChain->SetBranchAddress("EF_tau29T_medium_xe35_noMu_3L1J10", &EF_tau29T_medium_xe35_noMu_3L1J10, &b_EF_tau29T_medium_xe35_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29T_medium_xs45_noMu_3L1J10", &EF_tau29T_medium_xs45_noMu_3L1J10, &b_EF_tau29T_medium_xs45_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29T_medium_xs75_loose_noMu", &EF_tau29T_medium_xs75_loose_noMu, &b_EF_tau29T_medium_xs75_loose_noMu);
+   fChain->SetBranchAddress("EF_tau29T_medium_xs75_noMu", &EF_tau29T_medium_xs75_noMu, &b_EF_tau29T_medium_xs75_noMu);
+   fChain->SetBranchAddress("EF_tau29Ti_medium1_1P_tau20Ti_medium2", &EF_tau29Ti_medium1_1P_tau20Ti_medium2, &b_EF_tau29Ti_medium1_1P_tau20Ti_medium2);
+   fChain->SetBranchAddress("EF_tau29Ti_medium1_tau20Ti_medium1", &EF_tau29Ti_medium1_tau20Ti_medium1, &b_EF_tau29Ti_medium1_tau20Ti_medium1);
+   fChain->SetBranchAddress("EF_tau29Ti_medium1_tau20i_medium1", &EF_tau29Ti_medium1_tau20i_medium1, &b_EF_tau29Ti_medium1_tau20i_medium1);
+   fChain->SetBranchAddress("EF_tau29Ti_medium2_tau20Ti_medium2", &EF_tau29Ti_medium2_tau20Ti_medium2, &b_EF_tau29Ti_medium2_tau20Ti_medium2);
+   fChain->SetBranchAddress("EF_tau29_IDTrkNoCut", &EF_tau29_IDTrkNoCut, &b_EF_tau29_IDTrkNoCut);
    fChain->SetBranchAddress("EF_tau29_loose", &EF_tau29_loose, &b_EF_tau29_loose);
+   fChain->SetBranchAddress("EF_tau29_loose1", &EF_tau29_loose1, &b_EF_tau29_loose1);
+   fChain->SetBranchAddress("EF_tau29_loose1_xs45_loose_noMu_3L1J10", &EF_tau29_loose1_xs45_loose_noMu_3L1J10, &b_EF_tau29_loose1_xs45_loose_noMu_3L1J10);
+   fChain->SetBranchAddress("EF_tau29_loose_xs45_loose_noMu_3L1J10", &EF_tau29_loose_xs45_loose_noMu_3L1J10, &b_EF_tau29_loose_xs45_loose_noMu_3L1J10);
    fChain->SetBranchAddress("EF_tau29_medium", &EF_tau29_medium, &b_EF_tau29_medium);
    fChain->SetBranchAddress("EF_tau29_medium1", &EF_tau29_medium1, &b_EF_tau29_medium1);
    fChain->SetBranchAddress("EF_tau29_medium1_tau20_medium1", &EF_tau29_medium1_tau20_medium1, &b_EF_tau29_medium1_tau20_medium1);
+   fChain->SetBranchAddress("EF_tau29_medium1_xs45_loose_noMu_3L1J10", &EF_tau29_medium1_xs45_loose_noMu_3L1J10, &b_EF_tau29_medium1_xs45_loose_noMu_3L1J10);
    fChain->SetBranchAddress("EF_tau29_medium_xe35_noMu", &EF_tau29_medium_xe35_noMu, &b_EF_tau29_medium_xe35_noMu);
    fChain->SetBranchAddress("EF_tau29_medium_xe40_loose_noMu", &EF_tau29_medium_xe40_loose_noMu, &b_EF_tau29_medium_xe40_loose_noMu);
-   fChain->SetBranchAddress("EF_tau50_IDTrkNoCut", &EF_tau50_IDTrkNoCut, &b_EF_tau50_IDTrkNoCut);
-   fChain->SetBranchAddress("EF_tau50_medium", &EF_tau50_medium, &b_EF_tau50_medium);
-   fChain->SetBranchAddress("EF_tau84_loose", &EF_tau84_loose, &b_EF_tau84_loose);
+   fChain->SetBranchAddress("EF_tau29i_medium", &EF_tau29i_medium, &b_EF_tau29i_medium);
+   fChain->SetBranchAddress("EF_tau29i_medium1", &EF_tau29i_medium1, &b_EF_tau29i_medium1);
+   fChain->SetBranchAddress("EF_tau50_medium_e15vh_medium", &EF_tau50_medium_e15vh_medium, &b_EF_tau50_medium_e15vh_medium);
    fChain->SetBranchAddress("EF_tauNoCut", &EF_tauNoCut, &b_EF_tauNoCut);
    fChain->SetBranchAddress("EF_tauNoCut_L1TAU50", &EF_tauNoCut_L1TAU50, &b_EF_tauNoCut_L1TAU50);
    fChain->SetBranchAddress("EF_tauNoCut_cosmic", &EF_tauNoCut_cosmic, &b_EF_tauNoCut_cosmic);
+   fChain->SetBranchAddress("EF_xe100_noMu", &EF_xe100_noMu, &b_EF_xe100_noMu);
+   fChain->SetBranchAddress("EF_xe100_tight_noMu", &EF_xe100_tight_noMu, &b_EF_xe100_tight_noMu);
+   fChain->SetBranchAddress("EF_xe110_noMu", &EF_xe110_noMu, &b_EF_xe110_noMu);
    fChain->SetBranchAddress("EF_xe20_noMu", &EF_xe20_noMu, &b_EF_xe20_noMu);
    fChain->SetBranchAddress("EF_xe30_noMu", &EF_xe30_noMu, &b_EF_xe30_noMu);
    fChain->SetBranchAddress("EF_xe40_noMu", &EF_xe40_noMu, &b_EF_xe40_noMu);
    fChain->SetBranchAddress("EF_xe50_noMu", &EF_xe50_noMu, &b_EF_xe50_noMu);
+   fChain->SetBranchAddress("EF_xe60_L2FEB_val", &EF_xe60_L2FEB_val, &b_EF_xe60_L2FEB_val);
+   fChain->SetBranchAddress("EF_xe60_L2FEB_val_NoAlg", &EF_xe60_L2FEB_val_NoAlg, &b_EF_xe60_L2FEB_val_NoAlg);
    fChain->SetBranchAddress("EF_xe60_noMu", &EF_xe60_noMu, &b_EF_xe60_noMu);
+   fChain->SetBranchAddress("EF_xe60_tight_L2FEB_val", &EF_xe60_tight_L2FEB_val, &b_EF_xe60_tight_L2FEB_val);
+   fChain->SetBranchAddress("EF_xe60_tight_noMu", &EF_xe60_tight_noMu, &b_EF_xe60_tight_noMu);
+   fChain->SetBranchAddress("EF_xe60_verytight_noMu", &EF_xe60_verytight_noMu, &b_EF_xe60_verytight_noMu);
    fChain->SetBranchAddress("EF_xe70_noMu", &EF_xe70_noMu, &b_EF_xe70_noMu);
+   fChain->SetBranchAddress("EF_xe70_tight_noMu", &EF_xe70_tight_noMu, &b_EF_xe70_tight_noMu);
+   fChain->SetBranchAddress("EF_xe80_L2FEB_val", &EF_xe80_L2FEB_val, &b_EF_xe80_L2FEB_val);
+   fChain->SetBranchAddress("EF_xe80_L2FEB_val_NoAlg", &EF_xe80_L2FEB_val_NoAlg, &b_EF_xe80_L2FEB_val_NoAlg);
    fChain->SetBranchAddress("EF_xe80_noMu", &EF_xe80_noMu, &b_EF_xe80_noMu);
+   fChain->SetBranchAddress("EF_xe80_tight_noMu", &EF_xe80_tight_noMu, &b_EF_xe80_tight_noMu);
    fChain->SetBranchAddress("EF_xe90_noMu", &EF_xe90_noMu, &b_EF_xe90_noMu);
-   fChain->SetBranchAddress("L1_2EM10", &L1_2EM10, &b_L1_2EM10);
-   fChain->SetBranchAddress("L1_2EM14", &L1_2EM14, &b_L1_2EM14);
+   fChain->SetBranchAddress("EF_xe90_tight_noMu", &EF_xe90_tight_noMu, &b_EF_xe90_tight_noMu);
+   fChain->SetBranchAddress("L1_2EM10VH", &L1_2EM10VH, &b_L1_2EM10VH);
+   fChain->SetBranchAddress("L1_2EM12", &L1_2EM12, &b_L1_2EM12);
    fChain->SetBranchAddress("L1_2EM3", &L1_2EM3, &b_L1_2EM3);
+   fChain->SetBranchAddress("L1_2EM3_EM12", &L1_2EM3_EM12, &b_L1_2EM3_EM12);
    fChain->SetBranchAddress("L1_2EM3_EM7", &L1_2EM3_EM7, &b_L1_2EM3_EM7);
-   fChain->SetBranchAddress("L1_2EM3_NL", &L1_2EM3_NL, &b_L1_2EM3_NL);
    fChain->SetBranchAddress("L1_2EM5", &L1_2EM5, &b_L1_2EM5);
+   fChain->SetBranchAddress("L1_2EM5_EM16VH", &L1_2EM5_EM16VH, &b_L1_2EM5_EM16VH);
    fChain->SetBranchAddress("L1_2EM5_MU6", &L1_2EM5_MU6, &b_L1_2EM5_MU6);
    fChain->SetBranchAddress("L1_2EM7", &L1_2EM7, &b_L1_2EM7);
-   fChain->SetBranchAddress("L1_2MU0", &L1_2MU0, &b_L1_2MU0);
-   fChain->SetBranchAddress("L1_2MU0_EMPTY", &L1_2MU0_EMPTY, &b_L1_2MU0_EMPTY);
-   fChain->SetBranchAddress("L1_2MU0_FIRSTEMPTY", &L1_2MU0_FIRSTEMPTY, &b_L1_2MU0_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_2MU0_MU6", &L1_2MU0_MU6, &b_L1_2MU0_MU6);
-   fChain->SetBranchAddress("L1_2MU0_NL", &L1_2MU0_NL, &b_L1_2MU0_NL);
+   fChain->SetBranchAddress("L1_2J20_XE20", &L1_2J20_XE20, &b_L1_2J20_XE20);
+   fChain->SetBranchAddress("L1_2J30_XE20", &L1_2J30_XE20, &b_L1_2J30_XE20);
    fChain->SetBranchAddress("L1_2MU10", &L1_2MU10, &b_L1_2MU10);
+   fChain->SetBranchAddress("L1_2MU4", &L1_2MU4, &b_L1_2MU4);
+   fChain->SetBranchAddress("L1_2MU4_EMPTY", &L1_2MU4_EMPTY, &b_L1_2MU4_EMPTY);
+   fChain->SetBranchAddress("L1_2MU4_FIRSTEMPTY", &L1_2MU4_FIRSTEMPTY, &b_L1_2MU4_FIRSTEMPTY);
+   fChain->SetBranchAddress("L1_2MU4_MU6", &L1_2MU4_MU6, &b_L1_2MU4_MU6);
    fChain->SetBranchAddress("L1_2MU6", &L1_2MU6, &b_L1_2MU6);
    fChain->SetBranchAddress("L1_2MU6_EMPTY", &L1_2MU6_EMPTY, &b_L1_2MU6_EMPTY);
    fChain->SetBranchAddress("L1_2MU6_FIRSTEMPTY", &L1_2MU6_FIRSTEMPTY, &b_L1_2MU6_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_2MU6_UNPAIRED", &L1_2MU6_UNPAIRED, &b_L1_2MU6_UNPAIRED);
+   fChain->SetBranchAddress("L1_2MU6_UNPAIRED_ISO", &L1_2MU6_UNPAIRED_ISO, &b_L1_2MU6_UNPAIRED_ISO);
+   fChain->SetBranchAddress("L1_2MU6_UNPAIRED_NONISO", &L1_2MU6_UNPAIRED_NONISO, &b_L1_2MU6_UNPAIRED_NONISO);
    fChain->SetBranchAddress("L1_2TAU11", &L1_2TAU11, &b_L1_2TAU11);
-   fChain->SetBranchAddress("L1_2TAU6", &L1_2TAU6, &b_L1_2TAU6);
-   fChain->SetBranchAddress("L1_2TAU6_EM10", &L1_2TAU6_EM10, &b_L1_2TAU6_EM10);
+   fChain->SetBranchAddress("L1_2TAU11I", &L1_2TAU11I, &b_L1_2TAU11I);
+   fChain->SetBranchAddress("L1_2TAU11I_TAU15", &L1_2TAU11I_TAU15, &b_L1_2TAU11I_TAU15);
+   fChain->SetBranchAddress("L1_2TAU11_EM10VH", &L1_2TAU11_EM10VH, &b_L1_2TAU11_EM10VH);
+   fChain->SetBranchAddress("L1_2TAU11_TAU15", &L1_2TAU11_TAU15, &b_L1_2TAU11_TAU15);
+   fChain->SetBranchAddress("L1_2TAU15", &L1_2TAU15, &b_L1_2TAU15);
+   fChain->SetBranchAddress("L1_2TAU8I_EM10VH", &L1_2TAU8I_EM10VH, &b_L1_2TAU8I_EM10VH);
+   fChain->SetBranchAddress("L1_2TAU8I_TAU11", &L1_2TAU8I_TAU11, &b_L1_2TAU8I_TAU11);
+   fChain->SetBranchAddress("L1_2TAU8I_TAU15", &L1_2TAU8I_TAU15, &b_L1_2TAU8I_TAU15);
+   fChain->SetBranchAddress("L1_2TAU8V_EM10VH", &L1_2TAU8V_EM10VH, &b_L1_2TAU8V_EM10VH);
+   fChain->SetBranchAddress("L1_2TAU8_EM10VH", &L1_2TAU8_EM10VH, &b_L1_2TAU8_EM10VH);
    fChain->SetBranchAddress("L1_2TAU8_TAU11", &L1_2TAU8_TAU11, &b_L1_2TAU8_TAU11);
-   fChain->SetBranchAddress("L1_EM10", &L1_EM10, &b_L1_EM10);
-   fChain->SetBranchAddress("L1_EM10_MU6", &L1_EM10_MU6, &b_L1_EM10_MU6);
-   fChain->SetBranchAddress("L1_EM10_NL", &L1_EM10_NL, &b_L1_EM10_NL);
-   fChain->SetBranchAddress("L1_EM10_XE20", &L1_EM10_XE20, &b_L1_EM10_XE20);
+   fChain->SetBranchAddress("L1_EM10VH", &L1_EM10VH, &b_L1_EM10VH);
+   fChain->SetBranchAddress("L1_EM10VH_MU6", &L1_EM10VH_MU6, &b_L1_EM10VH_MU6);
+   fChain->SetBranchAddress("L1_EM10VH_XE20", &L1_EM10VH_XE20, &b_L1_EM10VH_XE20);
+   fChain->SetBranchAddress("L1_EM10VH_XE30", &L1_EM10VH_XE30, &b_L1_EM10VH_XE30);
+   fChain->SetBranchAddress("L1_EM10VH_XE35", &L1_EM10VH_XE35, &b_L1_EM10VH_XE35);
    fChain->SetBranchAddress("L1_EM12", &L1_EM12, &b_L1_EM12);
-   fChain->SetBranchAddress("L1_EM14", &L1_EM14, &b_L1_EM14);
-   fChain->SetBranchAddress("L1_EM14_XE10", &L1_EM14_XE10, &b_L1_EM14_XE10);
-   fChain->SetBranchAddress("L1_EM14_XE20", &L1_EM14_XE20, &b_L1_EM14_XE20);
-   fChain->SetBranchAddress("L1_EM16", &L1_EM16, &b_L1_EM16);
+   fChain->SetBranchAddress("L1_EM12_3J10", &L1_EM12_3J10, &b_L1_EM12_3J10);
+   fChain->SetBranchAddress("L1_EM12_4J10", &L1_EM12_4J10, &b_L1_EM12_4J10);
+   fChain->SetBranchAddress("L1_EM12_XE20", &L1_EM12_XE20, &b_L1_EM12_XE20);
+   fChain->SetBranchAddress("L1_EM12_XE30", &L1_EM12_XE30, &b_L1_EM12_XE30);
+   fChain->SetBranchAddress("L1_EM12_XS30", &L1_EM12_XS30, &b_L1_EM12_XS30);
+   fChain->SetBranchAddress("L1_EM12_XS45", &L1_EM12_XS45, &b_L1_EM12_XS45);
+   fChain->SetBranchAddress("L1_EM16VH", &L1_EM16VH, &b_L1_EM16VH);
+   fChain->SetBranchAddress("L1_EM18VH", &L1_EM18VH, &b_L1_EM18VH);
    fChain->SetBranchAddress("L1_EM3", &L1_EM3, &b_L1_EM3);
    fChain->SetBranchAddress("L1_EM30", &L1_EM30, &b_L1_EM30);
    fChain->SetBranchAddress("L1_EM3_EMPTY", &L1_EM3_EMPTY, &b_L1_EM3_EMPTY);
    fChain->SetBranchAddress("L1_EM3_FIRSTEMPTY", &L1_EM3_FIRSTEMPTY, &b_L1_EM3_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_EM3_MU0", &L1_EM3_MU0, &b_L1_EM3_MU0);
    fChain->SetBranchAddress("L1_EM3_MU6", &L1_EM3_MU6, &b_L1_EM3_MU6);
    fChain->SetBranchAddress("L1_EM3_UNPAIRED_ISO", &L1_EM3_UNPAIRED_ISO, &b_L1_EM3_UNPAIRED_ISO);
    fChain->SetBranchAddress("L1_EM3_UNPAIRED_NONISO", &L1_EM3_UNPAIRED_NONISO, &b_L1_EM3_UNPAIRED_NONISO);
    fChain->SetBranchAddress("L1_EM5", &L1_EM5, &b_L1_EM5);
    fChain->SetBranchAddress("L1_EM5_2MU6", &L1_EM5_2MU6, &b_L1_EM5_2MU6);
+   fChain->SetBranchAddress("L1_EM5_EMPTY", &L1_EM5_EMPTY, &b_L1_EM5_EMPTY);
    fChain->SetBranchAddress("L1_EM5_MU10", &L1_EM5_MU10, &b_L1_EM5_MU10);
    fChain->SetBranchAddress("L1_EM5_MU6", &L1_EM5_MU6, &b_L1_EM5_MU6);
    fChain->SetBranchAddress("L1_EM7", &L1_EM7, &b_L1_EM7);
+   fChain->SetBranchAddress("L1_EM7_XS30", &L1_EM7_XS30, &b_L1_EM7_XS30);
+   fChain->SetBranchAddress("L1_EM7_XS45", &L1_EM7_XS45, &b_L1_EM7_XS45);
+   fChain->SetBranchAddress("L1_J30_XE35", &L1_J30_XE35, &b_L1_J30_XE35);
+   fChain->SetBranchAddress("L1_J30_XE40", &L1_J30_XE40, &b_L1_J30_XE40);
    fChain->SetBranchAddress("L1_J50_XE20", &L1_J50_XE20, &b_L1_J50_XE20);
-   fChain->SetBranchAddress("L1_J50_XE25", &L1_J50_XE25, &b_L1_J50_XE25);
-   fChain->SetBranchAddress("L1_MU0", &L1_MU0, &b_L1_MU0);
-   fChain->SetBranchAddress("L1_MU0_EMPTY", &L1_MU0_EMPTY, &b_L1_MU0_EMPTY);
-   fChain->SetBranchAddress("L1_MU0_FIRSTEMPTY", &L1_MU0_FIRSTEMPTY, &b_L1_MU0_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_MU0_J10", &L1_MU0_J10, &b_L1_MU0_J10);
-   fChain->SetBranchAddress("L1_MU0_J15", &L1_MU0_J15, &b_L1_MU0_J15);
-   fChain->SetBranchAddress("L1_MU0_J15_EMPTY", &L1_MU0_J15_EMPTY, &b_L1_MU0_J15_EMPTY);
-   fChain->SetBranchAddress("L1_MU0_J15_FIRSTEMPTY", &L1_MU0_J15_FIRSTEMPTY, &b_L1_MU0_J15_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_MU0_J15_UNPAIRED", &L1_MU0_J15_UNPAIRED, &b_L1_MU0_J15_UNPAIRED);
-   fChain->SetBranchAddress("L1_MU0_J30", &L1_MU0_J30, &b_L1_MU0_J30);
-   fChain->SetBranchAddress("L1_MU0_J50", &L1_MU0_J50, &b_L1_MU0_J50);
-   fChain->SetBranchAddress("L1_MU0_J75", &L1_MU0_J75, &b_L1_MU0_J75);
-   fChain->SetBranchAddress("L1_MU0_UNPAIRED_ISO", &L1_MU0_UNPAIRED_ISO, &b_L1_MU0_UNPAIRED_ISO);
-   fChain->SetBranchAddress("L1_MU0_UNPAIRED_NONISO", &L1_MU0_UNPAIRED_NONISO, &b_L1_MU0_UNPAIRED_NONISO);
+   fChain->SetBranchAddress("L1_J50_XE30", &L1_J50_XE30, &b_L1_J50_XE30);
+   fChain->SetBranchAddress("L1_J50_XE35", &L1_J50_XE35, &b_L1_J50_XE35);
    fChain->SetBranchAddress("L1_MU10", &L1_MU10, &b_L1_MU10);
    fChain->SetBranchAddress("L1_MU10_EMPTY", &L1_MU10_EMPTY, &b_L1_MU10_EMPTY);
    fChain->SetBranchAddress("L1_MU10_FIRSTEMPTY", &L1_MU10_FIRSTEMPTY, &b_L1_MU10_FIRSTEMPTY);
    fChain->SetBranchAddress("L1_MU10_J10", &L1_MU10_J10, &b_L1_MU10_J10);
    fChain->SetBranchAddress("L1_MU10_UNPAIRED_ISO", &L1_MU10_UNPAIRED_ISO, &b_L1_MU10_UNPAIRED_ISO);
+   fChain->SetBranchAddress("L1_MU10_XE20", &L1_MU10_XE20, &b_L1_MU10_XE20);
+   fChain->SetBranchAddress("L1_MU10_XE25", &L1_MU10_XE25, &b_L1_MU10_XE25);
    fChain->SetBranchAddress("L1_MU11", &L1_MU11, &b_L1_MU11);
    fChain->SetBranchAddress("L1_MU11_EMPTY", &L1_MU11_EMPTY, &b_L1_MU11_EMPTY);
    fChain->SetBranchAddress("L1_MU15", &L1_MU15, &b_L1_MU15);
    fChain->SetBranchAddress("L1_MU20", &L1_MU20, &b_L1_MU20);
+   fChain->SetBranchAddress("L1_MU20_FIRSTEMPTY", &L1_MU20_FIRSTEMPTY, &b_L1_MU20_FIRSTEMPTY);
+   fChain->SetBranchAddress("L1_MU4", &L1_MU4, &b_L1_MU4);
+   fChain->SetBranchAddress("L1_MU4_EMPTY", &L1_MU4_EMPTY, &b_L1_MU4_EMPTY);
+   fChain->SetBranchAddress("L1_MU4_FIRSTEMPTY", &L1_MU4_FIRSTEMPTY, &b_L1_MU4_FIRSTEMPTY);
+   fChain->SetBranchAddress("L1_MU4_J10", &L1_MU4_J10, &b_L1_MU4_J10);
+   fChain->SetBranchAddress("L1_MU4_J15", &L1_MU4_J15, &b_L1_MU4_J15);
+   fChain->SetBranchAddress("L1_MU4_J15_EMPTY", &L1_MU4_J15_EMPTY, &b_L1_MU4_J15_EMPTY);
+   fChain->SetBranchAddress("L1_MU4_J15_FIRSTEMPTY", &L1_MU4_J15_FIRSTEMPTY, &b_L1_MU4_J15_FIRSTEMPTY);
+   fChain->SetBranchAddress("L1_MU4_J15_UNPAIRED_ISO", &L1_MU4_J15_UNPAIRED_ISO, &b_L1_MU4_J15_UNPAIRED_ISO);
+   fChain->SetBranchAddress("L1_MU4_J15_UNPAIRED_NONISO", &L1_MU4_J15_UNPAIRED_NONISO, &b_L1_MU4_J15_UNPAIRED_NONISO);
+   fChain->SetBranchAddress("L1_MU4_J20_XE20", &L1_MU4_J20_XE20, &b_L1_MU4_J20_XE20);
+   fChain->SetBranchAddress("L1_MU4_J20_XE35", &L1_MU4_J20_XE35, &b_L1_MU4_J20_XE35);
+   fChain->SetBranchAddress("L1_MU4_J30", &L1_MU4_J30, &b_L1_MU4_J30);
+   fChain->SetBranchAddress("L1_MU4_J50", &L1_MU4_J50, &b_L1_MU4_J50);
+   fChain->SetBranchAddress("L1_MU4_J75", &L1_MU4_J75, &b_L1_MU4_J75);
+   fChain->SetBranchAddress("L1_MU4_UNPAIRED_ISO", &L1_MU4_UNPAIRED_ISO, &b_L1_MU4_UNPAIRED_ISO);
+   fChain->SetBranchAddress("L1_MU4_UNPAIRED_NONISO", &L1_MU4_UNPAIRED_NONISO, &b_L1_MU4_UNPAIRED_NONISO);
    fChain->SetBranchAddress("L1_MU6", &L1_MU6, &b_L1_MU6);
    fChain->SetBranchAddress("L1_MU6_FIRSTEMPTY", &L1_MU6_FIRSTEMPTY, &b_L1_MU6_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_MU6_NL", &L1_MU6_NL, &b_L1_MU6_NL);
+   fChain->SetBranchAddress("L1_MU6_J15", &L1_MU6_J15, &b_L1_MU6_J15);
    fChain->SetBranchAddress("L1_TAU11", &L1_TAU11, &b_L1_TAU11);
+   fChain->SetBranchAddress("L1_TAU11I", &L1_TAU11I, &b_L1_TAU11I);
+   fChain->SetBranchAddress("L1_TAU11_2J10_J20_XE20", &L1_TAU11_2J10_J20_XE20, &b_L1_TAU11_2J10_J20_XE20);
+   fChain->SetBranchAddress("L1_TAU11_MU10", &L1_TAU11_MU10, &b_L1_TAU11_MU10);
+   fChain->SetBranchAddress("L1_TAU11_XE10_3J10", &L1_TAU11_XE10_3J10, &b_L1_TAU11_XE10_3J10);
    fChain->SetBranchAddress("L1_TAU11_XE20", &L1_TAU11_XE20, &b_L1_TAU11_XE20);
-   fChain->SetBranchAddress("L1_TAU20", &L1_TAU20, &b_L1_TAU20);
+   fChain->SetBranchAddress("L1_TAU15", &L1_TAU15, &b_L1_TAU15);
+   fChain->SetBranchAddress("L1_TAU15_XE10_3J10", &L1_TAU15_XE10_3J10, &b_L1_TAU15_XE10_3J10);
+   fChain->SetBranchAddress("L1_TAU15_XE20", &L1_TAU15_XE20, &b_L1_TAU15_XE20);
+   fChain->SetBranchAddress("L1_TAU15_XE25_3J10", &L1_TAU15_XE25_3J10, &b_L1_TAU15_XE25_3J10);
+   fChain->SetBranchAddress("L1_TAU15_XE25_3J10_J30", &L1_TAU15_XE25_3J10_J30, &b_L1_TAU15_XE25_3J10_J30);
+   fChain->SetBranchAddress("L1_TAU15_XE35", &L1_TAU15_XE35, &b_L1_TAU15_XE35);
+   fChain->SetBranchAddress("L1_TAU15_XS25_3J10", &L1_TAU15_XS25_3J10, &b_L1_TAU15_XS25_3J10);
+   fChain->SetBranchAddress("L1_TAU15_XS35", &L1_TAU15_XS35, &b_L1_TAU15_XS35);
    fChain->SetBranchAddress("L1_TAU30", &L1_TAU30, &b_L1_TAU30);
-   fChain->SetBranchAddress("L1_TAU5", &L1_TAU5, &b_L1_TAU5);
+   fChain->SetBranchAddress("L1_TAU30_EM10VH", &L1_TAU30_EM10VH, &b_L1_TAU30_EM10VH);
+   fChain->SetBranchAddress("L1_TAU30_NOTEM12", &L1_TAU30_NOTEM12, &b_L1_TAU30_NOTEM12);
    fChain->SetBranchAddress("L1_TAU50", &L1_TAU50, &b_L1_TAU50);
-   fChain->SetBranchAddress("L1_TAU5_EMPTY", &L1_TAU5_EMPTY, &b_L1_TAU5_EMPTY);
-   fChain->SetBranchAddress("L1_TAU5_FIRSTEMPTY", &L1_TAU5_FIRSTEMPTY, &b_L1_TAU5_FIRSTEMPTY);
-   fChain->SetBranchAddress("L1_TAU5_UNPAIRED_ISO", &L1_TAU5_UNPAIRED_ISO, &b_L1_TAU5_UNPAIRED_ISO);
-   fChain->SetBranchAddress("L1_TAU5_UNPAIRED_NONISO", &L1_TAU5_UNPAIRED_NONISO, &b_L1_TAU5_UNPAIRED_NONISO);
-   fChain->SetBranchAddress("L1_TAU5_XE10", &L1_TAU5_XE10, &b_L1_TAU5_XE10);
-   fChain->SetBranchAddress("L1_TAU6", &L1_TAU6, &b_L1_TAU6);
-   fChain->SetBranchAddress("L1_TAU6_J50_XE20", &L1_TAU6_J50_XE20, &b_L1_TAU6_J50_XE20);
-   fChain->SetBranchAddress("L1_TAU6_MU10", &L1_TAU6_MU10, &b_L1_TAU6_MU10);
-   fChain->SetBranchAddress("L1_TAU6_XE10", &L1_TAU6_XE10, &b_L1_TAU6_XE10);
    fChain->SetBranchAddress("L1_TAU8", &L1_TAU8, &b_L1_TAU8);
+   fChain->SetBranchAddress("L1_TAU8I", &L1_TAU8I, &b_L1_TAU8I);
+   fChain->SetBranchAddress("L1_TAU8I_MU10", &L1_TAU8I_MU10, &b_L1_TAU8I_MU10);
+   fChain->SetBranchAddress("L1_TAU8_EMPTY", &L1_TAU8_EMPTY, &b_L1_TAU8_EMPTY);
+   fChain->SetBranchAddress("L1_TAU8_FIRSTEMPTY", &L1_TAU8_FIRSTEMPTY, &b_L1_TAU8_FIRSTEMPTY);
+   fChain->SetBranchAddress("L1_TAU8_MU10", &L1_TAU8_MU10, &b_L1_TAU8_MU10);
+   fChain->SetBranchAddress("L1_TAU8_UNPAIRED_ISO", &L1_TAU8_UNPAIRED_ISO, &b_L1_TAU8_UNPAIRED_ISO);
+   fChain->SetBranchAddress("L1_TAU8_UNPAIRED_NONISO", &L1_TAU8_UNPAIRED_NONISO, &b_L1_TAU8_UNPAIRED_NONISO);
    fChain->SetBranchAddress("L1_XE10", &L1_XE10, &b_L1_XE10);
    fChain->SetBranchAddress("L1_XE20", &L1_XE20, &b_L1_XE20);
    fChain->SetBranchAddress("L1_XE25", &L1_XE25, &b_L1_XE25);
@@ -12868,53 +15359,97 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("L1_XE60", &L1_XE60, &b_L1_XE60);
    fChain->SetBranchAddress("L2_2e10_medium", &L2_2e10_medium, &b_L2_2e10_medium);
    fChain->SetBranchAddress("L2_2e10_medium_mu6", &L2_2e10_medium_mu6, &b_L2_2e10_medium_mu6);
+   fChain->SetBranchAddress("L2_2e12Tvh_medium", &L2_2e12Tvh_medium, &b_L2_2e12Tvh_medium);
    fChain->SetBranchAddress("L2_2e12_medium", &L2_2e12_medium, &b_L2_2e12_medium);
+   fChain->SetBranchAddress("L2_2e15vh_medium", &L2_2e15vh_medium, &b_L2_2e15vh_medium);
    fChain->SetBranchAddress("L2_2e5_tight", &L2_2e5_tight, &b_L2_2e5_tight);
    fChain->SetBranchAddress("L2_2e5_tight_Jpsi", &L2_2e5_tight_Jpsi, &b_L2_2e5_tight_Jpsi);
-   fChain->SetBranchAddress("L2_2e5_tight_NL", &L2_2e5_tight_NL, &b_L2_2e5_tight_NL);
-   fChain->SetBranchAddress("L2_2g10_loose_NL", &L2_2g10_loose_NL, &b_L2_2g10_loose_NL);
-   fChain->SetBranchAddress("L2_2g15_loose", &L2_2g15_loose, &b_L2_2g15_loose);
    fChain->SetBranchAddress("L2_2g20_loose", &L2_2g20_loose, &b_L2_2g20_loose);
+   fChain->SetBranchAddress("L2_2j40_anymct100_xe20_medium_noMu", &L2_2j40_anymct100_xe20_medium_noMu, &b_L2_2j40_anymct100_xe20_medium_noMu);
+   fChain->SetBranchAddress("L2_2j50_anymct100_xe20_medium_noMu", &L2_2j50_anymct100_xe20_medium_noMu, &b_L2_2j50_anymct100_xe20_medium_noMu);
    fChain->SetBranchAddress("L2_2mu10", &L2_2mu10, &b_L2_2mu10);
    fChain->SetBranchAddress("L2_2mu10_empty", &L2_2mu10_empty, &b_L2_2mu10_empty);
    fChain->SetBranchAddress("L2_2mu10_loose", &L2_2mu10_loose, &b_L2_2mu10_loose);
    fChain->SetBranchAddress("L2_2mu10_loose_empty", &L2_2mu10_loose_empty, &b_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("L2_2mu10_loose_noOvlpRm", &L2_2mu10_loose_noOvlpRm, &b_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("L2_2mu4", &L2_2mu4, &b_L2_2mu4);
-   fChain->SetBranchAddress("L2_2mu4_Bmumu", &L2_2mu4_Bmumu, &b_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("L2_2mu4_Bmumux", &L2_2mu4_Bmumux, &b_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("L2_2mu4_DiMu", &L2_2mu4_DiMu, &b_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("L2_2mu4_DiMu_SiTrk", &L2_2mu4_DiMu_SiTrk, &b_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("L2_2mu4_DiMu_noVtx_noOS", &L2_2mu4_DiMu_noVtx_noOS, &b_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("L2_2mu4_Jpsimumu", &L2_2mu4_Jpsimumu, &b_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("L2_2mu4_Jpsimumu_IDTrkNoCut", &L2_2mu4_Jpsimumu_IDTrkNoCut, &b_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("L2_2mu4_Upsimumu", &L2_2mu4_Upsimumu, &b_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("L2_2mu13_Zmumu_IDTrkNoCut", &L2_2mu13_Zmumu_IDTrkNoCut, &b_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("L2_2mu4T", &L2_2mu4T, &b_L2_2mu4T);
+   fChain->SetBranchAddress("L2_2mu4T_2e5_medium", &L2_2mu4T_2e5_medium, &b_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("L2_2mu4T_Bmumu", &L2_2mu4T_Bmumu, &b_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("L2_2mu4T_Bmumux", &L2_2mu4T_Bmumux, &b_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu", &L2_2mu4T_DiMu, &b_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu_DY", &L2_2mu4T_DiMu_DY, &b_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu_DY20", &L2_2mu4T_DiMu_DY20, &b_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu_DY_noVtx_noOS", &L2_2mu4T_DiMu_DY_noVtx_noOS, &b_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu_SiTrk", &L2_2mu4T_DiMu_SiTrk, &b_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("L2_2mu4T_DiMu_noVtx_noOS", &L2_2mu4T_DiMu_noVtx_noOS, &b_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("L2_2mu4T_EFxe20_noMu", &L2_2mu4T_EFxe20_noMu, &b_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("L2_2mu4T_EFxe30_noMu", &L2_2mu4T_EFxe30_noMu, &b_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("L2_2mu4T_Jpsimumu", &L2_2mu4T_Jpsimumu, &b_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("L2_2mu4T_Jpsimumu_IDTrkNoCut", &L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("L2_2mu4T_Upsimumu", &L2_2mu4T_Upsimumu, &b_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("L2_2mu4T_xe20_noMu", &L2_2mu4T_xe20_noMu, &b_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("L2_2mu4T_xe25_noMu", &L2_2mu4T_xe25_noMu, &b_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("L2_2mu4Ti_DiMu_DY", &L2_2mu4Ti_DiMu_DY, &b_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("L2_2mu6", &L2_2mu6, &b_L2_2mu6);
+   fChain->SetBranchAddress("L2_2mu6_Bmumux", &L2_2mu6_Bmumux, &b_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("L2_2mu6_DiMu", &L2_2mu6_DiMu, &b_L2_2mu6_DiMu);
    fChain->SetBranchAddress("L2_2mu6_MSonly_g10_loose", &L2_2mu6_MSonly_g10_loose, &b_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("L2_2mu6_NL", &L2_2mu6_NL, &b_L2_2mu6_NL);
+   fChain->SetBranchAddress("L2_2mu6_MSonly_g10_loose_nonfilled", &L2_2mu6_MSonly_g10_loose_nonfilled, &b_L2_2mu6_MSonly_g10_loose_nonfilled);
+   fChain->SetBranchAddress("L2_2tau29T_medium1", &L2_2tau29T_medium1, &b_L2_2tau29T_medium1);
    fChain->SetBranchAddress("L2_2tau29_medium1", &L2_2tau29_medium1, &b_L2_2tau29_medium1);
+   fChain->SetBranchAddress("L2_2tau29i_medium1", &L2_2tau29i_medium1, &b_L2_2tau29i_medium1);
    fChain->SetBranchAddress("L2_e10_medium", &L2_e10_medium, &b_L2_e10_medium);
    fChain->SetBranchAddress("L2_e10_medium_2mu6", &L2_e10_medium_2mu6, &b_L2_e10_medium_2mu6);
+   fChain->SetBranchAddress("L2_e10_medium_mu10", &L2_e10_medium_mu10, &b_L2_e10_medium_mu10);
    fChain->SetBranchAddress("L2_e10_medium_mu6", &L2_e10_medium_mu6, &b_L2_e10_medium_mu6);
-   fChain->SetBranchAddress("L2_e15_medium", &L2_e15_medium, &b_L2_e15_medium);
-   fChain->SetBranchAddress("L2_e15_medium_xe30_noMu", &L2_e15_medium_xe30_noMu, &b_L2_e15_medium_xe30_noMu);
-   fChain->SetBranchAddress("L2_e15_tight", &L2_e15_tight, &b_L2_e15_tight);
-   fChain->SetBranchAddress("L2_e15_tight_NL", &L2_e15_tight_NL, &b_L2_e15_tight_NL);
-   fChain->SetBranchAddress("L2_e20_loose", &L2_e20_loose, &b_L2_e20_loose);
-   fChain->SetBranchAddress("L2_e20_medium", &L2_e20_medium, &b_L2_e20_medium);
-   fChain->SetBranchAddress("L2_e20_medium1", &L2_e20_medium1, &b_L2_e20_medium1);
-   fChain->SetBranchAddress("L2_e20_medium_IDTrkNoCut", &L2_e20_medium_IDTrkNoCut, &b_L2_e20_medium_IDTrkNoCut);
-   fChain->SetBranchAddress("L2_e20_medium_SiTrk", &L2_e20_medium_SiTrk, &b_L2_e20_medium_SiTrk);
-   fChain->SetBranchAddress("L2_e20_medium_TRT", &L2_e20_medium_TRT, &b_L2_e20_medium_TRT);
-   fChain->SetBranchAddress("L2_e22_medium", &L2_e22_medium, &b_L2_e22_medium);
+   fChain->SetBranchAddress("L2_e10_medium_mu6_topo_medium", &L2_e10_medium_mu6_topo_medium, &b_L2_e10_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("L2_e11_etcut", &L2_e11_etcut, &b_L2_e11_etcut);
+   fChain->SetBranchAddress("L2_e12Tvh_medium", &L2_e12Tvh_medium, &b_L2_e12Tvh_medium);
+   fChain->SetBranchAddress("L2_e12Tvh_medium_2e6T_medium", &L2_e12Tvh_medium_2e6T_medium, &b_L2_e12Tvh_medium_2e6T_medium);
+   fChain->SetBranchAddress("L2_e12Tvh_medium_mu6", &L2_e12Tvh_medium_mu6, &b_L2_e12Tvh_medium_mu6);
+   fChain->SetBranchAddress("L2_e12Tvh_medium_mu6_topo_medium", &L2_e12Tvh_medium_mu6_topo_medium, &b_L2_e12Tvh_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("L2_e12_medium", &L2_e12_medium, &b_L2_e12_medium);
+   fChain->SetBranchAddress("L2_e13_etcutTrk_xs30_noMu", &L2_e13_etcutTrk_xs30_noMu, &b_L2_e13_etcutTrk_xs30_noMu);
+   fChain->SetBranchAddress("L2_e13_etcutTrk_xs45_noMu", &L2_e13_etcutTrk_xs45_noMu, &b_L2_e13_etcutTrk_xs45_noMu);
+   fChain->SetBranchAddress("L2_e14_tight_e4_etcut_Jpsi", &L2_e14_tight_e4_etcut_Jpsi, &b_L2_e14_tight_e4_etcut_Jpsi);
+   fChain->SetBranchAddress("L2_e15vh_loose1_e12Tvh_loose1_Zee", &L2_e15vh_loose1_e12Tvh_loose1_Zee, &b_L2_e15vh_loose1_e12Tvh_loose1_Zee);
+   fChain->SetBranchAddress("L2_e15vh_medium", &L2_e15vh_medium, &b_L2_e15vh_medium);
+   fChain->SetBranchAddress("L2_e15vh_medium_xe30_noMu", &L2_e15vh_medium_xe30_noMu, &b_L2_e15vh_medium_xe30_noMu);
+   fChain->SetBranchAddress("L2_e15vh_medium_xe35_noMu", &L2_e15vh_medium_xe35_noMu, &b_L2_e15vh_medium_xe35_noMu);
+   fChain->SetBranchAddress("L2_e20_etcutTrk_xe25_noMu", &L2_e20_etcutTrk_xe25_noMu, &b_L2_e20_etcutTrk_xe25_noMu);
+   fChain->SetBranchAddress("L2_e20_etcutTrk_xs45_noMu", &L2_e20_etcutTrk_xs45_noMu, &b_L2_e20_etcutTrk_xs45_noMu);
+   fChain->SetBranchAddress("L2_e20_tight_e15_NoCut_Zee", &L2_e20_tight_e15_NoCut_Zee, &b_L2_e20_tight_e15_NoCut_Zee);
+   fChain->SetBranchAddress("L2_e22vh_loose", &L2_e22vh_loose, &b_L2_e22vh_loose);
+   fChain->SetBranchAddress("L2_e22vh_loose1", &L2_e22vh_loose1, &b_L2_e22vh_loose1);
+   fChain->SetBranchAddress("L2_e22vh_looseTrk", &L2_e22vh_looseTrk, &b_L2_e22vh_looseTrk);
+   fChain->SetBranchAddress("L2_e22vh_loose_2j20_a4tc_EFFS", &L2_e22vh_loose_2j20_a4tc_EFFS, &b_L2_e22vh_loose_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_e22vh_loose_3j20_a4tc_EFFS", &L2_e22vh_loose_3j20_a4tc_EFFS, &b_L2_e22vh_loose_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_e22vh_loose_4j15_a4tc_EFFS", &L2_e22vh_loose_4j15_a4tc_EFFS, &b_L2_e22vh_loose_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_e22vh_medium", &L2_e22vh_medium, &b_L2_e22vh_medium);
+   fChain->SetBranchAddress("L2_e22vh_medium1", &L2_e22vh_medium1, &b_L2_e22vh_medium1);
+   fChain->SetBranchAddress("L2_e22vh_medium1_EFxe20_noMu", &L2_e22vh_medium1_EFxe20_noMu, &b_L2_e22vh_medium1_EFxe20_noMu);
+   fChain->SetBranchAddress("L2_e22vh_medium1_EFxe30_noMu", &L2_e22vh_medium1_EFxe30_noMu, &b_L2_e22vh_medium1_EFxe30_noMu);
+   fChain->SetBranchAddress("L2_e22vh_medium1_EFxe40_noMu", &L2_e22vh_medium1_EFxe40_noMu, &b_L2_e22vh_medium1_EFxe40_noMu);
+   fChain->SetBranchAddress("L2_e22vh_medium2", &L2_e22vh_medium2, &b_L2_e22vh_medium2);
+   fChain->SetBranchAddress("L2_e22vh_medium_IDTrkNoCut", &L2_e22vh_medium_IDTrkNoCut, &b_L2_e22vh_medium_IDTrkNoCut);
+   fChain->SetBranchAddress("L2_e22vh_medium_SiTrk", &L2_e22vh_medium_SiTrk, &b_L2_e22vh_medium_SiTrk);
+   fChain->SetBranchAddress("L2_e22vh_medium_TRT", &L2_e22vh_medium_TRT, &b_L2_e22vh_medium_TRT);
+   fChain->SetBranchAddress("L2_e40_medium", &L2_e40_medium, &b_L2_e40_medium);
+   fChain->SetBranchAddress("L2_e45_medium", &L2_e45_medium, &b_L2_e45_medium);
+   fChain->SetBranchAddress("L2_e45_medium1", &L2_e45_medium1, &b_L2_e45_medium1);
+   fChain->SetBranchAddress("L2_e5_medium_mu6", &L2_e5_medium_mu6, &b_L2_e5_medium_mu6);
+   fChain->SetBranchAddress("L2_e5_medium_mu6_topo_medium", &L2_e5_medium_mu6_topo_medium, &b_L2_e5_medium_mu6_topo_medium);
    fChain->SetBranchAddress("L2_e5_tight", &L2_e5_tight, &b_L2_e5_tight);
+   fChain->SetBranchAddress("L2_e5_tight_e14_etcut_Jpsi", &L2_e5_tight_e14_etcut_Jpsi, &b_L2_e5_tight_e14_etcut_Jpsi);
    fChain->SetBranchAddress("L2_e5_tight_e4_etcut_Jpsi", &L2_e5_tight_e4_etcut_Jpsi, &b_L2_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("L2_e5_tight_e4_etcut_Jpsi_SiTrk", &L2_e5_tight_e4_etcut_Jpsi_SiTrk, &b_L2_e5_tight_e4_etcut_Jpsi_SiTrk);
    fChain->SetBranchAddress("L2_e5_tight_e4_etcut_Jpsi_TRT", &L2_e5_tight_e4_etcut_Jpsi_TRT, &b_L2_e5_tight_e4_etcut_Jpsi_TRT);
    fChain->SetBranchAddress("L2_e5_tight_e5_NoCut", &L2_e5_tight_e5_NoCut, &b_L2_e5_tight_e5_NoCut);
    fChain->SetBranchAddress("L2_e5_tight_e9_etcut_Jpsi", &L2_e5_tight_e9_etcut_Jpsi, &b_L2_e5_tight_e9_etcut_Jpsi);
    fChain->SetBranchAddress("L2_e60_loose", &L2_e60_loose, &b_L2_e60_loose);
-   fChain->SetBranchAddress("L2_e9_tight_e5_tight_Jpsi", &L2_e9_tight_e5_tight_Jpsi, &b_L2_e9_tight_e5_tight_Jpsi);
+   fChain->SetBranchAddress("L2_e6T_medium", &L2_e6T_medium, &b_L2_e6T_medium);
+   fChain->SetBranchAddress("L2_e9_tight_e4_etcut_Jpsi", &L2_e9_tight_e4_etcut_Jpsi, &b_L2_e9_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("L2_eb_physics", &L2_eb_physics, &b_L2_eb_physics);
    fChain->SetBranchAddress("L2_eb_physics_empty", &L2_eb_physics_empty, &b_L2_eb_physics_empty);
    fChain->SetBranchAddress("L2_eb_physics_firstempty", &L2_eb_physics_firstempty, &b_L2_eb_physics_firstempty);
@@ -12926,30 +15461,37 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("L2_eb_random_firstempty", &L2_eb_random_firstempty, &b_L2_eb_random_firstempty);
    fChain->SetBranchAddress("L2_eb_random_unpaired_iso", &L2_eb_random_unpaired_iso, &b_L2_eb_random_unpaired_iso);
    fChain->SetBranchAddress("L2_em3_empty_larcalib", &L2_em3_empty_larcalib, &b_L2_em3_empty_larcalib);
-   fChain->SetBranchAddress("L2_g100_etcut_g50_etcut", &L2_g100_etcut_g50_etcut, &b_L2_g100_etcut_g50_etcut);
+   fChain->SetBranchAddress("L2_em5_empty_larcalib", &L2_em5_empty_larcalib, &b_L2_em5_empty_larcalib);
+   fChain->SetBranchAddress("L2_g100_loose", &L2_g100_loose, &b_L2_g100_loose);
+   fChain->SetBranchAddress("L2_g10_NoCut_cosmic", &L2_g10_NoCut_cosmic, &b_L2_g10_NoCut_cosmic);
    fChain->SetBranchAddress("L2_g11_etcut", &L2_g11_etcut, &b_L2_g11_etcut);
    fChain->SetBranchAddress("L2_g150_etcut", &L2_g150_etcut, &b_L2_g150_etcut);
-   fChain->SetBranchAddress("L2_g15_loose", &L2_g15_loose, &b_L2_g15_loose);
+   fChain->SetBranchAddress("L2_g200_etcut", &L2_g200_etcut, &b_L2_g200_etcut);
    fChain->SetBranchAddress("L2_g20_etcut", &L2_g20_etcut, &b_L2_g20_etcut);
-   fChain->SetBranchAddress("L2_g20_etcut_xe30_noMu", &L2_g20_etcut_xe30_noMu, &b_L2_g20_etcut_xe30_noMu);
    fChain->SetBranchAddress("L2_g20_loose", &L2_g20_loose, &b_L2_g20_loose);
    fChain->SetBranchAddress("L2_g40_loose", &L2_g40_loose, &b_L2_g40_loose);
    fChain->SetBranchAddress("L2_g40_loose_EFxe40_noMu", &L2_g40_loose_EFxe40_noMu, &b_L2_g40_loose_EFxe40_noMu);
-   fChain->SetBranchAddress("L2_g40_tight", &L2_g40_tight, &b_L2_g40_tight);
+   fChain->SetBranchAddress("L2_g40_loose_xe30_medium_noMu", &L2_g40_loose_xe30_medium_noMu, &b_L2_g40_loose_xe30_medium_noMu);
+   fChain->SetBranchAddress("L2_g40_loose_xe35_medium_noMu", &L2_g40_loose_xe35_medium_noMu, &b_L2_g40_loose_xe35_medium_noMu);
+   fChain->SetBranchAddress("L2_g40_tight_b10_medium", &L2_g40_tight_b10_medium, &b_L2_g40_tight_b10_medium);
    fChain->SetBranchAddress("L2_g5_NoCut_cosmic", &L2_g5_NoCut_cosmic, &b_L2_g5_NoCut_cosmic);
    fChain->SetBranchAddress("L2_g60_loose", &L2_g60_loose, &b_L2_g60_loose);
    fChain->SetBranchAddress("L2_g80_loose", &L2_g80_loose, &b_L2_g80_loose);
+   fChain->SetBranchAddress("L2_j50_xe35_medium_noMu", &L2_j50_xe35_medium_noMu, &b_L2_j50_xe35_medium_noMu);
+   fChain->SetBranchAddress("L2_j50_xe35_medium_noMu_l2cleancons", &L2_j50_xe35_medium_noMu_l2cleancons, &b_L2_j50_xe35_medium_noMu_l2cleancons);
+   fChain->SetBranchAddress("L2_j60_xe45_noMu", &L2_j60_xe45_noMu, &b_L2_j60_xe45_noMu);
+   fChain->SetBranchAddress("L2_j65_xe50_noMu", &L2_j65_xe50_noMu, &b_L2_j65_xe50_noMu);
    fChain->SetBranchAddress("L2_j70_xe20_loose_noMu", &L2_j70_xe20_loose_noMu, &b_L2_j70_xe20_loose_noMu);
    fChain->SetBranchAddress("L2_j70_xe25_loose_noMu", &L2_j70_xe25_loose_noMu, &b_L2_j70_xe25_loose_noMu);
-   fChain->SetBranchAddress("L2_mu0_cal_empty", &L2_mu0_cal_empty, &b_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("L2_mu0_empty_NoAlg", &L2_mu0_empty_NoAlg, &b_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("L2_mu0_firstempty_NoAlg", &L2_mu0_firstempty_NoAlg, &b_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("L2_mu0_unpaired_iso_NoAlg", &L2_mu0_unpaired_iso_NoAlg, &b_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("L2_j70_xe35_noMu", &L2_j70_xe35_noMu, &b_L2_j70_xe35_noMu);
+   fChain->SetBranchAddress("L2_j70_xe35_noMu_l2cleancons", &L2_j70_xe35_noMu_l2cleancons, &b_L2_j70_xe35_noMu_l2cleancons);
+   fChain->SetBranchAddress("L2_j75_xe40_noMu", &L2_j75_xe40_noMu, &b_L2_j75_xe40_noMu);
    fChain->SetBranchAddress("L2_mu10", &L2_mu10, &b_L2_mu10);
    fChain->SetBranchAddress("L2_mu10_Jpsimumu", &L2_mu10_Jpsimumu, &b_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("L2_mu10_NL", &L2_mu10_NL, &b_L2_mu10_NL);
    fChain->SetBranchAddress("L2_mu10_Upsimumu_FS", &L2_mu10_Upsimumu_FS, &b_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("L2_mu10_Upsimumu_tight_FS", &L2_mu10_Upsimumu_tight_FS, &b_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("L2_mu10_cal", &L2_mu10_cal, &b_L2_mu10_cal);
+   fChain->SetBranchAddress("L2_mu10_cal_medium", &L2_mu10_cal_medium, &b_L2_mu10_cal_medium);
    fChain->SetBranchAddress("L2_mu10_loose", &L2_mu10_loose, &b_L2_mu10_loose);
    fChain->SetBranchAddress("L2_mu10_muCombTag_NoEF", &L2_mu10_muCombTag_NoEF, &b_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("L2_mu11_empty_NoAlg", &L2_mu11_empty_NoAlg, &b_L2_mu11_empty_NoAlg);
@@ -12957,66 +15499,148 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("L2_mu13_MG", &L2_mu13_MG, &b_L2_mu13_MG);
    fChain->SetBranchAddress("L2_mu13_muCombTag_NoEF", &L2_mu13_muCombTag_NoEF, &b_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("L2_mu15", &L2_mu15, &b_L2_mu15);
+   fChain->SetBranchAddress("L2_mu15_medium", &L2_mu15_medium, &b_L2_mu15_medium);
+   fChain->SetBranchAddress("L2_mu15_tight", &L2_mu15_tight, &b_L2_mu15_tight);
+   fChain->SetBranchAddress("L2_mu15_xe20_noMu", &L2_mu15_xe20_noMu, &b_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("L2_mu15i", &L2_mu15i, &b_L2_mu15i);
+   fChain->SetBranchAddress("L2_mu15i_medium", &L2_mu15i_medium, &b_L2_mu15i_medium);
    fChain->SetBranchAddress("L2_mu18", &L2_mu18, &b_L2_mu18);
+   fChain->SetBranchAddress("L2_mu18_L1J10", &L2_mu18_L1J10, &b_L2_mu18_L1J10);
    fChain->SetBranchAddress("L2_mu18_MG", &L2_mu18_MG, &b_L2_mu18_MG);
+   fChain->SetBranchAddress("L2_mu18_MG_L1J10", &L2_mu18_MG_L1J10, &b_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("L2_mu18_MG_medium", &L2_mu18_MG_medium, &b_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("L2_mu18_medium", &L2_mu18_medium, &b_L2_mu18_medium);
+   fChain->SetBranchAddress("L2_mu18_medium_2j20_a4tc_EFFS", &L2_mu18_medium_2j20_a4tc_EFFS, &b_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_mu18_medium_3j20_a4tc_EFFS", &L2_mu18_medium_3j20_a4tc_EFFS, &b_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_mu18_medium_4j15_a4tc_EFFS", &L2_mu18_medium_4j15_a4tc_EFFS, &b_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_mu18_medium_4j20_a4tc_EFFS", &L2_mu18_medium_4j20_a4tc_EFFS, &b_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_mu18i4_medium", &L2_mu18i4_medium, &b_L2_mu18i4_medium);
    fChain->SetBranchAddress("L2_mu20", &L2_mu20, &b_L2_mu20);
    fChain->SetBranchAddress("L2_mu20_IDTrkNoCut", &L2_mu20_IDTrkNoCut, &b_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("L2_mu20_MG", &L2_mu20_MG, &b_L2_mu20_MG);
+   fChain->SetBranchAddress("L2_mu20_MG_medium", &L2_mu20_MG_medium, &b_L2_mu20_MG_medium);
    fChain->SetBranchAddress("L2_mu20_empty", &L2_mu20_empty, &b_L2_mu20_empty);
+   fChain->SetBranchAddress("L2_mu20_medium", &L2_mu20_medium, &b_L2_mu20_medium);
    fChain->SetBranchAddress("L2_mu20_muCombTag_NoEF", &L2_mu20_muCombTag_NoEF, &b_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("L2_mu20_tight", &L2_mu20_tight, &b_L2_mu20_tight);
    fChain->SetBranchAddress("L2_mu20i", &L2_mu20i, &b_L2_mu20i);
+   fChain->SetBranchAddress("L2_mu20i_medium", &L2_mu20i_medium, &b_L2_mu20i_medium);
    fChain->SetBranchAddress("L2_mu22", &L2_mu22, &b_L2_mu22);
    fChain->SetBranchAddress("L2_mu22_MG", &L2_mu22_MG, &b_L2_mu22_MG);
-   fChain->SetBranchAddress("L2_mu4", &L2_mu4, &b_L2_mu4);
+   fChain->SetBranchAddress("L2_mu22_MG_medium", &L2_mu22_MG_medium, &b_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("L2_mu22_j30_a4tc_EFFS", &L2_mu22_j30_a4tc_EFFS, &b_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("L2_mu22_medium", &L2_mu22_medium, &b_L2_mu22_medium);
+   fChain->SetBranchAddress("L2_mu22i2_medium", &L2_mu22i2_medium, &b_L2_mu22i2_medium);
+   fChain->SetBranchAddress("L2_mu22i4_medium", &L2_mu22i4_medium, &b_L2_mu22i4_medium);
+   fChain->SetBranchAddress("L2_mu24_MG_medium", &L2_mu24_MG_medium, &b_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("L2_mu24_MG_tight", &L2_mu24_MG_tight, &b_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("L2_mu24_medium", &L2_mu24_medium, &b_L2_mu24_medium);
+   fChain->SetBranchAddress("L2_mu24_tight", &L2_mu24_tight, &b_L2_mu24_tight);
+   fChain->SetBranchAddress("L2_mu30_MG_medium", &L2_mu30_MG_medium, &b_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("L2_mu30_MG_tight", &L2_mu30_MG_tight, &b_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("L2_mu30_medium", &L2_mu30_medium, &b_L2_mu30_medium);
+   fChain->SetBranchAddress("L2_mu30_tight", &L2_mu30_tight, &b_L2_mu30_tight);
    fChain->SetBranchAddress("L2_mu40_MSonly_barrel", &L2_mu40_MSonly_barrel, &b_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("L2_mu40_MSonly_barrel_medium", &L2_mu40_MSonly_barrel_medium, &b_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("L2_mu40_MSonly_empty", &L2_mu40_MSonly_empty, &b_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("L2_mu40_MSonly_tight", &L2_mu40_MSonly_tight, &b_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("L2_mu40_MSonly_tight_L1MU11", &L2_mu40_MSonly_tight_L1MU11, &b_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("L2_mu40_MSonly_tighter", &L2_mu40_MSonly_tighter, &b_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("L2_mu40_slow", &L2_mu40_slow, &b_L2_mu40_slow);
    fChain->SetBranchAddress("L2_mu40_slow_empty", &L2_mu40_slow_empty, &b_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("L2_mu40_slow_medium", &L2_mu40_slow_medium, &b_L2_mu40_slow_medium);
    fChain->SetBranchAddress("L2_mu40_slow_outOfTime", &L2_mu40_slow_outOfTime, &b_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("L2_mu4_DiMu", &L2_mu4_DiMu, &b_L2_mu4_DiMu);
-   fChain->SetBranchAddress("L2_mu4_DiMu_FS_noOS", &L2_mu4_DiMu_FS_noOS, &b_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("L2_mu4_Jpsimumu", &L2_mu4_Jpsimumu, &b_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("L2_mu40_slow_outOfTime_medium", &L2_mu40_slow_outOfTime_medium, &b_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("L2_mu4T", &L2_mu4T, &b_L2_mu4T);
+   fChain->SetBranchAddress("L2_mu4T_DiMu", &L2_mu4T_DiMu, &b_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("L2_mu4T_DiMu_FS_noOS", &L2_mu4T_DiMu_FS_noOS, &b_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("L2_mu4T_Jpsimumu", &L2_mu4T_Jpsimumu, &b_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("L2_mu4T_Trk_Jpsi", &L2_mu4T_Trk_Jpsi, &b_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("L2_mu4T_Trk_Upsi_FS", &L2_mu4T_Trk_Upsi_FS, &b_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("L2_mu4T_Upsimumu_FS", &L2_mu4T_Upsimumu_FS, &b_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("L2_mu4T_Upsimumu_SiTrk_FS", &L2_mu4T_Upsimumu_SiTrk_FS, &b_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("L2_mu4T_Upsimumu_tight_FS", &L2_mu4T_Upsimumu_tight_FS, &b_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("L2_mu4T_j40_xe20_loose_noMu", &L2_mu4T_j40_xe20_loose_noMu, &b_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("L2_mu4T_j40_xe35_noMu", &L2_mu4T_j40_xe35_noMu, &b_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("L2_mu4Timu6i_DiMu_DY", &L2_mu4Timu6i_DiMu_DY, &b_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("L2_mu4Tmu6_Bmumu", &L2_mu4Tmu6_Bmumu, &b_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("L2_mu4Tmu6_Bmumux", &L2_mu4Tmu6_Bmumux, &b_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("L2_mu4Tmu6_DiMu", &L2_mu4Tmu6_DiMu, &b_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("L2_mu4Tmu6_DiMu_DY20", &L2_mu4Tmu6_DiMu_DY20, &b_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("L2_mu4Tmu6_DiMu_noVtx_noOS", &L2_mu4Tmu6_DiMu_noVtx_noOS, &b_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("L2_mu4Tmu6_Jpsimumu", &L2_mu4Tmu6_Jpsimumu, &b_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("L2_mu4Tmu6_Upsimumu", &L2_mu4Tmu6_Upsimumu, &b_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("L2_mu4_L1J10_matched", &L2_mu4_L1J10_matched, &b_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("L2_mu4_L1J15_matched", &L2_mu4_L1J15_matched, &b_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("L2_mu4_L1J20_matched", &L2_mu4_L1J20_matched, &b_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("L2_mu4_L1J30_matched", &L2_mu4_L1J30_matched, &b_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("L2_mu4_L1J50_matched", &L2_mu4_L1J50_matched, &b_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("L2_mu4_L1J75_matched", &L2_mu4_L1J75_matched, &b_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("L2_mu4_L1MU11_MSonly_cosmic", &L2_mu4_L1MU11_MSonly_cosmic, &b_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("L2_mu4_L1MU11_cosmic", &L2_mu4_L1MU11_cosmic, &b_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("L2_mu4_MSonly_cosmic", &L2_mu4_MSonly_cosmic, &b_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("L2_mu4_Trk_Jpsi", &L2_mu4_Trk_Jpsi, &b_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("L2_mu4_Upsimumu_FS", &L2_mu4_Upsimumu_FS, &b_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("L2_mu4_Upsimumu_SiTrk_FS", &L2_mu4_Upsimumu_SiTrk_FS, &b_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("L2_mu4_cal_empty", &L2_mu4_cal_empty, &b_L2_mu4_cal_empty);
    fChain->SetBranchAddress("L2_mu4_cosmic", &L2_mu4_cosmic, &b_L2_mu4_cosmic);
-   fChain->SetBranchAddress("L2_mu4_j10_a4_EFFS", &L2_mu4_j10_a4_EFFS, &b_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("L2_mu4_empty_NoAlg", &L2_mu4_empty_NoAlg, &b_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("L2_mu4_firstempty_NoAlg", &L2_mu4_firstempty_NoAlg, &b_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("L2_mu4_j95_L1matched", &L2_mu4_j95_L1matched, &b_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("L2_mu4_unpaired_iso_NoAlg", &L2_mu4_unpaired_iso_NoAlg, &b_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("L2_mu6", &L2_mu6, &b_L2_mu6);
    fChain->SetBranchAddress("L2_mu6_DiMu_noOS", &L2_mu6_DiMu_noOS, &b_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("L2_mu6_Jpsimumu", &L2_mu6_Jpsimumu, &b_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("L2_mu6_Jpsimumu_SiTrk", &L2_mu6_Jpsimumu_SiTrk, &b_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("L2_mu6_Jpsimumu_tight", &L2_mu6_Jpsimumu_tight, &b_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("L2_mu6_Trk_Jpsi_loose", &L2_mu6_Trk_Jpsi_loose, &b_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("L2_tau100_medium", &L2_tau100_medium, &b_L2_tau100_medium);
+   fChain->SetBranchAddress("L2_tau125_IDTrkNoCut", &L2_tau125_IDTrkNoCut, &b_L2_tau125_IDTrkNoCut);
    fChain->SetBranchAddress("L2_tau125_medium", &L2_tau125_medium, &b_L2_tau125_medium);
-   fChain->SetBranchAddress("L2_tau16_IDTrkNoCut", &L2_tau16_IDTrkNoCut, &b_L2_tau16_IDTrkNoCut);
-   fChain->SetBranchAddress("L2_tau16_loose", &L2_tau16_loose, &b_L2_tau16_loose);
-   fChain->SetBranchAddress("L2_tau16_loose_e15_medium", &L2_tau16_loose_e15_medium, &b_L2_tau16_loose_e15_medium);
-   fChain->SetBranchAddress("L2_tau16_loose_e15_tight", &L2_tau16_loose_e15_tight, &b_L2_tau16_loose_e15_tight);
-   fChain->SetBranchAddress("L2_tau16_loose_mu10", &L2_tau16_loose_mu10, &b_L2_tau16_loose_mu10);
-   fChain->SetBranchAddress("L2_tau16_loose_mu15", &L2_tau16_loose_mu15, &b_L2_tau16_loose_mu15);
-   fChain->SetBranchAddress("L2_tau16_medium_mu10", &L2_tau16_medium_mu10, &b_L2_tau16_medium_mu10);
-   fChain->SetBranchAddress("L2_tau16_medium_xe22_noMu", &L2_tau16_medium_xe22_noMu, &b_L2_tau16_medium_xe22_noMu);
+   fChain->SetBranchAddress("L2_tau125_medium1", &L2_tau125_medium1, &b_L2_tau125_medium1);
+   fChain->SetBranchAddress("L2_tau20T_medium", &L2_tau20T_medium, &b_L2_tau20T_medium);
+   fChain->SetBranchAddress("L2_tau20T_medium2", &L2_tau20T_medium2, &b_L2_tau20T_medium2);
+   fChain->SetBranchAddress("L2_tau20T_medium_e15vh_medium", &L2_tau20T_medium_e15vh_medium, &b_L2_tau20T_medium_e15vh_medium);
+   fChain->SetBranchAddress("L2_tau20T_medium_mu15", &L2_tau20T_medium_mu15, &b_L2_tau20T_medium_mu15);
+   fChain->SetBranchAddress("L2_tau20_medium", &L2_tau20_medium, &b_L2_tau20_medium);
    fChain->SetBranchAddress("L2_tau20_medium1", &L2_tau20_medium1, &b_L2_tau20_medium1);
+   fChain->SetBranchAddress("L2_tau20_medium_e15vh_medium", &L2_tau20_medium_e15vh_medium, &b_L2_tau20_medium_e15vh_medium);
+   fChain->SetBranchAddress("L2_tau20_medium_mu15", &L2_tau20_medium_mu15, &b_L2_tau20_medium_mu15);
+   fChain->SetBranchAddress("L2_tau20i_medium", &L2_tau20i_medium, &b_L2_tau20i_medium);
+   fChain->SetBranchAddress("L2_tau20i_medium1", &L2_tau20i_medium1, &b_L2_tau20i_medium1);
+   fChain->SetBranchAddress("L2_tau20i_medium_e15vh_medium", &L2_tau20i_medium_e15vh_medium, &b_L2_tau20i_medium_e15vh_medium);
+   fChain->SetBranchAddress("L2_tau20i_medium_mu15", &L2_tau20i_medium_mu15, &b_L2_tau20i_medium_mu15);
+   fChain->SetBranchAddress("L2_tau20v_medium_e15vh_medium", &L2_tau20v_medium_e15vh_medium, &b_L2_tau20v_medium_e15vh_medium);
+   fChain->SetBranchAddress("L2_tau29T_medium", &L2_tau29T_medium, &b_L2_tau29T_medium);
+   fChain->SetBranchAddress("L2_tau29T_medium1_1P", &L2_tau29T_medium1_1P, &b_L2_tau29T_medium1_1P);
+   fChain->SetBranchAddress("L2_tau29T_medium1_1P_tau20T_medium2", &L2_tau29T_medium1_1P_tau20T_medium2, &b_L2_tau29T_medium1_1P_tau20T_medium2);
+   fChain->SetBranchAddress("L2_tau29T_medium1_tau20T_medium1", &L2_tau29T_medium1_tau20T_medium1, &b_L2_tau29T_medium1_tau20T_medium1);
+   fChain->SetBranchAddress("L2_tau29T_medium1_xe25_noMu_3L1J10", &L2_tau29T_medium1_xe25_noMu_3L1J10, &b_L2_tau29T_medium1_xe25_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29T_medium1_xs20_noMu_3L1J10", &L2_tau29T_medium1_xs20_noMu_3L1J10, &b_L2_tau29T_medium1_xs20_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29T_medium1_xs25_noMu_3L1J10", &L2_tau29T_medium1_xs25_noMu_3L1J10, &b_L2_tau29T_medium1_xs25_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29T_medium2", &L2_tau29T_medium2, &b_L2_tau29T_medium2);
+   fChain->SetBranchAddress("L2_tau29T_medium2_tau20T_medium2", &L2_tau29T_medium2_tau20T_medium2, &b_L2_tau29T_medium2_tau20T_medium2);
+   fChain->SetBranchAddress("L2_tau29T_medium_xe25_noMu_3L1J10", &L2_tau29T_medium_xe25_noMu_3L1J10, &b_L2_tau29T_medium_xe25_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29T_medium_xs25_noMu_3L1J10", &L2_tau29T_medium_xs25_noMu_3L1J10, &b_L2_tau29T_medium_xs25_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29T_medium_xs35_noMu", &L2_tau29T_medium_xs35_noMu, &b_L2_tau29T_medium_xs35_noMu);
+   fChain->SetBranchAddress("L2_tau29T_medium_xs50_noMu", &L2_tau29T_medium_xs50_noMu, &b_L2_tau29T_medium_xs50_noMu);
+   fChain->SetBranchAddress("L2_tau29Ti_medium1_1P_tau20Ti_medium2", &L2_tau29Ti_medium1_1P_tau20Ti_medium2, &b_L2_tau29Ti_medium1_1P_tau20Ti_medium2);
+   fChain->SetBranchAddress("L2_tau29Ti_medium1_tau20Ti_medium1", &L2_tau29Ti_medium1_tau20Ti_medium1, &b_L2_tau29Ti_medium1_tau20Ti_medium1);
+   fChain->SetBranchAddress("L2_tau29Ti_medium1_tau20i_medium1", &L2_tau29Ti_medium1_tau20i_medium1, &b_L2_tau29Ti_medium1_tau20i_medium1);
+   fChain->SetBranchAddress("L2_tau29Ti_medium2_tau20Ti_medium2", &L2_tau29Ti_medium2_tau20Ti_medium2, &b_L2_tau29Ti_medium2_tau20Ti_medium2);
+   fChain->SetBranchAddress("L2_tau29_IDTrkNoCut", &L2_tau29_IDTrkNoCut, &b_L2_tau29_IDTrkNoCut);
    fChain->SetBranchAddress("L2_tau29_loose", &L2_tau29_loose, &b_L2_tau29_loose);
+   fChain->SetBranchAddress("L2_tau29_loose1", &L2_tau29_loose1, &b_L2_tau29_loose1);
+   fChain->SetBranchAddress("L2_tau29_loose1_xs20_noMu_3L1J10", &L2_tau29_loose1_xs20_noMu_3L1J10, &b_L2_tau29_loose1_xs20_noMu_3L1J10);
+   fChain->SetBranchAddress("L2_tau29_loose_xs20_noMu_3L1J10", &L2_tau29_loose_xs20_noMu_3L1J10, &b_L2_tau29_loose_xs20_noMu_3L1J10);
    fChain->SetBranchAddress("L2_tau29_medium", &L2_tau29_medium, &b_L2_tau29_medium);
    fChain->SetBranchAddress("L2_tau29_medium1", &L2_tau29_medium1, &b_L2_tau29_medium1);
    fChain->SetBranchAddress("L2_tau29_medium1_tau20_medium1", &L2_tau29_medium1_tau20_medium1, &b_L2_tau29_medium1_tau20_medium1);
-   fChain->SetBranchAddress("L2_tau29_medium_xe20_loose_noMu", &L2_tau29_medium_xe20_loose_noMu, &b_L2_tau29_medium_xe20_loose_noMu);
+   fChain->SetBranchAddress("L2_tau29_medium1_xs20_noMu_3L1J10", &L2_tau29_medium1_xs20_noMu_3L1J10, &b_L2_tau29_medium1_xs20_noMu_3L1J10);
    fChain->SetBranchAddress("L2_tau29_medium_xe25_noMu", &L2_tau29_medium_xe25_noMu, &b_L2_tau29_medium_xe25_noMu);
-   fChain->SetBranchAddress("L2_tau50_IDTrkNoCut", &L2_tau50_IDTrkNoCut, &b_L2_tau50_IDTrkNoCut);
-   fChain->SetBranchAddress("L2_tau50_medium", &L2_tau50_medium, &b_L2_tau50_medium);
-   fChain->SetBranchAddress("L2_tau5_empty_larcalib", &L2_tau5_empty_larcalib, &b_L2_tau5_empty_larcalib);
-   fChain->SetBranchAddress("L2_tau84_loose", &L2_tau84_loose, &b_L2_tau84_loose);
+   fChain->SetBranchAddress("L2_tau29_medium_xe30_loose_noMu", &L2_tau29_medium_xe30_loose_noMu, &b_L2_tau29_medium_xe30_loose_noMu);
+   fChain->SetBranchAddress("L2_tau29i_medium", &L2_tau29i_medium, &b_L2_tau29i_medium);
+   fChain->SetBranchAddress("L2_tau29i_medium1", &L2_tau29i_medium1, &b_L2_tau29i_medium1);
+   fChain->SetBranchAddress("L2_tau50_medium_e15vh_medium", &L2_tau50_medium_e15vh_medium, &b_L2_tau50_medium_e15vh_medium);
+   fChain->SetBranchAddress("L2_tau8_empty_larcalib", &L2_tau8_empty_larcalib, &b_L2_tau8_empty_larcalib);
    fChain->SetBranchAddress("L2_tauNoCut", &L2_tauNoCut, &b_L2_tauNoCut);
    fChain->SetBranchAddress("L2_tauNoCut_L1TAU50", &L2_tauNoCut_L1TAU50, &b_L2_tauNoCut_L1TAU50);
    fChain->SetBranchAddress("L2_tauNoCut_cosmic", &L2_tauNoCut_cosmic, &b_L2_tauNoCut_cosmic);
@@ -13024,10 +15648,20 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("L2_xe20_noMu", &L2_xe20_noMu, &b_L2_xe20_noMu);
    fChain->SetBranchAddress("L2_xe30_noMu", &L2_xe30_noMu, &b_L2_xe30_noMu);
    fChain->SetBranchAddress("L2_xe35_noMu", &L2_xe35_noMu, &b_L2_xe35_noMu);
+   fChain->SetBranchAddress("L2_xe40_L2FEB_val", &L2_xe40_L2FEB_val, &b_L2_xe40_L2FEB_val);
    fChain->SetBranchAddress("L2_xe40_noMu", &L2_xe40_noMu, &b_L2_xe40_noMu);
+   fChain->SetBranchAddress("L2_xe45_noMu", &L2_xe45_noMu, &b_L2_xe45_noMu);
+   fChain->SetBranchAddress("L2_xe50_L2FEB_val", &L2_xe50_L2FEB_val, &b_L2_xe50_L2FEB_val);
    fChain->SetBranchAddress("L2_xe50_noMu", &L2_xe50_noMu, &b_L2_xe50_noMu);
+   fChain->SetBranchAddress("L2_xe55_noMu", &L2_xe55_noMu, &b_L2_xe55_noMu);
+   fChain->SetBranchAddress("L2_xe60_L2FEB_val", &L2_xe60_L2FEB_val, &b_L2_xe60_L2FEB_val);
    fChain->SetBranchAddress("L2_xe60_noMu", &L2_xe60_noMu, &b_L2_xe60_noMu);
+   fChain->SetBranchAddress("L2_xe65_noMu", &L2_xe65_noMu, &b_L2_xe65_noMu);
    fChain->SetBranchAddress("L2_xe70_noMu", &L2_xe70_noMu, &b_L2_xe70_noMu);
+   fChain->SetBranchAddress("L2_xe75_noMu", &L2_xe75_noMu, &b_L2_xe75_noMu);
+   fChain->SetBranchAddress("L2_xe80_noMu", &L2_xe80_noMu, &b_L2_xe80_noMu);
+   fChain->SetBranchAddress("L2_xe85_noMu", &L2_xe85_noMu, &b_L2_xe85_noMu);
+   fChain->SetBranchAddress("L2_xe90_noMu", &L2_xe90_noMu, &b_L2_xe90_noMu);
    fChain->SetBranchAddress("el_GSF_n", &el_n, &b_el_n);
    fChain->SetBranchAddress("el_GSF_E", &el_E, &b_el_E);
    fChain->SetBranchAddress("el_GSF_Et", &el_Et, &b_el_Et);
@@ -15573,27 +18207,36 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu10_loose", &trig_L2_muonfeature_L2_2mu10_loose, &b_trig_L2_muonfeature_L2_2mu10_loose);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu10_loose_empty", &trig_L2_muonfeature_L2_2mu10_loose_empty, &b_trig_L2_muonfeature_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm", &trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm, &b_trig_L2_muonfeature_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4", &trig_L2_muonfeature_L2_2mu4, &b_trig_L2_muonfeature_L2_2mu4);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_Bmumu", &trig_L2_muonfeature_L2_2mu4_Bmumu, &b_trig_L2_muonfeature_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_Bmumux", &trig_L2_muonfeature_L2_2mu4_Bmumux, &b_trig_L2_muonfeature_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_DiMu", &trig_L2_muonfeature_L2_2mu4_DiMu, &b_trig_L2_muonfeature_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk", &trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk, &b_trig_L2_muonfeature_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS", &trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS, &b_trig_L2_muonfeature_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_Jpsimumu", &trig_L2_muonfeature_L2_2mu4_Jpsimumu, &b_trig_L2_muonfeature_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut", &trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_L2_muonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4_Upsimumu", &trig_L2_muonfeature_L2_2mu4_Upsimumu, &b_trig_L2_muonfeature_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut", &trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut, &b_trig_L2_muonfeature_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T", &trig_L2_muonfeature_L2_2mu4T, &b_trig_L2_muonfeature_L2_2mu4T);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_2e5_medium", &trig_L2_muonfeature_L2_2mu4T_2e5_medium, &b_trig_L2_muonfeature_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_Bmumu", &trig_L2_muonfeature_L2_2mu4T_Bmumu, &b_trig_L2_muonfeature_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_Bmumux", &trig_L2_muonfeature_L2_2mu4T_Bmumux, &b_trig_L2_muonfeature_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu", &trig_L2_muonfeature_L2_2mu4T_DiMu, &b_trig_L2_muonfeature_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu_DY", &trig_L2_muonfeature_L2_2mu4T_DiMu_DY, &b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu_DY20", &trig_L2_muonfeature_L2_2mu4T_DiMu_DY20, &b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS", &trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_L2_muonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk", &trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk, &b_trig_L2_muonfeature_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS", &trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS, &b_trig_L2_muonfeature_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu", &trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu, &b_trig_L2_muonfeature_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu", &trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu, &b_trig_L2_muonfeature_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_Jpsimumu", &trig_L2_muonfeature_L2_2mu4T_Jpsimumu, &b_trig_L2_muonfeature_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut", &trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_L2_muonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_Upsimumu", &trig_L2_muonfeature_L2_2mu4T_Upsimumu, &b_trig_L2_muonfeature_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_xe20_noMu", &trig_L2_muonfeature_L2_2mu4T_xe20_noMu, &b_trig_L2_muonfeature_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4T_xe25_noMu", &trig_L2_muonfeature_L2_2mu4T_xe25_noMu, &b_trig_L2_muonfeature_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY", &trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY, &b_trig_L2_muonfeature_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6", &trig_L2_muonfeature_L2_2mu6, &b_trig_L2_muonfeature_L2_2mu6);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6_Bmumux", &trig_L2_muonfeature_L2_2mu6_Bmumux, &b_trig_L2_muonfeature_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6_DiMu", &trig_L2_muonfeature_L2_2mu6_DiMu, &b_trig_L2_muonfeature_L2_2mu6_DiMu);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose", &trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose, &b_trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6_NL", &trig_L2_muonfeature_L2_2mu6_NL, &b_trig_L2_muonfeature_L2_2mu6_NL);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu0_cal_empty", &trig_L2_muonfeature_L2_mu0_cal_empty, &b_trig_L2_muonfeature_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu0_empty_NoAlg", &trig_L2_muonfeature_L2_mu0_empty_NoAlg, &b_trig_L2_muonfeature_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu0_firstempty_NoAlg", &trig_L2_muonfeature_L2_mu0_firstempty_NoAlg, &b_trig_L2_muonfeature_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg", &trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg, &b_trig_L2_muonfeature_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled", &trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled, &b_trig_L2_muonfeature_L2_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10", &trig_L2_muonfeature_L2_mu10, &b_trig_L2_muonfeature_L2_mu10);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_Jpsimumu", &trig_L2_muonfeature_L2_mu10_Jpsimumu, &b_trig_L2_muonfeature_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_NL", &trig_L2_muonfeature_L2_mu10_NL, &b_trig_L2_muonfeature_L2_mu10_NL);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_Upsimumu_FS", &trig_L2_muonfeature_L2_mu10_Upsimumu_FS, &b_trig_L2_muonfeature_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS", &trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS, &b_trig_L2_muonfeature_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_cal", &trig_L2_muonfeature_L2_mu10_cal, &b_trig_L2_muonfeature_L2_mu10_cal);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_cal_medium", &trig_L2_muonfeature_L2_mu10_cal_medium, &b_trig_L2_muonfeature_L2_mu10_cal_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_loose", &trig_L2_muonfeature_L2_mu10_loose, &b_trig_L2_muonfeature_L2_mu10_loose);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu10_muCombTag_NoEF", &trig_L2_muonfeature_L2_mu10_muCombTag_NoEF, &b_trig_L2_muonfeature_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu11_empty_NoAlg", &trig_L2_muonfeature_L2_mu11_empty_NoAlg, &b_trig_L2_muonfeature_L2_mu11_empty_NoAlg);
@@ -15601,45 +18244,99 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu13_MG", &trig_L2_muonfeature_L2_mu13_MG, &b_trig_L2_muonfeature_L2_mu13_MG);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu13_muCombTag_NoEF", &trig_L2_muonfeature_L2_mu13_muCombTag_NoEF, &b_trig_L2_muonfeature_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15", &trig_L2_muonfeature_L2_mu15, &b_trig_L2_muonfeature_L2_mu15);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15_medium", &trig_L2_muonfeature_L2_mu15_medium, &b_trig_L2_muonfeature_L2_mu15_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15_tight", &trig_L2_muonfeature_L2_mu15_tight, &b_trig_L2_muonfeature_L2_mu15_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15_xe20_noMu", &trig_L2_muonfeature_L2_mu15_xe20_noMu, &b_trig_L2_muonfeature_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15i", &trig_L2_muonfeature_L2_mu15i, &b_trig_L2_muonfeature_L2_mu15i);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu15i_medium", &trig_L2_muonfeature_L2_mu15i_medium, &b_trig_L2_muonfeature_L2_mu15i_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18", &trig_L2_muonfeature_L2_mu18, &b_trig_L2_muonfeature_L2_mu18);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_L1J10", &trig_L2_muonfeature_L2_mu18_L1J10, &b_trig_L2_muonfeature_L2_mu18_L1J10);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_MG", &trig_L2_muonfeature_L2_mu18_MG, &b_trig_L2_muonfeature_L2_mu18_MG);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_MG_L1J10", &trig_L2_muonfeature_L2_mu18_MG_L1J10, &b_trig_L2_muonfeature_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_MG_medium", &trig_L2_muonfeature_L2_mu18_MG_medium, &b_trig_L2_muonfeature_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_medium", &trig_L2_muonfeature_L2_mu18_medium, &b_trig_L2_muonfeature_L2_mu18_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS", &trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS, &b_trig_L2_muonfeature_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS", &trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS, &b_trig_L2_muonfeature_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS", &trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS, &b_trig_L2_muonfeature_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS", &trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS, &b_trig_L2_muonfeature_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu18i4_medium", &trig_L2_muonfeature_L2_mu18i4_medium, &b_trig_L2_muonfeature_L2_mu18i4_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20", &trig_L2_muonfeature_L2_mu20, &b_trig_L2_muonfeature_L2_mu20);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_IDTrkNoCut", &trig_L2_muonfeature_L2_mu20_IDTrkNoCut, &b_trig_L2_muonfeature_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_MG", &trig_L2_muonfeature_L2_mu20_MG, &b_trig_L2_muonfeature_L2_mu20_MG);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_MG_medium", &trig_L2_muonfeature_L2_mu20_MG_medium, &b_trig_L2_muonfeature_L2_mu20_MG_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_empty", &trig_L2_muonfeature_L2_mu20_empty, &b_trig_L2_muonfeature_L2_mu20_empty);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_medium", &trig_L2_muonfeature_L2_mu20_medium, &b_trig_L2_muonfeature_L2_mu20_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_muCombTag_NoEF", &trig_L2_muonfeature_L2_mu20_muCombTag_NoEF, &b_trig_L2_muonfeature_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20_tight", &trig_L2_muonfeature_L2_mu20_tight, &b_trig_L2_muonfeature_L2_mu20_tight);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20i", &trig_L2_muonfeature_L2_mu20i, &b_trig_L2_muonfeature_L2_mu20i);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu20i_medium", &trig_L2_muonfeature_L2_mu20i_medium, &b_trig_L2_muonfeature_L2_mu20i_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22", &trig_L2_muonfeature_L2_mu22, &b_trig_L2_muonfeature_L2_mu22);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22_MG", &trig_L2_muonfeature_L2_mu22_MG, &b_trig_L2_muonfeature_L2_mu22_MG);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4", &trig_L2_muonfeature_L2_mu4, &b_trig_L2_muonfeature_L2_mu4);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22_MG_medium", &trig_L2_muonfeature_L2_mu22_MG_medium, &b_trig_L2_muonfeature_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS", &trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS, &b_trig_L2_muonfeature_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22_medium", &trig_L2_muonfeature_L2_mu22_medium, &b_trig_L2_muonfeature_L2_mu22_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22i2_medium", &trig_L2_muonfeature_L2_mu22i2_medium, &b_trig_L2_muonfeature_L2_mu22i2_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu22i4_medium", &trig_L2_muonfeature_L2_mu22i4_medium, &b_trig_L2_muonfeature_L2_mu22i4_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu24_MG_medium", &trig_L2_muonfeature_L2_mu24_MG_medium, &b_trig_L2_muonfeature_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu24_MG_tight", &trig_L2_muonfeature_L2_mu24_MG_tight, &b_trig_L2_muonfeature_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu24_medium", &trig_L2_muonfeature_L2_mu24_medium, &b_trig_L2_muonfeature_L2_mu24_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu24_tight", &trig_L2_muonfeature_L2_mu24_tight, &b_trig_L2_muonfeature_L2_mu24_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu30_MG_medium", &trig_L2_muonfeature_L2_mu30_MG_medium, &b_trig_L2_muonfeature_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu30_MG_tight", &trig_L2_muonfeature_L2_mu30_MG_tight, &b_trig_L2_muonfeature_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu30_medium", &trig_L2_muonfeature_L2_mu30_medium, &b_trig_L2_muonfeature_L2_mu30_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu30_tight", &trig_L2_muonfeature_L2_mu30_tight, &b_trig_L2_muonfeature_L2_mu30_tight);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_barrel", &trig_L2_muonfeature_L2_mu40_MSonly_barrel, &b_trig_L2_muonfeature_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium", &trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium, &b_trig_L2_muonfeature_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_empty", &trig_L2_muonfeature_L2_mu40_MSonly_empty, &b_trig_L2_muonfeature_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_tight", &trig_L2_muonfeature_L2_mu40_MSonly_tight, &b_trig_L2_muonfeature_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11", &trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11, &b_trig_L2_muonfeature_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_MSonly_tighter", &trig_L2_muonfeature_L2_mu40_MSonly_tighter, &b_trig_L2_muonfeature_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_slow", &trig_L2_muonfeature_L2_mu40_slow, &b_trig_L2_muonfeature_L2_mu40_slow);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_slow_empty", &trig_L2_muonfeature_L2_mu40_slow_empty, &b_trig_L2_muonfeature_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_slow_medium", &trig_L2_muonfeature_L2_mu40_slow_medium, &b_trig_L2_muonfeature_L2_mu40_slow_medium);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_slow_outOfTime", &trig_L2_muonfeature_L2_mu40_slow_outOfTime, &b_trig_L2_muonfeature_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_DiMu", &trig_L2_muonfeature_L2_mu4_DiMu, &b_trig_L2_muonfeature_L2_mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS", &trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS, &b_trig_L2_muonfeature_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_Jpsimumu", &trig_L2_muonfeature_L2_mu4_Jpsimumu, &b_trig_L2_muonfeature_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium", &trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium, &b_trig_L2_muonfeature_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T", &trig_L2_muonfeature_L2_mu4T, &b_trig_L2_muonfeature_L2_mu4T);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_DiMu", &trig_L2_muonfeature_L2_mu4T_DiMu, &b_trig_L2_muonfeature_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS", &trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS, &b_trig_L2_muonfeature_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Jpsimumu", &trig_L2_muonfeature_L2_mu4T_Jpsimumu, &b_trig_L2_muonfeature_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Trk_Jpsi", &trig_L2_muonfeature_L2_mu4T_Trk_Jpsi, &b_trig_L2_muonfeature_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS", &trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS, &b_trig_L2_muonfeature_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Upsimumu_FS", &trig_L2_muonfeature_L2_mu4T_Upsimumu_FS, &b_trig_L2_muonfeature_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS", &trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS, &b_trig_L2_muonfeature_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS", &trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS, &b_trig_L2_muonfeature_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu", &trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu, &b_trig_L2_muonfeature_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu", &trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu, &b_trig_L2_muonfeature_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY", &trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY, &b_trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_L2_muonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_Bmumu", &trig_L2_muonfeature_L2_mu4Tmu6_Bmumu, &b_trig_L2_muonfeature_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_Bmumux", &trig_L2_muonfeature_L2_mu4Tmu6_Bmumux, &b_trig_L2_muonfeature_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_DiMu", &trig_L2_muonfeature_L2_mu4Tmu6_DiMu, &b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20", &trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20, &b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS", &trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_L2_muonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu", &trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu, &b_trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_L2_muonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu", &trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu, &b_trig_L2_muonfeature_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J10_matched", &trig_L2_muonfeature_L2_mu4_L1J10_matched, &b_trig_L2_muonfeature_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J15_matched", &trig_L2_muonfeature_L2_mu4_L1J15_matched, &b_trig_L2_muonfeature_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J20_matched", &trig_L2_muonfeature_L2_mu4_L1J20_matched, &b_trig_L2_muonfeature_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J30_matched", &trig_L2_muonfeature_L2_mu4_L1J30_matched, &b_trig_L2_muonfeature_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J50_matched", &trig_L2_muonfeature_L2_mu4_L1J50_matched, &b_trig_L2_muonfeature_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1J75_matched", &trig_L2_muonfeature_L2_mu4_L1J75_matched, &b_trig_L2_muonfeature_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic", &trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic, &b_trig_L2_muonfeature_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_L1MU11_cosmic", &trig_L2_muonfeature_L2_mu4_L1MU11_cosmic, &b_trig_L2_muonfeature_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_MSonly_cosmic", &trig_L2_muonfeature_L2_mu4_MSonly_cosmic, &b_trig_L2_muonfeature_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_Trk_Jpsi", &trig_L2_muonfeature_L2_mu4_Trk_Jpsi, &b_trig_L2_muonfeature_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_Upsimumu_FS", &trig_L2_muonfeature_L2_mu4_Upsimumu_FS, &b_trig_L2_muonfeature_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS", &trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS, &b_trig_L2_muonfeature_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_cal_empty", &trig_L2_muonfeature_L2_mu4_cal_empty, &b_trig_L2_muonfeature_L2_mu4_cal_empty);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_cosmic", &trig_L2_muonfeature_L2_mu4_cosmic, &b_trig_L2_muonfeature_L2_mu4_cosmic);
-   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_j10_a4_EFFS", &trig_L2_muonfeature_L2_mu4_j10_a4_EFFS, &b_trig_L2_muonfeature_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_empty_NoAlg", &trig_L2_muonfeature_L2_mu4_empty_NoAlg, &b_trig_L2_muonfeature_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_firstempty_NoAlg", &trig_L2_muonfeature_L2_mu4_firstempty_NoAlg, &b_trig_L2_muonfeature_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_j95_L1matched", &trig_L2_muonfeature_L2_mu4_j95_L1matched, &b_trig_L2_muonfeature_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg", &trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg, &b_trig_L2_muonfeature_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6", &trig_L2_muonfeature_L2_mu6, &b_trig_L2_muonfeature_L2_mu6);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6_DiMu_noOS", &trig_L2_muonfeature_L2_mu6_DiMu_noOS, &b_trig_L2_muonfeature_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6_Jpsimumu", &trig_L2_muonfeature_L2_mu6_Jpsimumu, &b_trig_L2_muonfeature_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk", &trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk, &b_trig_L2_muonfeature_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6_Jpsimumu_tight", &trig_L2_muonfeature_L2_mu6_Jpsimumu_tight, &b_trig_L2_muonfeature_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose", &trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose, &b_trig_L2_muonfeature_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_L2_muonfeaturedetails_n", &trig_L2_muonfeaturedetails_n, &b_trig_L2_muonfeaturedetails_n);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_n", &trig_L2_combmuonfeature_n, &b_trig_L2_combmuonfeature_n);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_pt", &trig_L2_combmuonfeature_pt, &b_trig_L2_combmuonfeature_pt);
@@ -15651,27 +18348,36 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu10_loose", &trig_L2_combmuonfeature_L2_2mu10_loose, &b_trig_L2_combmuonfeature_L2_2mu10_loose);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu10_loose_empty", &trig_L2_combmuonfeature_L2_2mu10_loose_empty, &b_trig_L2_combmuonfeature_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm", &trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm, &b_trig_L2_combmuonfeature_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4", &trig_L2_combmuonfeature_L2_2mu4, &b_trig_L2_combmuonfeature_L2_2mu4);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_Bmumu", &trig_L2_combmuonfeature_L2_2mu4_Bmumu, &b_trig_L2_combmuonfeature_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_Bmumux", &trig_L2_combmuonfeature_L2_2mu4_Bmumux, &b_trig_L2_combmuonfeature_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_DiMu", &trig_L2_combmuonfeature_L2_2mu4_DiMu, &b_trig_L2_combmuonfeature_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk", &trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk, &b_trig_L2_combmuonfeature_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS", &trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS, &b_trig_L2_combmuonfeature_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_Jpsimumu", &trig_L2_combmuonfeature_L2_2mu4_Jpsimumu, &b_trig_L2_combmuonfeature_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut", &trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_L2_combmuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4_Upsimumu", &trig_L2_combmuonfeature_L2_2mu4_Upsimumu, &b_trig_L2_combmuonfeature_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut", &trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut, &b_trig_L2_combmuonfeature_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T", &trig_L2_combmuonfeature_L2_2mu4T, &b_trig_L2_combmuonfeature_L2_2mu4T);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_2e5_medium", &trig_L2_combmuonfeature_L2_2mu4T_2e5_medium, &b_trig_L2_combmuonfeature_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_Bmumu", &trig_L2_combmuonfeature_L2_2mu4T_Bmumu, &b_trig_L2_combmuonfeature_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_Bmumux", &trig_L2_combmuonfeature_L2_2mu4T_Bmumux, &b_trig_L2_combmuonfeature_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu", &trig_L2_combmuonfeature_L2_2mu4T_DiMu, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY", &trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20", &trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS", &trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk", &trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS", &trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS, &b_trig_L2_combmuonfeature_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu", &trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu, &b_trig_L2_combmuonfeature_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu", &trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu, &b_trig_L2_combmuonfeature_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu", &trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu, &b_trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut", &trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_L2_combmuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_Upsimumu", &trig_L2_combmuonfeature_L2_2mu4T_Upsimumu, &b_trig_L2_combmuonfeature_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu", &trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu, &b_trig_L2_combmuonfeature_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu", &trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu, &b_trig_L2_combmuonfeature_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY", &trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY, &b_trig_L2_combmuonfeature_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6", &trig_L2_combmuonfeature_L2_2mu6, &b_trig_L2_combmuonfeature_L2_2mu6);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6_Bmumux", &trig_L2_combmuonfeature_L2_2mu6_Bmumux, &b_trig_L2_combmuonfeature_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6_DiMu", &trig_L2_combmuonfeature_L2_2mu6_DiMu, &b_trig_L2_combmuonfeature_L2_2mu6_DiMu);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose", &trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose, &b_trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6_NL", &trig_L2_combmuonfeature_L2_2mu6_NL, &b_trig_L2_combmuonfeature_L2_2mu6_NL);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu0_cal_empty", &trig_L2_combmuonfeature_L2_mu0_cal_empty, &b_trig_L2_combmuonfeature_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu0_empty_NoAlg", &trig_L2_combmuonfeature_L2_mu0_empty_NoAlg, &b_trig_L2_combmuonfeature_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg", &trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg, &b_trig_L2_combmuonfeature_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg", &trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg, &b_trig_L2_combmuonfeature_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled", &trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled, &b_trig_L2_combmuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10", &trig_L2_combmuonfeature_L2_mu10, &b_trig_L2_combmuonfeature_L2_mu10);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_Jpsimumu", &trig_L2_combmuonfeature_L2_mu10_Jpsimumu, &b_trig_L2_combmuonfeature_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_NL", &trig_L2_combmuonfeature_L2_mu10_NL, &b_trig_L2_combmuonfeature_L2_mu10_NL);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS", &trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS, &b_trig_L2_combmuonfeature_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS", &trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS, &b_trig_L2_combmuonfeature_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_cal", &trig_L2_combmuonfeature_L2_mu10_cal, &b_trig_L2_combmuonfeature_L2_mu10_cal);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_cal_medium", &trig_L2_combmuonfeature_L2_mu10_cal_medium, &b_trig_L2_combmuonfeature_L2_mu10_cal_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_loose", &trig_L2_combmuonfeature_L2_mu10_loose, &b_trig_L2_combmuonfeature_L2_mu10_loose);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF", &trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF, &b_trig_L2_combmuonfeature_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu11_empty_NoAlg", &trig_L2_combmuonfeature_L2_mu11_empty_NoAlg, &b_trig_L2_combmuonfeature_L2_mu11_empty_NoAlg);
@@ -15679,45 +18385,99 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu13_MG", &trig_L2_combmuonfeature_L2_mu13_MG, &b_trig_L2_combmuonfeature_L2_mu13_MG);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF", &trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF, &b_trig_L2_combmuonfeature_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15", &trig_L2_combmuonfeature_L2_mu15, &b_trig_L2_combmuonfeature_L2_mu15);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15_medium", &trig_L2_combmuonfeature_L2_mu15_medium, &b_trig_L2_combmuonfeature_L2_mu15_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15_tight", &trig_L2_combmuonfeature_L2_mu15_tight, &b_trig_L2_combmuonfeature_L2_mu15_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15_xe20_noMu", &trig_L2_combmuonfeature_L2_mu15_xe20_noMu, &b_trig_L2_combmuonfeature_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15i", &trig_L2_combmuonfeature_L2_mu15i, &b_trig_L2_combmuonfeature_L2_mu15i);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu15i_medium", &trig_L2_combmuonfeature_L2_mu15i_medium, &b_trig_L2_combmuonfeature_L2_mu15i_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18", &trig_L2_combmuonfeature_L2_mu18, &b_trig_L2_combmuonfeature_L2_mu18);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_L1J10", &trig_L2_combmuonfeature_L2_mu18_L1J10, &b_trig_L2_combmuonfeature_L2_mu18_L1J10);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_MG", &trig_L2_combmuonfeature_L2_mu18_MG, &b_trig_L2_combmuonfeature_L2_mu18_MG);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_MG_L1J10", &trig_L2_combmuonfeature_L2_mu18_MG_L1J10, &b_trig_L2_combmuonfeature_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_MG_medium", &trig_L2_combmuonfeature_L2_mu18_MG_medium, &b_trig_L2_combmuonfeature_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_medium", &trig_L2_combmuonfeature_L2_mu18_medium, &b_trig_L2_combmuonfeature_L2_mu18_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS", &trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS, &b_trig_L2_combmuonfeature_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS", &trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS, &b_trig_L2_combmuonfeature_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS", &trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS, &b_trig_L2_combmuonfeature_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS", &trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS, &b_trig_L2_combmuonfeature_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu18i4_medium", &trig_L2_combmuonfeature_L2_mu18i4_medium, &b_trig_L2_combmuonfeature_L2_mu18i4_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20", &trig_L2_combmuonfeature_L2_mu20, &b_trig_L2_combmuonfeature_L2_mu20);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut", &trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut, &b_trig_L2_combmuonfeature_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_MG", &trig_L2_combmuonfeature_L2_mu20_MG, &b_trig_L2_combmuonfeature_L2_mu20_MG);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_MG_medium", &trig_L2_combmuonfeature_L2_mu20_MG_medium, &b_trig_L2_combmuonfeature_L2_mu20_MG_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_empty", &trig_L2_combmuonfeature_L2_mu20_empty, &b_trig_L2_combmuonfeature_L2_mu20_empty);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_medium", &trig_L2_combmuonfeature_L2_mu20_medium, &b_trig_L2_combmuonfeature_L2_mu20_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF", &trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF, &b_trig_L2_combmuonfeature_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20_tight", &trig_L2_combmuonfeature_L2_mu20_tight, &b_trig_L2_combmuonfeature_L2_mu20_tight);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20i", &trig_L2_combmuonfeature_L2_mu20i, &b_trig_L2_combmuonfeature_L2_mu20i);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu20i_medium", &trig_L2_combmuonfeature_L2_mu20i_medium, &b_trig_L2_combmuonfeature_L2_mu20i_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22", &trig_L2_combmuonfeature_L2_mu22, &b_trig_L2_combmuonfeature_L2_mu22);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22_MG", &trig_L2_combmuonfeature_L2_mu22_MG, &b_trig_L2_combmuonfeature_L2_mu22_MG);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4", &trig_L2_combmuonfeature_L2_mu4, &b_trig_L2_combmuonfeature_L2_mu4);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22_MG_medium", &trig_L2_combmuonfeature_L2_mu22_MG_medium, &b_trig_L2_combmuonfeature_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS", &trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS, &b_trig_L2_combmuonfeature_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22_medium", &trig_L2_combmuonfeature_L2_mu22_medium, &b_trig_L2_combmuonfeature_L2_mu22_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22i2_medium", &trig_L2_combmuonfeature_L2_mu22i2_medium, &b_trig_L2_combmuonfeature_L2_mu22i2_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu22i4_medium", &trig_L2_combmuonfeature_L2_mu22i4_medium, &b_trig_L2_combmuonfeature_L2_mu22i4_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu24_MG_medium", &trig_L2_combmuonfeature_L2_mu24_MG_medium, &b_trig_L2_combmuonfeature_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu24_MG_tight", &trig_L2_combmuonfeature_L2_mu24_MG_tight, &b_trig_L2_combmuonfeature_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu24_medium", &trig_L2_combmuonfeature_L2_mu24_medium, &b_trig_L2_combmuonfeature_L2_mu24_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu24_tight", &trig_L2_combmuonfeature_L2_mu24_tight, &b_trig_L2_combmuonfeature_L2_mu24_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu30_MG_medium", &trig_L2_combmuonfeature_L2_mu30_MG_medium, &b_trig_L2_combmuonfeature_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu30_MG_tight", &trig_L2_combmuonfeature_L2_mu30_MG_tight, &b_trig_L2_combmuonfeature_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu30_medium", &trig_L2_combmuonfeature_L2_mu30_medium, &b_trig_L2_combmuonfeature_L2_mu30_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu30_tight", &trig_L2_combmuonfeature_L2_mu30_tight, &b_trig_L2_combmuonfeature_L2_mu30_tight);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_barrel", &trig_L2_combmuonfeature_L2_mu40_MSonly_barrel, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium", &trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_empty", &trig_L2_combmuonfeature_L2_mu40_MSonly_empty, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_tight", &trig_L2_combmuonfeature_L2_mu40_MSonly_tight, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11", &trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_MSonly_tighter", &trig_L2_combmuonfeature_L2_mu40_MSonly_tighter, &b_trig_L2_combmuonfeature_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_slow", &trig_L2_combmuonfeature_L2_mu40_slow, &b_trig_L2_combmuonfeature_L2_mu40_slow);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_slow_empty", &trig_L2_combmuonfeature_L2_mu40_slow_empty, &b_trig_L2_combmuonfeature_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_slow_medium", &trig_L2_combmuonfeature_L2_mu40_slow_medium, &b_trig_L2_combmuonfeature_L2_mu40_slow_medium);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_slow_outOfTime", &trig_L2_combmuonfeature_L2_mu40_slow_outOfTime, &b_trig_L2_combmuonfeature_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_DiMu", &trig_L2_combmuonfeature_L2_mu4_DiMu, &b_trig_L2_combmuonfeature_L2_mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS", &trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS, &b_trig_L2_combmuonfeature_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_Jpsimumu", &trig_L2_combmuonfeature_L2_mu4_Jpsimumu, &b_trig_L2_combmuonfeature_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium", &trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium, &b_trig_L2_combmuonfeature_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T", &trig_L2_combmuonfeature_L2_mu4T, &b_trig_L2_combmuonfeature_L2_mu4T);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_DiMu", &trig_L2_combmuonfeature_L2_mu4T_DiMu, &b_trig_L2_combmuonfeature_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS", &trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS, &b_trig_L2_combmuonfeature_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Jpsimumu", &trig_L2_combmuonfeature_L2_mu4T_Jpsimumu, &b_trig_L2_combmuonfeature_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi", &trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi, &b_trig_L2_combmuonfeature_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS", &trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS, &b_trig_L2_combmuonfeature_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS", &trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS, &b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS", &trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS, &b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS", &trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS, &b_trig_L2_combmuonfeature_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu", &trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu, &b_trig_L2_combmuonfeature_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu", &trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu, &b_trig_L2_combmuonfeature_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY", &trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY, &b_trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_L2_combmuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu", &trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux", &trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu", &trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20", &trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS", &trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu", &trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu", &trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu, &b_trig_L2_combmuonfeature_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J10_matched", &trig_L2_combmuonfeature_L2_mu4_L1J10_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J15_matched", &trig_L2_combmuonfeature_L2_mu4_L1J15_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J20_matched", &trig_L2_combmuonfeature_L2_mu4_L1J20_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J30_matched", &trig_L2_combmuonfeature_L2_mu4_L1J30_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J50_matched", &trig_L2_combmuonfeature_L2_mu4_L1J50_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1J75_matched", &trig_L2_combmuonfeature_L2_mu4_L1J75_matched, &b_trig_L2_combmuonfeature_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic", &trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic, &b_trig_L2_combmuonfeature_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic", &trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic, &b_trig_L2_combmuonfeature_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic", &trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic, &b_trig_L2_combmuonfeature_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi", &trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi, &b_trig_L2_combmuonfeature_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS", &trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS, &b_trig_L2_combmuonfeature_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS", &trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS, &b_trig_L2_combmuonfeature_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_cal_empty", &trig_L2_combmuonfeature_L2_mu4_cal_empty, &b_trig_L2_combmuonfeature_L2_mu4_cal_empty);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_cosmic", &trig_L2_combmuonfeature_L2_mu4_cosmic, &b_trig_L2_combmuonfeature_L2_mu4_cosmic);
-   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS", &trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS, &b_trig_L2_combmuonfeature_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_empty_NoAlg", &trig_L2_combmuonfeature_L2_mu4_empty_NoAlg, &b_trig_L2_combmuonfeature_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg", &trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg, &b_trig_L2_combmuonfeature_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_j95_L1matched", &trig_L2_combmuonfeature_L2_mu4_j95_L1matched, &b_trig_L2_combmuonfeature_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg", &trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg, &b_trig_L2_combmuonfeature_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6", &trig_L2_combmuonfeature_L2_mu6, &b_trig_L2_combmuonfeature_L2_mu6);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6_DiMu_noOS", &trig_L2_combmuonfeature_L2_mu6_DiMu_noOS, &b_trig_L2_combmuonfeature_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6_Jpsimumu", &trig_L2_combmuonfeature_L2_mu6_Jpsimumu, &b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk", &trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk, &b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight", &trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight, &b_trig_L2_combmuonfeature_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose", &trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose, &b_trig_L2_combmuonfeature_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_mf_index", &trig_L2_combmuonfeature_mf_index, &b_trig_L2_combmuonfeature_mf_index);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_idscantrk_index", &trig_L2_combmuonfeature_idscantrk_index, &b_trig_L2_combmuonfeature_idscantrk_index);
    fChain->SetBranchAddress("trig_L2_combmuonfeature_sitracktrk_index", &trig_L2_combmuonfeature_sitracktrk_index, &b_trig_L2_combmuonfeature_sitracktrk_index);
@@ -15741,27 +18501,36 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu10_loose", &trig_L2_isomuonfeature_L2_2mu10_loose, &b_trig_L2_isomuonfeature_L2_2mu10_loose);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu10_loose_empty", &trig_L2_isomuonfeature_L2_2mu10_loose_empty, &b_trig_L2_isomuonfeature_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm", &trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm, &b_trig_L2_isomuonfeature_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4", &trig_L2_isomuonfeature_L2_2mu4, &b_trig_L2_isomuonfeature_L2_2mu4);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_Bmumu", &trig_L2_isomuonfeature_L2_2mu4_Bmumu, &b_trig_L2_isomuonfeature_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_Bmumux", &trig_L2_isomuonfeature_L2_2mu4_Bmumux, &b_trig_L2_isomuonfeature_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_DiMu", &trig_L2_isomuonfeature_L2_2mu4_DiMu, &b_trig_L2_isomuonfeature_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk", &trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk, &b_trig_L2_isomuonfeature_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS", &trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS, &b_trig_L2_isomuonfeature_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_Jpsimumu", &trig_L2_isomuonfeature_L2_2mu4_Jpsimumu, &b_trig_L2_isomuonfeature_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut", &trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_L2_isomuonfeature_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4_Upsimumu", &trig_L2_isomuonfeature_L2_2mu4_Upsimumu, &b_trig_L2_isomuonfeature_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut", &trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut, &b_trig_L2_isomuonfeature_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T", &trig_L2_isomuonfeature_L2_2mu4T, &b_trig_L2_isomuonfeature_L2_2mu4T);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_2e5_medium", &trig_L2_isomuonfeature_L2_2mu4T_2e5_medium, &b_trig_L2_isomuonfeature_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_Bmumu", &trig_L2_isomuonfeature_L2_2mu4T_Bmumu, &b_trig_L2_isomuonfeature_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_Bmumux", &trig_L2_isomuonfeature_L2_2mu4T_Bmumux, &b_trig_L2_isomuonfeature_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu", &trig_L2_isomuonfeature_L2_2mu4T_DiMu, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY", &trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20", &trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS", &trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk", &trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS", &trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS, &b_trig_L2_isomuonfeature_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu", &trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu, &b_trig_L2_isomuonfeature_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu", &trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu, &b_trig_L2_isomuonfeature_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu", &trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu, &b_trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut", &trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_L2_isomuonfeature_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_Upsimumu", &trig_L2_isomuonfeature_L2_2mu4T_Upsimumu, &b_trig_L2_isomuonfeature_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu", &trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu, &b_trig_L2_isomuonfeature_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu", &trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu, &b_trig_L2_isomuonfeature_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY", &trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY, &b_trig_L2_isomuonfeature_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6", &trig_L2_isomuonfeature_L2_2mu6, &b_trig_L2_isomuonfeature_L2_2mu6);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6_Bmumux", &trig_L2_isomuonfeature_L2_2mu6_Bmumux, &b_trig_L2_isomuonfeature_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6_DiMu", &trig_L2_isomuonfeature_L2_2mu6_DiMu, &b_trig_L2_isomuonfeature_L2_2mu6_DiMu);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose", &trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose, &b_trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6_NL", &trig_L2_isomuonfeature_L2_2mu6_NL, &b_trig_L2_isomuonfeature_L2_2mu6_NL);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu0_cal_empty", &trig_L2_isomuonfeature_L2_mu0_cal_empty, &b_trig_L2_isomuonfeature_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu0_empty_NoAlg", &trig_L2_isomuonfeature_L2_mu0_empty_NoAlg, &b_trig_L2_isomuonfeature_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg", &trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg, &b_trig_L2_isomuonfeature_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg", &trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg, &b_trig_L2_isomuonfeature_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled", &trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled, &b_trig_L2_isomuonfeature_L2_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10", &trig_L2_isomuonfeature_L2_mu10, &b_trig_L2_isomuonfeature_L2_mu10);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_Jpsimumu", &trig_L2_isomuonfeature_L2_mu10_Jpsimumu, &b_trig_L2_isomuonfeature_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_NL", &trig_L2_isomuonfeature_L2_mu10_NL, &b_trig_L2_isomuonfeature_L2_mu10_NL);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS", &trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS, &b_trig_L2_isomuonfeature_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS", &trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS, &b_trig_L2_isomuonfeature_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_cal", &trig_L2_isomuonfeature_L2_mu10_cal, &b_trig_L2_isomuonfeature_L2_mu10_cal);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_cal_medium", &trig_L2_isomuonfeature_L2_mu10_cal_medium, &b_trig_L2_isomuonfeature_L2_mu10_cal_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_loose", &trig_L2_isomuonfeature_L2_mu10_loose, &b_trig_L2_isomuonfeature_L2_mu10_loose);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF", &trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF, &b_trig_L2_isomuonfeature_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu11_empty_NoAlg", &trig_L2_isomuonfeature_L2_mu11_empty_NoAlg, &b_trig_L2_isomuonfeature_L2_mu11_empty_NoAlg);
@@ -15769,45 +18538,99 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu13_MG", &trig_L2_isomuonfeature_L2_mu13_MG, &b_trig_L2_isomuonfeature_L2_mu13_MG);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF", &trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF, &b_trig_L2_isomuonfeature_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15", &trig_L2_isomuonfeature_L2_mu15, &b_trig_L2_isomuonfeature_L2_mu15);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15_medium", &trig_L2_isomuonfeature_L2_mu15_medium, &b_trig_L2_isomuonfeature_L2_mu15_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15_tight", &trig_L2_isomuonfeature_L2_mu15_tight, &b_trig_L2_isomuonfeature_L2_mu15_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15_xe20_noMu", &trig_L2_isomuonfeature_L2_mu15_xe20_noMu, &b_trig_L2_isomuonfeature_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15i", &trig_L2_isomuonfeature_L2_mu15i, &b_trig_L2_isomuonfeature_L2_mu15i);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu15i_medium", &trig_L2_isomuonfeature_L2_mu15i_medium, &b_trig_L2_isomuonfeature_L2_mu15i_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18", &trig_L2_isomuonfeature_L2_mu18, &b_trig_L2_isomuonfeature_L2_mu18);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_L1J10", &trig_L2_isomuonfeature_L2_mu18_L1J10, &b_trig_L2_isomuonfeature_L2_mu18_L1J10);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_MG", &trig_L2_isomuonfeature_L2_mu18_MG, &b_trig_L2_isomuonfeature_L2_mu18_MG);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_MG_L1J10", &trig_L2_isomuonfeature_L2_mu18_MG_L1J10, &b_trig_L2_isomuonfeature_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_MG_medium", &trig_L2_isomuonfeature_L2_mu18_MG_medium, &b_trig_L2_isomuonfeature_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_medium", &trig_L2_isomuonfeature_L2_mu18_medium, &b_trig_L2_isomuonfeature_L2_mu18_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS", &trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS, &b_trig_L2_isomuonfeature_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS", &trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS, &b_trig_L2_isomuonfeature_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS", &trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS, &b_trig_L2_isomuonfeature_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS", &trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS, &b_trig_L2_isomuonfeature_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu18i4_medium", &trig_L2_isomuonfeature_L2_mu18i4_medium, &b_trig_L2_isomuonfeature_L2_mu18i4_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20", &trig_L2_isomuonfeature_L2_mu20, &b_trig_L2_isomuonfeature_L2_mu20);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut", &trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut, &b_trig_L2_isomuonfeature_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_MG", &trig_L2_isomuonfeature_L2_mu20_MG, &b_trig_L2_isomuonfeature_L2_mu20_MG);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_MG_medium", &trig_L2_isomuonfeature_L2_mu20_MG_medium, &b_trig_L2_isomuonfeature_L2_mu20_MG_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_empty", &trig_L2_isomuonfeature_L2_mu20_empty, &b_trig_L2_isomuonfeature_L2_mu20_empty);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_medium", &trig_L2_isomuonfeature_L2_mu20_medium, &b_trig_L2_isomuonfeature_L2_mu20_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF", &trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF, &b_trig_L2_isomuonfeature_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20_tight", &trig_L2_isomuonfeature_L2_mu20_tight, &b_trig_L2_isomuonfeature_L2_mu20_tight);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20i", &trig_L2_isomuonfeature_L2_mu20i, &b_trig_L2_isomuonfeature_L2_mu20i);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu20i_medium", &trig_L2_isomuonfeature_L2_mu20i_medium, &b_trig_L2_isomuonfeature_L2_mu20i_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22", &trig_L2_isomuonfeature_L2_mu22, &b_trig_L2_isomuonfeature_L2_mu22);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22_MG", &trig_L2_isomuonfeature_L2_mu22_MG, &b_trig_L2_isomuonfeature_L2_mu22_MG);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4", &trig_L2_isomuonfeature_L2_mu4, &b_trig_L2_isomuonfeature_L2_mu4);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22_MG_medium", &trig_L2_isomuonfeature_L2_mu22_MG_medium, &b_trig_L2_isomuonfeature_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS", &trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS, &b_trig_L2_isomuonfeature_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22_medium", &trig_L2_isomuonfeature_L2_mu22_medium, &b_trig_L2_isomuonfeature_L2_mu22_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22i2_medium", &trig_L2_isomuonfeature_L2_mu22i2_medium, &b_trig_L2_isomuonfeature_L2_mu22i2_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu22i4_medium", &trig_L2_isomuonfeature_L2_mu22i4_medium, &b_trig_L2_isomuonfeature_L2_mu22i4_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu24_MG_medium", &trig_L2_isomuonfeature_L2_mu24_MG_medium, &b_trig_L2_isomuonfeature_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu24_MG_tight", &trig_L2_isomuonfeature_L2_mu24_MG_tight, &b_trig_L2_isomuonfeature_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu24_medium", &trig_L2_isomuonfeature_L2_mu24_medium, &b_trig_L2_isomuonfeature_L2_mu24_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu24_tight", &trig_L2_isomuonfeature_L2_mu24_tight, &b_trig_L2_isomuonfeature_L2_mu24_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu30_MG_medium", &trig_L2_isomuonfeature_L2_mu30_MG_medium, &b_trig_L2_isomuonfeature_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu30_MG_tight", &trig_L2_isomuonfeature_L2_mu30_MG_tight, &b_trig_L2_isomuonfeature_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu30_medium", &trig_L2_isomuonfeature_L2_mu30_medium, &b_trig_L2_isomuonfeature_L2_mu30_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu30_tight", &trig_L2_isomuonfeature_L2_mu30_tight, &b_trig_L2_isomuonfeature_L2_mu30_tight);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_barrel", &trig_L2_isomuonfeature_L2_mu40_MSonly_barrel, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium", &trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_empty", &trig_L2_isomuonfeature_L2_mu40_MSonly_empty, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_tight", &trig_L2_isomuonfeature_L2_mu40_MSonly_tight, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11", &trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_MSonly_tighter", &trig_L2_isomuonfeature_L2_mu40_MSonly_tighter, &b_trig_L2_isomuonfeature_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_slow", &trig_L2_isomuonfeature_L2_mu40_slow, &b_trig_L2_isomuonfeature_L2_mu40_slow);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_slow_empty", &trig_L2_isomuonfeature_L2_mu40_slow_empty, &b_trig_L2_isomuonfeature_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_slow_medium", &trig_L2_isomuonfeature_L2_mu40_slow_medium, &b_trig_L2_isomuonfeature_L2_mu40_slow_medium);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_slow_outOfTime", &trig_L2_isomuonfeature_L2_mu40_slow_outOfTime, &b_trig_L2_isomuonfeature_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_DiMu", &trig_L2_isomuonfeature_L2_mu4_DiMu, &b_trig_L2_isomuonfeature_L2_mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS", &trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS, &b_trig_L2_isomuonfeature_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_Jpsimumu", &trig_L2_isomuonfeature_L2_mu4_Jpsimumu, &b_trig_L2_isomuonfeature_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium", &trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium, &b_trig_L2_isomuonfeature_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T", &trig_L2_isomuonfeature_L2_mu4T, &b_trig_L2_isomuonfeature_L2_mu4T);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_DiMu", &trig_L2_isomuonfeature_L2_mu4T_DiMu, &b_trig_L2_isomuonfeature_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS", &trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS, &b_trig_L2_isomuonfeature_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Jpsimumu", &trig_L2_isomuonfeature_L2_mu4T_Jpsimumu, &b_trig_L2_isomuonfeature_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi", &trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi, &b_trig_L2_isomuonfeature_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS", &trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS, &b_trig_L2_isomuonfeature_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS", &trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS, &b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS", &trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS, &b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS", &trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS, &b_trig_L2_isomuonfeature_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu", &trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu, &b_trig_L2_isomuonfeature_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu", &trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu, &b_trig_L2_isomuonfeature_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY", &trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY, &b_trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_L2_isomuonfeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu", &trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux", &trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu", &trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20", &trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS", &trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu", &trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu", &trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu, &b_trig_L2_isomuonfeature_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J10_matched", &trig_L2_isomuonfeature_L2_mu4_L1J10_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J15_matched", &trig_L2_isomuonfeature_L2_mu4_L1J15_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J20_matched", &trig_L2_isomuonfeature_L2_mu4_L1J20_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J30_matched", &trig_L2_isomuonfeature_L2_mu4_L1J30_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J50_matched", &trig_L2_isomuonfeature_L2_mu4_L1J50_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1J75_matched", &trig_L2_isomuonfeature_L2_mu4_L1J75_matched, &b_trig_L2_isomuonfeature_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic", &trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic, &b_trig_L2_isomuonfeature_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic", &trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic, &b_trig_L2_isomuonfeature_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic", &trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic, &b_trig_L2_isomuonfeature_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi", &trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi, &b_trig_L2_isomuonfeature_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS", &trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS, &b_trig_L2_isomuonfeature_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS", &trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS, &b_trig_L2_isomuonfeature_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_cal_empty", &trig_L2_isomuonfeature_L2_mu4_cal_empty, &b_trig_L2_isomuonfeature_L2_mu4_cal_empty);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_cosmic", &trig_L2_isomuonfeature_L2_mu4_cosmic, &b_trig_L2_isomuonfeature_L2_mu4_cosmic);
-   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS", &trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS, &b_trig_L2_isomuonfeature_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_empty_NoAlg", &trig_L2_isomuonfeature_L2_mu4_empty_NoAlg, &b_trig_L2_isomuonfeature_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg", &trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg, &b_trig_L2_isomuonfeature_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_j95_L1matched", &trig_L2_isomuonfeature_L2_mu4_j95_L1matched, &b_trig_L2_isomuonfeature_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg", &trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg, &b_trig_L2_isomuonfeature_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6", &trig_L2_isomuonfeature_L2_mu6, &b_trig_L2_isomuonfeature_L2_mu6);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6_DiMu_noOS", &trig_L2_isomuonfeature_L2_mu6_DiMu_noOS, &b_trig_L2_isomuonfeature_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6_Jpsimumu", &trig_L2_isomuonfeature_L2_mu6_Jpsimumu, &b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk", &trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk, &b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight", &trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight, &b_trig_L2_isomuonfeature_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose", &trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose, &b_trig_L2_isomuonfeature_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_L2_tilemufeature_n", &trig_L2_tilemufeature_n, &b_trig_L2_tilemufeature_n);
    fChain->SetBranchAddress("trig_L2_tilemufeature_eta", &trig_L2_tilemufeature_eta, &b_trig_L2_tilemufeature_eta);
    fChain->SetBranchAddress("trig_L2_tilemufeature_phi", &trig_L2_tilemufeature_phi, &b_trig_L2_tilemufeature_phi);
@@ -15818,27 +18641,36 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu10_loose", &trig_L2_tilemufeature_L2_2mu10_loose, &b_trig_L2_tilemufeature_L2_2mu10_loose);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu10_loose_empty", &trig_L2_tilemufeature_L2_2mu10_loose_empty, &b_trig_L2_tilemufeature_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm", &trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm, &b_trig_L2_tilemufeature_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4", &trig_L2_tilemufeature_L2_2mu4, &b_trig_L2_tilemufeature_L2_2mu4);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_Bmumu", &trig_L2_tilemufeature_L2_2mu4_Bmumu, &b_trig_L2_tilemufeature_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_Bmumux", &trig_L2_tilemufeature_L2_2mu4_Bmumux, &b_trig_L2_tilemufeature_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_DiMu", &trig_L2_tilemufeature_L2_2mu4_DiMu, &b_trig_L2_tilemufeature_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk", &trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk, &b_trig_L2_tilemufeature_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS", &trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS, &b_trig_L2_tilemufeature_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_Jpsimumu", &trig_L2_tilemufeature_L2_2mu4_Jpsimumu, &b_trig_L2_tilemufeature_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut", &trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_L2_tilemufeature_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4_Upsimumu", &trig_L2_tilemufeature_L2_2mu4_Upsimumu, &b_trig_L2_tilemufeature_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut", &trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut, &b_trig_L2_tilemufeature_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T", &trig_L2_tilemufeature_L2_2mu4T, &b_trig_L2_tilemufeature_L2_2mu4T);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_2e5_medium", &trig_L2_tilemufeature_L2_2mu4T_2e5_medium, &b_trig_L2_tilemufeature_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_Bmumu", &trig_L2_tilemufeature_L2_2mu4T_Bmumu, &b_trig_L2_tilemufeature_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_Bmumux", &trig_L2_tilemufeature_L2_2mu4T_Bmumux, &b_trig_L2_tilemufeature_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu", &trig_L2_tilemufeature_L2_2mu4T_DiMu, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu_DY", &trig_L2_tilemufeature_L2_2mu4T_DiMu_DY, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20", &trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS", &trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk", &trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS", &trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS, &b_trig_L2_tilemufeature_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu", &trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu, &b_trig_L2_tilemufeature_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu", &trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu, &b_trig_L2_tilemufeature_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_Jpsimumu", &trig_L2_tilemufeature_L2_2mu4T_Jpsimumu, &b_trig_L2_tilemufeature_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut", &trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_L2_tilemufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_Upsimumu", &trig_L2_tilemufeature_L2_2mu4T_Upsimumu, &b_trig_L2_tilemufeature_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_xe20_noMu", &trig_L2_tilemufeature_L2_2mu4T_xe20_noMu, &b_trig_L2_tilemufeature_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4T_xe25_noMu", &trig_L2_tilemufeature_L2_2mu4T_xe25_noMu, &b_trig_L2_tilemufeature_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY", &trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY, &b_trig_L2_tilemufeature_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6", &trig_L2_tilemufeature_L2_2mu6, &b_trig_L2_tilemufeature_L2_2mu6);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6_Bmumux", &trig_L2_tilemufeature_L2_2mu6_Bmumux, &b_trig_L2_tilemufeature_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6_DiMu", &trig_L2_tilemufeature_L2_2mu6_DiMu, &b_trig_L2_tilemufeature_L2_2mu6_DiMu);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose", &trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose, &b_trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6_NL", &trig_L2_tilemufeature_L2_2mu6_NL, &b_trig_L2_tilemufeature_L2_2mu6_NL);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu0_cal_empty", &trig_L2_tilemufeature_L2_mu0_cal_empty, &b_trig_L2_tilemufeature_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu0_empty_NoAlg", &trig_L2_tilemufeature_L2_mu0_empty_NoAlg, &b_trig_L2_tilemufeature_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg", &trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg, &b_trig_L2_tilemufeature_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg", &trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg, &b_trig_L2_tilemufeature_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled", &trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled, &b_trig_L2_tilemufeature_L2_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10", &trig_L2_tilemufeature_L2_mu10, &b_trig_L2_tilemufeature_L2_mu10);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_Jpsimumu", &trig_L2_tilemufeature_L2_mu10_Jpsimumu, &b_trig_L2_tilemufeature_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_NL", &trig_L2_tilemufeature_L2_mu10_NL, &b_trig_L2_tilemufeature_L2_mu10_NL);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_Upsimumu_FS", &trig_L2_tilemufeature_L2_mu10_Upsimumu_FS, &b_trig_L2_tilemufeature_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS", &trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS, &b_trig_L2_tilemufeature_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_cal", &trig_L2_tilemufeature_L2_mu10_cal, &b_trig_L2_tilemufeature_L2_mu10_cal);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_cal_medium", &trig_L2_tilemufeature_L2_mu10_cal_medium, &b_trig_L2_tilemufeature_L2_mu10_cal_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_loose", &trig_L2_tilemufeature_L2_mu10_loose, &b_trig_L2_tilemufeature_L2_mu10_loose);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF", &trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF, &b_trig_L2_tilemufeature_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu11_empty_NoAlg", &trig_L2_tilemufeature_L2_mu11_empty_NoAlg, &b_trig_L2_tilemufeature_L2_mu11_empty_NoAlg);
@@ -15846,45 +18678,99 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu13_MG", &trig_L2_tilemufeature_L2_mu13_MG, &b_trig_L2_tilemufeature_L2_mu13_MG);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF", &trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF, &b_trig_L2_tilemufeature_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15", &trig_L2_tilemufeature_L2_mu15, &b_trig_L2_tilemufeature_L2_mu15);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15_medium", &trig_L2_tilemufeature_L2_mu15_medium, &b_trig_L2_tilemufeature_L2_mu15_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15_tight", &trig_L2_tilemufeature_L2_mu15_tight, &b_trig_L2_tilemufeature_L2_mu15_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15_xe20_noMu", &trig_L2_tilemufeature_L2_mu15_xe20_noMu, &b_trig_L2_tilemufeature_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15i", &trig_L2_tilemufeature_L2_mu15i, &b_trig_L2_tilemufeature_L2_mu15i);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu15i_medium", &trig_L2_tilemufeature_L2_mu15i_medium, &b_trig_L2_tilemufeature_L2_mu15i_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18", &trig_L2_tilemufeature_L2_mu18, &b_trig_L2_tilemufeature_L2_mu18);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_L1J10", &trig_L2_tilemufeature_L2_mu18_L1J10, &b_trig_L2_tilemufeature_L2_mu18_L1J10);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_MG", &trig_L2_tilemufeature_L2_mu18_MG, &b_trig_L2_tilemufeature_L2_mu18_MG);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_MG_L1J10", &trig_L2_tilemufeature_L2_mu18_MG_L1J10, &b_trig_L2_tilemufeature_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_MG_medium", &trig_L2_tilemufeature_L2_mu18_MG_medium, &b_trig_L2_tilemufeature_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_medium", &trig_L2_tilemufeature_L2_mu18_medium, &b_trig_L2_tilemufeature_L2_mu18_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS", &trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS, &b_trig_L2_tilemufeature_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS", &trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS, &b_trig_L2_tilemufeature_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS", &trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS, &b_trig_L2_tilemufeature_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS", &trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS, &b_trig_L2_tilemufeature_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu18i4_medium", &trig_L2_tilemufeature_L2_mu18i4_medium, &b_trig_L2_tilemufeature_L2_mu18i4_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20", &trig_L2_tilemufeature_L2_mu20, &b_trig_L2_tilemufeature_L2_mu20);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_IDTrkNoCut", &trig_L2_tilemufeature_L2_mu20_IDTrkNoCut, &b_trig_L2_tilemufeature_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_MG", &trig_L2_tilemufeature_L2_mu20_MG, &b_trig_L2_tilemufeature_L2_mu20_MG);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_MG_medium", &trig_L2_tilemufeature_L2_mu20_MG_medium, &b_trig_L2_tilemufeature_L2_mu20_MG_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_empty", &trig_L2_tilemufeature_L2_mu20_empty, &b_trig_L2_tilemufeature_L2_mu20_empty);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_medium", &trig_L2_tilemufeature_L2_mu20_medium, &b_trig_L2_tilemufeature_L2_mu20_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF", &trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF, &b_trig_L2_tilemufeature_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20_tight", &trig_L2_tilemufeature_L2_mu20_tight, &b_trig_L2_tilemufeature_L2_mu20_tight);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20i", &trig_L2_tilemufeature_L2_mu20i, &b_trig_L2_tilemufeature_L2_mu20i);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu20i_medium", &trig_L2_tilemufeature_L2_mu20i_medium, &b_trig_L2_tilemufeature_L2_mu20i_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22", &trig_L2_tilemufeature_L2_mu22, &b_trig_L2_tilemufeature_L2_mu22);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22_MG", &trig_L2_tilemufeature_L2_mu22_MG, &b_trig_L2_tilemufeature_L2_mu22_MG);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4", &trig_L2_tilemufeature_L2_mu4, &b_trig_L2_tilemufeature_L2_mu4);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22_MG_medium", &trig_L2_tilemufeature_L2_mu22_MG_medium, &b_trig_L2_tilemufeature_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS", &trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS, &b_trig_L2_tilemufeature_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22_medium", &trig_L2_tilemufeature_L2_mu22_medium, &b_trig_L2_tilemufeature_L2_mu22_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22i2_medium", &trig_L2_tilemufeature_L2_mu22i2_medium, &b_trig_L2_tilemufeature_L2_mu22i2_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu22i4_medium", &trig_L2_tilemufeature_L2_mu22i4_medium, &b_trig_L2_tilemufeature_L2_mu22i4_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu24_MG_medium", &trig_L2_tilemufeature_L2_mu24_MG_medium, &b_trig_L2_tilemufeature_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu24_MG_tight", &trig_L2_tilemufeature_L2_mu24_MG_tight, &b_trig_L2_tilemufeature_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu24_medium", &trig_L2_tilemufeature_L2_mu24_medium, &b_trig_L2_tilemufeature_L2_mu24_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu24_tight", &trig_L2_tilemufeature_L2_mu24_tight, &b_trig_L2_tilemufeature_L2_mu24_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu30_MG_medium", &trig_L2_tilemufeature_L2_mu30_MG_medium, &b_trig_L2_tilemufeature_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu30_MG_tight", &trig_L2_tilemufeature_L2_mu30_MG_tight, &b_trig_L2_tilemufeature_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu30_medium", &trig_L2_tilemufeature_L2_mu30_medium, &b_trig_L2_tilemufeature_L2_mu30_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu30_tight", &trig_L2_tilemufeature_L2_mu30_tight, &b_trig_L2_tilemufeature_L2_mu30_tight);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_barrel", &trig_L2_tilemufeature_L2_mu40_MSonly_barrel, &b_trig_L2_tilemufeature_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium", &trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium, &b_trig_L2_tilemufeature_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_empty", &trig_L2_tilemufeature_L2_mu40_MSonly_empty, &b_trig_L2_tilemufeature_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_tight", &trig_L2_tilemufeature_L2_mu40_MSonly_tight, &b_trig_L2_tilemufeature_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11", &trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11, &b_trig_L2_tilemufeature_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_MSonly_tighter", &trig_L2_tilemufeature_L2_mu40_MSonly_tighter, &b_trig_L2_tilemufeature_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_slow", &trig_L2_tilemufeature_L2_mu40_slow, &b_trig_L2_tilemufeature_L2_mu40_slow);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_slow_empty", &trig_L2_tilemufeature_L2_mu40_slow_empty, &b_trig_L2_tilemufeature_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_slow_medium", &trig_L2_tilemufeature_L2_mu40_slow_medium, &b_trig_L2_tilemufeature_L2_mu40_slow_medium);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_slow_outOfTime", &trig_L2_tilemufeature_L2_mu40_slow_outOfTime, &b_trig_L2_tilemufeature_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_DiMu", &trig_L2_tilemufeature_L2_mu4_DiMu, &b_trig_L2_tilemufeature_L2_mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS", &trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS, &b_trig_L2_tilemufeature_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_Jpsimumu", &trig_L2_tilemufeature_L2_mu4_Jpsimumu, &b_trig_L2_tilemufeature_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium", &trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium, &b_trig_L2_tilemufeature_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T", &trig_L2_tilemufeature_L2_mu4T, &b_trig_L2_tilemufeature_L2_mu4T);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_DiMu", &trig_L2_tilemufeature_L2_mu4T_DiMu, &b_trig_L2_tilemufeature_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS", &trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS, &b_trig_L2_tilemufeature_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Jpsimumu", &trig_L2_tilemufeature_L2_mu4T_Jpsimumu, &b_trig_L2_tilemufeature_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi", &trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi, &b_trig_L2_tilemufeature_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS", &trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS, &b_trig_L2_tilemufeature_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS", &trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS, &b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS", &trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS, &b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS", &trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS, &b_trig_L2_tilemufeature_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu", &trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu, &b_trig_L2_tilemufeature_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu", &trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu, &b_trig_L2_tilemufeature_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY", &trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY, &b_trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_L2_tilemufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu", &trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu, &b_trig_L2_tilemufeature_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux", &trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux, &b_trig_L2_tilemufeature_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_DiMu", &trig_L2_tilemufeature_L2_mu4Tmu6_DiMu, &b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20", &trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20, &b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS", &trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_L2_tilemufeature_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu", &trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu, &b_trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_L2_tilemufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu", &trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu, &b_trig_L2_tilemufeature_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J10_matched", &trig_L2_tilemufeature_L2_mu4_L1J10_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J15_matched", &trig_L2_tilemufeature_L2_mu4_L1J15_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J20_matched", &trig_L2_tilemufeature_L2_mu4_L1J20_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J30_matched", &trig_L2_tilemufeature_L2_mu4_L1J30_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J50_matched", &trig_L2_tilemufeature_L2_mu4_L1J50_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1J75_matched", &trig_L2_tilemufeature_L2_mu4_L1J75_matched, &b_trig_L2_tilemufeature_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic", &trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic, &b_trig_L2_tilemufeature_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic", &trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic, &b_trig_L2_tilemufeature_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_MSonly_cosmic", &trig_L2_tilemufeature_L2_mu4_MSonly_cosmic, &b_trig_L2_tilemufeature_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_Trk_Jpsi", &trig_L2_tilemufeature_L2_mu4_Trk_Jpsi, &b_trig_L2_tilemufeature_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_Upsimumu_FS", &trig_L2_tilemufeature_L2_mu4_Upsimumu_FS, &b_trig_L2_tilemufeature_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS", &trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS, &b_trig_L2_tilemufeature_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_cal_empty", &trig_L2_tilemufeature_L2_mu4_cal_empty, &b_trig_L2_tilemufeature_L2_mu4_cal_empty);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_cosmic", &trig_L2_tilemufeature_L2_mu4_cosmic, &b_trig_L2_tilemufeature_L2_mu4_cosmic);
-   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS", &trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS, &b_trig_L2_tilemufeature_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_empty_NoAlg", &trig_L2_tilemufeature_L2_mu4_empty_NoAlg, &b_trig_L2_tilemufeature_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg", &trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg, &b_trig_L2_tilemufeature_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_j95_L1matched", &trig_L2_tilemufeature_L2_mu4_j95_L1matched, &b_trig_L2_tilemufeature_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg", &trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg, &b_trig_L2_tilemufeature_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6", &trig_L2_tilemufeature_L2_mu6, &b_trig_L2_tilemufeature_L2_mu6);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6_DiMu_noOS", &trig_L2_tilemufeature_L2_mu6_DiMu_noOS, &b_trig_L2_tilemufeature_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6_Jpsimumu", &trig_L2_tilemufeature_L2_mu6_Jpsimumu, &b_trig_L2_tilemufeature_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk", &trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk, &b_trig_L2_tilemufeature_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight", &trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight, &b_trig_L2_tilemufeature_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose", &trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose, &b_trig_L2_tilemufeature_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_n", &trig_L2_tiletrackmufeature_n, &b_trig_L2_tiletrackmufeature_n);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_pt", &trig_L2_tiletrackmufeature_pt, &b_trig_L2_tiletrackmufeature_pt);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_eta", &trig_L2_tiletrackmufeature_eta, &b_trig_L2_tiletrackmufeature_eta);
@@ -15898,27 +18784,36 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu10_loose", &trig_L2_tiletrackmufeature_L2_2mu10_loose, &b_trig_L2_tiletrackmufeature_L2_2mu10_loose);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu10_loose_empty", &trig_L2_tiletrackmufeature_L2_2mu10_loose_empty, &b_trig_L2_tiletrackmufeature_L2_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm", &trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm, &b_trig_L2_tiletrackmufeature_L2_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4", &trig_L2_tiletrackmufeature_L2_2mu4, &b_trig_L2_tiletrackmufeature_L2_2mu4);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_Bmumu", &trig_L2_tiletrackmufeature_L2_2mu4_Bmumu, &b_trig_L2_tiletrackmufeature_L2_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_Bmumux", &trig_L2_tiletrackmufeature_L2_2mu4_Bmumux, &b_trig_L2_tiletrackmufeature_L2_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_DiMu", &trig_L2_tiletrackmufeature_L2_2mu4_DiMu, &b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk", &trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk, &b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS", &trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS, &b_trig_L2_tiletrackmufeature_L2_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu", &trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut", &trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_L2_tiletrackmufeature_L2_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu", &trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu, &b_trig_L2_tiletrackmufeature_L2_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut", &trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut, &b_trig_L2_tiletrackmufeature_L2_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T", &trig_L2_tiletrackmufeature_L2_2mu4T, &b_trig_L2_tiletrackmufeature_L2_2mu4T);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium", &trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium, &b_trig_L2_tiletrackmufeature_L2_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu", &trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux", &trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux, &b_trig_L2_tiletrackmufeature_L2_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS", &trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS, &b_trig_L2_tiletrackmufeature_L2_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu", &trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu", &trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu", &trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut", &trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_L2_tiletrackmufeature_L2_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu", &trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu", &trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_xe20_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu", &trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu, &b_trig_L2_tiletrackmufeature_L2_2mu4T_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY", &trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY, &b_trig_L2_tiletrackmufeature_L2_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6", &trig_L2_tiletrackmufeature_L2_2mu6, &b_trig_L2_tiletrackmufeature_L2_2mu6);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6_Bmumux", &trig_L2_tiletrackmufeature_L2_2mu6_Bmumux, &b_trig_L2_tiletrackmufeature_L2_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6_DiMu", &trig_L2_tiletrackmufeature_L2_2mu6_DiMu, &b_trig_L2_tiletrackmufeature_L2_2mu6_DiMu);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose", &trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose, &b_trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6_NL", &trig_L2_tiletrackmufeature_L2_2mu6_NL, &b_trig_L2_tiletrackmufeature_L2_2mu6_NL);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu0_cal_empty", &trig_L2_tiletrackmufeature_L2_mu0_cal_empty, &b_trig_L2_tiletrackmufeature_L2_mu0_cal_empty);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg", &trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg", &trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg", &trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled", &trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled, &b_trig_L2_tiletrackmufeature_L2_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10", &trig_L2_tiletrackmufeature_L2_mu10, &b_trig_L2_tiletrackmufeature_L2_mu10);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu", &trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_NL", &trig_L2_tiletrackmufeature_L2_mu10_NL, &b_trig_L2_tiletrackmufeature_L2_mu10_NL);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS", &trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS, &b_trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS", &trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS, &b_trig_L2_tiletrackmufeature_L2_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_cal", &trig_L2_tiletrackmufeature_L2_mu10_cal, &b_trig_L2_tiletrackmufeature_L2_mu10_cal);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_cal_medium", &trig_L2_tiletrackmufeature_L2_mu10_cal_medium, &b_trig_L2_tiletrackmufeature_L2_mu10_cal_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_loose", &trig_L2_tiletrackmufeature_L2_mu10_loose, &b_trig_L2_tiletrackmufeature_L2_mu10_loose);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF", &trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF, &b_trig_L2_tiletrackmufeature_L2_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg", &trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu11_empty_NoAlg);
@@ -15926,45 +18821,99 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu13_MG", &trig_L2_tiletrackmufeature_L2_mu13_MG, &b_trig_L2_tiletrackmufeature_L2_mu13_MG);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF", &trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF, &b_trig_L2_tiletrackmufeature_L2_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15", &trig_L2_tiletrackmufeature_L2_mu15, &b_trig_L2_tiletrackmufeature_L2_mu15);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15_medium", &trig_L2_tiletrackmufeature_L2_mu15_medium, &b_trig_L2_tiletrackmufeature_L2_mu15_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15_tight", &trig_L2_tiletrackmufeature_L2_mu15_tight, &b_trig_L2_tiletrackmufeature_L2_mu15_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu", &trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu, &b_trig_L2_tiletrackmufeature_L2_mu15_xe20_noMu);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15i", &trig_L2_tiletrackmufeature_L2_mu15i, &b_trig_L2_tiletrackmufeature_L2_mu15i);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu15i_medium", &trig_L2_tiletrackmufeature_L2_mu15i_medium, &b_trig_L2_tiletrackmufeature_L2_mu15i_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18", &trig_L2_tiletrackmufeature_L2_mu18, &b_trig_L2_tiletrackmufeature_L2_mu18);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_L1J10", &trig_L2_tiletrackmufeature_L2_mu18_L1J10, &b_trig_L2_tiletrackmufeature_L2_mu18_L1J10);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_MG", &trig_L2_tiletrackmufeature_L2_mu18_MG, &b_trig_L2_tiletrackmufeature_L2_mu18_MG);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10", &trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10, &b_trig_L2_tiletrackmufeature_L2_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_MG_medium", &trig_L2_tiletrackmufeature_L2_mu18_MG_medium, &b_trig_L2_tiletrackmufeature_L2_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_medium", &trig_L2_tiletrackmufeature_L2_mu18_medium, &b_trig_L2_tiletrackmufeature_L2_mu18_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS", &trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS", &trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS", &trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS", &trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu18i4_medium", &trig_L2_tiletrackmufeature_L2_mu18i4_medium, &b_trig_L2_tiletrackmufeature_L2_mu18i4_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20", &trig_L2_tiletrackmufeature_L2_mu20, &b_trig_L2_tiletrackmufeature_L2_mu20);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut", &trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut, &b_trig_L2_tiletrackmufeature_L2_mu20_IDTrkNoCut);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_MG", &trig_L2_tiletrackmufeature_L2_mu20_MG, &b_trig_L2_tiletrackmufeature_L2_mu20_MG);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_MG_medium", &trig_L2_tiletrackmufeature_L2_mu20_MG_medium, &b_trig_L2_tiletrackmufeature_L2_mu20_MG_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_empty", &trig_L2_tiletrackmufeature_L2_mu20_empty, &b_trig_L2_tiletrackmufeature_L2_mu20_empty);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_medium", &trig_L2_tiletrackmufeature_L2_mu20_medium, &b_trig_L2_tiletrackmufeature_L2_mu20_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF", &trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF, &b_trig_L2_tiletrackmufeature_L2_mu20_muCombTag_NoEF);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20_tight", &trig_L2_tiletrackmufeature_L2_mu20_tight, &b_trig_L2_tiletrackmufeature_L2_mu20_tight);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20i", &trig_L2_tiletrackmufeature_L2_mu20i, &b_trig_L2_tiletrackmufeature_L2_mu20i);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu20i_medium", &trig_L2_tiletrackmufeature_L2_mu20i_medium, &b_trig_L2_tiletrackmufeature_L2_mu20i_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22", &trig_L2_tiletrackmufeature_L2_mu22, &b_trig_L2_tiletrackmufeature_L2_mu22);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22_MG", &trig_L2_tiletrackmufeature_L2_mu22_MG, &b_trig_L2_tiletrackmufeature_L2_mu22_MG);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4", &trig_L2_tiletrackmufeature_L2_mu4, &b_trig_L2_tiletrackmufeature_L2_mu4);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22_MG_medium", &trig_L2_tiletrackmufeature_L2_mu22_MG_medium, &b_trig_L2_tiletrackmufeature_L2_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS", &trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22_medium", &trig_L2_tiletrackmufeature_L2_mu22_medium, &b_trig_L2_tiletrackmufeature_L2_mu22_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22i2_medium", &trig_L2_tiletrackmufeature_L2_mu22i2_medium, &b_trig_L2_tiletrackmufeature_L2_mu22i2_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu22i4_medium", &trig_L2_tiletrackmufeature_L2_mu22i4_medium, &b_trig_L2_tiletrackmufeature_L2_mu22i4_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu24_MG_medium", &trig_L2_tiletrackmufeature_L2_mu24_MG_medium, &b_trig_L2_tiletrackmufeature_L2_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu24_MG_tight", &trig_L2_tiletrackmufeature_L2_mu24_MG_tight, &b_trig_L2_tiletrackmufeature_L2_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu24_medium", &trig_L2_tiletrackmufeature_L2_mu24_medium, &b_trig_L2_tiletrackmufeature_L2_mu24_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu24_tight", &trig_L2_tiletrackmufeature_L2_mu24_tight, &b_trig_L2_tiletrackmufeature_L2_mu24_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu30_MG_medium", &trig_L2_tiletrackmufeature_L2_mu30_MG_medium, &b_trig_L2_tiletrackmufeature_L2_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu30_MG_tight", &trig_L2_tiletrackmufeature_L2_mu30_MG_tight, &b_trig_L2_tiletrackmufeature_L2_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu30_medium", &trig_L2_tiletrackmufeature_L2_mu30_medium, &b_trig_L2_tiletrackmufeature_L2_mu30_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu30_tight", &trig_L2_tiletrackmufeature_L2_mu30_tight, &b_trig_L2_tiletrackmufeature_L2_mu30_tight);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter", &trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter, &b_trig_L2_tiletrackmufeature_L2_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_slow", &trig_L2_tiletrackmufeature_L2_mu40_slow, &b_trig_L2_tiletrackmufeature_L2_mu40_slow);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_slow_empty", &trig_L2_tiletrackmufeature_L2_mu40_slow_empty, &b_trig_L2_tiletrackmufeature_L2_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_slow_medium", &trig_L2_tiletrackmufeature_L2_mu40_slow_medium, &b_trig_L2_tiletrackmufeature_L2_mu40_slow_medium);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime", &trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime, &b_trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_DiMu", &trig_L2_tiletrackmufeature_L2_mu4_DiMu, &b_trig_L2_tiletrackmufeature_L2_mu4_DiMu);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS", &trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS, &b_trig_L2_tiletrackmufeature_L2_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu", &trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium", &trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium, &b_trig_L2_tiletrackmufeature_L2_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T", &trig_L2_tiletrackmufeature_L2_mu4T, &b_trig_L2_tiletrackmufeature_L2_mu4T);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_DiMu", &trig_L2_tiletrackmufeature_L2_mu4T_DiMu, &b_trig_L2_tiletrackmufeature_L2_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS", &trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS, &b_trig_L2_tiletrackmufeature_L2_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu", &trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi", &trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi, &b_trig_L2_tiletrackmufeature_L2_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS", &trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS, &b_trig_L2_tiletrackmufeature_L2_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS", &trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS, &b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS", &trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS, &b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS", &trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS, &b_trig_L2_tiletrackmufeature_L2_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu", &trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu, &b_trig_L2_tiletrackmufeature_L2_mu4T_j40_xe20_loose_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu", &trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu, &b_trig_L2_tiletrackmufeature_L2_mu4T_j40_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY", &trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY, &b_trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_L2_tiletrackmufeature_L2_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu", &trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu, &b_trig_L2_tiletrackmufeature_L2_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched", &trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched, &b_trig_L2_tiletrackmufeature_L2_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic", &trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic, &b_trig_L2_tiletrackmufeature_L2_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic", &trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic, &b_trig_L2_tiletrackmufeature_L2_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic", &trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic, &b_trig_L2_tiletrackmufeature_L2_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi", &trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi, &b_trig_L2_tiletrackmufeature_L2_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS", &trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS, &b_trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS", &trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS, &b_trig_L2_tiletrackmufeature_L2_mu4_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_cal_empty", &trig_L2_tiletrackmufeature_L2_mu4_cal_empty, &b_trig_L2_tiletrackmufeature_L2_mu4_cal_empty);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_cosmic", &trig_L2_tiletrackmufeature_L2_mu4_cosmic, &b_trig_L2_tiletrackmufeature_L2_mu4_cosmic);
-   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS", &trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS, &b_trig_L2_tiletrackmufeature_L2_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg", &trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg", &trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched", &trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched, &b_trig_L2_tiletrackmufeature_L2_mu4_j95_L1matched);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg", &trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg, &b_trig_L2_tiletrackmufeature_L2_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6", &trig_L2_tiletrackmufeature_L2_mu6, &b_trig_L2_tiletrackmufeature_L2_mu6);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS", &trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS, &b_trig_L2_tiletrackmufeature_L2_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu", &trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu, &b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk", &trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk, &b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight", &trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight, &b_trig_L2_tiletrackmufeature_L2_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose", &trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose, &b_trig_L2_tiletrackmufeature_L2_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_tilemu_index", &trig_L2_tiletrackmufeature_tilemu_index, &b_trig_L2_tiletrackmufeature_tilemu_index);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_idtrk_algorithmId", &trig_L2_tiletrackmufeature_idtrk_algorithmId, &b_trig_L2_tiletrackmufeature_idtrk_algorithmId);
    fChain->SetBranchAddress("trig_L2_tiletrackmufeature_idtrk_trackStatus", &trig_L2_tiletrackmufeature_idtrk_trackStatus, &b_trig_L2_tiletrackmufeature_idtrk_trackStatus);
@@ -15986,25 +18935,34 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu10_loose", &trig_EF_trigmuonef_EF_2mu10_loose, &b_trig_EF_trigmuonef_EF_2mu10_loose);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu10_loose_empty", &trig_EF_trigmuonef_EF_2mu10_loose_empty, &b_trig_EF_trigmuonef_EF_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm", &trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm, &b_trig_EF_trigmuonef_EF_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4", &trig_EF_trigmuonef_EF_2mu4, &b_trig_EF_trigmuonef_EF_2mu4);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_Bmumu", &trig_EF_trigmuonef_EF_2mu4_Bmumu, &b_trig_EF_trigmuonef_EF_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_Bmumux", &trig_EF_trigmuonef_EF_2mu4_Bmumux, &b_trig_EF_trigmuonef_EF_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_DiMu", &trig_EF_trigmuonef_EF_2mu4_DiMu, &b_trig_EF_trigmuonef_EF_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk", &trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk, &b_trig_EF_trigmuonef_EF_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS", &trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS, &b_trig_EF_trigmuonef_EF_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_Jpsimumu", &trig_EF_trigmuonef_EF_2mu4_Jpsimumu, &b_trig_EF_trigmuonef_EF_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut", &trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmuonef_EF_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4_Upsimumu", &trig_EF_trigmuonef_EF_2mu4_Upsimumu, &b_trig_EF_trigmuonef_EF_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut", &trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut, &b_trig_EF_trigmuonef_EF_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T", &trig_EF_trigmuonef_EF_2mu4T, &b_trig_EF_trigmuonef_EF_2mu4T);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_2e5_medium", &trig_EF_trigmuonef_EF_2mu4T_2e5_medium, &b_trig_EF_trigmuonef_EF_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_Bmumu", &trig_EF_trigmuonef_EF_2mu4T_Bmumu, &b_trig_EF_trigmuonef_EF_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_Bmumux", &trig_EF_trigmuonef_EF_2mu4T_Bmumux, &b_trig_EF_trigmuonef_EF_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu", &trig_EF_trigmuonef_EF_2mu4T_DiMu, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu_DY", &trig_EF_trigmuonef_EF_2mu4T_DiMu_DY, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20", &trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS", &trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk", &trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS", &trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS, &b_trig_EF_trigmuonef_EF_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu", &trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu, &b_trig_EF_trigmuonef_EF_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu", &trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu, &b_trig_EF_trigmuonef_EF_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_Jpsimumu", &trig_EF_trigmuonef_EF_2mu4T_Jpsimumu, &b_trig_EF_trigmuonef_EF_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut", &trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmuonef_EF_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_Upsimumu", &trig_EF_trigmuonef_EF_2mu4T_Upsimumu, &b_trig_EF_trigmuonef_EF_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_xe30_noMu", &trig_EF_trigmuonef_EF_2mu4T_xe30_noMu, &b_trig_EF_trigmuonef_EF_2mu4T_xe30_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4T_xe40_noMu", &trig_EF_trigmuonef_EF_2mu4T_xe40_noMu, &b_trig_EF_trigmuonef_EF_2mu4T_xe40_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY", &trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY, &b_trig_EF_trigmuonef_EF_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6", &trig_EF_trigmuonef_EF_2mu6, &b_trig_EF_trigmuonef_EF_2mu6);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6_Bmumux", &trig_EF_trigmuonef_EF_2mu6_Bmumux, &b_trig_EF_trigmuonef_EF_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6_DiMu", &trig_EF_trigmuonef_EF_2mu6_DiMu, &b_trig_EF_trigmuonef_EF_2mu6_DiMu);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose", &trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose, &b_trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6_NL", &trig_EF_trigmuonef_EF_2mu6_NL, &b_trig_EF_trigmuonef_EF_2mu6_NL);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu0_empty_NoAlg", &trig_EF_trigmuonef_EF_mu0_empty_NoAlg, &b_trig_EF_trigmuonef_EF_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg", &trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg, &b_trig_EF_trigmuonef_EF_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg", &trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg, &b_trig_EF_trigmuonef_EF_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled", &trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled, &b_trig_EF_trigmuonef_EF_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10", &trig_EF_trigmuonef_EF_mu10, &b_trig_EF_trigmuonef_EF_mu10);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_Jpsimumu", &trig_EF_trigmuonef_EF_mu10_Jpsimumu, &b_trig_EF_trigmuonef_EF_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_NL", &trig_EF_trigmuonef_EF_mu10_NL, &b_trig_EF_trigmuonef_EF_mu10_NL);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_Upsimumu_FS", &trig_EF_trigmuonef_EF_mu10_Upsimumu_FS, &b_trig_EF_trigmuonef_EF_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS", &trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS, &b_trig_EF_trigmuonef_EF_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_loose", &trig_EF_trigmuonef_EF_mu10_loose, &b_trig_EF_trigmuonef_EF_mu10_loose);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF", &trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF, &b_trig_EF_trigmuonef_EF_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu11_empty_NoAlg", &trig_EF_trigmuonef_EF_mu11_empty_NoAlg, &b_trig_EF_trigmuonef_EF_mu11_empty_NoAlg);
@@ -16012,46 +18970,106 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu13_MG", &trig_EF_trigmuonef_EF_mu13_MG, &b_trig_EF_trigmuonef_EF_mu13_MG);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF", &trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF, &b_trig_EF_trigmuonef_EF_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15", &trig_EF_trigmuonef_EF_mu15, &b_trig_EF_trigmuonef_EF_mu15);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium", &trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium, &b_trig_EF_trigmuonef_EF_mu15_2mu4_EFFS_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15_mu10_EFFS", &trig_EF_trigmuonef_EF_mu15_mu10_EFFS, &b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium", &trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium, &b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight", &trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight, &b_trig_EF_trigmuonef_EF_mu15_mu10_EFFS_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15_xe30_noMu", &trig_EF_trigmuonef_EF_mu15_xe30_noMu, &b_trig_EF_trigmuonef_EF_mu15_xe30_noMu);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15i", &trig_EF_trigmuonef_EF_mu15i, &b_trig_EF_trigmuonef_EF_mu15i);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu15i_medium", &trig_EF_trigmuonef_EF_mu15i_medium, &b_trig_EF_trigmuonef_EF_mu15i_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18", &trig_EF_trigmuonef_EF_mu18, &b_trig_EF_trigmuonef_EF_mu18);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_L1J10", &trig_EF_trigmuonef_EF_mu18_L1J10, &b_trig_EF_trigmuonef_EF_mu18_L1J10);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_MG", &trig_EF_trigmuonef_EF_mu18_MG, &b_trig_EF_trigmuonef_EF_mu18_MG);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_MG_L1J10", &trig_EF_trigmuonef_EF_mu18_MG_L1J10, &b_trig_EF_trigmuonef_EF_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_MG_medium", &trig_EF_trigmuonef_EF_mu18_MG_medium, &b_trig_EF_trigmuonef_EF_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_medium", &trig_EF_trigmuonef_EF_mu18_medium, &b_trig_EF_trigmuonef_EF_mu18_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS", &trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS, &b_trig_EF_trigmuonef_EF_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS", &trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS, &b_trig_EF_trigmuonef_EF_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS", &trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS, &b_trig_EF_trigmuonef_EF_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS", &trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS, &b_trig_EF_trigmuonef_EF_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18i3_medium", &trig_EF_trigmuonef_EF_mu18i3_medium, &b_trig_EF_trigmuonef_EF_mu18i3_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18i4_medium", &trig_EF_trigmuonef_EF_mu18i4_medium, &b_trig_EF_trigmuonef_EF_mu18i4_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20", &trig_EF_trigmuonef_EF_mu20, &b_trig_EF_trigmuonef_EF_mu20);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_IDTrkNoCut", &trig_EF_trigmuonef_EF_mu20_IDTrkNoCut, &b_trig_EF_trigmuonef_EF_mu20_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx", &trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx, &b_trig_EF_trigmuonef_EF_mu20_IDTrkNoCut_ManyVx);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_MG", &trig_EF_trigmuonef_EF_mu20_MG, &b_trig_EF_trigmuonef_EF_mu20_MG);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_MG_medium", &trig_EF_trigmuonef_EF_mu20_MG_medium, &b_trig_EF_trigmuonef_EF_mu20_MG_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_empty", &trig_EF_trigmuonef_EF_mu20_empty, &b_trig_EF_trigmuonef_EF_mu20_empty);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_medium", &trig_EF_trigmuonef_EF_mu20_medium, &b_trig_EF_trigmuonef_EF_mu20_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight", &trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight, &b_trig_EF_trigmuonef_EF_mu20_mu10_EFFS_tight);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF", &trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF, &b_trig_EF_trigmuonef_EF_mu20_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20i", &trig_EF_trigmuonef_EF_mu20i, &b_trig_EF_trigmuonef_EF_mu20i);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20i_medium", &trig_EF_trigmuonef_EF_mu20i_medium, &b_trig_EF_trigmuonef_EF_mu20i_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22", &trig_EF_trigmuonef_EF_mu22, &b_trig_EF_trigmuonef_EF_mu22);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22_MG", &trig_EF_trigmuonef_EF_mu22_MG, &b_trig_EF_trigmuonef_EF_mu22_MG);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4", &trig_EF_trigmuonef_EF_mu4, &b_trig_EF_trigmuonef_EF_mu4);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22_MG_medium", &trig_EF_trigmuonef_EF_mu22_MG_medium, &b_trig_EF_trigmuonef_EF_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS", &trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS, &b_trig_EF_trigmuonef_EF_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22_medium", &trig_EF_trigmuonef_EF_mu22_medium, &b_trig_EF_trigmuonef_EF_mu22_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22i1_medium", &trig_EF_trigmuonef_EF_mu22i1_medium, &b_trig_EF_trigmuonef_EF_mu22i1_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22i2_medium", &trig_EF_trigmuonef_EF_mu22i2_medium, &b_trig_EF_trigmuonef_EF_mu22i2_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22i3_medium", &trig_EF_trigmuonef_EF_mu22i3_medium, &b_trig_EF_trigmuonef_EF_mu22i3_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22i4_medium", &trig_EF_trigmuonef_EF_mu22i4_medium, &b_trig_EF_trigmuonef_EF_mu22i4_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu24_MG_medium", &trig_EF_trigmuonef_EF_mu24_MG_medium, &b_trig_EF_trigmuonef_EF_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu24_MG_tight", &trig_EF_trigmuonef_EF_mu24_MG_tight, &b_trig_EF_trigmuonef_EF_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu24_medium", &trig_EF_trigmuonef_EF_mu24_medium, &b_trig_EF_trigmuonef_EF_mu24_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu24_tight", &trig_EF_trigmuonef_EF_mu24_tight, &b_trig_EF_trigmuonef_EF_mu24_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu30_MG_medium", &trig_EF_trigmuonef_EF_mu30_MG_medium, &b_trig_EF_trigmuonef_EF_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu30_MG_tight", &trig_EF_trigmuonef_EF_mu30_MG_tight, &b_trig_EF_trigmuonef_EF_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu30_medium", &trig_EF_trigmuonef_EF_mu30_medium, &b_trig_EF_trigmuonef_EF_mu30_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu30_tight", &trig_EF_trigmuonef_EF_mu30_tight, &b_trig_EF_trigmuonef_EF_mu30_tight);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_barrel", &trig_EF_trigmuonef_EF_mu40_MSonly_barrel, &b_trig_EF_trigmuonef_EF_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium", &trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium, &b_trig_EF_trigmuonef_EF_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_empty", &trig_EF_trigmuonef_EF_mu40_MSonly_empty, &b_trig_EF_trigmuonef_EF_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_tight", &trig_EF_trigmuonef_EF_mu40_MSonly_tight, &b_trig_EF_trigmuonef_EF_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11", &trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11, &b_trig_EF_trigmuonef_EF_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_MSonly_tighter", &trig_EF_trigmuonef_EF_mu40_MSonly_tighter, &b_trig_EF_trigmuonef_EF_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_slow", &trig_EF_trigmuonef_EF_mu40_slow, &b_trig_EF_trigmuonef_EF_mu40_slow);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_slow_empty", &trig_EF_trigmuonef_EF_mu40_slow_empty, &b_trig_EF_trigmuonef_EF_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_slow_medium", &trig_EF_trigmuonef_EF_mu40_slow_medium, &b_trig_EF_trigmuonef_EF_mu40_slow_medium);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_slow_outOfTime", &trig_EF_trigmuonef_EF_mu40_slow_outOfTime, &b_trig_EF_trigmuonef_EF_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_DiMu", &trig_EF_trigmuonef_EF_mu4_DiMu, &b_trig_EF_trigmuonef_EF_mu4_DiMu);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS", &trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS, &b_trig_EF_trigmuonef_EF_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_Jpsimumu", &trig_EF_trigmuonef_EF_mu4_Jpsimumu, &b_trig_EF_trigmuonef_EF_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium", &trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium, &b_trig_EF_trigmuonef_EF_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T", &trig_EF_trigmuonef_EF_mu4T, &b_trig_EF_trigmuonef_EF_mu4T);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_DiMu", &trig_EF_trigmuonef_EF_mu4T_DiMu, &b_trig_EF_trigmuonef_EF_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS", &trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS, &b_trig_EF_trigmuonef_EF_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Jpsimumu", &trig_EF_trigmuonef_EF_mu4T_Jpsimumu, &b_trig_EF_trigmuonef_EF_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi", &trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi, &b_trig_EF_trigmuonef_EF_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS", &trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS, &b_trig_EF_trigmuonef_EF_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS", &trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS, &b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS", &trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS, &b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS", &trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS, &b_trig_EF_trigmuonef_EF_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu", &trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu, &b_trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu", &trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu, &b_trig_EF_trigmuonef_EF_mu4T_j45_a4tc_EFFS_xe55_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY", &trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY, &b_trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_EF_trigmuonef_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu", &trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu, &b_trig_EF_trigmuonef_EF_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux", &trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux, &b_trig_EF_trigmuonef_EF_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_DiMu", &trig_EF_trigmuonef_EF_mu4Tmu6_DiMu, &b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20", &trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20, &b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS", &trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_EF_trigmuonef_EF_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu", &trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu, &b_trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmuonef_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu", &trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu, &b_trig_EF_trigmuonef_EF_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J10_matched", &trig_EF_trigmuonef_EF_mu4_L1J10_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J15_matched", &trig_EF_trigmuonef_EF_mu4_L1J15_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J20_matched", &trig_EF_trigmuonef_EF_mu4_L1J20_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J30_matched", &trig_EF_trigmuonef_EF_mu4_L1J30_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J50_matched", &trig_EF_trigmuonef_EF_mu4_L1J50_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1J75_matched", &trig_EF_trigmuonef_EF_mu4_L1J75_matched, &b_trig_EF_trigmuonef_EF_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic", &trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic, &b_trig_EF_trigmuonef_EF_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic", &trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic, &b_trig_EF_trigmuonef_EF_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_MSonly_cosmic", &trig_EF_trigmuonef_EF_mu4_MSonly_cosmic, &b_trig_EF_trigmuonef_EF_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_Trk_Jpsi", &trig_EF_trigmuonef_EF_mu4_Trk_Jpsi, &b_trig_EF_trigmuonef_EF_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_Upsimumu_FS", &trig_EF_trigmuonef_EF_mu4_Upsimumu_FS, &b_trig_EF_trigmuonef_EF_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS", &trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS, &b_trig_EF_trigmuonef_EF_mu4_Upsimumu_SiTrk_FS);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_cosmic", &trig_EF_trigmuonef_EF_mu4_cosmic, &b_trig_EF_trigmuonef_EF_mu4_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS", &trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS, &b_trig_EF_trigmuonef_EF_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_empty_NoAlg", &trig_EF_trigmuonef_EF_mu4_empty_NoAlg, &b_trig_EF_trigmuonef_EF_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg", &trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg, &b_trig_EF_trigmuonef_EF_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched", &trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched, &b_trig_EF_trigmuonef_EF_mu4_j10_a4tc_EFFS_matched);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched", &trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched, &b_trig_EF_trigmuonef_EF_mu4_j135_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched", &trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched, &b_trig_EF_trigmuonef_EF_mu4_j180_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg", &trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg, &b_trig_EF_trigmuonef_EF_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6", &trig_EF_trigmuonef_EF_mu6, &b_trig_EF_trigmuonef_EF_mu6);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6_DiMu_noOS", &trig_EF_trigmuonef_EF_mu6_DiMu_noOS, &b_trig_EF_trigmuonef_EF_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6_Jpsimumu", &trig_EF_trigmuonef_EF_mu6_Jpsimumu, &b_trig_EF_trigmuonef_EF_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk", &trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk, &b_trig_EF_trigmuonef_EF_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight", &trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight, &b_trig_EF_trigmuonef_EF_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose", &trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose, &b_trig_EF_trigmuonef_EF_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_EF_trigmuonef_track_n", &trig_EF_trigmuonef_track_n, &b_trig_EF_trigmuonef_track_n);
    fChain->SetBranchAddress("trig_EF_trigmuonef_track_MuonType", &trig_EF_trigmuonef_track_MuonType, &b_trig_EF_trigmuonef_track_MuonType);
    fChain->SetBranchAddress("trig_EF_trigmuonef_track_MS_pt", &trig_EF_trigmuonef_track_MS_pt, &b_trig_EF_trigmuonef_track_MS_pt);
@@ -16097,25 +19115,34 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu10_loose", &trig_EF_trigmugirl_EF_2mu10_loose, &b_trig_EF_trigmugirl_EF_2mu10_loose);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu10_loose_empty", &trig_EF_trigmugirl_EF_2mu10_loose_empty, &b_trig_EF_trigmugirl_EF_2mu10_loose_empty);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm", &trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm, &b_trig_EF_trigmugirl_EF_2mu10_loose_noOvlpRm);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4", &trig_EF_trigmugirl_EF_2mu4, &b_trig_EF_trigmugirl_EF_2mu4);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_Bmumu", &trig_EF_trigmugirl_EF_2mu4_Bmumu, &b_trig_EF_trigmugirl_EF_2mu4_Bmumu);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_Bmumux", &trig_EF_trigmugirl_EF_2mu4_Bmumux, &b_trig_EF_trigmugirl_EF_2mu4_Bmumux);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_DiMu", &trig_EF_trigmugirl_EF_2mu4_DiMu, &b_trig_EF_trigmugirl_EF_2mu4_DiMu);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk", &trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk, &b_trig_EF_trigmugirl_EF_2mu4_DiMu_SiTrk);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS", &trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS, &b_trig_EF_trigmugirl_EF_2mu4_DiMu_noVtx_noOS);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_Jpsimumu", &trig_EF_trigmugirl_EF_2mu4_Jpsimumu, &b_trig_EF_trigmugirl_EF_2mu4_Jpsimumu);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut", &trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmugirl_EF_2mu4_Jpsimumu_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4_Upsimumu", &trig_EF_trigmugirl_EF_2mu4_Upsimumu, &b_trig_EF_trigmugirl_EF_2mu4_Upsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut", &trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut, &b_trig_EF_trigmugirl_EF_2mu13_Zmumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T", &trig_EF_trigmugirl_EF_2mu4T, &b_trig_EF_trigmugirl_EF_2mu4T);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_2e5_medium", &trig_EF_trigmugirl_EF_2mu4T_2e5_medium, &b_trig_EF_trigmugirl_EF_2mu4T_2e5_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_Bmumu", &trig_EF_trigmugirl_EF_2mu4T_Bmumu, &b_trig_EF_trigmugirl_EF_2mu4T_Bmumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_Bmumux", &trig_EF_trigmugirl_EF_2mu4T_Bmumux, &b_trig_EF_trigmugirl_EF_2mu4T_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu", &trig_EF_trigmugirl_EF_2mu4T_DiMu, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu_DY", &trig_EF_trigmugirl_EF_2mu4T_DiMu_DY, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20", &trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY20);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS", &trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu_DY_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk", &trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu_SiTrk);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS", &trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS, &b_trig_EF_trigmugirl_EF_2mu4T_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu", &trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu, &b_trig_EF_trigmugirl_EF_2mu4T_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu", &trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu, &b_trig_EF_trigmugirl_EF_2mu4T_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_Jpsimumu", &trig_EF_trigmugirl_EF_2mu4T_Jpsimumu, &b_trig_EF_trigmugirl_EF_2mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut", &trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmugirl_EF_2mu4T_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_Upsimumu", &trig_EF_trigmugirl_EF_2mu4T_Upsimumu, &b_trig_EF_trigmugirl_EF_2mu4T_Upsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_xe30_noMu", &trig_EF_trigmugirl_EF_2mu4T_xe30_noMu, &b_trig_EF_trigmugirl_EF_2mu4T_xe30_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4T_xe40_noMu", &trig_EF_trigmugirl_EF_2mu4T_xe40_noMu, &b_trig_EF_trigmugirl_EF_2mu4T_xe40_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY", &trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY, &b_trig_EF_trigmugirl_EF_2mu4Ti_DiMu_DY);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6", &trig_EF_trigmugirl_EF_2mu6, &b_trig_EF_trigmugirl_EF_2mu6);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6_Bmumux", &trig_EF_trigmugirl_EF_2mu6_Bmumux, &b_trig_EF_trigmugirl_EF_2mu6_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6_DiMu", &trig_EF_trigmugirl_EF_2mu6_DiMu, &b_trig_EF_trigmugirl_EF_2mu6_DiMu);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose", &trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose, &b_trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6_NL", &trig_EF_trigmugirl_EF_2mu6_NL, &b_trig_EF_trigmugirl_EF_2mu6_NL);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu0_empty_NoAlg", &trig_EF_trigmugirl_EF_mu0_empty_NoAlg, &b_trig_EF_trigmugirl_EF_mu0_empty_NoAlg);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg", &trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg, &b_trig_EF_trigmugirl_EF_mu0_firstempty_NoAlg);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg", &trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg, &b_trig_EF_trigmugirl_EF_mu0_unpaired_iso_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled", &trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled, &b_trig_EF_trigmugirl_EF_2mu6_MSonly_g10_loose_nonfilled);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10", &trig_EF_trigmugirl_EF_mu10, &b_trig_EF_trigmugirl_EF_mu10);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_Jpsimumu", &trig_EF_trigmugirl_EF_mu10_Jpsimumu, &b_trig_EF_trigmugirl_EF_mu10_Jpsimumu);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_NL", &trig_EF_trigmugirl_EF_mu10_NL, &b_trig_EF_trigmugirl_EF_mu10_NL);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_Upsimumu_FS", &trig_EF_trigmugirl_EF_mu10_Upsimumu_FS, &b_trig_EF_trigmugirl_EF_mu10_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS", &trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS, &b_trig_EF_trigmugirl_EF_mu10_Upsimumu_tight_FS);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_loose", &trig_EF_trigmugirl_EF_mu10_loose, &b_trig_EF_trigmugirl_EF_mu10_loose);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF", &trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF, &b_trig_EF_trigmugirl_EF_mu10_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu11_empty_NoAlg", &trig_EF_trigmugirl_EF_mu11_empty_NoAlg, &b_trig_EF_trigmugirl_EF_mu11_empty_NoAlg);
@@ -16123,46 +19150,106 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu13_MG", &trig_EF_trigmugirl_EF_mu13_MG, &b_trig_EF_trigmugirl_EF_mu13_MG);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF", &trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF, &b_trig_EF_trigmugirl_EF_mu13_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15", &trig_EF_trigmugirl_EF_mu15, &b_trig_EF_trigmugirl_EF_mu15);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium", &trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium, &b_trig_EF_trigmugirl_EF_mu15_2mu4_EFFS_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15_mu10_EFFS", &trig_EF_trigmugirl_EF_mu15_mu10_EFFS, &b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium", &trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium, &b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight", &trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight, &b_trig_EF_trigmugirl_EF_mu15_mu10_EFFS_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15_xe30_noMu", &trig_EF_trigmugirl_EF_mu15_xe30_noMu, &b_trig_EF_trigmugirl_EF_mu15_xe30_noMu);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15i", &trig_EF_trigmugirl_EF_mu15i, &b_trig_EF_trigmugirl_EF_mu15i);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu15i_medium", &trig_EF_trigmugirl_EF_mu15i_medium, &b_trig_EF_trigmugirl_EF_mu15i_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18", &trig_EF_trigmugirl_EF_mu18, &b_trig_EF_trigmugirl_EF_mu18);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_L1J10", &trig_EF_trigmugirl_EF_mu18_L1J10, &b_trig_EF_trigmugirl_EF_mu18_L1J10);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_MG", &trig_EF_trigmugirl_EF_mu18_MG, &b_trig_EF_trigmugirl_EF_mu18_MG);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_MG_L1J10", &trig_EF_trigmugirl_EF_mu18_MG_L1J10, &b_trig_EF_trigmugirl_EF_mu18_MG_L1J10);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_MG_medium", &trig_EF_trigmugirl_EF_mu18_MG_medium, &b_trig_EF_trigmugirl_EF_mu18_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_medium", &trig_EF_trigmugirl_EF_mu18_medium, &b_trig_EF_trigmugirl_EF_mu18_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS", &trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS, &b_trig_EF_trigmugirl_EF_mu18_medium_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS", &trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS, &b_trig_EF_trigmugirl_EF_mu18_medium_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS", &trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS, &b_trig_EF_trigmugirl_EF_mu18_medium_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS", &trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS, &b_trig_EF_trigmugirl_EF_mu18_medium_4j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18i3_medium", &trig_EF_trigmugirl_EF_mu18i3_medium, &b_trig_EF_trigmugirl_EF_mu18i3_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18i4_medium", &trig_EF_trigmugirl_EF_mu18i4_medium, &b_trig_EF_trigmugirl_EF_mu18i4_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20", &trig_EF_trigmugirl_EF_mu20, &b_trig_EF_trigmugirl_EF_mu20);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_IDTrkNoCut", &trig_EF_trigmugirl_EF_mu20_IDTrkNoCut, &b_trig_EF_trigmugirl_EF_mu20_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx", &trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx, &b_trig_EF_trigmugirl_EF_mu20_IDTrkNoCut_ManyVx);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_MG", &trig_EF_trigmugirl_EF_mu20_MG, &b_trig_EF_trigmugirl_EF_mu20_MG);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_MG_medium", &trig_EF_trigmugirl_EF_mu20_MG_medium, &b_trig_EF_trigmugirl_EF_mu20_MG_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_empty", &trig_EF_trigmugirl_EF_mu20_empty, &b_trig_EF_trigmugirl_EF_mu20_empty);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_medium", &trig_EF_trigmugirl_EF_mu20_medium, &b_trig_EF_trigmugirl_EF_mu20_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight", &trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight, &b_trig_EF_trigmugirl_EF_mu20_mu10_EFFS_tight);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF", &trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF, &b_trig_EF_trigmugirl_EF_mu20_muCombTag_NoEF);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20i", &trig_EF_trigmugirl_EF_mu20i, &b_trig_EF_trigmugirl_EF_mu20i);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20i_medium", &trig_EF_trigmugirl_EF_mu20i_medium, &b_trig_EF_trigmugirl_EF_mu20i_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22", &trig_EF_trigmugirl_EF_mu22, &b_trig_EF_trigmugirl_EF_mu22);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22_MG", &trig_EF_trigmugirl_EF_mu22_MG, &b_trig_EF_trigmugirl_EF_mu22_MG);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4", &trig_EF_trigmugirl_EF_mu4, &b_trig_EF_trigmugirl_EF_mu4);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22_MG_medium", &trig_EF_trigmugirl_EF_mu22_MG_medium, &b_trig_EF_trigmugirl_EF_mu22_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS", &trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS, &b_trig_EF_trigmugirl_EF_mu22_j30_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22_medium", &trig_EF_trigmugirl_EF_mu22_medium, &b_trig_EF_trigmugirl_EF_mu22_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22i1_medium", &trig_EF_trigmugirl_EF_mu22i1_medium, &b_trig_EF_trigmugirl_EF_mu22i1_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22i2_medium", &trig_EF_trigmugirl_EF_mu22i2_medium, &b_trig_EF_trigmugirl_EF_mu22i2_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22i3_medium", &trig_EF_trigmugirl_EF_mu22i3_medium, &b_trig_EF_trigmugirl_EF_mu22i3_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22i4_medium", &trig_EF_trigmugirl_EF_mu22i4_medium, &b_trig_EF_trigmugirl_EF_mu22i4_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu24_MG_medium", &trig_EF_trigmugirl_EF_mu24_MG_medium, &b_trig_EF_trigmugirl_EF_mu24_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu24_MG_tight", &trig_EF_trigmugirl_EF_mu24_MG_tight, &b_trig_EF_trigmugirl_EF_mu24_MG_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu24_medium", &trig_EF_trigmugirl_EF_mu24_medium, &b_trig_EF_trigmugirl_EF_mu24_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu24_tight", &trig_EF_trigmugirl_EF_mu24_tight, &b_trig_EF_trigmugirl_EF_mu24_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu30_MG_medium", &trig_EF_trigmugirl_EF_mu30_MG_medium, &b_trig_EF_trigmugirl_EF_mu30_MG_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu30_MG_tight", &trig_EF_trigmugirl_EF_mu30_MG_tight, &b_trig_EF_trigmugirl_EF_mu30_MG_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu30_medium", &trig_EF_trigmugirl_EF_mu30_medium, &b_trig_EF_trigmugirl_EF_mu30_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu30_tight", &trig_EF_trigmugirl_EF_mu30_tight, &b_trig_EF_trigmugirl_EF_mu30_tight);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_barrel", &trig_EF_trigmugirl_EF_mu40_MSonly_barrel, &b_trig_EF_trigmugirl_EF_mu40_MSonly_barrel);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium", &trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium, &b_trig_EF_trigmugirl_EF_mu40_MSonly_barrel_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_empty", &trig_EF_trigmugirl_EF_mu40_MSonly_empty, &b_trig_EF_trigmugirl_EF_mu40_MSonly_empty);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_tight", &trig_EF_trigmugirl_EF_mu40_MSonly_tight, &b_trig_EF_trigmugirl_EF_mu40_MSonly_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11", &trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11, &b_trig_EF_trigmugirl_EF_mu40_MSonly_tight_L1MU11);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_MSonly_tighter", &trig_EF_trigmugirl_EF_mu40_MSonly_tighter, &b_trig_EF_trigmugirl_EF_mu40_MSonly_tighter);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_slow", &trig_EF_trigmugirl_EF_mu40_slow, &b_trig_EF_trigmugirl_EF_mu40_slow);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_slow_empty", &trig_EF_trigmugirl_EF_mu40_slow_empty, &b_trig_EF_trigmugirl_EF_mu40_slow_empty);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_slow_medium", &trig_EF_trigmugirl_EF_mu40_slow_medium, &b_trig_EF_trigmugirl_EF_mu40_slow_medium);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_slow_outOfTime", &trig_EF_trigmugirl_EF_mu40_slow_outOfTime, &b_trig_EF_trigmugirl_EF_mu40_slow_outOfTime);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_DiMu", &trig_EF_trigmugirl_EF_mu4_DiMu, &b_trig_EF_trigmugirl_EF_mu4_DiMu);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS", &trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS, &b_trig_EF_trigmugirl_EF_mu4_DiMu_FS_noOS);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_Jpsimumu", &trig_EF_trigmugirl_EF_mu4_Jpsimumu, &b_trig_EF_trigmugirl_EF_mu4_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium", &trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium, &b_trig_EF_trigmugirl_EF_mu40_slow_outOfTime_medium);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T", &trig_EF_trigmugirl_EF_mu4T, &b_trig_EF_trigmugirl_EF_mu4T);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_DiMu", &trig_EF_trigmugirl_EF_mu4T_DiMu, &b_trig_EF_trigmugirl_EF_mu4T_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS", &trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS, &b_trig_EF_trigmugirl_EF_mu4T_DiMu_FS_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Jpsimumu", &trig_EF_trigmugirl_EF_mu4T_Jpsimumu, &b_trig_EF_trigmugirl_EF_mu4T_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi", &trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi, &b_trig_EF_trigmugirl_EF_mu4T_Trk_Jpsi);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS", &trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS, &b_trig_EF_trigmugirl_EF_mu4T_Trk_Upsi_FS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS", &trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS, &b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_FS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS", &trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS, &b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_SiTrk_FS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS", &trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS, &b_trig_EF_trigmugirl_EF_mu4T_Upsimumu_tight_FS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu", &trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu, &b_trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe45_loose_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu", &trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu, &b_trig_EF_trigmugirl_EF_mu4T_j45_a4tc_EFFS_xe55_noMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY", &trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY, &b_trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS", &trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS, &b_trig_EF_trigmugirl_EF_mu4Timu6i_DiMu_DY14_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu", &trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu, &b_trig_EF_trigmugirl_EF_mu4Tmu6_Bmumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux", &trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux, &b_trig_EF_trigmugirl_EF_mu4Tmu6_Bmumux);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_DiMu", &trig_EF_trigmugirl_EF_mu4Tmu6_DiMu, &b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20", &trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20, &b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_DY20);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS", &trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS, &b_trig_EF_trigmugirl_EF_mu4Tmu6_DiMu_noVtx_noOS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu", &trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu, &b_trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut", &trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut, &b_trig_EF_trigmugirl_EF_mu4Tmu6_Jpsimumu_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu", &trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu, &b_trig_EF_trigmugirl_EF_mu4Tmu6_Upsimumu);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J10_matched", &trig_EF_trigmugirl_EF_mu4_L1J10_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J10_matched);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J15_matched", &trig_EF_trigmugirl_EF_mu4_L1J15_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J15_matched);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J20_matched", &trig_EF_trigmugirl_EF_mu4_L1J20_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J20_matched);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J30_matched", &trig_EF_trigmugirl_EF_mu4_L1J30_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J30_matched);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J50_matched", &trig_EF_trigmugirl_EF_mu4_L1J50_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J50_matched);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1J75_matched", &trig_EF_trigmugirl_EF_mu4_L1J75_matched, &b_trig_EF_trigmugirl_EF_mu4_L1J75_matched);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic", &trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic, &b_trig_EF_trigmugirl_EF_mu4_L1MU11_MSonly_cosmic);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic", &trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic, &b_trig_EF_trigmugirl_EF_mu4_L1MU11_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_MSonly_cosmic", &trig_EF_trigmugirl_EF_mu4_MSonly_cosmic, &b_trig_EF_trigmugirl_EF_mu4_MSonly_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_Trk_Jpsi", &trig_EF_trigmugirl_EF_mu4_Trk_Jpsi, &b_trig_EF_trigmugirl_EF_mu4_Trk_Jpsi);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_Upsimumu_FS", &trig_EF_trigmugirl_EF_mu4_Upsimumu_FS, &b_trig_EF_trigmugirl_EF_mu4_Upsimumu_FS);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS", &trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS, &b_trig_EF_trigmugirl_EF_mu4_Upsimumu_SiTrk_FS);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_cosmic", &trig_EF_trigmugirl_EF_mu4_cosmic, &b_trig_EF_trigmugirl_EF_mu4_cosmic);
-   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS", &trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS, &b_trig_EF_trigmugirl_EF_mu4_j10_a4_EFFS);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_empty_NoAlg", &trig_EF_trigmugirl_EF_mu4_empty_NoAlg, &b_trig_EF_trigmugirl_EF_mu4_empty_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg", &trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg, &b_trig_EF_trigmugirl_EF_mu4_firstempty_NoAlg);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched", &trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched, &b_trig_EF_trigmugirl_EF_mu4_j10_a4tc_EFFS_matched);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched", &trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched, &b_trig_EF_trigmugirl_EF_mu4_j135_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched", &trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched, &b_trig_EF_trigmugirl_EF_mu4_j180_a4tc_EFFS_L1matched);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg", &trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg, &b_trig_EF_trigmugirl_EF_mu4_unpaired_iso_NoAlg);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6", &trig_EF_trigmugirl_EF_mu6, &b_trig_EF_trigmugirl_EF_mu6);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6_DiMu_noOS", &trig_EF_trigmugirl_EF_mu6_DiMu_noOS, &b_trig_EF_trigmugirl_EF_mu6_DiMu_noOS);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6_Jpsimumu", &trig_EF_trigmugirl_EF_mu6_Jpsimumu, &b_trig_EF_trigmugirl_EF_mu6_Jpsimumu);
    fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk", &trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk, &b_trig_EF_trigmugirl_EF_mu6_Jpsimumu_SiTrk);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight", &trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight, &b_trig_EF_trigmugirl_EF_mu6_Jpsimumu_tight);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose", &trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose, &b_trig_EF_trigmugirl_EF_mu6_Trk_Jpsi_loose);
    fChain->SetBranchAddress("trig_EF_trigmugirl_track_n", &trig_EF_trigmugirl_track_n, &b_trig_EF_trigmugirl_track_n);
    fChain->SetBranchAddress("trig_EF_trigmugirl_track_MuonType", &trig_EF_trigmugirl_track_MuonType, &b_trig_EF_trigmugirl_track_MuonType);
    fChain->SetBranchAddress("trig_EF_trigmugirl_track_MS_pt", &trig_EF_trigmugirl_track_MS_pt, &b_trig_EF_trigmugirl_track_MS_pt);
@@ -16353,36 +19440,44 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L1_emtau_hadIsol", &trig_L1_emtau_hadIsol, &b_trig_L1_emtau_hadIsol);
    fChain->SetBranchAddress("trig_L1_emtau_hadCore", &trig_L1_emtau_hadCore, &b_trig_L1_emtau_hadCore);
    fChain->SetBranchAddress("trig_L1_emtau_thrPattern", &trig_L1_emtau_thrPattern, &b_trig_L1_emtau_thrPattern);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM10", &trig_L1_emtau_L1_2EM10, &b_trig_L1_emtau_L1_2EM10);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM14", &trig_L1_emtau_L1_2EM14, &b_trig_L1_emtau_L1_2EM14);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM10VH", &trig_L1_emtau_L1_2EM10VH, &b_trig_L1_emtau_L1_2EM10VH);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM12", &trig_L1_emtau_L1_2EM12, &b_trig_L1_emtau_L1_2EM12);
    fChain->SetBranchAddress("trig_L1_emtau_L1_2EM3", &trig_L1_emtau_L1_2EM3, &b_trig_L1_emtau_L1_2EM3);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM3_EM12", &trig_L1_emtau_L1_2EM3_EM12, &b_trig_L1_emtau_L1_2EM3_EM12);
    fChain->SetBranchAddress("trig_L1_emtau_L1_2EM3_EM7", &trig_L1_emtau_L1_2EM3_EM7, &b_trig_L1_emtau_L1_2EM3_EM7);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM3_NL", &trig_L1_emtau_L1_2EM3_NL, &b_trig_L1_emtau_L1_2EM3_NL);
    fChain->SetBranchAddress("trig_L1_emtau_L1_2EM5", &trig_L1_emtau_L1_2EM5, &b_trig_L1_emtau_L1_2EM5);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_2EM5_EM16VH", &trig_L1_emtau_L1_2EM5_EM16VH, &b_trig_L1_emtau_L1_2EM5_EM16VH);
    fChain->SetBranchAddress("trig_L1_emtau_L1_2EM5_MU6", &trig_L1_emtau_L1_2EM5_MU6, &b_trig_L1_emtau_L1_2EM5_MU6);
    fChain->SetBranchAddress("trig_L1_emtau_L1_2EM7", &trig_L1_emtau_L1_2EM7, &b_trig_L1_emtau_L1_2EM7);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10", &trig_L1_emtau_L1_EM10, &b_trig_L1_emtau_L1_EM10);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10_MU6", &trig_L1_emtau_L1_EM10_MU6, &b_trig_L1_emtau_L1_EM10_MU6);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10_NL", &trig_L1_emtau_L1_EM10_NL, &b_trig_L1_emtau_L1_EM10_NL);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10_XE20", &trig_L1_emtau_L1_EM10_XE20, &b_trig_L1_emtau_L1_EM10_XE20);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10VH", &trig_L1_emtau_L1_EM10VH, &b_trig_L1_emtau_L1_EM10VH);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10VH_MU6", &trig_L1_emtau_L1_EM10VH_MU6, &b_trig_L1_emtau_L1_EM10VH_MU6);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10VH_XE20", &trig_L1_emtau_L1_EM10VH_XE20, &b_trig_L1_emtau_L1_EM10VH_XE20);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10VH_XE30", &trig_L1_emtau_L1_EM10VH_XE30, &b_trig_L1_emtau_L1_EM10VH_XE30);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM10VH_XE35", &trig_L1_emtau_L1_EM10VH_XE35, &b_trig_L1_emtau_L1_EM10VH_XE35);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM12", &trig_L1_emtau_L1_EM12, &b_trig_L1_emtau_L1_EM12);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM14", &trig_L1_emtau_L1_EM14, &b_trig_L1_emtau_L1_EM14);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM14_XE10", &trig_L1_emtau_L1_EM14_XE10, &b_trig_L1_emtau_L1_EM14_XE10);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM14_XE20", &trig_L1_emtau_L1_EM14_XE20, &b_trig_L1_emtau_L1_EM14_XE20);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM16", &trig_L1_emtau_L1_EM16, &b_trig_L1_emtau_L1_EM16);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_3J10", &trig_L1_emtau_L1_EM12_3J10, &b_trig_L1_emtau_L1_EM12_3J10);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_4J10", &trig_L1_emtau_L1_EM12_4J10, &b_trig_L1_emtau_L1_EM12_4J10);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_XE20", &trig_L1_emtau_L1_EM12_XE20, &b_trig_L1_emtau_L1_EM12_XE20);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_XE30", &trig_L1_emtau_L1_EM12_XE30, &b_trig_L1_emtau_L1_EM12_XE30);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_XS30", &trig_L1_emtau_L1_EM12_XS30, &b_trig_L1_emtau_L1_EM12_XS30);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM12_XS45", &trig_L1_emtau_L1_EM12_XS45, &b_trig_L1_emtau_L1_EM12_XS45);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM16VH", &trig_L1_emtau_L1_EM16VH, &b_trig_L1_emtau_L1_EM16VH);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM18VH", &trig_L1_emtau_L1_EM18VH, &b_trig_L1_emtau_L1_EM18VH);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3", &trig_L1_emtau_L1_EM3, &b_trig_L1_emtau_L1_EM3);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM30", &trig_L1_emtau_L1_EM30, &b_trig_L1_emtau_L1_EM30);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_EMPTY", &trig_L1_emtau_L1_EM3_EMPTY, &b_trig_L1_emtau_L1_EM3_EMPTY);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_FIRSTEMPTY", &trig_L1_emtau_L1_EM3_FIRSTEMPTY, &b_trig_L1_emtau_L1_EM3_FIRSTEMPTY);
-   fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_MU0", &trig_L1_emtau_L1_EM3_MU0, &b_trig_L1_emtau_L1_EM3_MU0);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_MU6", &trig_L1_emtau_L1_EM3_MU6, &b_trig_L1_emtau_L1_EM3_MU6);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_UNPAIRED_ISO", &trig_L1_emtau_L1_EM3_UNPAIRED_ISO, &b_trig_L1_emtau_L1_EM3_UNPAIRED_ISO);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM3_UNPAIRED_NONISO", &trig_L1_emtau_L1_EM3_UNPAIRED_NONISO, &b_trig_L1_emtau_L1_EM3_UNPAIRED_NONISO);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM5", &trig_L1_emtau_L1_EM5, &b_trig_L1_emtau_L1_EM5);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM5_2MU6", &trig_L1_emtau_L1_EM5_2MU6, &b_trig_L1_emtau_L1_EM5_2MU6);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM5_EMPTY", &trig_L1_emtau_L1_EM5_EMPTY, &b_trig_L1_emtau_L1_EM5_EMPTY);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM5_MU10", &trig_L1_emtau_L1_EM5_MU10, &b_trig_L1_emtau_L1_EM5_MU10);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM5_MU6", &trig_L1_emtau_L1_EM5_MU6, &b_trig_L1_emtau_L1_EM5_MU6);
    fChain->SetBranchAddress("trig_L1_emtau_L1_EM7", &trig_L1_emtau_L1_EM7, &b_trig_L1_emtau_L1_EM7);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM7_XS30", &trig_L1_emtau_L1_EM7_XS30, &b_trig_L1_emtau_L1_EM7_XS30);
+   fChain->SetBranchAddress("trig_L1_emtau_L1_EM7_XS45", &trig_L1_emtau_L1_EM7_XS45, &b_trig_L1_emtau_L1_EM7_XS45);
    fChain->SetBranchAddress("trig_L1_emtau_RoIWord", &trig_L1_emtau_RoIWord, &b_trig_L1_emtau_RoIWord);
    fChain->SetBranchAddress("trig_L2_emcl_n", &trig_L2_emcl_n, &b_trig_L2_emcl_n);
    fChain->SetBranchAddress("trig_L2_emcl_quality", &trig_L2_emcl_quality, &b_trig_L2_emcl_quality);
@@ -16486,32 +19581,62 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_el_F1", &trig_L2_el_F1, &b_trig_L2_el_F1);
    fChain->SetBranchAddress("trig_L2_el_L2_2e10_medium", &trig_L2_el_L2_2e10_medium, &b_trig_L2_el_L2_2e10_medium);
    fChain->SetBranchAddress("trig_L2_el_L2_2e10_medium_mu6", &trig_L2_el_L2_2e10_medium_mu6, &b_trig_L2_el_L2_2e10_medium_mu6);
+   fChain->SetBranchAddress("trig_L2_el_L2_2e12Tvh_medium", &trig_L2_el_L2_2e12Tvh_medium, &b_trig_L2_el_L2_2e12Tvh_medium);
    fChain->SetBranchAddress("trig_L2_el_L2_2e12_medium", &trig_L2_el_L2_2e12_medium, &b_trig_L2_el_L2_2e12_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_2e15vh_medium", &trig_L2_el_L2_2e15vh_medium, &b_trig_L2_el_L2_2e15vh_medium);
    fChain->SetBranchAddress("trig_L2_el_L2_2e5_tight", &trig_L2_el_L2_2e5_tight, &b_trig_L2_el_L2_2e5_tight);
    fChain->SetBranchAddress("trig_L2_el_L2_2e5_tight_Jpsi", &trig_L2_el_L2_2e5_tight_Jpsi, &b_trig_L2_el_L2_2e5_tight_Jpsi);
-   fChain->SetBranchAddress("trig_L2_el_L2_2e5_tight_NL", &trig_L2_el_L2_2e5_tight_NL, &b_trig_L2_el_L2_2e5_tight_NL);
    fChain->SetBranchAddress("trig_L2_el_L2_e10_medium", &trig_L2_el_L2_e10_medium, &b_trig_L2_el_L2_e10_medium);
    fChain->SetBranchAddress("trig_L2_el_L2_e10_medium_2mu6", &trig_L2_el_L2_e10_medium_2mu6, &b_trig_L2_el_L2_e10_medium_2mu6);
+   fChain->SetBranchAddress("trig_L2_el_L2_e10_medium_mu10", &trig_L2_el_L2_e10_medium_mu10, &b_trig_L2_el_L2_e10_medium_mu10);
    fChain->SetBranchAddress("trig_L2_el_L2_e10_medium_mu6", &trig_L2_el_L2_e10_medium_mu6, &b_trig_L2_el_L2_e10_medium_mu6);
-   fChain->SetBranchAddress("trig_L2_el_L2_e15_medium", &trig_L2_el_L2_e15_medium, &b_trig_L2_el_L2_e15_medium);
-   fChain->SetBranchAddress("trig_L2_el_L2_e15_medium_xe30_noMu", &trig_L2_el_L2_e15_medium_xe30_noMu, &b_trig_L2_el_L2_e15_medium_xe30_noMu);
-   fChain->SetBranchAddress("trig_L2_el_L2_e15_tight", &trig_L2_el_L2_e15_tight, &b_trig_L2_el_L2_e15_tight);
-   fChain->SetBranchAddress("trig_L2_el_L2_e15_tight_NL", &trig_L2_el_L2_e15_tight_NL, &b_trig_L2_el_L2_e15_tight_NL);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_loose", &trig_L2_el_L2_e20_loose, &b_trig_L2_el_L2_e20_loose);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_medium", &trig_L2_el_L2_e20_medium, &b_trig_L2_el_L2_e20_medium);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_medium1", &trig_L2_el_L2_e20_medium1, &b_trig_L2_el_L2_e20_medium1);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_medium_IDTrkNoCut", &trig_L2_el_L2_e20_medium_IDTrkNoCut, &b_trig_L2_el_L2_e20_medium_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_medium_SiTrk", &trig_L2_el_L2_e20_medium_SiTrk, &b_trig_L2_el_L2_e20_medium_SiTrk);
-   fChain->SetBranchAddress("trig_L2_el_L2_e20_medium_TRT", &trig_L2_el_L2_e20_medium_TRT, &b_trig_L2_el_L2_e20_medium_TRT);
-   fChain->SetBranchAddress("trig_L2_el_L2_e22_medium", &trig_L2_el_L2_e22_medium, &b_trig_L2_el_L2_e22_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e10_medium_mu6_topo_medium", &trig_L2_el_L2_e10_medium_mu6_topo_medium, &b_trig_L2_el_L2_e10_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e11_etcut", &trig_L2_el_L2_e11_etcut, &b_trig_L2_el_L2_e11_etcut);
+   fChain->SetBranchAddress("trig_L2_el_L2_e12Tvh_medium", &trig_L2_el_L2_e12Tvh_medium, &b_trig_L2_el_L2_e12Tvh_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e12Tvh_medium_2e6T_medium", &trig_L2_el_L2_e12Tvh_medium_2e6T_medium, &b_trig_L2_el_L2_e12Tvh_medium_2e6T_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e12Tvh_medium_mu6", &trig_L2_el_L2_e12Tvh_medium_mu6, &b_trig_L2_el_L2_e12Tvh_medium_mu6);
+   fChain->SetBranchAddress("trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium", &trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium, &b_trig_L2_el_L2_e12Tvh_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e12_medium", &trig_L2_el_L2_e12_medium, &b_trig_L2_el_L2_e12_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e13_etcutTrk_xs30_noMu", &trig_L2_el_L2_e13_etcutTrk_xs30_noMu, &b_trig_L2_el_L2_e13_etcutTrk_xs30_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e13_etcutTrk_xs45_noMu", &trig_L2_el_L2_e13_etcutTrk_xs45_noMu, &b_trig_L2_el_L2_e13_etcutTrk_xs45_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e14_tight_e4_etcut_Jpsi", &trig_L2_el_L2_e14_tight_e4_etcut_Jpsi, &b_trig_L2_el_L2_e14_tight_e4_etcut_Jpsi);
+   fChain->SetBranchAddress("trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee", &trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee, &b_trig_L2_el_L2_e15vh_loose1_e12Tvh_loose1_Zee);
+   fChain->SetBranchAddress("trig_L2_el_L2_e15vh_medium", &trig_L2_el_L2_e15vh_medium, &b_trig_L2_el_L2_e15vh_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e15vh_medium_xe30_noMu", &trig_L2_el_L2_e15vh_medium_xe30_noMu, &b_trig_L2_el_L2_e15vh_medium_xe30_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e15vh_medium_xe35_noMu", &trig_L2_el_L2_e15vh_medium_xe35_noMu, &b_trig_L2_el_L2_e15vh_medium_xe35_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e20_etcutTrk_xe25_noMu", &trig_L2_el_L2_e20_etcutTrk_xe25_noMu, &b_trig_L2_el_L2_e20_etcutTrk_xe25_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e20_etcutTrk_xs45_noMu", &trig_L2_el_L2_e20_etcutTrk_xs45_noMu, &b_trig_L2_el_L2_e20_etcutTrk_xs45_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e20_tight_e15_NoCut_Zee", &trig_L2_el_L2_e20_tight_e15_NoCut_Zee, &b_trig_L2_el_L2_e20_tight_e15_NoCut_Zee);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_loose", &trig_L2_el_L2_e22vh_loose, &b_trig_L2_el_L2_e22vh_loose);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_loose1", &trig_L2_el_L2_e22vh_loose1, &b_trig_L2_el_L2_e22vh_loose1);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_looseTrk", &trig_L2_el_L2_e22vh_looseTrk, &b_trig_L2_el_L2_e22vh_looseTrk);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS", &trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS, &b_trig_L2_el_L2_e22vh_loose_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS", &trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS, &b_trig_L2_el_L2_e22vh_loose_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS", &trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS, &b_trig_L2_el_L2_e22vh_loose_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium", &trig_L2_el_L2_e22vh_medium, &b_trig_L2_el_L2_e22vh_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium1", &trig_L2_el_L2_e22vh_medium1, &b_trig_L2_el_L2_e22vh_medium1);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium1_EFxe20_noMu", &trig_L2_el_L2_e22vh_medium1_EFxe20_noMu, &b_trig_L2_el_L2_e22vh_medium1_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium1_EFxe30_noMu", &trig_L2_el_L2_e22vh_medium1_EFxe30_noMu, &b_trig_L2_el_L2_e22vh_medium1_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium1_EFxe40_noMu", &trig_L2_el_L2_e22vh_medium1_EFxe40_noMu, &b_trig_L2_el_L2_e22vh_medium1_EFxe40_noMu);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium2", &trig_L2_el_L2_e22vh_medium2, &b_trig_L2_el_L2_e22vh_medium2);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium_IDTrkNoCut", &trig_L2_el_L2_e22vh_medium_IDTrkNoCut, &b_trig_L2_el_L2_e22vh_medium_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium_SiTrk", &trig_L2_el_L2_e22vh_medium_SiTrk, &b_trig_L2_el_L2_e22vh_medium_SiTrk);
+   fChain->SetBranchAddress("trig_L2_el_L2_e22vh_medium_TRT", &trig_L2_el_L2_e22vh_medium_TRT, &b_trig_L2_el_L2_e22vh_medium_TRT);
+   fChain->SetBranchAddress("trig_L2_el_L2_e40_medium", &trig_L2_el_L2_e40_medium, &b_trig_L2_el_L2_e40_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e45_medium", &trig_L2_el_L2_e45_medium, &b_trig_L2_el_L2_e45_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e45_medium1", &trig_L2_el_L2_e45_medium1, &b_trig_L2_el_L2_e45_medium1);
+   fChain->SetBranchAddress("trig_L2_el_L2_e5_medium_mu6", &trig_L2_el_L2_e5_medium_mu6, &b_trig_L2_el_L2_e5_medium_mu6);
+   fChain->SetBranchAddress("trig_L2_el_L2_e5_medium_mu6_topo_medium", &trig_L2_el_L2_e5_medium_mu6_topo_medium, &b_trig_L2_el_L2_e5_medium_mu6_topo_medium);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight", &trig_L2_el_L2_e5_tight, &b_trig_L2_el_L2_e5_tight);
+   fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e14_etcut_Jpsi", &trig_L2_el_L2_e5_tight_e14_etcut_Jpsi, &b_trig_L2_el_L2_e5_tight_e14_etcut_Jpsi);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e4_etcut_Jpsi", &trig_L2_el_L2_e5_tight_e4_etcut_Jpsi, &b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk", &trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk, &b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_SiTrk);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT", &trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT, &b_trig_L2_el_L2_e5_tight_e4_etcut_Jpsi_TRT);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e5_NoCut", &trig_L2_el_L2_e5_tight_e5_NoCut, &b_trig_L2_el_L2_e5_tight_e5_NoCut);
    fChain->SetBranchAddress("trig_L2_el_L2_e5_tight_e9_etcut_Jpsi", &trig_L2_el_L2_e5_tight_e9_etcut_Jpsi, &b_trig_L2_el_L2_e5_tight_e9_etcut_Jpsi);
    fChain->SetBranchAddress("trig_L2_el_L2_e60_loose", &trig_L2_el_L2_e60_loose, &b_trig_L2_el_L2_e60_loose);
-   fChain->SetBranchAddress("trig_L2_el_L2_e9_tight_e5_tight_Jpsi", &trig_L2_el_L2_e9_tight_e5_tight_Jpsi, &b_trig_L2_el_L2_e9_tight_e5_tight_Jpsi);
+   fChain->SetBranchAddress("trig_L2_el_L2_e6T_medium", &trig_L2_el_L2_e6T_medium, &b_trig_L2_el_L2_e6T_medium);
+   fChain->SetBranchAddress("trig_L2_el_L2_e9_tight_e4_etcut_Jpsi", &trig_L2_el_L2_e9_tight_e4_etcut_Jpsi, &b_trig_L2_el_L2_e9_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_L2_el_L2_eb_physics", &trig_L2_el_L2_eb_physics, &b_trig_L2_el_L2_eb_physics);
    fChain->SetBranchAddress("trig_L2_el_L2_eb_physics_empty", &trig_L2_el_L2_eb_physics_empty, &b_trig_L2_el_L2_eb_physics_empty);
    fChain->SetBranchAddress("trig_L2_el_L2_eb_physics_firstempty", &trig_L2_el_L2_eb_physics_firstempty, &b_trig_L2_el_L2_eb_physics_firstempty);
@@ -16523,6 +19648,7 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_el_L2_eb_random_firstempty", &trig_L2_el_L2_eb_random_firstempty, &b_trig_L2_el_L2_eb_random_firstempty);
    fChain->SetBranchAddress("trig_L2_el_L2_eb_random_unpaired_iso", &trig_L2_el_L2_eb_random_unpaired_iso, &b_trig_L2_el_L2_eb_random_unpaired_iso);
    fChain->SetBranchAddress("trig_L2_el_L2_em3_empty_larcalib", &trig_L2_el_L2_em3_empty_larcalib, &b_trig_L2_el_L2_em3_empty_larcalib);
+   fChain->SetBranchAddress("trig_L2_el_L2_em5_empty_larcalib", &trig_L2_el_L2_em5_empty_larcalib, &b_trig_L2_el_L2_em5_empty_larcalib);
    fChain->SetBranchAddress("trig_L2_el_err_trkPt", &trig_L2_el_err_trkPt, &b_trig_L2_el_err_trkPt);
    fChain->SetBranchAddress("trig_L2_el_err_eta", &trig_L2_el_err_eta, &b_trig_L2_el_err_eta);
    fChain->SetBranchAddress("trig_L2_el_err_phi", &trig_L2_el_err_phi, &b_trig_L2_el_err_phi);
@@ -16543,19 +19669,19 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_L2_ph_dPhi", &trig_L2_ph_dPhi, &b_trig_L2_ph_dPhi);
    fChain->SetBranchAddress("trig_L2_ph_dEta", &trig_L2_ph_dEta, &b_trig_L2_ph_dEta);
    fChain->SetBranchAddress("trig_L2_ph_F1", &trig_L2_ph_F1, &b_trig_L2_ph_F1);
-   fChain->SetBranchAddress("trig_L2_ph_L2_2g10_loose_NL", &trig_L2_ph_L2_2g10_loose_NL, &b_trig_L2_ph_L2_2g10_loose_NL);
-   fChain->SetBranchAddress("trig_L2_ph_L2_2g15_loose", &trig_L2_ph_L2_2g15_loose, &b_trig_L2_ph_L2_2g15_loose);
    fChain->SetBranchAddress("trig_L2_ph_L2_2g20_loose", &trig_L2_ph_L2_2g20_loose, &b_trig_L2_ph_L2_2g20_loose);
-   fChain->SetBranchAddress("trig_L2_ph_L2_g100_etcut_g50_etcut", &trig_L2_ph_L2_g100_etcut_g50_etcut, &b_trig_L2_ph_L2_g100_etcut_g50_etcut);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g100_loose", &trig_L2_ph_L2_g100_loose, &b_trig_L2_ph_L2_g100_loose);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g10_NoCut_cosmic", &trig_L2_ph_L2_g10_NoCut_cosmic, &b_trig_L2_ph_L2_g10_NoCut_cosmic);
    fChain->SetBranchAddress("trig_L2_ph_L2_g11_etcut", &trig_L2_ph_L2_g11_etcut, &b_trig_L2_ph_L2_g11_etcut);
    fChain->SetBranchAddress("trig_L2_ph_L2_g150_etcut", &trig_L2_ph_L2_g150_etcut, &b_trig_L2_ph_L2_g150_etcut);
-   fChain->SetBranchAddress("trig_L2_ph_L2_g15_loose", &trig_L2_ph_L2_g15_loose, &b_trig_L2_ph_L2_g15_loose);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g200_etcut", &trig_L2_ph_L2_g200_etcut, &b_trig_L2_ph_L2_g200_etcut);
    fChain->SetBranchAddress("trig_L2_ph_L2_g20_etcut", &trig_L2_ph_L2_g20_etcut, &b_trig_L2_ph_L2_g20_etcut);
-   fChain->SetBranchAddress("trig_L2_ph_L2_g20_etcut_xe30_noMu", &trig_L2_ph_L2_g20_etcut_xe30_noMu, &b_trig_L2_ph_L2_g20_etcut_xe30_noMu);
    fChain->SetBranchAddress("trig_L2_ph_L2_g20_loose", &trig_L2_ph_L2_g20_loose, &b_trig_L2_ph_L2_g20_loose);
    fChain->SetBranchAddress("trig_L2_ph_L2_g40_loose", &trig_L2_ph_L2_g40_loose, &b_trig_L2_ph_L2_g40_loose);
    fChain->SetBranchAddress("trig_L2_ph_L2_g40_loose_EFxe40_noMu", &trig_L2_ph_L2_g40_loose_EFxe40_noMu, &b_trig_L2_ph_L2_g40_loose_EFxe40_noMu);
-   fChain->SetBranchAddress("trig_L2_ph_L2_g40_tight", &trig_L2_ph_L2_g40_tight, &b_trig_L2_ph_L2_g40_tight);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g40_loose_xe30_medium_noMu", &trig_L2_ph_L2_g40_loose_xe30_medium_noMu, &b_trig_L2_ph_L2_g40_loose_xe30_medium_noMu);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g40_loose_xe35_medium_noMu", &trig_L2_ph_L2_g40_loose_xe35_medium_noMu, &b_trig_L2_ph_L2_g40_loose_xe35_medium_noMu);
+   fChain->SetBranchAddress("trig_L2_ph_L2_g40_tight_b10_medium", &trig_L2_ph_L2_g40_tight_b10_medium, &b_trig_L2_ph_L2_g40_tight_b10_medium);
    fChain->SetBranchAddress("trig_L2_ph_L2_g5_NoCut_cosmic", &trig_L2_ph_L2_g5_NoCut_cosmic, &b_trig_L2_ph_L2_g5_NoCut_cosmic);
    fChain->SetBranchAddress("trig_L2_ph_L2_g60_loose", &trig_L2_ph_L2_g60_loose, &b_trig_L2_ph_L2_g60_loose);
    fChain->SetBranchAddress("trig_L2_ph_L2_g80_loose", &trig_L2_ph_L2_g80_loose, &b_trig_L2_ph_L2_g80_loose);
@@ -16890,37 +20016,71 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_el_refittedtrackcovthetaqoverp", &trig_EF_el_refittedtrackcovthetaqoverp, &b_trig_EF_el_refittedtrackcovthetaqoverp);
    fChain->SetBranchAddress("trig_EF_el_EF_2e10_medium", &trig_EF_el_EF_2e10_medium, &b_trig_EF_el_EF_2e10_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_2e10_medium_mu6", &trig_EF_el_EF_2e10_medium_mu6, &b_trig_EF_el_EF_2e10_medium_mu6);
+   fChain->SetBranchAddress("trig_EF_el_EF_2e12Tvh_medium", &trig_EF_el_EF_2e12Tvh_medium, &b_trig_EF_el_EF_2e12Tvh_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_2e12_medium", &trig_EF_el_EF_2e12_medium, &b_trig_EF_el_EF_2e12_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_2e15vh_medium", &trig_EF_el_EF_2e15vh_medium, &b_trig_EF_el_EF_2e15vh_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_2e5_tight", &trig_EF_el_EF_2e5_tight, &b_trig_EF_el_EF_2e5_tight);
    fChain->SetBranchAddress("trig_EF_el_EF_2e5_tight_Jpsi", &trig_EF_el_EF_2e5_tight_Jpsi, &b_trig_EF_el_EF_2e5_tight_Jpsi);
-   fChain->SetBranchAddress("trig_EF_el_EF_2e5_tight_NL", &trig_EF_el_EF_2e5_tight_NL, &b_trig_EF_el_EF_2e5_tight_NL);
    fChain->SetBranchAddress("trig_EF_el_EF_e10_medium", &trig_EF_el_EF_e10_medium, &b_trig_EF_el_EF_e10_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_e10_medium_2mu6", &trig_EF_el_EF_e10_medium_2mu6, &b_trig_EF_el_EF_e10_medium_2mu6);
+   fChain->SetBranchAddress("trig_EF_el_EF_e10_medium_mu10", &trig_EF_el_EF_e10_medium_mu10, &b_trig_EF_el_EF_e10_medium_mu10);
    fChain->SetBranchAddress("trig_EF_el_EF_e10_medium_mu6", &trig_EF_el_EF_e10_medium_mu6, &b_trig_EF_el_EF_e10_medium_mu6);
-   fChain->SetBranchAddress("trig_EF_el_EF_e15_medium", &trig_EF_el_EF_e15_medium, &b_trig_EF_el_EF_e15_medium);
-   fChain->SetBranchAddress("trig_EF_el_EF_e15_medium_xe30_noMu", &trig_EF_el_EF_e15_medium_xe30_noMu, &b_trig_EF_el_EF_e15_medium_xe30_noMu);
-   fChain->SetBranchAddress("trig_EF_el_EF_e15_tight", &trig_EF_el_EF_e15_tight, &b_trig_EF_el_EF_e15_tight);
-   fChain->SetBranchAddress("trig_EF_el_EF_e15_tight_NL", &trig_EF_el_EF_e15_tight_NL, &b_trig_EF_el_EF_e15_tight_NL);
-   fChain->SetBranchAddress("trig_EF_el_EF_e20_loose", &trig_EF_el_EF_e20_loose, &b_trig_EF_el_EF_e20_loose);
+   fChain->SetBranchAddress("trig_EF_el_EF_e10_medium_mu6_topo_medium", &trig_EF_el_EF_e10_medium_mu6_topo_medium, &b_trig_EF_el_EF_e10_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e11_etcut", &trig_EF_el_EF_e11_etcut, &b_trig_EF_el_EF_e11_etcut);
+   fChain->SetBranchAddress("trig_EF_el_EF_e12Tvh_medium", &trig_EF_el_EF_e12Tvh_medium, &b_trig_EF_el_EF_e12Tvh_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e12Tvh_medium_2e6T_medium", &trig_EF_el_EF_e12Tvh_medium_2e6T_medium, &b_trig_EF_el_EF_e12Tvh_medium_2e6T_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e12Tvh_medium_mu6", &trig_EF_el_EF_e12Tvh_medium_mu6, &b_trig_EF_el_EF_e12Tvh_medium_mu6);
+   fChain->SetBranchAddress("trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium", &trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium, &b_trig_EF_el_EF_e12Tvh_medium_mu6_topo_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e12_medium", &trig_EF_el_EF_e12_medium, &b_trig_EF_el_EF_e12_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20", &trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20, &b_trig_EF_el_EF_e13_etcutTrk_xs45_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("trig_EF_el_EF_e13_etcutTrk_xs60_noMu", &trig_EF_el_EF_e13_etcutTrk_xs60_noMu, &b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07", &trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07, &b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe07);
+   fChain->SetBranchAddress("trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20", &trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20, &b_trig_EF_el_EF_e13_etcutTrk_xs60_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("trig_EF_el_EF_e14_tight_e4_etcut_Jpsi", &trig_EF_el_EF_e14_tight_e4_etcut_Jpsi, &b_trig_EF_el_EF_e14_tight_e4_etcut_Jpsi);
+   fChain->SetBranchAddress("trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee", &trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee, &b_trig_EF_el_EF_e15vh_loose1_e12Tvh_loose1_Zee);
+   fChain->SetBranchAddress("trig_EF_el_EF_e15vh_medium", &trig_EF_el_EF_e15vh_medium, &b_trig_EF_el_EF_e15vh_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e15vh_medium_xe40_noMu", &trig_EF_el_EF_e15vh_medium_xe40_noMu, &b_trig_EF_el_EF_e15vh_medium_xe40_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e15vh_medium_xe50_noMu", &trig_EF_el_EF_e15vh_medium_xe50_noMu, &b_trig_EF_el_EF_e15vh_medium_xe50_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20", &trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20, &b_trig_EF_el_EF_e20_etcutTrk_xe40_noMu_dphi2j10xe20);
+   fChain->SetBranchAddress("trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07", &trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07, &b_trig_EF_el_EF_e20_etcutTrk_xs60_noMu_dphi2j10xe07);
+   fChain->SetBranchAddress("trig_EF_el_EF_e20_tight_e15_NoCut_Zee", &trig_EF_el_EF_e20_tight_e15_NoCut_Zee, &b_trig_EF_el_EF_e20_tight_e15_NoCut_Zee);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_loose", &trig_EF_el_EF_e22vh_loose, &b_trig_EF_el_EF_e22vh_loose);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_loose1", &trig_EF_el_EF_e22vh_loose1, &b_trig_EF_el_EF_e22vh_loose1);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_looseTrk", &trig_EF_el_EF_e22vh_looseTrk, &b_trig_EF_el_EF_e22vh_looseTrk);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS", &trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_loose_2j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS", &trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_loose_3j20_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS", &trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_loose_4j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium", &trig_EF_el_EF_e22vh_medium, &b_trig_EF_el_EF_e22vh_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_e20_medium", &trig_EF_el_EF_e20_medium, &b_trig_EF_el_EF_e20_medium);
-   fChain->SetBranchAddress("trig_EF_el_EF_e20_medium1", &trig_EF_el_EF_e20_medium1, &b_trig_EF_el_EF_e20_medium1);
-   fChain->SetBranchAddress("trig_EF_el_EF_e20_medium_IDTrkNoCut", &trig_EF_el_EF_e20_medium_IDTrkNoCut, &b_trig_EF_el_EF_e20_medium_IDTrkNoCut);
-   fChain->SetBranchAddress("trig_EF_el_EF_e20_medium_SiTrk", &trig_EF_el_EF_e20_medium_SiTrk, &b_trig_EF_el_EF_e20_medium_SiTrk);
-   fChain->SetBranchAddress("trig_EF_el_EF_e20_medium_TRT", &trig_EF_el_EF_e20_medium_TRT, &b_trig_EF_el_EF_e20_medium_TRT);
    fChain->SetBranchAddress("trig_EF_el_EF_e22_medium", &trig_EF_el_EF_e22_medium, &b_trig_EF_el_EF_e22_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_e22_medium1", &trig_EF_el_EF_e22_medium1, &b_trig_EF_el_EF_e22_medium1);
-   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1", &trig_EF_el_EF_e22vh_medium1, &b_trig_EF_el_EF_e22vh_medium1);
    fChain->SetBranchAddress("trig_EF_el_EF_2e12T_medium", &trig_EF_el_EF_2e12T_medium, &b_trig_EF_el_EF_2e12T_medium);
-   fChain->SetBranchAddress("trig_EF_el_EF_2e12Tvh_medium", &trig_EF_el_EF_2e12Tvh_medium, &b_trig_EF_el_EF_2e12Tvh_medium);
-   fChain->SetBranchAddress("trig_EF_el_EF_mu18_MG_medium ", &trig_EF_el_EF_mu18_MG_medium , &b_trig_EF_el_EF_mu18_MG_medium );
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1", &trig_EF_el_EF_e22vh_medium1, &b_trig_EF_el_EF_e22vh_medium1);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS", &trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_medium1_3j10_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS", &trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_medium1_3j15_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS", &trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS, &b_trig_EF_el_EF_e22vh_medium1_4j10_a4tc_EFFS);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_EFxe20_noMu", &trig_EF_el_EF_e22vh_medium1_EFxe20_noMu, &b_trig_EF_el_EF_e22vh_medium1_EFxe20_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_EFxe30_noMu", &trig_EF_el_EF_e22vh_medium1_EFxe30_noMu, &b_trig_EF_el_EF_e22vh_medium1_EFxe30_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium1_EFxe40_noMu", &trig_EF_el_EF_e22vh_medium1_EFxe40_noMu, &b_trig_EF_el_EF_e22vh_medium1_EFxe40_noMu);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium2", &trig_EF_el_EF_e22vh_medium2, &b_trig_EF_el_EF_e22vh_medium2);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium_IDTrkNoCut", &trig_EF_el_EF_e22vh_medium_IDTrkNoCut, &b_trig_EF_el_EF_e22vh_medium_IDTrkNoCut);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium_SiTrk", &trig_EF_el_EF_e22vh_medium_SiTrk, &b_trig_EF_el_EF_e22vh_medium_SiTrk);
+   fChain->SetBranchAddress("trig_EF_el_EF_e22vh_medium_TRT", &trig_EF_el_EF_e22vh_medium_TRT, &b_trig_EF_el_EF_e22vh_medium_TRT);
+   fChain->SetBranchAddress("trig_EF_el_EF_e40_medium", &trig_EF_el_EF_e40_medium, &b_trig_EF_el_EF_e40_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e45_medium", &trig_EF_el_EF_e45_medium, &b_trig_EF_el_EF_e45_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e45_medium1", &trig_EF_el_EF_e45_medium1, &b_trig_EF_el_EF_e45_medium1);
+   fChain->SetBranchAddress("trig_EF_el_EF_e5_medium_mu6", &trig_EF_el_EF_e5_medium_mu6, &b_trig_EF_el_EF_e5_medium_mu6);
+   fChain->SetBranchAddress("trig_EF_el_EF_e5_medium_mu6_topo_medium", &trig_EF_el_EF_e5_medium_mu6_topo_medium, &b_trig_EF_el_EF_e5_medium_mu6_topo_medium);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight", &trig_EF_el_EF_e5_tight, &b_trig_EF_el_EF_e5_tight);
+   fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e14_etcut_Jpsi", &trig_EF_el_EF_e5_tight_e14_etcut_Jpsi, &b_trig_EF_el_EF_e5_tight_e14_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_SiTrk);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT", &trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT, &b_trig_EF_el_EF_e5_tight_e4_etcut_Jpsi_TRT);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e5_NoCut", &trig_EF_el_EF_e5_tight_e5_NoCut, &b_trig_EF_el_EF_e5_tight_e5_NoCut);
    fChain->SetBranchAddress("trig_EF_el_EF_e5_tight_e9_etcut_Jpsi", &trig_EF_el_EF_e5_tight_e9_etcut_Jpsi, &b_trig_EF_el_EF_e5_tight_e9_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_e60_loose", &trig_EF_el_EF_e60_loose, &b_trig_EF_el_EF_e60_loose);
-   fChain->SetBranchAddress("trig_EF_el_EF_e9_tight_e5_tight_Jpsi", &trig_EF_el_EF_e9_tight_e5_tight_Jpsi, &b_trig_EF_el_EF_e9_tight_e5_tight_Jpsi);
+   fChain->SetBranchAddress("trig_EF_el_EF_e6T_medium", &trig_EF_el_EF_e6T_medium, &b_trig_EF_el_EF_e6T_medium);
+   fChain->SetBranchAddress("trig_EF_el_EF_e9_tight_e4_etcut_Jpsi", &trig_EF_el_EF_e9_tight_e4_etcut_Jpsi, &b_trig_EF_el_EF_e9_tight_e4_etcut_Jpsi);
    fChain->SetBranchAddress("trig_EF_el_EF_eb_physics", &trig_EF_el_EF_eb_physics, &b_trig_EF_el_EF_eb_physics);
    fChain->SetBranchAddress("trig_EF_el_EF_eb_physics_empty", &trig_EF_el_EF_eb_physics_empty, &b_trig_EF_el_EF_eb_physics_empty);
    fChain->SetBranchAddress("trig_EF_el_EF_eb_physics_firstempty", &trig_EF_el_EF_eb_physics_firstempty, &b_trig_EF_el_EF_eb_physics_firstempty);
@@ -16998,23 +20158,22 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("trig_EF_ph_px", &trig_EF_ph_px, &b_trig_EF_ph_px);
    fChain->SetBranchAddress("trig_EF_ph_py", &trig_EF_ph_py, &b_trig_EF_ph_py);
    fChain->SetBranchAddress("trig_EF_ph_pz", &trig_EF_ph_pz, &b_trig_EF_ph_pz);
-   fChain->SetBranchAddress("trig_EF_ph_EF_2g10_loose_NL", &trig_EF_ph_EF_2g10_loose_NL, &b_trig_EF_ph_EF_2g10_loose_NL);
-   fChain->SetBranchAddress("trig_EF_ph_EF_2g15_loose", &trig_EF_ph_EF_2g15_loose, &b_trig_EF_ph_EF_2g15_loose);
    fChain->SetBranchAddress("trig_EF_ph_EF_2g20_loose", &trig_EF_ph_EF_2g20_loose, &b_trig_EF_ph_EF_2g20_loose);
-   fChain->SetBranchAddress("trig_EF_ph_EF_g100_etcut_g50_etcut", &trig_EF_ph_EF_g100_etcut_g50_etcut, &b_trig_EF_ph_EF_g100_etcut_g50_etcut);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g100_loose", &trig_EF_ph_EF_g100_loose, &b_trig_EF_ph_EF_g100_loose);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g10_NoCut_cosmic", &trig_EF_ph_EF_g10_NoCut_cosmic, &b_trig_EF_ph_EF_g10_NoCut_cosmic);
    fChain->SetBranchAddress("trig_EF_ph_EF_g11_etcut", &trig_EF_ph_EF_g11_etcut, &b_trig_EF_ph_EF_g11_etcut);
    fChain->SetBranchAddress("trig_EF_ph_EF_g11_etcut_larcalib", &trig_EF_ph_EF_g11_etcut_larcalib, &b_trig_EF_ph_EF_g11_etcut_larcalib);
    fChain->SetBranchAddress("trig_EF_ph_EF_g150_etcut", &trig_EF_ph_EF_g150_etcut, &b_trig_EF_ph_EF_g150_etcut);
-   fChain->SetBranchAddress("trig_EF_ph_EF_g15_loose", &trig_EF_ph_EF_g15_loose, &b_trig_EF_ph_EF_g15_loose);
-   fChain->SetBranchAddress("trig_EF_ph_EF_g15_loose_larcalib", &trig_EF_ph_EF_g15_loose_larcalib, &b_trig_EF_ph_EF_g15_loose_larcalib);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g200_etcut", &trig_EF_ph_EF_g200_etcut, &b_trig_EF_ph_EF_g200_etcut);
    fChain->SetBranchAddress("trig_EF_ph_EF_g20_etcut", &trig_EF_ph_EF_g20_etcut, &b_trig_EF_ph_EF_g20_etcut);
-   fChain->SetBranchAddress("trig_EF_ph_EF_g20_etcut_xe30_noMu", &trig_EF_ph_EF_g20_etcut_xe30_noMu, &b_trig_EF_ph_EF_g20_etcut_xe30_noMu);
    fChain->SetBranchAddress("trig_EF_ph_EF_g20_loose", &trig_EF_ph_EF_g20_loose, &b_trig_EF_ph_EF_g20_loose);
    fChain->SetBranchAddress("trig_EF_ph_EF_g20_loose_larcalib", &trig_EF_ph_EF_g20_loose_larcalib, &b_trig_EF_ph_EF_g20_loose_larcalib);
    fChain->SetBranchAddress("trig_EF_ph_EF_g40_loose", &trig_EF_ph_EF_g40_loose, &b_trig_EF_ph_EF_g40_loose);
    fChain->SetBranchAddress("trig_EF_ph_EF_g40_loose_EFxe40_noMu", &trig_EF_ph_EF_g40_loose_EFxe40_noMu, &b_trig_EF_ph_EF_g40_loose_EFxe40_noMu);
    fChain->SetBranchAddress("trig_EF_ph_EF_g40_loose_larcalib", &trig_EF_ph_EF_g40_loose_larcalib, &b_trig_EF_ph_EF_g40_loose_larcalib);
-   fChain->SetBranchAddress("trig_EF_ph_EF_g40_tight", &trig_EF_ph_EF_g40_tight, &b_trig_EF_ph_EF_g40_tight);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g40_loose_xe45_medium_noMu", &trig_EF_ph_EF_g40_loose_xe45_medium_noMu, &b_trig_EF_ph_EF_g40_loose_xe45_medium_noMu);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g40_loose_xe55_medium_noMu", &trig_EF_ph_EF_g40_loose_xe55_medium_noMu, &b_trig_EF_ph_EF_g40_loose_xe55_medium_noMu);
+   fChain->SetBranchAddress("trig_EF_ph_EF_g40_tight_b10_medium", &trig_EF_ph_EF_g40_tight_b10_medium, &b_trig_EF_ph_EF_g40_tight_b10_medium);
    fChain->SetBranchAddress("trig_EF_ph_EF_g5_NoCut_cosmic", &trig_EF_ph_EF_g5_NoCut_cosmic, &b_trig_EF_ph_EF_g5_NoCut_cosmic);
    fChain->SetBranchAddress("trig_EF_ph_EF_g60_loose", &trig_EF_ph_EF_g60_loose, &b_trig_EF_ph_EF_g60_loose);
    fChain->SetBranchAddress("trig_EF_ph_EF_g60_loose_larcalib", &trig_EF_ph_EF_g60_loose_larcalib, &b_trig_EF_ph_EF_g60_loose_larcalib);

@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Mon Jan 30 12:06:16 2012 by ROOT version 5.32/00
+// Sat Jan 28 14:16:04 2012 by ROOT version 5.32/00
 // from TTree Z1/
 // found on file: output.root
 //////////////////////////////////////////////////////////
@@ -35,6 +35,7 @@ public :
    Float_t         weight1[128];   //[n]
    Float_t         weight2[128];   //[n]
    Float_t         weight3[128];   //[n]
+   Bool_t          sameSign[128];   //[n]
    Int_t           l1_tight[128];   //[n]
    Int_t           l2_tight[128];   //[n]
    Int_t           l1_truthMatch[128];   //[n]
@@ -58,7 +59,6 @@ public :
    Float_t         Z_pt[128];   //[n]
    Float_t         Z_eta[128];   //[n]
    Float_t         Z_phi[128];   //[n]
-   Int_t           sameSign[128];   //[n]
 
    // List of branches
    TBranch        *b_RunNumber;   //!
@@ -74,6 +74,7 @@ public :
    TBranch        *b_weight1;   //!
    TBranch        *b_weight2;   //!
    TBranch        *b_weight3;   //!
+   TBranch        *b_sameSign;   //!
    TBranch        *b_l1_tight;   //!
    TBranch        *b_l2_tight;   //!
    TBranch        *b_l1_truthMatch;   //!
@@ -97,7 +98,6 @@ public :
    TBranch        *b_Z_pt;   //!
    TBranch        *b_Z_eta;   //!
    TBranch        *b_Z_phi;   //!
-   TBranch        *b_sameSign;   //!
 
    ZStudy(TTree *tree=0);
    virtual ~ZStudy();
@@ -182,6 +182,7 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("weight1", weight1, &b_weight1);
    fChain->SetBranchAddress("weight2", weight2, &b_weight2);
    fChain->SetBranchAddress("weight3", weight3, &b_weight3);
+   fChain->SetBranchAddress("sameSign", sameSign, &b_sameSign);
    fChain->SetBranchAddress("l1_tight", l1_tight, &b_l1_tight);
    fChain->SetBranchAddress("l2_tight", l2_tight, &b_l2_tight);
    fChain->SetBranchAddress("l1_truthMatch", l1_truthMatch, &b_l1_truthMatch);
@@ -205,7 +206,6 @@ void ZStudy::Init(TTree *tree)
    fChain->SetBranchAddress("Z_pt", Z_pt, &b_Z_pt);
    fChain->SetBranchAddress("Z_eta", Z_eta, &b_Z_eta);
    fChain->SetBranchAddress("Z_phi", Z_phi, &b_Z_phi);
-   fChain->SetBranchAddress("sameSign", sameSign, &b_sameSign);
    Notify();
 }
 

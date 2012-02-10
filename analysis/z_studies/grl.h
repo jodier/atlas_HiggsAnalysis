@@ -1,5 +1,5 @@
 /**/ if(RunNumber == 191933 && (
-	(LumiBlock <   85 || LumiBlock >  110)
+	(LumiBlock <   87 || LumiBlock >  110)
 	&&
 	(LumiBlock <  112 || LumiBlock >  188)
 	&&
@@ -8,7 +8,7 @@
 	(LumiBlock <  317 || LumiBlock >  320)
   )) isOk = false;
 else if(RunNumber == 191920 && (
-	(LumiBlock <  252 || LumiBlock >  297)
+	(LumiBlock <  254 || LumiBlock >  297)
 	&&
 	(LumiBlock <  299 || LumiBlock >  331)
 	&&
@@ -17,7 +17,7 @@ else if(RunNumber == 191920 && (
 	(LumiBlock <  354 || LumiBlock >  397)
   )) isOk = false;
 else if(RunNumber == 191715 && (
-	(LumiBlock <   76 || LumiBlock >  102)
+	(LumiBlock <   78 || LumiBlock >  102)
 	&&
 	(LumiBlock <  104 || LumiBlock >  135)
 	&&
@@ -32,9 +32,9 @@ else if(RunNumber == 191715 && (
 	(LumiBlock <  335 || LumiBlock >  391)
   )) isOk = false;
 else if(RunNumber == 191676 && (
-	(LumiBlock <  375 || LumiBlock >  381)
+	(LumiBlock <  377 || LumiBlock >  381)
 	&&
-	(LumiBlock <  677 || LumiBlock >  681)
+	(LumiBlock <  679 || LumiBlock >  681)
 	&&
 	(LumiBlock <  683 || LumiBlock >  693)
 	&&
@@ -43,7 +43,7 @@ else if(RunNumber == 191676 && (
 	(LumiBlock <  699 || LumiBlock >  715)
   )) isOk = false;
 else if(RunNumber == 191635 && (
-	(LumiBlock <  567 || LumiBlock >  579)
+	(LumiBlock <  568 || LumiBlock >  579)
 	&&
 	(LumiBlock <  581 || LumiBlock >  581)
 	&&
@@ -67,7 +67,7 @@ else if(RunNumber == 191517 && (
 	(LumiBlock <   79 || LumiBlock >  230)
   )) isOk = false;
 else if(RunNumber == 191513 && (
-	(LumiBlock <  219 || LumiBlock >  241)
+	(LumiBlock <  220 || LumiBlock >  241)
 	&&
 	(LumiBlock <  243 || LumiBlock >  243)
 	&&
@@ -85,7 +85,7 @@ else if(RunNumber == 191428 && (
 	(LumiBlock <  151 || LumiBlock >  254)
   )) isOk = false;
 else if(RunNumber == 191426 && (
-	(LumiBlock <  189 || LumiBlock >  307)
+	(LumiBlock <  191 || LumiBlock >  307)
 	&&
 	(LumiBlock <  309 || LumiBlock >  356)
 	&&
@@ -106,7 +106,7 @@ else if(RunNumber == 191426 && (
 	(LumiBlock <  866 || LumiBlock > 1052)
   )) isOk = false;
 else if(RunNumber == 191425 && (
-	(LumiBlock <  221 || LumiBlock >  227)
+	(LumiBlock <  222 || LumiBlock >  227)
 	&&
 	(LumiBlock <  229 || LumiBlock >  238)
 	&&
@@ -122,13 +122,7 @@ else if(RunNumber == 191239 && (
 	(LumiBlock <   99 || LumiBlock >  174)
   )) isOk = false;
 else if(RunNumber == 191235 && (
-	(LumiBlock <  232 || LumiBlock >  258)
-	&&
-	(LumiBlock <  266 || LumiBlock >  267)
-	&&
-	(LumiBlock <  269 || LumiBlock >  272)
-	&&
-	(LumiBlock <  274 || LumiBlock >  279)
+	(LumiBlock <  234 || LumiBlock >  258)
   )) isOk = false;
 else if(RunNumber == 191218 && (
 	(LumiBlock <    3 || LumiBlock >   12)
@@ -137,7 +131,7 @@ else if(RunNumber == 191217 && (
 	(LumiBlock <  147 || LumiBlock >  151)
   )) isOk = false;
 else if(RunNumber == 191190 && (
-	(LumiBlock <  220 || LumiBlock >  244)
+	(LumiBlock <  221 || LumiBlock >  244)
 	&&
 	(LumiBlock <  246 || LumiBlock >  282)
 	&&
@@ -156,10 +150,10 @@ else if(RunNumber == 191190 && (
 	(LumiBlock <  802 || LumiBlock > 1200)
   )) isOk = false;
 else if(RunNumber == 191150 && (
-	(LumiBlock <  155 || LumiBlock >  310)
+	(LumiBlock <  157 || LumiBlock >  310)
   )) isOk = false;
 else if(RunNumber == 191149 && (
-	(LumiBlock <  227 || LumiBlock >  232)
+	(LumiBlock <  229 || LumiBlock >  232)
 	&&
 	(LumiBlock <  234 || LumiBlock >  241)
 	&&
@@ -170,7 +164,7 @@ else if(RunNumber == 191149 && (
 	(LumiBlock <  275 || LumiBlock >  296)
   )) isOk = false;
 else if(RunNumber == 191139 && (
-	(LumiBlock <  288 || LumiBlock >  349)
+	(LumiBlock <  289 || LumiBlock >  349)
 	&&
 	(LumiBlock <  351 || LumiBlock >  353)
 	&&
@@ -202,7 +196,7 @@ else if(RunNumber == 191138 && (
 	(LumiBlock <   38 || LumiBlock >   74)
   )) isOk = false;
 else if(RunNumber == 190975 && (
-	(LumiBlock <  174 || LumiBlock >  176)
+	(LumiBlock <  176 || LumiBlock >  176)
 	&&
 	(LumiBlock <  178 || LumiBlock >  227)
 	&&
@@ -236,17 +230,13 @@ else if(RunNumber == 190975 && (
 	&&
 	(LumiBlock <  396 || LumiBlock >  435)
 	&&
-	(LumiBlock <  437 || LumiBlock >  538)
-	&&
-	(LumiBlock <  540 || LumiBlock >  552)
-	&&
-	(LumiBlock <  554 || LumiBlock >  567)
+	(LumiBlock <  437 || LumiBlock >  469)
   )) isOk = false;
 else if(RunNumber == 190934 && (
 	(LumiBlock <    4 || LumiBlock >   10)
   )) isOk = false;
 else if(RunNumber == 190933 && (
-	(LumiBlock <  378 || LumiBlock >  390)
+	(LumiBlock <  379 || LumiBlock >  390)
 	&&
 	(LumiBlock <  392 || LumiBlock >  451)
 	&&
@@ -262,11 +252,7 @@ else if(RunNumber == 190933 && (
 	&&
 	(LumiBlock <  609 || LumiBlock >  707)
 	&&
-	(LumiBlock <  709 || LumiBlock > 1140)
-	&&
-	(LumiBlock < 1152 || LumiBlock > 1169)
-	&&
-	(LumiBlock < 1171 || LumiBlock > 1180)
+	(LumiBlock <  709 || LumiBlock > 1139)
   )) isOk = false;
 else if(RunNumber == 190878 && (
 	(LumiBlock <    4 || LumiBlock >  248)
@@ -334,7 +320,7 @@ else if(RunNumber == 190644 && (
 	(LumiBlock <  284 || LumiBlock >  319)
   )) isOk = false;
 else if(RunNumber == 190643 && (
-	(LumiBlock <  146 || LumiBlock >  185)
+	(LumiBlock <  148 || LumiBlock >  185)
 	&&
 	(LumiBlock <  187 || LumiBlock >  189)
 	&&
@@ -358,7 +344,7 @@ else if(RunNumber == 190618 && (
 	(LumiBlock <  799 || LumiBlock >  817)
   )) isOk = false;
 else if(RunNumber == 190611 && (
-	(LumiBlock <  291 || LumiBlock >  306)
+	(LumiBlock <  294 || LumiBlock >  306)
 	&&
 	(LumiBlock <  308 || LumiBlock >  314)
 	&&
@@ -369,14 +355,14 @@ else if(RunNumber == 190611 && (
 	(LumiBlock <  381 || LumiBlock >  474)
   )) isOk = false;
 else if(RunNumber == 190608 && (
-	(LumiBlock <  535 || LumiBlock >  558)
+	(LumiBlock <  541 || LumiBlock >  558)
 	&&
 	(LumiBlock <  560 || LumiBlock >  565)
 	&&
 	(LumiBlock <  568 || LumiBlock >  569)
   )) isOk = false;
 else if(RunNumber == 190343 && (
-	(LumiBlock <   15 || LumiBlock >  144)
+	(LumiBlock <   18 || LumiBlock >  144)
 	&&
 	(LumiBlock <  146 || LumiBlock >  227)
 	&&
@@ -400,10 +386,10 @@ else if(RunNumber == 190300 && (
 	(LumiBlock <  452 || LumiBlock >  664)
   )) isOk = false;
 else if(RunNumber == 190297 && (
-	(LumiBlock <  149 || LumiBlock >  155)
+	(LumiBlock <  152 || LumiBlock >  155)
   )) isOk = false;
 else if(RunNumber == 190256 && (
-	(LumiBlock <  270 || LumiBlock >  280)
+	(LumiBlock <  272 || LumiBlock >  280)
 	&&
 	(LumiBlock <  282 || LumiBlock >  285)
 	&&
@@ -422,7 +408,7 @@ else if(RunNumber == 190256 && (
 	(LumiBlock <  834 || LumiBlock > 1132)
   )) isOk = false;
 else if(RunNumber == 190236 && (
-	(LumiBlock <  395 || LumiBlock >  409)
+	(LumiBlock <  398 || LumiBlock >  409)
 	&&
 	(LumiBlock <  411 || LumiBlock >  411)
 	&&
@@ -453,7 +439,7 @@ else if(RunNumber == 190119 && (
 	(LumiBlock <   48 || LumiBlock >   60)
   )) isOk = false;
 else if(RunNumber == 190116 && (
-	(LumiBlock <   85 || LumiBlock >  246)
+	(LumiBlock <   87 || LumiBlock >  246)
 	&&
 	(LumiBlock <  248 || LumiBlock >  311)
 	&&
@@ -470,14 +456,14 @@ else if(RunNumber == 189965 && (
 	(LumiBlock <  122 || LumiBlock >  279)
   )) isOk = false;
 else if(RunNumber == 189963 && (
-	(LumiBlock <  556 || LumiBlock >  579)
+	(LumiBlock <  557 || LumiBlock >  579)
 	&&
 	(LumiBlock <  581 || LumiBlock >  603)
 	&&
 	(LumiBlock <  605 || LumiBlock >  608)
   )) isOk = false;
 else if(RunNumber == 189875 && (
-	(LumiBlock <  180 || LumiBlock >  194)
+	(LumiBlock <  182 || LumiBlock >  194)
 	&&
 	(LumiBlock <  196 || LumiBlock >  229)
 	&&
@@ -495,10 +481,10 @@ else if(RunNumber == 189845 && (
 	(LumiBlock <  137 || LumiBlock >  281)
   )) isOk = false;
 else if(RunNumber == 189836 && (
-	(LumiBlock <  115 || LumiBlock >  217)
+	(LumiBlock <  116 || LumiBlock >  217)
   )) isOk = false;
 else if(RunNumber == 189822 && (
-	(LumiBlock <  119 || LumiBlock >  279)
+	(LumiBlock <  121 || LumiBlock >  279)
 	&&
 	(LumiBlock <  281 || LumiBlock >  380)
 	&&
@@ -511,11 +497,9 @@ else if(RunNumber == 189822 && (
 	(LumiBlock <  858 || LumiBlock >  861)
   )) isOk = false;
 else if(RunNumber == 189813 && (
-	(LumiBlock <  138 || LumiBlock >  170)
+	(LumiBlock <  140 || LumiBlock >  170)
   )) isOk = false;
 else if(RunNumber == 189781 && (
-	(LumiBlock <   16 || LumiBlock >   18)
-	&&
 	(LumiBlock <   20 || LumiBlock >  113)
 	&&
 	(LumiBlock <  115 || LumiBlock >  121)
@@ -524,11 +508,8 @@ else if(RunNumber == 189781 && (
 	&&
 	(LumiBlock <  132 || LumiBlock >  153)
   )) isOk = false;
-else if(RunNumber == 189774 && (
-	(LumiBlock <   45 || LumiBlock >   58)
-  )) isOk = false;
 else if(RunNumber == 189751 && (
-	(LumiBlock <  114 || LumiBlock >  191)
+	(LumiBlock <  116 || LumiBlock >  191)
 	&&
 	(LumiBlock <  193 || LumiBlock >  269)
 	&&
@@ -539,7 +520,7 @@ else if(RunNumber == 189751 && (
 	(LumiBlock <  358 || LumiBlock >  362)
   )) isOk = false;
 else if(RunNumber == 189719 && (
-	(LumiBlock <  206 || LumiBlock >  219)
+	(LumiBlock <  207 || LumiBlock >  219)
 	&&
 	(LumiBlock <  221 || LumiBlock >  224)
 	&&
@@ -563,15 +544,8 @@ else if(RunNumber == 189660 && (
 	&&
 	(LumiBlock <   26 || LumiBlock >  103)
   )) isOk = false;
-else if(RunNumber == 189655 && (
-	(LumiBlock <    5 || LumiBlock >    6)
-	&&
-	(LumiBlock <    8 || LumiBlock >   46)
-	&&
-	(LumiBlock <   48 || LumiBlock >   67)
-  )) isOk = false;
 else if(RunNumber == 189639 && (
-	(LumiBlock <   58 || LumiBlock >  209)
+	(LumiBlock <   60 || LumiBlock >  209)
   )) isOk = false;
 else if(RunNumber == 189610 && (
 	(LumiBlock <  307 || LumiBlock >  328)
@@ -594,7 +568,7 @@ else if(RunNumber == 189602 && (
 	(LumiBlock <   29 || LumiBlock >   70)
   )) isOk = false;
 else if(RunNumber == 189598 && (
-	(LumiBlock <   73 || LumiBlock >  107)
+	(LumiBlock <   76 || LumiBlock >  107)
 	&&
 	(LumiBlock <  109 || LumiBlock >  169)
 	&&
@@ -605,7 +579,7 @@ else if(RunNumber == 189598 && (
 	(LumiBlock <  360 || LumiBlock >  513)
   )) isOk = false;
 else if(RunNumber == 189561 && (
-	(LumiBlock <   40 || LumiBlock >   73)
+	(LumiBlock <   41 || LumiBlock >   73)
 	&&
 	(LumiBlock <   75 || LumiBlock >   81)
 	&&
@@ -626,12 +600,12 @@ else if(RunNumber == 189561 && (
 	(LumiBlock <  611 || LumiBlock >  666)
   )) isOk = false;
 else if(RunNumber == 189536 && (
-	(LumiBlock <  229 || LumiBlock >  260)
+	(LumiBlock <  230 || LumiBlock >  260)
 	&&
 	(LumiBlock <  262 || LumiBlock >  265)
   )) isOk = false;
 else if(RunNumber == 189530 && (
-	(LumiBlock <  131 || LumiBlock >  148)
+	(LumiBlock <  132 || LumiBlock >  148)
   )) isOk = false;
 else if(RunNumber == 189483 && (
 	(LumiBlock <    4 || LumiBlock >   19)
@@ -659,7 +633,7 @@ else if(RunNumber == 189425 && (
 	(LumiBlock <  170 || LumiBlock >  268)
   )) isOk = false;
 else if(RunNumber == 189421 && (
-	(LumiBlock <  234 || LumiBlock >  300)
+	(LumiBlock <  235 || LumiBlock >  300)
 	&&
 	(LumiBlock <  302 || LumiBlock >  325)
 	&&
@@ -675,15 +649,6 @@ else if(RunNumber == 189372 && (
 	(LumiBlock <  102 || LumiBlock >  175)
 	&&
 	(LumiBlock <  177 || LumiBlock >  215)
-  )) isOk = false;
-else if(RunNumber == 189366 && (
-	(LumiBlock <  450 || LumiBlock >  454)
-	&&
-	(LumiBlock <  456 || LumiBlock >  465)
-	&&
-	(LumiBlock <  468 || LumiBlock >  498)
-	&&
-	(LumiBlock <  503 || LumiBlock >  600)
   )) isOk = false;
 else if(RunNumber == 189288 && (
 	(LumiBlock <   11 || LumiBlock >  137)
@@ -739,16 +704,7 @@ else if(RunNumber == 189207 && (
 	&&
 	(LumiBlock <  369 || LumiBlock >  441)
   )) isOk = false;
-else if(RunNumber == 189205 && (
-	(LumiBlock <  356 || LumiBlock >  368)
-	&&
-	(LumiBlock <  371 || LumiBlock >  380)
-	&&
-	(LumiBlock <  382 || LumiBlock >  400)
-  )) isOk = false;
 else if(RunNumber == 189184 && (
-	(LumiBlock <   99 || LumiBlock >   99)
-	&&
 	(LumiBlock <  101 || LumiBlock >  130)
 	&&
 	(LumiBlock <  133 || LumiBlock >  170)
@@ -758,12 +714,12 @@ else if(RunNumber == 189184 && (
 	(LumiBlock <  197 || LumiBlock >  303)
   )) isOk = false;
 else if(RunNumber == 189090 && (
-	(LumiBlock <   62 || LumiBlock >   64)
+	(LumiBlock <   63 || LumiBlock >   64)
 	&&
 	(LumiBlock <   67 || LumiBlock >   96)
   )) isOk = false;
 else if(RunNumber == 189079 && (
-	(LumiBlock <  186 || LumiBlock >  225)
+	(LumiBlock <  187 || LumiBlock >  225)
   )) isOk = false;
 else if(RunNumber == 189049 && (
 	(LumiBlock <  236 || LumiBlock >  241)
@@ -780,34 +736,12 @@ else if(RunNumber == 189028 && (
 else if(RunNumber == 189027 && (
 	(LumiBlock <   12 || LumiBlock >   22)
   )) isOk = false;
-else if(RunNumber == 189011 && (
-	(LumiBlock <  230 || LumiBlock >  270)
-  )) isOk = false;
 else if(RunNumber == 188951 && (
-	(LumiBlock <    4 || LumiBlock >   42)
-	&&
-	(LumiBlock <   44 || LumiBlock >   48)
-	&&
-	(LumiBlock <   52 || LumiBlock >   52)
-	&&
-	(LumiBlock <   54 || LumiBlock >   69)
-	&&
-	(LumiBlock <   86 || LumiBlock >  100)
-	&&
 	(LumiBlock <  190 || LumiBlock >  307)
 	&&
 	(LumiBlock <  309 || LumiBlock >  480)
 	&&
 	(LumiBlock <  482 || LumiBlock >  491)
-  )) isOk = false;
-else if(RunNumber == 188949 && (
-	(LumiBlock <   45 || LumiBlock >   45)
-	&&
-	(LumiBlock <   64 || LumiBlock >   66)
-	&&
-	(LumiBlock <   76 || LumiBlock >   79)
-	&&
-	(LumiBlock <  164 || LumiBlock >  185)
   )) isOk = false;
 else if(RunNumber == 188921 && (
 	(LumiBlock <  134 || LumiBlock >  142)
@@ -817,8 +751,6 @@ else if(RunNumber == 188921 && (
 	(LumiBlock <  246 || LumiBlock >  327)
 	&&
 	(LumiBlock <  330 || LumiBlock >  481)
-	&&
-	(LumiBlock <  485 || LumiBlock >  489)
   )) isOk = false;
 else if(RunNumber == 187815 && (
 	(LumiBlock <    5 || LumiBlock >   36)
@@ -849,7 +781,7 @@ else if(RunNumber == 187811 && (
 	&&
 	(LumiBlock <  409 || LumiBlock >  478)
 	&&
-	(LumiBlock <  480 || LumiBlock >  524)
+	(LumiBlock <  480 || LumiBlock >  523)
   )) isOk = false;
 else if(RunNumber == 187763 && (
 	(LumiBlock <  131 || LumiBlock >  152)
@@ -890,7 +822,7 @@ else if(RunNumber == 187501 && (
 	(LumiBlock <   27 || LumiBlock >   79)
   )) isOk = false;
 else if(RunNumber == 187457 && (
-	(LumiBlock <  140 || LumiBlock >  153)
+	(LumiBlock <  142 || LumiBlock >  153)
 	&&
 	(LumiBlock <  155 || LumiBlock >  203)
 	&&
@@ -907,7 +839,7 @@ else if(RunNumber == 187457 && (
 	(LumiBlock <  340 || LumiBlock >  385)
   )) isOk = false;
 else if(RunNumber == 187453 && (
-	(LumiBlock <  477 || LumiBlock >  620)
+	(LumiBlock <  481 || LumiBlock >  620)
 	&&
 	(LumiBlock <  622 || LumiBlock >  660)
   )) isOk = false;
@@ -930,7 +862,7 @@ else if(RunNumber == 187196 && (
 	(LumiBlock <  208 || LumiBlock >  257)
   )) isOk = false;
 else if(RunNumber == 187014 && (
-	(LumiBlock <  490 || LumiBlock >  512)
+	(LumiBlock <  491 || LumiBlock >  512)
 	&&
 	(LumiBlock <  514 || LumiBlock >  532)
 	&&
@@ -1006,7 +938,7 @@ else if(RunNumber == 186878 && (
 	(LumiBlock <    9 || LumiBlock >  119)
   )) isOk = false;
 else if(RunNumber == 186877 && (
-	(LumiBlock <  138 || LumiBlock >  150)
+	(LumiBlock <  139 || LumiBlock >  150)
 	&&
 	(LumiBlock <  176 || LumiBlock >  202)
 	&&
@@ -1026,12 +958,10 @@ else if(RunNumber == 186877 && (
 	&&
 	(LumiBlock < 1312 || LumiBlock > 1313)
 	&&
-	(LumiBlock < 1315 || LumiBlock > 1462)
-	&&
-	(LumiBlock < 1464 || LumiBlock > 1570)
+	(LumiBlock < 1315 || LumiBlock > 1338)
   )) isOk = false;
 else if(RunNumber == 186873 && (
-	(LumiBlock <  466 || LumiBlock >  482)
+	(LumiBlock <  467 || LumiBlock >  482)
   )) isOk = false;
 else if(RunNumber == 186755 && (
 	(LumiBlock <   11 || LumiBlock >   33)
@@ -1043,12 +973,12 @@ else if(RunNumber == 186755 && (
 	(LumiBlock <   44 || LumiBlock >   49)
   )) isOk = false;
 else if(RunNumber == 186753 && (
-	(LumiBlock <   88 || LumiBlock >  104)
+	(LumiBlock <   90 || LumiBlock >  104)
 	&&
 	(LumiBlock <  106 || LumiBlock >  196)
   )) isOk = false;
 else if(RunNumber == 186729 && (
-	(LumiBlock <   51 || LumiBlock >  109)
+	(LumiBlock <   52 || LumiBlock >  109)
 	&&
 	(LumiBlock <  111 || LumiBlock >  400)
 	&&
@@ -1087,7 +1017,7 @@ else if(RunNumber == 186729 && (
 	(LumiBlock < 1216 || LumiBlock > 1333)
   )) isOk = false;
 else if(RunNumber == 186721 && (
-	(LumiBlock <   95 || LumiBlock >  374)
+	(LumiBlock <   97 || LumiBlock >  374)
 	&&
 	(LumiBlock <  376 || LumiBlock >  405)
 	&&
@@ -1096,7 +1026,7 @@ else if(RunNumber == 186721 && (
 	(LumiBlock <  578 || LumiBlock >  787)
   )) isOk = false;
 else if(RunNumber == 186673 && (
-	(LumiBlock <  197 || LumiBlock >  207)
+	(LumiBlock <  198 || LumiBlock >  207)
 	&&
 	(LumiBlock <  209 || LumiBlock >  219)
 	&&
@@ -1116,9 +1046,9 @@ else if(RunNumber == 186669 && (
 	(LumiBlock <  493 || LumiBlock >  539)
   )) isOk = false;
 else if(RunNumber == 186533 && (
-	(LumiBlock <  184 || LumiBlock >  226)
+	(LumiBlock <  185 || LumiBlock >  226)
 	&&
-	(LumiBlock <  573 || LumiBlock >  577)
+	(LumiBlock <  576 || LumiBlock >  577)
 	&&
 	(LumiBlock <  579 || LumiBlock >  602)
 	&&
@@ -1127,14 +1057,14 @@ else if(RunNumber == 186533 && (
 	(LumiBlock <  612 || LumiBlock >  633)
   )) isOk = false;
 else if(RunNumber == 186532 && (
-	(LumiBlock <  196 || LumiBlock >  217)
+	(LumiBlock <  200 || LumiBlock >  217)
 	&&
 	(LumiBlock <  219 || LumiBlock >  226)
 	&&
 	(LumiBlock <  228 || LumiBlock >  250)
   )) isOk = false;
 else if(RunNumber == 186516 && (
-	(LumiBlock <   50 || LumiBlock >   66)
+	(LumiBlock <   51 || LumiBlock >   66)
 	&&
 	(LumiBlock <   68 || LumiBlock >   68)
 	&&
@@ -1175,14 +1105,14 @@ else if(RunNumber == 186456 && (
 	(LumiBlock <  606 || LumiBlock >  689)
   )) isOk = false;
 else if(RunNumber == 186399 && (
-	(LumiBlock <  280 || LumiBlock >  322)
+	(LumiBlock <  281 || LumiBlock >  322)
 	&&
 	(LumiBlock <  324 || LumiBlock >  373)
 	&&
 	(LumiBlock <  383 || LumiBlock >  425)
   )) isOk = false;
 else if(RunNumber == 186396 && (
-	(LumiBlock <   69 || LumiBlock >  389)
+	(LumiBlock <   70 || LumiBlock >  389)
 	&&
 	(LumiBlock <  391 || LumiBlock >  403)
 	&&
@@ -1200,7 +1130,7 @@ else if(RunNumber == 186361 && (
 	(LumiBlock <  119 || LumiBlock >  224)
   )) isOk = false;
 else if(RunNumber == 186275 && (
-	(LumiBlock <  101 || LumiBlock >  319)
+	(LumiBlock <  102 || LumiBlock >  319)
 	&&
 	(LumiBlock <  321 || LumiBlock >  398)
 	&&
@@ -1213,7 +1143,7 @@ else if(RunNumber == 186275 && (
 	(LumiBlock <  454 || LumiBlock >  463)
   )) isOk = false;
 else if(RunNumber == 186217 && (
-	(LumiBlock <   50 || LumiBlock >   94)
+	(LumiBlock <   51 || LumiBlock >   94)
 	&&
 	(LumiBlock <   96 || LumiBlock >  126)
 	&&
@@ -1221,7 +1151,7 @@ else if(RunNumber == 186217 && (
 	&&
 	(LumiBlock <  153 || LumiBlock >  159)
 	&&
-	(LumiBlock <  161 || LumiBlock >  201)
+	(LumiBlock <  161 || LumiBlock >  164)
   )) isOk = false;
 else if(RunNumber == 186216 && (
 	(LumiBlock <    4 || LumiBlock >  124)
@@ -1237,14 +1167,14 @@ else if(RunNumber == 186180 && (
 	(LumiBlock <  114 || LumiBlock >  176)
   )) isOk = false;
 else if(RunNumber == 186179 && (
-	(LumiBlock <  381 || LumiBlock >  391)
+	(LumiBlock <  382 || LumiBlock >  391)
 	&&
 	(LumiBlock <  393 || LumiBlock >  461)
 	&&
 	(LumiBlock <  463 || LumiBlock >  479)
   )) isOk = false;
 else if(RunNumber == 186178 && (
-	(LumiBlock <  122 || LumiBlock >  147)
+	(LumiBlock <  125 || LumiBlock >  147)
 	&&
 	(LumiBlock <  149 || LumiBlock >  161)
   )) isOk = false;
@@ -1259,7 +1189,9 @@ else if(RunNumber == 186169 && (
 	&&
 	(LumiBlock <  560 || LumiBlock >  573)
 	&&
-	(LumiBlock <  575 || LumiBlock >  608)
+	(LumiBlock <  575 || LumiBlock >  583)
+	&&
+	(LumiBlock <  588 || LumiBlock >  608)
 	&&
 	(LumiBlock <  610 || LumiBlock >  761)
 	&&
@@ -1268,7 +1200,7 @@ else if(RunNumber == 186169 && (
 	(LumiBlock <  816 || LumiBlock >  819)
   )) isOk = false;
 else if(RunNumber == 186156 && (
-	(LumiBlock <   42 || LumiBlock >   68)
+	(LumiBlock <   43 || LumiBlock >   68)
 	&&
 	(LumiBlock <   70 || LumiBlock >   95)
 	&&
@@ -1287,7 +1219,7 @@ else if(RunNumber == 186156 && (
 	(LumiBlock <  491 || LumiBlock >  545)
   )) isOk = false;
 else if(RunNumber == 186049 && (
-	(LumiBlock <  138 || LumiBlock >  159)
+	(LumiBlock <  139 || LumiBlock >  159)
 	&&
 	(LumiBlock <  161 || LumiBlock >  303)
 	&&
@@ -1326,7 +1258,7 @@ else if(RunNumber == 185976 && (
 	(LumiBlock <  418 || LumiBlock >  447)
   )) isOk = false;
 else if(RunNumber == 185856 && (
-	(LumiBlock <  140 || LumiBlock >  156)
+	(LumiBlock <  141 || LumiBlock >  156)
   )) isOk = false;
 else if(RunNumber == 185823 && (
 	(LumiBlock <   51 || LumiBlock >   61)
@@ -1344,14 +1276,14 @@ else if(RunNumber == 185747 && (
 	(LumiBlock <   24 || LumiBlock >  109)
   )) isOk = false;
 else if(RunNumber == 185731 && (
-	(LumiBlock <  215 || LumiBlock >  217)
+	(LumiBlock <  216 || LumiBlock >  217)
 	&&
 	(LumiBlock <  219 || LumiBlock >  243)
 	&&
 	(LumiBlock <  245 || LumiBlock >  290)
   )) isOk = false;
 else if(RunNumber == 185649 && (
-	(LumiBlock <   51 || LumiBlock >   59)
+	(LumiBlock <   52 || LumiBlock >   59)
 	&&
 	(LumiBlock <   61 || LumiBlock >  201)
 	&&
@@ -1390,17 +1322,8 @@ else if(RunNumber == 185644 && (
 	&&
 	(LumiBlock <  305 || LumiBlock >  316)
   )) isOk = false;
-else if(RunNumber == 185536 && (
-	(LumiBlock <  153 || LumiBlock >  213)
-	&&
-	(LumiBlock <  215 || LumiBlock >  258)
-	&&
-	(LumiBlock <  260 || LumiBlock >  282)
-	&&
-	(LumiBlock <  285 || LumiBlock >  330)
-  )) isOk = false;
 else if(RunNumber == 185518 && (
-	(LumiBlock <  148 || LumiBlock >  164)
+	(LumiBlock <  151 || LumiBlock >  164)
 	&&
 	(LumiBlock <  166 || LumiBlock >  284)
 	&&
@@ -1431,7 +1354,7 @@ else if(RunNumber == 184169 && (
 else if(RunNumber == 184130 && (
 	(LumiBlock <  216 || LumiBlock >  253)
 	&&
-	(LumiBlock <  267 || LumiBlock >  354)
+	(LumiBlock <  298 || LumiBlock >  354)
 	&&
 	(LumiBlock <  357 || LumiBlock >  400)
 	&&
@@ -1464,7 +1387,7 @@ else if(RunNumber == 184130 && (
 	(LumiBlock < 1375 || LumiBlock > 1407)
   )) isOk = false;
 else if(RunNumber == 184088 && (
-	(LumiBlock <  165 || LumiBlock >  167)
+	(LumiBlock <  166 || LumiBlock >  167)
 	&&
 	(LumiBlock <  171 || LumiBlock >  189)
 	&&
@@ -1473,7 +1396,7 @@ else if(RunNumber == 184088 && (
 	(LumiBlock <  230 || LumiBlock >  274)
   )) isOk = false;
 else if(RunNumber == 184074 && (
-	(LumiBlock <   94 || LumiBlock >  108)
+	(LumiBlock <   95 || LumiBlock >  108)
   )) isOk = false;
 else if(RunNumber == 184072 && (
 	(LumiBlock <   37 || LumiBlock >   80)
@@ -1484,7 +1407,7 @@ else if(RunNumber == 184066 && (
 	(LumiBlock <   91 || LumiBlock >  122)
   )) isOk = false;
 else if(RunNumber == 184022 && (
-	(LumiBlock <  225 || LumiBlock >  228)
+	(LumiBlock <  226 || LumiBlock >  228)
 	&&
 	(LumiBlock <  231 || LumiBlock >  256)
 	&&
@@ -1511,7 +1434,7 @@ else if(RunNumber == 184022 && (
 	(LumiBlock <  822 || LumiBlock > 1086)
   )) isOk = false;
 else if(RunNumber == 183963 && (
-	(LumiBlock <  208 || LumiBlock >  211)
+	(LumiBlock <  209 || LumiBlock >  211)
 	&&
 	(LumiBlock <  214 || LumiBlock >  216)
 	&&
@@ -1526,7 +1449,7 @@ else if(RunNumber == 183963 && (
 	(LumiBlock <  350 || LumiBlock >  366)
   )) isOk = false;
 else if(RunNumber == 183780 && (
-	(LumiBlock <  397 || LumiBlock >  403)
+	(LumiBlock <  399 || LumiBlock >  403)
 	&&
 	(LumiBlock <  405 || LumiBlock >  405)
 	&&
@@ -1548,12 +1471,12 @@ else if(RunNumber == 183602 && (
 	(LumiBlock <   19 || LumiBlock >   32)
   )) isOk = false;
 else if(RunNumber == 183581 && (
-	(LumiBlock <  209 || LumiBlock >  259)
+	(LumiBlock <  210 || LumiBlock >  259)
 	&&
 	(LumiBlock <  261 || LumiBlock >  672)
   )) isOk = false;
 else if(RunNumber == 183580 && (
-	(LumiBlock <  301 || LumiBlock >  329)
+	(LumiBlock <  302 || LumiBlock >  329)
 	&&
 	(LumiBlock <  332 || LumiBlock >  352)
   )) isOk = false;
@@ -1726,7 +1649,7 @@ else if(RunNumber == 183462 && (
 	(LumiBlock < 1318 || LumiBlock > 1330)
   )) isOk = false;
 else if(RunNumber == 183426 && (
-	(LumiBlock <   66 || LumiBlock >  123)
+	(LumiBlock <   67 || LumiBlock >  123)
 	&&
 	(LumiBlock <  128 || LumiBlock >  231)
 	&&
@@ -1850,14 +1773,14 @@ else if(RunNumber == 183286 && (
 	(LumiBlock <  379 || LumiBlock >  625)
   )) isOk = false;
 else if(RunNumber == 183272 && (
-	(LumiBlock <  420 || LumiBlock >  479)
+	(LumiBlock <  421 || LumiBlock >  479)
 	&&
 	(LumiBlock <  481 || LumiBlock >  485)
 	&&
 	(LumiBlock <  487 || LumiBlock >  650)
   )) isOk = false;
 else if(RunNumber == 183216 && (
-	(LumiBlock <   58 || LumiBlock >  237)
+	(LumiBlock <   59 || LumiBlock >  237)
 	&&
 	(LumiBlock <  239 || LumiBlock >  319)
 	&&
@@ -1872,7 +1795,7 @@ else if(RunNumber == 183216 && (
 	(LumiBlock <  610 || LumiBlock >  700)
   )) isOk = false;
 else if(RunNumber == 183130 && (
-	(LumiBlock <   15 || LumiBlock >   45)
+	(LumiBlock <   17 || LumiBlock >   45)
 	&&
 	(LumiBlock <   47 || LumiBlock >  213)
 	&&
@@ -1888,7 +1811,7 @@ else if(RunNumber == 183129 && (
 	(LumiBlock <  125 || LumiBlock >  146)
   )) isOk = false;
 else if(RunNumber == 183127 && (
-	(LumiBlock <   92 || LumiBlock >  196)
+	(LumiBlock <   93 || LumiBlock >  196)
 	&&
 	(LumiBlock <  198 || LumiBlock >  312)
   )) isOk = false;
@@ -1906,14 +1829,14 @@ else if(RunNumber == 183081 && (
 	(LumiBlock <  862 || LumiBlock >  984)
   )) isOk = false;
 else if(RunNumber == 183079 && (
-	(LumiBlock <  352 || LumiBlock >  355)
+	(LumiBlock <  353 || LumiBlock >  355)
 	&&
 	(LumiBlock <  357 || LumiBlock >  363)
 	&&
 	(LumiBlock <  365 || LumiBlock >  375)
   )) isOk = false;
 else if(RunNumber == 183078 && (
-	(LumiBlock <    9 || LumiBlock >   52)
+	(LumiBlock <   11 || LumiBlock >   52)
   )) isOk = false;
 else if(RunNumber == 183054 && (
 	(LumiBlock <  100 || LumiBlock >  172)
@@ -1925,7 +1848,7 @@ else if(RunNumber == 183054 && (
 	(LumiBlock <  276 || LumiBlock >  276)
   )) isOk = false;
 else if(RunNumber == 183045 && (
-	(LumiBlock <  179 || LumiBlock >  184)
+	(LumiBlock <  180 || LumiBlock >  184)
 	&&
 	(LumiBlock <  186 || LumiBlock >  209)
 	&&
@@ -1934,10 +1857,10 @@ else if(RunNumber == 183045 && (
 	(LumiBlock <  235 || LumiBlock >  518)
   )) isOk = false;
 else if(RunNumber == 183038 && (
-	(LumiBlock <   60 || LumiBlock >   80)
+	(LumiBlock <   61 || LumiBlock >   80)
   )) isOk = false;
 else if(RunNumber == 183021 && (
-	(LumiBlock <  548 || LumiBlock >  605)
+	(LumiBlock <  550 || LumiBlock >  605)
 	&&
 	(LumiBlock <  644 || LumiBlock >  755)
 	&&
@@ -1983,7 +1906,7 @@ else if(RunNumber == 183003 && (
 	(LumiBlock <  958 || LumiBlock > 1074)
   )) isOk = false;
 else if(RunNumber == 182997 && (
-	(LumiBlock <   54 || LumiBlock >  117)
+	(LumiBlock <   61 || LumiBlock >  117)
   )) isOk = false;
 else if(RunNumber == 182886 && (
 	(LumiBlock <   48 || LumiBlock >   80)
@@ -2013,7 +1936,9 @@ else if(RunNumber == 182796 && (
 	(LumiBlock <  575 || LumiBlock >  602)
   )) isOk = false;
 else if(RunNumber == 182787 && (
-	(LumiBlock <  125 || LumiBlock >  185)
+	(LumiBlock <  125 || LumiBlock >  126)
+	&&
+	(LumiBlock <  140 || LumiBlock >  185)
 	&&
 	(LumiBlock <  187 || LumiBlock >  361)
 	&&
@@ -2199,7 +2124,7 @@ else if(RunNumber == 182372 && (
 	&&
 	(LumiBlock <  415 || LumiBlock >  465)
 	&&
-	(LumiBlock <  467 || LumiBlock >  507)
+	(LumiBlock <  467 || LumiBlock >  505)
   )) isOk = false;
 else if(RunNumber == 182346 && (
 	(LumiBlock <  108 || LumiBlock >  131)
@@ -2345,7 +2270,9 @@ else if(RunNumber == 180309 && (
 	(LumiBlock <  480 || LumiBlock >  522)
   )) isOk = false;
 else if(RunNumber == 180242 && (
-	(LumiBlock <   90 || LumiBlock >  183)
+	(LumiBlock <   90 || LumiBlock >   96)
+	&&
+	(LumiBlock <  108 || LumiBlock >  183)
 	&&
 	(LumiBlock <  191 || LumiBlock >  272)
 	&&
@@ -2523,12 +2450,10 @@ else if(RunNumber == 179939 && (
 	&&
 	(LumiBlock <  342 || LumiBlock >  439)
 	&&
-	(LumiBlock <  454 || LumiBlock >  527)
-	&&
-	(LumiBlock <  529 || LumiBlock >  550)
+	(LumiBlock <  454 || LumiBlock >  515)
   )) isOk = false;
 else if(RunNumber == 179938 && (
-	(LumiBlock <   52 || LumiBlock >   58)
+	(LumiBlock <   53 || LumiBlock >   58)
 	&&
 	(LumiBlock <   61 || LumiBlock >   89)
 	&&
@@ -2631,7 +2556,7 @@ else if(RunNumber == 178109 && (
 	(LumiBlock <  324 || LumiBlock >  848)
   )) isOk = false;
 else if(RunNumber == 178047 && (
-	(LumiBlock <   91 || LumiBlock >  102)
+	(LumiBlock <   97 || LumiBlock >  102)
   )) isOk = false;
 else if(RunNumber == 178044 && (
 	(LumiBlock <  109 || LumiBlock >  207)
@@ -2657,33 +2582,5 @@ else if(RunNumber == 178044 && (
 	(LumiBlock <  540 || LumiBlock >  591)
 	&&
 	(LumiBlock <  594 || LumiBlock >  613)
-  )) isOk = false;
-else if(RunNumber == 178026 && (
-	(LumiBlock <   17 || LumiBlock >   38)
-	&&
-	(LumiBlock <   41 || LumiBlock >   41)
-  )) isOk = false;
-else if(RunNumber == 178021 && (
-	(LumiBlock <    6 || LumiBlock >   41)
-	&&
-	(LumiBlock <   58 || LumiBlock >  113)
-  )) isOk = false;
-else if(RunNumber == 178020 && (
-	(LumiBlock <    7 || LumiBlock >   19)
-  )) isOk = false;
-else if(RunNumber == 177986 && (
-	(LumiBlock <   96 || LumiBlock >  110)
-	&&
-	(LumiBlock <  121 || LumiBlock >  128)
-	&&
-	(LumiBlock <  133 || LumiBlock >  149)
-	&&
-	(LumiBlock <  153 || LumiBlock >  198)
-	&&
-	(LumiBlock <  227 || LumiBlock >  311)
-	&&
-	(LumiBlock <  316 || LumiBlock >  423)
-	&&
-	(LumiBlock <  425 || LumiBlock >  486)
   )) isOk = false;
 
