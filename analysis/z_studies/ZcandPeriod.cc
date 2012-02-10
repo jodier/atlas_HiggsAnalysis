@@ -25,6 +25,7 @@ TFile *file;
 
 /*-------------------------------------------------------------------------*/
 
+
 bool localLoader(TChain *chain, const char *fname)
 {
 	std::ifstream stream;
@@ -66,13 +67,13 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	TChain *chain1 = new TChain("Z1");
-	TChain *chain2 = new TChain("Z1");
-	TChain *chain3 = new TChain("Z1");
-	TChain *chain4 = new TChain("Z1");
-	TChain *chain5 = new TChain("Z1");
-	TChain *chain6 = new TChain("Z1");
-	TChain *chain7 = new TChain("Z1");
+	TChain *chain1 = new TChain("Z4");
+	TChain *chain2 = new TChain("Z4");
+	TChain *chain3 = new TChain("Z4");
+	TChain *chain4 = new TChain("Z4");
+	TChain *chain5 = new TChain("Z4");
+	TChain *chain6 = new TChain("Z4");
+	TChain *chain7 = new TChain("Z4");
 
 	if(localLoader(chain1, argv[1]) == false
 	   ||
@@ -107,7 +108,7 @@ int main(int argc, char **argv)
 	ZStudy alg6(chain6); //MC
 	ZStudy alg7(chain7); //DATA
 
-	file = new TFile("ZcandPeriod.root", "recreate");
+	file = new TFile("Z4candPeriod.root", "recreate");
 
 	if(file != NULL)
 	{
@@ -209,50 +210,61 @@ void ZStudy::Loop(void)
 
 		for(int i = 0; i < n; i++)
 		{
-			if(sameSign[i] == 1
-			   ||
-			   l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
+			if(l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
 			   ||
 			   l2_pt[i] < ET_MIN || l2_pt[i] > ET_MAX
 			   ||
 			   fabs(Z_m[i] - MASS_CENTER) > MASS_WINDOW
+			   ||
+			   sameSign[i] == true
 			 ) {
 				continue;
 			}
-
-			//if(bkgd != false && (l1_truthMatch[i] != false && l2_truthMatch[i] != false))
-			//{
-			//	continue;
-			//}
 
 			Float_t theWeight = weight1[i] * weight2[i] * weight3[i];
 
 			if(isMC != false)
 			{
-				/**/ if(RunNumber == 180164)
+				switch(RunNumber)
 				{
-					h.Fill(1, theWeight);
-					h.Fill(2, theWeight);
-				}
-				else if(RunNumber == 183003)
-				{
-					h.Fill(3, theWeight);
-					h.Fill(4, theWeight);
-					h.Fill(5, theWeight);
-					h.Fill(6, theWeight);
-				}
-				else if(RunNumber == 186169)
-				{
-					h.Fill(7, theWeight);
-					h.Fill(8, theWeight);
-					h.Fill(9, theWeight);
-				}
-				else if(RunNumber == 186275)
-				{
-					h.Fill(10, theWeight);
-					h.Fill(11, theWeight);
+					case 180164:
+						theWeight = theWeight / 1.06f;
+
+						h.Fill(1, theWeight);
+						h.Fill(2, theWeight);
+						break;
+
+					case 183003:
+						theWeight = theWeight / 1.08f;
+
+						h.Fill(3, theWeight);
+						h.Fill(4, theWeight);
+						h.Fill(5, theWeight);
+						h.Fill(6, theWeight);
+						break;
+
+					case 186169:
+						theWeight = theWeight / 0.87f;
+
+						h.Fill(7, theWeight);
+						h.Fill(8, theWeight);
+						h.Fill(9, theWeight);
+						break;
+
+					case 186275:
+						theWeight = theWeight / 1.03f;
+
+						h.Fill(10, theWeight);
+						h.Fill(11, theWeight);
+						break;
+
+					default:
+						std::cout << "TLeptonAnalysis::eventGetWeight2() - Oula !" << std::endl;
+						theWeight = 0.0f;
+						break;
 				}
 			}
+
 			else
 			{
 				/**/ if(RunNumber >= 177986 && RunNumber <= 178109) { h.Fill(1, theWeight); ZCand[0]++;}
@@ -276,19 +288,29 @@ void ZStudy::Loop(void)
 
 	h.Write();
 
-//	std::cout  << "****************" << std::endl;
-//	std::cout  << "Z period B :" << ZCand[0] << std::endl;
-//	std::cout  << "Z period D :" << ZCand[1] << std::endl;
-//	std::cout  << "Z period E :" << ZCand[2] << std::endl;
-//	std::cout  << "Z period F :" << ZCand[3] << std::endl;
-//	std::cout  << "Z period G :" << ZCand[4] << std::endl;
-//	std::cout  << "Z period H :" << ZCand[5] << std::endl;
-//	std::cout  << "Z period I :" << ZCand[6] << std::endl;
-//	std::cout  << "Z period J :" << ZCand[7] << std::endl;
-//	std::cout  << "Z period K :" << ZCand[8] << std::endl;
-//	std::cout  << "Z period L :" << ZCand[9] << std::endl;
-//	std::cout  << "Z period M :" << ZCand[10] << std::endl;
+	const Float_t LumiPeriod[] = {
+		11.7377, 166.737,
+		48.8244, 142.575, 537.542, 259.459,
+		386.226, 226.46, 600.069,
+		1401.87, 1025.62
+	};
 
+if(DataType == "data"){
+
+	std::cout  << "****************" << std::endl;
+	std::cout  << "Z period B :" << ZCand[0] / LumiPeriod[0] << std::endl;
+	std::cout  << "Z period D :" << ZCand[1] / LumiPeriod[1]<< std::endl;
+	std::cout  << "Z period E :" << ZCand[2] / LumiPeriod[2]<< std::endl;
+	std::cout  << "Z period F :" << ZCand[3] / LumiPeriod[3]<< std::endl;
+	std::cout  << "Z period G :" << ZCand[4] / LumiPeriod[4]<< std::endl;
+	std::cout  << "Z period H :" << ZCand[5] / LumiPeriod[5]<< std::endl;
+	std::cout  << "Z period I :" << ZCand[6] / LumiPeriod[6]<< std::endl;
+	std::cout  << "Z period J :" << ZCand[7] / LumiPeriod[7]<< std::endl;
+	std::cout  << "Z period K :" << ZCand[8] / LumiPeriod[8]<< std::endl;
+	std::cout  << "Z period L :" << ZCand[9] / LumiPeriod[9]<< std::endl;
+	std::cout  << "Z period M :" << ZCand[10] / LumiPeriod[10]<< std::endl;
+
+}
 
 }
 
