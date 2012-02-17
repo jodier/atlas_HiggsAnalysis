@@ -43,9 +43,11 @@ OBJS5         = analysis/z_studies/mass.o
 
 OBJS6         = analysis/z_studies/ZcandPeriod.o
 
+OBJS7         = analysis/l_study/main.o analysis/l_study/triggers.o analysis/l_study/utils.o analysis/l_study/isLoosePP.o
+
 #############################################################################
 
-all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
+all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS7)
 #	@cd $(DIR)/tools && make && cd $(DIR)
 
 	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
@@ -53,10 +55,11 @@ all: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
 	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 	$(LD) $(LDFLAGS) -o   ZcandPeriod  $(OBJS6) $(LIBS) -L. -lPileupReweighting
+	$(LD) $(LDFLAGS) -o     l_study    $(OBJS7) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 
 #############################################################################
 
-ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
+ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS7)
 	@cd $(DIR)/tools && make all && cd $(DIR)
 
 	$(LD) $(LDFLAGS) -o higgs_analysis $(OBJS2) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
@@ -64,20 +67,21 @@ ALL: core $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6)
 	$(LD) $(LDFLAGS) -o       eff      $(OBJS4) $(LIBS) -L. -lRooFitCore -lRooFit -lPileupReweighting
 	$(LD) $(LDFLAGS) -o      mass      $(OBJS5) $(LIBS) -L. -lPileupReweighting
 	$(LD) $(LDFLAGS) -o   ZcandPeriod  $(OBJS6) $(LIBS) -L. -lPileupReweighting
+	$(LD) $(LDFLAGS) -o     l_study    $(OBJS7) $(LIBS) -L. -lcore -lPileupReweighting -legammaAnalysisUtils -lMuonMomentumCorrections -lMuonEfficiencyCorrections
 
 #############################################################################
 
 clean:
 #	@cd $(DIR)/tools && make clean && cd $(DIR)
 
-	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) libcore.a higgs_analysis test eff mass ZcandPeriod
+	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS7) libcore.a higgs_analysis test eff mass ZcandPeriod l_study
 
 #############################################################################
 
 CLEAN:
 	@cd $(DIR)/tools && make clean && cd $(DIR)
 
-	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) libcore.a higgs_analysis test eff mass ZcandPeriod
+	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS7) libcore.a higgs_analysis test eff mass ZcandPeriod l_study
 
 #############################################################################
 

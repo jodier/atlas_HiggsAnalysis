@@ -541,9 +541,9 @@ void ZStudy::Loop(void)
 
 		if(isMC == false)
 		{
-			Bool_t isOk = true;
+			Bool_t isOk = false;
 
-			#include "grl.h"
+			#include "grlZ1.h"
 
 			if(isOk == false)
 			{
@@ -555,7 +555,7 @@ void ZStudy::Loop(void)
 
 		for(int i = 0; i < n; i++)
 		{
-			if(sameSign[i] == 1
+			if(sameSign[i] == true
 			   ||
 			   l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
 			   ||

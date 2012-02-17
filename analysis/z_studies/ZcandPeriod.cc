@@ -108,7 +108,7 @@ int main(int argc, char **argv)
 	ZStudy alg6(chain6); //MC
 	ZStudy alg7(chain7); //DATA
 
-	file = new TFile("Z4candPeriod.root", "recreate");
+	file = new TFile("Z4candPeriod_trackIsoCut.root", "recreate");
 
 	if(file != NULL)
 	{
@@ -151,6 +151,11 @@ int main(int argc, char **argv)
 
 	delete chain1;
 	delete chain2;
+	delete chain3;
+	delete chain4;
+	delete chain5;
+	delete chain6;
+	delete chain7;
 
 	std::cout << "Bye." << std::endl;
 
@@ -174,10 +179,6 @@ void ZStudy::Loop(void)
 
 	Long64_t eventNr = fChain->GetEntries();
 
-	/**/
-
-	Long64_t ZCand[11] = {0,0,0,0,0,0,0,0,0,0,0};
-
 	for(Long64_t event = 0; event < eventNr; event++)
 	{
 		if(this->LoadTree(event) < 0)
@@ -196,9 +197,9 @@ void ZStudy::Loop(void)
 
 		if(isMC == false)
 		{
-			Bool_t isOk = true;
+			Bool_t isOk = false;
 
-			#include "grl.h"
+			#include "grlZ4.h"
 
 			if(isOk == false)
 			{
@@ -217,6 +218,8 @@ void ZStudy::Loop(void)
 			   fabs(Z_m[i] - MASS_CENTER) > MASS_WINDOW
 			   ||
 			   sameSign[i] == true
+			   ||
+			   l1_tkIso20[i] > 0.15 || l2_tkIso20[i] > 0.15 
 			 ) {
 				continue;
 			}
@@ -228,14 +231,14 @@ void ZStudy::Loop(void)
 				switch(RunNumber)
 				{
 					case 180164:
-						theWeight = theWeight / 1.06f;
+						//theWeight = theWeight / 1.06f;
 
 						h.Fill(1, theWeight);
 						h.Fill(2, theWeight);
 						break;
 
 					case 183003:
-						theWeight = theWeight / 1.08f;
+						//theWeight = theWeight / 1.08f;
 
 						h.Fill(3, theWeight);
 						h.Fill(4, theWeight);
@@ -244,7 +247,7 @@ void ZStudy::Loop(void)
 						break;
 
 					case 186169:
-						theWeight = theWeight / 0.87f;
+						//theWeight = theWeight / 0.87f;
 
 						h.Fill(7, theWeight);
 						h.Fill(8, theWeight);
@@ -252,7 +255,7 @@ void ZStudy::Loop(void)
 						break;
 
 					case 186275:
-						theWeight = theWeight / 1.03f;
+						//theWeight = theWeight / 1.03f;
 
 						h.Fill(10, theWeight);
 						h.Fill(11, theWeight);
@@ -267,17 +270,17 @@ void ZStudy::Loop(void)
 
 			else
 			{
-				/**/ if(RunNumber >= 177986 && RunNumber <= 178109) { h.Fill(1, theWeight); ZCand[0]++;}
-				else if(RunNumber >= 179710 && RunNumber <= 180481) { h.Fill(2, theWeight); ZCand[1]++;}
-				else if(RunNumber >= 180614 && RunNumber <= 180776) { h.Fill(3, theWeight); ZCand[2]++;}
-				else if(RunNumber >= 182013 && RunNumber <= 182519) { h.Fill(4, theWeight); ZCand[3]++;}
-				else if(RunNumber >= 182726 && RunNumber <= 183462) { h.Fill(5, theWeight); ZCand[4]++;}
-				else if(RunNumber >= 183544 && RunNumber <= 184169) { h.Fill(6, theWeight); ZCand[5]++;}
-				else if(RunNumber >= 185353 && RunNumber <= 186493) { h.Fill(7, theWeight); ZCand[6]++;}
-				else if(RunNumber >= 186516 && RunNumber <= 186755) { h.Fill(8, theWeight); ZCand[7]++;}
-				else if(RunNumber >= 186873 && RunNumber <= 187815) { h.Fill(9, theWeight); ZCand[8]++;}
-				else if(RunNumber >= 188902 && RunNumber <= 190343) { h.Fill(10, theWeight); ZCand[9]++;}
-				else if(RunNumber >= 190503 && RunNumber <= 191933) { h.Fill(11, theWeight); ZCand[10]++;}
+				/**/ if(RunNumber >= 177986 && RunNumber <= 178109) { h.Fill(1, theWeight); }
+				else if(RunNumber >= 179710 && RunNumber <= 180481) { h.Fill(2, theWeight); }
+				else if(RunNumber >= 180614 && RunNumber <= 180776) { h.Fill(3, theWeight); }
+				else if(RunNumber >= 182013 && RunNumber <= 182519) { h.Fill(4, theWeight); }
+				else if(RunNumber >= 182726 && RunNumber <= 183462) { h.Fill(5, theWeight); }
+				else if(RunNumber >= 183544 && RunNumber <= 184169) { h.Fill(6, theWeight); }
+				else if(RunNumber >= 185353 && RunNumber <= 186493) { h.Fill(7, theWeight); }
+				else if(RunNumber >= 186516 && RunNumber <= 186755) { h.Fill(8, theWeight); }
+				else if(RunNumber >= 186873 && RunNumber <= 187815) { h.Fill(9, theWeight); }
+				else if(RunNumber >= 188902 && RunNumber <= 190343) { h.Fill(10, theWeight);}
+				else if(RunNumber >= 190503 && RunNumber <= 191933) { h.Fill(11, theWeight);}
 			}
 		}
 	}
@@ -287,30 +290,6 @@ void ZStudy::Loop(void)
 	file->cd();
 
 	h.Write();
-
-	const Float_t LumiPeriod[] = {
-		11.7377, 166.737,
-		48.8244, 142.575, 537.542, 259.459,
-		386.226, 226.46, 600.069,
-		1401.87, 1025.62
-	};
-
-if(DataType == "data"){
-
-	std::cout  << "****************" << std::endl;
-	std::cout  << "Z period B :" << ZCand[0] / LumiPeriod[0] << std::endl;
-	std::cout  << "Z period D :" << ZCand[1] / LumiPeriod[1]<< std::endl;
-	std::cout  << "Z period E :" << ZCand[2] / LumiPeriod[2]<< std::endl;
-	std::cout  << "Z period F :" << ZCand[3] / LumiPeriod[3]<< std::endl;
-	std::cout  << "Z period G :" << ZCand[4] / LumiPeriod[4]<< std::endl;
-	std::cout  << "Z period H :" << ZCand[5] / LumiPeriod[5]<< std::endl;
-	std::cout  << "Z period I :" << ZCand[6] / LumiPeriod[6]<< std::endl;
-	std::cout  << "Z period J :" << ZCand[7] / LumiPeriod[7]<< std::endl;
-	std::cout  << "Z period K :" << ZCand[8] / LumiPeriod[8]<< std::endl;
-	std::cout  << "Z period L :" << ZCand[9] / LumiPeriod[9]<< std::endl;
-	std::cout  << "Z period M :" << ZCand[10] / LumiPeriod[10]<< std::endl;
-
-}
 
 }
 

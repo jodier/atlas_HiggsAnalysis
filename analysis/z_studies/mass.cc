@@ -81,7 +81,7 @@ int main(int argc, char **argv)
 	ZStudy alg1(chain1);
 	ZStudy alg2(chain2);
 
-	file = new TFile("mass.root", "recreate");
+	file = new TFile("Z1_mass.root", "recreate");
 
 	if(file != NULL)
 	{
@@ -171,7 +171,7 @@ void ZStudy::Loop(void)
 		{
 			Bool_t isOk = true;
 
-			#include "grl.h"
+			#include "grlZ1.h"
 
 			if(isOk == false)
 			{
@@ -183,7 +183,7 @@ void ZStudy::Loop(void)
 
 		for(int i = 0; i < n; i++)
 		{
-			if(sameSign[i] == 1
+			if(sameSign[i] == true
 			   ||
 			   l1_pt[i] < ET_MIN || l1_pt[i] > ET_MAX
 			   ||
