@@ -210,6 +210,21 @@ void TLeptonFinder::Loop(void)
 			m_l[0].l_tkIso20[i] = el_ptcone20->at(index) / electronGetEt(index);
 			m_l[0].l_d0sigma[i] = fabs(el_trackd0pvunbiased->at(index) / el_tracksigd0pvunbiased->at(index));
 
+			for(Int_t j = i + 1; j < elStacoIndexNr; j++)
+			{
+				Int_t index2 = elStacoIndexArray[j];
+
+				if(sqrtf(__dR2(m_l[0].l_eta[i], electronGetEtaDirection(index2), m_l[0].l_phi[i], electronGetPhiDirection(index2))) < 0.20f)
+				{
+					m_l[0].l_tkIso20[i] -= el_trackpt->at(index2) / m_l[0].l_pt[i];
+				}
+
+				if(sqrtf(__dR2(m_l[0].l_eta[i], electronGetEtaDirection(index2), m_l[0].l_phi[i], electronGetPhiDirection(index2))) < 0.18f)
+				{
+					m_l[0].l_clIso20[i] -= electronGetEt(index2) / m_l[0].l_pt[i];
+				}
+			}
+
 			if(m_l[0].l_pt[i] > 7000.0) {
 				nrElStaco++;
 			}
@@ -257,6 +272,21 @@ void TLeptonFinder::Loop(void)
 			m_l[1].l_tkIso20[i] = el_ptcone20->at(index) / electronGetEt(index);
 			m_l[1].l_d0sigma[i] = fabs(el_trackd0pvunbiased->at(index) / el_tracksigd0pvunbiased->at(index));
 
+			for(Int_t j = i + 1; j < elMuidIndexNr; j++)
+			{
+				Int_t index2 = elMuidIndexArray[j];
+
+				if(sqrtf(__dR2(m_l[1].l_eta[i], electronGetEtaDirection(index2), m_l[1].l_phi[i], electronGetPhiDirection(index2))) < 0.20f)
+				{
+					m_l[1].l_tkIso20[i] -= el_trackpt->at(index2) / m_l[1].l_pt[i];
+				}
+
+				if(sqrtf(__dR2(m_l[1].l_eta[i], electronGetEtaDirection(index2), m_l[1].l_phi[i], electronGetPhiDirection(index2))) < 0.18f)
+				{
+					m_l[1].l_clIso20[i] -= electronGetEt(index2) / m_l[1].l_pt[i];
+				}
+			}
+
 			if(m_l[1].l_pt[i] > 7000.0) {
 				nrElMuid++;
 			}
@@ -297,12 +327,22 @@ void TLeptonFinder::Loop(void)
 			m_l[2].l_charge[i] = mu_staco_charge->at(index);
 			m_l[2].l_e[i] = mu_staco_E->at(index);
 			m_l[2].l_pt[i] = mu_staco_pt->at(index);
-			m_l[2].l_eta[i] =  mu_staco_eta->at(index);
+			m_l[2].l_eta[i] = mu_staco_eta->at(index);
 			m_l[2].l_phi[i] = mu_staco_phi->at(index);
 
 			m_l[2].l_clIso20[i] = (mu_staco_etcone20->at(index) - Float_t(nPV2 - 1) * 33.5f) / mu_staco_pt->at(index);
 			m_l[2].l_tkIso20[i] = mu_staco_ptcone20->at(index) / mu_staco_pt->at(index);
 			m_l[2].l_d0sigma[i] = fabs(mu_staco_trackIPEstimate_d0_unbiasedpvunbiased->at(index) / mu_staco_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index));
+
+			for(Int_t j = i + 1; j < muStacoIndexNr; j++)
+			{
+				Int_t index2 = muStacoIndexArray[j];
+
+				if(sqrtf(__dR2(m_l[2].l_eta[i], mu_staco_eta->at(index2), m_l[2].l_phi[i], mu_staco_phi->at(index2))) < 0.20f)
+				{
+					m_l[2].l_tkIso20[i] -= ((mu_staco_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_staco_id_theta_exPV->at(index2)) / fabs(mu_staco_id_qoverp_exPV->at(index2)) : 0.0f) / m_l[2].l_pt[i];
+				}
+			}
 
 			if(m_l[2].l_pt[i] > 7000.0) {
 				nrMuStaco++;
@@ -344,12 +384,22 @@ void TLeptonFinder::Loop(void)
 			m_l[3].l_charge[i] = mu_muid_charge->at(index);
 			m_l[3].l_e[i] = mu_muid_E->at(index);
 			m_l[3].l_pt[i] = mu_muid_pt->at(index);
-			m_l[3].l_eta[i] =  mu_muid_eta->at(index);
+			m_l[3].l_eta[i] = mu_muid_eta->at(index);
 			m_l[3].l_phi[i] = mu_muid_phi->at(index);
 
 			m_l[3].l_clIso20[i] = (mu_muid_etcone20->at(index) - Float_t(nPV2 - 1) * 33.5f) / mu_muid_pt->at(index);
 			m_l[3].l_tkIso20[i] = mu_muid_ptcone20->at(index) / mu_muid_pt->at(index);
 			m_l[3].l_d0sigma[i] = fabs(mu_muid_trackIPEstimate_d0_unbiasedpvunbiased->at(index) / mu_muid_trackIPEstimate_sigd0_unbiasedpvunbiased->at(index));
+
+			for(Int_t j = i + 1; j < muMuidIndexNr; j++)
+			{
+				Int_t index2 = muMuidIndexArray[j];
+
+				if(sqrtf(__dR2(m_l[3].l_eta[i], mu_muid_eta->at(index2), m_l[3].l_phi[i], mu_muid_phi->at(index2))) < 0.20f)
+				{
+					m_l[3].l_tkIso20[i] -= ((mu_muid_id_qoverp_exPV->at(index2) != 0.0f) ? sinf(mu_muid_id_theta_exPV->at(index2)) / fabs(mu_muid_id_qoverp_exPV->at(index2)) : 0.0f) / m_l[3].l_pt[i];
+				}
+			}
 
 			if(m_l[3].l_pt[i] > 7000.0) {
 				nrMuMuid++;
@@ -369,7 +419,6 @@ void TLeptonFinder::Loop(void)
 
 		/*---------------------------------------------------------*/
 	}
-
 }
 
 /*-------------------------------------------------------------------------*/

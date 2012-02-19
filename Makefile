@@ -43,7 +43,7 @@ OBJS5         = analysis/z_studies/mass.o
 
 OBJS6         = analysis/z_studies/ZcandPeriod.o
 
-OBJS7         = analysis/l_study/main.o analysis/l_study/triggers.o analysis/l_study/utils.o analysis/l_study/isLoosePP.o
+OBJS7         = analysis/l_study/main.o analysis/higgs_analysis/triggers.o analysis/higgs_analysis/utils.o analysis/higgs_analysis/isLoosePP.o
 
 #############################################################################
 
