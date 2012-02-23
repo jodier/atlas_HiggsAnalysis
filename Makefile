@@ -16,7 +16,11 @@ ROOTLDFLAGS   = $(shell $(ROOTCONFIG) --ldflags)
 
 #############################################################################
 
-ATLASFLAGS    = -DSTANDALONE -I./tools/PileupReweighting -I./tools/egammaAnalysisUtils -I./tools/MuonMomentumCorrections -I./tools/MuonEfficiencyCorrections
+ATLASFLAGS    = -DSTANDALONE \
+-I./tools/PileupReweighting \
+-I./tools/egammaAnalysisUtils \
+-I./tools/MuonMomentumCorrections \
+-I./tools/MuonEfficiencyCorrections
 
 #############################################################################
 
