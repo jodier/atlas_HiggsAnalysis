@@ -195,19 +195,38 @@ bool THiggsBuilder::Z_analysis(
 	/* TRIGGER							   */
 	/*-----------------------------------------------------------------*/
 
-	Int_t nrTrigger = 0;
-
-	if(triggerMatch1) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch2) {
-		nrTrigger++;
-	}
-
-	if(nrTrigger < 1)
+	if((elTrigger & 1) != 0)
 	{
-		return false;
+		Int_t nrTrigger = 0;
+
+		if((triggerMatch1 & 1) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch2 & 1) != 0) {
+			nrTrigger++;
+		}
+
+		if(nrTrigger < 1)
+		{
+			return false;
+		}
+	}
+
+	if((elTrigger & 2) != 0)
+	{
+		Int_t nrTrigger = 0;
+
+		if((triggerMatch1 & 2) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch2 & 2) != 0) {
+			nrTrigger++;
+		}
+
+		if(nrTrigger < 2)
+		{
+			return false;
+		}
 	}
 
 	/*-----------------------------------------------------------------*/
