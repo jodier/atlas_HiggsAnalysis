@@ -246,17 +246,17 @@ public :
    std::vector<std::vector<int> > *mc_children;
    std::vector<int>     *mc_pdgId;
    std::vector<std::vector<int> > *mc_child_index;
-   std::vector<int>     *trig_EF_trigmuonef_EF_2mu10;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu10;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu18;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu18_MG;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu20;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu20_MG;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu22;
-   std::vector<int>     *trig_EF_trigmuonef_EF_mu22_MG;
-   std::vector<int>     *trig_EF_trigmuonef_track_n;
-   std::vector<std::vector<float> > *trig_EF_trigmuonef_track_CB_eta;
-   std::vector<std::vector<float> > *trig_EF_trigmuonef_track_CB_phi;
+   std::vector<int>     *trig_EF_trigmugirl_n;
+   std::vector<int>     *trig_EF_trigmugirl_EF_2mu10;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu10;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu18_MG;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu20_MG;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22;
+   std::vector<int>     *trig_EF_trigmugirl_EF_mu22_MG;
+   std::vector<std::vector<float> > *trig_EF_trigmugirl_track_CB_eta;
+   std::vector<std::vector<float> > *trig_EF_trigmugirl_track_CB_phi;
    Int_t           trig_EF_el_n;
    std::vector<float>   *trig_EF_el_eta;
    std::vector<float>   *trig_EF_el_phi;
@@ -485,17 +485,17 @@ public :
    TBranch        *b_mc_children;   //!
    TBranch        *b_mc_pdgId;   //!
    TBranch        *b_mc_child_index;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_2mu10;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu10;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu18;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu18_MG;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu20;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu20_MG;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu22;   //!
-   TBranch        *b_trig_EF_trigmuonef_EF_mu22_MG;   //!
-   TBranch        *b_trig_EF_trigmuonef_track_n;   //!
-   TBranch        *b_trig_EF_trigmuonef_track_CB_eta;   //!
-   TBranch        *b_trig_EF_trigmuonef_track_CB_phi;   //!
+   TBranch        *b_trig_EF_trigmugirl_n;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_2mu10;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu10;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu18_MG;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu20_MG;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22;   //!
+   TBranch        *b_trig_EF_trigmugirl_EF_mu22_MG;   //!
+   TBranch        *b_trig_EF_trigmugirl_track_CB_eta;   //!
+   TBranch        *b_trig_EF_trigmugirl_track_CB_phi;   //!
    TBranch        *b_trig_EF_el_n;   //!
    TBranch        *b_trig_EF_el_eta;   //!
    TBranch        *b_trig_EF_el_phi;   //!
@@ -754,17 +754,17 @@ void THiggsD3PD::Init(TTree *tree)
    mc_children = 0;
    mc_pdgId = 0;
    mc_child_index = 0;
-   trig_EF_trigmuonef_EF_2mu10 = 0;
-   trig_EF_trigmuonef_EF_mu10 = 0;
-   trig_EF_trigmuonef_EF_mu18 = 0;
-   trig_EF_trigmuonef_EF_mu18_MG = 0;
-   trig_EF_trigmuonef_EF_mu20 = 0;
-   trig_EF_trigmuonef_EF_mu20_MG = 0;
-   trig_EF_trigmuonef_EF_mu22 = 0;
-   trig_EF_trigmuonef_EF_mu22_MG = 0;
-   trig_EF_trigmuonef_track_n = 0;
-   trig_EF_trigmuonef_track_CB_eta = 0;
-   trig_EF_trigmuonef_track_CB_phi = 0;
+   trig_EF_trigmugirl_n = 0;
+   trig_EF_trigmugirl_EF_2mu10 = 0;
+   trig_EF_trigmugirl_EF_mu10 = 0;
+   trig_EF_trigmugirl_EF_mu18 = 0;
+   trig_EF_trigmugirl_EF_mu18_MG = 0;
+   trig_EF_trigmugirl_EF_mu20 = 0;
+   trig_EF_trigmugirl_EF_mu20_MG = 0;
+   trig_EF_trigmugirl_EF_mu22 = 0;
+   trig_EF_trigmugirl_EF_mu22_MG = 0;
+   trig_EF_trigmugirl_track_CB_eta = 0;
+   trig_EF_trigmugirl_track_CB_phi = 0;
    trig_EF_el_eta = 0;
    trig_EF_el_phi = 0;
    trig_EF_el_EF_2e12_medium = 0;
@@ -996,17 +996,17 @@ void THiggsD3PD::Init(TTree *tree)
    fChain->SetBranchAddress("mc_children", &mc_children, &b_mc_children);
    fChain->SetBranchAddress("mc_pdgId", &mc_pdgId, &b_mc_pdgId);
    fChain->SetBranchAddress("mc_child_index", &mc_child_index, &b_mc_child_index);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_2mu10", &trig_EF_trigmuonef_EF_2mu10, &b_trig_EF_trigmuonef_EF_2mu10);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu10", &trig_EF_trigmuonef_EF_mu10, &b_trig_EF_trigmuonef_EF_mu10);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18", &trig_EF_trigmuonef_EF_mu18, &b_trig_EF_trigmuonef_EF_mu18);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu18_MG", &trig_EF_trigmuonef_EF_mu18_MG, &b_trig_EF_trigmuonef_EF_mu18_MG);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20", &trig_EF_trigmuonef_EF_mu20, &b_trig_EF_trigmuonef_EF_mu20);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu20_MG", &trig_EF_trigmuonef_EF_mu20_MG, &b_trig_EF_trigmuonef_EF_mu20_MG);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22", &trig_EF_trigmuonef_EF_mu22, &b_trig_EF_trigmuonef_EF_mu22);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_EF_mu22_MG", &trig_EF_trigmuonef_EF_mu22_MG, &b_trig_EF_trigmuonef_EF_mu22_MG);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_track_n", &trig_EF_trigmuonef_track_n, &b_trig_EF_trigmuonef_track_n);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_track_CB_eta", &trig_EF_trigmuonef_track_CB_eta, &b_trig_EF_trigmuonef_track_CB_eta);
-   fChain->SetBranchAddress("trig_EF_trigmuonef_track_CB_phi", &trig_EF_trigmuonef_track_CB_phi, &b_trig_EF_trigmuonef_track_CB_phi);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_n", &trig_EF_trigmugirl_n, &b_trig_EF_trigmugirl_n);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_2mu10", &trig_EF_trigmugirl_EF_2mu10, &b_trig_EF_trigmugirl_EF_2mu10);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu10", &trig_EF_trigmugirl_EF_mu10, &b_trig_EF_trigmugirl_EF_mu10);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18", &trig_EF_trigmugirl_EF_mu18, &b_trig_EF_trigmugirl_EF_mu18);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu18_MG", &trig_EF_trigmugirl_EF_mu18_MG, &b_trig_EF_trigmugirl_EF_mu18_MG);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20", &trig_EF_trigmugirl_EF_mu20, &b_trig_EF_trigmugirl_EF_mu20);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu20_MG", &trig_EF_trigmugirl_EF_mu20_MG, &b_trig_EF_trigmugirl_EF_mu20_MG);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22", &trig_EF_trigmugirl_EF_mu22, &b_trig_EF_trigmugirl_EF_mu22);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_EF_mu22_MG", &trig_EF_trigmugirl_EF_mu22_MG, &b_trig_EF_trigmugirl_EF_mu22_MG);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_track_CB_eta", &trig_EF_trigmugirl_track_CB_eta, &b_trig_EF_trigmugirl_track_CB_eta);
+   fChain->SetBranchAddress("trig_EF_trigmugirl_track_CB_phi", &trig_EF_trigmugirl_track_CB_phi, &b_trig_EF_trigmugirl_track_CB_phi);
    fChain->SetBranchAddress("trig_EF_el_n", &trig_EF_el_n, &b_trig_EF_el_n);
    fChain->SetBranchAddress("trig_EF_el_eta", &trig_EF_el_eta, &b_trig_EF_el_eta);
    fChain->SetBranchAddress("trig_EF_el_phi", &trig_EF_el_phi, &b_trig_EF_el_phi);

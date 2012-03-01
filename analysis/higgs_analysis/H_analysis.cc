@@ -18,8 +18,8 @@ typedef struct TZVector
 	TLorentzVector l1_lorentz;
 	TLorentzVector l2_lorentz;
 
-	Bool_t l1_triggerMatch;
-	Bool_t l2_triggerMatch;
+	UInt_t l1_triggerMatch;
+	UInt_t l2_triggerMatch;
 
 	Int_t l1_type;
 	Int_t l1_origin;
@@ -181,10 +181,10 @@ Bool_t THiggsBuilder::H_analysis(
 	Float_t ptTkOverlapping3, ptClOverlapping3;
 	Float_t ptTkOverlapping4, ptClOverlapping4;
 
-	Bool_t triggerMatch1 = triggerMatch(index1, type1);
-	Bool_t triggerMatch2 = triggerMatch(index2, type1);
-	Bool_t triggerMatch3 = triggerMatch(index3, type2);
-	Bool_t triggerMatch4 = triggerMatch(index4, type2);
+	UInt_t triggerMatch1 = triggerMatch(index1, type1);
+	UInt_t triggerMatch2 = triggerMatch(index2, type1);
+	UInt_t triggerMatch3 = triggerMatch(index3, type2);
+	UInt_t triggerMatch4 = triggerMatch(index4, type2);
 
 	Int_t mtc_type1, mtc_type2, mtc_type3, mtc_type4;
 	Int_t mtc_origin1, mtc_origin2, mtc_origin3, mtc_origin4;
@@ -694,27 +694,52 @@ Bool_t THiggsBuilder::H_analysis(
 
 	isOk = true;
 
-	Int_t nrTrigger = 0;
-
-	if(triggerMatch1 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch2 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch3 != false) {
-		nrTrigger++;
-	}
-
-	if(triggerMatch4 != false) {
-		nrTrigger++;
-	}
-
-	if(nrTrigger < 1)
+	if((elTrigger & 1) != 0)
 	{
-		isOk = false;
+		Int_t nrTrigger = 0;
+
+		if((triggerMatch1 & 1) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch2 & 1) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch3 & 1) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch4 & 1) != 0) {
+			nrTrigger++;
+		}
+
+		if(nrTrigger < 1)
+		{
+			isOk = false;
+			std::cout << "oula trig 1" << std::endl;
+		}
+	}
+
+	if((elTrigger & 2) != 0)
+	{
+		Int_t nrTrigger = 0;
+
+		if((triggerMatch1 & 2) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch2 & 2) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch3 & 2) != 0) {
+			nrTrigger++;
+		}
+		if((triggerMatch4 & 2) != 0) {
+			nrTrigger++;
+		}
+
+		if(nrTrigger < 2)
+		{
+			isOk = false;
+			std::cout << "oula trig 2" << std::endl;
+		}
 	}
 
 	_INC(isOk, dest, 3);

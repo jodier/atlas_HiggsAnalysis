@@ -38,6 +38,20 @@ typedef enum TLeptonType
 
 /*-------------------------------------------------------------------------*/
 
+#define lumiPeriodB		11.7377f
+#define lumiPeriodD		166.737f
+#define lumiPeriodE		48.8244f
+#define lumiPeriodF		142.575f
+#define lumiPeriodG		537.542f
+#define lumiPeriodH		259.459f
+#define lumiPeriodI		386.226f
+#define lumiPeriodJ		226.460f
+#define lumiPeriodK		600.069f
+#define lumiPeriodL		1401.87f
+#define lumiPeriodM		1025.62f
+
+/*-------------------------------------------------------------------------*/
+
 class TLeptonAnalysis: public TNTuple
 {
   protected:
@@ -46,6 +60,9 @@ class TLeptonAnalysis: public TNTuple
   public:
 	Int_t nPV2;
 	Int_t nPV3;
+
+	UInt_t elTrigger;
+	UInt_t muTrigger;
 
 	/*-----------------------------------------------------------------*/
 	/* TOOLS							   */
@@ -69,17 +86,17 @@ class TLeptonAnalysis: public TNTuple
 	{
 		Vector_t<Double_t> int_lum(11);
 
-		int_lum[ 0] = 11.7377f; // luminosity for period B
-		int_lum[ 1] = 166.737f; // luminosity for period D
-		int_lum[ 2] = 48.8244f; // luminosity for period E
-		int_lum[ 3] = 142.575f; // luminosity for period F
-		int_lum[ 4] = 537.542f; // luminosity for period G
-		int_lum[ 5] = 259.459f; // luminosity for period H
-		int_lum[ 6] = 386.226f; // luminosity for period I
-		int_lum[ 7] = 226.460f; // luminosity for period J
-		int_lum[ 8] = 600.069f; // luminosity for period K
-		int_lum[ 9] = 1401.87f; // luminosity for period L
-		int_lum[10] = 1025.62f; // luminosity for period M
+		int_lum[ 0] = lumiPeriodB; // luminosity for period B
+		int_lum[ 1] = lumiPeriodD; // luminosity for period D
+		int_lum[ 2] = lumiPeriodE; // luminosity for period E
+		int_lum[ 3] = lumiPeriodF; // luminosity for period F
+		int_lum[ 4] = lumiPeriodG; // luminosity for period G
+		int_lum[ 5] = lumiPeriodH; // luminosity for period H
+		int_lum[ 6] = lumiPeriodI; // luminosity for period I
+		int_lum[ 7] = lumiPeriodJ; // luminosity for period J
+		int_lum[ 8] = lumiPeriodK; // luminosity for period K
+		int_lum[ 9] = lumiPeriodL; // luminosity for period L
+		int_lum[10] = lumiPeriodM; // luminosity for period M
 
 		m_pileupReweightingBD = new Root::TPileupReweighting("TPileupReweightingBD");
 		m_pileupReweightingEH = new Root::TPileupReweighting("TPileupReweightingEH");
@@ -205,13 +222,15 @@ class TLeptonAnalysis: public TNTuple
 	/* TRIGGER							   */
 	/*-----------------------------------------------------------------*/
 
-	Bool_t getElTrigger(void);
-	Bool_t getMuTrigger(void);
+	Bool_t isElectronMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo);
+	Bool_t isMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo);
 
-	Vector_t<Int_t> *getElTriggerDec(void);
-	Vector_t<Int_t> *getMuTriggerDec(void);
+	/**/
 
-	Bool_t triggerMatch(
+	UInt_t getElTrigger(void);
+	UInt_t getMuTrigger(void);
+
+	UInt_t triggerMatch(
 		Int_t index,
 		TLeptonType type
 	);
