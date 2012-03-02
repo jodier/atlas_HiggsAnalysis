@@ -51,7 +51,7 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	TChain *chain1 = new TChain("Event");
 	TChain *chain2 = new TChain(  name );
 
-	if(localLoader(chain0, fname, true) == false
+	if(localLoader(chain0, fname, false) == false
 	   ||
 	   localLoader(chain1, fname, false) == false
 	   ||
@@ -82,12 +82,9 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	Short_t cnt1;
 	Short_t cnt2;
 	Short_t cnt3;
-	Short_t cnt4_eeuu;
-	Short_t cnt4_uuee;
-	Short_t cnt5_eeuu;
-	Short_t cnt5_uuee;
-	Short_t cnt6_eeuu;
-	Short_t cnt6_uuee;
+	Short_t cnt4;
+	Short_t cnt5;
+	Short_t cnt6;
 	Short_t cnt7_eeuu;
 	Short_t cnt7_uuee;
 	Short_t cnt8_eeuu;
@@ -99,12 +96,9 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	TBranch *b_cnt1;
 	TBranch *b_cnt2;
 	TBranch *b_cnt3;
-	TBranch *b_cnt4_eeuu;
-	TBranch *b_cnt4_uuee;
-	TBranch *b_cnt5_eeuu;
-	TBranch *b_cnt5_uuee;
-	TBranch *b_cnt6_eeuu;
-	TBranch *b_cnt6_uuee;
+	TBranch *b_cnt4;
+	TBranch *b_cnt5;
+	TBranch *b_cnt6;
 	TBranch *b_cnt7_eeuu;
 	TBranch *b_cnt7_uuee;
 	TBranch *b_cnt8_eeuu;
@@ -120,16 +114,15 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	TBranch *b_weight2;
 	TBranch *b_weight3;
 
+	/*-----------------------------------------------------------------*/
+
 	chain2->SetBranchAddress("cnt0", &cnt0, &b_cnt0);
 	chain2->SetBranchAddress("cnt1", &cnt1, &b_cnt1);
 	chain2->SetBranchAddress("cnt2", &cnt2, &b_cnt2);
 	chain2->SetBranchAddress("cnt3", &cnt3, &b_cnt3);
-	chain2->SetBranchAddress("cnt4_eeuu", &cnt4_eeuu, &b_cnt4_eeuu);
-	chain2->SetBranchAddress("cnt4_uuee", &cnt4_uuee, &b_cnt4_uuee);
-	chain2->SetBranchAddress("cnt5_eeuu", &cnt5_eeuu, &b_cnt5_eeuu);
-	chain2->SetBranchAddress("cnt5_uuee", &cnt5_uuee, &b_cnt5_uuee);
-	chain2->SetBranchAddress("cnt6_eeuu", &cnt6_eeuu, &b_cnt6_eeuu);
-	chain2->SetBranchAddress("cnt6_uuee", &cnt6_uuee, &b_cnt6_uuee);
+	chain2->SetBranchAddress("cnt4", &cnt4, &b_cnt4);
+	chain2->SetBranchAddress("cnt5", &cnt5, &b_cnt5);
+	chain2->SetBranchAddress("cnt6", &cnt6, &b_cnt6);
 	chain2->SetBranchAddress("cnt7_eeuu", &cnt7_eeuu, &b_cnt7_eeuu);
 	chain2->SetBranchAddress("cnt7_uuee", &cnt7_uuee, &b_cnt7_uuee);
 	chain2->SetBranchAddress("cnt8_eeuu", &cnt8_eeuu, &b_cnt8_eeuu);
@@ -147,12 +140,9 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	Float_t CNT1 = 0;
 	Float_t CNT2 = 0;
 	Float_t CNT3 = 0;
-	Float_t CNT4_eeuu = 0;
-	Float_t CNT4_uuee = 0;
-	Float_t CNT5_eeuu = 0;
-	Float_t CNT5_uuee = 0;
-	Float_t CNT6_eeuu = 0;
-	Float_t CNT6_uuee = 0;
+	Float_t CNT4 = 0;
+	Float_t CNT5 = 0;
+	Float_t CNT6 = 0;
 	Float_t CNT7_eeuu = 0;
 	Float_t CNT7_uuee = 0;
 	Float_t CNT8_eeuu = 0;
@@ -185,23 +175,14 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 		if(cnt3 > 0) {
 			CNT3 += weight1 * weight2;
 		}
-		if(cnt4_eeuu > 0) {
-			CNT4_eeuu += weight1 * weight2;
+		if(cnt4 > 0) {
+			CNT4 += weight1 * weight2;
 		}
-		if(cnt4_uuee > 0) {
-			CNT4_uuee += weight1 * weight2;
+		if(cnt5 > 0) {
+			CNT5 += weight1 * weight2;
 		}
-		if(cnt5_eeuu > 0) {
-			CNT5_eeuu += weight1 * weight2;
-		}
-		if(cnt5_uuee > 0) {
-			CNT5_uuee += weight1 * weight2;
-		}
-		if(cnt6_eeuu > 0) {
-			CNT6_eeuu += weight1 * weight2;
-		}
-		if(cnt6_uuee > 0) {
-			CNT6_uuee += weight1 * weight2;
+		if(cnt6 > 0) {
+			CNT6 += weight1 * weight2;
 		}
 		if(cnt7_eeuu > 0) {
 			CNT7_eeuu += weight1 * weight2;
@@ -234,19 +215,16 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	printf("1 - SFOS\t%.2f - %.2f\% ± %.2f\%\n", CNT1, 100.0f * CNT1 / CNT0, 100.0f * myBinomialError(CNT1, CNT0));
 	printf("2 - Kin.\t%.2f - %.2f\% ± %.2f\%\n", CNT2, 100.0f * CNT2 / CNT1, 100.0f * myBinomialError(CNT2, CNT1));
 	printf("3 - Trig.\t%.2f - %.2f\% ± %.2f\%\n", CNT3, 100.0f * CNT3 / CNT2, 100.0f * myBinomialError(CNT3, CNT2));
+	printf("4 - Z1\t\t%.2f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
+	printf("5 - Z2\t\t%.2f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
+	printf("6 - min[ΔR]\t%.2f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
 
 	/**/ if(chanel == 1)
 	{
-		Float_t CNT4 = CNT4_eeuu + CNT4_uuee;
-		Float_t CNT5 = CNT5_eeuu + CNT5_uuee;
-		Float_t CNT6 = CNT6_eeuu + CNT6_uuee;
 		Float_t CNT7 = CNT7_eeuu + CNT7_uuee;
 		Float_t CNT8 = CNT8_eeuu + CNT8_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.2f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
-		printf("5 - Z2\t\t%.2f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
-		printf("6 - min[ΔR]\t%.2f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
 		printf("7 - Track iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
 		printf("8 - Calo iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
 		printf("9 - d0sigd0\t%.2f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
@@ -255,16 +233,10 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	}
 	else if(chanel == 2)
 	{
-		Float_t CNT4 = CNT4_eeuu + CNT4_uuee;
-		Float_t CNT5 = CNT5_eeuu + CNT5_uuee;
-		Float_t CNT6 = CNT6_eeuu + CNT6_uuee;
 		Float_t CNT7 = CNT7_eeuu + CNT7_uuee;
 		Float_t CNT8 = CNT8_eeuu + CNT8_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.2f - %.2f\% ± %.2f\%\n", CNT4, 100.0f * CNT4 / CNT3, 100.0f * myBinomialError(CNT4, CNT3));
-		printf("5 - Z2\t\t%.2f - %.2f\% ± %.2f\%\n", CNT5, 100.0f * CNT5 / CNT4, 100.0f * myBinomialError(CNT5, CNT4));
-		printf("6 - One quad\t%.2f - %.2f\% ± %.2f\%\n", CNT6, 100.0f * CNT6 / CNT5, 100.0f * myBinomialError(CNT6, CNT5));
 		printf("7 - Track iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT7, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
 		printf("8 - Calo iso.\t%.2f - %.2f\% ± %.2f\%\n", CNT8, 100.0f * CNT8 / CNT7, 100.0f * myBinomialError(CNT8, CNT7));
 		printf("9 - d0sigd0\t%.2f - %.2f\% ± %.2f\%\n", CNT9, 100.0f * CNT9 / CNT8, 100.0f * myBinomialError(CNT9, CNT8));
@@ -273,17 +245,21 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 	}
 	else if(chanel == 3)
 	{
+		Float_t CNT7 = CNT7_eeuu + CNT7_uuee;
 		Float_t CNT9 = CNT9_eeuu + CNT9_uuee;
 
-		printf("4 - Z1\t\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT4_eeuu, CNT4_uuee, 100.0f * CNT4_eeuu / CNT4_eeuu, 100.0f * CNT4_uuee / CNT4_uuee, 100.0f * myBinomialError(CNT4_eeuu, CNT4_eeuu), 100.0f * myBinomialError(CNT4_uuee, CNT4_uuee));
-		printf("5 - Z2\t\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT5_eeuu, CNT5_uuee, 100.0f * CNT5_eeuu / CNT5_eeuu, 100.0f * CNT5_uuee / CNT5_uuee, 100.0f * myBinomialError(CNT5_eeuu, CNT5_eeuu), 100.0f * myBinomialError(CNT5_uuee, CNT5_uuee));
-		printf("6 - One quad\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT6_eeuu, CNT6_uuee, 100.0f * CNT6_eeuu / CNT6_eeuu, 100.0f * CNT6_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT6_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT6_uuee, CNT6_uuee));
-		printf("7 - Track iso.\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT7_eeuu, CNT7_uuee, 100.0f * CNT7_eeuu / CNT6_eeuu, 100.0f * CNT7_uuee / CNT6_uuee, 100.0f * myBinomialError(CNT7_eeuu, CNT6_eeuu), 100.0f * myBinomialError(CNT7_uuee, CNT6_uuee));
+		printf("7 - Track iso.\t%.2f|%.2f - %.2f\% ± %.2f\%\n", CNT7_eeuu, CNT7_uuee, 100.0f * CNT7 / CNT6, 100.0f * myBinomialError(CNT7, CNT6));
 		printf("8 - Calo iso.\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT8_eeuu, CNT8_uuee, 100.0f * CNT8_eeuu / CNT7_eeuu, 100.0f * CNT8_uuee / CNT7_uuee, 100.0f * myBinomialError(CNT8_eeuu, CNT7_eeuu), 100.0f * myBinomialError(CNT8_uuee, CNT7_uuee));
 		printf("9 - d0sigd0\t%.2f|%.2f - %.2f|%.2f\% ± %.2f|%.2f\%\n", CNT9_eeuu, CNT9_uuee, 100.0f * CNT9_eeuu / CNT8_eeuu, 100.0f * CNT9_uuee / CNT8_uuee, 100.0f * myBinomialError(CNT9_eeuu, CNT8_eeuu), 100.0f * myBinomialError(CNT9_uuee, CNT8_uuee));
 
 		printf("\033[32mε = %.2f\% ± %.2f\%\033[0m\n", 100.0f * CNT9 / eeuu_nr, 100.0f * myBinomialError(CNT9, eeuu_nr));
 	}
+
+	/*-----------------------------------------------------------------*/
+
+	delete chain0;
+	delete chain1;
+	delete chain2;
 
 	/*-----------------------------------------------------------------*/
 }
@@ -292,18 +268,21 @@ void print(const char *name, const char *fname, const char *title, int chanel)
 
 void cut_flow2(void)
 {
-	TCanvas c1;
-
 	const char fname[4096];
 	std::cout << ".txt filename:" << std::endl;
 	std::cin >> fname;
 
-	print("H1", fname, "H->eeee (STACO)", 1);
-//	print("H2", fname, "H->eeee (MUID)", 1);
-//	print("H3", fname, "H->eeee (CALO)", 1);
+	if(strstr(fname, "uon") == NULL)
+	{
+		print("H1", fname, "H->eeee (STACO)", 1);
+//		print("H2", fname, "H->eeee (MUID)", 1);
+//		print("H3", fname, "H->eeee (CALO)", 1);
+	}
+
 	print("H4", fname, "H->µµµµ (STACO)", 2);
 //	print("H5", fname, "H->µµµµ (MUID)", 2);
 //	print("H6", fname, "H->µµµµ (CALO)", 2);
+
 	print("H7", fname, "H->eeµµ|µµee (STACO)", 3);
 //	print("H8", fname, "H->eeµµ|µµee (MUID)", 3);
 //	print("H9", fname, "H->eeµµ|µµee (CALO)", 3);

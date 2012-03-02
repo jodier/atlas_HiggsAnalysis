@@ -166,6 +166,9 @@ Bool_t THiggsBuilder::H_analysis(
 	/* VARIABLES							   */
 	/*-----------------------------------------------------------------*/
 
+	UInt_t trigger1;
+	UInt_t trigger2;
+
 	Float_t E1, pt1, eta1, phi1, charge1, tkIso1, clIso1, d0sigma1;
 	Float_t E2, pt2, eta2, phi2, charge2, tkIso2, clIso2, d0sigma2;
 	Float_t E3, pt3, eta3, phi3, charge3, tkIso3, clIso3, d0sigma3;
@@ -196,6 +199,7 @@ Bool_t THiggsBuilder::H_analysis(
 	switch(type1)
 	{
 		case TYPE_ELECTRON:
+			trigger1 = elTrigger;
 			E1 = el_cl_E->at(index1);
 			E2 = el_cl_E->at(index2);
 			pt1 = electronGetEt(index1);
@@ -248,6 +252,7 @@ Bool_t THiggsBuilder::H_analysis(
 			break;
 
 		case TYPE_MUON_STACO:
+			trigger1 = muTrigger;
 			E1 = mu_staco_E->at(index1);
 			E2 = mu_staco_E->at(index2);
 			pt1 = mu_staco_pt->at(index1);
@@ -292,6 +297,7 @@ Bool_t THiggsBuilder::H_analysis(
 			break;
 
 		case TYPE_MUON_MUID:
+			trigger1 = muTrigger;
 			E1 = mu_muid_E->at(index1);
 			E2 = mu_muid_E->at(index2);
 			pt1 = mu_muid_pt->at(index1);
@@ -342,6 +348,7 @@ Bool_t THiggsBuilder::H_analysis(
 	switch(type2)
 	{
 		case TYPE_ELECTRON:
+			trigger2 = elTrigger;
 			E3 = el_cl_E->at(index3);
 			E4 = el_cl_E->at(index4);
 			pt3 = electronGetEt(index3);
@@ -394,6 +401,7 @@ Bool_t THiggsBuilder::H_analysis(
 			break;
 
 		case TYPE_MUON_STACO:
+			trigger2 = muTrigger;
 			E3 = mu_staco_E->at(index3);
 			E4 = mu_staco_E->at(index4);
 			pt3 = mu_staco_pt->at(index3);
@@ -438,6 +446,7 @@ Bool_t THiggsBuilder::H_analysis(
 			break;
 
 		case TYPE_MUON_MUID:
+			trigger2 = muTrigger;
 			E3 = mu_muid_E->at(index3);
 			E4 = mu_muid_E->at(index4);
 			pt3 = mu_muid_pt->at(index3);
@@ -694,8 +703,10 @@ Bool_t THiggsBuilder::H_analysis(
 
 	isOk = true;
 
-	if((elTrigger & 1) != 0)
-	{
+	if((trigger1 & 1) != 0
+	   ||
+	   (trigger2 & 1) != 0
+	 ) {
 		Int_t nrTrigger = 0;
 
 		if((triggerMatch1 & 1) != 0) {
@@ -718,8 +729,10 @@ Bool_t THiggsBuilder::H_analysis(
 		}
 	}
 
-	if((elTrigger & 2) != 0)
-	{
+	if((trigger1 & 2) != 0
+	   ||
+	   (trigger2 & 2) != 0
+	 ) {
 		Int_t nrTrigger = 0;
 
 		if((triggerMatch1 & 2) != 0) {

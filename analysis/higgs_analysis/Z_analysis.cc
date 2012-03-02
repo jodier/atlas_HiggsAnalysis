@@ -48,6 +48,8 @@ bool THiggsBuilder::Z_analysis(
 	/* VARIABLES							   */
 	/*-----------------------------------------------------------------*/
 
+	UInt_t trigger;
+
 	Float_t E1, pt1, eta1, phi1, charge1, tkIso201, clIso201, d0sigma1;
 	Float_t E2, pt2, eta2, phi2, charge2, tkIso202, clIso202, d0sigma2;
 
@@ -68,6 +70,7 @@ bool THiggsBuilder::Z_analysis(
 	switch(type)
 	{
 		case TYPE_ELECTRON:
+			trigger = elTrigger;
 			E1 = el_cl_E->at(index1);
 			E2 = el_cl_E->at(index2);
 			pt1 = electronGetEt(index1);
@@ -94,6 +97,7 @@ bool THiggsBuilder::Z_analysis(
 			break;
 
 		case TYPE_MUON_STACO:
+			trigger = muTrigger;
 			E1 = mu_staco_E->at(index1);
 			E2 = mu_staco_E->at(index2);
 			pt1 = mu_staco_pt->at(index1);
@@ -120,6 +124,7 @@ bool THiggsBuilder::Z_analysis(
 			break;
 
 		case TYPE_MUON_MUID:
+			trigger = muTrigger;
 			E1 = mu_muid_E->at(index1);
 			E2 = mu_muid_E->at(index2);
 			pt1 = mu_muid_pt->at(index1);
@@ -195,7 +200,7 @@ bool THiggsBuilder::Z_analysis(
 	/* TRIGGER							   */
 	/*-----------------------------------------------------------------*/
 
-	if((elTrigger & 1) != 0)
+	if((trigger & 1) != 0)
 	{
 		Int_t nrTrigger = 0;
 
@@ -212,7 +217,7 @@ bool THiggsBuilder::Z_analysis(
 		}
 	}
 
-	if((elTrigger & 2) != 0)
+	if((trigger & 2) != 0)
 	{
 		Int_t nrTrigger = 0;
 
