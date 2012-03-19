@@ -725,7 +725,7 @@ Bool_t THiggsBuilder::H_analysis(
 		if(nrTrigger < 1)
 		{
 			isOk = false;
-			std::cout << "oula trig 1" << std::endl;
+//			std::cout << "oula trig 1" << std::endl;
 		}
 	}
 
@@ -751,7 +751,7 @@ Bool_t THiggsBuilder::H_analysis(
 		if(nrTrigger < 2)
 		{
 			isOk = false;
-			std::cout << "oula trig 2" << std::endl;
+//			std::cout << "oula trig 2" << std::endl;
 		}
 	}
 

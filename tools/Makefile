@@ -20,6 +20,7 @@ ATLASFLAGS    =\
 -I ./egammaAnalysisUtils \
 -I ./MuonEfficiencyCorrections \
 -I ./MuonMomentumCorrections \
+-I ./TrigMuonEfficiency \
 -I ./PileupReweighting
 
 CXX           =g++
@@ -49,20 +50,28 @@ OBJS3         =\
 MuonMomentumCorrections/Root/SmearingClass.o
 
 OBJS4         =\
+TrigMuonEfficiency/Root/ElectronTriggerMatching.o \
+TrigMuonEfficiency/Root/HSG3TrigLeptonSFTool.o \
+TrigMuonEfficiency/Root/LeptonTriggerSF.o \
+TrigMuonEfficiency/Root/MuonHypothesis.o \
+TrigMuonEfficiency/Root/MuonTriggerMatching.o
+
+OBJS5         =\
 PileupReweighting/Root/TPileupReweighting.o
 
 #############################################################################
 
-all: $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4)
+all: $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5)
 	$(AR) -rcs ../libegammaAnalysisUtils.a $(OBJS1)
 	$(AR) -rcs ../libMuonMomentumCorrections.a $(OBJS2)
 	$(AR) -rcs ../libMuonEfficiencyCorrections.a $(OBJS3)
-	$(AR) -rcs ../libPileupReweighting.a $(OBJS4)
+	$(AR) -rcs ../libTrigMuonEfficiency.a $(OBJS4)
+	$(AR) -rcs ../libPileupReweighting.a $(OBJS5)
 
 #############################################################################
 
 clean:
-	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) ../libegammaAnalysisUtils.a ../libMuonMomentumCorrections.a ../libMuonEfficiencyCorrections.a ../libPileupReweighting.a
+	rm -fr $(OBJS1) $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) ../libegammaAnalysisUtils.a ../libMuonMomentumCorrections.a ../libMuonEfficiencyCorrections.a ../libPileupReweighting.a ../libPileupReweighting.a
 
 #############################################################################
 

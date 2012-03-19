@@ -217,6 +217,11 @@ void THiggsBuilder::Loop(void)
 
 		LoadEvent(event, eventNr);
 
+		if(event == 0)
+		{
+			triggerInit();
+		}
+
 		fixeEnergy();
 
 		/*---------------------------------------------------------*/

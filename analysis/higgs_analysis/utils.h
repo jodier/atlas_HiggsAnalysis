@@ -12,9 +12,12 @@
 #include <MuonEfficiencyCorrections/AnalysisMuonEfficiencyScaleFactors.h>
 #include <MuonMomentumCorrections/SmearingClass.h>
 
-#include <egammaAnalysisUtils/egammaTriggerMatching.h>
 #include <egammaAnalysisUtils/EnergyRescaler.h>
 #include <egammaAnalysisUtils/egammaSFclass.h>
+
+#include <TrigMuonEfficiency/TriggerNavigationVariables.h>
+#include <TrigMuonEfficiency/ElectronTriggerMatching.h>
+#include <TrigMuonEfficiency/MuonTriggerMatching.h>
 
 /*-------------------------------------------------------------------------*/
 
@@ -75,10 +78,16 @@ class TLeptonAnalysis: public TNTuple
 
 	AnalysisMuonEfficiencyScaleFactors *m_stacoSF;
 	AnalysisMuonEfficiencyScaleFactors *m_muidSF;
+
 	SmearingClass *m_stacoSM;
 	SmearingClass *m_muidSM;
+
 	EnergyRescaler *m_energyRescaler;
 	egammaSFclass *m_egammaSF;
+
+	TriggerNavigationVariables *m_triggerNavigationVariables;
+	ElectronTriggerMatching *m_elTriggerMatching;
+	MuonTriggerMatching *m_muTriggerMatching;
 
 	/*-----------------------------------------------------------------*/
 
@@ -125,6 +134,13 @@ class TLeptonAnalysis: public TNTuple
 
 		/**/
 
+		m_triggerNavigationVariables = new TriggerNavigationVariables();
+
+		m_elTriggerMatching = new ElectronTriggerMatching(m_triggerNavigationVariables);
+		m_muTriggerMatching = new MuonTriggerMatching(m_triggerNavigationVariables);
+
+		/**/
+
 		m_stacoSM->UseScale(1);
 		m_muidSM->UseScale(1);
 
@@ -135,21 +151,79 @@ class TLeptonAnalysis: public TNTuple
 
 	~TLeptonAnalysis(void)
 	{
-		delete m_stacoSF;
-		delete m_muidSF;
-		delete m_stacoSM;
-		delete m_muidSM;
-		delete m_energyRescaler;
-		delete m_egammaSF;
-
 		delete m_pileupReweightingBD;
 		delete m_pileupReweightingEH;
 		delete m_pileupReweightingIK;
 		delete m_pileupReweightingLM;
+
+		delete m_stacoSF;
+		delete m_muidSF;
+
+		delete m_stacoSM;
+		delete m_muidSM;
+
+		delete m_energyRescaler;
+		delete m_egammaSF;
+
+		delete m_triggerNavigationVariables;
+		delete m_elTriggerMatching;
+		delete m_muTriggerMatching;
 	}
 
 	/*-----------------------------------------------------------------*/
-	/* DEFINITIONS */
+	/* TRIGGER							   */
+	/*-----------------------------------------------------------------*/
+
+	void triggerInit(void)
+	{
+		m_triggerNavigationVariables->set_trig_DB_SMK(trig_DB_SMK);
+		m_triggerNavigationVariables->set_trig_Nav_n(trig_Nav_n);
+		m_triggerNavigationVariables->set_trig_Nav_chain_ChainId(trig_Nav_chain_ChainId);
+		m_triggerNavigationVariables->set_trig_Nav_chain_RoIType(trig_Nav_chain_RoIType);
+		m_triggerNavigationVariables->set_trig_Nav_chain_RoIIndex(trig_Nav_chain_RoIIndex);
+
+		/* electron */
+		m_triggerNavigationVariables->set_trig_RoI_EF_e_egammaContainer_egamma_Electrons(trig_RoI_EF_e_egammaContainer_egamma_Electrons);
+		m_triggerNavigationVariables->set_trig_RoI_EF_e_egammaContainer_egamma_ElectronsStatus(trig_RoI_EF_e_egammaContainer_egamma_ElectronsStatus);
+		m_triggerNavigationVariables->set_trig_EF_el_n(trig_EF_el_n);
+		m_triggerNavigationVariables->set_trig_EF_el_eta(trig_EF_el_eta);
+		m_triggerNavigationVariables->set_trig_EF_el_phi(trig_EF_el_phi);
+
+		/* muon */
+		m_triggerNavigationVariables->set_trig_RoI_EF_mu_Muon_ROI(trig_RoI_EF_mu_Muon_ROI);
+		m_triggerNavigationVariables->set_trig_RoI_EF_mu_TrigMuonEFInfoContainer(trig_RoI_EF_mu_TrigMuonEFInfoContainer);
+		m_triggerNavigationVariables->set_trig_RoI_EF_mu_TrigMuonEFInfoContainerStatus(trig_RoI_EF_mu_TrigMuonEFInfoContainerStatus);
+		m_triggerNavigationVariables->set_trig_RoI_L2_mu_CombinedMuonFeature(trig_RoI_L2_mu_CombinedMuonFeature);
+		m_triggerNavigationVariables->set_trig_RoI_L2_mu_CombinedMuonFeatureStatus(trig_RoI_L2_mu_CombinedMuonFeatureStatus);
+		m_triggerNavigationVariables->set_trig_RoI_L2_mu_MuonFeature(trig_RoI_L2_mu_MuonFeature);
+		m_triggerNavigationVariables->set_trig_RoI_L2_mu_Muon_ROI(trig_RoI_L2_mu_Muon_ROI);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_CB_pt(trig_EF_trigmuonef_track_CB_pt);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_CB_eta(trig_EF_trigmuonef_track_CB_eta);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_CB_phi(trig_EF_trigmuonef_track_CB_phi);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_SA_pt(trig_EF_trigmuonef_track_SA_pt);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_SA_eta(trig_EF_trigmuonef_track_SA_eta);
+		m_triggerNavigationVariables->set_trig_EF_trigmuonef_track_SA_phi(trig_EF_trigmuonef_track_SA_phi);
+		m_triggerNavigationVariables->set_trig_EF_trigmugirl_track_CB_pt(trig_EF_trigmugirl_track_CB_pt);
+		m_triggerNavigationVariables->set_trig_EF_trigmugirl_track_CB_eta(trig_EF_trigmugirl_track_CB_eta);
+		m_triggerNavigationVariables->set_trig_EF_trigmugirl_track_CB_phi(trig_EF_trigmugirl_track_CB_phi);
+		m_triggerNavigationVariables->set_trig_L2_combmuonfeature_eta(trig_L2_combmuonfeature_eta);
+		m_triggerNavigationVariables->set_trig_L2_combmuonfeature_phi(trig_L2_combmuonfeature_phi);
+		m_triggerNavigationVariables->set_trig_L2_muonfeature_eta(trig_L2_muonfeature_eta);
+		m_triggerNavigationVariables->set_trig_L2_muonfeature_phi(trig_L2_muonfeature_phi);
+		m_triggerNavigationVariables->set_trig_L1_mu_eta(trig_L1_mu_eta);
+		m_triggerNavigationVariables->set_trig_L1_mu_phi(trig_L1_mu_phi);
+		m_triggerNavigationVariables->set_trig_L1_mu_thrName(trig_L1_mu_thrName);
+
+		if(m_triggerNavigationVariables->isValid() == false)
+		{
+			std::cerr << "VARIABLES NOT CORRECTLY SET\n";
+
+			exit(1);
+		}
+	}
+
+	/*-----------------------------------------------------------------*/
+	/* DEFINITIONS							   */
 	/*-----------------------------------------------------------------*/
 
 	Float_t eventGetWeight1(void);

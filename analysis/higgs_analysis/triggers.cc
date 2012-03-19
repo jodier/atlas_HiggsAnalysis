@@ -6,51 +6,6 @@
 
 /*-------------------------------------------------------------------------*/
 
-Bool_t TLeptonAnalysis::isElectronMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo)
-{
-	if(hypo == NULL)
-	{
-		return false;
-	}
-
-	Int_t EFindex;
-
-	return PassedTriggerEF(eta, phi, hypo, EFindex, trig_EF_el_n, trig_EF_el_eta, trig_EF_el_phi);
-}
-
-/*-------------------------------------------------------------------------*/
-
-Bool_t TLeptonAnalysis::isMuonMatched(Float_t eta, Float_t phi, Vector_t<int> *hypo)
-{
-	if(hypo == NULL)
-	{
-		return false;
-	}
-
-	Float_t the_dr = 000.0f;
-	Float_t min_dr = 100.0f;
-
-	for(UInt_t i = 0; i < hypo->size(); i++)
-	{
-		if(hypo->at(i) == 1)
-		{
-			for(Int_t j = 0; j < trig_EF_trigmugirl_n->at(i); j++)
-			{
-				the_dr = sqrtf(__dR2(trig_EF_trigmugirl_track_CB_eta->at(i).at(j), eta, trig_EF_trigmugirl_track_CB_phi->at(i).at(j), phi));
-
-				if(min_dr > the_dr)
-				{
-					min_dr = the_dr;
-				}
-			}
-		}
-	}
-
-	return min_dr < 0.05f;
-}
-
-/*-------------------------------------------------------------------------*/
-
 char getlumiPeriod(int RunNumber)
 {
 	char result;
@@ -288,22 +243,30 @@ UInt_t TLeptonAnalysis::triggerMatch(
 ) {
 	UInt_t result = 0x00;
 
-	Float_t plateau = 0.0f;
+	std::string chain1 = "";
+	std::string chain2 = "";
 
-	std::vector<int> *hypo1 = NULL;
-	std::vector<int> *hypo2 = NULL;
+	bool res1;
+	bool res2;
+
+	std::pair<bool, bool> Res1;
+	std::pair<bool, bool> Res2;
+
+	TLorentzVector tlv1;
+	TLorentzVector tlv2;
 
 	switch(type)
 	{
+		/*---------------------------------------------------------*/
+
 		case TYPE_ELECTRON:
 #ifdef __IS_MC
 			/**/ if(RunNumber == 180164 // B-D
 				||
 				RunNumber == 183003 // E-H
 			 ) {
-				plateau = 21000.0f;
-				hypo1 = trig_EF_el_EF_e20_medium;
-				hypo2 = trig_EF_el_EF_2e12_medium;
+				chain1 = "EF_e20_medium";
+				chain2 = "EF_2e12_medium";
 			}
 			else if(RunNumber == 186169) // I-K
 			{
@@ -315,91 +278,258 @@ UInt_t TLeptonAnalysis::triggerMatch(
 
 				if(random3.Uniform() < fracEl)
 				{
-					plateau = 21000.0f;
-					hypo1 = trig_EF_el_EF_e20_medium;
-					hypo2 = trig_EF_el_EF_2e12_medium;
+					chain1 = "EF_e20_medium";
+					chain2 = "EF_2e12_medium";
 				}
 				else
 				{
-					plateau = 23000.0f;
-					hypo1 = trig_EF_el_EF_e22_medium;
-					hypo2 = trig_EF_el_EF_2e12_medium;
+					chain1 = "EF_e22_medium";
+					chain2 = "EF_2e12T_medium";
 				}
 			}
 			else if(RunNumber == 186275) // L-M
 			{
-				plateau = 23000.0f;
-				hypo1 = trig_EF_el_EF_e22_medium;
-				hypo2 = trig_EF_el_EF_2e12_medium;
+				chain1 = "EF_e22_medium1";
+				chain2 = "EF_2e12T_medium";
 			}
 #else
 			char lumiPeriod = getlumiPeriod(RunNumber);
 
 			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'J')
 			{
-				plateau = 21000.0f;
-				hypo1 = trig_EF_el_EF_e20_medium;
-				hypo2 = trig_EF_el_EF_2e12_medium;
+				chain1 = "EF_e20_medium";
+				chain2 = "EF_2e12_medium";
 			}
-			else if(lumiPeriod >= 'K' && lumiPeriod <= 'M')
+			else if(lumiPeriod >= 'K' && lumiPeriod <= 'K')
 			{
-				plateau = 23000.0f
-				hypo1 = trig_EF_el_EF_e22_medium;
-				hypo2 = trig_EF_el_EF_2e12_medium;
+				chain1 = "EF_e22_medium";
+				chain2 = "EF_2e12T_medium";
+			}
+			else if(lumiPeriod >= 'L' && lumiPeriod <= 'M')
+			{
+				chain1 = "EF_e22vh_medium1";
+				chain2 = "EF_2e12Tvh_medium";
 			}
 #endif
-			if(isElectronMatched(el_tracketa->at(index), el_trackphi->at(index), hypo1) != false)
+			if(m_elTriggerMatching->match(el_tracketa->at(index), el_trackphi->at(index), chain1) != false)
 			{
-				if(el_cl_E->at(index) > plateau)
+				result |= (1 << 0);
+			}
+
+			tlv1.SetPtEtaPhiE(
+				el_cl_E->at(index) / coshf(el_tracketa->at(index)),
+				el_tracketa->at(index),
+				el_trackphi->at(index),
+				el_cl_E->at(index)
+			);
+
+			for(Int_t xedni = 0; xedni < el_n; xedni++)
+			{
+				if(index != xedni)
 				{
-					result |= (1 << 0);
+					tlv2.SetPtEtaPhiE(
+						el_cl_E->at(xedni) / coshf(el_tracketa->at(xedni)),
+						el_tracketa->at(xedni),
+						el_trackphi->at(xedni),
+						el_cl_E->at(xedni)
+					);
+
+					m_elTriggerMatching->matchDielectron(tlv1, tlv2, chain2, res1, res2);
+
+					if(res1 != false
+					   &&
+					   res2 != false
+					 ) {
+						result |= (1 << 1);
+
+						break;
+					}
 				}
 			}
-			if(isElectronMatched(el_tracketa->at(index), el_trackphi->at(index), hypo2) != false)
-			{
-				result |= (1 << 1);
-			}
+
 			break;
+
+		/*---------------------------------------------------------*/
 
 		case TYPE_MUON_STACO:
-			plateau = 20000.0f;
-			hypo1 = trig_EF_trigmugirl_EF_mu18;
-			hypo2 = trig_EF_trigmugirl_EF_2mu10;
-
-			if(isMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo1) == false)
+#ifdef __IS_MC
+			/**/ if(RunNumber == 180164 // B-D
+				||
+				RunNumber == 183003 // E-H
+			 ) {
+				chain1 = "EF_mu18_MG";
+				chain2 = "EF_2mu10";
+			}
+			else if(RunNumber == 186169) // I-K
 			{
-				if(mu_staco_E->at(index) > plateau)
+				TRandom3 random3;
+
+				random3.SetSeed(mc_channel_number * EventNumber);
+
+				const Float_t fracMu = (lumiPeriodI) / (lumiPeriodI + lumiPeriodJ + lumiPeriodK);
+
+				if(random3.Uniform() < fracMu)
 				{
-					result |= (1 << 0);
+					chain1 = "EF_mu18_MG";
+					chain2 = "EF_2mu10";
+				}
+				else
+				{
+					chain1 = "EF_mu18_MG_medium";
+					chain2 = "EF_2mu10";
 				}
 			}
-			if(isMuonMatched(mu_staco_eta->at(index), mu_staco_phi->at(index), hypo2) == false)
+			else if(RunNumber == 186275) // L-M
 			{
-				result |= (1 << 1);
+				chain1 = "EF_mu18_MG_medium";
+				chain2 = "EF_2mu10";
 			}
+#else
+			char lumiPeriod = getlumiPeriod(RunNumber);
+
+			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'I')
+			{
+				chain1 = "EF_mu18_MG";
+				chain2 = "EF_2mu10";
+			}
+			else if(lumiPeriod >= 'J' && lumiPeriod <= 'M')
+			{
+				chain1 = "EF_mu18_MG_medium";
+				chain2 = "EF_2mu10";
+			}
+#endif
+			if(m_muTriggerMatching->match(mu_staco_eta->at(index), mu_staco_phi->at(index), chain1) != false)
+			{
+				result |= (1 << 0);
+			}
+
+			tlv1.SetPtEtaPhiE(
+				mu_staco_pt->at(index),
+				mu_staco_eta->at(index),
+				mu_staco_phi->at(index),
+				mu_staco_E->at(index)
+			);
+
+			for(Int_t xedni = 0; xedni < mu_staco_n; xedni++)
+			{
+				if(index != xedni)
+				{
+					tlv2.SetPtEtaPhiE(
+						mu_staco_pt->at(xedni),
+						mu_staco_eta->at(xedni),
+						mu_staco_phi->at(xedni),
+						mu_staco_E->at(xedni)
+					);
+
+					m_muTriggerMatching->matchDimuon(tlv1, tlv2, chain2, Res1, Res2);
+
+					if(Res1.first != false
+					   &&
+					   Res2.first != false
+					 ) {
+						result |= (1 << 1);
+
+						break;
+					}
+				}
+			}
+
 			break;
+
+		/*---------------------------------------------------------*/
 
 		case TYPE_MUON_MUID:
-			plateau = 20000.0f;
-			hypo1 = trig_EF_trigmugirl_EF_mu18;
-			hypo2 = trig_EF_trigmugirl_EF_2mu10;
-
-			if(isMuonMatched(mu_muid_eta->at(index), mu_muid_phi->at(index), hypo1) == false)
+#ifdef __IS_MC
+			/**/ if(RunNumber == 180164 // B-D
+				||
+				RunNumber == 183003 // E-H
+			 ) {
+				chain1 = "EF_mu18_MG";
+				chain2 = "EF_2mu10";
+			}
+			else if(RunNumber == 186169) // I-K
 			{
-				if(mu_muid_E->at(index) > plateau)
+				TRandom3 random3;
+
+				random3.SetSeed(mc_channel_number * EventNumber);
+
+				const Float_t fracMu = (lumiPeriodI) / (lumiPeriodI + lumiPeriodJ + lumiPeriodK);
+
+				if(random3.Uniform() < fracMu)
 				{
-					result |= (1 << 0);
+					chain1 = "EF_mu18_MG";
+					chain2 = "EF_2mu10";
+				}
+				else
+				{
+					chain1 = "EF_mu18_MG_medium";
+					chain2 = "EF_2mu10";
 				}
 			}
-			if(isMuonMatched(mu_muid_eta->at(index), mu_muid_phi->at(index), hypo2) == false)
+			else if(RunNumber == 186275) // L-M
 			{
-				result |= (1 << 1);
+				chain1 = "EF_mu18_MG_medium";
+				chain2 = "EF_2mu10";
 			}
+#else
+			char lumiPeriod = getlumiPeriod(RunNumber);
+
+			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'I')
+			{
+				chain1 = "EF_mu18_MG";
+				chain2 = "EF_2mu10";
+			}
+			else if(lumiPeriod >= 'J' && lumiPeriod <= 'M')
+			{
+				chain1 = "EF_mu18_MG_medium";
+				chain2 = "EF_2mu10";
+			}
+#endif
+			if(m_muTriggerMatching->match(mu_muid_eta->at(index), mu_muid_phi->at(index), chain1) != false)
+			{
+				result |= (1 << 0);
+			}
+
+			tlv1.SetPtEtaPhiE(
+				mu_muid_pt->at(index),
+				mu_muid_eta->at(index),
+				mu_muid_phi->at(index),
+				mu_muid_E->at(index)
+			);
+
+			for(Int_t xedni = 0; xedni < mu_muid_n; xedni++)
+			{
+				if(index != xedni)
+				{
+					tlv2.SetPtEtaPhiE(
+						mu_muid_pt->at(xedni),
+						mu_muid_eta->at(xedni),
+						mu_muid_phi->at(xedni),
+						mu_muid_E->at(xedni)
+					);
+
+					m_muTriggerMatching->matchDimuon(tlv1, tlv2, chain2, Res1, Res2);
+
+					if(Res1.first != false
+					   &&
+					   Res2.first != false
+					 ) {
+						result |= (1 << 1);
+
+						break;
+					}
+				}
+			}
+
 			break;
 
-		case TYPE_MUON_CALO:
+		/*---------------------------------------------------------*/
+
+		default:
 			result = 0x03;
 			break;
+
+		/*---------------------------------------------------------*/
 	}
 
 	return result;
