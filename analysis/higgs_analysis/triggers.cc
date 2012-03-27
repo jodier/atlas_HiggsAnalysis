@@ -243,6 +243,8 @@ UInt_t TLeptonAnalysis::triggerMatch(
 ) {
 	UInt_t result = 0x00;
 
+	char lumiPeriod;
+
 	std::string chain1 = "";
 	std::string chain2 = "";
 
@@ -293,7 +295,7 @@ UInt_t TLeptonAnalysis::triggerMatch(
 				chain2 = "EF_2e12T_medium";
 			}
 #else
-			char lumiPeriod = getlumiPeriod(RunNumber);
+			lumiPeriod = getlumiPeriod(RunNumber);
 
 			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'J')
 			{
@@ -385,7 +387,7 @@ UInt_t TLeptonAnalysis::triggerMatch(
 				chain2 = "EF_2mu10";
 			}
 #else
-			char lumiPeriod = getlumiPeriod(RunNumber);
+			lumiPeriod = getlumiPeriod(RunNumber);
 
 			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'I')
 			{
@@ -472,7 +474,7 @@ UInt_t TLeptonAnalysis::triggerMatch(
 				chain2 = "EF_2mu10";
 			}
 #else
-			char lumiPeriod = getlumiPeriod(RunNumber);
+			lumiPeriod = getlumiPeriod(RunNumber);
 
 			/**/ if(lumiPeriod >= 'B' && lumiPeriod <= 'I')
 			{
